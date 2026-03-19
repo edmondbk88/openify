@@ -50,8 +50,17 @@ export function VideoUpload({ value, onChange, brandColor }: VideoUploadProps) {
     setError(null)
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: 'user', width: { ideal: 1280 }, height: { ideal: 720 } },
-        audio: true,
+        video: {
+          facingMode: 'user',
+          width: { ideal: 640, max: 1280 },
+          height: { ideal: 480, max: 720 },
+          frameRate: { ideal: 24, max: 30 },
+        },
+        audio: {
+          echoCancellation: true,
+          noiseSuppression: true,
+          sampleRate: 44100,
+        },
       })
       streamRef.current = stream
       if (videoRef.current) {
@@ -83,13 +92,19 @@ export function VideoUpload({ value, onChange, brandColor }: VideoUploadProps) {
     }
     setRecordedBlob(null)
 
+    // Use VP9 for best compression, fallback to VP8
     const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9,opus')
       ? 'video/webm;codecs=vp9,opus'
       : MediaRecorder.isTypeSupported('video/webm;codecs=vp8,opus')
         ? 'video/webm;codecs=vp8,opus'
         : 'video/webm'
 
-    const mediaRecorder = new MediaRecorder(streamRef.current, { mimeType })
+    // Low bitrate for small file size (~1MB per minute)
+    const mediaRecorder = new MediaRecorder(streamRef.current, {
+      mimeType,
+      videoBitsPerSecond: 500_000,  // 500kbps video (very compressed)
+      audioBitsPerSecond: 64_000,   // 64kbps audio
+    })
     mediaRecorderRef.current = mediaRecorder
 
     mediaRecorder.ondataavailable = (e) => {
