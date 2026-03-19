@@ -4,9 +4,9 @@ import { PlantillasGallery } from './gallery'
 import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Plantillas de Testimonios | 50 Disenos Listos para Usar - Opinafy',
+  title: 'Plantillas de Testimonios | 60 Disenos Listos para Usar - Opinafy',
   description:
-    'Explora 50 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y mas. Personaliza tus testimonios con Opinafy.',
+    'Explora 60 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y mas. Personaliza tus testimonios con Opinafy.',
   keywords: [
     'plantillas testimonios',
     'templates widget testimonios',
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     url: 'https://opinafy.com/plantillas',
     siteName: 'Opinafy',
-    title: '50 Plantillas de Testimonios Listas para Usar - Opinafy',
+    title: '60 Plantillas de Testimonios Listas para Usar - Opinafy',
     description:
-      'Descubre 50 disenos profesionales para mostrar testimonios en tu web. Minimalistas, corporativos, coloridos, oscuros y mas.',
+      'Descubre 60 disenos profesionales para mostrar testimonios en tu web. Minimalistas, corporativos, coloridos, oscuros y mas.',
     images: [
       {
         url: '/og.png',
@@ -47,10 +47,10 @@ export const metadata: Metadata = {
 
 export default function PlantillasPage() {
   const collectionJsonLd = collectionPageSchema({
-    name: 'Plantillas de Testimonios - Opinafy',
+    name: '60 Plantillas de Testimonios - Opinafy',
     url: 'https://opinafy.com/plantillas',
     description:
-      'Explora 50 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y mas.',
+      'Explora 60 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y mas.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -76,13 +76,13 @@ export default function PlantillasPage() {
             Galeria de Plantillas
           </span>
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-            50 Plantillas de Testimonios{' '}
+            60 Plantillas de Testimonios{' '}
             <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Listas para Usar
             </span>
           </h1>
           <p className="mt-6 text-lg text-gray-600 sm:text-xl">
-            Elige entre 50 disenos profesionales para mostrar los testimonios de tus clientes.
+            Elige entre 60 disenos profesionales para mostrar los testimonios de tus clientes.
             Cada plantilla es totalmente personalizable y se adapta a cualquier sitio web.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm text-gray-500">
@@ -118,7 +118,7 @@ export default function PlantillasPage() {
             <p className="mt-4 leading-relaxed">
               La forma en que presentas los testimonios de tus clientes puede marcar una gran diferencia en tus
               conversiones. Un testimonio bien diseñado transmite confianza, profesionalidad y autenticidad. Por eso
-              hemos creado una colección de 50 plantillas profesionales organizadas en 8 categorías de diseño, para que
+              hemos creado una colección de 60 plantillas profesionales organizadas en 8 categorías de diseño, para que
               encuentres exactamente el estilo que se adapta a la identidad visual de tu marca.
             </p>
             <p className="mt-4 leading-relaxed">
