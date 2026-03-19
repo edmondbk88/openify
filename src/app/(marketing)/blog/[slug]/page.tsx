@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { blogArticles } from '@/lib/blog-data'
@@ -38,7 +39,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       authors: ['Equipo Opinafy'],
       images: [
         {
-          url: '/og.png',
+          url: article.image,
           width: 1200,
           height: 630,
           alt: article.title,
@@ -86,7 +87,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     slug: article.slug,
     date: article.date,
     keywords: article.keywords,
-    image: 'https://opinafy.com/og.png',
+    image: article.image,
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -151,6 +152,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </div>
           </div>
         </header>
+
+        {/* Featured Image */}
+        <div className="mb-12 overflow-hidden rounded-2xl">
+          <Image
+            src={article.image}
+            alt={article.title}
+            width={1200}
+            height={630}
+            className="w-full h-auto object-cover"
+            priority
+          />
+        </div>
 
         {/* Content */}
         <div

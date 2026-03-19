@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { blogArticles } from '@/lib/blog-data'
 import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
@@ -75,24 +76,14 @@ export default function BlogPage() {
               href={`/blog/${article.slug}`}
               className="group flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white transition-shadow hover:shadow-lg"
             >
-              {/* Image placeholder */}
-              <div className="flex h-48 items-center justify-center bg-gradient-to-br from-indigo-50 to-indigo-100">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-indigo-600/10">
-                  <svg
-                    className="h-8 w-8 text-indigo-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
-                    />
-                  </svg>
-                </div>
-              </div>
+              {/* Featured image */}
+              <Image
+                src={article.image}
+                alt={article.title}
+                width={600}
+                height={340}
+                className="w-full h-48 object-cover"
+              />
 
               {/* Content */}
               <div className="flex flex-1 flex-col p-6">

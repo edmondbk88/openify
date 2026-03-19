@@ -8,11 +8,17 @@ export interface BlogArticle {
   date: string
   readTime: string
   metaDescription: string
+  image: string
+}
+
+function blogImageUrl(slug: string): string {
+  return `https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/blog-images/${slug}.jpg`
 }
 
 export const blogArticles: BlogArticle[] = [
   {
     slug: 'que-son-testimonios-clientes-importancia',
+    image: blogImageUrl('que-son-testimonios-clientes-importancia'),
     title: '¿Qué son los testimonios de clientes y por qué son tan importantes?',
     excerpt:
       'Descubre qué son los testimonios de clientes, cómo funcionan como herramienta de marketing y por qué son fundamentales para generar confianza y aumentar las ventas de tu negocio.',
@@ -105,6 +111,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'como-recopilar-testimonios-clientes-estrategias',
+    image: blogImageUrl('como-recopilar-testimonios-clientes-estrategias'),
     title: 'Cómo recopilar testimonios de clientes: 10 estrategias probadas',
     excerpt:
       'Aprende las mejores estrategias para conseguir testimonios de tus clientes de forma natural y efectiva. Desde el momento ideal hasta las herramientas adecuadas.',
@@ -188,6 +195,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'prueba-social-que-es-como-usarla',
+    image: blogImageUrl('prueba-social-que-es-como-usarla'),
     title: 'Prueba social: qué es y cómo usarla para vender más',
     excerpt:
       'Entiende el concepto de prueba social, sus diferentes tipos y cómo implementarla en tu estrategia de marketing para aumentar la confianza y las conversiones.',
@@ -285,6 +293,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-en-pagina-web-donde-colocarlos',
+    image: blogImageUrl('testimonios-en-pagina-web-donde-colocarlos'),
     title: 'Dónde colocar los testimonios en tu página web para máximo impacto',
     excerpt:
       'Descubre las ubicaciones estratégicas para colocar testimonios en tu web y maximizar su impacto en las conversiones. Con ejemplos y mejores prácticas.',
@@ -369,6 +378,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'como-pedir-testimonios-clientes-plantillas',
+    image: blogImageUrl('como-pedir-testimonios-clientes-plantillas'),
     title: 'Cómo pedir testimonios a tus clientes (con plantillas listas para usar)',
     excerpt:
       'No sabes cómo pedir testimonios sin sentirte incómodo. Aquí tienes plantillas de correo, mensajes y scripts listos para copiar, pegar y adaptar a tu negocio.',
@@ -473,6 +483,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-video-guia-completa',
+    image: blogImageUrl('testimonios-video-guia-completa'),
     title: 'Testimonios en video: la guía completa para crear contenido que convierte',
     excerpt:
       'Los testimonios en video convierten hasta un 80% más. Aprende a grabarlos, editarlos y publicarlos aunque no tengas experiencia ni equipo profesional.',
@@ -576,6 +587,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'widgets-testimonios-web-guia',
+    image: blogImageUrl('widgets-testimonios-web-guia'),
     title: 'Widgets de testimonios para tu web: guía completa de implementación',
     excerpt:
       'Aprende a elegir, personalizar e implementar widgets de testimonios en tu web. Desde carruseles hasta muros de amor, encuentra el formato perfecto para tu negocio.',
@@ -676,6 +688,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'estadisticas-testimonios-datos-conversion',
+    image: blogImageUrl('estadisticas-testimonios-datos-conversion'),
     title: '25 estadísticas sobre testimonios que demuestran su poder de conversión',
     excerpt:
       'Datos y estadísticas actualizados que demuestran el impacto real de los testimonios en las ventas, conversiones y confianza del consumidor.',
@@ -798,6 +811,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-ecommerce-aumentar-ventas',
+    image: blogImageUrl('testimonios-ecommerce-aumentar-ventas'),
     title: 'Cómo usar testimonios en ecommerce para aumentar ventas un 34%',
     excerpt:
       'Estrategias específicas para implementar testimonios en tu tienda online. Desde la ficha de producto hasta el checkout, optimiza cada paso del embudo.',
@@ -879,6 +893,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'diferencia-testimonios-resenas-opiniones',
+    image: blogImageUrl('diferencia-testimonios-resenas-opiniones'),
     title: 'Testimonios vs reseñas vs opiniones: diferencias y cuándo usar cada uno',
     excerpt:
       'Testimonios, reseñas y opiniones no son lo mismo. Descubre las diferencias clave, las ventajas de cada formato y cuándo usar cada uno en tu estrategia de marketing.',
@@ -973,6 +988,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'como-aumentar-confianza-clientes-online',
+    image: blogImageUrl('como-aumentar-confianza-clientes-online'),
     title: 'Cómo aumentar la confianza de tus clientes online: 12 técnicas infalibles',
     excerpt:
       'Descubre 12 técnicas probadas para generar confianza en tus clientes online, desde testimonios hasta sellos de seguridad, y aprende a construir credibilidad digital que convierte visitantes en compradores.',
@@ -1055,6 +1071,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-para-coaches-consultores',
+    image: blogImageUrl('testimonios-para-coaches-consultores'),
     title: 'Testimonios para coaches y consultores: cómo conseguirlos y mostrarlos',
     excerpt:
       'Guía especializada para coaches, mentores y consultores sobre cómo recopilar y presentar testimonios que demuestren el valor de sus servicios y atraigan nuevos clientes.',
@@ -1134,6 +1151,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'wall-of-love-que-es-como-crear',
+    image: blogImageUrl('wall-of-love-que-es-como-crear'),
     title: 'Wall of Love: qué es y cómo crear uno para tu negocio',
     excerpt:
       'Descubre qué es un Wall of Love, por qué funciona como herramienta de marketing y cómo puedes crear el tuyo para mostrar todos los testimonios y opiniones positivas de tus clientes.',
@@ -1216,6 +1234,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-restaurantes-hosteleria',
+    image: blogImageUrl('testimonios-restaurantes-hosteleria'),
     title: 'Testimonios para restaurantes y hostelería: guía práctica',
     excerpt:
       'Guía completa para restaurantes, hoteles y negocios de hostelería sobre cómo recopilar, gestionar y mostrar testimonios que atraigan más reservas y clientes.',
@@ -1282,6 +1301,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'como-responder-testimonios-negativos',
+    image: blogImageUrl('como-responder-testimonios-negativos'),
     title: 'Cómo responder a testimonios negativos y convertirlos en oportunidades',
     excerpt:
       'Aprende a gestionar testimonios y reseñas negativas de forma profesional, convirtiendo las críticas en oportunidades para mejorar tu negocio y demostrar excelente servicio al cliente.',
@@ -1362,6 +1382,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-clinicas-salud',
+    image: blogImageUrl('testimonios-clinicas-salud'),
     title: 'Testimonios para clínicas y profesionales de la salud',
     excerpt:
       'Guía especializada para clínicas, dentistas, fisioterapeutas y otros profesionales de la salud sobre cómo recopilar y mostrar testimonios respetando la normativa y la ética profesional.',
@@ -1435,6 +1456,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'seo-testimonios-mejora-posicionamiento',
+    image: blogImageUrl('seo-testimonios-mejora-posicionamiento'),
     title: 'Cómo los testimonios mejoran tu SEO y posicionamiento web',
     excerpt:
       'Descubre cómo los testimonios de clientes pueden mejorar tu posicionamiento en Google, aumentar el tráfico orgánico y potenciar tu estrategia SEO de forma natural.',
@@ -1502,6 +1524,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'automatizar-recopilacion-testimonios',
+    image: blogImageUrl('automatizar-recopilacion-testimonios'),
     title: 'Cómo automatizar la recopilación de testimonios en tu negocio',
     excerpt:
       'Aprende a crear un sistema automatizado para recopilar testimonios de clientes sin esfuerzo manual, desde la configuración hasta la optimización de los flujos automáticos.',
@@ -1577,6 +1600,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-saas-software',
+    image: blogImageUrl('testimonios-saas-software'),
     title: 'Testimonios para empresas SaaS: estrategias que funcionan',
     excerpt:
       'Descubre las estrategias más efectivas para que empresas de software como servicio recopilen, gestionen y muestren testimonios que aceleren el crecimiento y reduzcan el churn.',
@@ -1654,6 +1678,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'psicologia-prueba-social-ventas',
+    image: blogImageUrl('psicologia-prueba-social-ventas'),
     title: 'La psicología detrás de la prueba social: por qué compramos lo que otros recomiendan',
     excerpt:
       'Explora los principios psicológicos que explican por qué la prueba social funciona tan bien para vender, desde el conformismo social hasta los sesgos cognitivos que influyen en nuestras decisiones.',
@@ -1725,6 +1750,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-inmobiliarias-agentes',
+    image: blogImageUrl('testimonios-inmobiliarias-agentes'),
     title: 'Testimonios para inmobiliarias y agentes: consigue más clientes',
     excerpt:
       'Guía práctica para agentes inmobiliarios e inmobiliarias sobre cómo recopilar y usar testimonios para generar confianza, conseguir más mandatos y cerrar más ventas.',
@@ -1783,6 +1809,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'carousel-testimonios-web-mejores-practicas',
+    image: blogImageUrl('carousel-testimonios-web-mejores-practicas'),
     title: 'Carrusel de testimonios en tu web: mejores prácticas y errores comunes',
     excerpt:
       'Aprende a diseñar e implementar carruseles de testimonios efectivos en tu web, evitando los errores comunes que reducen su impacto y las mejores prácticas que maximizan conversiones.',
@@ -1863,6 +1890,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-abogados-despachos',
+    image: blogImageUrl('testimonios-abogados-despachos'),
     title: 'Testimonios para abogados y despachos profesionales',
     excerpt:
       'Guía especializada para abogados, despachos y profesionales del derecho sobre cómo usar testimonios de forma ética y efectiva para atraer nuevos clientes.',
@@ -1938,6 +1966,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'caso-estudio-testimonios-conversion',
+    image: blogImageUrl('caso-estudio-testimonios-conversion'),
     title: 'Caso de estudio: cómo una tienda online aumentó conversiones un 47% con testimonios',
     excerpt:
       'Análisis detallado de cómo una tienda online de productos naturales implementó una estrategia de testimonios que aumentó sus conversiones un 47% en solo tres meses.',
@@ -2016,6 +2045,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-agencias-marketing',
+    image: blogImageUrl('testimonios-agencias-marketing'),
     title: 'Testimonios para agencias de marketing: la guía definitiva',
     excerpt:
       'La guía más completa para agencias de marketing digital, publicidad y comunicación sobre cómo recopilar y usar testimonios para conseguir más clientes y proyectos.',
@@ -2088,6 +2118,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-tiendas-fisicas-negocios-locales',
+    image: blogImageUrl('testimonios-tiendas-fisicas-negocios-locales'),
     title: 'Testimonios para tiendas físicas y negocios locales: digitaliza tus opiniones',
     excerpt:
       'Aprende a digitalizar las opiniones de tus clientes en tienda física y negocios locales. Descubre cómo recopilar, gestionar y mostrar testimonios para atraer más clientes a tu local.',
@@ -2180,6 +2211,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'como-usar-testimonios-redes-sociales',
+    image: blogImageUrl('como-usar-testimonios-redes-sociales'),
     title: 'Cómo usar testimonios en redes sociales para atraer clientes',
     excerpt:
       'Descubre las mejores estrategias para compartir testimonios de clientes en redes sociales. Aprende a crear contenido atractivo que genere confianza y atraiga nuevos clientes.',
@@ -2259,6 +2291,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-b2b-empresas',
+    image: blogImageUrl('testimonios-b2b-empresas'),
     title: 'Testimonios B2B: cómo conseguir y usar referencias empresariales',
     excerpt:
       'Guía completa sobre testimonios en el entorno B2B. Aprende a recopilar referencias empresariales efectivas y a utilizarlas para cerrar más ventas entre empresas.',
@@ -2346,6 +2379,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'landing-pages-testimonios-conversion',
+    image: blogImageUrl('landing-pages-testimonios-conversion'),
     title: 'Landing pages con testimonios: estructura perfecta para convertir',
     excerpt:
       'Aprende a diseñar landing pages con testimonios que maximicen las conversiones. Descubre dónde colocar los testimonios, qué tipos usar y cómo estructurar la página para vender más.',
@@ -2430,6 +2464,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-academias-formacion',
+    image: blogImageUrl('testimonios-academias-formacion'),
     title: 'Testimonios para academias y centros de formación online',
     excerpt:
       'Guía completa de testimonios para academias, cursos online y centros de formación. Aprende a recopilar y mostrar opiniones de alumnos que atraigan nuevas matrículas.',
@@ -2511,6 +2546,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'medir-roi-testimonios',
+    image: blogImageUrl('medir-roi-testimonios'),
     title: 'Cómo medir el ROI de los testimonios en tu negocio',
     excerpt:
       'Aprende a calcular el retorno de inversión de tus testimonios. Descubre métricas, herramientas y metodologías para demostrar que los testimonios generan resultados medibles.',
@@ -2603,6 +2639,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-fotografia-bodas',
+    image: blogImageUrl('testimonios-fotografia-bodas'),
     title: 'Testimonios para fotógrafos y videógrafos de bodas',
     excerpt:
       'Guía completa de testimonios para fotógrafos y videógrafos de bodas. Aprende a recopilar y usar las opiniones de tus parejas para conseguir más contratos.',
@@ -2689,6 +2726,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'user-generated-content-testimonios',
+    image: blogImageUrl('user-generated-content-testimonios'),
     title: 'UGC y testimonios: cómo el contenido generado por usuarios impulsa ventas',
     excerpt:
       'Descubre cómo el User Generated Content y los testimonios trabajan juntos para impulsar las ventas. Estrategias para aprovechar el contenido que crean tus propios clientes.',
@@ -2764,6 +2802,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-veterinarias-clinicas',
+    image: blogImageUrl('testimonios-veterinarias-clinicas'),
     title: 'Testimonios para veterinarias y clínicas de mascotas',
     excerpt:
       'Guía de testimonios para veterinarias y clínicas de mascotas. Aprende a recopilar y usar las opiniones de los dueños de mascotas para atraer nuevos clientes a tu clínica.',
@@ -2844,6 +2883,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'badges-confianza-sellos-web',
+    image: blogImageUrl('badges-confianza-sellos-web'),
     title: 'Badges de confianza y sellos en tu web: guía completa',
     excerpt:
       'Guía completa sobre badges de confianza y sellos web. Aprende qué son, cómo funcionan, dónde colocarlos y cómo combinan con testimonios para maximizar la confianza del visitante.',
@@ -2923,6 +2963,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-gimnasios-centros-fitness',
+    image: blogImageUrl('testimonios-gimnasios-centros-fitness'),
     title: 'Testimonios para gimnasios y centros de fitness',
     excerpt:
       'Guía de testimonios para gimnasios, centros de fitness y entrenadores personales. Aprende a recopilar y mostrar testimonios que atraigan nuevos socios a tu centro deportivo.',
@@ -2998,6 +3039,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'email-marketing-testimonios',
+    image: blogImageUrl('email-marketing-testimonios'),
     title: 'Cómo incluir testimonios en tu estrategia de email marketing',
     excerpt:
       'Aprende a integrar testimonios de clientes en tus campañas de email marketing. Descubre formatos, estrategias y técnicas para aumentar las conversiones de tus emails con prueba social.',
@@ -3082,6 +3124,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-dentistas-odontologia',
+    image: blogImageUrl('testimonios-dentistas-odontologia'),
     title: 'Testimonios para dentistas y clínicas odontológicas',
     excerpt:
       'Guía completa de testimonios para dentistas y clínicas dentales. Aprende a recopilar y mostrar opiniones de pacientes que atraigan nuevas consultas a tu clínica odontológica.',
@@ -3158,6 +3201,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'storytelling-testimonios-clientes',
+    image: blogImageUrl('storytelling-testimonios-clientes'),
     title: 'Storytelling con testimonios: cómo crear historias que conectan y venden',
     excerpt:
       'Aprende a aplicar técnicas de storytelling a los testimonios de tus clientes. Descubre cómo transformar opiniones simples en narrativas persuasivas que conectan emocionalmente y venden.',
@@ -3248,6 +3292,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-peluquerias-estetica',
+    image: blogImageUrl('testimonios-peluquerias-estetica'),
     title: 'Testimonios para peluquerías y centros de estética',
     excerpt:
       'Guía de testimonios para peluquerías, salones de belleza y centros de estética. Aprende a recopilar y mostrar opiniones de clientes que atraigan nuevas visitas a tu salón.',
@@ -3331,6 +3376,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-wordpress-como-integrar',
+    image: blogImageUrl('testimonios-wordpress-como-integrar'),
     title: 'Cómo integrar testimonios en WordPress: guía paso a paso',
     excerpt:
       'Aprende a integrar testimonios de clientes en tu web de WordPress de forma profesional. Guía completa con métodos manuales, plugins y widgets de Opinafy para WordPress.',
@@ -3410,6 +3456,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-shopify-ecommerce',
+    image: blogImageUrl('testimonios-shopify-ecommerce'),
     title: 'Cómo añadir testimonios en Shopify para vender más',
     excerpt:
       'Guía completa para integrar testimonios de clientes en tu tienda Shopify. Aprende dónde colocarlos, cómo recopilarlos y cómo aumentar las ventas con prueba social en ecommerce.',
@@ -3498,6 +3545,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'nps-net-promoter-score-testimonios',
+    image: blogImageUrl('nps-net-promoter-score-testimonios'),
     title: 'NPS y testimonios: cómo convertir promotores en embajadores de marca',
     excerpt:
       'Descubre cómo conectar tu estrategia de NPS con la recopilación de testimonios. Convierte a tus promotores en embajadores de marca que generen prueba social auténtica.',
@@ -3575,6 +3623,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-hoteles-alojamientos',
+    image: blogImageUrl('testimonios-hoteles-alojamientos'),
     title: 'Testimonios para hoteles y alojamientos turísticos',
     excerpt:
       'Guía completa de testimonios para hoteles, apartamentos turísticos y alojamientos rurales. Aprende a recopilar y mostrar opiniones que aumenten las reservas directas.',
@@ -3654,6 +3703,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'diseno-tarjetas-testimonios',
+    image: blogImageUrl('diseno-tarjetas-testimonios'),
     title: 'Diseño de tarjetas de testimonios: 15 ejemplos inspiradores',
     excerpt:
       'Descubre 15 diseños de tarjetas de testimonios que convierten. Aprende los principios de diseño web que hacen que los testimonios sean visualmente atractivos y creíbles.',
@@ -3749,6 +3799,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-apps-moviles',
+    image: blogImageUrl('testimonios-apps-moviles'),
     title: 'Testimonios para apps móviles: cómo conseguirlos y dónde mostrarlos',
     excerpt:
       'Guía completa sobre testimonios para apps móviles. Aprende cuándo pedirlos, cómo aumentar las valoraciones en las tiendas de apps y cómo usar la prueba social para crecer.',
@@ -3835,6 +3886,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-contadores-asesores-fiscales',
+    image: blogImageUrl('testimonios-contadores-asesores-fiscales'),
     title: 'Testimonios para contadores y asesores fiscales',
     excerpt:
       'Guía de testimonios para contadores, asesores fiscales y gestorías. Aprende a recopilar y mostrar opiniones de clientes que generen confianza y atraigan nuevos clientes.',
@@ -3919,6 +3971,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'inteligencia-artificial-testimonios',
+    image: blogImageUrl('inteligencia-artificial-testimonios'),
     title: 'Inteligencia artificial y testimonios: cómo la IA transforma la prueba social',
     excerpt:
       'Descubre cómo la inteligencia artificial está transformando la recopilación, análisis y uso de testimonios de clientes. Tendencias, oportunidades y riesgos de la IA en la prueba social.',
@@ -4002,6 +4055,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'testimonios-startups-primeros-clientes',
+    image: blogImageUrl('testimonios-startups-primeros-clientes'),
     title: 'Testimonios para startups: cómo conseguirlos cuando tienes pocos clientes',
     excerpt:
       'Guía práctica para startups que necesitan testimonios pero tienen pocos clientes. Estrategias creativas para construir prueba social desde cero y acelerar el crecimiento.',
@@ -4076,6 +4130,7 @@ export const blogArticles: BlogArticle[] = [
   },
   {
     slug: 'guia-completa-social-proof-2026',
+    image: blogImageUrl('guia-completa-social-proof-2026'),
     title: 'La guía completa del social proof en 2026: tendencias y estrategias',
     excerpt:
       'Guía exhaustiva sobre el social proof en 2026. Descubre las tendencias actuales, las estrategias más efectivas y cómo implementar una estrategia de prueba social integral para tu negocio.',
