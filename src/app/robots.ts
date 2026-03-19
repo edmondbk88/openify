@@ -6,6 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
+        disallow: ['/dashboard', '/proyectos', '/configuracion', '/facturacion', '/forgot-password'],
       },
     ],
     sitemap: 'https://opinafy.com/sitemap.xml',

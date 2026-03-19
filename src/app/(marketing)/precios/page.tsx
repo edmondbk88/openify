@@ -3,6 +3,7 @@ import { Navbar } from '@/components/landing/navbar'
 import { Pricing } from '@/components/landing/pricing'
 import { Faq } from '@/components/landing/faq'
 import { Footer } from '@/components/landing/footer'
+import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Precios - Opinafy',
@@ -20,8 +21,28 @@ export const metadata: Metadata = {
 }
 
 export default function PreciosPage() {
+  const pageJsonLd = webPageSchema({
+    name: 'Precios - Opinafy',
+    url: 'https://opinafy.com/precios',
+    description:
+      'Consulta los planes y precios de Opinafy. Empieza gratis y escala según tus necesidades.',
+  })
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://opinafy.com' },
+    { name: 'Precios', url: 'https://opinafy.com/precios' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar />
       <div className="pt-16">
         <Pricing />

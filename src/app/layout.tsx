@@ -45,7 +45,7 @@ export const metadata: Metadata = {
       'La plataforma #1 en español para recopilar, gestionar y mostrar testimonios de clientes. Aumenta tu confianza y conversiones.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og.png',
         width: 1200,
         height: 630,
         alt: 'Opinafy - Plataforma de Testimonios',
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     title: 'Opinafy - Recopila y Muestra Testimonios de Clientes',
     description:
       'La plataforma #1 en español para recopilar, gestionar y mostrar testimonios de clientes.',
-    images: ['/og-image.png'],
+    images: ['/og.png'],
   },
   robots: {
     index: true,
@@ -73,9 +73,6 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
-  },
-  verification: {
-    google: 'GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE',
   },
 }
 

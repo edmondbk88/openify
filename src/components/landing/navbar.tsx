@@ -5,9 +5,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const navLinks = [
-  { label: 'Características', href: '#caracteristicas' },
-  { label: 'Precios', href: '#precios' },
-  { label: 'Cómo Funciona', href: '#como-funciona' },
+  { label: 'Características', href: '/#caracteristicas' },
+  { label: 'Precios', href: '/precios' },
+  { label: 'Plantillas', href: '/plantillas' },
+  { label: 'Blog', href: '/blog' },
 ]
 
 export function Navbar() {

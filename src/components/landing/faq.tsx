@@ -1,7 +1,3 @@
-'use client'
-
-import { useState } from 'react'
-
 const faqs = [
   {
     question: '¿Qué es Opinafy?',
@@ -46,12 +42,6 @@ const faqs = [
 ]
 
 export function Faq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
-  const toggle = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index)
-  }
-
   return (
     <section id="faq" className="bg-gray-50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -66,20 +56,13 @@ export function Faq() {
 
         <div className="mx-auto mt-16 max-w-3xl divide-y divide-gray-200">
           {faqs.map((faq, index) => (
-            <div key={index} className="py-5">
-              <button
-                type="button"
-                className="flex w-full items-center justify-between text-left"
-                onClick={() => toggle(index)}
-                aria-expanded={openIndex === index}
-              >
+            <details key={index} className="group py-5">
+              <summary className="flex w-full cursor-pointer items-center justify-between text-left list-none [&::-webkit-details-marker]:hidden">
                 <span className="text-base font-medium text-gray-900">
                   {faq.question}
                 </span>
                 <svg
-                  className={`ml-4 h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-200 ${
-                    openIndex === index ? 'rotate-180' : ''
-                  }`}
+                  className="ml-4 h-5 w-5 flex-shrink-0 text-gray-500 transition-transform duration-200 group-open:rotate-180"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -87,13 +70,11 @@ export function Faq() {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
-              {openIndex === index && (
-                <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                  {faq.answer}
-                </p>
-              )}
-            </div>
+              </summary>
+              <p className="mt-3 text-sm leading-relaxed text-gray-600">
+                {faq.answer}
+              </p>
+            </details>
           ))}
         </div>
       </div>

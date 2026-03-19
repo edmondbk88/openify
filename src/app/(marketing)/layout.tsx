@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Opinafy - Recopila y Muestra Testimonios de Clientes | La Plataforma #1 en Español',
+  title: 'Opinafy - Testimonios de Clientes que Convierten',
   description:
-    'Opinafy es la plataforma líder en español para recopilar, gestionar y mostrar testimonios de clientes. Aumenta la confianza, mejora las conversiones y destaca con prueba social auténtica. Widgets personalizables, muro de amor, formularios de recopilación y mucho más.',
+    'Recopila, gestiona y muestra testimonios de clientes en tu web. Widgets personalizables, prueba social auténtica y más conversiones.',
   keywords: [
     'testimonios de clientes',
     'recopilar testimonios',
@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     url: 'https://opinafy.com',
     siteName: 'Opinafy',
-    title: 'Opinafy - Recopila y Muestra Testimonios de Clientes | La Plataforma #1 en Español',
+    title: 'Opinafy - Testimonios de Clientes que Convierten',
     description:
-      'La plataforma líder en español para recopilar, gestionar y mostrar testimonios de clientes. Aumenta la confianza y las conversiones con prueba social.',
+      'Recopila, gestiona y muestra testimonios de clientes en tu web. Widgets personalizables, prueba social y mas conversiones.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og.png',
         width: 1200,
         height: 630,
         alt: 'Opinafy - Plataforma de Testimonios de Clientes',
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Opinafy - Recopila y Muestra Testimonios de Clientes',
+    title: 'Opinafy - Testimonios de Clientes que Convierten',
     description:
-      'La plataforma #1 en español para recopilar, gestionar y mostrar testimonios de clientes. Prueba social que convierte.',
-    images: ['/og-image.png'],
+      'Recopila, gestiona y muestra testimonios de clientes en tu web. Prueba social que convierte.',
+    images: ['/og.png'],
   },
   alternates: {
     canonical: 'https://opinafy.com',

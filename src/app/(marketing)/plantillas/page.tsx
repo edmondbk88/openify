@@ -1,22 +1,23 @@
 import type { Metadata } from 'next'
 import { widgetTemplates, TEMPLATE_CATEGORIES } from '@/lib/widget-templates'
 import { PlantillasGallery } from './gallery'
+import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Plantillas de Testimonios | 50 Diseños Listos para Usar - Opinafy',
+  title: 'Plantillas de Testimonios | 50 Disenos Listos para Usar - Opinafy',
   description:
-    'Explora 50 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y más. Personaliza tus testimonios con Opinafy.',
+    'Explora 50 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y mas. Personaliza tus testimonios con Opinafy.',
   keywords: [
     'plantillas testimonios',
     'templates widget testimonios',
-    'diseños testimonios web',
+    'disenos testimonios web',
     'widgets testimonios plantillas',
-    'testimonios diseño personalizado',
-    'plantillas reseñas clientes',
+    'testimonios diseno personalizado',
+    'plantillas resenas clientes',
     'widget opiniones plantilla',
     'plantilla carrusel testimonios',
     'testimonios grid plantilla',
-    'muro testimonios diseño',
+    'muro testimonios diseno',
   ],
   openGraph: {
     type: 'website',
@@ -25,10 +26,10 @@ export const metadata: Metadata = {
     siteName: 'Opinafy',
     title: '50 Plantillas de Testimonios Listas para Usar - Opinafy',
     description:
-      'Descubre 50 diseños profesionales para mostrar testimonios en tu web. Minimalistas, corporativos, coloridos, oscuros y más.',
+      'Descubre 50 disenos profesionales para mostrar testimonios en tu web. Minimalistas, corporativos, coloridos, oscuros y mas.',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og.png',
         width: 1200,
         height: 630,
         alt: 'Plantillas de Testimonios Opinafy',
@@ -45,13 +46,34 @@ export const metadata: Metadata = {
 }
 
 export default function PlantillasPage() {
+  const collectionJsonLd = collectionPageSchema({
+    name: 'Plantillas de Testimonios - Opinafy',
+    url: 'https://opinafy.com/plantillas',
+    description:
+      'Explora 50 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y mas.',
+  })
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://opinafy.com' },
+    { name: 'Plantillas', url: 'https://opinafy.com/plantillas' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+
       {/* Hero */}
       <section className="bg-gradient-to-b from-indigo-50 via-white to-white px-4 pb-12 pt-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <span className="inline-block rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-semibold text-indigo-700">
-            Galería de Plantillas
+            Galeria de Plantillas
           </span>
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
             50 Plantillas de Testimonios{' '}
@@ -60,7 +82,7 @@ export default function PlantillasPage() {
             </span>
           </h1>
           <p className="mt-6 text-lg text-gray-600 sm:text-xl">
-            Elige entre 50 diseños profesionales para mostrar los testimonios de tus clientes.
+            Elige entre 50 disenos profesionales para mostrar los testimonios de tus clientes.
             Cada plantilla es totalmente personalizable y se adapta a cualquier sitio web.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm text-gray-500">
@@ -68,7 +90,7 @@ export default function PlantillasPage() {
               <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              8 categorías de diseño
+              8 categorias de diseno
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -100,11 +122,11 @@ export default function PlantillasPage() {
       <section className="border-t border-gray-100 bg-gradient-to-b from-indigo-50 to-white px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            ¿Te gusta alguna plantilla?
+            Te gusta alguna plantilla?
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Regístrate gratis y empieza a usar cualquiera de estas plantillas en minutos.
-            Sin tarjeta de crédito, sin compromiso.
+            Registrate gratis y empieza a usar cualquiera de estas plantillas en minutos.
+            Sin tarjeta de credito, sin compromiso.
           </p>
           <a
             href="/registro"

@@ -7,10 +7,39 @@ import { Pricing } from '@/components/landing/pricing'
 import { Faq } from '@/components/landing/faq'
 import { CtaSection } from '@/components/landing/cta-section'
 import { Footer } from '@/components/landing/footer'
+import {
+  organizationSchema,
+  webSiteSchema,
+  softwareApplicationSchema,
+  breadcrumbSchema,
+} from '@/lib/schema'
 
 export default function HomePage() {
+  const orgJsonLd = organizationSchema()
+  const siteJsonLd = webSiteSchema()
+  const appJsonLd = softwareApplicationSchema()
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://opinafy.com' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar />
       <Hero />
       <Features />

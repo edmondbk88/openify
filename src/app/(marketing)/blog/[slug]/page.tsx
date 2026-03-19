@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { blogArticles } from '@/lib/blog-data'
+import { articleSchema, breadcrumbSchema } from '@/lib/schema'
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
@@ -18,7 +19,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const article = blogArticles.find((a) => a.slug === slug)
 
   if (!article) {
-    return { title: 'Artículo no encontrado' }
+    return { title: 'Articulo no encontrado' }
   }
 
   return {
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       authors: ['Equipo Opinafy'],
       images: [
         {
-          url: '/og-image.png',
+          url: '/og.png',
           width: 1200,
           height: 630,
           alt: article.title,
@@ -79,40 +80,30 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     .filter((a) => a.slug !== slug)
     .slice(0, 3)
 
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: article.title,
+  const jsonLd = articleSchema({
+    title: article.title,
     description: article.metaDescription,
-    author: {
-      '@type': 'Organization',
-      name: 'Equipo Opinafy',
-      url: 'https://opinafy.com',
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Opinafy',
-      url: 'https://opinafy.com',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://opinafy.com/og-image.png',
-      },
-    },
-    datePublished: article.date,
-    dateModified: article.date,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `https://opinafy.com/blog/${article.slug}`,
-    },
-    keywords: article.keywords.join(', '),
-    inLanguage: 'es',
-  }
+    slug: article.slug,
+    date: article.date,
+    keywords: article.keywords,
+    image: 'https://opinafy.com/og.png',
+  })
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://opinafy.com' },
+    { name: 'Blog', url: 'https://opinafy.com/blog' },
+    { name: article.title, url: `https://opinafy.com/blog/${article.slug}` },
+  ])
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
@@ -174,7 +165,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-indigo-100">
             Opinafy te ayuda a recopilar, gestionar y mostrar testimonios de clientes de forma
-            profesional. Sin tarjeta de crédito. Sin compromiso.
+            profesional. Sin tarjeta de credito. Sin compromiso.
           </p>
           <Link
             href="/registro"
@@ -186,7 +177,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {/* Related Articles */}
         <section className="mt-16">
-          <h2 className="text-2xl font-bold text-gray-900">Artículos relacionados</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Articulos relacionados</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             {relatedArticles.map((related) => (
               <Link
