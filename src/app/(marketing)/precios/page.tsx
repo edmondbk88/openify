@@ -1,3 +1,5 @@
+export const revalidate = 60 // revalidate every 60 seconds
+
 import type { Metadata } from 'next'
 import { Navbar } from '@/components/landing/navbar'
 import { Pricing } from '@/components/landing/pricing'

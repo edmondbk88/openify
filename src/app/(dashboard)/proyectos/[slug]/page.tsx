@@ -24,17 +24,26 @@ export default async function ProyectoDetailPage({
     redirect('/login')
   }
 
-  // Fetch project by slug
-  const { data: project, error: projectError } = await supabase
-    .from('projects')
-    .select('*')
-    .eq('slug', slug)
-    .eq('user_id', user.id)
-    .single()
+  // Fetch project and user profile in parallel
+  const [{ data: project, error: projectError }, { data: profile }] = await Promise.all([
+    supabase
+      .from('projects')
+      .select('*')
+      .eq('slug', slug)
+      .eq('user_id', user.id)
+      .single(),
+    supabase
+      .from('profiles')
+      .select('username')
+      .eq('id', user.id)
+      .single(),
+  ])
 
   if (!project || projectError) {
     notFound()
   }
+
+  const username = profile?.username || ''
 
   // Fetch all testimonials for this project
   const { data: testimonials } = await supabase
@@ -96,7 +105,7 @@ export default async function ProyectoDetailPage({
         </div>
         <div className="flex flex-wrap items-center gap-2">
           <Link
-            href={`/p/${(project as Project).slug}`}
+            href={`/p/${username}/${(project as Project).slug}`}
             target="_blank"
             className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3.5 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
           >

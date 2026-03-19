@@ -5,16 +5,26 @@ import { createClient } from '@/lib/supabase/server'
 import type { Project } from '@/types'
 
 interface PageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ username: string; slug: string }>
   searchParams: Promise<{ verificacion?: string }>
 }
 
-async function getProject(slug: string): Promise<Project | null> {
+async function getProject(username: string, slug: string): Promise<Project | null> {
   const supabase = await createClient()
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('id')
+    .eq('username', username)
+    .single()
+
+  if (!profile) return null
+
   const { data } = await supabase
     .from('projects')
     .select('*')
     .eq('slug', slug)
+    .eq('user_id', profile.id)
     .eq('is_active', true)
     .single()
 
@@ -22,8 +32,8 @@ async function getProject(slug: string): Promise<Project | null> {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
-  const project = await getProject(slug)
+  const { username, slug } = await params
+  const project = await getProject(username, slug)
 
   if (!project) {
     return { title: 'No encontrado' }
@@ -36,9 +46,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function GraciasPage({ params, searchParams }: PageProps) {
-  const { slug } = await params
+  const { username, slug } = await params
   const { verificacion } = await searchParams
-  const project = await getProject(slug)
+  const project = await getProject(username, slug)
 
   if (!project) {
     notFound()
@@ -107,7 +117,7 @@ export default async function GraciasPage({ params, searchParams }: PageProps) {
         {/* Back Link */}
         <div className="mt-8">
           <Link
-            href={`/p/${slug}`}
+            href={`/p/${username}/${slug}`}
             className="inline-flex items-center gap-2 rounded-lg px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
             style={{ backgroundColor: project.brand_color }}
           >

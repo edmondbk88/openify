@@ -4,6 +4,7 @@ import { useRouter } from 'next/navigation'
 import { CollectionForm } from '@/components/collection/collection-form'
 
 interface CollectionPageClientProps {
+  username: string
   slug: string
   projectId: string
   brandColor: string
@@ -11,6 +12,7 @@ interface CollectionPageClientProps {
 }
 
 export function CollectionPageClient({
+  username,
   slug,
   projectId,
   brandColor,
@@ -25,7 +27,7 @@ export function CollectionPageClient({
       allowVideo={allowVideo}
       onSuccess={(verificationPending) => {
         const params = verificationPending ? '?verificacion=pendiente' : ''
-        router.push(`/p/${slug}/gracias${params}`)
+        router.push(`/p/${username}/${slug}/gracias${params}`)
       }}
     />
   )

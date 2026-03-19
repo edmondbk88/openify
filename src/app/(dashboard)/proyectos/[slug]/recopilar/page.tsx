@@ -16,6 +16,7 @@ export default function RecopilarPage() {
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
   const [copied, setCopied] = useState(false)
+  const [username, setUsername] = useState('')
 
   const [form, setForm] = useState({
     collection_title: '',
@@ -24,28 +25,39 @@ export default function RecopilarPage() {
   })
 
   const publicUrl = typeof window !== 'undefined'
-    ? `${window.location.origin}/p/${slug}`
-    : `/p/${slug}`
+    ? `${window.location.origin}/p/${username}/${slug}`
+    : `/p/${username}/${slug}`
 
   useEffect(() => {
     async function load() {
       const supabase = createClient()
-      const { data } = await supabase
-        .from('projects')
-        .select('*')
-        .eq('slug', slug)
-        .single()
 
-      if (!data) {
+      // Fetch project and current user's profile in parallel
+      const [{ data: projectData }, { data: { user } }] = await Promise.all([
+        supabase.from('projects').select('*').eq('slug', slug).single(),
+        supabase.auth.getUser(),
+      ])
+
+      if (!projectData) {
         router.push('/proyectos')
         return
       }
 
-      setProject(data as Project)
+      // Fetch username
+      if (user) {
+        const { data: profile } = await supabase
+          .from('profiles')
+          .select('username')
+          .eq('id', user.id)
+          .single()
+        setUsername(profile?.username || '')
+      }
+
+      setProject(projectData as Project)
       setForm({
-        collection_title: data.collection_title || '',
-        collection_description: data.collection_description || '',
-        thank_you_message: data.thank_you_message || '',
+        collection_title: projectData.collection_title || '',
+        collection_description: projectData.collection_description || '',
+        thank_you_message: projectData.thank_you_message || '',
       })
       setLoading(false)
     }

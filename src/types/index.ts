@@ -8,6 +8,7 @@ export interface Profile {
   email: string
   full_name: string | null
   avatar_url: string | null
+  username: string | null
   plan: Plan
   stripe_customer_id: string | null
   stripe_subscription_id: string | null

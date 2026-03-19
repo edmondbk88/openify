@@ -8,15 +8,26 @@ import Image from 'next/image'
 import { CollectionPageClient } from './collection-page-client'
 
 interface PageProps {
-  params: Promise<{ slug: string }>
+  params: Promise<{ username: string; slug: string }>
 }
 
-async function getProject(slug: string): Promise<Project | null> {
+async function getProject(username: string, slug: string): Promise<Project | null> {
   const supabase = await createClient()
+
+  // Find the profile by username, then the project by slug + user_id
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('id')
+    .eq('username', username)
+    .single()
+
+  if (!profile) return null
+
   const { data } = await supabase
     .from('projects')
     .select('*')
     .eq('slug', slug)
+    .eq('user_id', profile.id)
     .eq('is_active', true)
     .single()
 
@@ -36,8 +47,8 @@ async function getAllowVideo(userId: string): Promise<boolean> {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params
-  const project = await getProject(slug)
+  const { username, slug } = await params
+  const project = await getProject(username, slug)
 
   if (!project) {
     return { title: 'No encontrado' }
@@ -51,8 +62,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function CollectionPage({ params }: PageProps) {
-  const { slug } = await params
-  const project = await getProject(slug)
+  const { username, slug } = await params
+  const project = await getProject(username, slug)
 
   if (!project) {
     notFound()
@@ -97,6 +108,7 @@ export default async function CollectionPage({ params }: PageProps) {
         {/* Testimonial Form */}
         <div className="mt-8">
           <CollectionPageClient
+            username={username}
             slug={slug}
             projectId={project.id}
             brandColor={project.brand_color}
