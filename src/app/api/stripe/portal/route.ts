@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import { absoluteUrl } from '@/lib/utils'
 
 export async function POST() {
@@ -9,7 +9,7 @@ export async function POST() {
     const { data: { user }, error: authError } = await supabase.auth.getUser()
 
     if (authError || !user) {
-      return NextResponse.redirect(absoluteUrl('/login'))
+      return NextResponse.redirect(absoluteUrl('/login'), 303)
     }
 
     const { data: profile } = await supabase
@@ -19,16 +19,17 @@ export async function POST() {
       .single()
 
     if (!profile?.stripe_customer_id) {
-      return NextResponse.redirect(absoluteUrl('/facturacion?error=sin_suscripcion'))
+      return NextResponse.redirect(absoluteUrl('/facturacion?error=sin_suscripcion'), 303)
     }
 
-    const session = await stripe.billingPortal.sessions.create({
+    const session = await getStripe().billingPortal.sessions.create({
       customer: profile.stripe_customer_id,
       return_url: absoluteUrl('/facturacion'),
     })
 
-    return NextResponse.redirect(session.url)
-  } catch {
-    return NextResponse.redirect(absoluteUrl('/facturacion?error=error_interno'))
+    return NextResponse.redirect(session.url, 303)
+  } catch (err) {
+    console.error('[Stripe Portal Error]', err instanceof Error ? err.message : err)
+    return NextResponse.redirect(absoluteUrl('/facturacion?error=error_interno'), 303)
   }
 }

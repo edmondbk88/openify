@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import { absoluteUrl } from '@/lib/utils'
 import { STRIPE_PRICES } from '@/lib/constants'
 import type { Plan } from '@/types'
@@ -34,9 +34,16 @@ export async function POST(request: NextRequest) {
       return NextResponse.redirect(absoluteUrl('/facturacion?error=plan_invalido'), 303)
     }
 
-    const priceId = STRIPE_PRICES[plan as Exclude<Plan, 'free'>].monthly
+    // Get price ID - use env vars directly as fallback in case STRIPE_PRICES was empty at build time
+    let priceId = STRIPE_PRICES[plan as Exclude<Plan, 'free'>].monthly
+    if (!priceId) {
+      priceId = plan === 'pro'
+        ? (process.env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID || '')
+        : (process.env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID || '')
+    }
 
     if (!priceId) {
+      console.error('[Stripe Checkout] No price ID for plan:', plan)
       return NextResponse.redirect(absoluteUrl('/facturacion?error=precio_no_configurado'), 303)
     }
 
@@ -50,7 +57,7 @@ export async function POST(request: NextRequest) {
     let customerId = profile?.stripe_customer_id
 
     if (!customerId) {
-      const customer = await stripe.customers.create({
+      const customer = await getStripe().customers.create({
         email: user.email,
         name: profile?.full_name || undefined,
         metadata: { supabase_user_id: user.id },
@@ -63,7 +70,7 @@ export async function POST(request: NextRequest) {
         .eq('id', user.id)
     }
 
-    const session = await stripe.checkout.sessions.create({
+    const session = await getStripe().checkout.sessions.create({
       customer: customerId,
       mode: 'subscription',
       payment_method_types: ['card'],
@@ -78,7 +85,8 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.redirect(absoluteUrl('/facturacion?error=sesion_no_creada'), 303)
-  } catch {
+  } catch (err) {
+    console.error('[Stripe Checkout Error]', err instanceof Error ? err.message : err)
     return NextResponse.redirect(absoluteUrl('/facturacion?error=error_interno'), 303)
   }
 }

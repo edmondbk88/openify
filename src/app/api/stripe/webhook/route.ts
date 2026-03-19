@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { stripe } from '@/lib/stripe'
+import { getStripe } from '@/lib/stripe'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { STRIPE_PRICES } from '@/lib/constants'
 import { Plan } from '@/types'
@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
   let event: Stripe.Event
 
   try {
-    event = stripe.webhooks.constructEvent(
+    event = getStripe().webhooks.constructEvent(
       body,
       signature,
       process.env.STRIPE_WEBHOOK_SECRET!
@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
         if (!userId) break
 
         // Get subscription to determine the plan
-        const subscription = await stripe.subscriptions.retrieve(subscriptionId)
+        const subscription = await getStripe().subscriptions.retrieve(subscriptionId)
         const priceId = subscription.items.data[0]?.price.id
         const plan = getPlanFromPriceId(priceId)
 

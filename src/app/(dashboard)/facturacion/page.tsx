@@ -81,7 +81,12 @@ function ManageSubscriptionButton() {
   )
 }
 
-export default async function FacturacionPage() {
+export default async function FacturacionPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ error?: string; checkout?: string }>
+}) {
+  const params = await searchParams
   const supabase = await createClient()
 
   const {
@@ -104,6 +109,26 @@ export default async function FacturacionPage() {
 
   return (
     <div className="mx-auto max-w-4xl">
+      {/* Error/Success messages */}
+      {params.error && (
+        <div className="mb-6 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+          {params.error === 'error_interno' && 'Hubo un error al procesar tu solicitud. Por favor, inténtalo de nuevo.'}
+          {params.error === 'plan_invalido' && 'El plan seleccionado no es válido.'}
+          {params.error === 'precio_no_configurado' && 'El precio no está configurado. Contacta con soporte.'}
+          {params.error === 'sin_suscripcion' && 'No tienes una suscripción activa.'}
+        </div>
+      )}
+      {params.checkout === 'success' && (
+        <div className="mb-6 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700">
+          ¡Tu plan ha sido actualizado correctamente! Los cambios pueden tardar unos segundos en reflejarse.
+        </div>
+      )}
+      {params.checkout === 'cancelled' && (
+        <div className="mb-6 rounded-lg border border-yellow-200 bg-yellow-50 px-4 py-3 text-sm text-yellow-700">
+          Has cancelado el proceso de pago. No se ha realizado ningún cargo.
+        </div>
+      )}
+
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Facturación</h1>
