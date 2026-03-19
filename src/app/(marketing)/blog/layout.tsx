@@ -8,6 +8,7 @@ export default function BlogLayout({
 }) {
   return (
     <>
+      <link rel="preconnect" href="https://rckjevsqxkfixkdloqjv.supabase.co" />
       <Navbar />
       <main className="min-h-screen bg-white">{children}</main>
       <Footer />

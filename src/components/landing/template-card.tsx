@@ -28,6 +28,7 @@ export function TemplateCard({ template }: { template: WidgetTemplate }) {
     <Link
       href={`/plantillas/${template.id}`}
       className="group flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm transition-all hover:shadow-lg hover:-translate-y-1"
+      style={{ contentVisibility: 'auto', containIntrinsicSize: '0 320px' }}
     >
       {/* Preview thumbnail */}
       <div className="relative h-48 overflow-hidden">

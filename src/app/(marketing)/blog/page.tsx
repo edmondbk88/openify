@@ -70,7 +70,7 @@ export default function BlogPage() {
 
         {/* Articles Grid */}
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {blogArticles.map((article) => (
+          {blogArticles.map((article, index) => (
             <Link
               key={article.slug}
               href={`/blog/${article.slug}`}
@@ -83,6 +83,7 @@ export default function BlogPage() {
                 width={600}
                 height={340}
                 className="w-full h-48 object-cover"
+                {...(index === 0 ? { priority: true } : {})}
               />
 
               {/* Content */}

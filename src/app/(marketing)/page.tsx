@@ -12,6 +12,7 @@ import {
   webSiteSchema,
   softwareApplicationSchema,
   breadcrumbSchema,
+  faqSchema,
 } from '@/lib/schema'
 
 export default function HomePage() {
@@ -21,6 +22,7 @@ export default function HomePage() {
   const breadcrumbJsonLd = breadcrumbSchema([
     { name: 'Inicio', url: 'https://opinafy.com' },
   ])
+  const faqJsonLd = faqSchema()
 
   return (
     <>
@@ -39,6 +41,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <Navbar />
       <Hero />

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
+import { ContactForm } from '@/components/contact-form'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
@@ -35,64 +36,7 @@ export default function ContactoPage() {
 
             <div className="grid gap-12 lg:grid-cols-2">
               {/* Contact Form */}
-              <div>
-                <h2 className="mb-6 text-xl font-semibold text-gray-900">
-                  Envíanos un mensaje
-                </h2>
-                <form className="space-y-5">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="mb-1.5 block text-sm font-medium text-gray-700"
-                    >
-                      Nombre
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Tu nombre"
-                      className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 transition-colors focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="mb-1.5 block text-sm font-medium text-gray-700"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="tu@email.com"
-                      className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 transition-colors focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="mb-1.5 block text-sm font-medium text-gray-700"
-                    >
-                      Mensaje
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      placeholder="Describe tu consulta..."
-                      className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm text-gray-900 placeholder-gray-400 transition-colors focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="inline-flex h-11 items-center justify-center rounded-lg bg-indigo-600 px-8 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"
-                  >
-                    Enviar mensaje
-                  </button>
-                </form>
-              </div>
+              <ContactForm />
 
               {/* Contact Info */}
               <div className="space-y-8">

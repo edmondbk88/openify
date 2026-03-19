@@ -8,8 +8,8 @@ export function CtaSection() {
           Empieza a recopilar testimonios hoy
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-lg text-indigo-100">
-          Únete a cientos de negocios que ya usan Opinafy para convertir las opiniones de
-          sus clientes en ventas. Sin tarjeta de crédito.
+          Empieza a recopilar testimonios hoy y convierte las opiniones de tus
+          clientes en ventas. Sin tarjeta de crédito.
         </p>
         <div className="mt-10">
           <Link

@@ -28,13 +28,19 @@ export default function AvisoLegalPage() {
             </p>
             <ul className="ml-6 list-disc space-y-2 text-gray-600">
               <li>
+                <strong>Responsable:</strong> El titular del NIF indicado
+              </li>
+              <li>
+                <strong>NIF:</strong> Y6804922H
+              </li>
+              <li>
                 <strong>Nombre comercial:</strong> Opinafy
               </li>
               <li>
                 <strong>Dominio:</strong> opinafy.com
               </li>
               <li>
-                <strong>Correo electrónico de contacto:</strong> hola@opinafy.com
+                <strong>Correo electrónico:</strong> hola@opinafy.com
               </li>
               <li>
                 <strong>País:</strong> España

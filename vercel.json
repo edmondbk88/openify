@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.opinafy.com" }],
+      "destination": "https://opinafy.com/$1",
+      "permanent": true
+    }
+  ]
+}

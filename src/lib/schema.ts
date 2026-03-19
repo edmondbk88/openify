@@ -188,7 +188,68 @@ export function collectionPageSchema(opts: {
 }
 
 // ──────────────────────────────────────────────
-// 7. Article -- improved version with image support
+// 7. FAQPage -- for homepage FAQ section
+// ──────────────────────────────────────────────
+export function faqSchema() {
+  const faqs = [
+    {
+      question: '¿Qué es Opinafy?',
+      answer:
+        'Opinafy es una plataforma SaaS que te permite recopilar, gestionar y mostrar testimonios de tus clientes en tu sitio web. Con formularios personalizables y widgets embebibles, puedes mostrar prueba social de forma profesional y aumentar tus conversiones.',
+    },
+    {
+      question: '¿Cómo instalo el widget en mi web?',
+      answer:
+        'Es muy sencillo. Una vez que tengas testimonios aprobados, ve a la sección de widget en tu panel, elige el layout que prefieras, personaliza los colores y copia el fragmento de código. Pégalo en el HTML de tu web donde quieras que aparezcan los testimonios.',
+    },
+    {
+      question: '¿Puedo personalizar el diseño?',
+      answer:
+        'Sí. Puedes personalizar los colores, la tipografía, el layout (carrusel, cuadrícula o muro) y otros aspectos visuales del widget para que se integre perfectamente con el diseño de tu web.',
+    },
+    {
+      question: '¿Hay plan gratuito?',
+      answer:
+        'Sí, ofrecemos un plan gratuito que incluye 1 proyecto, hasta 10 testimonios y 2 layouts. Es perfecto para probar la plataforma sin compromiso. Puedes mejorar a un plan de pago en cualquier momento.',
+    },
+    {
+      question: '¿Los testimonios afectan al SEO?',
+      answer:
+        'Sí. Los testimonios se renderizan como contenido HTML real en tu página, lo que los hace indexables por los motores de búsqueda. Además, utilizamos datos estructurados (schema markup) para mejorar la visibilidad en los resultados de búsqueda.',
+    },
+    {
+      question: '¿Puedo migrar desde otra plataforma?',
+      answer:
+        'Sí, puedes importar testimonios existentes de forma manual desde tu panel de control. Si necesitas una migración masiva, nuestro equipo de soporte puede ayudarte con el proceso.',
+    },
+    {
+      question: '¿Qué métodos de pago aceptan?',
+      answer:
+        'Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express) a través de Stripe, nuestra pasarela de pago segura. Todos los pagos están protegidos con encriptación SSL.',
+    },
+    {
+      question: '¿Funciona con WordPress/Shopify?',
+      answer:
+        'Sí, el widget de Opinafy es compatible con cualquier plataforma web, incluyendo WordPress, Shopify, Wix, Squarespace y cualquier sitio HTML personalizado. Solo necesitas pegar un fragmento de código.',
+    },
+  ]
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+}
+
+// ──────────────────────────────────────────────
+// 8. Article -- improved version with image support
 // ──────────────────────────────────────────────
 export function articleSchema(opts: {
   title: string
@@ -205,7 +266,7 @@ export function articleSchema(opts: {
     description: opts.description,
     image: opts.image || 'https://opinafy.com/og.png',
     author: {
-      '@type': 'Organization',
+      '@type': 'Person',
       name: 'Equipo Opinafy',
       url: 'https://opinafy.com',
     },

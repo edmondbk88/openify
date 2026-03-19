@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Opinafy - Testimonios de Clientes que Convierten',
+  title: { absolute: 'Opinafy - Testimonios de Clientes que Convierten' },
   description:
     'Recopila, gestiona y muestra testimonios de clientes en tu web. Widgets personalizables, prueba social auténtica y más conversiones.',
   keywords: [
