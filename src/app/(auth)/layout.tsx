@@ -14,7 +14,7 @@ export default function AuthLayout({
   return (
     <div className="flex min-h-screen flex-col items-center justify-center bg-gray-50 px-4 py-12">
       <Link href="/" className="mb-8">
-        <Image src="/logo-opinafy.png" alt="Opinafy" width={140} height={40} className="h-10 w-auto" />
+        <Image src="/logo-opinafy.png?v=2" alt="Opinafy" width={140} height={40} className="h-10 w-auto" />
       </Link>
       <div className="w-full max-w-md">{children}</div>
     </div>

@@ -1,6 +1,10 @@
 'use client'
 
+import { useState } from 'react'
 import { cn } from '@/lib/utils'
+import { widgetTemplates, TEMPLATE_CATEGORIES } from '@/lib/widget-templates'
+import type { WidgetTemplate } from '@/lib/widget-templates'
+import { TemplatePreview } from '@/components/landing/template-preview'
 import type { WidgetConfig, WidgetLayout, WidgetTheme } from '@/types'
 
 type EditableConfig = Omit<WidgetConfig, 'id' | 'project_id' | 'filter_tags' | 'custom_css' | 'created_at' | 'updated_at'>
@@ -24,13 +28,120 @@ const themeOptions: { value: WidgetTheme; label: string }[] = [
   { value: 'auto', label: 'Automático' },
 ]
 
+const ALL_CATEGORIES = ['Todas', ...TEMPLATE_CATEGORIES] as const
+
 export default function WidgetConfigurator({ config, onChange }: WidgetConfiguratorProps) {
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todas')
+  const [selectedTemplateId, setSelectedTemplateId] = useState<string | null>(null)
+
   function update<K extends keyof EditableConfig>(key: K, value: EditableConfig[K]) {
     onChange({ ...config, [key]: value })
   }
 
+  function applyTemplate(template: WidgetTemplate) {
+    setSelectedTemplateId(template.id)
+    onChange({
+      ...config,
+      layout: template.layout,
+      theme: template.config.theme,
+      primary_color: template.config.primary_color,
+      background_color: template.config.background_color,
+      text_color: template.config.text_color,
+      border_radius: template.config.border_radius,
+      show_rating: template.config.show_rating,
+      show_date: template.config.show_date,
+      show_avatar: template.config.show_avatar,
+      show_company: template.config.show_company,
+      show_branding: config.show_branding,
+    })
+  }
+
+  const filteredTemplates = selectedCategory === 'Todas'
+    ? widgetTemplates
+    : widgetTemplates.filter((t) => t.category === selectedCategory)
+
   return (
-    <div className="space-y-8">
+    <div className="space-y-10">
+      {/* ═══════════════════════════════════════════ */}
+      {/* TEMPLATE SELECTOR */}
+      {/* ═══════════════════════════════════════════ */}
+      <section>
+        <h3 className="text-base font-semibold text-gray-900">Elige una plantilla</h3>
+        <p className="mt-1 text-sm text-gray-500">
+          Selecciona una plantilla prediseñada y luego ajusta los detalles abajo.
+        </p>
+
+        {/* Category filter tabs */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {ALL_CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={cn(
+                'rounded-full px-3 py-1.5 text-xs font-medium transition-colors',
+                selectedCategory === cat
+                  ? 'bg-indigo-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              )}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Template grid */}
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {filteredTemplates.map((template) => (
+            <button
+              key={template.id}
+              onClick={() => applyTemplate(template)}
+              className={cn(
+                'group relative overflow-hidden rounded-xl border-2 text-left transition-all hover:shadow-md',
+                selectedTemplateId === template.id
+                  ? 'border-indigo-600 ring-2 ring-indigo-600/20'
+                  : 'border-gray-200 hover:border-gray-300'
+              )}
+            >
+              {/* Template preview thumbnail */}
+              <div className="pointer-events-none aspect-[4/3] w-full overflow-hidden">
+                <div className="h-full w-full origin-top-left scale-[0.5] transform" style={{ width: '200%', height: '200%' }}>
+                  <TemplatePreview template={template} compact />
+                </div>
+              </div>
+
+              {/* Template name */}
+              <div className="border-t border-gray-100 bg-white px-2.5 py-2">
+                <p className="truncate text-xs font-medium text-gray-900">
+                  {template.name}
+                </p>
+                <p className="truncate text-[10px] text-gray-500">
+                  {template.category} · {template.layout}
+                </p>
+              </div>
+
+              {/* Selected checkmark */}
+              {selectedTemplateId === template.id && (
+                <div className="absolute right-1.5 top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-white">
+                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </div>
+              )}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* ═══════════════════════════════════════════ */}
+      {/* MANUAL CUSTOMIZATION */}
+      {/* ═══════════════════════════════════════════ */}
+      <div className="border-t border-gray-200 pt-8">
+        <h3 className="text-base font-semibold text-gray-900">Personalización avanzada</h3>
+        <p className="mt-1 text-sm text-gray-500">
+          Ajusta cada detalle manualmente.
+        </p>
+      </div>
+
       {/* Layout */}
       <section>
         <h3 className="text-sm font-semibold text-gray-900">Diseño</h3>

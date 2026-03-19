@@ -25,7 +25,7 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/">
-              <Image src="/logo-opinafy.png" alt="Opinafy" width={140} height={40} className="h-10 w-auto" />
+              <Image src="/logo-opinafy.png?v=2" alt="Opinafy" width={140} height={40} className="h-10 w-auto" />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-gray-500">
               La plataforma de testimonios que ayuda a los negocios a generar confianza y
