@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import Script from 'next/script'
 import { ToastProvider } from '@/components/ui/toast'
 import './globals.css'
 
@@ -83,6 +84,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={inter.variable}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-CPLGLSLYHR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('consent', 'default', {
+              'analytics_storage': 'denied',
+              'ad_storage': 'denied'
+            });
+            gtag('config', 'G-CPLGLSLYHR');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} antialiased`}>
         <ToastProvider>{children}</ToastProvider>
       </body>
