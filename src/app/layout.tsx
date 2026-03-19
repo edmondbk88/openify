@@ -70,6 +70,10 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
   verification: {
     google: 'GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE',
   },

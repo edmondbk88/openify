@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 const productLinks = [
@@ -8,8 +9,10 @@ const productLinks = [
 ]
 
 const legalLinks = [
-  { label: 'Términos de uso', href: '/terminos' },
-  { label: 'Política de privacidad', href: '/privacidad' },
+  { label: 'Aviso Legal', href: '/legal' },
+  { label: 'Privacidad', href: '/privacidad' },
+  { label: 'Términos', href: '/terminos' },
+  { label: 'Cookies', href: '/cookies' },
 ]
 
 export function Footer() {
@@ -19,8 +22,8 @@ export function Footer() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <Link href="/" className="text-xl font-bold text-indigo-600">
-              Opinafy
+            <Link href="/">
+              <Image src="/logo-opinafy.png" alt="Opinafy" width={140} height={40} className="h-10 w-auto" />
             </Link>
             <p className="mt-3 max-w-xs text-sm text-gray-500">
               La plataforma de testimonios que ayuda a los negocios a generar confianza y

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const navLinks = [
@@ -19,8 +20,8 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
-        <Link href="/" className="text-xl font-bold text-indigo-600">
-          Opinafy
+        <Link href="/">
+          <Image src="/logo-opinafy.png" alt="Opinafy" width={140} height={40} className="h-10 w-auto" />
         </Link>
 
         {/* Desktop nav */}

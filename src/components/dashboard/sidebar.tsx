@@ -69,8 +69,8 @@ export default function Sidebar({ user, onLogout }: SidebarProps) {
     <div className="flex h-full flex-col">
       {/* Logo */}
       <div className="flex h-16 items-center px-6">
-        <Link href="/dashboard" className="text-2xl font-bold text-indigo-600">
-          Opinafy
+        <Link href="/dashboard">
+          <Image src="/logo-opinafy.png" alt="Opinafy" width={120} height={35} className="h-8 w-auto" />
         </Link>
       </div>
 

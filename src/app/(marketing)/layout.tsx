@@ -51,10 +51,17 @@ export const metadata: Metadata = {
   },
 }
 
+import { CookieBanner } from '@/components/landing/cookie-banner'
+
 export default function MarketingLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return <>{children}</>
+  return (
+    <>
+      {children}
+      <CookieBanner />
+    </>
+  )
 }
