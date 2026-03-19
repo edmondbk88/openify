@@ -1,0 +1,34 @@
+import { redirect } from 'next/navigation'
+import { createClient } from '@/lib/supabase/server'
+import type { Profile } from '@/types'
+import DashboardShell from './dashboard-shell'
+
+export default async function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const supabase = await createClient()
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  if (!user) {
+    redirect('/login')
+  }
+
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('full_name, email, avatar_url')
+    .eq('id', user.id)
+    .single()
+
+  const userInfo: Pick<Profile, 'full_name' | 'email' | 'avatar_url'> = {
+    full_name: profile?.full_name ?? null,
+    email: profile?.email ?? user.email ?? '',
+    avatar_url: profile?.avatar_url ?? null,
+  }
+
+  return <DashboardShell user={userInfo}>{children}</DashboardShell>
+}

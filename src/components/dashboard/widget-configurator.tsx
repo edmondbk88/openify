@@ -1,0 +1,261 @@
+'use client'
+
+import { cn } from '@/lib/utils'
+import type { WidgetConfig, WidgetLayout, WidgetTheme } from '@/types'
+
+type EditableConfig = Omit<WidgetConfig, 'id' | 'project_id' | 'filter_tags' | 'custom_css' | 'created_at' | 'updated_at'>
+
+interface WidgetConfiguratorProps {
+  config: EditableConfig
+  onChange: (config: EditableConfig) => void
+}
+
+const layoutOptions: { value: WidgetLayout; label: string }[] = [
+  { value: 'carousel', label: 'Carrusel' },
+  { value: 'grid', label: 'Cuadrícula' },
+  { value: 'wall', label: 'Muro' },
+  { value: 'single', label: 'Individual' },
+  { value: 'badge', label: 'Insignia' },
+]
+
+const themeOptions: { value: WidgetTheme; label: string }[] = [
+  { value: 'light', label: 'Claro' },
+  { value: 'dark', label: 'Oscuro' },
+  { value: 'auto', label: 'Automático' },
+]
+
+export default function WidgetConfigurator({ config, onChange }: WidgetConfiguratorProps) {
+  function update<K extends keyof EditableConfig>(key: K, value: EditableConfig[K]) {
+    onChange({ ...config, [key]: value })
+  }
+
+  return (
+    <div className="space-y-8">
+      {/* Layout */}
+      <section>
+        <h3 className="text-sm font-semibold text-gray-900">Diseño</h3>
+        <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
+          {layoutOptions.map((opt) => (
+            <button
+              key={opt.value}
+              onClick={() => update('layout', opt.value)}
+              className={cn(
+                'rounded-lg border px-3 py-2.5 text-sm font-medium transition-colors',
+                config.layout === opt.value
+                  ? 'border-indigo-600 bg-indigo-50 text-indigo-600'
+                  : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50'
+              )}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* Theme */}
+      <section>
+        <h3 className="text-sm font-semibold text-gray-900">Tema</h3>
+        <div className="mt-3 flex gap-2">
+          {themeOptions.map((opt) => (
+            <button
+              key={opt.value}
+              onClick={() => update('theme', opt.value)}
+              className={cn(
+                'rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors',
+                config.theme === opt.value
+                  ? 'border-indigo-600 bg-indigo-50 text-indigo-600'
+                  : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50'
+              )}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* Colors */}
+      <section>
+        <h3 className="text-sm font-semibold text-gray-900">Colores</h3>
+        <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div>
+            <label className="block text-xs font-medium text-gray-500">Color primario</label>
+            <div className="mt-1.5 flex items-center gap-2">
+              <input
+                type="color"
+                value={config.primary_color}
+                onChange={(e) => update('primary_color', e.target.value)}
+                className="h-9 w-9 cursor-pointer rounded border border-gray-200"
+              />
+              <input
+                type="text"
+                value={config.primary_color}
+                onChange={(e) => update('primary_color', e.target.value)}
+                className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              />
+            </div>
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500">Color de fondo</label>
+            <div className="mt-1.5 flex items-center gap-2">
+              <input
+                type="color"
+                value={config.background_color}
+                onChange={(e) => update('background_color', e.target.value)}
+                className="h-9 w-9 cursor-pointer rounded border border-gray-200"
+              />
+              <input
+                type="text"
+                value={config.background_color}
+                onChange={(e) => update('background_color', e.target.value)}
+                className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              />
+            </div>
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500">Color de texto</label>
+            <div className="mt-1.5 flex items-center gap-2">
+              <input
+                type="color"
+                value={config.text_color}
+                onChange={(e) => update('text_color', e.target.value)}
+                className="h-9 w-9 cursor-pointer rounded border border-gray-200"
+              />
+              <input
+                type="text"
+                value={config.text_color}
+                onChange={(e) => update('text_color', e.target.value)}
+                className="flex-1 rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Border Radius */}
+      <section>
+        <h3 className="text-sm font-semibold text-gray-900">Radio de borde</h3>
+        <div className="mt-3 flex items-center gap-4">
+          <input
+            type="range"
+            min={0}
+            max={24}
+            step={1}
+            value={config.border_radius}
+            onChange={(e) => update('border_radius', Number(e.target.value))}
+            className="flex-1 accent-indigo-600"
+          />
+          <span className="w-12 text-right text-sm text-gray-600">{config.border_radius}px</span>
+        </div>
+      </section>
+
+      {/* Toggles */}
+      <section>
+        <h3 className="text-sm font-semibold text-gray-900">Opciones de visualización</h3>
+        <div className="mt-3 space-y-3">
+          {([
+            { key: 'show_rating' as const, label: 'Mostrar valoración' },
+            { key: 'show_date' as const, label: 'Mostrar fecha' },
+            { key: 'show_avatar' as const, label: 'Mostrar avatar' },
+            { key: 'show_company' as const, label: 'Mostrar empresa' },
+            { key: 'show_branding' as const, label: 'Mostrar marca Opinafy' },
+          ]).map(({ key, label }) => (
+            <label key={key} className="flex items-center justify-between">
+              <span className="text-sm text-gray-700">{label}</span>
+              <button
+                type="button"
+                role="switch"
+                aria-checked={config[key]}
+                onClick={() => update(key, !config[key])}
+                className={cn(
+                  'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors',
+                  config[key] ? 'bg-indigo-600' : 'bg-gray-200'
+                )}
+              >
+                <span
+                  className={cn(
+                    'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition-transform',
+                    config[key] ? 'translate-x-5' : 'translate-x-0'
+                  )}
+                />
+              </button>
+            </label>
+          ))}
+        </div>
+      </section>
+
+      {/* Auto-play */}
+      <section>
+        <h3 className="text-sm font-semibold text-gray-900">Reproducción automática</h3>
+        <div className="mt-3 space-y-3">
+          <label className="flex items-center justify-between">
+            <span className="text-sm text-gray-700">Activar auto-play</span>
+            <button
+              type="button"
+              role="switch"
+              aria-checked={config.auto_play}
+              onClick={() => update('auto_play', !config.auto_play)}
+              className={cn(
+                'relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors',
+                config.auto_play ? 'bg-indigo-600' : 'bg-gray-200'
+              )}
+            >
+              <span
+                className={cn(
+                  'pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition-transform',
+                  config.auto_play ? 'translate-x-5' : 'translate-x-0'
+                )}
+              />
+            </button>
+          </label>
+          {config.auto_play && (
+            <div className="flex items-center gap-4">
+              <label className="text-sm text-gray-500">Velocidad (ms)</label>
+              <input
+                type="range"
+                min={1000}
+                max={10000}
+                step={500}
+                value={config.auto_play_speed}
+                onChange={(e) => update('auto_play_speed', Number(e.target.value))}
+                className="flex-1 accent-indigo-600"
+              />
+              <span className="w-16 text-right text-sm text-gray-600">{config.auto_play_speed}ms</span>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* Max testimonials & min rating */}
+      <section>
+        <h3 className="text-sm font-semibold text-gray-900">Filtros</h3>
+        <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div>
+            <label className="block text-xs font-medium text-gray-500">Máximo de testimonios</label>
+            <input
+              type="number"
+              min={1}
+              max={100}
+              value={config.max_testimonials}
+              onChange={(e) => update('max_testimonials', Number(e.target.value))}
+              className="mt-1.5 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            />
+          </div>
+          <div>
+            <label className="block text-xs font-medium text-gray-500">Valoración mínima</label>
+            <select
+              value={config.min_rating}
+              onChange={(e) => update('min_rating', Number(e.target.value))}
+              className="mt-1.5 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            >
+              {[1, 2, 3, 4, 5].map((n) => (
+                <option key={n} value={n}>
+                  {n} {n === 1 ? 'estrella' : 'estrellas'}
+                </option>
+              ))}
+            </select>
+          </div>
+        </div>
+      </section>
+    </div>
+  )
+}

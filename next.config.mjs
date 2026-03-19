@@ -1,4 +1,34 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*.supabase.co',
+      },
+    ],
+  },
+  async headers() {
+    return [
+      {
+        source: '/api/widget/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET, POST, OPTIONS' },
+          { key: 'Access-Control-Allow-Headers', value: 'Content-Type' },
+          { key: 'Cache-Control', value: 'public, s-maxage=300, stale-while-revalidate=600' },
+        ],
+      },
+      {
+        source: '/widget.js',
+        headers: [
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Cache-Control', value: 'public, max-age=3600, stale-while-revalidate=86400' },
+          { key: 'Content-Type', value: 'application/javascript' },
+        ],
+      },
+    ]
+  },
+}
 
-export default nextConfig;
+export default nextConfig
