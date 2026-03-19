@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { WidgetData } from '@/types'
 
 const corsHeaders = {
@@ -18,7 +18,9 @@ export async function GET(
 ) {
   try {
     const { projectId } = await params
-    const supabase = await createClient()
+    // Public endpoint - use admin client to bypass RLS since there is
+    // no authenticated user when a widget is embedded on a third-party site.
+    const supabase = createAdminClient()
 
     // Fetch project
     const { data: project, error: projectError } = await supabase
@@ -106,7 +108,8 @@ export async function POST(
 ) {
   try {
     const { projectId } = await params
-    const supabase = await createClient()
+    // Public endpoint - use admin client to bypass RLS for impression tracking.
+    const supabase = createAdminClient()
 
     const body = await request.json().catch(() => ({}))
     const referrerDomain = body.referrer_domain || null

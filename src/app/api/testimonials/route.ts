@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { testimonialSchema } from '@/lib/validations'
 import { PLAN_LIMITS } from '@/lib/constants'
 import { Plan } from '@/types'
@@ -50,6 +51,9 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     // PUBLIC endpoint - no auth required
+    // Use admin client to bypass RLS for validation queries (project existence,
+    // plan limits) and for the insert itself, since anonymous users cannot
+    // pass RLS policies that require auth.uid().
     const body = await request.json()
     const parsed = testimonialSchema.safeParse(body)
 
@@ -60,7 +64,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    const supabase = await createClient()
+    const supabase = createAdminClient()
 
     // Verify project exists and is active
     const { data: project } = await supabase

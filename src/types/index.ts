@@ -86,7 +86,7 @@ export interface WidgetImpression {
 export interface WidgetData {
   project: Pick<Project, 'name' | 'logo_url' | 'brand_color'>
   testimonials: Pick<Testimonial, 'id' | 'author_name' | 'author_company' | 'author_role' | 'author_avatar_url' | 'content' | 'rating' | 'created_at'>[]
-  config: WidgetConfig
+  config: WidgetConfig | null
 }
 
 export interface PlanLimits {
