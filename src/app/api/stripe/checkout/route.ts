@@ -11,30 +11,18 @@ export async function POST(request: NextRequest) {
     const { data: { user }, error: authError } = await supabase.auth.getUser()
 
     if (authError || !user) {
-      return NextResponse.redirect(absoluteUrl('/login'), 303)
+      return NextResponse.json({ error: 'No autorizado' }, { status: 401 })
     }
 
-    // Support both form data (from HTML forms) and JSON
-    let plan: string | null = null
-
-    const contentType = request.headers.get('content-type') || ''
-    if (contentType.includes('application/x-www-form-urlencoded') || contentType.includes('multipart/form-data')) {
-      const formData = await request.formData()
-      plan = formData.get('plan') as string | null
-    } else {
-      const body = await request.json().catch(() => ({}))
-      plan = body.plan || null
-      // Also support direct priceId for API callers
-      if (!plan && body.priceId) {
-        plan = body.priceId === STRIPE_PRICES.business.monthly ? 'business' : 'pro'
-      }
-    }
+    // Parse plan from request body (JSON)
+    const body = await request.json().catch(() => ({}))
+    const plan = body.plan as string | null
 
     if (!plan || !['pro', 'business'].includes(plan)) {
-      return NextResponse.redirect(absoluteUrl('/facturacion?error=plan_invalido'), 303)
+      return NextResponse.json({ error: 'Plan inválido' }, { status: 400 })
     }
 
-    // Get price ID - use env vars directly as fallback in case STRIPE_PRICES was empty at build time
+    // Get price ID
     let priceId = STRIPE_PRICES[plan as Exclude<Plan, 'free'>].monthly
     if (!priceId) {
       priceId = plan === 'pro'
@@ -44,7 +32,7 @@ export async function POST(request: NextRequest) {
 
     if (!priceId) {
       console.error('[Stripe Checkout] No price ID for plan:', plan)
-      return NextResponse.redirect(absoluteUrl('/facturacion?error=precio_no_configurado'), 303)
+      return NextResponse.json({ error: 'Precio no configurado' }, { status: 500 })
     }
 
     // Get or create Stripe customer
@@ -80,13 +68,13 @@ export async function POST(request: NextRequest) {
       metadata: { supabase_user_id: user.id },
     })
 
-    if (session.url) {
-      return NextResponse.redirect(session.url, 303)
+    if (!session.url) {
+      return NextResponse.json({ error: 'No se pudo crear la sesión de pago' }, { status: 500 })
     }
 
-    return NextResponse.redirect(absoluteUrl('/facturacion?error=sesion_no_creada'), 303)
+    return NextResponse.json({ url: session.url })
   } catch (err) {
     console.error('[Stripe Checkout Error]', err instanceof Error ? err.message : err)
-    return NextResponse.redirect(absoluteUrl('/facturacion?error=error_interno'), 303)
+    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
   }
 }

@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import { PLAN_LIMITS, STRIPE_PRICES } from '@/lib/constants'
+import { UpgradeButton } from '@/components/dashboard/upgrade-button'
 import type { Plan } from '@/types'
 
 export const metadata = {
@@ -55,31 +56,8 @@ function CrossIcon() {
   )
 }
 
-function ManageSubscriptionButton() {
-  return (
-    <form action="/api/stripe/portal" method="POST">
-      <button
-        type="submit"
-        className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
-      >
-        <svg
-          className="h-4 w-4"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z"
-          />
-        </svg>
-        Gestionar Suscripción
-      </button>
-    </form>
-  )
-}
+// ManageSubscriptionButton is now a client component import
+import { ManageSubscriptionButton } from '@/components/dashboard/manage-subscription-button'
 
 export default async function FacturacionPage({
   searchParams,
@@ -212,15 +190,14 @@ export default async function FacturacionPage({
                   <span className="text-gray-400">Testimonios en vídeo</span>
                 </li>
               </ul>
-              <form action="/api/stripe/checkout" method="POST" className="mt-6">
-                <input type="hidden" name="plan" value="pro" />
-                <button
-                  type="submit"
-                  className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
+              <div className="mt-6">
+                <UpgradeButton
+                  plan="pro"
+                  className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700 disabled:opacity-50"
                 >
                   Mejorar a Pro
-                </button>
-              </form>
+                </UpgradeButton>
+              </div>
             </div>
 
             {/* Business Plan */}
@@ -252,15 +229,14 @@ export default async function FacturacionPage({
                   <CheckIcon /> 3 usuarios del equipo
                 </li>
               </ul>
-              <form action="/api/stripe/checkout" method="POST" className="mt-6">
-                <input type="hidden" name="plan" value="business" />
-                <button
-                  type="submit"
-                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
+              <div className="mt-6">
+                <UpgradeButton
+                  plan="business"
+                  className="w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 disabled:opacity-50"
                 >
                   Mejorar a Business
-                </button>
-              </form>
+                </UpgradeButton>
+              </div>
             </div>
           </div>
         </div>

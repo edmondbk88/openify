@@ -9,7 +9,7 @@ export async function POST() {
     const { data: { user }, error: authError } = await supabase.auth.getUser()
 
     if (authError || !user) {
-      return NextResponse.redirect(absoluteUrl('/login'), 303)
+      return NextResponse.json({ error: 'No autorizado' }, { status: 401 })
     }
 
     const { data: profile } = await supabase
@@ -19,7 +19,7 @@ export async function POST() {
       .single()
 
     if (!profile?.stripe_customer_id) {
-      return NextResponse.redirect(absoluteUrl('/facturacion?error=sin_suscripcion'), 303)
+      return NextResponse.json({ error: 'No tienes una suscripción activa' }, { status: 400 })
     }
 
     const session = await getStripe().billingPortal.sessions.create({
@@ -27,9 +27,9 @@ export async function POST() {
       return_url: absoluteUrl('/facturacion'),
     })
 
-    return NextResponse.redirect(session.url, 303)
+    return NextResponse.json({ url: session.url })
   } catch (err) {
     console.error('[Stripe Portal Error]', err instanceof Error ? err.message : err)
-    return NextResponse.redirect(absoluteUrl('/facturacion?error=error_interno'), 303)
+    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
   }
 }
