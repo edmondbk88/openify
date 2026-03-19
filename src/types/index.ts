@@ -105,3 +105,28 @@ export interface PlanLimits {
   seats: number
   miniSite: boolean
 }
+
+// Support Tickets
+export type TicketCategory = 'billing' | 'technical' | 'feature' | 'account' | 'widget' | 'other'
+export type TicketPriority = 'low' | 'medium' | 'high' | 'urgent'
+export type TicketStatus = 'open' | 'in_progress' | 'waiting' | 'resolved' | 'closed'
+
+export interface SupportTicket {
+  id: string
+  user_id: string
+  subject: string
+  category: TicketCategory
+  priority: TicketPriority
+  status: TicketStatus
+  created_at: string
+  updated_at: string
+}
+
+export interface TicketMessage {
+  id: string
+  ticket_id: string
+  user_id: string | null
+  message: string
+  is_admin: boolean
+  created_at: string
+}
