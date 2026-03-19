@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
     const { data: { user }, error: authError } = await supabase.auth.getUser()
 
     if (authError || !user) {
-      return NextResponse.redirect(absoluteUrl('/login'))
+      return NextResponse.redirect(absoluteUrl('/login'), 303)
     }
 
     // Support both form data (from HTML forms) and JSON
@@ -31,13 +31,13 @@ export async function POST(request: NextRequest) {
     }
 
     if (!plan || !['pro', 'business'].includes(plan)) {
-      return NextResponse.redirect(absoluteUrl('/facturacion?error=plan_invalido'))
+      return NextResponse.redirect(absoluteUrl('/facturacion?error=plan_invalido'), 303)
     }
 
     const priceId = STRIPE_PRICES[plan as Exclude<Plan, 'free'>].monthly
 
     if (!priceId) {
-      return NextResponse.redirect(absoluteUrl('/facturacion?error=precio_no_configurado'))
+      return NextResponse.redirect(absoluteUrl('/facturacion?error=precio_no_configurado'), 303)
     }
 
     // Get or create Stripe customer
@@ -74,11 +74,11 @@ export async function POST(request: NextRequest) {
     })
 
     if (session.url) {
-      return NextResponse.redirect(session.url)
+      return NextResponse.redirect(session.url, 303)
     }
 
-    return NextResponse.redirect(absoluteUrl('/facturacion?error=sesion_no_creada'))
+    return NextResponse.redirect(absoluteUrl('/facturacion?error=sesion_no_creada'), 303)
   } catch {
-    return NextResponse.redirect(absoluteUrl('/facturacion?error=error_interno'))
+    return NextResponse.redirect(absoluteUrl('/facturacion?error=error_interno'), 303)
   }
 }

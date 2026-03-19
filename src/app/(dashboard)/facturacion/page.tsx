@@ -296,7 +296,9 @@ export default async function FacturacionPage() {
                   Eliminar marca Opinafy
                 </td>
                 <td className="px-6 py-3 text-center">
-                  <CrossIcon />
+                  <span className="inline-flex justify-center">
+                    <CrossIcon />
+                  </span>
                 </td>
                 <td className="px-6 py-3 text-center">
                   <span className="inline-flex justify-center">
@@ -314,10 +316,14 @@ export default async function FacturacionPage() {
                   Testimonios en vídeo
                 </td>
                 <td className="px-6 py-3 text-center">
-                  <CrossIcon />
+                  <span className="inline-flex justify-center">
+                    <CrossIcon />
+                  </span>
                 </td>
                 <td className="px-6 py-3 text-center">
-                  <CrossIcon />
+                  <span className="inline-flex justify-center">
+                    <CrossIcon />
+                  </span>
                 </td>
                 <td className="px-6 py-3 text-center">
                   <span className="inline-flex justify-center">
