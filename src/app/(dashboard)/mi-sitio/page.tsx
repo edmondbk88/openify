@@ -6,7 +6,12 @@ import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
 import { PLAN_LIMITS } from '@/lib/constants'
 import { useToast } from '@/components/ui/toast'
+import { cn } from '@/lib/utils'
+import { miniSiteTemplates, MINISITE_CATEGORIES } from '@/lib/minisite-templates'
+import type { MiniSiteTemplate } from '@/lib/minisite-templates'
 import type { Plan } from '@/types'
+
+const ALL_CATEGORIES = ['Todas', ...MINISITE_CATEGORIES] as const
 
 export default function MiSitioPage() {
   const router = useRouter()
@@ -21,8 +26,11 @@ export default function MiSitioPage() {
     bio: '',
     website_url: '',
     plan: 'free' as Plan,
+    minisite_config: null as Record<string, unknown> | null,
   })
   const [copied, setCopied] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState<string>('Todas')
+  const [selectedTemplateId, setSelectedTemplateId] = useState<string | null>(null)
 
   const siteUrl = profile.username ? `https://opinafy.com/s/${profile.username}` : ''
   const hasAccess = PLAN_LIMITS[profile.plan].miniSite
@@ -36,7 +44,7 @@ export default function MiSitioPage() {
 
     const { data } = await supabase
       .from('profiles')
-      .select('username, full_name, bio, website_url, plan')
+      .select('username, full_name, bio, website_url, plan, minisite_config')
       .eq('id', user.id)
       .single()
 
@@ -47,7 +55,12 @@ export default function MiSitioPage() {
         bio: data.bio || '',
         website_url: data.website_url || '',
         plan: (data.plan as Plan) || 'free',
+        minisite_config: (data.minisite_config as Record<string, unknown>) || null,
       })
+      // Restore selected template if saved
+      if (data.minisite_config && typeof data.minisite_config === 'object' && 'template_id' in (data.minisite_config as Record<string, unknown>)) {
+        setSelectedTemplateId((data.minisite_config as Record<string, unknown>).template_id as string)
+      }
     }
 
     setLoading(false)
@@ -56,6 +69,15 @@ export default function MiSitioPage() {
   useEffect(() => {
     loadProfile()
   }, [loadProfile])
+
+  function applyTemplate(template: MiniSiteTemplate) {
+    setSelectedTemplateId(template.id)
+    const newConfig = {
+      template_id: template.id,
+      ...template.config,
+    }
+    setProfile((prev) => ({ ...prev, minisite_config: newConfig }))
+  }
 
   async function handleSave(e: React.FormEvent) {
     e.preventDefault()
@@ -68,6 +90,7 @@ export default function MiSitioPage() {
         body: JSON.stringify({
           bio: profile.bio || null,
           website_url: profile.website_url || null,
+          minisite_config: profile.minisite_config || null,
         }),
       })
 
@@ -101,6 +124,10 @@ export default function MiSitioPage() {
     const body = encodeURIComponent(`Hola,\n\nTe comparto mi pagina de testimonios verificados:\n${siteUrl}\n\nSaludos,\n${profile.full_name}`)
     window.open(`mailto:?subject=${subject}&body=${body}`)
   }
+
+  const filteredTemplates = selectedCategory === 'Todas'
+    ? miniSiteTemplates
+    : miniSiteTemplates.filter((t) => t.category === selectedCategory)
 
   if (loading) {
     return (
@@ -151,7 +178,7 @@ export default function MiSitioPage() {
   }
 
   return (
-    <div className="mx-auto max-w-2xl">
+    <div className="mx-auto max-w-3xl">
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">Mi Sitio</h1>
@@ -268,6 +295,108 @@ export default function MiSitioPage() {
             </p>
           </div>
         )}
+      </div>
+
+      {/* Template Selector */}
+      <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6">
+        <h2 className="text-lg font-semibold text-gray-900">Elige una plantilla</h2>
+        <p className="mt-1 text-sm text-gray-500">
+          Selecciona un diseno predefinido para tu pagina de testimonios.
+        </p>
+
+        {/* Category filter tabs */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {ALL_CATEGORIES.map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={cn(
+                'rounded-full px-3 py-1.5 text-xs font-medium transition-colors',
+                selectedCategory === cat
+                  ? 'bg-indigo-600 text-white'
+                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+              )}
+            >
+              {cat}
+            </button>
+          ))}
+        </div>
+
+        {/* Template grid */}
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {filteredTemplates.map((template) => (
+            <button
+              key={template.id}
+              onClick={() => applyTemplate(template)}
+              className={cn(
+                'group relative overflow-hidden rounded-xl border-2 text-left transition-all hover:shadow-md',
+                selectedTemplateId === template.id
+                  ? 'border-indigo-600 ring-2 ring-indigo-600/20'
+                  : 'border-gray-200 hover:border-gray-300'
+              )}
+            >
+              {/* Mini preview */}
+              <div
+                className="relative h-24 w-full p-3"
+                style={{ backgroundColor: template.config.background_color }}
+              >
+                {/* Simulated header */}
+                <div
+                  className="mb-2 h-2.5 w-16 rounded-full opacity-60"
+                  style={{ backgroundColor: template.config.accent_color }}
+                />
+                {/* Simulated cards */}
+                <div className="flex gap-1.5">
+                  {[1, 2, 3].map((i) => (
+                    <div
+                      key={i}
+                      className="h-10 flex-1"
+                      style={{
+                        backgroundColor: template.config.dark_mode
+                          ? 'rgba(255,255,255,0.08)'
+                          : 'rgba(0,0,0,0.04)',
+                        borderRadius:
+                          template.config.card_style === 'sharp' ? '0px'
+                          : template.config.card_style === 'pill' ? '12px'
+                          : template.config.card_style === 'glass' ? '8px'
+                          : '6px',
+                        border: template.config.card_style === 'bordered'
+                          ? `1px solid ${template.config.accent_color}40`
+                          : 'none',
+                        boxShadow: template.config.card_style === 'shadow'
+                          ? '0 2px 4px rgba(0,0,0,0.1)'
+                          : 'none',
+                      }}
+                    />
+                  ))}
+                </div>
+                {/* Layout indicator */}
+                <div className="absolute bottom-1.5 right-1.5 rounded bg-black/20 px-1 py-0.5 text-[8px] font-medium text-white">
+                  {template.config.layout}
+                </div>
+              </div>
+
+              {/* Template info */}
+              <div className="border-t border-gray-100 bg-white px-2.5 py-2">
+                <p className="truncate text-xs font-medium text-gray-900">
+                  {template.name}
+                </p>
+                <p className="truncate text-[10px] text-gray-500">
+                  {template.category} · {template.config.card_style}
+                </p>
+              </div>
+
+              {/* Selected checkmark */}
+              {selectedTemplateId === template.id && (
+                <div className="absolute right-1.5 top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-white">
+                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </div>
+              )}
+            </button>
+          ))}
+        </div>
       </div>
 
       {/* Settings */}

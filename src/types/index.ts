@@ -15,6 +15,7 @@ export interface Profile {
   is_admin: boolean
   stripe_customer_id: string | null
   stripe_subscription_id: string | null
+  minisite_config: Record<string, unknown> | null
   created_at: string
   updated_at: string
 }

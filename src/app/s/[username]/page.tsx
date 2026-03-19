@@ -12,6 +12,20 @@ interface PageProps {
   params: Promise<{ username: string }>
 }
 
+interface MiniSiteConfig {
+  template_id?: string
+  accent_color?: string
+  background_color?: string
+  text_color?: string
+  card_style?: 'rounded' | 'sharp' | 'pill' | 'bordered' | 'shadow' | 'glass'
+  layout?: 'masonry' | 'grid' | 'list' | 'cards' | 'timeline'
+  header_style?: 'centered' | 'left' | 'hero' | 'minimal' | 'banner'
+  font_style?: 'modern' | 'serif' | 'rounded' | 'minimal' | 'bold'
+  show_stats?: boolean
+  show_contact?: boolean
+  dark_mode?: boolean
+}
+
 async function getProfileByUsername(username: string) {
   const supabase = createAdminClient()
   const { data } = await supabase
@@ -108,6 +122,69 @@ function StarRating({ rating, size = 'sm' }: { rating: number; size?: 'sm' | 'md
   )
 }
 
+function getCardBorderRadius(cardStyle?: string): string {
+  switch (cardStyle) {
+    case 'sharp': return '0px'
+    case 'pill': return '24px'
+    case 'glass': return '16px'
+    case 'rounded': return '12px'
+    case 'bordered': return '8px'
+    case 'shadow': return '12px'
+    default: return '12px'
+  }
+}
+
+function getCardExtraStyles(cardStyle?: string, accentColor?: string): React.CSSProperties {
+  switch (cardStyle) {
+    case 'bordered':
+      return { border: `2px solid ${accentColor || '#6366f1'}40` }
+    case 'shadow':
+      return { boxShadow: '0 4px 20px rgba(0,0,0,0.08)' }
+    case 'glass':
+      return {
+        background: 'rgba(255,255,255,0.6)',
+        backdropFilter: 'blur(12px)',
+        WebkitBackdropFilter: 'blur(12px)',
+        border: '1px solid rgba(255,255,255,0.3)',
+      }
+    default:
+      return {}
+  }
+}
+
+function getFontFamily(fontStyle?: string): string {
+  switch (fontStyle) {
+    case 'serif': return '"Georgia", "Times New Roman", serif'
+    case 'rounded': return '"Nunito", "Quicksand", system-ui, sans-serif'
+    case 'minimal': return '"Inter", system-ui, -apple-system, sans-serif'
+    case 'bold': return '"Inter", system-ui, -apple-system, sans-serif'
+    case 'modern':
+    default: return 'system-ui, -apple-system, sans-serif'
+  }
+}
+
+function getLayoutClasses(layout?: string): string {
+  switch (layout) {
+    case 'grid': return 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
+    case 'list': return 'flex flex-col gap-5 max-w-2xl mx-auto'
+    case 'cards': return 'grid grid-cols-1 gap-8 sm:grid-cols-2'
+    case 'timeline': return 'flex flex-col gap-6 max-w-2xl mx-auto'
+    case 'masonry':
+    default: return 'columns-1 gap-6 sm:columns-2 lg:columns-3'
+  }
+}
+
+function getHeaderAlignment(headerStyle?: string): string {
+  switch (headerStyle) {
+    case 'left': return 'text-left'
+    case 'minimal': return 'text-center'
+    case 'hero': return 'text-center'
+    case 'banner': return 'text-center'
+    case 'centered':
+    default: return 'text-center'
+  }
+}
+
 export default async function MiniSitePage({ params }: PageProps) {
   const { username } = await params
   const profile = await getProfileByUsername(username)
@@ -174,8 +251,31 @@ export default async function MiniSitePage({ params }: PageProps) {
     : 0
   const projectCount = projects.length
 
-  // Use first project's brand_color as accent, fallback to indigo
-  const accentColor = projects[0]?.brand_color || '#6366f1'
+  // Parse minisite config
+  const msConfig = (profile.minisite_config || {}) as MiniSiteConfig
+
+  // Use config colors or fallback to defaults
+  const accentColor = msConfig.accent_color || projects[0]?.brand_color || '#6366f1'
+  const bgColor = msConfig.background_color || '#ffffff'
+  const textColor = msConfig.text_color || '#111827'
+  const isDark = msConfig.dark_mode || false
+  const cardStyle = msConfig.card_style
+  const layout = msConfig.layout
+  const headerStyle = msConfig.header_style
+  const fontStyle = msConfig.font_style
+  const showStats = msConfig.show_stats !== false
+  const showContact = msConfig.show_contact !== false
+
+  const fontFamily = getFontFamily(fontStyle)
+  const headerAlign = getHeaderAlignment(headerStyle)
+  const layoutClasses = getLayoutClasses(layout)
+  const cardRadius = getCardBorderRadius(cardStyle)
+
+  // Derived colors for dark mode cards
+  const cardBg = isDark ? 'rgba(255,255,255,0.06)' : 'rgba(0,0,0,0.02)'
+  const cardBorder = isDark ? 'rgba(255,255,255,0.1)' : 'rgba(0,0,0,0.08)'
+  const subtextColor = isDark ? 'rgba(255,255,255,0.5)' : 'rgba(0,0,0,0.45)'
+  const dividerColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)'
 
   // Find a website URL from projects or profile
   const websiteUrl = profile.website_url || projects.find(p => p.website_url)?.website_url || null
@@ -200,8 +300,14 @@ export default async function MiniSitePage({ params }: PageProps) {
     }),
   }
 
+  // Header padding based on style
+  const headerPadding = headerStyle === 'hero' ? 'py-16' : headerStyle === 'minimal' ? 'py-8' : 'py-12'
+  const headerBorderStyle = headerStyle === 'banner'
+    ? { borderBottom: `3px solid ${accentColor}` }
+    : { borderBottom: `1px solid ${dividerColor}` }
+
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen" style={{ backgroundColor: bgColor, color: textColor, fontFamily }}>
       {/* JSON-LD */}
       <script
         type="application/ld+json"
@@ -209,8 +315,8 @@ export default async function MiniSitePage({ params }: PageProps) {
       />
 
       {/* Header */}
-      <header className="border-b border-gray-100">
-        <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 text-center">
+      <header style={headerBorderStyle}>
+        <div className={`mx-auto max-w-4xl px-4 ${headerPadding} sm:px-6 ${headerAlign}`}>
           {/* Avatar */}
           {profile.avatar_url ? (
             <Image
@@ -218,23 +324,37 @@ export default async function MiniSitePage({ params }: PageProps) {
               alt={profile.full_name || username}
               width={96}
               height={96}
-              className="mx-auto h-24 w-24 rounded-full object-cover ring-4 ring-white shadow-lg"
+              className={`${headerStyle === 'left' ? '' : 'mx-auto'} h-24 w-24 rounded-full object-cover shadow-lg`}
+              style={{ boxShadow: `0 0 0 4px ${bgColor}, 0 0 0 6px ${accentColor}40` }}
             />
           ) : (
             <div
-              className="mx-auto flex h-24 w-24 items-center justify-center rounded-full text-2xl font-bold text-white shadow-lg"
+              className={`${headerStyle === 'left' ? '' : 'mx-auto'} flex h-24 w-24 items-center justify-center rounded-full text-2xl font-bold text-white shadow-lg`}
               style={{ backgroundColor: accentColor }}
             >
               {getInitials(profile.full_name || username)}
             </div>
           )}
 
-          <h1 className="mt-5 text-3xl font-bold text-gray-900">
+          <h1
+            className="mt-5 text-3xl text-gray-900"
+            style={{
+              color: textColor,
+              fontWeight: fontStyle === 'bold' ? 800 : 700,
+              fontFamily,
+            }}
+          >
             {profile.full_name || username}
           </h1>
 
           {profile.bio && (
-            <p className="mt-2 text-lg text-gray-600 max-w-xl mx-auto">
+            <p
+              className="mt-2 text-lg max-w-xl"
+              style={{
+                color: subtextColor,
+                ...(headerStyle !== 'left' ? { marginLeft: 'auto', marginRight: 'auto' } : {}),
+              }}
+            >
               {profile.bio}
             </p>
           )}
@@ -257,26 +377,26 @@ export default async function MiniSitePage({ params }: PageProps) {
       </header>
 
       {/* Stats bar */}
-      {totalTestimonials > 0 && (
-        <div className="border-b border-gray-100 bg-gray-50">
+      {showStats && totalTestimonials > 0 && (
+        <div style={{ borderBottom: `1px solid ${dividerColor}`, backgroundColor: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)' }}>
           <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6">
             <div className="grid grid-cols-3 gap-4 text-center">
               <div>
-                <p className="text-2xl font-bold text-gray-900">{totalTestimonials}</p>
-                <p className="text-sm text-gray-500">Testimonios</p>
+                <p className="text-2xl font-bold" style={{ color: textColor }}>{totalTestimonials}</p>
+                <p className="text-sm" style={{ color: subtextColor }}>Testimonios</p>
               </div>
               <div>
                 <div className="flex items-center justify-center gap-1.5">
-                  <p className="text-2xl font-bold text-gray-900">{avgRating.toFixed(1)}</p>
+                  <p className="text-2xl font-bold" style={{ color: textColor }}>{avgRating.toFixed(1)}</p>
                   <svg className="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 </div>
-                <p className="text-sm text-gray-500">Valoracion media</p>
+                <p className="text-sm" style={{ color: subtextColor }}>Valoracion media</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-gray-900">{projectCount}</p>
-                <p className="text-sm text-gray-500">{projectCount === 1 ? 'Proyecto' : 'Proyectos'}</p>
+                <p className="text-2xl font-bold" style={{ color: textColor }}>{projectCount}</p>
+                <p className="text-sm" style={{ color: subtextColor }}>{projectCount === 1 ? 'Proyecto' : 'Proyectos'}</p>
               </div>
             </div>
           </div>
@@ -287,101 +407,117 @@ export default async function MiniSitePage({ params }: PageProps) {
       <main className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
         {testimonials.length === 0 ? (
           <div className="text-center py-16">
-            <svg className="mx-auto h-12 w-12 text-gray-300" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
+            <svg className="mx-auto h-12 w-12" style={{ color: subtextColor }} fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.282 48.282 0 0 0 5.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
             </svg>
-            <p className="mt-4 text-gray-500">Aun no hay testimonios para mostrar.</p>
+            <p className="mt-4" style={{ color: subtextColor }}>Aun no hay testimonios para mostrar.</p>
           </div>
         ) : (
-          <div className="columns-1 gap-6 sm:columns-2 lg:columns-3">
-            {testimonials.map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="mb-6 break-inside-avoid rounded-xl border border-gray-200 bg-white p-5 shadow-sm transition-shadow hover:shadow-md"
-              >
-                {/* Video */}
-                {testimonial.video_url && (
-                  <div className="-mx-5 -mt-5 mb-4 overflow-hidden rounded-t-xl">
-                    <video
-                      src={testimonial.video_url}
-                      controls
-                      preload="metadata"
-                      playsInline
-                      className="w-full aspect-video object-cover"
-                    />
-                  </div>
-                )}
-
-                {/* Rating */}
-                <StarRating rating={testimonial.rating} />
-
-                {/* Content */}
-                <p className="mt-3 text-sm leading-relaxed text-gray-700">
-                  {testimonial.content}
-                </p>
-
-                {/* Author */}
-                <div className="mt-4 flex items-center gap-3 border-t border-gray-100 pt-4">
-                  {testimonial.author_avatar_url ? (
-                    <Image
-                      src={testimonial.author_avatar_url}
-                      alt={testimonial.author_name}
-                      width={36}
-                      height={36}
-                      className="h-9 w-9 rounded-full object-cover"
-                    />
-                  ) : (
-                    <div
-                      className="flex h-9 w-9 items-center justify-center rounded-full text-xs font-medium text-white"
-                      style={{ backgroundColor: accentColor }}
-                    >
-                      {getInitials(testimonial.author_name)}
+          <>
+            {/* Timeline left border for timeline layout */}
+            {layout === 'timeline' && (
+              <style dangerouslySetInnerHTML={{ __html: `
+                .timeline-item { position: relative; padding-left: 28px; }
+                .timeline-item::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: ${accentColor}40; }
+                .timeline-item::after { content: ''; position: absolute; left: -4px; top: 20px; width: 10px; height: 10px; border-radius: 50%; background: ${accentColor}; }
+              `}} />
+            )}
+            <div className={layout === 'masonry' ? layoutClasses : layoutClasses}>
+              {testimonials.map((testimonial) => (
+                <div
+                  key={testimonial.id}
+                  className={`${layout === 'masonry' ? 'mb-6 break-inside-avoid' : ''} ${layout === 'timeline' ? 'timeline-item' : ''} p-5 transition-shadow hover:shadow-md`}
+                  style={{
+                    backgroundColor: cardStyle === 'glass' ? undefined : cardBg,
+                    border: `1px solid ${cardBorder}`,
+                    borderRadius: cardRadius,
+                    ...getCardExtraStyles(cardStyle, accentColor),
+                  }}
+                >
+                  {/* Video */}
+                  {testimonial.video_url && (
+                    <div className="-mx-5 -mt-5 mb-4 overflow-hidden" style={{ borderRadius: `${cardRadius} ${cardRadius} 0 0` }}>
+                      <video
+                        src={testimonial.video_url}
+                        controls
+                        preload="metadata"
+                        playsInline
+                        className="w-full aspect-video object-cover"
+                      />
                     </div>
                   )}
-                  <div className="min-w-0 flex-1">
-                    <p className="text-sm font-medium text-gray-900 truncate">
-                      {testimonial.author_name}
-                    </p>
-                    {(testimonial.author_company || testimonial.author_role) && (
-                      <p className="text-xs text-gray-500 truncate">
-                        {testimonial.author_role}
-                        {testimonial.author_role && testimonial.author_company && ' en '}
-                        {testimonial.author_company}
-                        {testimonial.is_company_verified && (
-                          <span className="ml-1 inline-flex items-center gap-0.5 text-green-600">
-                            <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                            </svg>
-                          </span>
-                        )}
-                      </p>
+
+                  {/* Rating */}
+                  <StarRating rating={testimonial.rating} />
+
+                  {/* Content */}
+                  <p className="mt-3 text-sm leading-relaxed" style={{ color: textColor }}>
+                    {testimonial.content}
+                  </p>
+
+                  {/* Author */}
+                  <div className="mt-4 flex items-center gap-3 pt-4" style={{ borderTop: `1px solid ${dividerColor}` }}>
+                    {testimonial.author_avatar_url ? (
+                      <Image
+                        src={testimonial.author_avatar_url}
+                        alt={testimonial.author_name}
+                        width={36}
+                        height={36}
+                        className="h-9 w-9 rounded-full object-cover"
+                      />
+                    ) : (
+                      <div
+                        className="flex h-9 w-9 items-center justify-center rounded-full text-xs font-medium text-white"
+                        style={{ backgroundColor: accentColor }}
+                      >
+                        {getInitials(testimonial.author_name)}
+                      </div>
                     )}
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm font-medium truncate" style={{ color: textColor }}>
+                        {testimonial.author_name}
+                      </p>
+                      {(testimonial.author_company || testimonial.author_role) && (
+                        <p className="text-xs truncate" style={{ color: subtextColor }}>
+                          {testimonial.author_role}
+                          {testimonial.author_role && testimonial.author_company && ' en '}
+                          {testimonial.author_company}
+                          {testimonial.is_company_verified && (
+                            <span className="ml-1 inline-flex items-center gap-0.5 text-green-600">
+                              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                              </svg>
+                            </span>
+                          )}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Footer: date + project */}
+                  <div className="mt-3 flex items-center justify-between">
+                    <span className="text-xs" style={{ color: subtextColor }}>
+                      {formatDate(testimonial.created_at)}
+                    </span>
+                    <span
+                      className="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium"
+                      style={{ backgroundColor: `${accentColor}15`, color: accentColor }}
+                    >
+                      {testimonial.project_name}
+                    </span>
                   </div>
                 </div>
-
-                {/* Footer: date + project */}
-                <div className="mt-3 flex items-center justify-between">
-                  <span className="text-xs text-gray-400">
-                    {formatDate(testimonial.created_at)}
-                  </span>
-                  <span
-                    className="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium"
-                    style={{ backgroundColor: `${accentColor}15`, color: accentColor }}
-                  >
-                    {testimonial.project_name}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          </>
         )}
       </main>
 
       {/* Contact section */}
-      {websiteUrl && (
-        <section className="border-t border-gray-100 bg-gray-50">
+      {showContact && websiteUrl && (
+        <section style={{ borderTop: `1px solid ${dividerColor}`, backgroundColor: isDark ? 'rgba(255,255,255,0.03)' : 'rgba(0,0,0,0.02)' }}>
           <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 text-center">
-            <h2 className="text-xl font-semibold text-gray-900">Contacto</h2>
+            <h2 className="text-xl font-semibold" style={{ color: textColor }}>Contacto</h2>
             <a
               href={websiteUrl}
               target="_blank"
@@ -399,13 +535,13 @@ export default async function MiniSitePage({ params }: PageProps) {
       )}
 
       {/* Footer */}
-      <footer className="border-t border-gray-100">
+      <footer style={{ borderTop: `1px solid ${dividerColor}` }}>
         <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 text-center">
-          <Link href="/registro" className="group inline-flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-indigo-600">
+          <Link href="/registro" className="group inline-flex items-center gap-2 text-sm transition-colors" style={{ color: subtextColor }}>
             <Image src="/logo-opinafy.png?v=2" alt="Opinafy" width={80} height={24} className="h-5 w-auto opacity-50 group-hover:opacity-100 transition-opacity" />
           </Link>
           <p className="mt-2">
-            <Link href="/registro" className="text-xs text-gray-400 hover:text-indigo-600 transition-colors">
+            <Link href="/registro" className="text-xs transition-colors hover:text-indigo-600" style={{ color: subtextColor }}>
               Crea tu propia pagina de testimonios gratis
             </Link>
           </p>

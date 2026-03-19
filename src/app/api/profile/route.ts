@@ -6,6 +6,7 @@ const profileUpdateSchema = z.object({
   full_name: z.string().min(2).max(100).optional(),
   bio: z.string().max(200).optional().nullable(),
   website_url: z.string().url('URL inválida').optional().nullable().or(z.literal('')),
+  minisite_config: z.record(z.string(), z.unknown()).optional().nullable(),
 })
 
 export async function PATCH(request: NextRequest) {
@@ -32,6 +33,9 @@ export async function PATCH(request: NextRequest) {
     if (parsed.data.bio !== undefined) updateData.bio = parsed.data.bio
     if (parsed.data.website_url !== undefined) {
       updateData.website_url = parsed.data.website_url === '' ? null : parsed.data.website_url
+    }
+    if (parsed.data.minisite_config !== undefined) {
+      updateData.minisite_config = parsed.data.minisite_config
     }
 
     if (Object.keys(updateData).length === 0) {
