@@ -10,6 +10,7 @@ export interface Profile {
   avatar_url: string | null
   username: string | null
   plan: Plan
+  is_admin: boolean
   stripe_customer_id: string | null
   stripe_subscription_id: string | null
   created_at: string
