@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Características', href: '/#caracteristicas' },
   { label: 'Precios', href: '/precios' },
   { label: 'Plantillas', href: '/plantillas' },
+  { label: 'Industrias', href: '/testimonios-para' },
   { label: 'Blog', href: '/blog' },
 ]
 

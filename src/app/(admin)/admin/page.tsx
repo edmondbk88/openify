@@ -50,6 +50,49 @@ export default async function AdminDashboardPage() {
   )
   const mrr = proCount * 9 + businessCount * 19
 
+  // Fetch storage stats
+  const bucketNames = ['blog-images', 'avatars', 'videos', 'logos']
+  const bucketResults = await Promise.all(
+    bucketNames.map(async (bucketName) => {
+      try {
+        const { data: files } = await admin.storage
+          .from(bucketName)
+          .list('', { limit: 1000 })
+        const realFiles = (files || []).filter(
+          (f) => f.metadata && f.metadata.size != null
+        )
+        const totalBytes = realFiles.reduce(
+          (sum, f) => sum + (f.metadata?.size || 0),
+          0
+        )
+        return {
+          name: bucketName,
+          fileCount: realFiles.length,
+          totalSizeBytes: totalBytes,
+          totalSizeMB: Math.round((totalBytes / (1024 * 1024)) * 100) / 100,
+        }
+      } catch {
+        return { name: bucketName, fileCount: 0, totalSizeBytes: 0, totalSizeMB: 0 }
+      }
+    })
+  )
+  const storageTotalFiles = bucketResults.reduce((s, b) => s + b.fileCount, 0)
+  const storageTotalBytes = bucketResults.reduce((s, b) => s + b.totalSizeBytes, 0)
+  const storageTotalMB = Math.round((storageTotalBytes / (1024 * 1024)) * 100) / 100
+  const freeTierLimitMB = 1024
+  const storageUsagePercent = Math.round((storageTotalMB / freeTierLimitMB) * 10000) / 100
+
+  // Cost estimates
+  const activeSubscribers = proCount + businessCount
+  const stripeFees = mrr * 0.029 + activeSubscribers * 0.25
+  const stripeFeesFmt = Math.round(stripeFees * 100) / 100
+  const supabaseTier = storageTotalMB > 1024 || totalUsers > 50000 ? 'Pro (25$/mes)' : 'Free'
+  const supabaseCost = supabaseTier === 'Free' ? 0 : 25
+  const vercelTier = 'Free'
+  const vercelCost = 0
+  const totalCosts = stripeFeesFmt + supabaseCost + vercelCost
+  const netRevenue = Math.round((mrr - totalCosts) * 100) / 100
+
   const stats = [
     { label: 'Total usuarios', value: totalUsers, color: 'bg-blue-500' },
     { label: 'Proyectos', value: totalProjects, color: 'bg-green-500' },
@@ -155,6 +198,88 @@ export default async function AdminDashboardPage() {
                 )}
               </tbody>
             </table>
+          </div>
+        </div>
+      </div>
+
+      {/* Storage & Costs */}
+      <div className="grid lg:grid-cols-2 gap-6 mt-6">
+        {/* Storage Card */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Almacenamiento Supabase</h2>
+          <div className="space-y-3 mb-4">
+            {bucketResults.map((b) => (
+              <div key={b.name} className="flex items-center justify-between text-sm">
+                <span className="text-gray-700 font-medium">{b.name}</span>
+                <span className="text-gray-500">
+                  {b.fileCount} archivos &middot; {b.totalSizeMB} MB
+                </span>
+              </div>
+            ))}
+          </div>
+          <div className="border-t border-gray-100 pt-4">
+            <div className="flex items-center justify-between text-sm mb-2">
+              <span className="font-semibold text-gray-900">
+                Total: {storageTotalFiles} archivos &middot; {storageTotalMB} MB
+              </span>
+              <span className="text-gray-500">{freeTierLimitMB} MB free tier</span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-3">
+              <div
+                className={`h-3 rounded-full transition-all ${
+                  storageUsagePercent > 80 ? 'bg-red-500' :
+                  storageUsagePercent > 50 ? 'bg-yellow-500' :
+                  'bg-green-500'
+                }`}
+                style={{ width: `${Math.min(storageUsagePercent, 100)}%` }}
+              />
+            </div>
+            <p className="text-xs text-gray-500 mt-1">{storageUsagePercent}% usado</p>
+          </div>
+        </div>
+
+        {/* Costs Card */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+          <h2 className="text-lg font-semibold text-gray-900 mb-4">Costes Estimados</h2>
+          <div className="space-y-3 text-sm">
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">MRR suscripciones</span>
+              <span className="font-semibold text-green-600">+{mrr}&euro;/mes</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">Stripe (2.9% + 0.25&euro;/tx)</span>
+              <span className="font-semibold text-red-500">-{stripeFeesFmt}&euro;/mes</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">Supabase ({supabaseTier})</span>
+              <span className={`font-semibold ${supabaseCost > 0 ? 'text-red-500' : 'text-gray-500'}`}>
+                {supabaseCost > 0 ? `-${supabaseCost}\u20AC/mes` : 'Gratis'}
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">Vercel ({vercelTier})</span>
+              <span className={`font-semibold ${vercelCost > 0 ? 'text-red-500' : 'text-gray-500'}`}>
+                {vercelCost > 0 ? `-${vercelCost}\u20AC/mes` : 'Gratis'}
+              </span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="text-gray-700">Resend (email)</span>
+              <span className="font-semibold text-gray-500">Gratis (3000/mes)</span>
+            </div>
+            <div className="border-t border-gray-100 pt-3 flex items-center justify-between">
+              <span className="font-semibold text-gray-900">Beneficio neto estimado</span>
+              <span className={`text-lg font-bold ${netRevenue >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                {netRevenue >= 0 ? '+' : ''}{netRevenue}&euro;/mes
+              </span>
+            </div>
+          </div>
+          <div className="mt-4 p-3 bg-gray-50 rounded-lg">
+            <p className="text-xs text-gray-500">
+              <strong>Limites free tier:</strong> Supabase: 1GB storage, 50K auth, 500MB DB &middot;
+              Stripe: 2.9% + 0.25&euro;/tx &middot;
+              Vercel: 100GB bandwidth &middot;
+              Resend: 3000 emails/mes
+            </p>
           </div>
         </div>
       </div>

@@ -61,6 +61,23 @@ export default function TestimoniosPorIndustriaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
+      {/* Breadcrumbs */}
+      <nav className="border-b border-gray-200 bg-gray-50" aria-label="Breadcrumb">
+        <div className="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+          <ol className="flex items-center gap-2 text-sm text-gray-500">
+            <li>
+              <Link href="/" className="hover:text-indigo-600">
+                Inicio
+              </Link>
+            </li>
+            <li className="flex items-center gap-2">
+              <span className="text-gray-300">&gt;</span>
+              <span className="text-gray-900 font-medium">Testimonios por Industria</span>
+            </li>
+          </ol>
+        </div>
+      </nav>
+
       {/* Hero */}
       <section className="bg-gradient-to-b from-indigo-50 to-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
