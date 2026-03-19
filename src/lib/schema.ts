@@ -18,7 +18,9 @@ export function organizationSchema() {
     description:
       'Opinafy es la plataforma #1 en espanol para recopilar, gestionar y mostrar testimonios de clientes.',
     foundingDate: '2026',
-    sameAs: [],
+    sameAs: [
+      'https://www.linkedin.com/company/opinafy',
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
