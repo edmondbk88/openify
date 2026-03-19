@@ -99,15 +99,34 @@ export default function WidgetPage() {
     setSaving(true)
 
     try {
-      const res = await fetch(`/api/projects/${projectId}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ widget_config: config }),
-      })
+      const supabase = createClient()
 
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}))
-        throw new Error(data.error || 'Error al guardar la configuración')
+      // Check if widget config already exists
+      const { data: existing } = await supabase
+        .from('widget_configs')
+        .select('id')
+        .eq('project_id', projectId)
+        .single()
+
+      let error
+
+      if (existing) {
+        // Update existing config
+        const result = await supabase
+          .from('widget_configs')
+          .update({ ...config, updated_at: new Date().toISOString() })
+          .eq('project_id', projectId)
+        error = result.error
+      } else {
+        // Insert new config
+        const result = await supabase
+          .from('widget_configs')
+          .insert({ ...config, project_id: projectId })
+        error = result.error
+      }
+
+      if (error) {
+        throw new Error(error.message)
       }
 
       toast('Configuración del widget guardada', 'success')

@@ -9,7 +9,7 @@ export async function POST() {
     const { data: { user }, error: authError } = await supabase.auth.getUser()
 
     if (authError || !user) {
-      return NextResponse.json({ error: 'No autorizado' }, { status: 401 })
+      return NextResponse.redirect(absoluteUrl('/login'))
     }
 
     const { data: profile } = await supabase
@@ -19,10 +19,7 @@ export async function POST() {
       .single()
 
     if (!profile?.stripe_customer_id) {
-      return NextResponse.json(
-        { error: 'No se encontró cuenta de facturación. Suscríbete primero a un plan.' },
-        { status: 400 }
-      )
+      return NextResponse.redirect(absoluteUrl('/facturacion?error=sin_suscripcion'))
     }
 
     const session = await stripe.billingPortal.sessions.create({
@@ -30,8 +27,8 @@ export async function POST() {
       return_url: absoluteUrl('/facturacion'),
     })
 
-    return NextResponse.json({ url: session.url })
+    return NextResponse.redirect(session.url)
   } catch {
-    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
+    return NextResponse.redirect(absoluteUrl('/facturacion?error=error_interno'))
   }
 }

@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { stripe } from '@/lib/stripe'
 import { absoluteUrl } from '@/lib/utils'
+import { STRIPE_PRICES } from '@/lib/constants'
+import type { Plan } from '@/types'
 
 export async function POST(request: NextRequest) {
   try {
@@ -9,14 +11,33 @@ export async function POST(request: NextRequest) {
     const { data: { user }, error: authError } = await supabase.auth.getUser()
 
     if (authError || !user) {
-      return NextResponse.json({ error: 'No autorizado' }, { status: 401 })
+      return NextResponse.redirect(absoluteUrl('/login'))
     }
 
-    const body = await request.json()
-    const { priceId } = body
+    // Support both form data (from HTML forms) and JSON
+    let plan: string | null = null
 
-    if (!priceId || typeof priceId !== 'string') {
-      return NextResponse.json({ error: 'priceId es requerido' }, { status: 400 })
+    const contentType = request.headers.get('content-type') || ''
+    if (contentType.includes('application/x-www-form-urlencoded') || contentType.includes('multipart/form-data')) {
+      const formData = await request.formData()
+      plan = formData.get('plan') as string | null
+    } else {
+      const body = await request.json().catch(() => ({}))
+      plan = body.plan || null
+      // Also support direct priceId for API callers
+      if (!plan && body.priceId) {
+        plan = body.priceId === STRIPE_PRICES.business.monthly ? 'business' : 'pro'
+      }
+    }
+
+    if (!plan || !['pro', 'business'].includes(plan)) {
+      return NextResponse.redirect(absoluteUrl('/facturacion?error=plan_invalido'))
+    }
+
+    const priceId = STRIPE_PRICES[plan as Exclude<Plan, 'free'>].monthly
+
+    if (!priceId) {
+      return NextResponse.redirect(absoluteUrl('/facturacion?error=precio_no_configurado'))
     }
 
     // Get or create Stripe customer
@@ -48,12 +69,16 @@ export async function POST(request: NextRequest) {
       payment_method_types: ['card'],
       line_items: [{ price: priceId, quantity: 1 }],
       success_url: absoluteUrl('/dashboard?checkout=success'),
-      cancel_url: absoluteUrl('/precios?checkout=cancelled'),
+      cancel_url: absoluteUrl('/facturacion?checkout=cancelled'),
       metadata: { supabase_user_id: user.id },
     })
 
-    return NextResponse.json({ url: session.url })
+    if (session.url) {
+      return NextResponse.redirect(session.url)
+    }
+
+    return NextResponse.redirect(absoluteUrl('/facturacion?error=sesion_no_creada'))
   } catch {
-    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
+    return NextResponse.redirect(absoluteUrl('/facturacion?error=error_interno'))
   }
 }

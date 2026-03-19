@@ -100,7 +100,7 @@ export function CollectionForm({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           ...payload,
-          author_photo_url: photoUrl || null,
+          author_avatar_url: photoUrl || null,
         }),
       })
 
