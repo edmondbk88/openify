@@ -39,11 +39,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Plan inválido' }, { status: 400 })
     }
 
-    let priceId = STRIPE_PRICES[plan as Exclude<Plan, 'free'>].monthly
+    let priceId = (STRIPE_PRICES[plan as Exclude<Plan, 'free'>].monthly || '').trim()
     if (!priceId) {
-      priceId = plan === 'pro'
+      priceId = (plan === 'pro'
         ? (process.env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID || '')
         : (process.env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID || '')
+      ).trim()
     }
 
     if (!priceId) {
