@@ -68,6 +68,17 @@ export default function TestimonialCard({
                 {testimonial.author_role}
                 {testimonial.author_role && testimonial.author_company && ' en '}
                 {testimonial.author_company}
+                {testimonial.is_company_verified && (
+                  <span
+                    className="ml-1 inline-flex items-center gap-0.5 rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700"
+                    title="Empresa verificada"
+                  >
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                    Verificada
+                  </span>
+                )}
               </p>
             )}
           </div>

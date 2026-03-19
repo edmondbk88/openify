@@ -145,6 +145,22 @@ export function getStyles(config: any): string {
       text-overflow: ellipsis;
     }
 
+    .opinafy-verified {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #dcfce7;
+      color: #16a34a;
+      font-size: 10px;
+      font-weight: 700;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      margin-left: 4px;
+      vertical-align: middle;
+      line-height: 1;
+    }
+
     /* ── Stars ── */
     .opinafy-stars {
       display: flex;

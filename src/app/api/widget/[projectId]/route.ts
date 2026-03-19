@@ -53,7 +53,7 @@ export async function GET(
     // Fetch approved testimonials
     let query = supabase
       .from('testimonials')
-      .select('id, author_name, author_company, author_role, author_avatar_url, content, rating, created_at')
+      .select('id, author_name, author_company, author_role, author_avatar_url, content, rating, is_company_verified, created_at')
       .eq('project_id', projectId)
       .eq('status', 'approved')
       .order('is_featured', { ascending: false })

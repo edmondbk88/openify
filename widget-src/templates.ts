@@ -11,6 +11,7 @@ interface Testimonial {
   rating: number;
   content: string;
   created_at: string;
+  is_company_verified?: boolean;
 }
 
 interface WidgetConfig {
@@ -148,7 +149,13 @@ export function renderBadge(data: WidgetData): string {
 export function renderCard(testimonial: Testimonial, config: WidgetConfig): string {
   const { author_name, author_avatar, company, role, rating, content, created_at } = testimonial;
   const initials = getInitials(author_name);
-  const meta = [role, company].filter(Boolean).join(' en ');
+  const verifiedBadge = company && testimonial.is_company_verified
+    ? ' <span class="opinafy-verified" title="Empresa verificada">&#10003;</span>'
+    : '';
+  const metaParts: string[] = [];
+  if (role) metaParts.push(escapeHtml(role));
+  if (company) metaParts.push(escapeHtml(company) + verifiedBadge);
+  const metaHtml = metaParts.join(' en ');
   const dateStr = formatDate(created_at);
 
   const avatarHtml = author_avatar
@@ -161,7 +168,7 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
         ${avatarHtml}
         <div class="opinafy-author">
           <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
-          ${meta ? `<div class="opinafy-author-meta">${escapeHtml(meta)}</div>` : ''}
+          ${metaHtml ? `<div class="opinafy-author-meta">${metaHtml}</div>` : ''}
         </div>
       </div>
       ${rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}

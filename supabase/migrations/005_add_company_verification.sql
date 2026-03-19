@@ -1,0 +1,1 @@
+ALTER TABLE public.testimonials ADD COLUMN IF NOT EXISTS is_company_verified BOOLEAN NOT NULL DEFAULT FALSE;
