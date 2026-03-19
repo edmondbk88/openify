@@ -7,6 +7,7 @@ const productLinks = [
   { label: 'Plantillas', href: '/plantillas' },
   { label: 'Blog', href: '/blog' },
   { label: 'Comparativas', href: '/comparar' },
+  { label: 'Industrias', href: '/testimonios-para' },
 ]
 
 const legalLinks = [

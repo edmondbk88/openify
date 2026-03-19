@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { blogArticles } from '@/lib/blog-data'
 import { widgetTemplates } from '@/lib/widget-templates'
+import { industries } from '@/lib/industry-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://opinafy.com'
@@ -100,5 +101,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  return [...staticPages, ...blogPages, ...templatePages]
+  const industryIndexPage: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/testimonios-para`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+  ]
+
+  const industryPages: MetadataRoute.Sitemap = industries.map((industry) => ({
+    url: `${baseUrl}/testimonios-para/${industry.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }))
+
+  return [...staticPages, ...blogPages, ...templatePages, ...industryIndexPage, ...industryPages]
 }
