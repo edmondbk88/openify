@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { getStripe } from '@/lib/stripe'
 import { absoluteUrl } from '@/lib/utils'
 
@@ -12,7 +13,8 @@ export async function POST() {
       return NextResponse.json({ error: 'No autorizado' }, { status: 401 })
     }
 
-    const { data: profile } = await supabase
+    const admin = createAdminClient()
+    const { data: profile } = await admin
       .from('profiles')
       .select('stripe_customer_id')
       .eq('id', user.id)
@@ -30,6 +32,9 @@ export async function POST() {
     return NextResponse.json({ url: session.url })
   } catch (err) {
     console.error('[Stripe Portal Error]', err instanceof Error ? err.message : err)
-    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
+    return NextResponse.json(
+      { error: err instanceof Error ? err.message : 'Error interno del servidor' },
+      { status: 500 }
+    )
   }
 }

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { getStripe } from '@/lib/stripe'
 import { absoluteUrl } from '@/lib/utils'
 import { STRIPE_PRICES } from '@/lib/constants'
@@ -7,6 +8,7 @@ import type { Plan } from '@/types'
 
 export async function POST(request: NextRequest) {
   try {
+    // Auth check with server client (has cookies)
     const supabase = await createClient()
     const { data: { user }, error: authError } = await supabase.auth.getUser()
 
@@ -14,7 +16,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'No autorizado' }, { status: 401 })
     }
 
-    // Parse plan from request body (JSON)
+    // Parse plan from request body
     const body = await request.json().catch(() => ({}))
     const plan = body.plan as string | null
 
@@ -31,12 +33,13 @@ export async function POST(request: NextRequest) {
     }
 
     if (!priceId) {
-      console.error('[Stripe Checkout] No price ID for plan:', plan)
       return NextResponse.json({ error: 'Precio no configurado' }, { status: 500 })
     }
 
-    // Get or create Stripe customer
-    const { data: profile } = await supabase
+    // Use admin client for DB operations (bypasses RLS)
+    const admin = createAdminClient()
+
+    const { data: profile } = await admin
       .from('profiles')
       .select('stripe_customer_id, email, full_name')
       .eq('id', user.id)
@@ -46,13 +49,13 @@ export async function POST(request: NextRequest) {
 
     if (!customerId) {
       const customer = await getStripe().customers.create({
-        email: user.email,
+        email: user.email || profile?.email,
         name: profile?.full_name || undefined,
         metadata: { supabase_user_id: user.id },
       })
       customerId = customer.id
 
-      await supabase
+      await admin
         .from('profiles')
         .update({ stripe_customer_id: customerId })
         .eq('id', user.id)
@@ -75,6 +78,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ url: session.url })
   } catch (err) {
     console.error('[Stripe Checkout Error]', err instanceof Error ? err.message : err)
-    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
+    return NextResponse.json(
+      { error: err instanceof Error ? err.message : 'Error interno del servidor' },
+      { status: 500 }
+    )
   }
 }
