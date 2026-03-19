@@ -56,32 +56,69 @@ export function absoluteUrl(path: string): string {
 }
 
 /**
- * Check if an email domain matches a company name.
- * Used to automatically verify that a testimonial author belongs to the stated company.
+ * Verify identity by matching email against company name and person name.
+ *
+ * Returns a verification level:
+ * - 'full': both company domain AND person name match (e.g., edmond@rankia.com + "Edmond" + "Rankia")
+ * - 'company': only company domain matches (e.g., info@rankia.com + "Rankia")
+ * - 'none': no match
  */
-export function isCompanyEmailMatch(email: string, company: string): boolean {
-  if (!email || !company) return false
+export type VerificationLevel = 'full' | 'company' | 'none'
 
-  // Extract domain from email
+export function getVerificationLevel(email: string, company: string, authorName?: string): VerificationLevel {
+  if (!email || !company) return 'none'
+
   const atIndex = email.lastIndexOf('@')
-  if (atIndex === -1) return false
+  if (atIndex === -1) return 'none'
+
+  const localPart = email.slice(0, atIndex).toLowerCase()
   const domain = email.slice(atIndex + 1).toLowerCase()
 
-  // Extract domain without TLD (e.g., "acme.com" → "acme", "acme.co.uk" → "acme")
+  // Extract domain without TLD
   const domainParts = domain.split('.')
-  if (domainParts.length < 2) return false
+  if (domainParts.length < 2) return 'none'
   const domainWithoutTld = domainParts[0]
 
-  // Normalize company name: lowercase, remove accents, strip common suffixes, remove non-alphanumeric
-  const normalized = company
+  // Normalize company name
+  const normalizedCompany = company
     .toLowerCase()
     .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '') // strip combining marks (accents)
+    .replace(/[\u0300-\u036f]/g, '')
     .replace(/\b(s\.?l\.?|s\.?a\.?|inc\.?|corp\.?|llc\.?|srl\.?|s\.?r\.?l\.?|ltd\.?|gmbh\.?)\b/gi, '')
-    .replace(/[^a-z0-9]/g, '') // remove non-alphanumeric
+    .replace(/[^a-z0-9]/g, '')
 
-  if (normalized.length < 3 || domainWithoutTld.length < 3) return false
+  if (normalizedCompany.length < 3 || domainWithoutTld.length < 3) return 'none'
 
-  // Check bidirectional containment
-  return domainWithoutTld.includes(normalized) || normalized.includes(domainWithoutTld)
+  // Check domain matches company
+  const domainMatchesCompany = domainWithoutTld.includes(normalizedCompany) || normalizedCompany.includes(domainWithoutTld)
+  if (!domainMatchesCompany) return 'none'
+
+  // If no author name, it's a company-only match
+  if (!authorName) return 'company'
+
+  // Check if person name appears in email local part
+  const nameParts = authorName
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .split(/\s+/)
+    .filter(p => p.length >= 3)
+
+  if (nameParts.length === 0) return 'company'
+
+  // Clean local part: "edmond.bojalil" → "edmondbojalil", "e.bojalil" → "ebojalil"
+  const cleanLocal = localPart.replace(/[._\-+]/g, '')
+
+  // At least one name part must appear in the local part
+  // Examples: "edmond" in "edmond@rankia.com", "bojalil" in "ebojalil@rankia.com"
+  const nameMatches = nameParts.some(part =>
+    cleanLocal.includes(part) || part.includes(cleanLocal)
+  )
+
+  return nameMatches ? 'full' : 'company'
+}
+
+// Backward compat wrapper
+export function isCompanyEmailMatch(email: string, company: string, authorName?: string): boolean {
+  return getVerificationLevel(email, company, authorName) !== 'none'
 }

@@ -5,7 +5,7 @@ import { testimonialSchema } from '@/lib/validations'
 import { PLAN_LIMITS } from '@/lib/constants'
 import { Plan } from '@/types'
 import { Resend } from 'resend'
-import { isCompanyEmailMatch } from '@/lib/utils'
+import { getVerificationLevel } from '@/lib/utils'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -128,10 +128,11 @@ export async function POST(request: NextRequest) {
     const hasEmail = parsed.data.author_email && parsed.data.author_email.trim() !== ''
     const initialStatus = hasEmail ? 'pending_verification' : 'pending'
 
-    // Auto-verify company if email domain matches company name
-    const isCompanyVerified = hasEmail && parsed.data.author_company
-      ? isCompanyEmailMatch(parsed.data.author_email!, parsed.data.author_company)
-      : false
+    // Auto-verify company if email domain matches company name + person name
+    const verificationLevel = hasEmail && parsed.data.author_company
+      ? getVerificationLevel(parsed.data.author_email!, parsed.data.author_company, parsed.data.author_name)
+      : 'none'
+    const isCompanyVerified = verificationLevel !== 'none'
 
     const { data: testimonial, error } = await supabase
       .from('testimonials')
