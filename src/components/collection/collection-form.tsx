@@ -13,7 +13,7 @@ import { VideoUpload } from './video-upload'
 interface CollectionFormProps {
   projectId: string
   brandColor: string
-  onSuccess: () => void
+  onSuccess: (verificationPending: boolean) => void
   allowVideo?: boolean
 }
 
@@ -109,13 +109,14 @@ export function CollectionForm({
         }),
       })
 
+      const data = await res.json().catch(() => null)
+
       if (!res.ok) {
-        const data = await res.json().catch(() => null)
         throw new Error(data?.error || 'Error al enviar el testimonio')
       }
 
       toast('¡Testimonio enviado con éxito! Gracias.', 'success')
-      onSuccess()
+      onSuccess(!!data?.verification_pending)
     } catch (err) {
       toast(
         err instanceof Error ? err.message : 'Error al enviar el testimonio',

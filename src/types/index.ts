@@ -1,5 +1,5 @@
 export type Plan = 'free' | 'pro' | 'business'
-export type TestimonialStatus = 'pending' | 'approved' | 'rejected'
+export type TestimonialStatus = 'pending_verification' | 'pending' | 'approved' | 'rejected'
 export type WidgetLayout = 'carousel' | 'grid' | 'wall' | 'single' | 'badge'
 export type WidgetTheme = 'light' | 'dark' | 'auto'
 
@@ -46,6 +46,7 @@ export interface Testimonial {
   status: TestimonialStatus
   tags: string[]
   is_featured: boolean
+  verification_token: string | null
   source: string
   created_at: string
   updated_at: string

@@ -12,6 +12,7 @@ interface TestimonialCardProps {
 }
 
 const statusConfig: Record<TestimonialStatus, { label: string; className: string }> = {
+  pending_verification: { label: 'Esperando verificación', className: 'bg-purple-50 text-purple-700' },
   pending: { label: 'Pendiente', className: 'bg-yellow-50 text-yellow-700' },
   approved: { label: 'Aprobado', className: 'bg-green-50 text-green-700' },
   rejected: { label: 'Rechazado', className: 'bg-red-50 text-red-700' },

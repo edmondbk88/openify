@@ -47,6 +47,7 @@ export default async function ProyectoDetailPage({
 
   // Count by status
   const counts: Record<TestimonialStatus, number> = {
+    pending_verification: allTestimonials.filter((t) => t.status === 'pending_verification').length,
     pending: allTestimonials.filter((t) => t.status === 'pending').length,
     approved: allTestimonials.filter((t) => t.status === 'approved').length,
     rejected: allTestimonials.filter((t) => t.status === 'rejected').length,
@@ -161,7 +162,11 @@ export default async function ProyectoDetailPage({
       </div>
 
       {/* Status Counts */}
-      <div className="mt-6 grid grid-cols-3 gap-4">
+      <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+        <div className="rounded-lg border border-purple-200 bg-purple-50 px-4 py-3 text-center">
+          <p className="text-2xl font-bold text-purple-700">{counts.pending_verification}</p>
+          <p className="text-sm text-purple-600">Verificación</p>
+        </div>
         <div className="rounded-lg border border-yellow-200 bg-yellow-50 px-4 py-3 text-center">
           <p className="text-2xl font-bold text-yellow-700">{counts.pending}</p>
           <p className="text-sm text-yellow-600">Pendientes</p>

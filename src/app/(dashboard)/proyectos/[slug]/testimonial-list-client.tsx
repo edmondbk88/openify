@@ -12,6 +12,7 @@ interface TestimonialListClientProps {
 
 const filterTabs: { label: string; value: TestimonialStatus | 'all' }[] = [
   { label: 'Todos', value: 'all' },
+  { label: 'Verificación', value: 'pending_verification' },
   { label: 'Pendientes', value: 'pending' },
   { label: 'Aprobados', value: 'approved' },
   { label: 'Rechazados', value: 'rejected' },

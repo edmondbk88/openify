@@ -23,7 +23,10 @@ export function CollectionPageClient({
       projectId={projectId}
       brandColor={brandColor}
       allowVideo={allowVideo}
-      onSuccess={() => router.push(`/p/${slug}/gracias`)}
+      onSuccess={(verificationPending) => {
+        const params = verificationPending ? '?verificacion=pendiente' : ''
+        router.push(`/p/${slug}/gracias${params}`)
+      }}
     />
   )
 }
