@@ -81,6 +81,24 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Este proyecto no está aceptando testimonios' }, { status: 403 })
     }
 
+    // Check duplicate: 1 testimonial per email per project
+    if (parsed.data.author_email && parsed.data.author_email.trim() !== '') {
+      const { data: existing } = await supabase
+        .from('testimonials')
+        .select('id')
+        .eq('project_id', parsed.data.project_id)
+        .eq('author_email', parsed.data.author_email)
+        .limit(1)
+        .maybeSingle()
+
+      if (existing) {
+        return NextResponse.json(
+          { error: 'Ya has enviado un testimonio para este proyecto. Solo se permite uno por correo electrónico.' },
+          { status: 409 }
+        )
+      }
+    }
+
     // Check testimonial limit per plan
     const { data: profile } = await supabase
       .from('profiles')

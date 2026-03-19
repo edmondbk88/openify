@@ -86,6 +86,18 @@ export default function TestimonialCard({
         <StarRating rating={testimonial.rating} />
       </div>
 
+      {/* Video */}
+      {testimonial.video_url && (
+        <div className="mt-3">
+          <video
+            src={testimonial.video_url}
+            controls
+            preload="metadata"
+            className="w-full max-h-48 rounded-lg border border-gray-200"
+          />
+        </div>
+      )}
+
       {/* Content */}
       <p className="mt-3 text-sm leading-relaxed text-gray-700">
         {truncate(testimonial.content, 200)}

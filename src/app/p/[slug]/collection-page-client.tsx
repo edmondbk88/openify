@@ -7,12 +7,14 @@ interface CollectionPageClientProps {
   slug: string
   projectId: string
   brandColor: string
+  allowVideo?: boolean
 }
 
 export function CollectionPageClient({
   slug,
   projectId,
   brandColor,
+  allowVideo = false,
 }: CollectionPageClientProps) {
   const router = useRouter()
 
@@ -20,6 +22,7 @@ export function CollectionPageClient({
     <CollectionForm
       projectId={projectId}
       brandColor={brandColor}
+      allowVideo={allowVideo}
       onSuccess={() => router.push(`/p/${slug}/gracias`)}
     />
   )

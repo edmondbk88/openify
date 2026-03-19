@@ -16,6 +16,7 @@ export const testimonialSchema = z.object({
   author_company: z.string().max(100).optional().or(z.literal('')),
   author_role: z.string().max(100).optional().or(z.literal('')),
   author_avatar_url: z.string().url().nullable().optional(),
+  video_url: z.string().url().nullable().optional(),
   content: z.string().min(10, 'El testimonio debe tener al menos 10 caracteres').max(2000),
   rating: z.number().int().min(1).max(5),
 })

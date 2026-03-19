@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
-import { MAX_FILE_SIZE, ACCEPTED_IMAGE_TYPES } from '@/lib/constants'
+import { MAX_FILE_SIZE, ACCEPTED_IMAGE_TYPES, ACCEPTED_VIDEO_TYPES, MAX_VIDEO_SIZE } from '@/lib/constants'
 
 export async function POST(request: NextRequest) {
   try {
@@ -8,24 +8,42 @@ export async function POST(request: NextRequest) {
 
     const formData = await request.formData()
     const file = formData.get('file') as File | null
-    const bucket = (formData.get('bucket') as string) || 'avatars'
+    const type = (formData.get('type') as string) || 'avatar'
 
     if (!file) {
       return NextResponse.json({ error: 'No se proporcionó ningún archivo' }, { status: 400 })
     }
 
+    let bucket: string
+    let acceptedTypes: string[]
+    let maxSize: number
+    let sizeLabel: string
+
+    if (type === 'video') {
+      bucket = 'videos'
+      acceptedTypes = ACCEPTED_VIDEO_TYPES
+      maxSize = MAX_VIDEO_SIZE
+      sizeLabel = '50MB'
+    } else {
+      bucket = (formData.get('bucket') as string) || 'avatars'
+      acceptedTypes = ACCEPTED_IMAGE_TYPES
+      maxSize = MAX_FILE_SIZE
+      sizeLabel = '5MB'
+    }
+
     // Validate file type
-    if (!ACCEPTED_IMAGE_TYPES.includes(file.type)) {
+    if (!acceptedTypes.includes(file.type)) {
+      const allowed = type === 'video' ? 'MP4 o WebM' : 'JPEG, PNG o WebP'
       return NextResponse.json(
-        { error: 'Tipo de archivo no permitido. Usa JPEG, PNG o WebP.' },
+        { error: `Tipo de archivo no permitido. Usa ${allowed}.` },
         { status: 400 }
       )
     }
 
     // Validate file size
-    if (file.size > MAX_FILE_SIZE) {
+    if (file.size > maxSize) {
       return NextResponse.json(
-        { error: 'El archivo es demasiado grande. Máximo 5MB.' },
+        { error: `El archivo es demasiado grande. Máximo ${sizeLabel}.` },
         { status: 400 }
       )
     }

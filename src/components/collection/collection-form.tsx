@@ -8,11 +8,13 @@ import { Button } from '@/components/ui/button'
 import { useToast } from '@/components/ui/toast'
 import { StarInput } from './star-input'
 import { PhotoUpload } from './photo-upload'
+import { VideoUpload } from './video-upload'
 
 interface CollectionFormProps {
   projectId: string
   brandColor: string
   onSuccess: () => void
+  allowVideo?: boolean
 }
 
 interface FormData {
@@ -37,10 +39,12 @@ export function CollectionForm({
   projectId,
   brandColor,
   onSuccess,
+  allowVideo = false,
 }: CollectionFormProps) {
   const { toast } = useToast()
   const [loading, setLoading] = useState(false)
   const [photoUrl, setPhotoUrl] = useState<string | undefined>()
+  const [videoUrl, setVideoUrl] = useState<string | undefined>()
   const [errors, setErrors] = useState<FieldErrors>({})
   const [formData, setFormData] = useState<FormData>({
     author_name: '',
@@ -101,6 +105,7 @@ export function CollectionForm({
         body: JSON.stringify({
           ...payload,
           author_avatar_url: photoUrl || null,
+          video_url: videoUrl || null,
         }),
       })
 
@@ -196,6 +201,15 @@ export function CollectionForm({
         error={errors.content}
         disabled={loading}
       />
+
+      {/* Video Upload */}
+      {allowVideo && (
+        <VideoUpload
+          value={videoUrl}
+          onChange={setVideoUrl}
+          brandColor={brandColor}
+        />
+      )}
 
       {/* Submit */}
       <Button

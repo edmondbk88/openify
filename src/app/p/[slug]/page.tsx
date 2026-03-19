@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { createClient } from '@/lib/supabase/server'
-import type { Project } from '@/types'
+import { createAdminClient } from '@/lib/supabase/admin'
+import type { Project, Plan } from '@/types'
+import { PLAN_LIMITS } from '@/lib/constants'
 import Image from 'next/image'
 import { CollectionPageClient } from './collection-page-client'
 
@@ -19,6 +21,18 @@ async function getProject(slug: string): Promise<Project | null> {
     .single()
 
   return data as Project | null
+}
+
+async function getAllowVideo(userId: string): Promise<boolean> {
+  const supabase = createAdminClient()
+  const { data: profile } = await supabase
+    .from('profiles')
+    .select('plan')
+    .eq('id', userId)
+    .single()
+
+  const plan = (profile?.plan as Plan) || 'free'
+  return PLAN_LIMITS[plan].video
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
@@ -86,6 +100,7 @@ export default async function CollectionPage({ params }: PageProps) {
             slug={slug}
             projectId={project.id}
             brandColor={project.brand_color}
+            allowVideo={await getAllowVideo(project.user_id)}
           />
         </div>
 
