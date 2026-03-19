@@ -50,18 +50,24 @@ export function Hero() {
               {[
                 {
                   name: 'María López',
-                  role: 'CEO, Florería Bella',
+                  company: 'Florería Bella',
+                  role: 'CEO',
                   text: '"Opinafy nos ayudó a mostrar las reseñas de nuestros clientes de forma profesional."',
+                  is_company_verified: true,
                 },
                 {
                   name: 'Carlos Ruiz',
-                  role: 'Fundador, TechSoluciones',
+                  company: 'TechSoluciones',
+                  role: 'Fundador',
                   text: '"Desde que instalamos el widget, nuestras conversiones aumentaron un 30%."',
+                  is_company_verified: true,
                 },
                 {
                   name: 'Ana García',
-                  role: 'Directora, Estudio Creativo',
+                  company: 'Estudio Creativo',
+                  role: 'Directora',
                   text: '"La integración fue increíblemente fácil. En 5 minutos lo teníamos funcionando."',
+                  is_company_verified: false,
                 },
               ].map((t) => (
                 <div
@@ -78,7 +84,17 @@ export function Hero() {
                   <p className="text-sm text-gray-600">{t.text}</p>
                   <div className="mt-3">
                     <p className="text-sm font-semibold text-gray-900">{t.name}</p>
-                    <p className="text-xs text-gray-500">{t.role}</p>
+                    <div className="flex items-center gap-1">
+                      <p className="text-xs text-gray-500">{t.role}, {t.company}</p>
+                      {t.is_company_verified && (
+                        <span className="inline-flex items-center gap-0.5 rounded-full bg-green-50 px-1.5 py-0.5 text-xs font-medium text-green-700">
+                          <svg className="h-3 w-3 text-green-600" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M16.403 12.652a3 3 0 010-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                          </svg>
+                          Verificada
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
               ))}

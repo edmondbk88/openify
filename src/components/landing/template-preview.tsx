@@ -10,6 +10,7 @@ const FAKE_TESTIMONIALS = [
     rating: 5,
     date: '15 mar 2026',
     initials: 'MG',
+    is_company_verified: true,
   },
   {
     name: 'Carlos Rodríguez Pérez',
@@ -18,6 +19,7 @@ const FAKE_TESTIMONIALS = [
     rating: 5,
     date: '12 mar 2026',
     initials: 'CR',
+    is_company_verified: true,
   },
   {
     name: 'Ana Martínez Ruiz',
@@ -26,6 +28,7 @@ const FAKE_TESTIMONIALS = [
     rating: 4,
     date: '10 mar 2026',
     initials: 'AM',
+    is_company_verified: false,
   },
 ]
 
@@ -114,7 +117,14 @@ function TestimonialCard({
             {testimonial.name}
           </p>
           {config.show_company && (
-            <p className="truncate text-xs opacity-70">{testimonial.company}</p>
+            <div className="flex items-center gap-1 truncate">
+              <p className="truncate text-xs opacity-70">{testimonial.company}</p>
+              {testimonial.is_company_verified && (
+                <svg className="h-3.5 w-3.5 shrink-0 text-green-500" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M16.403 12.652a3 3 0 010-5.304 3 3 0 00-3.75-3.751 3 3 0 00-5.305 0 3 3 0 00-3.751 3.75 3 3 0 000 5.305 3 3 0 003.75 3.751 3 3 0 005.305 0 3 3 0 003.751-3.75zm-2.546-4.46a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
+                </svg>
+              )}
+            </div>
           )}
           {config.show_date && (
             <p className="text-xs opacity-50">{testimonial.date}</p>
@@ -143,6 +153,28 @@ function hexToRgba(hex: string, alpha: number): string {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`
 }
 
+function VideoPlayOverlay({ config }: { config: WidgetTemplate['config'] }) {
+  return (
+    <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+      <div
+        className="flex h-12 w-12 items-center justify-center rounded-full shadow-lg"
+        style={{
+          backgroundColor: config.theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.15)',
+          backdropFilter: 'blur(4px)',
+        }}
+      >
+        <svg
+          className="ml-0.5 h-5 w-5"
+          viewBox="0 0 20 20"
+          fill={config.theme === 'dark' ? '#ffffff' : '#1f2937'}
+        >
+          <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+        </svg>
+      </div>
+    </div>
+  )
+}
+
 export function TemplatePreview({
   template,
   compact = false,
@@ -151,6 +183,7 @@ export function TemplatePreview({
   compact?: boolean
 }) {
   const { config, layout } = template
+  const isVideo = template.category === 'Video'
   const testimonials = compact ? FAKE_TESTIMONIALS.slice(0, 2) : FAKE_TESTIMONIALS
 
   const containerPadding = compact ? 'p-3' : 'p-6'
@@ -166,7 +199,10 @@ export function TemplatePreview({
       {layout === 'grid' && (
         <div className={`grid gap-4 ${compact ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'}`}>
           {testimonials.map((t, i) => (
-            <TestimonialCard key={i} testimonial={t} config={config} />
+            <div key={i} className="relative">
+              <TestimonialCard testimonial={t} config={config} />
+              {isVideo && i === 0 && <VideoPlayOverlay config={config} />}
+            </div>
           ))}
         </div>
       )}
@@ -176,9 +212,10 @@ export function TemplatePreview({
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className={compact ? 'w-full shrink-0' : 'w-full shrink-0 md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)]'}
+              className={`relative ${compact ? 'w-full shrink-0' : 'w-full shrink-0 md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)]'}`}
             >
               <TestimonialCard testimonial={t} config={config} />
+              {isVideo && i === 0 && <VideoPlayOverlay config={config} />}
             </div>
           ))}
         </div>
@@ -187,16 +224,18 @@ export function TemplatePreview({
       {layout === 'wall' && (
         <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
           {testimonials.map((t, i) => (
-            <div key={i} className="mb-4 break-inside-avoid">
+            <div key={i} className="relative mb-4 break-inside-avoid">
               <TestimonialCard testimonial={t} config={config} />
+              {isVideo && i === 0 && <VideoPlayOverlay config={config} />}
             </div>
           ))}
         </div>
       )}
 
       {layout === 'single' && (
-        <div className="mx-auto max-w-xl">
+        <div className="relative mx-auto max-w-xl">
           <TestimonialCard testimonial={testimonials[0]} config={config} />
+          {isVideo && <VideoPlayOverlay config={config} />}
         </div>
       )}
 
