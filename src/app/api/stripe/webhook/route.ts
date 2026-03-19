@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getStripe } from '@/lib/stripe'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { STRIPE_PRICES } from '@/lib/constants'
+import { enforceDowngradeLimits } from '@/lib/plan-enforcement'
 import { Plan } from '@/types'
 import Stripe from 'stripe'
 
@@ -73,6 +74,15 @@ export async function POST(request: NextRequest) {
           .single()
 
         if (profile) {
+          // Fetch the old plan to detect downgrades
+          const { data: oldProfile } = await supabase
+            .from('profiles')
+            .select('plan')
+            .eq('id', profile.id)
+            .single()
+
+          const oldPlan = (oldProfile?.plan as Plan) || 'free'
+
           await supabase
             .from('profiles')
             .update({
@@ -81,6 +91,12 @@ export async function POST(request: NextRequest) {
               updated_at: new Date().toISOString(),
             })
             .eq('id', profile.id)
+
+          // If this is a downgrade, enforce the new plan limits
+          const planOrder: Record<Plan, number> = { free: 0, pro: 1, business: 2 }
+          if (planOrder[plan] < planOrder[oldPlan]) {
+            await enforceDowngradeLimits(profile.id, plan)
+          }
         }
 
         break
@@ -105,6 +121,9 @@ export async function POST(request: NextRequest) {
               updated_at: new Date().toISOString(),
             })
             .eq('id', profile.id)
+
+          // Enforce free plan limits on cancellation
+          await enforceDowngradeLimits(profile.id, 'free')
         }
 
         break

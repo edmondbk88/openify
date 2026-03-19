@@ -3,7 +3,8 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import StatsCard from '@/components/dashboard/stats-card'
 import TestimonialCard from '@/components/dashboard/testimonial-card'
-import type { Testimonial } from '@/types'
+import { PLAN_LIMITS } from '@/lib/constants'
+import type { Plan, Testimonial } from '@/types'
 
 export const metadata = {
   title: 'Dashboard - Opinafy',
@@ -20,13 +21,19 @@ export default async function DashboardPage() {
     redirect('/login')
   }
 
-  // Fetch user's project IDs
-  const { data: projects } = await supabase
-    .from('projects')
-    .select('id')
-    .eq('user_id', user.id)
+  // Fetch user profile and projects
+  const [{ data: profile }, { data: projects }] = await Promise.all([
+    supabase.from('profiles').select('plan').eq('id', user.id).single(),
+    supabase.from('projects').select('id, is_active').eq('user_id', user.id),
+  ])
 
+  const userPlan = (profile?.plan as Plan) || 'free'
+  const planLimits = PLAN_LIMITS[userPlan]
   const projectIds = projects?.map((p) => p.id) ?? []
+  const totalProjectCount = projects?.length ?? 0
+  const inactiveProjectCount = projects?.filter((p) => !p.is_active).length ?? 0
+  const hasDowngradeWarning =
+    planLimits.projects !== Infinity && totalProjectCount > planLimits.projects
 
   // Fetch stats in parallel
   const [
@@ -100,6 +107,41 @@ export default async function DashboardPage() {
           Resumen de tu cuenta y actividad reciente.
         </p>
       </div>
+
+      {/* Downgrade Warning Banner */}
+      {hasDowngradeWarning && (
+        <div className="mb-6 rounded-lg border border-amber-300 bg-amber-50 p-4">
+          <div className="flex">
+            <svg
+              className="h-5 w-5 flex-shrink-0 text-amber-400"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+              />
+            </svg>
+            <div className="ml-3">
+              <p className="text-sm text-amber-800">
+                Tu plan actual permite {planLimits.projects} proyecto(s). Tienes{' '}
+                {totalProjectCount} proyectos, de los cuales {inactiveProjectCount}{' '}
+                est{inactiveProjectCount === 1 ? 'a' : 'an'} desactivado
+                {inactiveProjectCount === 1 ? '' : 's'}.{' '}
+                <Link
+                  href="/precios"
+                  className="font-medium text-amber-800 underline hover:text-amber-900"
+                >
+                  Mejora tu plan para reactivarlos.
+                </Link>
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Stats Grid */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

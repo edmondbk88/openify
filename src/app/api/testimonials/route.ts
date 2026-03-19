@@ -125,6 +125,14 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    // Reject video_url if the owner's plan doesn't support video testimonials
+    if (parsed.data.video_url && !limits.video) {
+      return NextResponse.json(
+        { error: 'Los testimonios en vídeo no están disponibles en el plan actual del proyecto.' },
+        { status: 403 }
+      )
+    }
+
     const hasEmail = parsed.data.author_email && parsed.data.author_email.trim() !== ''
     const initialStatus = hasEmail ? 'pending_verification' : 'pending'
 

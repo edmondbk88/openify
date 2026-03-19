@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { WidgetData } from '@/types'
+import { PLAN_LIMITS } from '@/lib/constants'
+import { Plan, WidgetData } from '@/types'
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -22,10 +23,10 @@ export async function GET(
     // no authenticated user when a widget is embedded on a third-party site.
     const supabase = createAdminClient()
 
-    // Fetch project
+    // Fetch project (include user_id to look up owner's plan)
     const { data: project, error: projectError } = await supabase
       .from('projects')
-      .select('name, logo_url, brand_color, is_active')
+      .select('name, logo_url, brand_color, is_active, user_id')
       .eq('id', projectId)
       .single()
 
@@ -53,7 +54,7 @@ export async function GET(
     // Fetch approved testimonials
     let query = supabase
       .from('testimonials')
-      .select('id, author_name, author_company, author_role, author_avatar_url, content, rating, is_company_verified, created_at')
+      .select('id, author_name, author_company, author_role, author_avatar_url, content, rating, video_url, is_company_verified, created_at')
       .eq('project_id', projectId)
       .eq('status', 'approved')
       .order('is_featured', { ascending: false })
@@ -83,14 +84,44 @@ export async function GET(
       )
     }
 
+    // Look up owner's plan for runtime enforcement
+    const { data: ownerProfile } = await supabase
+      .from('profiles')
+      .select('plan')
+      .eq('id', project.user_id)
+      .single()
+
+    const ownerPlan = (ownerProfile?.plan as Plan) || 'free'
+    const planLimits = PLAN_LIMITS[ownerPlan]
+
+    // Enforce plan limits on the config at render time
+    let enforcedConfig = config || null
+    if (enforcedConfig) {
+      // Force branding if plan doesn't allow removal
+      if (!planLimits.removeBranding) {
+        enforcedConfig = { ...enforcedConfig, show_branding: true }
+      }
+
+      // Force layout to an allowed one if current layout is premium-only
+      if (!planLimits.layouts.includes(enforcedConfig.layout)) {
+        enforcedConfig = { ...enforcedConfig, layout: 'carousel' as const }
+      }
+    }
+
+    // Strip video_url from testimonials if plan doesn't support video
+    let processedTestimonials = testimonials || []
+    if (!planLimits.video) {
+      processedTestimonials = processedTestimonials.map(t => ({ ...t, video_url: null }))
+    }
+
     const widgetData: WidgetData = {
       project: {
         name: project.name,
         logo_url: project.logo_url,
         brand_color: project.brand_color,
       },
-      testimonials: testimonials || [],
-      config: config || null,
+      testimonials: processedTestimonials,
+      config: enforcedConfig,
     }
 
     return NextResponse.json(widgetData, { headers: corsHeaders })
