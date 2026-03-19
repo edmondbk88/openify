@@ -23,6 +23,17 @@ export const metadata: Metadata = {
     description:
       'Compara Opinafy con las mejores herramientas de testimonios. Análisis detallados y honestos.',
     url: 'https://opinafy.com/comparar',
+    type: 'website',
+    siteName: 'Opinafy',
+    locale: 'es_ES',
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Comparativas de herramientas de testimonios 2026',
+    description:
+      'Compara Opinafy con las mejores herramientas de testimonios. Análisis detallados y honestos.',
+    images: ['/og.png'],
   },
 }
 
@@ -98,6 +109,63 @@ export default function CompararPage() {
             la que mejor se adapte a tu negocio. Comparativas honestas, con datos reales y sin letra
             pequeña.
           </p>
+        </div>
+
+        {/* Editorial Content */}
+        <div className="mx-auto mt-12 max-w-3xl text-gray-600">
+          <h2 className="text-xl font-bold text-gray-900">Como realizamos nuestras comparativas</h2>
+          <p className="mt-4 leading-relaxed">
+            Cada comparativa se elabora probando las herramientas en escenarios reales: creamos
+            proyectos, anadimos testimonios, personalizamos widgets e integramos el codigo en sitios
+            web de prueba. Evaluamos cada plataforma en base a seis criterios clave:
+            <strong> funcionalidades</strong> (tipos de widget, formatos de testimonios, personalizacion),
+            <strong> facilidad de uso</strong> (curva de aprendizaje, UX del panel),
+            <strong> rendimiento</strong> (velocidad de carga del widget, peso del script),
+            <strong> precio</strong> (relacion calidad-coste, limites del plan gratuito),
+            <strong> soporte en espanol</strong> (idioma de la interfaz, documentacion, atencion al cliente)
+            y <strong>integraciones</strong> disponibles.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            A diferencia de otros rankings, nuestras comparativas son transparentes: mostramos tanto
+            los puntos fuertes como las limitaciones de cada herramienta, incluyendo Opinafy.
+            Actualizamos las comparativas periodicamente para reflejar los cambios de precios y nuevas
+            funcionalidades. Nuestro objetivo es ayudarte a tomar una decision informada, no
+            convencerte de que una herramienta es mejor que otra sin datos que lo respalden.
+          </p>
+
+          {/* Mini Summary Table */}
+          <div className="mt-8 overflow-x-auto rounded-xl border border-gray-200">
+            <table className="w-full text-left text-sm">
+              <thead>
+                <tr className="border-b border-gray-200 bg-gray-50">
+                  <th className="px-4 py-3 font-semibold text-gray-900">Herramienta</th>
+                  <th className="px-4 py-3 font-semibold text-gray-900">Espanol nativo</th>
+                  <th className="px-4 py-3 font-semibold text-gray-900">Plan gratuito</th>
+                  <th className="px-4 py-3 font-semibold text-gray-900">Desde</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr className="bg-indigo-50/50">
+                  <td className="px-4 py-2.5 font-medium text-indigo-700">Opinafy</td>
+                  <td className="px-4 py-2.5 text-green-600">Si</td>
+                  <td className="px-4 py-2.5 text-green-600">Si</td>
+                  <td className="px-4 py-2.5">&euro;0/mes</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2.5 font-medium text-gray-900">Testimonial.to</td>
+                  <td className="px-4 py-2.5 text-red-500">No</td>
+                  <td className="px-4 py-2.5 text-green-600">Si</td>
+                  <td className="px-4 py-2.5">$20/mes</td>
+                </tr>
+                <tr>
+                  <td className="px-4 py-2.5 font-medium text-gray-900">Senja</td>
+                  <td className="px-4 py-2.5 text-red-500">No</td>
+                  <td className="px-4 py-2.5 text-green-600">Si</td>
+                  <td className="px-4 py-2.5">$29/mes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
         {/* Comparison Cards */}

@@ -26,12 +26,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
     siteName: 'Opinafy',
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Testimonios por Industria | Opinafy',
     description:
       'Soluciones de testimonios adaptadas a 30 industrias diferentes.',
+    images: ['/og.png'],
   },
 }
 
@@ -70,6 +72,49 @@ export default function TestimoniosPorIndustriaPage() {
             a tu industria a recopilar, gestionar y mostrar testimonios que generan confianza y
             aumentan las ventas.
           </p>
+        </div>
+      </section>
+
+      {/* Editorial Content */}
+      <section className="bg-white py-12 sm:py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-gray mx-auto max-w-none text-gray-600">
+            <h2 className="text-2xl font-bold text-gray-900">
+              Por que los testimonios especificos de tu sector marcan la diferencia
+            </h2>
+            <p className="mt-4 leading-relaxed">
+              No todos los testimonios funcionan igual en todos los sectores. Un restaurante necesita
+              transmitir la experiencia gastronomica y la calidad del servicio, mientras que una
+              clinica dental debe generar confianza en tratamientos que implican la salud del
+              paciente. Un ecommerce de moda necesita que sus clientes hablen de la calidad de las
+              prendas y la rapidez del envio, y un coach profesional necesita testimonios que
+              reflejen la transformacion personal de sus clientes. Los testimonios genericos no
+              conectan; los especificos convierten.
+            </p>
+            <p className="mt-4 leading-relaxed">
+              Segun datos del sector, el <strong>92% de los consumidores</strong> lee opiniones
+              online antes de realizar una compra o contratar un servicio, y los negocios que
+              muestran testimonios relevantes en sus paginas web experimentan un incremento medio
+              del <strong>34% en sus tasas de conversion</strong>. Ademas, los testimonios
+              especificos del sector generan hasta un <strong>58% mas de confianza</strong> que las
+              resenas genericas, ya que los potenciales clientes se identifican con situaciones y
+              necesidades similares a las suyas.
+            </p>
+            <p className="mt-4 leading-relaxed">
+              Cada industria tiene sus propios desafios a la hora de recopilar y mostrar opiniones.
+              Los profesionales de servicios necesitan formularios adaptados a la experiencia del
+              cliente; los negocios locales se benefician de codigos QR fisicos; y las empresas
+              B2B requieren testimonios que destaquen resultados medibles y ROI. Opinafy se adapta
+              a cada uno de estos escenarios con plantillas, formularios y widgets disenados
+              pensando en las particularidades de mas de 30 industrias diferentes.
+            </p>
+            <p className="mt-4 leading-relaxed">
+              A continuacion encontraras una guia para cada sector con consejos especificos,
+              ejemplos de testimonios y las mejores practicas para recopilar opiniones que
+              realmente impulsen tu negocio. Selecciona tu industria para descubrir como Opinafy
+              puede ayudarte.
+            </p>
+          </div>
         </div>
       </section>
 
