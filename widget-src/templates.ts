@@ -12,6 +12,7 @@ interface Testimonial {
   content: string;
   created_at: string;
   is_company_verified?: boolean;
+  video_url?: string;
 }
 
 interface WidgetConfig {
@@ -147,7 +148,7 @@ export function renderBadge(data: WidgetData): string {
 // ── Individual Testimonial Card ──
 
 export function renderCard(testimonial: Testimonial, config: WidgetConfig): string {
-  const { author_name, author_avatar, company, role, rating, content, created_at } = testimonial;
+  const { author_name, author_avatar, company, role, rating, content, created_at, video_url } = testimonial;
   const initials = getInitials(author_name);
   const verifiedBadge = company && testimonial.is_company_verified
     ? ' <span class="opinafy-verified" title="Empresa verificada">&#10003;</span>'
@@ -162,18 +163,27 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
     ? `<div class="opinafy-avatar"><img src="${escapeAttr(author_avatar)}" alt="${escapeAttr(author_name)}" loading="lazy"/></div>`
     : `<div class="opinafy-avatar">${escapeHtml(initials)}</div>`;
 
+  const videoHtml = video_url
+    ? `<div class="opinafy-video-container"><video class="opinafy-video" src="${escapeAttr(video_url)}" controls preload="metadata" playsinline></video></div>`
+    : '';
+
+  const hasVideo = !!video_url;
+
   return `
-    <div class="opinafy-card" data-testimonial-id="${escapeAttr(testimonial.id)}">
-      <div class="opinafy-card-header">
-        ${avatarHtml}
-        <div class="opinafy-author">
-          <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
-          ${metaHtml ? `<div class="opinafy-author-meta">${metaHtml}</div>` : ''}
+    <div class="opinafy-card${hasVideo ? ' opinafy-card-has-video' : ''}" data-testimonial-id="${escapeAttr(testimonial.id)}">
+      ${videoHtml}
+      <div class="${hasVideo ? 'opinafy-card-body' : ''}">
+        <div class="opinafy-card-header">
+          ${avatarHtml}
+          <div class="opinafy-author">
+            <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
+            ${metaHtml ? `<div class="opinafy-author-meta">${metaHtml}</div>` : ''}
+          </div>
         </div>
+        ${rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
+        <div class="opinafy-content"><p>${escapeHtml(content)}</p></div>
+        ${dateStr ? `<div class="opinafy-date">${dateStr}</div>` : ''}
       </div>
-      ${rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
-      <div class="opinafy-content"><p>${escapeHtml(content)}</p></div>
-      ${dateStr ? `<div class="opinafy-date">${dateStr}</div>` : ''}
     </div>
   `;
 }

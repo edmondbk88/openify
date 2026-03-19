@@ -203,13 +203,23 @@ export function CollectionForm({
         disabled={loading}
       />
 
-      {/* Video Upload */}
+      {/* Video Recorder */}
       {allowVideo && (
-        <VideoUpload
-          value={videoUrl}
-          onChange={setVideoUrl}
-          brandColor={brandColor}
-        />
+        <div className="space-y-2">
+          <div>
+            <p className="text-sm font-medium text-gray-700">
+              ¿Quieres grabar un video testimonio?
+            </p>
+            <p className="text-xs text-gray-500">
+              Graba un video de hasta 2 minutos compartiendo tu experiencia
+            </p>
+          </div>
+          <VideoUpload
+            value={videoUrl}
+            onChange={setVideoUrl}
+            brandColor={brandColor}
+          />
+        </div>
       )}
 
       {/* Submit */}

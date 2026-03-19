@@ -44,7 +44,24 @@ export default function TestimonialCard({
   const status = statusConfig[testimonial.status]
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
+    <div className={cn(
+      'rounded-xl border border-gray-200 bg-white shadow-sm',
+      testimonial.video_url ? 'overflow-hidden' : 'p-5'
+    )}>
+      {/* Video */}
+      {testimonial.video_url && (
+        <div className="aspect-video w-full bg-black">
+          <video
+            src={testimonial.video_url}
+            controls
+            preload="metadata"
+            playsInline
+            className="h-full w-full object-cover"
+          />
+        </div>
+      )}
+
+      <div className={testimonial.video_url ? 'p-5' : ''}>
       {/* Header */}
       <div className="flex items-start justify-between">
         <div className="flex items-center gap-3">
@@ -98,18 +115,6 @@ export default function TestimonialCard({
         <StarRating rating={testimonial.rating} />
       </div>
 
-      {/* Video */}
-      {testimonial.video_url && (
-        <div className="mt-3">
-          <video
-            src={testimonial.video_url}
-            controls
-            preload="metadata"
-            className="w-full max-h-48 rounded-lg border border-gray-200"
-          />
-        </div>
-      )}
-
       {/* Content */}
       <p className="mt-3 text-sm leading-relaxed text-gray-700">
         {truncate(testimonial.content, 200)}
@@ -153,6 +158,7 @@ export default function TestimonialCard({
             Eliminar
           </button>
         )}
+      </div>
       </div>
     </div>
   )

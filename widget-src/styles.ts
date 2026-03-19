@@ -182,6 +182,31 @@ export function getStyles(config: any): string {
       color: var(--opinafy-star-empty);
     }
 
+    /* ── Video in Cards ── */
+    .opinafy-card-has-video {
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .opinafy-card-has-video .opinafy-card-body {
+      padding: 24px;
+    }
+
+    .opinafy-video-container {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #000;
+    }
+
+    .opinafy-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      border-radius: var(--opinafy-radius) var(--opinafy-radius) 0 0;
+    }
+
     /* ── Content ── */
     .opinafy-content {
       font-size: 14px;
