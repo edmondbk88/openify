@@ -40,6 +40,11 @@ export function Hero() {
               <span className="ml-3 h-6 flex-1 rounded-md bg-gray-100" />
             </div>
 
+            {/* Product demo label */}
+            <p className="mb-4 text-center text-xs font-medium uppercase tracking-wider text-indigo-500">
+              Vista previa del widget
+            </p>
+
             {/* Mockup testimonial cards */}
             <div className="grid gap-4 sm:grid-cols-3">
               {[

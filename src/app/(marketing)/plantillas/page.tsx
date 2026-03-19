@@ -108,6 +108,45 @@ export default function PlantillasPage() {
         </div>
       </section>
 
+      {/* Introductory Content */}
+      <section className="bg-white px-4 pb-8 pt-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <div className="prose prose-gray mx-auto max-w-none text-gray-600">
+            <h2 className="text-2xl font-bold text-gray-900">
+              Encuentra la plantilla perfecta para tus testimonios
+            </h2>
+            <p className="mt-4 leading-relaxed">
+              La forma en que presentas los testimonios de tus clientes puede marcar una gran diferencia en tus
+              conversiones. Un testimonio bien diseñado transmite confianza, profesionalidad y autenticidad. Por eso
+              hemos creado una colección de 50 plantillas profesionales organizadas en 8 categorías de diseño, para que
+              encuentres exactamente el estilo que se adapta a la identidad visual de tu marca.
+            </p>
+            <p className="mt-4 leading-relaxed">
+              Nuestras categorías incluyen estilos <strong>minimalistas</strong> para webs limpias y modernas,
+              <strong> corporativos</strong> para transmitir seriedad y profesionalidad, <strong>coloridos</strong> para
+              marcas vibrantes y creativas, y <strong>oscuros</strong> para sitios con diseño dark mode. También
+              encontrarás plantillas con estilo <strong>glassmorphism</strong>, degradados y diseños con bordes
+              redondeados que aportan calidez y cercanía.
+            </p>
+            <p className="mt-4 leading-relaxed">
+              Para elegir el layout adecuado, piensa en cuántos testimonios quieres mostrar simultáneamente.
+              El <strong>carrusel</strong> es ideal si prefieres destacar un testimonio a la vez con transiciones
+              animadas. La <strong>cuadrícula</strong> funciona bien cuando tienes varios testimonios y quieres mostrar
+              entre 3 y 6 a la vez de forma organizada. El <strong>muro</strong> estilo masonry es perfecto para crear
+              una sección de social proof visualmente impactante con testimonios de diferentes longitudes. Los layouts
+              de <strong>lista</strong> y <strong>destacado</strong> ofrecen opciones adicionales para adaptarse a
+              cualquier sección de tu web, ya sea una página de producto, una landing page o tu página de inicio.
+            </p>
+            <p className="mt-4 leading-relaxed">
+              Todas las plantillas son totalmente personalizables: puedes ajustar colores, tipografías, bordes,
+              sombras y espaciado desde el editor visual de Opinafy, sin necesidad de escribir código. Además,
+              cada widget se adapta automáticamente a dispositivos móviles y se carga de forma asíncrona para no
+              afectar el rendimiento de tu sitio.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Gallery */}
       <section className="px-4 pb-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">

@@ -70,6 +70,14 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-gray-900">Contacto</h3>
             <ul className="mt-4 space-y-3" role="list">
               <li>
+                <Link
+                  href="/contacto"
+                  className="text-sm text-gray-500 transition-colors hover:text-indigo-600"
+                >
+                  Formulario de contacto
+                </Link>
+              </li>
+              <li>
                 <a
                   href="mailto:hola@opinafy.com"
                   className="text-sm text-gray-500 transition-colors hover:text-indigo-600"
