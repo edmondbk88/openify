@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { absoluteUrl } from '@/lib/utils'
+import { headers } from 'next/headers'
 import { STRIPE_PRICES } from '@/lib/constants'
 import type { Plan } from '@/types'
 
@@ -50,6 +50,12 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Precio no configurado' }, { status: 500 })
     }
 
+    // Get base URL from request headers (works in both dev and prod)
+    const headersList = await headers()
+    const host = headersList.get('host') || 'opinafy.com'
+    const protocol = host.includes('localhost') ? 'http' : 'https'
+    const baseUrl = `${protocol}://${host}`
+
     const admin = createAdminClient()
     const { data: profile } = await admin
       .from('profiles')
@@ -79,8 +85,8 @@ export async function POST(request: NextRequest) {
       'payment_method_types[0]': 'card',
       'line_items[0][price]': priceId,
       'line_items[0][quantity]': '1',
-      success_url: absoluteUrl('/dashboard?checkout=success'),
-      cancel_url: absoluteUrl('/facturacion?checkout=cancelled'),
+      success_url: `${baseUrl}/dashboard?checkout=success`,
+      cancel_url: `${baseUrl}/facturacion?checkout=cancelled`,
       'metadata[supabase_user_id]': user.id,
     })
 
