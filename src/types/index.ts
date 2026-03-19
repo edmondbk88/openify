@@ -9,6 +9,8 @@ export interface Profile {
   full_name: string | null
   avatar_url: string | null
   username: string | null
+  bio: string | null
+  website_url: string | null
   plan: Plan
   is_admin: boolean
   stripe_customer_id: string | null
@@ -100,4 +102,5 @@ export interface PlanLimits {
   removeBranding: boolean
   layouts: WidgetLayout[]
   seats: number
+  miniSite: boolean
 }

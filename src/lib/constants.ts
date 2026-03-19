@@ -8,6 +8,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     removeBranding: false,
     layouts: ['carousel', 'grid'] as WidgetLayout[],
     seats: 1,
+    miniSite: false,
   },
   pro: {
     projects: 3,
@@ -16,6 +17,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     removeBranding: true,
     layouts: ['carousel', 'grid', 'wall', 'single', 'badge'] as WidgetLayout[],
     seats: 1,
+    miniSite: true,
   },
   business: {
     projects: Infinity,
@@ -24,6 +26,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     removeBranding: true,
     layouts: ['carousel', 'grid', 'wall', 'single', 'badge'] as WidgetLayout[],
     seats: 3,
+    miniSite: true,
   },
 }
 
