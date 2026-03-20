@@ -92,19 +92,22 @@ function TestimonialCard({
 
   return (
     <div
-      className="flex flex-col border shadow-sm transition-shadow hover:shadow-md"
+      className="flex flex-col gap-3 border p-5 shadow-sm transition-shadow hover:shadow-md"
       style={{
         borderRadius: `${config.border_radius}px`,
         backgroundColor: cardBg,
         borderColor,
         fontFamily,
         color: config.text_color,
-        padding: '20px',
-        minHeight: '160px',
       }}
     >
-      {/* Header: avatar + name (same order as real widget) */}
-      <div className="flex items-center gap-3 mb-3">
+      {config.show_rating && (
+        <StarRating rating={testimonial.rating} color={config.primary_color} />
+      )}
+      <p className="text-sm leading-relaxed" style={{ color: config.text_color }}>
+        &ldquo;{testimonial.text}&rdquo;
+      </p>
+      <div className="mt-auto flex items-center gap-3 pt-2">
         {config.show_avatar && (
           <Avatar
             initials={testimonial.initials}
@@ -126,22 +129,11 @@ function TestimonialCard({
               )}
             </div>
           )}
+          {config.show_date && (
+            <p className="text-xs opacity-50">{testimonial.date}</p>
+          )}
         </div>
       </div>
-      {/* Stars */}
-      {config.show_rating && (
-        <div className="mb-2">
-          <StarRating rating={testimonial.rating} color={config.primary_color} />
-        </div>
-      )}
-      {/* Content text */}
-      <p className="text-sm leading-relaxed flex-1" style={{ color: config.text_color }}>
-        &ldquo;{testimonial.text}&rdquo;
-      </p>
-      {/* Date */}
-      {config.show_date && (
-        <p className="text-xs opacity-50 mt-3">{testimonial.date}</p>
-      )}
     </div>
   )
 }

@@ -134,7 +134,11 @@ export function getStyles(config: any): string {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 12px;
+    }
+
+    .opinafy-card-footer {
+      margin-top: auto;
+      padding-top: 12px;
     }
 
     /* ── Avatar ── */

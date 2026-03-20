@@ -261,18 +261,20 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
     <div class="opinafy-card${hasVideo ? ' opinafy-card-has-video' : ''}">
       ${videoHtml}
       <div class="${hasVideo ? 'opinafy-card-body' : ''}">
-        <div class="opinafy-card-header">
-          ${showAvatar ? avatarHtml : ''}
-          <div class="opinafy-author">
-            <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
-            ${showCompany && metaHtml ? `<div class="opinafy-author-meta">${metaHtml}</div>` : ''}
-          </div>
-        </div>
         ${showRating && rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
         <div class="opinafy-content"><p>${escapeHtml(content)}</p></div>
         ${isLong ? `<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer más'">Leer más</button>` : ''}
-        ${showDate && dateStr ? `<div class="opinafy-date">${dateStr}</div>` : ''}
-        ${renderSourceBadge(testimonial)}
+        <div class="opinafy-card-footer">
+          <div class="opinafy-card-header">
+            ${showAvatar ? avatarHtml : ''}
+            <div class="opinafy-author">
+              <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
+              ${showCompany && metaHtml ? `<div class="opinafy-author-meta">${metaHtml}</div>` : ''}
+            </div>
+          </div>
+          ${showDate && dateStr ? `<div class="opinafy-date">${dateStr}</div>` : ''}
+          ${renderSourceBadge(testimonial)}
+        </div>
       </div>
     </div>
   `;
