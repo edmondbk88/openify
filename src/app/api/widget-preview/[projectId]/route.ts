@@ -1,30 +1,76 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 
 /**
- * Widget Preview API Endpoint
+ * Widget Preview - serves a complete HTML page with the widget rendered
+ * using the REAL widget data from the API, with config overrides applied server-side.
  *
- * Returns a full HTML page that loads the real widget.js script.
- * Used by the dashboard widget configurator to show an accurate preview
- * that matches the actual embedded widget (Shadow DOM + vanilla CSS).
- *
- * Query params:
- * - config: JSON-encoded widget config overrides (for instant preview without saving)
- *
- * When config overrides are provided, the page intercepts the widget's fetch
- * call to /api/widget/[projectId] and merges the overrides into the response.
+ * This avoids fetch interception issues by injecting the data directly.
  */
 export async function GET(
   request: NextRequest,
   { params }: { params: Promise<{ projectId: string }> }
 ) {
   const { projectId } = await params
-  const configOverrides = request.nextUrl.searchParams.get('config') || ''
+  const configOverridesStr = request.nextUrl.searchParams.get('config') || '{}'
 
-  // Determine base URL for the widget script and API calls
+  let configOverrides: Record<string, unknown> = {}
+  try {
+    configOverrides = JSON.parse(configOverridesStr)
+  } catch {
+    configOverrides = {}
+  }
+
+  // Fetch real widget data server-side
+  const supabase = createAdminClient()
+
+  const { data: project } = await supabase
+    .from('projects')
+    .select('name, logo_url, brand_color, user_id, is_active')
+    .eq('id', projectId)
+    .single()
+
+  if (!project) {
+    return new NextResponse('<html><body><p>Proyecto no encontrado</p></body></html>', {
+      headers: { 'Content-Type': 'text/html' },
+    })
+  }
+
+  const { data: dbConfig } = await supabase
+    .from('widget_configs')
+    .select('*')
+    .eq('project_id', projectId)
+    .single()
+
+  // Merge DB config with overrides (overrides take priority)
+  const mergedConfig = { ...(dbConfig || {}), ...configOverrides }
+
+  // Fetch approved testimonials
+  const { data: testimonials } = await supabase
+    .from('testimonials')
+    .select('id, author_name, author_company, author_role, author_avatar_url, content, rating, video_url, is_company_verified, source, source_platform, source_url, created_at')
+    .eq('project_id', projectId)
+    .eq('status', 'approved')
+    .order('is_featured', { ascending: false })
+    .order('created_at', { ascending: false })
+    .limit(mergedConfig.max_testimonials || 10)
+
+  const widgetData = {
+    project: {
+      name: project.name,
+      logo_url: project.logo_url,
+      brand_color: project.brand_color,
+    },
+    testimonials: testimonials || [],
+    config: mergedConfig,
+  }
+
+  // Determine base URL for widget.js
   const proto = request.headers.get('x-forwarded-proto') || 'https'
   const host = request.headers.get('host') || 'opinafy.com'
   const baseUrl = `${proto}://${host}`
 
+  // Build HTML that injects data directly instead of fetching
   const html = `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -41,37 +87,18 @@ export async function GET(
   <div id="opinafy-widget" data-project="${projectId}"></div>
 
   <script>
-  // Intercept fetch to merge config overrides into the widget API response
+  // Override fetch so widget.js gets pre-loaded data instead of making an API call
   (function() {
-    var configOverrides = ${configOverrides ? JSON.stringify(configOverrides) : 'null'};
-    if (!configOverrides) return;
-
-    var parsed;
-    try { parsed = JSON.parse(configOverrides); } catch(e) { return; }
-
+    var widgetData = ${JSON.stringify(widgetData)};
     var originalFetch = window.fetch;
-    window.fetch = function(url, opts) {
+    window.fetch = function(url) {
       var urlStr = typeof url === 'string' ? url : url.toString();
-
-      // Only intercept the widget data API call
-      if (urlStr.includes('/api/widget/') && opts && opts.method !== 'POST') {
-        return originalFetch.apply(this, arguments).then(function(res) {
-          if (!res.ok) return res;
-          return res.json().then(function(data) {
-            // Merge config overrides
-            if (data.config) {
-              Object.assign(data.config, parsed);
-            } else {
-              data.config = parsed;
-            }
-            return new Response(JSON.stringify(data), {
-              status: 200,
-              headers: { 'Content-Type': 'application/json' }
-            });
-          });
-        });
+      if (urlStr.indexOf('/api/widget/') !== -1) {
+        return Promise.resolve(new Response(JSON.stringify(widgetData), {
+          status: 200,
+          headers: { 'Content-Type': 'application/json' }
+        }));
       }
-
       return originalFetch.apply(this, arguments);
     };
   })();
@@ -80,24 +107,19 @@ export async function GET(
   <script src="${baseUrl}/widget.js" defer></script>
 
   <script>
-  // Notify parent frame when the widget finishes loading (for auto-resize)
+  // Auto-resize: notify parent frame of content height
   (function() {
+    function sendHeight() {
+      var h = document.documentElement.scrollHeight;
+      window.parent.postMessage({ type: 'opinafy-preview-height', height: h }, '*');
+    }
     var observer = new MutationObserver(function() {
-      var widget = document.getElementById('opinafy-widget');
-      if (widget && widget.shadowRoot) {
-        // Wait a tick for the shadow DOM content to render
-        setTimeout(function() {
-          var height = document.documentElement.scrollHeight;
-          window.parent.postMessage({ type: 'opinafy-preview-height', height: height }, '*');
-        }, 100);
-        // Keep observing for content changes (e.g. carousel init)
-        setTimeout(function() {
-          var height = document.documentElement.scrollHeight;
-          window.parent.postMessage({ type: 'opinafy-preview-height', height: height }, '*');
-        }, 500);
-      }
+      setTimeout(sendHeight, 100);
+      setTimeout(sendHeight, 500);
     });
-    observer.observe(document.body, { childList: true, subtree: true });
+    if (document.body) {
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
   })();
   </script>
 </body>
