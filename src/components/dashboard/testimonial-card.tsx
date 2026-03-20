@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { cn, formatDate, truncate, getInitials } from '@/lib/utils'
+import { PLATFORMS } from '@/lib/platform-logos'
 import type { Testimonial, TestimonialStatus } from '@/types'
 
 interface TestimonialCardProps {
@@ -120,8 +121,25 @@ export default function TestimonialCard({
         {truncate(testimonial.content, 200)}
       </p>
 
-      {/* Date */}
-      <p className="mt-3 text-xs text-gray-400">{formatDate(testimonial.created_at)}</p>
+      {/* Date & Source */}
+      <div className="mt-3 flex items-center gap-2">
+        <p className="text-xs text-gray-400">{formatDate(testimonial.created_at)}</p>
+        {testimonial.source && testimonial.source !== 'form' && (
+          <span
+            className="inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium"
+            style={{
+              backgroundColor: (PLATFORMS[testimonial.source]?.color || '#6366f1') + '18',
+              color: PLATFORMS[testimonial.source]?.color || '#6366f1',
+            }}
+          >
+            <span
+              className="inline-block h-3 w-3"
+              dangerouslySetInnerHTML={{ __html: PLATFORMS[testimonial.source]?.icon || '' }}
+            />
+            {PLATFORMS[testimonial.source]?.name || testimonial.source}
+          </span>
+        )}
+      </div>
 
       {/* Actions */}
       <div className="mt-4 flex items-center gap-2 border-t border-gray-100 pt-4">

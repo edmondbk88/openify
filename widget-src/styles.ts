@@ -304,6 +304,27 @@ export function getStyles(config: any): string {
       color: var(--opinafy-text-secondary);
     }
 
+    /* ── Source Badge ── */
+    .opinafy-source-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      margin-top: 8px;
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--badge-color, var(--opinafy-text-secondary));
+      background: color-mix(in srgb, var(--badge-color, #6366f1) 10%, transparent);
+    }
+
+    .opinafy-source-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
     /* ── Branding ── */
     .opinafy-branding {
       text-align: center;

@@ -13,7 +13,20 @@ interface Testimonial {
   created_at: string;
   is_company_verified?: boolean;
   video_url?: string;
+  source?: string;
+  source_platform?: string;
+  source_url?: string;
 }
+
+const SOURCE_COLORS: Record<string, { name: string; color: string }> = {
+  google: { name: 'Google', color: '#4285F4' },
+  tripadvisor: { name: 'TripAdvisor', color: '#00AF87' },
+  trustpilot: { name: 'Trustpilot', color: '#00B67A' },
+  facebook: { name: 'Facebook', color: '#1877F2' },
+  yelp: { name: 'Yelp', color: '#D32323' },
+  capterra: { name: 'Capterra', color: '#FF9D28' },
+  g2: { name: 'G2', color: '#FF492C' },
+};
 
 interface WidgetConfig {
   layout: 'carousel' | 'grid' | 'wall' | 'single' | 'badge';
@@ -258,9 +271,21 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
         <div class="opinafy-content"><p>${escapeHtml(content)}</p></div>
         ${isLong ? `<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer más'">Leer más</button>` : ''}
         ${showDate && dateStr ? `<div class="opinafy-date">${dateStr}</div>` : ''}
+        ${renderSourceBadge(testimonial)}
       </div>
     </div>
   `;
+}
+
+// ── Source Badge ──
+
+function renderSourceBadge(testimonial: Testimonial): string {
+  const platform = testimonial.source_platform || testimonial.source;
+  if (!platform || platform === 'form') return '';
+  const info = SOURCE_COLORS[platform];
+  if (!info) return '';
+  const color = info.color;
+  return `<div class="opinafy-source-badge" style="--badge-color: ${color}"><span class="opinafy-source-dot" style="background: ${color}"></span>${escapeHtml(info.name)}</div>`;
 }
 
 // ── Star SVGs ──
