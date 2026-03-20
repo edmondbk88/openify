@@ -211,7 +211,10 @@ export default function ImportarPage() {
         </Link>
       </div>
 
-      <h1 className="text-2xl font-bold text-gray-900">Importar testimonios</h1>
+      <h1 className="text-2xl font-bold text-gray-900">
+        Importar testimonios
+        <span className="ml-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold uppercase text-amber-700">Beta</span>
+      </h1>
       <p className="mt-1 text-sm text-gray-500">
         Importa resenas y testimonios desde plataformas externas para mostrarlos en tu widget.
       </p>

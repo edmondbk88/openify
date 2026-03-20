@@ -14,13 +14,13 @@ interface WidgetConfiguratorProps {
   onChange: (config: EditableConfig) => void
 }
 
-const layoutOptions: { value: WidgetLayout; label: string }[] = [
+const layoutOptions: { value: WidgetLayout; label: string; beta?: boolean }[] = [
   { value: 'carousel', label: 'Carrusel' },
   { value: 'grid', label: 'Cuadrícula' },
   { value: 'wall', label: 'Muro' },
   { value: 'single', label: 'Individual' },
   { value: 'badge', label: 'Insignia' },
-  { value: 'popup', label: 'Popup FOMO' },
+  { value: 'popup', label: 'Popup FOMO', beta: true },
 ]
 
 const themeOptions: { value: WidgetTheme; label: string }[] = [
@@ -179,6 +179,9 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
               )}
             >
               {opt.label}
+              {opt.beta && (
+                <span className="ml-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold uppercase text-amber-700">Beta</span>
+              )}
             </button>
           ))}
         </div>

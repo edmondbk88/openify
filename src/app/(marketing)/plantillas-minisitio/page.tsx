@@ -1,44 +1,44 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { widgetTemplates, TEMPLATE_CATEGORIES } from '@/lib/widget-templates'
-import { PlantillasGallery } from './gallery'
+import { miniSiteTemplates, MINISITE_CATEGORIES } from '@/lib/minisite-templates'
 import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
+import { MiniSiteGallery } from './gallery'
 
 export const metadata: Metadata = {
-  title: 'Plantillas de Testimonios | 60 Diseños Listos para Usar - Opinafy',
+  title: 'Plantillas de Mini Sitio por Profesion | 30 Disenos - Opinafy',
   description:
-    'Explora 60 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y más. Personaliza tus testimonios con Opinafy.',
+    'Explora 30 plantillas de mini sitio de testimonios organizadas por profesion. Salud, legal, creativos, educacion y mas. Crea tu pagina de testimonios profesional con Opinafy.',
   keywords: [
-    'plantillas testimonios',
-    'templates widget testimonios',
-    'disenos testimonios web',
-    'widgets testimonios plantillas',
-    'testimonios diseno personalizado',
-    'plantillas resenas clientes',
-    'widget opiniones plantilla',
-    'plantilla carrusel testimonios',
-    'testimonios grid plantilla',
-    'muro testimonios diseno',
+    'plantilla pagina testimonios',
+    'mini sitio profesional testimonios',
+    'pagina testimonios por profesion',
+    'plantilla mini sitio testimonios',
+    'pagina publica testimonios',
+    'testimonios verificados pagina',
+    'mini sitio resenas clientes',
+    'plantilla pagina opiniones',
+    'pagina testimonios profesional',
+    'sitio web testimonios',
   ],
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: 'https://opinafy.com/plantillas',
+    url: 'https://opinafy.com/plantillas-minisitio',
     siteName: 'Opinafy',
-    title: '60 Plantillas de Testimonios Listas para Usar - Opinafy',
+    title: '30 Plantillas de Mini Sitio de Testimonios por Profesion - Opinafy',
     description:
-      'Descubre 60 diseños profesionales para mostrar testimonios en tu web. Minimalistas, corporativos, coloridos, oscuros y más.',
+      'Descubre 30 disenos profesionales para tu pagina publica de testimonios. Organizadas por profesion: salud, legal, creativos, educacion y mas.',
     images: [
       {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'Plantillas de Testimonios Opinafy',
+        alt: 'Plantillas de Mini Sitio Opinafy',
       },
     ],
   },
   alternates: {
-    canonical: 'https://opinafy.com/plantillas',
+    canonical: 'https://opinafy.com/plantillas-minisitio',
   },
   robots: {
     index: true,
@@ -46,17 +46,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default function PlantillasPage() {
+export default function PlantillasMinisitioPage() {
   const collectionJsonLd = collectionPageSchema({
-    name: '60 Plantillas de Testimonios - Opinafy',
-    url: 'https://opinafy.com/plantillas',
+    name: '30 Plantillas de Mini Sitio de Testimonios - Opinafy',
+    url: 'https://opinafy.com/plantillas-minisitio',
     description:
-      'Explora 60 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y mas.',
+      'Explora 30 plantillas de mini sitio de testimonios organizadas por profesion. Crea tu pagina de testimonios profesional.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
     { name: 'Inicio', url: 'https://opinafy.com' },
-    { name: 'Plantillas', url: 'https://opinafy.com/plantillas' },
+    { name: 'Plantillas Mini Sitio', url: 'https://opinafy.com/plantillas-minisitio' },
   ])
 
   return (
@@ -74,24 +74,24 @@ export default function PlantillasPage() {
       <section className="bg-gradient-to-b from-indigo-50 via-white to-white px-4 pb-12 pt-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <span className="inline-block rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-semibold text-indigo-700">
-            Galeria de Plantillas
+            Galeria de Mini Sitios
           </span>
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-            60 Plantillas de Testimonios{' '}
+            Plantillas de Mini Sitio{' '}
             <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Listas para Usar
+              por Profesion
             </span>
           </h1>
           <p className="mt-6 text-lg text-gray-600 sm:text-xl">
-            Elige entre 60 disenos profesionales para mostrar los testimonios de tus clientes.
-            Cada plantilla es totalmente personalizable y se adapta a cualquier sitio web.
+            Elige entre 30 disenos profesionales para tu pagina publica de testimonios.
+            Cada plantilla esta pensada para una profesion o sector especifico.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm text-gray-500">
             <span className="flex items-center gap-1.5">
               <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              8 categorias de diseno
+              9 categorias profesionales
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -114,35 +114,24 @@ export default function PlantillasPage() {
         <div className="mx-auto max-w-4xl">
           <div className="prose prose-gray mx-auto max-w-none text-gray-600">
             <h2 className="text-2xl font-bold text-gray-900">
-              Encuentra la plantilla perfecta para tus testimonios
+              Tu pagina de testimonios profesional en minutos
             </h2>
             <p className="mt-4 leading-relaxed">
-              La forma en que presentas los testimonios de tus clientes puede marcar una gran diferencia en tus
-              conversiones. Un testimonio bien diseñado transmite confianza, profesionalidad y autenticidad. Por eso
-              hemos creado una colección de 60 plantillas profesionales organizadas en 8 categorías de diseño, para que
-              encuentres exactamente el estilo que se adapta a la identidad visual de tu marca.
+              Un mini sitio de testimonios es tu pagina publica donde tus clientes potenciales pueden ver
+              todos tus testimonios verificados en un solo lugar. Es perfecto para compartir en redes sociales,
+              email, tarjetas de visita y cualquier canal donde quieras generar confianza.
             </p>
             <p className="mt-4 leading-relaxed">
-              Nuestras categorías incluyen estilos <strong>minimalistas</strong> para webs limpias y modernas,
-              <strong> corporativos</strong> para transmitir seriedad y profesionalidad, <strong>coloridos</strong> para
-              marcas vibrantes y creativas, y <strong>oscuros</strong> para sitios con diseño dark mode. También
-              encontrarás plantillas con estilo <strong>glassmorphism</strong>, degradados y diseños con bordes
-              redondeados que aportan calidez y cercanía.
+              Hemos creado 30 plantillas organizadas por <strong>profesion y sector</strong>, para que encuentres
+              exactamente el estilo que transmite la identidad de tu negocio. Desde <strong>medicos y dentistas</strong> hasta
+              <strong> abogados y contables</strong>, pasando por <strong>fotografos, disenadores, coaches</strong> y
+              muchos mas.
             </p>
             <p className="mt-4 leading-relaxed">
-              Para elegir el layout adecuado, piensa en cuántos testimonios quieres mostrar simultáneamente.
-              El <strong>carrusel</strong> es ideal si prefieres destacar un testimonio a la vez con transiciones
-              animadas. La <strong>cuadrícula</strong> funciona bien cuando tienes varios testimonios y quieres mostrar
-              entre 3 y 6 a la vez de forma organizada. El <strong>muro</strong> estilo masonry es perfecto para crear
-              una sección de social proof visualmente impactante con testimonios de diferentes longitudes. Los layouts
-              de <strong>lista</strong> y <strong>destacado</strong> ofrecen opciones adicionales para adaptarse a
-              cualquier sección de tu web, ya sea una página de producto, una landing page o tu página de inicio.
-            </p>
-            <p className="mt-4 leading-relaxed">
-              Todas las plantillas son totalmente personalizables: puedes ajustar colores, tipografías, bordes,
-              sombras y espaciado desde el editor visual de Opinafy, sin necesidad de escribir código. Además,
-              cada widget se adapta automáticamente a dispositivos móviles y se carga de forma asíncrona para no
-              afectar el rendimiento de tu sitio.
+              Cada plantilla incluye configuraciones optimizadas de colores, tipografia, estilo de tarjetas,
+              layout y cabecera. Puedes personalizar todos los aspectos desde tu panel de Opinafy sin escribir
+              una sola linea de codigo. Ademas, tu mini sitio se adapta automaticamente a dispositivos moviles
+              y se carga de forma rapida.
             </p>
           </div>
         </div>
@@ -151,9 +140,9 @@ export default function PlantillasPage() {
       {/* Gallery */}
       <section className="px-4 pb-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <PlantillasGallery
-            templates={widgetTemplates}
-            categories={[...TEMPLATE_CATEGORIES]}
+          <MiniSiteGallery
+            templates={miniSiteTemplates}
+            categories={[...MINISITE_CATEGORIES]}
           />
         </div>
       </section>
@@ -162,13 +151,13 @@ export default function PlantillasPage() {
       <section className="border-t border-gray-100 bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-lg font-medium text-gray-700">
-            Buscas plantillas para tu mini sitio?
+            Buscas plantillas para widgets?
           </p>
           <Link
-            href="/plantillas-minisitio"
+            href="/plantillas"
             className="mt-3 inline-flex items-center gap-2 text-indigo-600 font-semibold hover:text-indigo-700 transition-colors"
           >
-            Ver plantillas de mini sitio
+            Ver plantillas de widget
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
@@ -183,7 +172,7 @@ export default function PlantillasPage() {
             Te gusta alguna plantilla?
           </h2>
           <p className="mt-4 text-lg text-gray-600">
-            Registrate gratis y empieza a usar cualquiera de estas plantillas en minutos.
+            Registrate gratis y crea tu mini sitio de testimonios en minutos.
             Sin tarjeta de credito, sin compromiso.
           </p>
           <a

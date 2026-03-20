@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { blogArticles } from '@/lib/blog-data'
 import { widgetTemplates } from '@/lib/widget-templates'
+import { miniSiteTemplates } from '@/lib/minisite-templates'
 import { industries } from '@/lib/industry-data'
 import { createAdminClient } from '@/lib/supabase/admin'
 
@@ -102,6 +103,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
+  const miniSiteTemplateIndexPage: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/plantillas-minisitio`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    },
+  ]
+
+  const miniSiteTemplatePages: MetadataRoute.Sitemap = miniSiteTemplates.map((template) => ({
+    url: `${baseUrl}/plantillas-minisitio/${template.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
   const industryIndexPage: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/testimonios-para`,
@@ -133,5 +150,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  return [...staticPages, ...blogPages, ...templatePages, ...industryIndexPage, ...industryPages, ...profilePages]
+  return [...staticPages, ...blogPages, ...templatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...profilePages]
 }

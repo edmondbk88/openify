@@ -5,6 +5,7 @@ const productLinks = [
   { label: 'Características', href: '/#caracteristicas' },
   { label: 'Precios', href: '/precios' },
   { label: 'Plantillas', href: '/plantillas' },
+  { label: 'Plantillas Mini Sitio', href: '/plantillas-minisitio' },
   { label: 'Blog', href: '/blog' },
   { label: 'Comparativas', href: '/comparar' },
   { label: 'Industrias', href: '/testimonios-para' },

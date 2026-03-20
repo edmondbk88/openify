@@ -299,7 +299,10 @@ export default function MiSitioPage() {
 
       {/* Template Selector */}
       <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6">
-        <h2 className="text-lg font-semibold text-gray-900">Elige una plantilla</h2>
+        <h2 className="text-lg font-semibold text-gray-900">
+          Elige una plantilla
+          <span className="ml-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold uppercase text-amber-700">Beta</span>
+        </h2>
         <p className="mt-1 text-sm text-gray-500">
           Selecciona un diseno predefinido para tu pagina de testimonios.
         </p>

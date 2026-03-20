@@ -148,6 +148,7 @@ export default function TestimonialCard({
                testimonial.sentiment_label === 'negativo' ? 'Negativo' :
                testimonial.sentiment_label === 'muy_negativo' ? 'Muy negativo' : ''}
             </span>
+            <span className="ml-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold uppercase text-amber-700">Beta</span>
           </span>
           {testimonial.ai_summary && (
             <p className="text-xs text-gray-400 italic">{testimonial.ai_summary}</p>
