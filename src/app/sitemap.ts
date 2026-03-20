@@ -2,8 +2,9 @@ import type { MetadataRoute } from 'next'
 import { blogArticles } from '@/lib/blog-data'
 import { widgetTemplates } from '@/lib/widget-templates'
 import { industries } from '@/lib/industry-data'
+import { createAdminClient } from '@/lib/supabase/admin'
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://opinafy.com'
 
   const staticPages: MetadataRoute.Sitemap = [
@@ -117,5 +118,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }))
 
-  return [...staticPages, ...blogPages, ...templatePages, ...industryIndexPage, ...industryPages]
+  // Dynamic profile pages (Pro/Business users with mini sites)
+  const admin = createAdminClient()
+  const { data: proProfiles } = await admin
+    .from('profiles')
+    .select('username, updated_at')
+    .neq('plan', 'free')
+    .not('username', 'is', null)
+
+  const profilePages: MetadataRoute.Sitemap = (proProfiles || []).map((p) => ({
+    url: `${baseUrl}/s/${p.username}`,
+    lastModified: new Date(p.updated_at),
+    changeFrequency: 'weekly' as const,
+    priority: 0.5,
+  }))
+
+  return [...staticPages, ...blogPages, ...templatePages, ...industryIndexPage, ...industryPages, ...profilePages]
 }

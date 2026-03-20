@@ -8,6 +8,9 @@ import { PLAN_LIMITS } from '@/lib/constants'
 import { formatDate, getInitials } from '@/lib/utils'
 import type { Plan, Profile, Project, Testimonial } from '@/types'
 
+// Force dynamic rendering - user config changes must be reflected immediately
+export const dynamic = 'force-dynamic'
+
 interface PageProps {
   params: Promise<{ username: string }>
 }
@@ -89,7 +92,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : `Testimonios verificados de ${profile.full_name || username} en Opinafy.`
 
   return {
-    title: `${profile.full_name || username} - Testimonios verificados | Opinafy`,
+    title: { absolute: `${profile.full_name || username} - Testimonios verificados | Opinafy` },
     description,
     robots: { index: true, follow: true },
     alternates: {
@@ -101,6 +104,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       url: `https://opinafy.com/s/${username}`,
       siteName: 'Opinafy',
       type: 'profile',
+      locale: 'es_ES',
+      images: [{ url: '/og.png', width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${profile.full_name || username} - Testimonios verificados`,
+      description,
+      images: ['/og.png'],
     },
   }
 }
@@ -318,11 +329,43 @@ export default async function MiniSitePage({ params }: PageProps) {
 
   return (
     <div className="min-h-screen" style={{ backgroundColor: bgColor, color: textColor, fontFamily }}>
-      {/* JSON-LD */}
+      {/* JSON-LD: Person + AggregateRating */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* JSON-LD: BreadcrumbList */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Inicio', item: 'https://opinafy.com' },
+            { '@type': 'ListItem', position: 2, name: 'Perfiles', item: 'https://opinafy.com/s' },
+            { '@type': 'ListItem', position: 3, name: profile.full_name || username, item: `https://opinafy.com/s/${username}` },
+          ],
+        }) }}
+      />
+
+      {/* JSON-LD: Individual Review schemas */}
+      {testimonials.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(
+            testimonials.map((t) => ({
+              '@context': 'https://schema.org',
+              '@type': 'Review',
+              author: { '@type': 'Person', name: t.author_name },
+              reviewRating: { '@type': 'Rating', ratingValue: t.rating, bestRating: 5 },
+              reviewBody: t.content,
+              datePublished: t.created_at.split('T')[0],
+              itemReviewed: { '@type': 'Person', name: profile.full_name || username },
+            }))
+          ) }}
+        />
+      )}
 
       {/* Header */}
       <header style={headerBorderStyle}>

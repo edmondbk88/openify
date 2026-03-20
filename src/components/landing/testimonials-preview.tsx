@@ -212,6 +212,10 @@ export function TestimonialsPreview() {
           </div>
         </div>
 
+        <p className="mt-8 text-center text-xs italic text-gray-400">
+          * Los testimonios mostrados son ejemplos demostrativos de cómo se verían en tu web.
+        </p>
+
         <div className="mt-12 text-center">
           <Link
             href="/plantillas"
