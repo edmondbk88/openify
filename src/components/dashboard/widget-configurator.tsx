@@ -53,6 +53,7 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
       show_avatar: template.config.show_avatar,
       show_company: template.config.show_company,
       show_branding: config.show_branding,
+      font_style: template.config.font_style,
     })
   }
 
