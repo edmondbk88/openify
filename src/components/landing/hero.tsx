@@ -20,12 +20,12 @@ export function Hero() {
             >
               Empezar Gratis
             </Link>
-            <a
-              href="#como-funciona"
+            <Link
+              href="/plantillas"
               className="inline-flex h-12 w-full items-center justify-center rounded-lg border border-gray-300 bg-white px-8 text-base font-semibold text-gray-700 transition-colors hover:bg-gray-50 sm:w-auto"
             >
-              Ver Demo
-            </a>
+              Ver Plantillas
+            </Link>
           </div>
         </div>
 

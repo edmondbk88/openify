@@ -8,6 +8,30 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: ['/dashboard', '/proyectos', '/configuracion', '/facturacion', '/forgot-password', '/login', '/registro'],
       },
+      {
+        userAgent: 'GPTBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Google-Extended',
+        allow: '/',
+      },
+      {
+        userAgent: 'ChatGPT-User',
+        allow: '/',
+      },
+      {
+        userAgent: 'ClaudeBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'PerplexityBot',
+        allow: '/',
+      },
+      {
+        userAgent: 'Bytespider',
+        allow: '/',
+      },
     ],
     sitemap: 'https://opinafy.com/sitemap.xml',
   }

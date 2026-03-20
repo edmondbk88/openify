@@ -6,28 +6,50 @@ import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 const ARTICLES_PER_PAGE = 12
 
-export const metadata: Metadata = {
-  title: 'Blog - Opinafy | Consejos sobre Testimonios y Prueba Social',
-  description:
-    'Artículos, guías y estrategias sobre testimonios de clientes, prueba social y cómo aumentar las conversiones de tu negocio. Contenido en español por el equipo de Opinafy.',
-  keywords: [
-    'blog testimonios',
-    'guía prueba social',
-    'consejos reseñas clientes',
-    'marketing testimonios',
-    'estrategias conversión',
-  ],
-  alternates: {
-    canonical: 'https://opinafy.com/blog',
-  },
-  openGraph: {
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ page?: string }>
+}): Promise<Metadata> {
+  const params = await searchParams
+  const page = Math.max(1, parseInt(params.page || '1', 10) || 1)
+  const totalPages = Math.ceil(blogArticles.length / ARTICLES_PER_PAGE)
+  const clampedPage = Math.min(page, totalPages)
+
+  const canonical = clampedPage === 1 ? '/blog' : `/blog?page=${clampedPage}`
+
+  const linkTags: Record<string, string> = {}
+  if (clampedPage > 1) {
+    linkTags.prev = clampedPage === 2 ? 'https://opinafy.com/blog' : `https://opinafy.com/blog?page=${clampedPage - 1}`
+  }
+  if (clampedPage < totalPages) {
+    linkTags.next = `https://opinafy.com/blog?page=${clampedPage + 1}`
+  }
+
+  return {
     title: 'Blog - Opinafy | Consejos sobre Testimonios y Prueba Social',
-    url: 'https://opinafy.com/blog',
-    type: 'website',
-    siteName: 'Opinafy',
-    locale: 'es_ES',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
-  },
+    description:
+      'Artículos, guías y estrategias sobre testimonios de clientes, prueba social y cómo aumentar las conversiones de tu negocio. Contenido en español por el equipo de Opinafy.',
+    keywords: [
+      'blog testimonios',
+      'guía prueba social',
+      'consejos reseñas clientes',
+      'marketing testimonios',
+      'estrategias conversión',
+    ],
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title: 'Blog - Opinafy | Consejos sobre Testimonios y Prueba Social',
+      url: 'https://opinafy.com/blog',
+      type: 'website',
+      siteName: 'Opinafy',
+      locale: 'es_ES',
+      images: [{ url: '/og.png', width: 1200, height: 630 }],
+    },
+    other: linkTags,
+  }
 }
 
 const categoryColors: Record<string, string> = {
@@ -66,6 +88,17 @@ export default async function BlogPage({
     { name: 'Blog', url: 'https://opinafy.com/blog' },
   ])
 
+  const itemListJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    itemListElement: paginatedArticles.map((article, index) => ({
+      '@type': 'ListItem',
+      position: start + index + 1,
+      url: `https://opinafy.com/blog/${article.slug}`,
+      name: article.title,
+    })),
+  }
+
   return (
     <>
       <script
@@ -75,6 +108,10 @@ export default async function BlogPage({
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
       />
 
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">

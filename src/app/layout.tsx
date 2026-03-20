@@ -75,6 +75,9 @@ export const metadata: Metadata = {
     icon: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
+  other: {
+    'theme-color': '#4f46e5',
+  },
   verification: {
     google: 'gGUwTZCtjWm42xaPy0yhzhmxEP0tfCPjLD4e0WBMNnw',
   },

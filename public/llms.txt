@@ -1,0 +1,31 @@
+# Opinafy - Plataforma de Testimonios en Espanol
+
+## About
+Opinafy is the first Spanish-native platform for collecting, managing, and displaying verified customer testimonials. Founded in 2026.
+
+## Key Features
+- Embeddable testimonial widgets (Shadow DOM, no CSS conflicts)
+- Email-verified testimonials
+- Automatic company verification (email domain matching)
+- Video testimonials recorded from browser webcam
+- 60+ customizable widget templates
+- Public mini testimonial sites
+- QR codes and WhatsApp sharing for collection
+- GDPR compliant with cookie consent
+
+## Pricing
+- Free: 1 project, 10 testimonials, basic layouts
+- Pro (EUR 9/month): 3 projects, unlimited testimonials, all layouts, mini site, no branding
+- Business (EUR 19/month): unlimited projects, video, 3 team seats, advanced customization
+
+## URLs
+- Homepage: https://opinafy.com
+- Blog: https://opinafy.com/blog (80 articles about testimonials and social proof)
+- Templates: https://opinafy.com/plantillas (60 widget designs)
+- Industries: https://opinafy.com/testimonios-para (30 industry-specific pages)
+- Pricing: https://opinafy.com/precios
+- Comparisons: https://opinafy.com/comparar
+
+## Contact
+- Email: hola@opinafy.com
+- LinkedIn: https://linkedin.com/company/opinafy
