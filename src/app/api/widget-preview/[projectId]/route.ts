@@ -84,7 +84,8 @@ export async function GET(
   </style>
 </head>
 <body>
-  <div id="opinafy-widget" data-project="${projectId}" data-preloaded='${JSON.stringify(widgetData).replace(/'/g, '&#39;')}'></div>
+  <script>window.__OPINAFY_PRELOAD__ = ${JSON.stringify(widgetData)};</script>
+  <div id="opinafy-widget" data-project="${projectId}"></div>
 
   <script src="${baseUrl}/widget.js" defer></script>
 

@@ -249,15 +249,13 @@ import { renderWidget, WidgetData } from './templates';
     `;
 
     try {
-      // Check for pre-loaded data (used in preview mode)
+      // Check for pre-loaded data via global variable (used in preview mode)
       let data: WidgetData;
-      const preloadedData = el.getAttribute('data-preloaded');
-      if (preloadedData) {
-        try {
-          data = JSON.parse(preloadedData);
-        } catch {
-          data = await fetchWidgetData(projectId);
-        }
+      const w = window as unknown as Record<string, unknown>;
+      if (w.__OPINAFY_PRELOAD__ && typeof w.__OPINAFY_PRELOAD__ === 'object') {
+        data = w.__OPINAFY_PRELOAD__ as WidgetData;
+        // Clear it so it's only used once
+        delete w.__OPINAFY_PRELOAD__;
       } else {
         data = await fetchWidgetData(projectId);
       }
