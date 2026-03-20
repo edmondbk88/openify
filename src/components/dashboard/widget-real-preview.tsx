@@ -81,7 +81,6 @@ export default function WidgetRealPreview({ projectId, config }: WidgetRealPrevi
             transform: `scale(${scale})`,
             transformOrigin: 'top left',
           }}
-          sandbox="allow-scripts allow-same-origin"
         />
       </div>
     </div>
