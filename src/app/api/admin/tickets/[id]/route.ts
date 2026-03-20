@@ -4,7 +4,7 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { Resend } from 'resend'
 import { ticketReplyEmail } from '@/lib/email-templates'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend() { return new Resend(process.env.RESEND_API_KEY) }
 
 async function verifyAdmin() {
   const supabase = await createClient()
@@ -115,7 +115,7 @@ export async function POST(
   const profile = ticket.profiles as { email: string; full_name: string } | null
   if (profile?.email) {
     try {
-      await resend.emails.send({
+      await getResend().emails.send({
         from: 'Opinafy <hola@opinafy.com>',
         to: profile.email,
         replyTo: 'hola@opinafy.com',

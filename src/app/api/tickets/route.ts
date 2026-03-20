@@ -4,7 +4,9 @@ import { createAdminClient } from '@/lib/supabase/admin'
 import { Resend } from 'resend'
 import { ticketCreatedEmail } from '@/lib/email-templates'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend() {
+  return new Resend(process.env.RESEND_API_KEY)
+}
 
 export async function GET() {
   try {
@@ -122,7 +124,7 @@ export async function POST(request: NextRequest) {
 
     // Send email notification to admin
     try {
-      await resend.emails.send({
+      await getResend().emails.send({
         from: 'Opinafy <hola@opinafy.com>',
         to: 'hola@opinafy.com',
         replyTo: 'hola@opinafy.com',

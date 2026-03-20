@@ -8,7 +8,7 @@ import { Resend } from 'resend'
 import { getVerificationLevel } from '@/lib/utils'
 import { testimonialVerificationEmail } from '@/lib/email-templates'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+function getResend() { return new Resend(process.env.RESEND_API_KEY) }
 
 export async function GET(request: NextRequest) {
   try {
@@ -163,7 +163,7 @@ export async function POST(request: NextRequest) {
       const verificationUrl = `https://opinafy.com/api/testimonials/verify?token=${testimonial.verification_token}&id=${testimonial.id}`
 
       try {
-        await resend.emails.send({
+        await getResend().emails.send({
           from: 'Opinafy <hola@opinafy.com>',
           to: parsed.data.author_email!,
           replyTo: 'hola@opinafy.com',
