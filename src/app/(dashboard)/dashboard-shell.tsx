@@ -3,10 +3,9 @@
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 import Sidebar from '@/components/dashboard/sidebar'
-import type { Profile } from '@/types'
 
 interface DashboardShellProps {
-  user: Pick<Profile, 'full_name' | 'email' | 'avatar_url'>
+  user: { full_name: string | null; email: string; avatar_url: string | null; plan: string }
   children: React.ReactNode
 }
 

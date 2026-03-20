@@ -7,45 +7,49 @@ interface WidgetRealPreviewProps {
   config: Record<string, unknown>
 }
 
-/**
- * Renders the ACTUAL widget inside an iframe, using the real widget.js
- * (Shadow DOM + vanilla CSS). This ensures the preview matches exactly
- * what users see when embedding the widget on their sites.
- *
- * When config changes, the iframe src is updated with the new config
- * as a query param, so the widget re-renders with the overrides applied
- * (without needing to save to the database first).
- */
+// The iframe renders at this width internally so media queries work correctly
+const VIRTUAL_WIDTH = 1024
+
 export default function WidgetRealPreview({ projectId, config }: WidgetRealPreviewProps) {
+  const containerRef = useRef<HTMLDivElement>(null)
   const iframeRef = useRef<HTMLIFrameElement>(null)
+  const [containerWidth, setContainerWidth] = useState(400)
   const [iframeHeight, setIframeHeight] = useState(400)
 
-  // Serialize config to a stable string for the iframe src
+  // Measure container width
+  useEffect(() => {
+    if (!containerRef.current) return
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        setContainerWidth(entry.contentRect.width)
+      }
+    })
+    observer.observe(containerRef.current)
+    setContainerWidth(containerRef.current.offsetWidth)
+    return () => observer.disconnect()
+  }, [])
+
+  const scale = containerWidth / VIRTUAL_WIDTH
+  const scaledIframeHeight = iframeHeight * scale
+
   const configStr = useMemo(() => {
-    try {
-      return JSON.stringify(config)
-    } catch {
-      return '{}'
-    }
+    try { return JSON.stringify(config) } catch { return '{}' }
   }, [config])
 
-  // Build iframe src with config as query param
   const iframeSrc = useMemo(() => {
     const params = new URLSearchParams()
     params.set('config', configStr)
-    // Add a cache-buster based on config hash to force reload
     params.set('_t', String(simpleHash(configStr)))
     return `/api/widget-preview/${projectId}?${params.toString()}`
   }, [projectId, configStr])
 
-  // Listen for height messages from the iframe
+  // Listen for height messages from iframe
   useEffect(() => {
     function handleMessage(event: MessageEvent) {
       if (event.data?.type === 'opinafy-preview-height' && typeof event.data.height === 'number') {
         setIframeHeight(Math.max(200, event.data.height + 16))
       }
     }
-
     window.addEventListener('message', handleMessage)
     return () => window.removeEventListener('message', handleMessage)
   }, [])
@@ -60,14 +64,23 @@ export default function WidgetRealPreview({ projectId, config }: WidgetRealPrevi
         <span className="ml-3 text-xs text-gray-400">Vista previa real del widget</span>
       </div>
 
-      {/* Real widget iframe */}
-      <div className="bg-white">
+      {/* Scaled iframe container */}
+      <div
+        ref={containerRef}
+        className="bg-white overflow-hidden"
+        style={{ height: `${scaledIframeHeight}px` }}
+      >
         <iframe
           ref={iframeRef}
           src={iframeSrc}
           title="Vista previa del widget"
-          className="w-full border-0"
-          style={{ height: `${iframeHeight}px`, minHeight: 200 }}
+          style={{
+            width: `${VIRTUAL_WIDTH}px`,
+            height: `${iframeHeight}px`,
+            border: 'none',
+            transform: `scale(${scale})`,
+            transformOrigin: 'top left',
+          }}
           sandbox="allow-scripts allow-same-origin"
         />
       </div>
@@ -75,7 +88,6 @@ export default function WidgetRealPreview({ projectId, config }: WidgetRealPrevi
   )
 }
 
-/** Simple hash for cache-busting */
 function simpleHash(str: string): number {
   let hash = 0
   for (let i = 0; i < str.length; i++) {

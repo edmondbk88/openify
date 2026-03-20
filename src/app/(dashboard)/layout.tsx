@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
-import type { Profile } from '@/types'
 import DashboardShell from './dashboard-shell'
 
 export const metadata: Metadata = {
@@ -25,14 +24,15 @@ export default async function DashboardLayout({
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('full_name, email, avatar_url')
+    .select('full_name, email, avatar_url, plan')
     .eq('id', user.id)
     .single()
 
-  const userInfo: Pick<Profile, 'full_name' | 'email' | 'avatar_url'> = {
+  const userInfo = {
     full_name: profile?.full_name ?? null,
     email: profile?.email ?? user.email ?? '',
     avatar_url: profile?.avatar_url ?? null,
+    plan: (profile?.plan ?? 'free') as string,
   }
 
   return <DashboardShell user={userInfo}>{children}</DashboardShell>

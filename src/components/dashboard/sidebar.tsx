@@ -5,11 +5,23 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
-import type { Profile } from '@/types'
 
 interface SidebarProps {
-  user: Pick<Profile, 'full_name' | 'email' | 'avatar_url'>
+  user: { full_name: string | null; email: string; avatar_url: string | null; plan: string }
   onLogout: () => void
+}
+
+const planLabels: Record<string, string> = {
+  free: 'Gratuito',
+  minisite: 'Mini Sitio',
+  pro: 'Pro',
+  business: 'Business',
+}
+const planColors: Record<string, string> = {
+  free: 'bg-gray-100 text-gray-600',
+  minisite: 'bg-teal-100 text-teal-700',
+  pro: 'bg-indigo-100 text-indigo-700',
+  business: 'bg-purple-100 text-purple-700',
 }
 
 const navItems = [
@@ -85,11 +97,21 @@ export default function Sidebar({ user, onLogout }: SidebarProps) {
 
   const sidebarContent = (
     <div className="flex h-full flex-col">
-      {/* Logo */}
-      <div className="flex h-16 items-center px-6">
+      {/* Logo + Plan */}
+      <div className="flex items-center justify-between px-6 py-4">
         <Link href="/dashboard">
           <Image src="/logo-opinafy.png?v=2" alt="Opinafy" width={120} height={35} className="h-8 w-auto" />
         </Link>
+        <div className="flex flex-col items-end gap-1">
+          <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold ${planColors[user.plan] || planColors.free}`}>
+            {planLabels[user.plan] || 'Gratuito'}
+          </span>
+          {(user.plan === 'free' || user.plan === 'minisite') && (
+            <Link href="/facturacion" className="text-[10px] font-medium text-indigo-600 hover:text-indigo-700">
+              Mejorar plan
+            </Link>
+          )}
+        </div>
       </div>
 
       {/* Navigation */}
