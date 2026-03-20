@@ -33,7 +33,7 @@ async function getProfileByUsername(username: string) {
   const supabase = createAdminClient()
   const { data } = await supabase
     .from('profiles')
-    .select('*')
+    .select('id, email, full_name, avatar_url, plan, username, bio, website_url, minisite_config, is_admin, stripe_customer_id, stripe_subscription_id, created_at, updated_at')
     .eq('username', username)
     .single()
   return data as Profile | null
@@ -273,7 +273,12 @@ export default async function MiniSitePage({ params }: PageProps) {
   const projectCount = projects.length
 
   // Parse minisite config
-  const msConfig = (profile.minisite_config || {}) as MiniSiteConfig
+  // Handle both string and object types (Supabase may return JSONB as string in some cases)
+  let rawConfig = profile.minisite_config
+  if (typeof rawConfig === 'string') {
+    try { rawConfig = JSON.parse(rawConfig) } catch { rawConfig = {} }
+  }
+  const msConfig = (rawConfig || {}) as MiniSiteConfig
 
   // Use config colors or fallback to defaults
   const accentColor = msConfig.accent_color || projects[0]?.brand_color || '#6366f1'
