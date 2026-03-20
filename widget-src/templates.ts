@@ -103,12 +103,7 @@ export function renderCarousel(data: WidgetData): string {
     (t, i) => `<div class="opinafy-carousel-slide" data-index="${i}">${renderCard(t, config)}</div>`
   ).join('');
 
-  // Simple dots: 1 dot per slide, max 5 dots. Hidden if ≤ 3 slides.
-  const showDots = count > 3;
-  const dotCount = Math.min(count, 5);
-  const dots = showDots ? Array.from({ length: dotCount }, (_, i) =>
-    `<button class="opinafy-dot${i === 0 ? ' active' : ''}" data-dot="${i}" aria-label="Testimonio ${i + 1}"></button>`
-  ).join('') : '';
+  // No dots - arrows are sufficient for multi-item carousels
 
   // Only show arrows if more than 3 (desktop shows 3 at once)
   const showArrows = count > 3;
@@ -124,7 +119,6 @@ export function renderCarousel(data: WidgetData): string {
       ${showArrows ? `<button class="opinafy-carousel-nav opinafy-carousel-next" data-action="next" aria-label="Siguiente">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>` : ''}
-      ${showDots ? `<div class="opinafy-carousel-dots">${dots}</div>` : ''}
     </div>
   `;
 }

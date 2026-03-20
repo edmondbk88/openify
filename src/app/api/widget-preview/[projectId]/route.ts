@@ -84,25 +84,7 @@ export async function GET(
   </style>
 </head>
 <body>
-  <div id="opinafy-widget" data-project="${projectId}"></div>
-
-  <script>
-  // Override fetch so widget.js gets pre-loaded data instead of making an API call
-  (function() {
-    var widgetData = ${JSON.stringify(widgetData)};
-    var originalFetch = window.fetch;
-    window.fetch = function(url) {
-      var urlStr = typeof url === 'string' ? url : url.toString();
-      if (urlStr.indexOf('/api/widget/') !== -1) {
-        return Promise.resolve(new Response(JSON.stringify(widgetData), {
-          status: 200,
-          headers: { 'Content-Type': 'application/json' }
-        }));
-      }
-      return originalFetch.apply(this, arguments);
-    };
-  })();
-  </script>
+  <div id="opinafy-widget" data-project="${projectId}" data-preloaded='${JSON.stringify(widgetData).replace(/'/g, '&#39;')}'></div>
 
   <script src="${baseUrl}/widget.js" defer></script>
 

@@ -249,7 +249,18 @@ import { renderWidget, WidgetData } from './templates';
     `;
 
     try {
-      const data = await fetchWidgetData(projectId);
+      // Check for pre-loaded data (used in preview mode)
+      let data: WidgetData;
+      const preloadedData = el.getAttribute('data-preloaded');
+      if (preloadedData) {
+        try {
+          data = JSON.parse(preloadedData);
+        } catch {
+          data = await fetchWidgetData(projectId);
+        }
+      } else {
+        data = await fetchWidgetData(projectId);
+      }
 
       // Inject Google Fonts + styles + rendered HTML
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
