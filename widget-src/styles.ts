@@ -1,17 +1,30 @@
 // widget-src/styles.ts
 // Returns all CSS as a string for injection into Shadow DOM
 
+const FONT_FAMILIES: Record<string, string> = {
+  modern: "'Inter', system-ui, -apple-system, sans-serif",
+  serif: "'Playfair Display', Georgia, 'Times New Roman', serif",
+  rounded: "'Nunito', system-ui, sans-serif",
+  minimal: "'DM Sans', system-ui, sans-serif",
+  bold: "'Space Grotesk', system-ui, sans-serif",
+  handwritten: "'Caveat', cursive",
+  mono: "'JetBrains Mono', 'Fira Code', monospace",
+  elegant: "'Cormorant Garamond', Georgia, serif",
+};
+
 export function getStyles(config: any): string {
   const primary = config?.primary_color || '#2563eb';
   const bg = config?.background_color || '#ffffff';
   const text = config?.text_color || '#1f2937';
   const theme = config?.theme || 'light';
   const isDark = theme === 'dark';
+  const fontStyle = config?.font_style || 'modern';
+  const fontFamily = FONT_FAMILIES[fontStyle] || FONT_FAMILIES.modern;
 
   return `
     :host {
       display: block;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-family: ${fontFamily};
       line-height: 1.5;
       color: ${isDark ? '#f3f4f6' : text};
       -webkit-font-smoothing: antialiased;

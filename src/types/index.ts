@@ -79,6 +79,7 @@ export interface WidgetConfig {
   min_rating: number
   filter_tags: string[]
   custom_css: string | null
+  font_style: string
   created_at: string
   updated_at: string
 }

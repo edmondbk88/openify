@@ -22,6 +22,25 @@ import { renderWidget, WidgetData } from './templates';
 
   const BASE_URL = getBaseUrl();
 
+  // ── Google Fonts mapping ──
+  const FONT_MAP: Record<string, { family: string; weights: string }> = {
+    modern: { family: 'Inter', weights: '400;500;600;700' },
+    serif: { family: 'Playfair+Display', weights: '400;500;600;700' },
+    rounded: { family: 'Nunito', weights: '400;500;600;700' },
+    minimal: { family: 'DM+Sans', weights: '400;500;600;700' },
+    bold: { family: 'Space+Grotesk', weights: '400;500;600;700' },
+    handwritten: { family: 'Caveat', weights: '400;500;600;700' },
+    mono: { family: 'JetBrains+Mono', weights: '400;500;600;700' },
+    elegant: { family: 'Cormorant+Garamond', weights: '400;500;600;700' },
+  };
+
+  function getFontLink(config: Record<string, unknown>): string {
+    const fontStyle = (config.font_style as string) || 'modern';
+    const font = FONT_MAP[fontStyle];
+    if (!font) return '';
+    return `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${font.family}:wght@${font.weights}&display=swap">`;
+  }
+
   // ── Fetch widget data ──
   async function fetchWidgetData(projectId: string): Promise<WidgetData> {
     const res = await fetch(`${BASE_URL}/api/widget/${projectId}`, {
@@ -175,11 +194,14 @@ import { renderWidget, WidgetData } from './templates';
     try {
       const data = await fetchWidgetData(projectId);
 
-      // Inject styles + rendered HTML
-      const styles = getStyles(data.config || {});
+      // Inject Google Fonts + styles + rendered HTML
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const config = (data.config || {}) as any;
+      const fontLink = getFontLink(config);
+      const styles = getStyles(config);
       const html = renderWidget(data);
 
-      shadow.innerHTML = `<style>${styles}</style>${html}`;
+      shadow.innerHTML = `${fontLink}<style>${styles}</style>${html}`;
 
       // Init carousel interactivity if applicable
       if (data.config?.layout === 'carousel') {

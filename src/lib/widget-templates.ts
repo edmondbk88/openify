@@ -15,7 +15,7 @@ export interface WidgetTemplate {
     show_date: boolean
     show_avatar: boolean
     show_company: boolean
-    font_style: 'modern' | 'serif' | 'rounded' | 'minimal'
+    font_style: 'modern' | 'serif' | 'rounded' | 'minimal' | 'bold' | 'handwritten' | 'mono' | 'elegant'
   }
 }
 
@@ -204,7 +204,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'oceano-profundo',
     name: 'Océano Profundo',
-    description: 'Azul corporativo clásico que transmite confianza y profesionalismo inmediato.',
+    description: 'Azul corporativo clásico con tipografía fuerte que transmite confianza y profesionalismo inmediato.',
     category: 'Corporativo',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%)',
@@ -218,13 +218,13 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'modern',
+      font_style: 'bold',
     },
   },
   {
     id: 'acero-ejecutivo',
     name: 'Acero Ejecutivo',
-    description: 'Gris acero con acentos azules. Para empresas que quieren transmitir solidez.',
+    description: 'Gris acero con acentos azules y tipografía contundente. Para empresas que quieren transmitir solidez.',
     category: 'Corporativo',
     layout: 'carousel',
     preview_image: 'linear-gradient(135deg, #374151 0%, #6b7280 100%)',
@@ -238,7 +238,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'modern',
+      font_style: 'bold',
     },
   },
   {
@@ -264,7 +264,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'consultoria-global',
     name: 'Consultoría Global',
-    description: 'Estilo big-four. Azul marino, tipografía clara y estructura impecable.',
+    description: 'Estilo big-four. Azul marino, tipografía bold geométrica y estructura impecable.',
     category: 'Corporativo',
     layout: 'wall',
     preview_image: 'linear-gradient(135deg, #172554 0%, #1e3a8a 100%)',
@@ -278,7 +278,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'modern',
+      font_style: 'bold',
     },
   },
   {
@@ -304,7 +304,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'startup-tech',
     name: 'Startup Tech',
-    description: 'Azul eléctrico con estilo tech moderno. Ideal para empresas de tecnología.',
+    description: 'Azul eléctrico con tipografía monoespaciada tech. Ideal para empresas de tecnología.',
     category: 'Corporativo',
     layout: 'carousel',
     preview_image: 'linear-gradient(135deg, #3b82f6 0%, #6366f1 100%)',
@@ -318,7 +318,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: false,
       show_avatar: true,
       show_company: true,
-      font_style: 'modern',
+      font_style: 'mono',
     },
   },
   {
@@ -408,7 +408,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'fiesta-mexicana',
     name: 'Fiesta Mexicana',
-    description: 'Colores vivos inspirados en la cultura mexicana. Alegre, festivo e inconfundible.',
+    description: 'Colores vivos inspirados en la cultura mexicana con letras manuscritas. Alegre, festivo e inconfundible.',
     category: 'Colorido',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #dc2626 0%, #f59e0b 50%, #16a34a 100%)',
@@ -422,7 +422,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'rounded',
+      font_style: 'handwritten',
     },
   },
   {
@@ -552,7 +552,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'medianoche-esmeralda',
     name: 'Medianoche Esmeralda',
-    description: 'Verde esmeralda sobre negro. Elegancia oscura con un toque de color joya.',
+    description: 'Verde esmeralda sobre negro con tipografía elegante. Elegancia oscura con un toque de color joya.',
     category: 'Oscuro',
     layout: 'single',
     preview_image: 'linear-gradient(135deg, #022c22 0%, #064e3b 100%)',
@@ -566,7 +566,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: false,
       show_avatar: true,
       show_company: true,
-      font_style: 'serif',
+      font_style: 'elegant',
     },
   },
   {
@@ -592,7 +592,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'volcan-nocturno',
     name: 'Volcán Nocturno',
-    description: 'Negro con acentos rojo lava. Intenso, dramático y lleno de personalidad.',
+    description: 'Negro con acentos rojo lava y tipografía gruesa. Intenso, dramático y lleno de personalidad.',
     category: 'Oscuro',
     layout: 'carousel',
     preview_image: 'linear-gradient(135deg, #0c0a09 0%, #7f1d1d 100%)',
@@ -606,7 +606,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'modern',
+      font_style: 'bold',
     },
   },
 
@@ -656,7 +656,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'brutalist-bold',
     name: 'Brutalist Bold',
-    description: 'Tipografía gruesa, bordes duros y colores planos. Para marcas que rompen esquemas.',
+    description: 'Tipografía gruesa e impactante, bordes duros y colores planos. Para marcas que rompen esquemas.',
     category: 'Moderno',
     layout: 'wall',
     preview_image: 'linear-gradient(135deg, #ff6b6b 0%, #fbbf24 100%)',
@@ -670,7 +670,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'minimal',
+      font_style: 'bold',
     },
   },
   {
@@ -696,7 +696,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'neon-futuro',
     name: 'Neón Futuro',
-    description: 'Colores neón sobre fondos oscuros. Estilo cyberpunk para marcas tecnológicas.',
+    description: 'Colores neón sobre fondos oscuros con tipografía monoespaciada. Estilo cyberpunk para marcas tecnológicas.',
     category: 'Moderno',
     layout: 'single',
     preview_image: 'linear-gradient(135deg, #0f0f23 0%, #1a1a3e 50%, #0f0f23 100%)',
@@ -710,7 +710,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'minimal',
+      font_style: 'mono',
     },
   },
   {
@@ -740,7 +740,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'oro-rosa',
     name: 'Oro Rosa',
-    description: 'Tonos oro rosa con tipografía serif refinada. Para marcas de lujo y bienestar.',
+    description: 'Tonos oro rosa con tipografía elegante Cormorant Garamond. Para marcas de lujo y bienestar.',
     category: 'Elegante',
     layout: 'carousel',
     preview_image: 'linear-gradient(135deg, #fdf4e7 0%, #f5e1ce 100%)',
@@ -754,13 +754,13 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: false,
       show_avatar: true,
       show_company: true,
-      font_style: 'serif',
+      font_style: 'elegant',
     },
   },
   {
     id: 'marmol-italiano',
     name: 'Mármol Italiano',
-    description: 'Blanco mármol con vetas doradas. Sofisticación pura inspirada en la arquitectura clásica.',
+    description: 'Blanco mármol con vetas doradas y tipografía de lujo. Sofisticación pura inspirada en la arquitectura clásica.',
     category: 'Elegante',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #fafafa 0%, #e8e0d4 50%, #fafafa 100%)',
@@ -774,13 +774,13 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'serif',
+      font_style: 'elegant',
     },
   },
   {
     id: 'champan-dorado',
     name: 'Champán Dorado',
-    description: 'Dorado champán sobre crema. El brindis perfecto de elegancia y buen gusto.',
+    description: 'Dorado champán sobre crema con fuente elegante. El brindis perfecto de elegancia y buen gusto.',
     category: 'Elegante',
     layout: 'single',
     preview_image: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)',
@@ -794,13 +794,13 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'serif',
+      font_style: 'elegant',
     },
   },
   {
     id: 'terciopelo-burdeos',
     name: 'Terciopelo Burdeos',
-    description: 'Rojo burdeos profundo con textos dorados. Lujo, pasión y distinción.',
+    description: 'Rojo burdeos profundo con textos dorados y tipografía refinada. Lujo, pasión y distinción.',
     category: 'Elegante',
     layout: 'wall',
     preview_image: 'linear-gradient(135deg, #450a0a 0%, #7f1d1d 100%)',
@@ -814,13 +814,13 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: false,
       show_avatar: true,
       show_company: true,
-      font_style: 'serif',
+      font_style: 'elegant',
     },
   },
   {
     id: 'perla-nacar',
     name: 'Perla Nácar',
-    description: 'Tonos perlados iridiscentes. Delicado y refinado como una joya del mar.',
+    description: 'Tonos perlados iridiscentes con fuente elegante. Delicado y refinado como una joya del mar.',
     category: 'Elegante',
     layout: 'carousel',
     preview_image: 'linear-gradient(135deg, #f5f5f4 0%, #e7e5e4 50%, #fafaf9 100%)',
@@ -834,7 +834,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'serif',
+      font_style: 'elegant',
     },
   },
   {
@@ -864,7 +864,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'confetti-party',
     name: 'Confetti Party',
-    description: 'Colores de fiesta con bordes muy redondeados. Perfecto para marcas juveniles.',
+    description: 'Colores de fiesta con tipografía manuscrita divertida. Perfecto para marcas juveniles.',
     category: 'Divertido',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #fecdd3 0%, #c4b5fd 50%, #99f6e4 100%)',
@@ -878,13 +878,13 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: false,
       show_avatar: true,
       show_company: false,
-      font_style: 'rounded',
+      font_style: 'handwritten',
     },
   },
   {
     id: 'helado-fresa',
     name: 'Helado de Fresa',
-    description: 'Rosa fresa con toques de crema. Dulce, fresco y absolutamente irresistible.',
+    description: 'Rosa fresa con toques de crema y letras manuscritas. Dulce, fresco y absolutamente irresistible.',
     category: 'Divertido',
     layout: 'carousel',
     preview_image: 'linear-gradient(135deg, #fda4af 0%, #fb7185 100%)',
@@ -898,7 +898,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: false,
       show_avatar: true,
       show_company: true,
-      font_style: 'rounded',
+      font_style: 'handwritten',
     },
   },
   {
@@ -924,7 +924,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'limonada-fresca',
     name: 'Limonada Fresca',
-    description: 'Amarillo limón brillante y alegre. Como un día de verano perfecto.',
+    description: 'Amarillo limón brillante con tipografía a mano. Como un día de verano perfecto.',
     category: 'Divertido',
     layout: 'badge',
     preview_image: 'linear-gradient(135deg, #fef08a 0%, #fde047 100%)',
@@ -938,7 +938,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: false,
       show_avatar: true,
       show_company: true,
-      font_style: 'rounded',
+      font_style: 'handwritten',
     },
   },
   {
@@ -1072,7 +1072,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'cinema-oscuro',
     name: 'Cinema Oscuro',
-    description: 'Estilo cinematográfico oscuro con bordes amplios. Ideal para testimonios en vídeo con impacto dramático.',
+    description: 'Estilo cinematográfico oscuro con tipografía contundente. Ideal para testimonios en vídeo con impacto dramático.',
     category: 'Video',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%)',
@@ -1086,7 +1086,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: true,
-      font_style: 'modern',
+      font_style: 'bold',
     },
   },
   {
@@ -1172,7 +1172,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'streaming-neon',
     name: 'Streaming Neón',
-    description: 'Colores neón vibrantes sobre negro. Estilo plataforma de streaming para vídeo-testimonios modernos.',
+    description: 'Colores neón vibrantes sobre negro con fuente monoespaciada. Estilo plataforma de streaming para vídeo-testimonios modernos.',
     category: 'Video',
     layout: 'carousel',
     preview_image: 'linear-gradient(135deg, #0f0f23 0%, #2e1065 100%)',
@@ -1186,7 +1186,7 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_date: true,
       show_avatar: true,
       show_company: false,
-      font_style: 'modern',
+      font_style: 'mono',
     },
   },
   {
