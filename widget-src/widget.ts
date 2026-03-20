@@ -83,143 +83,141 @@ import { renderWidget, WidgetData } from './templates';
     let currentIndex = 0;
     let autoplayTimer: ReturnType<typeof setInterval> | null = null;
 
+    function getClosestSlide(): number {
+      const scrollLeft = track.scrollLeft;
+      let closest = 0;
+      let minDist = Infinity;
+      slides.forEach((s, i) => {
+        const el = s as HTMLElement;
+        const dist = Math.abs(el.offsetLeft - track.offsetLeft - scrollLeft);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      return closest;
+    }
+
     function updateDots(): void {
       if (dots.length === 0) return;
-      // Map currentIndex to dot index (dots may be fewer than slides)
-      const dotIndex = Math.min(
-        Math.floor(currentIndex * dots.length / slides.length),
-        dots.length - 1
-      );
+      // Map slide index to dot index proportionally
+      const dotIndex = dots.length === slides.length
+        ? currentIndex
+        : Math.min(Math.round(currentIndex * (dots.length - 1) / (slides.length - 1)), dots.length - 1);
       dots.forEach((d, i) => d.classList.toggle('active', i === dotIndex));
     }
 
-    function scrollToIndex(index: number): void {
+    function smoothScrollTo(index: number): void {
       if (index < 0) index = slides.length - 1;
       if (index >= slides.length) index = 0;
       currentIndex = index;
-
       const slide = slides[currentIndex] as HTMLElement;
       track.scrollTo({ left: slide.offsetLeft - track.offsetLeft, behavior: 'smooth' });
       updateDots();
     }
 
-    function next(): void { scrollToIndex(currentIndex + 1); }
-    function prev(): void { scrollToIndex(currentIndex - 1); }
+    function next(): void { smoothScrollTo(currentIndex + 1); }
+    function prev(): void { smoothScrollTo(currentIndex - 1); }
 
-    // Navigation buttons
+    // Arrow buttons
     if (prevBtn) prevBtn.addEventListener('click', () => { prev(); resetAutoplay(); });
     if (nextBtn) nextBtn.addEventListener('click', () => { next(); resetAutoplay(); });
 
-    // Dot navigation - map dot index back to slide index
+    // Dot clicks - map dot to slide proportionally
     dots.forEach((dot, dotIdx) => {
       dot.addEventListener('click', () => {
-        const slideIdx = Math.floor(dotIdx * slides.length / dots.length);
-        scrollToIndex(slideIdx);
+        const slideIdx = dots.length === slides.length
+          ? dotIdx
+          : Math.round(dotIdx * (slides.length - 1) / (dots.length - 1));
+        smoothScrollTo(slideIdx);
         resetAutoplay();
       });
     });
 
-    // Sync on manual scroll
+    // Sync dots on native scroll (from scroll-snap)
     let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
     track.addEventListener('scroll', () => {
       if (scrollTimeout) clearTimeout(scrollTimeout);
       scrollTimeout = setTimeout(() => {
-        const scrollLeft = track.scrollLeft;
-        let closest = 0;
-        let minDist = Infinity;
-        slides.forEach((s, i) => {
-          const el = s as HTMLElement;
-          const dist = Math.abs(el.offsetLeft - track.offsetLeft - scrollLeft);
-          if (dist < minDist) { minDist = dist; closest = i; }
-        });
+        const closest = getClosestSlide();
         if (closest !== currentIndex) {
           currentIndex = closest;
           updateDots();
         }
-      }, 100);
+      }, 150);
     });
 
-    // ── Drag / Swipe support ──
+    // ── Drag / Swipe ──
     let isDragging = false;
+    let hasMoved = false;
     let startX = 0;
     let scrollStart = 0;
 
-    track.addEventListener('mousedown', (e: MouseEvent) => {
+    function startDrag(x: number): void {
       isDragging = true;
-      startX = e.pageX;
+      hasMoved = false;
+      startX = x;
       scrollStart = track.scrollLeft;
-      track.classList.add('dragging');
+      track.style.scrollSnapType = 'none'; // disable snap during drag
+      track.style.scrollBehavior = 'auto';
       pauseAutoplay();
-    });
+    }
 
-    track.addEventListener('mousemove', (e: MouseEvent) => {
+    function moveDrag(x: number): void {
       if (!isDragging) return;
-      e.preventDefault();
-      const dx = e.pageX - startX;
+      const dx = x - startX;
+      if (Math.abs(dx) > 5) hasMoved = true;
       track.scrollLeft = scrollStart - dx;
-    });
+    }
 
     function endDrag(): void {
       if (!isDragging) return;
       isDragging = false;
-      track.classList.remove('dragging');
-      // Snap to nearest slide
-      const scrollLeft = track.scrollLeft;
-      let closest = 0;
-      let minDist = Infinity;
-      slides.forEach((s, i) => {
-        const el = s as HTMLElement;
-        const dist = Math.abs(el.offsetLeft - track.offsetLeft - scrollLeft);
-        if (dist < minDist) { minDist = dist; closest = i; }
-      });
-      scrollToIndex(closest);
+      // Re-enable snap
+      track.style.scrollSnapType = 'x mandatory';
+      track.style.scrollBehavior = 'smooth';
+      // Snap to nearest
+      const closest = getClosestSlide();
+      smoothScrollTo(closest);
       resetAutoplay();
     }
 
+    // Mouse drag
+    track.addEventListener('mousedown', (e: MouseEvent) => {
+      startDrag(e.pageX);
+      e.preventDefault();
+    });
+    track.addEventListener('mousemove', (e: MouseEvent) => {
+      if (!isDragging) return;
+      moveDrag(e.pageX);
+      e.preventDefault();
+    });
     track.addEventListener('mouseup', endDrag);
-    track.addEventListener('mouseleave', endDrag);
+    track.addEventListener('mouseleave', () => { if (isDragging) endDrag(); });
+
+    // Prevent click on links after drag
+    track.addEventListener('click', (e: MouseEvent) => {
+      if (hasMoved) { e.preventDefault(); e.stopPropagation(); }
+    }, true);
 
     // Touch swipe
     track.addEventListener('touchstart', (e: TouchEvent) => {
-      startX = e.touches[0].pageX;
-      scrollStart = track.scrollLeft;
-      pauseAutoplay();
+      startDrag(e.touches[0].pageX);
     }, { passive: true });
-
     track.addEventListener('touchmove', (e: TouchEvent) => {
-      const dx = e.touches[0].pageX - startX;
-      track.scrollLeft = scrollStart - dx;
+      moveDrag(e.touches[0].pageX);
     }, { passive: true });
+    track.addEventListener('touchend', endDrag);
 
-    track.addEventListener('touchend', () => {
-      const scrollLeft = track.scrollLeft;
-      let closest = 0;
-      let minDist = Infinity;
-      slides.forEach((s, i) => {
-        const el = s as HTMLElement;
-        const dist = Math.abs(el.offsetLeft - track.offsetLeft - scrollLeft);
-        if (dist < minDist) { minDist = dist; closest = i; }
-      });
-      scrollToIndex(closest);
-      resetAutoplay();
-    });
-
-    // Autoplay (no progress bar)
+    // Autoplay
     function startAutoplay(): void {
       if (autoplayTimer) clearInterval(autoplayTimer);
       autoplayTimer = setInterval(next, speed);
     }
-
     function pauseAutoplay(): void {
       if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
     }
+    function resetAutoplay(): void { startAutoplay(); }
 
-    function resetAutoplay(): void {
-      startAutoplay();
-    }
-
-    // Pause on hover
-    wrapper.addEventListener('mouseenter', pauseAutoplay);
+    // Pause on hover (not during drag)
+    wrapper.addEventListener('mouseenter', () => { if (!isDragging) pauseAutoplay(); });
     wrapper.addEventListener('mouseleave', () => { if (!isDragging) startAutoplay(); });
 
     startAutoplay();

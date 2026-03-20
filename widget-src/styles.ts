@@ -620,10 +620,21 @@ export function getStyles(config: any): string {
     /* ── Carousel drag/swipe ── */
     .opinafy-carousel-track {
       cursor: grab;
+      -webkit-user-select: none;
+      user-select: none;
     }
-    .opinafy-carousel-track.dragging {
+    .opinafy-carousel-track:active {
       cursor: grabbing;
-      scroll-behavior: auto;
+    }
+
+    /* ── Equal height cards in carousel ── */
+    .opinafy-carousel-slide .opinafy-card {
+      height: 100%;
+    }
+
+    /* ── Equal height cards in grid ── */
+    .opinafy-grid .opinafy-card {
+      height: 100%;
     }
 
     /* ── Responsive container adjustments ── */

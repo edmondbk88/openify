@@ -103,24 +103,25 @@ export function renderCarousel(data: WidgetData): string {
     (t, i) => `<div class="opinafy-carousel-slide" data-index="${i}">${renderCard(t, config)}</div>`
   ).join('');
 
-  // Dots: show max 7, representing pages not individual slides
-  // On mobile: 1 per view, tablet: 2, desktop: 3
-  // We'll show min(count, 7) dots and let JS handle page mapping
-  const maxDots = Math.min(count, 7);
+  // Simple dots: 1 dot per slide, max 5 dots. Hidden if ≤ 3 slides.
   const showDots = count > 3;
-  const dots = showDots ? Array.from({ length: maxDots }, (_, i) =>
-    `<button class="opinafy-dot${i === 0 ? ' active' : ''}" data-dot="${i}" aria-label="Página ${i + 1}"></button>`
+  const dotCount = Math.min(count, 5);
+  const dots = showDots ? Array.from({ length: dotCount }, (_, i) =>
+    `<button class="opinafy-dot${i === 0 ? ' active' : ''}" data-dot="${i}" aria-label="Testimonio ${i + 1}"></button>`
   ).join('') : '';
 
+  // Only show arrows if more than 3 (desktop shows 3 at once)
+  const showArrows = count > 3;
+
   return `
-    <div class="opinafy-carousel-wrapper${needsNav ? '' : ' opinafy-no-nav'}" data-autoplay-speed="${speed}" data-count="${count}">
-      ${needsNav ? `<button class="opinafy-carousel-nav opinafy-carousel-prev" data-action="prev" aria-label="Anterior">
+    <div class="opinafy-carousel-wrapper${showArrows ? '' : ' opinafy-no-nav'}" data-autoplay-speed="${speed}" data-count="${count}">
+      ${showArrows ? `<button class="opinafy-carousel-nav opinafy-carousel-prev" data-action="prev" aria-label="Anterior">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       </button>` : ''}
       <div class="opinafy-carousel-track">
         ${slides}
       </div>
-      ${needsNav ? `<button class="opinafy-carousel-nav opinafy-carousel-next" data-action="next" aria-label="Siguiente">
+      ${showArrows ? `<button class="opinafy-carousel-nav opinafy-carousel-next" data-action="next" aria-label="Siguiente">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>` : ''}
       ${showDots ? `<div class="opinafy-carousel-dots">${dots}</div>` : ''}
