@@ -200,7 +200,7 @@ export function TemplatePreview({
       }}
     >
       {layout === 'grid' && (
-        <div className={`grid gap-4 ${compact ? 'grid-cols-1 sm:grid-cols-2' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'}`}>
+        <div style={{ display: 'grid', gridTemplateColumns: compact ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gap: '16px' }}>
           {testimonials.map((t, i) => (
             <div key={i} className="relative">
               <TestimonialCard testimonial={t} config={config} />
@@ -215,7 +215,8 @@ export function TemplatePreview({
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className={`relative ${compact ? 'w-full shrink-0' : 'w-full shrink-0 md:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)]'}`}
+              style={{ flex: compact ? '0 0 90%' : '0 0 calc(33.333% - 11px)', minWidth: 0 }}
+              className="relative"
             >
               <TestimonialCard testimonial={t} config={config} />
               {isVideo && i === 0 && <VideoPlayOverlay config={config} />}
@@ -225,7 +226,7 @@ export function TemplatePreview({
       )}
 
       {layout === 'wall' && (
-        <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
+        <div style={{ columnCount: compact ? 2 : 3, columnGap: '16px' }}>
           {testimonials.map((t, i) => (
             <div key={i} className="relative mb-4 break-inside-avoid">
               <TestimonialCard testimonial={t} config={config} />
