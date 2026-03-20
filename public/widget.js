@@ -75,6 +75,9 @@
       padding: 24px;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
       box-shadow: var(--opinafy-card-shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 220px;
     }
 
     .opinafy-card:hover {
@@ -203,10 +206,39 @@
       line-height: 1.65;
       color: var(--opinafy-text);
       margin-bottom: 12px;
+      flex: 1;
+      overflow: hidden;
+      position: relative;
     }
 
     .opinafy-content p {
       margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 6;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .opinafy-content-expanded p {
+      display: block;
+      -webkit-line-clamp: unset;
+    }
+
+    .opinafy-read-more {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--opinafy-primary);
+      cursor: pointer;
+      border: none;
+      background: none;
+      padding: 0;
+      text-decoration: none;
+    }
+
+    .opinafy-read-more:hover {
+      text-decoration: underline;
     }
 
     .opinafy-date {
@@ -245,6 +277,7 @@
     .opinafy-carousel-wrapper {
       position: relative;
       overflow: hidden;
+      padding: 0 44px;
     }
 
     .opinafy-carousel-track {
@@ -312,11 +345,11 @@
     }
 
     .opinafy-carousel-prev {
-      left: 4px;
+      left: 0;
     }
 
     .opinafy-carousel-next {
-      right: 4px;
+      right: 0;
     }
 
     .opinafy-carousel-dots {
@@ -579,6 +612,7 @@
         </div>
         ${g>0?`<div class="opinafy-stars">${W(g)}</div>`:""}
         <div class="opinafy-content"><p>${h(t)}</p></div>
+        ${t.length>250?`<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer m\xE1s'">Leer m\xE1s</button>`:""}
         ${f?`<div class="opinafy-date">${f}</div>`:""}
       </div>
     </div>

@@ -182,6 +182,7 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
         </div>
         ${rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
         <div class="opinafy-content"><p>${escapeHtml(content)}</p></div>
+        ${content.length > 250 ? `<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer más'">Leer más</button>` : ''}
         ${dateStr ? `<div class="opinafy-date">${dateStr}</div>` : ''}
       </div>
     </div>
