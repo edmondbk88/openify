@@ -561,22 +561,13 @@ export function getStyles(config: any): string {
       margin-top: 6px;
     }
 
-    /* ── Auto-play animation (carousel) ── */
-    @keyframes opinafy-autoplay-progress {
-      from { width: 0%; }
-      to { width: 100%; }
+    /* ── Carousel drag/swipe ── */
+    .opinafy-carousel-track {
+      cursor: grab;
     }
-
-    .opinafy-autoplay-bar {
-      height: 2px;
-      background: var(--opinafy-primary);
-      border-radius: 1px;
-      margin-top: 8px;
-      opacity: 0.5;
-    }
-
-    .opinafy-autoplay-bar.running {
-      animation: opinafy-autoplay-progress var(--opinafy-autoplay-speed, 5s) linear infinite;
+    .opinafy-carousel-track.dragging {
+      cursor: grabbing;
+      scroll-behavior: auto;
     }
 
     /* ── Responsive container adjustments ── */

@@ -76,13 +76,22 @@ import { renderWidget, WidgetData } from './templates';
     const dots = wrapper.querySelectorAll('.opinafy-dot');
     const prevBtn = wrapper.querySelector('[data-action="prev"]') as HTMLElement | null;
     const nextBtn = wrapper.querySelector('[data-action="next"]') as HTMLElement | null;
-    const autoplayBar = wrapper.querySelector('.opinafy-autoplay-bar') as HTMLElement | null;
 
     if (!track || slides.length === 0) return;
 
     const speed = parseInt(wrapper.getAttribute('data-autoplay-speed') || '5000', 10);
     let currentIndex = 0;
     let autoplayTimer: ReturnType<typeof setInterval> | null = null;
+
+    function updateDots(): void {
+      if (dots.length === 0) return;
+      // Map currentIndex to dot index (dots may be fewer than slides)
+      const dotIndex = Math.min(
+        Math.floor(currentIndex * dots.length / slides.length),
+        dots.length - 1
+      );
+      dots.forEach((d, i) => d.classList.toggle('active', i === dotIndex));
+    }
 
     function scrollToIndex(index: number): void {
       if (index < 0) index = slides.length - 1;
@@ -91,34 +100,26 @@ import { renderWidget, WidgetData } from './templates';
 
       const slide = slides[currentIndex] as HTMLElement;
       track.scrollTo({ left: slide.offsetLeft - track.offsetLeft, behavior: 'smooth' });
-
-      dots.forEach((d, i) => {
-        d.classList.toggle('active', i === currentIndex);
-      });
+      updateDots();
     }
 
-    function next(): void {
-      scrollToIndex(currentIndex + 1);
-    }
-
-    function prev(): void {
-      scrollToIndex(currentIndex - 1);
-    }
+    function next(): void { scrollToIndex(currentIndex + 1); }
+    function prev(): void { scrollToIndex(currentIndex - 1); }
 
     // Navigation buttons
     if (prevBtn) prevBtn.addEventListener('click', () => { prev(); resetAutoplay(); });
     if (nextBtn) nextBtn.addEventListener('click', () => { next(); resetAutoplay(); });
 
-    // Dot navigation
-    dots.forEach(dot => {
+    // Dot navigation - map dot index back to slide index
+    dots.forEach((dot, dotIdx) => {
       dot.addEventListener('click', () => {
-        const idx = parseInt((dot as HTMLElement).getAttribute('data-dot') || '0', 10);
-        scrollToIndex(idx);
+        const slideIdx = Math.floor(dotIdx * slides.length / dots.length);
+        scrollToIndex(slideIdx);
         resetAutoplay();
       });
     });
 
-    // Sync dots on manual scroll
+    // Sync on manual scroll
     let scrollTimeout: ReturnType<typeof setTimeout> | null = null;
     track.addEventListener('scroll', () => {
       if (scrollTimeout) clearTimeout(scrollTimeout);
@@ -133,21 +134,84 @@ import { renderWidget, WidgetData } from './templates';
         });
         if (closest !== currentIndex) {
           currentIndex = closest;
-          dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+          updateDots();
         }
       }, 100);
     });
 
-    // Autoplay
+    // ── Drag / Swipe support ──
+    let isDragging = false;
+    let startX = 0;
+    let scrollStart = 0;
+
+    track.addEventListener('mousedown', (e: MouseEvent) => {
+      isDragging = true;
+      startX = e.pageX;
+      scrollStart = track.scrollLeft;
+      track.classList.add('dragging');
+      pauseAutoplay();
+    });
+
+    track.addEventListener('mousemove', (e: MouseEvent) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const dx = e.pageX - startX;
+      track.scrollLeft = scrollStart - dx;
+    });
+
+    function endDrag(): void {
+      if (!isDragging) return;
+      isDragging = false;
+      track.classList.remove('dragging');
+      // Snap to nearest slide
+      const scrollLeft = track.scrollLeft;
+      let closest = 0;
+      let minDist = Infinity;
+      slides.forEach((s, i) => {
+        const el = s as HTMLElement;
+        const dist = Math.abs(el.offsetLeft - track.offsetLeft - scrollLeft);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      scrollToIndex(closest);
+      resetAutoplay();
+    }
+
+    track.addEventListener('mouseup', endDrag);
+    track.addEventListener('mouseleave', endDrag);
+
+    // Touch swipe
+    track.addEventListener('touchstart', (e: TouchEvent) => {
+      startX = e.touches[0].pageX;
+      scrollStart = track.scrollLeft;
+      pauseAutoplay();
+    }, { passive: true });
+
+    track.addEventListener('touchmove', (e: TouchEvent) => {
+      const dx = e.touches[0].pageX - startX;
+      track.scrollLeft = scrollStart - dx;
+    }, { passive: true });
+
+    track.addEventListener('touchend', () => {
+      const scrollLeft = track.scrollLeft;
+      let closest = 0;
+      let minDist = Infinity;
+      slides.forEach((s, i) => {
+        const el = s as HTMLElement;
+        const dist = Math.abs(el.offsetLeft - track.offsetLeft - scrollLeft);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      scrollToIndex(closest);
+      resetAutoplay();
+    });
+
+    // Autoplay (no progress bar)
     function startAutoplay(): void {
       if (autoplayTimer) clearInterval(autoplayTimer);
       autoplayTimer = setInterval(next, speed);
-      if (autoplayBar) {
-        autoplayBar.classList.remove('running');
-        // Force reflow to restart animation
-        void (autoplayBar as HTMLElement).offsetWidth;
-        autoplayBar.classList.add('running');
-      }
+    }
+
+    function pauseAutoplay(): void {
+      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
     }
 
     function resetAutoplay(): void {
@@ -155,13 +219,8 @@ import { renderWidget, WidgetData } from './templates';
     }
 
     // Pause on hover
-    wrapper.addEventListener('mouseenter', () => {
-      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
-      if (autoplayBar) autoplayBar.classList.remove('running');
-    });
-    wrapper.addEventListener('mouseleave', () => {
-      startAutoplay();
-    });
+    wrapper.addEventListener('mouseenter', pauseAutoplay);
+    wrapper.addEventListener('mouseleave', () => { if (!isDragging) startAutoplay(); });
 
     startAutoplay();
   }
