@@ -75,14 +75,17 @@ function TestimonialCard({
   testimonial: (typeof FAKE_TESTIMONIALS)[0]
   config: WidgetTemplate['config']
 }) {
-  const fontFamily =
-    config.font_style === 'serif'
-      ? 'Georgia, "Times New Roman", serif'
-      : config.font_style === 'rounded'
-        ? '"Nunito", "Varela Round", system-ui, sans-serif'
-        : config.font_style === 'minimal'
-          ? '"Inter", system-ui, sans-serif'
-          : 'system-ui, -apple-system, sans-serif'
+  const FONT_MAP: Record<string, string> = {
+    modern: '"Inter", system-ui, -apple-system, sans-serif',
+    serif: '"Playfair Display", Georgia, "Times New Roman", serif',
+    rounded: '"Nunito", system-ui, sans-serif',
+    minimal: '"DM Sans", system-ui, sans-serif',
+    bold: '"Space Grotesk", system-ui, sans-serif',
+    handwritten: '"Caveat", cursive',
+    mono: '"JetBrains Mono", "Fira Code", monospace',
+    elegant: '"Cormorant Garamond", Georgia, serif',
+  }
+  const fontFamily = FONT_MAP[config.font_style] || FONT_MAP.modern
 
   const cardBg = config.theme === 'dark' ? lightenColor(config.background_color, 8) : '#ffffff'
   const borderColor = config.theme === 'dark' ? lightenColor(config.background_color, 15) : '#e5e7eb'
