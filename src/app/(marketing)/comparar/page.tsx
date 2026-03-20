@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Comparativas de herramientas de testimonios 2026',
+  title: 'Comparativas de herramientas de testimonios 2026 | Opinafy',
   description:
     'Compara Opinafy con las mejores herramientas de testimonios del mercado. Análisis detallados, precios y funcionalidades para elegir la mejor opción.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: 'https://opinafy.com/comparar',
   },
   openGraph: {
-    title: 'Comparativas de herramientas de testimonios 2026',
+    title: 'Comparativas de herramientas de testimonios 2026 | Opinafy',
     description:
       'Compara Opinafy con las mejores herramientas de testimonios. Análisis detallados y honestos.',
     url: 'https://opinafy.com/comparar',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Comparativas de herramientas de testimonios 2026',
+    title: 'Comparativas de herramientas de testimonios 2026 | Opinafy',
     description:
       'Compara Opinafy con las mejores herramientas de testimonios. Análisis detallados y honestos.',
     images: ['/og.png'],

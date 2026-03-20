@@ -272,6 +272,11 @@ export default async function MiniSitePage({ params }: PageProps) {
     : 0
   const projectCount = projects.length
 
+  // Limit testimonials rendered in HTML for performance (avoids 1MB+ pages with 100+ testimonials)
+  const TESTIMONIAL_DISPLAY_LIMIT = 30
+  const displayedTestimonials = testimonials.slice(0, TESTIMONIAL_DISPLAY_LIMIT)
+  const hasMoreTestimonials = totalTestimonials > TESTIMONIAL_DISPLAY_LIMIT
+
   // Parse minisite config
   // Handle both string and object types (Supabase may return JSONB as string in some cases)
   let rawConfig = profile.minisite_config
@@ -294,7 +299,7 @@ export default async function MiniSitePage({ params }: PageProps) {
 
   const fontFamily = getFontFamily(fontStyle)
   const headerAlign = getHeaderAlignment(headerStyle)
-  const layoutClasses = getLayoutClasses(layout, totalTestimonials)
+  const layoutClasses = getLayoutClasses(layout, Math.min(totalTestimonials, TESTIMONIAL_DISPLAY_LIMIT))
   const cardRadius = getCardBorderRadius(cardStyle)
 
   // Derived colors for dark mode cards
@@ -354,12 +359,12 @@ export default async function MiniSitePage({ params }: PageProps) {
         }) }}
       />
 
-      {/* JSON-LD: Individual Review schemas */}
-      {testimonials.length > 0 && (
+      {/* JSON-LD: Individual Review schemas (limited to displayed testimonials) */}
+      {displayedTestimonials.length > 0 && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(
-            testimonials.map((t) => ({
+            displayedTestimonials.map((t) => ({
               '@context': 'https://schema.org',
               '@type': 'Review',
               author: { '@type': 'Person', name: t.author_name },
@@ -481,7 +486,7 @@ export default async function MiniSitePage({ params }: PageProps) {
               `}} />
             )}
             <div className={layout === 'masonry' ? layoutClasses : layoutClasses}>
-              {testimonials.map((testimonial) => (
+              {displayedTestimonials.map((testimonial) => (
                 <div
                   key={testimonial.id}
                   className={`${layout === 'masonry' ? 'mb-6 break-inside-avoid' : ''} ${layout === 'timeline' ? 'timeline-item' : ''} p-5 transition-shadow hover:shadow-md`}
@@ -567,6 +572,27 @@ export default async function MiniSitePage({ params }: PageProps) {
                 </div>
               ))}
             </div>
+
+            {/* Show notice when there are more testimonials than displayed */}
+            {hasMoreTestimonials && (
+              <div className="mt-10 text-center">
+                <p className="text-sm" style={{ color: subtextColor }}>
+                  Mostrando {TESTIMONIAL_DISPLAY_LIMIT} de {totalTestimonials} testimonios
+                </p>
+                {projects[0] && (
+                  <Link
+                    href={`/p/${username}/${projects[0].slug || projects[0].id}`}
+                    className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
+                    style={{ color: accentColor }}
+                  >
+                    Ver más testimonios
+                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                    </svg>
+                  </Link>
+                )}
+              </div>
+            )}
           </>
         )}
       </main>
