@@ -1,13 +1,5 @@
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  other: {
-    // Preconnect to Google Fonts for faster loading
-    'link-preconnect': 'https://fonts.googleapis.com',
-  },
-}
 
 export default function PlantillasLayout({
   children,
@@ -16,6 +8,11 @@ export default function PlantillasLayout({
 }) {
   return (
     <>
+      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@400;600;700&family=DM+Sans:wght@400;600;700&family=Space+Grotesk:wght@400;600;700&family=Caveat:wght@400;600;700&family=JetBrains+Mono:wght@400;600;700&family=Cormorant+Garamond:wght@400;600;700&display=swap"
+      />
       <Navbar />
       <main>{children}</main>
       <Footer />
