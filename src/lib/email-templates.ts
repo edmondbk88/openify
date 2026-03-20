@@ -43,8 +43,8 @@ export function emailTemplate(options: {
         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:520px;background-color:#ffffff;border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,0.08);">
           <!-- Header -->
           <tr>
-            <td style="background:linear-gradient(135deg,#4f46e5 0%,#6366f1 100%);padding:28px 40px;text-align:center;">
-              <h1 style="margin:0;color:#ffffff;font-size:24px;font-weight:700;letter-spacing:-0.3px;">Opinafy</h1>
+            <td style="padding:28px 40px;text-align:center;border-bottom:3px solid #4f46e5;">
+              <img src="https://opinafy.com/logo-opinafy.png?v=2" alt="Opinafy" width="160" height="50" style="display:inline-block;max-width:160px;height:auto;" />
             </td>
           </tr>
           <!-- Body -->
