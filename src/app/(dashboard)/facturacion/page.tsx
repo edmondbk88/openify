@@ -10,12 +10,14 @@ export const metadata = {
 
 const planLabels: Record<Plan, string> = {
   free: 'Gratuito',
+  minisite: 'Mini Sitio',
   pro: 'Pro',
   business: 'Business',
 }
 
 const planBadgeColors: Record<Plan, string> = {
   free: 'bg-gray-100 text-gray-700',
+  minisite: 'bg-teal-100 text-teal-700',
   pro: 'bg-indigo-100 text-indigo-700',
   business: 'bg-purple-100 text-purple-700',
 }
@@ -147,8 +149,8 @@ export default async function FacturacionPage({
         </div>
       </div>
 
-      {/* Upgrade Cards (only if free plan) */}
-      {currentPlan === 'free' && (
+      {/* Upgrade Cards (show if not on highest plan) */}
+      {(currentPlan === 'free' || currentPlan === 'minisite') && (
         <div className="mt-8">
           <h2 className="text-lg font-semibold text-gray-900">
             Mejora tu plan
@@ -157,7 +159,46 @@ export default async function FacturacionPage({
             Desbloquea más funciones para hacer crecer tu negocio.
           </p>
 
-          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {/* Mini Sitio Plan */}
+            {currentPlan === 'free' && (
+              <div className="rounded-xl border border-teal-200 bg-white p-6">
+                <h3 className="text-lg font-bold text-gray-900">Mini Sitio</h3>
+                <div className="mt-4">
+                  <span className="text-4xl font-bold text-gray-900">
+                    {STRIPE_PRICES.minisite.price}€
+                  </span>
+                  <span className="text-sm text-gray-500">/mes</span>
+                </div>
+                <ul className="mt-6 space-y-3">
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckIcon /> 1 proyecto
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckIcon /> 20 testimonios
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckIcon /> Mini sitio público personalizable
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CheckIcon /> 2 layouts disponibles
+                  </li>
+                  <li className="flex items-center gap-2 text-sm text-gray-700">
+                    <CrossIcon />
+                    <span className="text-gray-400">Sin marca de Opinafy</span>
+                  </li>
+                </ul>
+                <div className="mt-6">
+                  <UpgradeButton
+                    plan="minisite"
+                    className="w-full rounded-lg border border-teal-300 bg-white px-4 py-2.5 text-sm font-medium text-teal-700 transition-colors hover:bg-teal-50 disabled:opacity-50"
+                  >
+                    Mejorar a Mini Sitio
+                  </UpgradeButton>
+                </div>
+              </div>
+            )}
+
             {/* Pro Plan */}
             <div className="rounded-xl border-2 border-indigo-200 bg-white p-6">
               <div className="flex items-center justify-between">
@@ -184,6 +225,9 @@ export default async function FacturacionPage({
                 </li>
                 <li className="flex items-center gap-2 text-sm text-gray-700">
                   <CheckIcon /> Sin marca de Opinafy
+                </li>
+                <li className="flex items-center gap-2 text-sm text-gray-700">
+                  <CheckIcon /> Mini sitio público
                 </li>
                 <li className="flex items-center gap-2 text-sm text-gray-700">
                   <CrossIcon />
@@ -259,6 +303,9 @@ export default async function FacturacionPage({
                 <th className="px-6 py-3 text-center font-medium text-gray-500">
                   Gratuito
                 </th>
+                <th className="px-6 py-3 text-center font-medium text-teal-600">
+                  Mini Sitio
+                </th>
                 <th className="px-6 py-3 text-center font-medium text-gray-500">
                   Pro
                 </th>
@@ -271,6 +318,7 @@ export default async function FacturacionPage({
               <tr>
                 <td className="px-6 py-3 text-gray-700">Proyectos</td>
                 <td className="px-6 py-3 text-center text-gray-600">1</td>
+                <td className="px-6 py-3 text-center text-gray-600">1</td>
                 <td className="px-6 py-3 text-center text-gray-600">3</td>
                 <td className="px-6 py-3 text-center text-gray-600">
                   Ilimitados
@@ -279,6 +327,7 @@ export default async function FacturacionPage({
               <tr>
                 <td className="px-6 py-3 text-gray-700">Testimonios</td>
                 <td className="px-6 py-3 text-center text-gray-600">10</td>
+                <td className="px-6 py-3 text-center text-gray-600">20</td>
                 <td className="px-6 py-3 text-center text-gray-600">
                   Ilimitados
                 </td>
@@ -287,7 +336,31 @@ export default async function FacturacionPage({
                 </td>
               </tr>
               <tr>
+                <td className="px-6 py-3 text-gray-700">Mini sitio público</td>
+                <td className="px-6 py-3 text-center">
+                  <span className="inline-flex justify-center">
+                    <CrossIcon />
+                  </span>
+                </td>
+                <td className="px-6 py-3 text-center">
+                  <span className="inline-flex justify-center">
+                    <CheckIcon />
+                  </span>
+                </td>
+                <td className="px-6 py-3 text-center">
+                  <span className="inline-flex justify-center">
+                    <CheckIcon />
+                  </span>
+                </td>
+                <td className="px-6 py-3 text-center">
+                  <span className="inline-flex justify-center">
+                    <CheckIcon />
+                  </span>
+                </td>
+              </tr>
+              <tr>
                 <td className="px-6 py-3 text-gray-700">Diseños de widget</td>
+                <td className="px-6 py-3 text-center text-gray-600">2</td>
                 <td className="px-6 py-3 text-center text-gray-600">2</td>
                 <td className="px-6 py-3 text-center text-gray-600">5</td>
                 <td className="px-6 py-3 text-center text-gray-600">5</td>
@@ -295,6 +368,11 @@ export default async function FacturacionPage({
               <tr>
                 <td className="px-6 py-3 text-gray-700">
                   Eliminar marca Opinafy
+                </td>
+                <td className="px-6 py-3 text-center">
+                  <span className="inline-flex justify-center">
+                    <CrossIcon />
+                  </span>
                 </td>
                 <td className="px-6 py-3 text-center">
                   <span className="inline-flex justify-center">
@@ -328,6 +406,11 @@ export default async function FacturacionPage({
                 </td>
                 <td className="px-6 py-3 text-center">
                   <span className="inline-flex justify-center">
+                    <CrossIcon />
+                  </span>
+                </td>
+                <td className="px-6 py-3 text-center">
+                  <span className="inline-flex justify-center">
                     <CheckIcon />
                   </span>
                 </td>
@@ -336,12 +419,16 @@ export default async function FacturacionPage({
                 <td className="px-6 py-3 text-gray-700">Usuarios del equipo</td>
                 <td className="px-6 py-3 text-center text-gray-600">1</td>
                 <td className="px-6 py-3 text-center text-gray-600">1</td>
+                <td className="px-6 py-3 text-center text-gray-600">1</td>
                 <td className="px-6 py-3 text-center text-gray-600">3</td>
               </tr>
               <tr>
                 <td className="px-6 py-3 text-gray-700">Precio</td>
                 <td className="px-6 py-3 text-center font-medium text-gray-900">
                   0€
+                </td>
+                <td className="px-6 py-3 text-center font-medium text-teal-700">
+                  {STRIPE_PRICES.minisite.price}€/mes
                 </td>
                 <td className="px-6 py-3 text-center font-medium text-gray-900">
                   {STRIPE_PRICES.pro.price}€/mes

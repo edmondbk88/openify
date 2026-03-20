@@ -1,4 +1,4 @@
-export type Plan = 'free' | 'pro' | 'business'
+export type Plan = 'free' | 'minisite' | 'pro' | 'business'
 export type TestimonialStatus = 'pending_verification' | 'pending' | 'approved' | 'rejected'
 export type WidgetLayout = 'carousel' | 'grid' | 'wall' | 'single' | 'badge'
 export type WidgetTheme = 'light' | 'dark' | 'auto'
@@ -78,6 +78,7 @@ export interface WidgetConfig {
   max_testimonials: number
   min_rating: number
   filter_tags: string[]
+  video_display_mode: string
   custom_css: string | null
   font_style: string
   created_at: string

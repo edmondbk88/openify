@@ -1,10 +1,42 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getStripe } from '@/lib/stripe'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { STRIPE_PRICES } from '@/lib/constants'
 import { enforceDowngradeLimits } from '@/lib/plan-enforcement'
 import { Plan } from '@/types'
-import Stripe from 'stripe'
+import crypto from 'crypto'
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function verifyStripeWebhook(body: string, signature: string, secret: string): Record<string, any> {
+  const parts = signature.split(',').reduce((acc, part) => {
+    const [key, value] = part.split('=')
+    acc[key] = value
+    return acc
+  }, {} as Record<string, string>)
+
+  const timestamp = parts['t']
+  const sig = parts['v1']
+
+  if (!timestamp || !sig) throw new Error('Invalid signature format')
+
+  const payload = `${timestamp}.${body}`
+  const expected = crypto.createHmac('sha256', secret).update(payload).digest('hex')
+
+  if (expected !== sig) throw new Error('Invalid signature')
+
+  return JSON.parse(body)
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function stripeGet(endpoint: string): Promise<Record<string, any>> {
+  const res = await fetch(`https://api.stripe.com/v1${endpoint}`, {
+    headers: { 'Authorization': `Bearer ${process.env.STRIPE_SECRET_KEY}` },
+  })
+  const data = await res.json()
+  if (!res.ok) {
+    throw new Error(data.error?.message || `Stripe API error: ${res.status}`)
+  }
+  return data
+}
 
 export async function POST(request: NextRequest) {
   const body = await request.text()
@@ -14,16 +46,17 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'Firma no proporcionada' }, { status: 400 })
   }
 
-  let event: Stripe.Event
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let event: Record<string, any>
 
   try {
-    event = getStripe().webhooks.constructEvent(
+    event = verifyStripeWebhook(
       body,
       signature,
       process.env.STRIPE_WEBHOOK_SECRET!
     )
   } catch (err) {
-    const message = err instanceof Error ? err.message : 'Firma inválida'
+    const message = err instanceof Error ? err.message : 'Firma invalida'
     return NextResponse.json({ error: `Webhook error: ${message}` }, { status: 400 })
   }
 
@@ -32,7 +65,7 @@ export async function POST(request: NextRequest) {
   try {
     switch (event.type) {
       case 'checkout.session.completed': {
-        const session = event.data.object as Stripe.Checkout.Session
+        const session = event.data.object
 
         if (session.mode !== 'subscription') break
 
@@ -42,8 +75,8 @@ export async function POST(request: NextRequest) {
 
         if (!userId) break
 
-        // Get subscription to determine the plan
-        const subscription = await getStripe().subscriptions.retrieve(subscriptionId)
+        // Get subscription to determine the plan via REST API
+        const subscription = await stripeGet(`/subscriptions/${subscriptionId}`)
         const priceId = subscription.items.data[0]?.price.id
         const plan = getPlanFromPriceId(priceId)
 
@@ -61,7 +94,7 @@ export async function POST(request: NextRequest) {
       }
 
       case 'customer.subscription.updated': {
-        const subscription = event.data.object as Stripe.Subscription
+        const subscription = event.data.object
         const customerId = subscription.customer as string
         const priceId = subscription.items.data[0]?.price.id
         const plan = getPlanFromPriceId(priceId)
@@ -93,7 +126,7 @@ export async function POST(request: NextRequest) {
             .eq('id', profile.id)
 
           // If this is a downgrade, enforce the new plan limits
-          const planOrder: Record<Plan, number> = { free: 0, pro: 1, business: 2 }
+          const planOrder: Record<Plan, number> = { free: 0, minisite: 1, pro: 2, business: 3 }
           if (planOrder[plan] < planOrder[oldPlan]) {
             await enforceDowngradeLimits(profile.id, plan)
           }
@@ -103,7 +136,7 @@ export async function POST(request: NextRequest) {
       }
 
       case 'customer.subscription.deleted': {
-        const subscription = event.data.object as Stripe.Subscription
+        const subscription = event.data.object
         const customerId = subscription.customer as string
 
         const { data: profile } = await supabase
@@ -139,5 +172,6 @@ export async function POST(request: NextRequest) {
 function getPlanFromPriceId(priceId: string): Plan {
   if (priceId === STRIPE_PRICES.business.monthly) return 'business'
   if (priceId === STRIPE_PRICES.pro.monthly) return 'pro'
+  if (priceId === STRIPE_PRICES.minisite.monthly) return 'minisite'
   return 'free'
 }

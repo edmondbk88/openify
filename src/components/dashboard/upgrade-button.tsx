@@ -3,7 +3,7 @@
 import { useState } from 'react'
 
 interface UpgradeButtonProps {
-  plan: 'pro' | 'business'
+  plan: 'minisite' | 'pro' | 'business'
   className?: string
   children: React.ReactNode
 }

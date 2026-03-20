@@ -10,6 +10,15 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     seats: 1,
     miniSite: false,
   },
+  minisite: {
+    projects: 1,
+    testimonials: 20,
+    video: false,
+    removeBranding: false,
+    layouts: ['carousel', 'grid'] as WidgetLayout[],
+    seats: 1,
+    miniSite: true,
+  },
   pro: {
     projects: 3,
     testimonials: Infinity,
@@ -31,6 +40,11 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
 }
 
 export const STRIPE_PRICES = {
+  minisite: {
+    monthly: process.env.NEXT_PUBLIC_STRIPE_MINISITE_MONTHLY_PRICE_ID || '',
+    name: 'Mini Sitio',
+    price: 5,
+  },
   pro: {
     monthly: process.env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID || '',
     name: 'Pro',

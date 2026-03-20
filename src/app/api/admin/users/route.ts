@@ -39,7 +39,7 @@ export async function GET(request: NextRequest) {
     query = query.or(`full_name.ilike.%${escaped}%,email.ilike.%${escaped}%`)
   }
 
-  if (plan && ['free', 'pro', 'business'].includes(plan)) {
+  if (plan && ['free', 'minisite', 'pro', 'business'].includes(plan)) {
     query = query.eq('plan', plan)
   }
 
@@ -68,7 +68,7 @@ export async function PATCH(request: NextRequest) {
   const admin = createAdminClient()
   const updates: Record<string, unknown> = {}
 
-  if (plan && ['free', 'pro', 'business'].includes(plan)) {
+  if (plan && ['free', 'minisite', 'pro', 'business'].includes(plan)) {
     updates.plan = plan
   }
   if (typeof is_admin === 'boolean') {

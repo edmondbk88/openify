@@ -313,6 +313,24 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
         </div>
       </section>
 
+      {/* Video Display Mode */}
+      <section>
+        <h3 className="text-sm font-semibold text-gray-900">Modo de video</h3>
+        <p className="mt-1 text-xs text-gray-500">
+          Controla qué información se muestra junto a los testimonios en vídeo.
+        </p>
+        <select
+          value={config.video_display_mode || 'full'}
+          onChange={(e) => update('video_display_mode', e.target.value)}
+          className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+        >
+          <option value="full">Completo (video + todo)</option>
+          <option value="video_only">Solo video</option>
+          <option value="video_stars">Video + estrellas</option>
+          <option value="video_name">Video + nombre</option>
+        </select>
+      </section>
+
       {/* Auto-play */}
       <section>
         <h3 className="text-sm font-semibold text-gray-900">Reproducción automática</h3>

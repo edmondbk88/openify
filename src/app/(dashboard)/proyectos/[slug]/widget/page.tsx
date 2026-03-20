@@ -30,6 +30,7 @@ const defaultConfig: EditableConfig = {
   auto_play_speed: 5000,
   max_testimonials: 10,
   min_rating: 1,
+  video_display_mode: 'full',
   font_style: 'modern',
 }
 
@@ -86,6 +87,7 @@ export default function WidgetPage() {
           auto_play_speed: widgetConfig.auto_play_speed,
           max_testimonials: widgetConfig.max_testimonials,
           min_rating: widgetConfig.min_rating,
+          video_display_mode: widgetConfig.video_display_mode || 'full',
           font_style: widgetConfig.font_style || 'modern',
         })
       }

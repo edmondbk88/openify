@@ -85,6 +85,7 @@ export default function PreciosPage() {
                 <tr className="border-b border-gray-200 bg-gray-50">
                   <th className="px-6 py-4 font-semibold text-gray-900">Característica</th>
                   <th className="px-6 py-4 text-center font-semibold text-gray-900">Gratis</th>
+                  <th className="px-6 py-4 text-center font-semibold text-teal-600">Mini Sitio</th>
                   <th className="px-6 py-4 text-center font-semibold text-indigo-600">Pro</th>
                   <th className="px-6 py-4 text-center font-semibold text-gray-900">Business</th>
                 </tr>
@@ -93,72 +94,91 @@ export default function PreciosPage() {
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Proyectos</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">1</td>
+                  <td className="px-6 py-3.5 text-center text-gray-600">1</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">3</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">Ilimitados</td>
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Testimonios</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">10</td>
+                  <td className="px-6 py-3.5 text-center text-gray-600">20</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">Ilimitados</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">Ilimitados</td>
                 </tr>
                 <tr>
+                  <td className="px-6 py-3.5 text-gray-700">Mini sitio público</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-teal-600">&#10003;</td>
+                  <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
+                  <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
+                </tr>
+                <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Layouts disponibles</td>
+                  <td className="px-6 py-3.5 text-center text-gray-600">2</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">2</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">Todos</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">Todos</td>
                 </tr>
-                <tr className="bg-gray-50/50">
+                <tr>
                   <td className="px-6 py-3.5 text-gray-700">Plantillas premium</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
+                  <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
+                </tr>
+                <tr className="bg-gray-50/50">
+                  <td className="px-6 py-3.5 text-gray-700">Sin marca Opinafy</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-3.5 text-gray-700">Sin marca Opinafy</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
-                  <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
-                </tr>
-                <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Testimonios en vídeo</td>
                   <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
-                <tr>
+                <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Asientos de equipo</td>
+                  <td className="px-6 py-3.5 text-center text-gray-600">1</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">1</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">1</td>
                   <td className="px-6 py-3.5 text-center text-gray-600">3</td>
                 </tr>
-                <tr className="bg-gray-50/50">
+                <tr>
                   <td className="px-6 py-3.5 text-gray-700">Soporte prioritario</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
-                <tr>
+                <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Soporte dedicado</td>
                   <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
-                </tr>
-                <tr className="bg-gray-50/50">
-                  <td className="px-6 py-3.5 text-gray-700">Exportación de datos</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr>
+                  <td className="px-6 py-3.5 text-gray-700">Exportación de datos</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
+                </tr>
+                <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Personalización CSS</td>
+                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
-                <tr className="bg-gray-50/50">
+                <tr>
                   <td className="px-6 py-3.5 font-medium text-gray-900">Precio</td>
                   <td className="px-6 py-3.5 text-center font-semibold text-gray-900">&euro;0/mes</td>
+                  <td className="px-6 py-3.5 text-center font-semibold text-teal-600">&euro;5/mes</td>
                   <td className="px-6 py-3.5 text-center font-semibold text-indigo-600">&euro;9/mes</td>
                   <td className="px-6 py-3.5 text-center font-semibold text-gray-900">&euro;19/mes</td>
                 </tr>

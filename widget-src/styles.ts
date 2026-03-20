@@ -245,6 +245,19 @@ export function getStyles(config: any): string {
       border-radius: var(--opinafy-radius) var(--opinafy-radius) 0 0;
     }
 
+    .opinafy-video-vertical .opinafy-video-container {
+      aspect-ratio: 9 / 16;
+      max-height: 480px;
+    }
+
+    .opinafy-card-video-only {
+      min-height: auto;
+    }
+
+    .opinafy-card-video-only .opinafy-video {
+      border-radius: var(--opinafy-radius);
+    }
+
     /* ── Content ── */
     .opinafy-content {
       font-size: 14px;

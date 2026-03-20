@@ -35,16 +35,18 @@ export async function POST(request: NextRequest) {
     const body = await request.json().catch(() => ({}))
     const plan = body.plan as string | null
 
-    if (!plan || !['pro', 'business'].includes(plan)) {
+    if (!plan || !['minisite', 'pro', 'business'].includes(plan)) {
       return NextResponse.json({ error: 'Plan inválido' }, { status: 400 })
     }
 
     let priceId = (STRIPE_PRICES[plan as Exclude<Plan, 'free'>].monthly || '').trim()
     if (!priceId) {
-      priceId = (plan === 'pro'
-        ? (process.env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID || '')
-        : (process.env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID || '')
-      ).trim()
+      const envMap: Record<string, string> = {
+        minisite: process.env.NEXT_PUBLIC_STRIPE_MINISITE_MONTHLY_PRICE_ID || '',
+        pro: process.env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID || '',
+        business: process.env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID || '',
+      }
+      priceId = (envMap[plan] || '').trim()
     }
 
     if (!priceId) {

@@ -29,6 +29,7 @@ interface WidgetConfig {
   show_branding: boolean;
   font_style: string;
   autoplay_speed?: number;
+  video_display_mode?: string;
 }
 
 export interface WidgetData {
@@ -194,6 +195,44 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
         <source src="${video_url}" type="video/webm">
       </video>
     </div>` : '';
+
+  // Video display mode: controls what is shown alongside video
+  const videoMode = config.video_display_mode || 'full';
+
+  // If video testimonial with a non-full mode, render a reduced card
+  if (hasVideo && videoMode !== 'full') {
+    if (videoMode === 'video_only') {
+      return `
+        <div class="opinafy-card opinafy-card-has-video opinafy-card-video-only">
+          ${videoHtml}
+        </div>
+      `;
+    }
+
+    if (videoMode === 'video_stars') {
+      return `
+        <div class="opinafy-card opinafy-card-has-video">
+          ${videoHtml}
+          <div class="opinafy-card-body">
+            <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
+            ${rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
+          </div>
+        </div>
+      `;
+    }
+
+    if (videoMode === 'video_name') {
+      return `
+        <div class="opinafy-card opinafy-card-has-video">
+          ${videoHtml}
+          <div class="opinafy-card-body">
+            <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
+            ${company ? `<div class="opinafy-author-meta">${escapeHtml(company)}</div>` : ''}
+          </div>
+        </div>
+      `;
+    }
+  }
 
   // Truncate long text
   const isLong = content.length > 250;

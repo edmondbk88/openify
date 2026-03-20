@@ -16,6 +16,21 @@ const plans = [
     highlighted: false,
   },
   {
+    name: 'Mini Sitio',
+    price: '5',
+    description: 'Ideal para profesionales y freelancers.',
+    features: [
+      '1 proyecto',
+      '20 testimonios',
+      'Mini sitio público personalizable',
+      '2 layouts disponibles',
+      'Marca Opinafy en el widget',
+      'Verificación de empresa',
+    ],
+    cta: 'Elegir Mini Sitio',
+    highlighted: false,
+  },
+  {
     name: 'Pro',
     price: '9',
     description: 'Para negocios que quieren crecer.',
@@ -24,6 +39,7 @@ const plans = [
       'Testimonios ilimitados',
       'Todos los layouts',
       'Sin marca Opinafy',
+      'Mini sitio público',
       'Verificación de empresa',
       'Soporte prioritario',
     ],
@@ -41,6 +57,7 @@ const plans = [
       'Testimonios en vídeo',
       'Plantillas de vídeo',
       'Badge de empresa verificada',
+      'Mini sitio público',
       'Verificación de empresa',
       '3 asientos de equipo',
       'Soporte dedicado',
@@ -64,7 +81,7 @@ export function Pricing() {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid max-w-5xl gap-8 lg:grid-cols-3">
+        <div className="mx-auto mt-16 grid max-w-6xl gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan) => (
             <div
               key={plan.name}

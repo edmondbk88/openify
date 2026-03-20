@@ -1,9 +1,9 @@
-"use strict";(()=>{var R={modern:"'Inter', system-ui, -apple-system, sans-serif",serif:"'Playfair Display', Georgia, 'Times New Roman', serif",rounded:"'Nunito', system-ui, sans-serif",minimal:"'DM Sans', system-ui, sans-serif",bold:"'Space Grotesk', system-ui, sans-serif",handwritten:"'Caveat', cursive",mono:"'JetBrains Mono', 'Fira Code', monospace",elegant:"'Cormorant Garamond', Georgia, serif"};function j(a){let o=a.replace("#","");if(o.length<6)return!1;let n=parseInt(o.slice(0,2),16),i=parseInt(o.slice(2,4),16),c=parseInt(o.slice(4,6),16);return n<245||i<245||c<245}function P(a){let o=a?.primary_color||"#2563eb",n=a?.background_color||"#ffffff",i=a?.text_color||"#1f2937",d=(a?.theme||"light")==="dark",h=a?.font_style||"modern",m=R[h]||R.modern,y=d?"#1f2937":(j(n),"#ffffff"),l=d?"#374151":j(n)?"rgba(0,0,0,0.08)":"#e5e7eb",t=d?"0 1px 3px rgba(0,0,0,0.4)":j(n)?"0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)":"0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)",e=d?"0 4px 12px rgba(0,0,0,0.5)":j(n)?"0 8px 24px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.06)":"0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)";return`
+"use strict";(()=>{var U={modern:"'Inter', system-ui, -apple-system, sans-serif",serif:"'Playfair Display', Georgia, 'Times New Roman', serif",rounded:"'Nunito', system-ui, sans-serif",minimal:"'DM Sans', system-ui, sans-serif",bold:"'Space Grotesk', system-ui, sans-serif",handwritten:"'Caveat', cursive",mono:"'JetBrains Mono', 'Fira Code', monospace",elegant:"'Cormorant Garamond', Georgia, serif"};function A(a){let o=a.replace("#","");if(o.length<6)return!1;let i=parseInt(o.slice(0,2),16),t=parseInt(o.slice(2,4),16),c=parseInt(o.slice(4,6),16);return i<245||t<245||c<245}function q(a){let o=a?.primary_color||"#2563eb",i=a?.background_color||"#ffffff",t=a?.text_color||"#1f2937",l=(a?.theme||"light")==="dark",u=a?.font_style||"modern",b=U[u]||U.modern,v=l?"#1f2937":(A(i),"#ffffff"),d=l?"#374151":A(i)?"rgba(0,0,0,0.08)":"#e5e7eb",n=l?"0 1px 3px rgba(0,0,0,0.4)":A(i)?"0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)":"0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)",e=l?"0 4px 12px rgba(0,0,0,0.5)":A(i)?"0 8px 24px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.06)":"0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)";return`
     :host {
       display: block;
-      font-family: ${m};
+      font-family: ${b};
       line-height: 1.5;
-      color: ${d?"#f3f4f6":i};
+      color: ${l?"#f3f4f6":t};
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -17,15 +17,15 @@
     /* \u2500\u2500 CSS Custom Properties \u2500\u2500 */
     .opinafy-root {
       --opinafy-primary: ${o};
-      --opinafy-bg: ${d?"#1f2937":n};
-      --opinafy-text: ${d?"#f3f4f6":i};
-      --opinafy-text-secondary: ${d?"#9ca3af":"#6b7280"};
-      --opinafy-border: ${l};
-      --opinafy-card-bg: ${y};
-      --opinafy-card-shadow: ${t};
+      --opinafy-bg: ${l?"#1f2937":i};
+      --opinafy-text: ${l?"#f3f4f6":t};
+      --opinafy-text-secondary: ${l?"#9ca3af":"#6b7280"};
+      --opinafy-border: ${d};
+      --opinafy-card-bg: ${v};
+      --opinafy-card-shadow: ${n};
       --opinafy-card-shadow-hover: ${e};
       --opinafy-star-filled: #f59e0b;
-      --opinafy-star-empty: ${d?"#4b5563":"#d1d5db"};
+      --opinafy-star-empty: ${l?"#4b5563":"#d1d5db"};
       --opinafy-radius: ${a?.border_radius??12}px;
       --opinafy-radius-sm: ${Math.max((a?.border_radius??12)-4,4)}px;
 
@@ -198,6 +198,19 @@
       object-fit: cover;
       display: block;
       border-radius: var(--opinafy-radius) var(--opinafy-radius) 0 0;
+    }
+
+    .opinafy-video-vertical .opinafy-video-container {
+      aspect-ratio: 9 / 16;
+      max-height: 480px;
+    }
+
+    .opinafy-card-video-only {
+      min-height: auto;
+    }
+
+    .opinafy-card-video-only .opinafy-video {
+      border-radius: var(--opinafy-radius);
     }
 
     /* \u2500\u2500 Content \u2500\u2500 */
@@ -569,62 +582,82 @@
         display: none;
       }
     }
-  `}function q(a){let{config:o,testimonials:n}=a;if(!n||n.length===0)return'<div class="opinafy-root"><div class="opinafy-error"><p>No hay testimonios para mostrar.</p></div></div>';let i;switch(o.layout){case"carousel":i=N(a);break;case"grid":i=U(a);break;case"wall":i=Y(a);break;case"single":i=X(a);break;case"badge":i=J(a);break;default:i=U(a)}return`<div class="opinafy-root">${i}${o.show_branding?V():""}</div>`}function N(a){let{testimonials:o,config:n}=a,i=n.autoplay_speed||5e3,c=o.length,d=c>1,h=o.map((t,e)=>`<div class="opinafy-carousel-slide" data-index="${e}">${A(t,n)}</div>`).join(""),m=Math.min(c,7),y=c>3,l=y?Array.from({length:m},(t,e)=>`<button class="opinafy-dot${e===0?" active":""}" data-dot="${e}" aria-label="P\xE1gina ${e+1}"></button>`).join(""):"";return`
-    <div class="opinafy-carousel-wrapper${d?"":" opinafy-no-nav"}" data-autoplay-speed="${i}" data-count="${c}">
-      ${d?`<button class="opinafy-carousel-nav opinafy-carousel-prev" data-action="prev" aria-label="Anterior">
+  `}function G(a){let{config:o,testimonials:i}=a;if(!i||i.length===0)return'<div class="opinafy-root"><div class="opinafy-error"><p>No hay testimonios para mostrar.</p></div></div>';let t;switch(o.layout){case"carousel":t=N(a);break;case"grid":t=F(a);break;case"wall":t=Y(a);break;case"single":t=X(a);break;case"badge":t=J(a);break;default:t=F(a)}return`<div class="opinafy-root">${t}${o.show_branding?V():""}</div>`}function N(a){let{testimonials:o,config:i}=a,t=i.autoplay_speed||5e3,c=o.length,l=c>1,u=o.map((n,e)=>`<div class="opinafy-carousel-slide" data-index="${e}">${I(n,i)}</div>`).join(""),b=Math.min(c,7),v=c>3,d=v?Array.from({length:b},(n,e)=>`<button class="opinafy-dot${e===0?" active":""}" data-dot="${e}" aria-label="P\xE1gina ${e+1}"></button>`).join(""):"";return`
+    <div class="opinafy-carousel-wrapper${l?"":" opinafy-no-nav"}" data-autoplay-speed="${t}" data-count="${c}">
+      ${l?`<button class="opinafy-carousel-nav opinafy-carousel-prev" data-action="prev" aria-label="Anterior">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       </button>`:""}
       <div class="opinafy-carousel-track">
-        ${h}
+        ${u}
       </div>
-      ${d?`<button class="opinafy-carousel-nav opinafy-carousel-next" data-action="next" aria-label="Siguiente">
+      ${l?`<button class="opinafy-carousel-nav opinafy-carousel-next" data-action="next" aria-label="Siguiente">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>`:""}
-      ${y?`<div class="opinafy-carousel-dots">${l}</div>`:""}
+      ${v?`<div class="opinafy-carousel-dots">${d}</div>`:""}
     </div>
-  `}function U(a){return`<div class="opinafy-grid">${a.testimonials.map(n=>A(n,a.config)).join("")}</div>`}function Y(a){return`<div class="opinafy-wall">${a.testimonials.map(n=>A(n,a.config)).join("")}</div>`}function X(a){let o=a.testimonials[0];return`<div class="opinafy-single">${A(o,a.config)}</div>`}function J(a){let{testimonials:o}=a,n=o.reduce((c,d)=>c+d.rating,0)/o.length,i=o[0];return`
+  `}function F(a){return`<div class="opinafy-grid">${a.testimonials.map(i=>I(i,a.config)).join("")}</div>`}function Y(a){return`<div class="opinafy-wall">${a.testimonials.map(i=>I(i,a.config)).join("")}</div>`}function X(a){let o=a.testimonials[0];return`<div class="opinafy-single">${I(o,a.config)}</div>`}function J(a){let{testimonials:o}=a,i=o.reduce((c,l)=>c+l.rating,0)/o.length,t=o[0];return`
     <div class="opinafy-badge">
       <div class="opinafy-badge-score">
-        <span class="opinafy-badge-number">${n.toFixed(1)}</span>
-        <div class="opinafy-stars opinafy-stars-sm">${F(Math.round(n))}</div>
+        <span class="opinafy-badge-number">${i.toFixed(1)}</span>
+        <div class="opinafy-stars opinafy-stars-sm">${O(Math.round(i))}</div>
         <span class="opinafy-badge-count">${o.length} opiniones</span>
       </div>
-      ${i?`<div class="opinafy-badge-latest">
-        <p class="opinafy-badge-text">"${w(i.content.substring(0,80))}${i.content.length>80?"...":""}"</p>
-        <span class="opinafy-badge-author">\u2014 ${w(i.author_name)}</span>
+      ${t?`<div class="opinafy-badge-latest">
+        <p class="opinafy-badge-text">"${g(t.content.substring(0,80))}${t.content.length>80?"...":""}"</p>
+        <span class="opinafy-badge-author">\u2014 ${g(t.author_name)}</span>
       </div>`:""}
     </div>
-  `}function A(a,o){let{author_name:n,company:i,role:c,content:d,rating:h,created_at:m,is_company_verified:y,video_url:l}=a,e=`<div class="opinafy-avatar">${n.split(" ").map(_=>_[0]).join("").toUpperCase().slice(0,2)}</div>`,r="";c&&i?r=`${w(c)} en ${w(i)}`:i?r=w(i):c&&(r=w(c)),y&&i&&(r+=' <span class="opinafy-verified" title="Empresa verificada">\u2713</span>');let f="";if(m)try{f=new Date(m).toLocaleDateString("es-ES",{day:"numeric",month:"short",year:"numeric"})}catch{}let v=!!l,L=v?`
+  `}function I(a,o){let{author_name:i,company:t,role:c,content:l,rating:u,created_at:b,is_company_verified:v,video_url:d}=a,e=`<div class="opinafy-avatar">${i.split(" ").map(z=>z[0]).join("").toUpperCase().slice(0,2)}</div>`,r="";c&&t?r=`${g(c)} en ${g(t)}`:t?r=g(t):c&&(r=g(c)),v&&t&&(r+=' <span class="opinafy-verified" title="Empresa verificada">\u2713</span>');let f="";if(b)try{f=new Date(b).toLocaleDateString("es-ES",{day:"numeric",month:"short",year:"numeric"})}catch{}let h=!!d,m=h?`
     <div class="opinafy-video-container">
       <video class="opinafy-video" controls playsinline preload="metadata">
-        <source src="${l}" type="video/mp4">
-        <source src="${l}" type="video/webm">
+        <source src="${d}" type="video/mp4">
+        <source src="${d}" type="video/webm">
       </video>
-    </div>`:"",$=d.length>250,u=o.show_avatar!==!1,x=o.show_rating!==!1,C=o.show_date!==!1,k=o.show_company!==!1;return`
-    <div class="opinafy-card${v?" opinafy-card-has-video":""}">
-      ${L}
-      <div class="${v?"opinafy-card-body":""}">
-        <div class="opinafy-card-header">
-          ${u?e:""}
-          <div class="opinafy-author">
-            <div class="opinafy-author-name">${w(n)}</div>
-            ${k&&r?`<div class="opinafy-author-meta">${r}</div>`:""}
+    </div>`:"",w=o.video_display_mode||"full";if(h&&w!=="full"){if(w==="video_only")return`
+        <div class="opinafy-card opinafy-card-has-video opinafy-card-video-only">
+          ${m}
+        </div>
+      `;if(w==="video_stars")return`
+        <div class="opinafy-card opinafy-card-has-video">
+          ${m}
+          <div class="opinafy-card-body">
+            <div class="opinafy-author-name">${g(i)}</div>
+            ${u>0?`<div class="opinafy-stars">${O(u)}</div>`:""}
           </div>
         </div>
-        ${x&&h>0?`<div class="opinafy-stars">${F(h)}</div>`:""}
-        <div class="opinafy-content"><p>${w(d)}</p></div>
-        ${$?`<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer m\xE1s'">Leer m\xE1s</button>`:""}
-        ${C&&f?`<div class="opinafy-date">${f}</div>`:""}
+      `;if(w==="video_name")return`
+        <div class="opinafy-card opinafy-card-has-video">
+          ${m}
+          <div class="opinafy-card-body">
+            <div class="opinafy-author-name">${g(i)}</div>
+            ${t?`<div class="opinafy-author-meta">${g(t)}</div>`:""}
+          </div>
+        </div>
+      `}let x=l.length>250,$=o.show_avatar!==!1,M=o.show_rating!==!1,L=o.show_date!==!1,C=o.show_company!==!1;return`
+    <div class="opinafy-card${h?" opinafy-card-has-video":""}">
+      ${m}
+      <div class="${h?"opinafy-card-body":""}">
+        <div class="opinafy-card-header">
+          ${$?e:""}
+          <div class="opinafy-author">
+            <div class="opinafy-author-name">${g(i)}</div>
+            ${C&&r?`<div class="opinafy-author-meta">${r}</div>`:""}
+          </div>
+        </div>
+        ${M&&u>0?`<div class="opinafy-stars">${O(u)}</div>`:""}
+        <div class="opinafy-content"><p>${g(l)}</p></div>
+        ${x?`<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer m\xE1s'">Leer m\xE1s</button>`:""}
+        ${L&&f?`<div class="opinafy-date">${f}</div>`:""}
       </div>
     </div>
-  `}function F(a){let o=[];for(let n=1;n<=5;n++)n<=a?o.push('<svg class="opinafy-star opinafy-star-filled" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>'):o.push('<svg class="opinafy-star opinafy-star-empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>');return o.join("")}function V(){return`
+  `}function O(a){let o=[];for(let i=1;i<=5;i++)i<=a?o.push('<svg class="opinafy-star opinafy-star-filled" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>'):o.push('<svg class="opinafy-star opinafy-star-empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>');return o.join("")}function V(){return`
     <div class="opinafy-branding">
       <a href="https://opinafy.com?ref=widget" target="_blank" rel="noopener noreferrer">
         <svg class="opinafy-branding-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd"/></svg>
         Powered by Opinafy
       </a>
     </div>
-  `}function w(a){return a.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}(function(){function a(){let l=document.querySelectorAll("script[src]");for(let t=0;t<l.length;t++){let e=l[t].src;if((e.includes("widget.js")||e.includes("opinafy"))&&(e.includes("localhost")||e.includes("127.0.0.1"))){let r=new URL(e);return`${r.protocol}//${r.host}`}}return"https://opinafy.com"}let o=a(),n={modern:{family:"Inter",weights:"400;500;600;700"},serif:{family:"Playfair+Display",weights:"400;500;600;700"},rounded:{family:"Nunito",weights:"400;500;600;700"},minimal:{family:"DM+Sans",weights:"400;500;600;700"},bold:{family:"Space+Grotesk",weights:"400;500;600;700"},handwritten:{family:"Caveat",weights:"400;500;600;700"},mono:{family:"JetBrains+Mono",weights:"400;500;600;700"},elegant:{family:"Cormorant+Garamond",weights:"400;500;600;700"}};function i(l){let t=l.font_style||"modern",e=n[t];return e?`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${e.family}:wght@${e.weights}&display=swap">`:""}async function c(l){let t=await fetch(`${o}/api/widget/${l}`,{method:"GET",headers:{Accept:"application/json"}});if(!t.ok)throw new Error(`HTTP ${t.status}`);return t.json()}function d(l){try{fetch(`${o}/api/widget/${l}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({type:"impression"})}).catch(()=>{})}catch{}}function h(l){let t=l.querySelector(".opinafy-carousel-wrapper");if(!t)return;let e=t.querySelector(".opinafy-carousel-track"),r=t.querySelectorAll(".opinafy-carousel-slide"),f=t.querySelectorAll(".opinafy-dot"),v=t.querySelector('[data-action="prev"]'),L=t.querySelector('[data-action="next"]');if(!e||r.length===0)return;let $=parseInt(t.getAttribute("data-autoplay-speed")||"5000",10),u=0,x=null;function C(){if(f.length===0)return;let s=Math.min(Math.floor(u*f.length/r.length),f.length-1);f.forEach((p,g)=>p.classList.toggle("active",g===s))}function k(s){s<0&&(s=r.length-1),s>=r.length&&(s=0),u=s;let p=r[u];e.scrollTo({left:p.offsetLeft-e.offsetLeft,behavior:"smooth"}),C()}function _(){k(u+1)}function G(){k(u-1)}v&&v.addEventListener("click",()=>{G(),S()}),L&&L.addEventListener("click",()=>{_(),S()}),f.forEach((s,p)=>{s.addEventListener("click",()=>{let g=Math.floor(p*r.length/f.length);k(g),S()})});let I=null;e.addEventListener("scroll",()=>{I&&clearTimeout(I),I=setTimeout(()=>{let s=e.scrollLeft,p=0,g=1/0;r.forEach((T,M)=>{let b=Math.abs(T.offsetLeft-e.offsetLeft-s);b<g&&(g=b,p=M)}),p!==u&&(u=p,C())},100)});let E=!1,z=0,D=0;e.addEventListener("mousedown",s=>{E=!0,z=s.pageX,D=e.scrollLeft,e.classList.add("dragging"),B()}),e.addEventListener("mousemove",s=>{if(!E)return;s.preventDefault();let p=s.pageX-z;e.scrollLeft=D-p});function W(){if(!E)return;E=!1,e.classList.remove("dragging");let s=e.scrollLeft,p=0,g=1/0;r.forEach((T,M)=>{let b=Math.abs(T.offsetLeft-e.offsetLeft-s);b<g&&(g=b,p=M)}),k(p),S()}e.addEventListener("mouseup",W),e.addEventListener("mouseleave",W),e.addEventListener("touchstart",s=>{z=s.touches[0].pageX,D=e.scrollLeft,B()},{passive:!0}),e.addEventListener("touchmove",s=>{let p=s.touches[0].pageX-z;e.scrollLeft=D-p},{passive:!0}),e.addEventListener("touchend",()=>{let s=e.scrollLeft,p=0,g=1/0;r.forEach((T,M)=>{let b=Math.abs(T.offsetLeft-e.offsetLeft-s);b<g&&(g=b,p=M)}),k(p),S()});function H(){x&&clearInterval(x),x=setInterval(_,$)}function B(){x&&(clearInterval(x),x=null)}function S(){H()}t.addEventListener("mouseenter",B),t.addEventListener("mouseleave",()=>{E||H()}),H()}async function m(l){let t=l.getAttribute("data-project");if(!t){console.warn("[Opinafy] Widget element missing data-project attribute.");return}if(l.shadowRoot)return;let e=l.attachShadow({mode:"open"});e.innerHTML=`
+  `}function g(a){return a.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}(function(){function a(){let d=document.querySelectorAll("script[src]");for(let n=0;n<d.length;n++){let e=d[n].src;if((e.includes("widget.js")||e.includes("opinafy"))&&(e.includes("localhost")||e.includes("127.0.0.1"))){let r=new URL(e);return`${r.protocol}//${r.host}`}}return"https://opinafy.com"}let o=a(),i={modern:{family:"Inter",weights:"400;500;600;700"},serif:{family:"Playfair+Display",weights:"400;500;600;700"},rounded:{family:"Nunito",weights:"400;500;600;700"},minimal:{family:"DM+Sans",weights:"400;500;600;700"},bold:{family:"Space+Grotesk",weights:"400;500;600;700"},handwritten:{family:"Caveat",weights:"400;500;600;700"},mono:{family:"JetBrains+Mono",weights:"400;500;600;700"},elegant:{family:"Cormorant+Garamond",weights:"400;500;600;700"}};function t(d){let n=d.font_style||"modern",e=i[n];return e?`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${e.family}:wght@${e.weights}&display=swap">`:""}async function c(d){let n=await fetch(`${o}/api/widget/${d}`,{method:"GET",headers:{Accept:"application/json"}});if(!n.ok)throw new Error(`HTTP ${n.status}`);return n.json()}function l(d){try{fetch(`${o}/api/widget/${d}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({type:"impression"})}).catch(()=>{})}catch{}}function u(d){let n=d.querySelector(".opinafy-carousel-wrapper");if(!n)return;let e=n.querySelector(".opinafy-carousel-track"),r=n.querySelectorAll(".opinafy-carousel-slide"),f=n.querySelectorAll(".opinafy-dot"),h=n.querySelector('[data-action="prev"]'),m=n.querySelector('[data-action="next"]');if(!e||r.length===0)return;let w=parseInt(n.getAttribute("data-autoplay-speed")||"5000",10),x=0,$=null;function M(){if(f.length===0)return;let s=Math.min(Math.floor(x*f.length/r.length),f.length-1);f.forEach((p,y)=>p.classList.toggle("active",y===s))}function L(s){s<0&&(s=r.length-1),s>=r.length&&(s=0),x=s;let p=r[x];e.scrollTo({left:p.offsetLeft-e.offsetLeft,behavior:"smooth"}),M()}function C(){L(x+1)}function z(){L(x-1)}h&&h.addEventListener("click",()=>{z(),E()}),m&&m.addEventListener("click",()=>{C(),E()}),f.forEach((s,p)=>{s.addEventListener("click",()=>{let y=Math.floor(p*r.length/f.length);L(y),E()})});let H=null;e.addEventListener("scroll",()=>{H&&clearTimeout(H),H=setTimeout(()=>{let s=e.scrollLeft,p=0,y=1/0;r.forEach((S,T)=>{let k=Math.abs(S.offsetLeft-e.offsetLeft-s);k<y&&(y=k,p=T)}),p!==x&&(x=p,M())},100)});let _=!1,D=0,j=0;e.addEventListener("mousedown",s=>{_=!0,D=s.pageX,j=e.scrollLeft,e.classList.add("dragging"),W()}),e.addEventListener("mousemove",s=>{if(!_)return;s.preventDefault();let p=s.pageX-D;e.scrollLeft=j-p});function R(){if(!_)return;_=!1,e.classList.remove("dragging");let s=e.scrollLeft,p=0,y=1/0;r.forEach((S,T)=>{let k=Math.abs(S.offsetLeft-e.offsetLeft-s);k<y&&(y=k,p=T)}),L(p),E()}e.addEventListener("mouseup",R),e.addEventListener("mouseleave",R),e.addEventListener("touchstart",s=>{D=s.touches[0].pageX,j=e.scrollLeft,W()},{passive:!0}),e.addEventListener("touchmove",s=>{let p=s.touches[0].pageX-D;e.scrollLeft=j-p},{passive:!0}),e.addEventListener("touchend",()=>{let s=e.scrollLeft,p=0,y=1/0;r.forEach((S,T)=>{let k=Math.abs(S.offsetLeft-e.offsetLeft-s);k<y&&(y=k,p=T)}),L(p),E()});function B(){$&&clearInterval($),$=setInterval(C,w)}function W(){$&&(clearInterval($),$=null)}function E(){B()}n.addEventListener("mouseenter",W),n.addEventListener("mouseleave",()=>{_||B()}),B()}async function b(d){let n=d.getAttribute("data-project");if(!n){console.warn("[Opinafy] Widget element missing data-project attribute.");return}if(d.shadowRoot)return;let e=d.attachShadow({mode:"open"});e.innerHTML=`
       <style>
         :host { display: block; }
         .opinafy-loading { display: flex; align-items: center; justify-content: center; padding: 48px 16px; }
@@ -632,7 +665,7 @@
         @keyframes s { to { transform: rotate(360deg); } }
       </style>
       <div class="opinafy-loading"><div class="opinafy-spinner"></div></div>
-    `;try{let r=await c(t),f=r.config||{},v=i(f),L=P(f),$=q(r);e.innerHTML=`${v}<style>${L}</style>${$}`,r.config?.layout==="carousel"&&h(e),d(t)}catch(r){e.innerHTML=`
+    `;try{let r=await c(n),f=r.config||{},h=t(f),m=q(f),w=G(r);e.innerHTML=`${h}<style>${m}</style>${w}`,r.config?.layout==="carousel"&&u(e),l(n)}catch(r){e.innerHTML=`
         <style>
           :host { display: block; }
           .opinafy-error { text-align: center; padding: 32px 16px; color: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; }
@@ -641,4 +674,4 @@
           <p>No se pudieron cargar los testimonios.</p>
           <p>Por favor, intenta de nuevo m\xE1s tarde.</p>
         </div>
-      `,console.error("[Opinafy] Error loading widget:",r)}}function y(){document.querySelectorAll("#opinafy-widget, .opinafy-widget").forEach(t=>m(t))}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",y):y()})();})();
+      `,console.error("[Opinafy] Error loading widget:",r)}}function v(){document.querySelectorAll("#opinafy-widget, .opinafy-widget").forEach(n=>b(n))}document.readyState==="loading"?document.addEventListener("DOMContentLoaded",v):v()})();})();
