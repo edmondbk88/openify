@@ -26,7 +26,7 @@ Opinafy is a Spanish-native SaaS platform for collecting, managing, and displayi
 - `src/lib/blog-data.ts` - 80 blog articles (static)
 - `src/lib/widget-templates.ts` - 60 widget templates
 - `src/lib/minisite-templates.ts` - 30 mini site templates
-- `src/lib/industry-data.ts` - 30 industry pages
+- `src/lib/industry-data.ts` - 80 industry pages
 - `widget-src/` - Widget source (compile with `node widget-src/build.mjs`)
 
 ## Database
