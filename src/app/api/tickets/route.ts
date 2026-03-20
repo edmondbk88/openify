@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { Resend } from 'resend'
+import { ticketCreatedEmail } from '@/lib/email-templates'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -124,16 +125,12 @@ export async function POST(request: NextRequest) {
       await resend.emails.send({
         from: 'Opinafy <hola@opinafy.com>',
         to: 'hola@opinafy.com',
+        replyTo: 'hola@opinafy.com',
         subject: `Nuevo ticket de soporte: ${subject}`,
-        html: `
-          <h2>Nuevo ticket de soporte</h2>
-          <p><strong>Asunto:</strong> ${subject}</p>
-          <p><strong>Categoría:</strong> ${category}</p>
-          <p><strong>Prioridad:</strong> ${priority || 'medium'}</p>
-          <p><strong>Usuario:</strong> ${user.email}</p>
-          <p><strong>Mensaje:</strong></p>
-          <p>${message}</p>
-        `,
+        html: ticketCreatedEmail(subject, ticket.id),
+        headers: {
+          'List-Unsubscribe': '<mailto:hola@opinafy.com?subject=unsubscribe>',
+        },
       })
     } catch (emailError) {
       console.error('Error sending admin notification:', emailError)

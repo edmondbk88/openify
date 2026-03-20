@@ -32,6 +32,7 @@ export interface Project {
   collection_description: string | null
   thank_you_message: string
   is_active: boolean
+  show_on_minisite: boolean
   created_at: string
   updated_at: string
   testimonial_count?: number

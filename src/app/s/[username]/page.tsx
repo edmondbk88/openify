@@ -44,6 +44,7 @@ async function getProjectsAndTestimonials(userId: string) {
     .select('*')
     .eq('user_id', userId)
     .eq('is_active', true)
+    .eq('show_on_minisite', true)
     .order('created_at', { ascending: false })
 
   if (!projects || projects.length === 0) {
@@ -163,14 +164,23 @@ function getFontFamily(fontStyle?: string): string {
   }
 }
 
-function getLayoutClasses(layout?: string): string {
+function getLayoutClasses(layout?: string, count?: number): string {
+  const n = count ?? 99
   switch (layout) {
-    case 'grid': return 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
+    case 'grid':
+      if (n <= 2) return 'grid grid-cols-1 gap-6 max-w-xl mx-auto'
+      if (n <= 5) return 'grid grid-cols-1 gap-6 sm:grid-cols-2'
+      return 'grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3'
     case 'list': return 'flex flex-col gap-5 max-w-2xl mx-auto'
-    case 'cards': return 'grid grid-cols-1 gap-8 sm:grid-cols-2'
+    case 'cards':
+      if (n <= 2) return 'grid grid-cols-1 gap-8 max-w-xl mx-auto'
+      return 'grid grid-cols-1 gap-8 sm:grid-cols-2'
     case 'timeline': return 'flex flex-col gap-6 max-w-2xl mx-auto'
     case 'masonry':
-    default: return 'columns-1 gap-6 sm:columns-2 lg:columns-3'
+    default:
+      if (n <= 2) return 'columns-1 gap-6 max-w-xl mx-auto'
+      if (n <= 5) return 'columns-1 gap-6 sm:columns-2'
+      return 'columns-1 gap-6 sm:columns-2 lg:columns-3'
   }
 }
 
@@ -268,7 +278,7 @@ export default async function MiniSitePage({ params }: PageProps) {
 
   const fontFamily = getFontFamily(fontStyle)
   const headerAlign = getHeaderAlignment(headerStyle)
-  const layoutClasses = getLayoutClasses(layout)
+  const layoutClasses = getLayoutClasses(layout, totalTestimonials)
   const cardRadius = getCardBorderRadius(cardStyle)
 
   // Derived colors for dark mode cards

@@ -7,6 +7,7 @@ export const projectSchema = z.object({
   collection_title: z.string().min(5, 'El título debe tener al menos 5 caracteres').max(200),
   collection_description: z.string().max(500).optional().or(z.literal('')),
   thank_you_message: z.string().min(5).max(500),
+  show_on_minisite: z.boolean().optional(),
 })
 
 export const testimonialSchema = z.object({

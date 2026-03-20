@@ -6,6 +6,7 @@ import { PLAN_LIMITS } from '@/lib/constants'
 import { Plan } from '@/types'
 import { Resend } from 'resend'
 import { getVerificationLevel } from '@/lib/utils'
+import { testimonialVerificationEmail } from '@/lib/email-templates'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -165,12 +166,12 @@ export async function POST(request: NextRequest) {
         await resend.emails.send({
           from: 'Opinafy <hola@opinafy.com>',
           to: parsed.data.author_email!,
+          replyTo: 'hola@opinafy.com',
           subject: `Verifica tu testimonio para ${project.name}`,
-          html: buildVerificationEmail({
-            authorName: parsed.data.author_name,
-            projectName: project.name as string,
-            verificationUrl,
-          }),
+          html: testimonialVerificationEmail(project.name as string, verificationUrl, parsed.data.author_name),
+          headers: {
+            'List-Unsubscribe': '<mailto:hola@opinafy.com?subject=unsubscribe>',
+          },
         })
       } catch (emailError) {
         // Log the error but don't fail the request — the testimonial is saved
@@ -187,73 +188,3 @@ export async function POST(request: NextRequest) {
   }
 }
 
-function buildVerificationEmail({
-  authorName,
-  projectName,
-  verificationUrl,
-}: {
-  authorName: string
-  projectName: string
-  verificationUrl: string
-}): string {
-  return `
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body style="margin: 0; padding: 0; background-color: #f3f4f6; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f3f4f6;">
-    <tr>
-      <td align="center" style="padding: 40px 20px;">
-        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width: 480px; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
-          <!-- Header -->
-          <tr>
-            <td style="background: linear-gradient(135deg, #4f46e5, #6366f1); padding: 32px 40px; text-align: center;">
-              <h1 style="margin: 0; color: #ffffff; font-size: 22px; font-weight: 700;">Opinafy</h1>
-            </td>
-          </tr>
-          <!-- Body -->
-          <tr>
-            <td style="padding: 40px;">
-              <h2 style="margin: 0 0 16px; color: #111827; font-size: 20px; font-weight: 600;">
-                Verifica tu testimonio
-              </h2>
-              <p style="margin: 0 0 16px; color: #4b5563; font-size: 15px; line-height: 1.6;">
-                Hola ${authorName},
-              </p>
-              <p style="margin: 0 0 24px; color: #4b5563; font-size: 15px; line-height: 1.6;">
-                Gracias por dejar tu testimonio para <strong>${projectName}</strong>. Para completar el proceso, por favor verifica tu email haciendo clic en el siguiente botón:
-              </p>
-              <!-- Button -->
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
-                <tr>
-                  <td align="center">
-                    <a href="${verificationUrl}" style="display: inline-block; background-color: #4f46e5; color: #ffffff; text-decoration: none; padding: 14px 32px; border-radius: 8px; font-size: 15px; font-weight: 600;">
-                      Verificar testimonio
-                    </a>
-                  </td>
-                </tr>
-              </table>
-              <p style="margin: 24px 0 0; color: #9ca3af; font-size: 13px; line-height: 1.5;">
-                Si no has dejado ningún testimonio, puedes ignorar este email.
-              </p>
-            </td>
-          </tr>
-          <!-- Footer -->
-          <tr>
-            <td style="padding: 24px 40px; background-color: #f9fafb; border-top: 1px solid #e5e7eb; text-align: center;">
-              <p style="margin: 0; color: #9ca3af; font-size: 12px;">
-                &copy; ${new Date().getFullYear()} Opinafy. Todos los derechos reservados.
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-</body>
-</html>
-  `.trim()
-}

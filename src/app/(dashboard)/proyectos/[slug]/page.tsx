@@ -3,6 +3,7 @@ import { redirect, notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Project, Testimonial, TestimonialStatus } from '@/types'
 import TestimonialListClient from './testimonial-list-client'
+import MinisiteToggle from './minisite-toggle'
 
 export const metadata = {
   title: 'Detalle del proyecto - Opinafy',
@@ -168,6 +169,14 @@ export default async function ProyectoDetailPage({
             Ajustes recopilación
           </Link>
         </div>
+      </div>
+
+      {/* Minisite Toggle */}
+      <div className="mt-6">
+        <MinisiteToggle
+          projectId={(project as Project).id}
+          initialValue={(project as Project).show_on_minisite ?? true}
+        />
       </div>
 
       {/* Status Counts */}

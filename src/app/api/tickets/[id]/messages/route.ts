@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { Resend } from 'resend'
+import { ticketUserReplyEmail } from '@/lib/email-templates'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -96,14 +97,12 @@ export async function POST(
       await resend.emails.send({
         from: 'Opinafy <hola@opinafy.com>',
         to: 'hola@opinafy.com',
+        replyTo: 'hola@opinafy.com',
         subject: `Nueva respuesta en ticket: ${ticket.subject}`,
-        html: `
-          <h2>Nueva respuesta en ticket de soporte</h2>
-          <p><strong>Asunto:</strong> ${ticket.subject}</p>
-          <p><strong>Usuario:</strong> ${user.email}</p>
-          <p><strong>Mensaje:</strong></p>
-          <p>${message}</p>
-        `,
+        html: ticketUserReplyEmail(ticket.subject, message, user.email || '', id),
+        headers: {
+          'List-Unsubscribe': '<mailto:hola@opinafy.com?subject=unsubscribe>',
+        },
       })
     } catch (emailError) {
       console.error('Error sending admin notification:', emailError)
