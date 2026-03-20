@@ -12,6 +12,17 @@ const FONT_FAMILIES: Record<string, string> = {
   elegant: "'Cormorant Garamond', Georgia, serif",
 };
 
+// Helper: determine if a hex color is non-white (i.e. a colored background)
+function isColoredBg(hex: string): boolean {
+  const clean = hex.replace('#', '');
+  if (clean.length < 6) return false;
+  const r = parseInt(clean.slice(0, 2), 16);
+  const g = parseInt(clean.slice(2, 4), 16);
+  const b = parseInt(clean.slice(4, 6), 16);
+  // Consider it "colored" if it's noticeably away from pure white
+  return r < 245 || g < 245 || b < 245;
+}
+
 export function getStyles(config: any): string {
   const primary = config?.primary_color || '#2563eb';
   const bg = config?.background_color || '#ffffff';
@@ -20,6 +31,17 @@ export function getStyles(config: any): string {
   const isDark = theme === 'dark';
   const fontStyle = config?.font_style || 'modern';
   const fontFamily = FONT_FAMILIES[fontStyle] || FONT_FAMILIES.modern;
+
+  // Card background adapts: on colored backgrounds use white for contrast,
+  // on dark themes use a slightly lighter shade than the bg
+  const cardBg = isDark ? '#1f2937' : (isColoredBg(bg) ? '#ffffff' : '#ffffff');
+  const cardBorder = isDark ? '#374151' : (isColoredBg(bg) ? 'rgba(0,0,0,0.08)' : '#e5e7eb');
+  const cardShadow = isDark
+    ? '0 1px 3px rgba(0,0,0,0.4)'
+    : (isColoredBg(bg) ? '0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)' : '0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)');
+  const cardShadowHover = isDark
+    ? '0 4px 12px rgba(0,0,0,0.5)'
+    : (isColoredBg(bg) ? '0 8px 24px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.06)' : '0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)');
 
   return `
     :host {
@@ -43,14 +65,14 @@ export function getStyles(config: any): string {
       --opinafy-bg: ${isDark ? '#1f2937' : bg};
       --opinafy-text: ${isDark ? '#f3f4f6' : text};
       --opinafy-text-secondary: ${isDark ? '#9ca3af' : '#6b7280'};
-      --opinafy-border: ${isDark ? '#374151' : '#e5e7eb'};
-      --opinafy-card-bg: ${isDark ? '#111827' : '#ffffff'};
-      --opinafy-card-shadow: ${isDark ? '0 1px 3px rgba(0,0,0,0.4)' : '0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)'};
-      --opinafy-card-shadow-hover: ${isDark ? '0 4px 12px rgba(0,0,0,0.5)' : '0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)'};
+      --opinafy-border: ${cardBorder};
+      --opinafy-card-bg: ${cardBg};
+      --opinafy-card-shadow: ${cardShadow};
+      --opinafy-card-shadow-hover: ${cardShadowHover};
       --opinafy-star-filled: #f59e0b;
       --opinafy-star-empty: ${isDark ? '#4b5563' : '#d1d5db'};
-      --opinafy-radius: 12px;
-      --opinafy-radius-sm: 8px;
+      --opinafy-radius: ${config?.border_radius ?? 12}px;
+      --opinafy-radius-sm: ${Math.max((config?.border_radius ?? 12) - 4, 4)}px;
 
       background: var(--opinafy-bg);
       color: var(--opinafy-text);

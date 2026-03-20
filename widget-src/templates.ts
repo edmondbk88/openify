@@ -21,7 +21,13 @@ interface WidgetConfig {
   background_color: string;
   text_color: string;
   theme: 'light' | 'dark';
+  border_radius: number;
+  show_rating: boolean;
+  show_date: boolean;
+  show_avatar: boolean;
+  show_company: boolean;
   show_branding: boolean;
+  font_style: string;
   autoplay_speed?: number;
 }
 
@@ -192,21 +198,27 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
   // Truncate long text
   const isLong = content.length > 250;
 
+  // Respect config toggles (default to showing if not explicitly false)
+  const showAvatar = config.show_avatar !== false;
+  const showRating = config.show_rating !== false;
+  const showDate = config.show_date !== false;
+  const showCompany = config.show_company !== false;
+
   return `
     <div class="opinafy-card${hasVideo ? ' opinafy-card-has-video' : ''}">
       ${videoHtml}
       <div class="${hasVideo ? 'opinafy-card-body' : ''}">
         <div class="opinafy-card-header">
-          ${avatarHtml}
+          ${showAvatar ? avatarHtml : ''}
           <div class="opinafy-author">
             <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
-            ${metaHtml ? `<div class="opinafy-author-meta">${metaHtml}</div>` : ''}
+            ${showCompany && metaHtml ? `<div class="opinafy-author-meta">${metaHtml}</div>` : ''}
           </div>
         </div>
-        ${rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
+        ${showRating && rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
         <div class="opinafy-content"><p>${escapeHtml(content)}</p></div>
         ${isLong ? `<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer más'">Leer más</button>` : ''}
-        ${dateStr ? `<div class="opinafy-date">${dateStr}</div>` : ''}
+        ${showDate && dateStr ? `<div class="opinafy-date">${dateStr}</div>` : ''}
       </div>
     </div>
   `;
