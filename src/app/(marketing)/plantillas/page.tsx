@@ -158,18 +158,51 @@ export default function PlantillasPage() {
         </div>
       </section>
 
-      {/* Cross-link banner */}
-      <section className="border-t border-gray-100 bg-gray-50 px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-lg font-medium text-gray-700">
-            Buscas plantillas para tu mini sitio?
+      {/* Mini Site Cross-link */}
+      <section className="relative overflow-hidden border-t border-indigo-200/50 bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 px-4 py-20 sm:px-6 lg:px-8">
+        <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-white/5 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-purple-400/10 blur-3xl" />
+
+        <div className="relative mx-auto max-w-5xl text-center">
+          <span className="inline-block rounded-full bg-white/10 px-4 py-1.5 text-sm font-semibold text-indigo-100">
+            Mini Sitio Opinafy
+          </span>
+          <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
+            Buscas una pagina completa de testimonios?
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-indigo-100">
+            Con el mini sitio de Opinafy tienes tu propia pagina profesional para recopilar y mostrar
+            testimonios verificados. Perfecto si no tienes web o quieres una landing dedicada.
+            Elige entre 30 plantillas disenadas por profesion.
           </p>
+
+          {/* Template thumbnails */}
+          <div className="mx-auto mt-10 grid max-w-3xl grid-cols-3 gap-4 sm:gap-6">
+            {[
+              { label: 'Salud', gradient: 'from-sky-400 to-blue-500', icon: 'Consultorio' },
+              { label: 'Creativos', gradient: 'from-pink-400 to-rose-500', icon: 'Estudio' },
+              { label: 'Negocios', gradient: 'from-emerald-400 to-teal-500', icon: 'Empresa' },
+            ].map((t) => (
+              <div key={t.label} className="group overflow-hidden rounded-xl bg-white/10 p-1 backdrop-blur-sm transition-all hover:bg-white/20">
+                <div className={`flex aspect-[4/3] items-center justify-center rounded-lg bg-gradient-to-br ${t.gradient}`}>
+                  <div className="text-center">
+                    <div className="mx-auto flex h-10 w-10 items-center justify-center rounded-full bg-white/20 text-lg font-bold text-white">
+                      {t.icon[0]}
+                    </div>
+                    <p className="mt-2 text-xs font-semibold text-white/90">{t.icon}</p>
+                  </div>
+                </div>
+                <p className="py-2 text-center text-xs font-medium text-indigo-100">{t.label}</p>
+              </div>
+            ))}
+          </div>
+
           <Link
             href="/plantillas-minisitio"
-            className="mt-3 inline-flex items-center gap-2 text-indigo-600 font-semibold hover:text-indigo-700 transition-colors"
+            className="mt-10 inline-flex h-12 items-center rounded-lg bg-white px-8 text-base font-semibold text-indigo-700 shadow-lg transition-all hover:bg-indigo-50 hover:shadow-xl"
           >
-            Ver plantillas de mini sitio
-            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+            Ver 30 plantillas de mini sitio
+            <svg className="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
           </Link>

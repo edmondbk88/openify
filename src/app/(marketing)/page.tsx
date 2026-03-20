@@ -7,6 +7,7 @@ import { HowItWorks } from '@/components/landing/how-it-works'
 import { TestimonialsPreview } from '@/components/landing/testimonials-preview'
 import { Pricing } from '@/components/landing/pricing'
 import { Faq } from '@/components/landing/faq'
+import { MiniSiteShowcase } from '@/components/landing/minisite-showcase'
 import { CtaSection } from '@/components/landing/cta-section'
 import { Footer } from '@/components/landing/footer'
 import {
@@ -52,6 +53,7 @@ export default function HomePage() {
       <Hero />
       <Features />
       <HowItWorks />
+      <MiniSiteShowcase />
       <TestimonialsPreview />
       <Pricing />
       <Faq />

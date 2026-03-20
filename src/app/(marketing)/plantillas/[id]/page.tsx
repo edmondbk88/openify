@@ -102,12 +102,23 @@ export default async function TemplateDetailPage({ params }: PageProps) {
               {template.description}
             </p>
           </div>
-          <Link
-            href="/registro"
-            className="inline-flex h-12 shrink-0 items-center rounded-lg bg-indigo-600 px-8 text-base font-semibold text-white transition-colors hover:bg-indigo-700"
-          >
-            Usar esta plantilla
-          </Link>
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+            <Link
+              href={`/plantillas/${id}/demo`}
+              className="inline-flex h-12 items-center rounded-lg border-2 border-indigo-600 px-6 text-base font-semibold text-indigo-600 transition-colors hover:bg-indigo-50"
+            >
+              <svg className="mr-2 h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 010 1.972l-11.54 6.347a1.125 1.125 0 01-1.667-.986V5.653z" />
+              </svg>
+              Ver demo en vivo
+            </Link>
+            <Link
+              href="/registro"
+              className="inline-flex h-12 items-center rounded-lg bg-indigo-600 px-8 text-base font-semibold text-white transition-colors hover:bg-indigo-700"
+            >
+              Usar esta plantilla
+            </Link>
+          </div>
         </div>
 
         {/* Live preview */}
