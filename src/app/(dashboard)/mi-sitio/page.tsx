@@ -158,7 +158,7 @@ export default function MiSitioPage() {
             </svg>
           </div>
           <h2 className="text-xl font-semibold text-gray-900">
-            Funcion disponible en Pro y Business
+            Funcion disponible en Mini Sitio, Pro y Business
           </h2>
           <p className="mt-2 text-gray-500 max-w-md mx-auto">
             Con tu pagina publica de testimonios, tus clientes potenciales podran ver todos tus testimonios verificados en un solo lugar. Perfecto para compartir en redes sociales, email y tarjetas de visita.

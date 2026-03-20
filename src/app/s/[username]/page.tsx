@@ -234,12 +234,12 @@ export default async function MiniSitePage({ params }: PageProps) {
           </div>
           <h1 className="text-2xl font-bold text-gray-900">
             {isOwner
-              ? 'Activa tu plan Pro para tener tu pagina publica de testimonios'
-              : `Esta pagina estara disponible cuando ${profile.full_name || username} active su plan Pro o Business`
+              ? 'Activa tu plan Mini Sitio, Pro o Business para tener tu pagina publica de testimonios'
+              : `Esta pagina estara disponible cuando ${profile.full_name || username} active su plan Mini Sitio, Pro o Business`
             }
           </h1>
           <p className="mt-3 text-gray-500">
-            Las paginas publicas de testimonios estan disponibles en los planes Pro y Business de Opinafy.
+            Las paginas publicas de testimonios estan disponibles en los planes Mini Sitio, Pro y Business de Opinafy.
           </p>
           {isOwner ? (
             <Link

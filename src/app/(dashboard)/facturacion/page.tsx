@@ -139,8 +139,10 @@ export default async function FacturacionPage({
                 <span className="text-sm text-gray-500">
                   {limits.projects === Infinity
                     ? 'Proyectos ilimitados'
-                    : `${limits.projects} proyectos`}
-                  , testimonios ilimitados
+                    : `${limits.projects} proyecto${limits.projects === 1 ? '' : 's'}`}
+                  , {limits.testimonials === Infinity
+                    ? 'testimonios ilimitados'
+                    : `${limits.testimonials} testimonios`}
                 </span>
               )}
             </div>
@@ -150,7 +152,7 @@ export default async function FacturacionPage({
       </div>
 
       {/* Upgrade Cards (show if not on highest plan) */}
-      {(currentPlan === 'free' || currentPlan === 'minisite') && (
+      {currentPlan !== 'business' && (
         <div className="mt-8">
           <h2 className="text-lg font-semibold text-gray-900">
             Mejora tu plan
@@ -200,6 +202,7 @@ export default async function FacturacionPage({
             )}
 
             {/* Pro Plan */}
+            {(currentPlan === 'free' || currentPlan === 'minisite') && (
             <div className="rounded-xl border-2 border-indigo-200 bg-white p-6">
               <div className="flex items-center justify-between">
                 <h3 className="text-lg font-bold text-gray-900">Pro</h3>
@@ -243,6 +246,7 @@ export default async function FacturacionPage({
                 </UpgradeButton>
               </div>
             </div>
+            )}
 
             {/* Business Plan */}
             <div className="rounded-xl border border-gray-200 bg-white p-6">
@@ -255,7 +259,7 @@ export default async function FacturacionPage({
               </div>
               <ul className="mt-6 space-y-3">
                 <li className="flex items-center gap-2 text-sm text-gray-700">
-                  <CheckIcon /> Proyectos ilimitados
+                  <CheckIcon /> 20 proyectos
                 </li>
                 <li className="flex items-center gap-2 text-sm text-gray-700">
                   <CheckIcon /> Testimonios ilimitados
@@ -320,9 +324,7 @@ export default async function FacturacionPage({
                 <td className="px-6 py-3 text-center text-gray-600">1</td>
                 <td className="px-6 py-3 text-center text-gray-600">1</td>
                 <td className="px-6 py-3 text-center text-gray-600">3</td>
-                <td className="px-6 py-3 text-center text-gray-600">
-                  Ilimitados
-                </td>
+                <td className="px-6 py-3 text-center text-gray-600">20</td>
               </tr>
               <tr>
                 <td className="px-6 py-3 text-gray-700">Testimonios</td>
@@ -362,8 +364,8 @@ export default async function FacturacionPage({
                 <td className="px-6 py-3 text-gray-700">Diseños de widget</td>
                 <td className="px-6 py-3 text-center text-gray-600">2</td>
                 <td className="px-6 py-3 text-center text-gray-600">2</td>
-                <td className="px-6 py-3 text-center text-gray-600">5</td>
-                <td className="px-6 py-3 text-center text-gray-600">5</td>
+                <td className="px-6 py-3 text-center text-gray-600">6</td>
+                <td className="px-6 py-3 text-center text-gray-600">6</td>
               </tr>
               <tr>
                 <td className="px-6 py-3 text-gray-700">

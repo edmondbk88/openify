@@ -9,6 +9,7 @@ export default async function AdminDashboardPage() {
     projectsRes,
     testimonialsRes,
     freeRes,
+    minisiteRes,
     proRes,
     businessRes,
     pendingRes,
@@ -23,6 +24,7 @@ export default async function AdminDashboardPage() {
     admin.from('projects').select('*', { count: 'exact', head: true }),
     admin.from('testimonials').select('*', { count: 'exact', head: true }),
     admin.from('profiles').select('*', { count: 'exact', head: true }).eq('plan', 'free'),
+    admin.from('profiles').select('*', { count: 'exact', head: true }).eq('plan', 'minisite'),
     admin.from('profiles').select('*', { count: 'exact', head: true }).eq('plan', 'pro'),
     admin.from('profiles').select('*', { count: 'exact', head: true }).eq('plan', 'business'),
     admin.from('testimonials').select('*', { count: 'exact', head: true }).eq('status', 'pending'),
@@ -38,6 +40,7 @@ export default async function AdminDashboardPage() {
   const totalProjects = projectsRes.count || 0
   const totalTestimonials = testimonialsRes.count || 0
   const freeCount = freeRes.count || 0
+  const minisiteCount = minisiteRes.count || 0
   const proCount = proRes.count || 0
   const businessCount = businessRes.count || 0
   const pendingCount = pendingRes.count || 0
@@ -94,7 +97,7 @@ export default async function AdminDashboardPage() {
     (sum: number, row: { count: number }) => sum + (row.count || 0),
     0
   )
-  const mrr = proCount * 9 + businessCount * 19
+  const mrr = minisiteCount * 5 + proCount * 9 + businessCount * 19
 
   // Fetch storage stats
   const bucketNames = ['blog-images', 'avatars', 'videos', 'logos']
@@ -129,7 +132,7 @@ export default async function AdminDashboardPage() {
   const storageUsagePercent = Math.round((storageTotalMB / freeTierLimitMB) * 10000) / 100
 
   // Cost estimates
-  const activeSubscribers = proCount + businessCount
+  const activeSubscribers = minisiteCount + proCount + businessCount
   const stripeFees = mrr * 0.029 + activeSubscribers * 0.25
   const stripeFeesFmt = Math.round(stripeFees * 100) / 100
   const supabaseTier = storageTotalMB > 1024 || totalUsers > 50000 ? 'Pro (25$/mes)' : 'Free'
@@ -145,6 +148,7 @@ export default async function AdminDashboardPage() {
     { label: 'Testimonios', value: totalTestimonials, color: 'bg-purple-500' },
     { label: 'MRR estimado', value: `${mrr}\u20AC`, color: 'bg-yellow-500' },
     { label: 'Plan Free', value: freeCount, color: 'bg-gray-500' },
+    { label: 'Plan Mini Sitio', value: minisiteCount, color: 'bg-teal-500' },
     { label: 'Plan Pro', value: proCount, color: 'bg-indigo-500' },
     { label: 'Plan Business', value: businessCount, color: 'bg-pink-500' },
     { label: 'Impresiones (mes)', value: totalImpressions, color: 'bg-teal-500' },
