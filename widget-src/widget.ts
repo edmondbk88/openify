@@ -295,4 +295,58 @@ import { renderWidget, WidgetData } from './templates';
   } else {
     boot();
   }
+
+  // ── Watch for dynamically added widget elements ──
+  // This enables re-initialization in SPA environments (e.g. dashboard preview)
+  if (typeof MutationObserver !== 'undefined') {
+    const observer = new MutationObserver((mutations) => {
+      for (const mutation of mutations) {
+        for (const node of Array.from(mutation.addedNodes)) {
+          if (node instanceof HTMLElement) {
+            // Check the node itself
+            if (
+              (node.id === 'opinafy-widget' || node.classList.contains('opinafy-widget')) &&
+              node.getAttribute('data-project') &&
+              !node.shadowRoot
+            ) {
+              initWidget(node);
+            }
+            // Check descendants
+            const descendants = node.querySelectorAll
+              ? node.querySelectorAll('#opinafy-widget, .opinafy-widget')
+              : [];
+            descendants.forEach((el) => {
+              if (el instanceof HTMLElement && el.getAttribute('data-project') && !el.shadowRoot) {
+                initWidget(el);
+              }
+            });
+          }
+        }
+      }
+    });
+
+    // Start observing once the body is available
+    const startObserver = (): void => {
+      if (document.body) {
+        observer.observe(document.body, { childList: true, subtree: true });
+      }
+    };
+
+    if (document.body) {
+      startObserver();
+    } else {
+      document.addEventListener('DOMContentLoaded', startObserver);
+    }
+  }
+
+  // ── Custom re-init event ──
+  // Dispatch window event 'opinafy-init' to re-scan and initialize new widgets
+  window.addEventListener('opinafy-init', () => {
+    const elements = document.querySelectorAll('#opinafy-widget, .opinafy-widget');
+    elements.forEach((el) => {
+      if (el instanceof HTMLElement && el.getAttribute('data-project') && !el.shadowRoot) {
+        initWidget(el);
+      }
+    });
+  });
 })();

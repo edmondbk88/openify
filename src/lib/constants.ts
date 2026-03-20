@@ -29,7 +29,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     miniSite: true,
   },
   business: {
-    projects: Infinity,
+    projects: 20,
     testimonials: Infinity,
     video: true,
     removeBranding: true,

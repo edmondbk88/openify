@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import { useToast } from '@/components/ui/toast'
 import WidgetConfigurator from '@/components/dashboard/widget-configurator'
-import WidgetPreview from '@/components/dashboard/widget-preview'
+import WidgetRealPreview from '@/components/dashboard/widget-real-preview'
 import EmbedCode from '@/components/dashboard/embed-code'
 import { createClient } from '@/lib/supabase/client'
 import type { WidgetConfig } from '@/types'
@@ -218,7 +218,7 @@ export default function WidgetPage() {
 
         {/* Right: Preview + Embed Code */}
         <div className="space-y-6">
-          <WidgetPreview config={config} />
+          {projectId && <WidgetRealPreview projectId={projectId} config={config} />}
           {projectId && <EmbedCode projectId={projectId} />}
         </div>
       </div>
