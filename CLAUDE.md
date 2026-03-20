@@ -54,3 +54,4 @@ Opinafy is a Spanish-native SaaS platform for collecting, managing, and displayi
 - Admin panel: /admin (only for is_admin users)
 - Mini sites: /s/[username]
 - Collection: /p/[username]/[slug]
+
