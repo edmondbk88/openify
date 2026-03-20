@@ -287,7 +287,11 @@ export function getStyles(config: any): string {
     .opinafy-carousel-wrapper {
       position: relative;
       overflow: hidden;
-      padding: 0 44px;
+      padding: 0 52px;
+    }
+
+    .opinafy-carousel-wrapper.opinafy-no-nav {
+      padding: 0;
     }
 
     .opinafy-carousel-track {
@@ -396,6 +400,11 @@ export function getStyles(config: any): string {
       display: grid;
       grid-template-columns: 1fr;
       gap: 16px;
+      align-items: stretch;
+    }
+
+    .opinafy-grid .opinafy-card {
+      height: 100%;
     }
 
     @media (min-width: 640px) {

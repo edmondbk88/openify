@@ -72,27 +72,36 @@ export function renderWidget(data: WidgetData): string {
 export function renderCarousel(data: WidgetData): string {
   const { testimonials, config } = data;
   const speed = config.autoplay_speed || 5000;
+  const count = testimonials.length;
+
+  // Calculate how many slides fit per view (mobile=1, tablet=2, desktop=3)
+  // We'll show dots per "page" not per slide - handled in JS
+  // Only show nav if there are more testimonials than fit in one view
+  const needsNav = count > 1;
+
   const slides = testimonials.map(
     (t, i) => `<div class="opinafy-carousel-slide" data-index="${i}">${renderCard(t, config)}</div>`
   ).join('');
 
-  const dots = testimonials.map(
+  // Only show dots if more than 3 (desktop shows 3 at a time)
+  const showDots = count > 3;
+  const dots = showDots ? testimonials.map(
     (_, i) => `<button class="opinafy-dot${i === 0 ? ' active' : ''}" data-dot="${i}" aria-label="Ir al testimonio ${i + 1}"></button>`
-  ).join('');
+  ).join('') : '';
 
   return `
-    <div class="opinafy-carousel-wrapper" data-autoplay-speed="${speed}">
-      <button class="opinafy-carousel-nav opinafy-carousel-prev" data-action="prev" aria-label="Anterior">
+    <div class="opinafy-carousel-wrapper${needsNav ? '' : ' opinafy-no-nav'}" data-autoplay-speed="${speed}" data-count="${count}">
+      ${needsNav ? `<button class="opinafy-carousel-nav opinafy-carousel-prev" data-action="prev" aria-label="Anterior">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
+      </button>` : ''}
       <div class="opinafy-carousel-track">
         ${slides}
       </div>
-      <button class="opinafy-carousel-nav opinafy-carousel-next" data-action="next" aria-label="Siguiente">
+      ${needsNav ? `<button class="opinafy-carousel-nav opinafy-carousel-next" data-action="next" aria-label="Siguiente">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-      <div class="opinafy-carousel-dots">${dots}</div>
-      <div class="opinafy-autoplay-bar running" style="--opinafy-autoplay-speed: ${speed}ms"></div>
+      </button>` : ''}
+      ${showDots ? `<div class="opinafy-carousel-dots">${dots}</div>` : ''}
+      ${needsNav ? `<div class="opinafy-autoplay-bar running" style="--opinafy-autoplay-speed: ${speed}ms"></div>` : ''}
     </div>
   `;
 }
@@ -121,56 +130,68 @@ export function renderSingle(data: WidgetData): string {
 // ── Badge Layout ──
 
 export function renderBadge(data: WidgetData): string {
-  const avg = data.average_rating ?? 0;
-  const count = data.total_count ?? data.testimonials.length;
-  const latest = data.testimonials[0];
-  const displayAvg = avg > 0 ? avg.toFixed(1) : '--';
+  const { testimonials } = data;
+  const avgRating = testimonials.reduce((s, t) => s + t.rating, 0) / testimonials.length;
+  const latest = testimonials[0];
 
   return `
-    <div class="opinafy-badge-container">
-      <div class="opinafy-badge-card">
-        <div class="opinafy-badge-score">
-          <span class="opinafy-badge-number">${displayAvg}</span>
-          <div>
-            ${renderStars(Math.round(avg))}
-            <div class="opinafy-badge-details">${count} opinion${count !== 1 ? 'es' : ''} verificada${count !== 1 ? 's' : ''}</div>
-          </div>
-        </div>
-        ${latest ? `
-          <div class="opinafy-badge-snippet">"${escapeHtml(truncate(latest.content, 100))}"</div>
-          <div class="opinafy-badge-author">- ${escapeHtml(latest.author_name)}</div>
-        ` : ''}
+    <div class="opinafy-badge">
+      <div class="opinafy-badge-score">
+        <span class="opinafy-badge-number">${avgRating.toFixed(1)}</span>
+        <div class="opinafy-stars opinafy-stars-sm">${renderStars(Math.round(avgRating))}</div>
+        <span class="opinafy-badge-count">${testimonials.length} opiniones</span>
       </div>
+      ${latest ? `<div class="opinafy-badge-latest">
+        <p class="opinafy-badge-text">"${escapeHtml(latest.content.substring(0, 80))}${latest.content.length > 80 ? '...' : ''}"</p>
+        <span class="opinafy-badge-author">— ${escapeHtml(latest.author_name)}</span>
+      </div>` : ''}
     </div>
   `;
 }
 
-// ── Individual Testimonial Card ──
+// ── Card Renderer ──
 
 export function renderCard(testimonial: Testimonial, config: WidgetConfig): string {
-  const { author_name, author_avatar, company, role, rating, content, created_at, video_url } = testimonial;
-  const initials = getInitials(author_name);
-  const verifiedBadge = company && testimonial.is_company_verified
-    ? ' <span class="opinafy-verified" title="Empresa verificada">&#10003;</span>'
-    : '';
-  const metaParts: string[] = [];
-  if (role) metaParts.push(escapeHtml(role));
-  if (company) metaParts.push(escapeHtml(company) + verifiedBadge);
-  const metaHtml = metaParts.join(' en ');
-  const dateStr = formatDate(created_at);
+  const { author_name, company, role, content, rating, created_at, is_company_verified, video_url } = testimonial;
 
-  const avatarHtml = author_avatar
-    ? `<div class="opinafy-avatar"><img src="${escapeAttr(author_avatar)}" alt="${escapeAttr(author_name)}" loading="lazy"/></div>`
-    : `<div class="opinafy-avatar">${escapeHtml(initials)}</div>`;
+  // Avatar: initials
+  const initials = author_name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+  const avatarHtml = `<div class="opinafy-avatar">${initials}</div>`;
 
-  const videoHtml = video_url
-    ? `<div class="opinafy-video-container"><video class="opinafy-video" src="${escapeAttr(video_url)}" controls preload="metadata" playsinline></video></div>`
-    : '';
+  // Author meta line
+  let metaHtml = '';
+  if (role && company) metaHtml = `${escapeHtml(role)} en ${escapeHtml(company)}`;
+  else if (company) metaHtml = escapeHtml(company);
+  else if (role) metaHtml = escapeHtml(role);
 
+  if (is_company_verified && company) {
+    metaHtml += ` <span class="opinafy-verified" title="Empresa verificada">✓</span>`;
+  }
+
+  // Date
+  let dateStr = '';
+  if (created_at) {
+    try {
+      const d = new Date(created_at);
+      dateStr = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+    } catch { /* ignore */ }
+  }
+
+  // Video
   const hasVideo = !!video_url;
+  const videoHtml = hasVideo ? `
+    <div class="opinafy-video-container">
+      <video class="opinafy-video" controls playsinline preload="metadata">
+        <source src="${video_url}" type="video/mp4">
+        <source src="${video_url}" type="video/webm">
+      </video>
+    </div>` : '';
+
+  // Truncate long text
+  const isLong = content.length > 250;
 
   return `
-    <div class="opinafy-card${hasVideo ? ' opinafy-card-has-video' : ''}" data-testimonial-id="${escapeAttr(testimonial.id)}">
+    <div class="opinafy-card${hasVideo ? ' opinafy-card-has-video' : ''}">
       ${videoHtml}
       <div class="${hasVideo ? 'opinafy-card-body' : ''}">
         <div class="opinafy-card-header">
@@ -182,7 +203,7 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
         </div>
         ${rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
         <div class="opinafy-content"><p>${escapeHtml(content)}</p></div>
-        ${content.length > 250 ? `<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer más'">Leer más</button>` : ''}
+        ${isLong ? `<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer más'">Leer más</button>` : ''}
         ${dateStr ? `<div class="opinafy-date">${dateStr}</div>` : ''}
       </div>
     </div>
@@ -195,9 +216,9 @@ export function renderStars(rating: number): string {
   const stars: string[] = [];
   for (let i = 1; i <= 5; i++) {
     if (i <= rating) {
-      stars.push(`<svg class="opinafy-star opinafy-star-filled" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.176 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.063 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>`);
+      stars.push(`<svg class="opinafy-star opinafy-star-filled" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`);
     } else {
-      stars.push(`<svg class="opinafy-star opinafy-star-empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.176 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.063 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>`);
+      stars.push(`<svg class="opinafy-star opinafy-star-empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`);
     }
   }
   return stars.join('');
@@ -209,43 +230,19 @@ export function renderBranding(): string {
   return `
     <div class="opinafy-branding">
       <a href="https://opinafy.com?ref=widget" target="_blank" rel="noopener noreferrer">
-        <svg class="opinafy-branding-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Powered by Opinafy
+        <svg class="opinafy-branding-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd"/></svg>
+        Powered by Opinafy
       </a>
     </div>
   `;
 }
 
-// ── Helpers ──
+// ── Utilities ──
 
 function escapeHtml(str: string): string {
-  const map: Record<string, string> = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' };
-  return str.replace(/[&<>"']/g, c => map[c] || c);
-}
-
-function escapeAttr(str: string): string {
-  return str.replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-}
-
-function getInitials(name: string): string {
-  return name
-    .split(/\s+/)
-    .slice(0, 2)
-    .map(w => w.charAt(0))
-    .join('')
-    .toUpperCase();
-}
-
-function truncate(str: string, max: number): string {
-  if (str.length <= max) return str;
-  return str.slice(0, max).trimEnd() + '...';
-}
-
-function formatDate(dateStr: string): string {
-  try {
-    const d = new Date(dateStr);
-    if (isNaN(d.getTime())) return '';
-    return d.toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' });
-  } catch {
-    return '';
-  }
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
 }
