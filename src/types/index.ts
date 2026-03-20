@@ -57,6 +57,10 @@ export interface Testimonial {
   source: string
   source_url: string | null
   source_platform: string | null
+  sentiment_score: number | null
+  sentiment_label: string | null
+  key_phrases: string[] | null
+  ai_summary: string | null
   created_at: string
   updated_at: string
 }

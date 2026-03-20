@@ -7,6 +7,7 @@ import { Plan } from '@/types'
 import { Resend } from 'resend'
 import { getVerificationLevel } from '@/lib/utils'
 import { testimonialVerificationEmail } from '@/lib/email-templates'
+import { analyzeSentiment } from '@/lib/sentiment'
 
 function getResend() { return new Resend(process.env.RESEND_API_KEY) }
 
@@ -156,6 +157,20 @@ export async function POST(request: NextRequest) {
 
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 })
+    }
+
+    // Run sentiment analysis and update the record
+    try {
+      const sentiment = analyzeSentiment(parsed.data.content)
+      await supabase.from('testimonials').update({
+        sentiment_score: sentiment.score,
+        sentiment_label: sentiment.label,
+        key_phrases: sentiment.keyPhrases,
+        ai_summary: sentiment.summary,
+      }).eq('id', testimonial.id)
+    } catch (sentimentError) {
+      // Log but don't fail the request
+      console.error('Error running sentiment analysis:', sentimentError)
     }
 
     // Send verification email if author provided an email

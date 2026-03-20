@@ -121,6 +121,40 @@ export default function TestimonialCard({
         {truncate(testimonial.content, 200)}
       </p>
 
+      {/* Sentiment Indicator */}
+      {testimonial.sentiment_score != null && (
+        <div className="mt-3 flex items-center gap-2">
+          <span
+            className="inline-flex items-center gap-1 text-sm"
+            title={testimonial.ai_summary || ''}
+          >
+            {testimonial.sentiment_score > 0.3 ? (
+              <svg className="h-4 w-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.536-4.464a.75.75 0 10-1.072-1.072A3.5 3.5 0 0110 13.5a3.5 3.5 0 01-2.464-1.036.75.75 0 00-1.072 1.072A5 5 0 0010 15a5 5 0 003.536-1.464zM9 8.5a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd" />
+              </svg>
+            ) : testimonial.sentiment_score < -0.3 ? (
+              <svg className="h-4 w-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-3.536-3.536a.75.75 0 001.072 1.072A3.5 3.5 0 0110 14.5a3.5 3.5 0 012.464 1.036.75.75 0 101.072-1.072A5 5 0 0010 13a5 5 0 00-3.536 1.464zM9 8.5a1 1 0 11-2 0 1 1 0 012 0zm4 0a1 1 0 11-2 0 1 1 0 012 0z" clipRule="evenodd" />
+              </svg>
+            ) : (
+              <svg className="h-4 w-4 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9.5a1 1 0 112 0 1 1 0 01-2 0zm5-1a1 1 0 100 2 1 1 0 000-2zm-5.5 5a.75.75 0 000 1.5h7a.75.75 0 000-1.5h-7z" clipRule="evenodd" />
+              </svg>
+            )}
+            <span className="text-xs text-gray-500">
+              {testimonial.sentiment_label === 'muy_positivo' ? 'Muy positivo' :
+               testimonial.sentiment_label === 'positivo' ? 'Positivo' :
+               testimonial.sentiment_label === 'neutral' ? 'Neutral' :
+               testimonial.sentiment_label === 'negativo' ? 'Negativo' :
+               testimonial.sentiment_label === 'muy_negativo' ? 'Muy negativo' : ''}
+            </span>
+          </span>
+          {testimonial.ai_summary && (
+            <p className="text-xs text-gray-400 italic">{testimonial.ai_summary}</p>
+          )}
+        </div>
+      )}
+
       {/* Date & Source */}
       <div className="mt-3 flex items-center gap-2">
         <p className="text-xs text-gray-400">{formatDate(testimonial.created_at)}</p>

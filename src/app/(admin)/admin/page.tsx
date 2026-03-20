@@ -17,6 +17,7 @@ export default async function AdminDashboardPage() {
     recentUsersRes,
     recentTestimonialsRes,
     impressionsRes,
+    sentimentDataRes,
   ] = await Promise.all([
     admin.from('profiles').select('*', { count: 'exact', head: true }),
     admin.from('projects').select('*', { count: 'exact', head: true }),
@@ -30,6 +31,7 @@ export default async function AdminDashboardPage() {
     admin.from('profiles').select('id, full_name, email, plan, is_admin, created_at').order('created_at', { ascending: false }).limit(10),
     admin.from('testimonials').select('id, author_name, content, rating, status, created_at, project_id').order('created_at', { ascending: false }).limit(10),
     admin.from('widget_impressions').select('count').gte('impression_date', new Date(new Date().getFullYear(), new Date().getMonth(), 1).toISOString()),
+    admin.from('testimonials').select('sentiment_score, sentiment_label, key_phrases').not('sentiment_label', 'is', null),
   ])
 
   const totalUsers = profilesRes.count || 0
@@ -43,6 +45,50 @@ export default async function AdminDashboardPage() {
   const rejectedCount = rejectedRes.count || 0
   const recentUsers = recentUsersRes.data || []
   const recentTestimonials = recentTestimonialsRes.data || []
+
+  // Sentiment analysis data
+  const sentimentData = (sentimentDataRes.data || []) as { sentiment_score: number | null; sentiment_label: string | null; key_phrases: string[] | null }[]
+  const sentimentScores = sentimentData.filter(t => t.sentiment_score != null).map(t => t.sentiment_score as number)
+  const avgSentiment = sentimentScores.length > 0
+    ? Math.round((sentimentScores.reduce((a, b) => a + b, 0) / sentimentScores.length) * 100) / 100
+    : 0
+  const sentimentDistribution: Record<string, number> = {}
+  for (const t of sentimentData) {
+    if (t.sentiment_label) {
+      sentimentDistribution[t.sentiment_label] = (sentimentDistribution[t.sentiment_label] || 0) + 1
+    }
+  }
+  const sentimentLabelNames: Record<string, string> = {
+    muy_positivo: 'Muy positivo',
+    positivo: 'Positivo',
+    neutral: 'Neutral',
+    negativo: 'Negativo',
+    muy_negativo: 'Muy negativo',
+  }
+  const sentimentLabelColors: Record<string, string> = {
+    muy_positivo: 'bg-green-500',
+    positivo: 'bg-green-300',
+    neutral: 'bg-yellow-400',
+    negativo: 'bg-red-300',
+    muy_negativo: 'bg-red-500',
+  }
+  // Count key phrases
+  const phraseCount: Record<string, number> = {}
+  for (const t of sentimentData) {
+    if (t.key_phrases) {
+      for (const phrase of t.key_phrases) {
+        const words = phrase.toLowerCase().split(/\s+/)
+        for (const w of words) {
+          if (w.length > 4) {
+            phraseCount[w] = (phraseCount[w] || 0) + 1
+          }
+        }
+      }
+    }
+  }
+  const topPhrases = Object.entries(phraseCount)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
 
   const totalImpressions = (impressionsRes.data || []).reduce(
     (sum: number, row: { count: number }) => sum + (row.count || 0),
@@ -198,6 +244,65 @@ export default async function AdminDashboardPage() {
                 )}
               </tbody>
             </table>
+          </div>
+        </div>
+      </div>
+
+      {/* Sentiment Overview */}
+      <div className="mt-6 bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Sentiment Overview</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Average Sentiment */}
+          <div className="text-center">
+            <p className="text-sm text-gray-500 mb-2">Sentimiento promedio</p>
+            <p className={`text-3xl font-bold ${avgSentiment > 0.2 ? 'text-green-600' : avgSentiment < -0.2 ? 'text-red-600' : 'text-yellow-600'}`}>
+              {avgSentiment > 0 ? '+' : ''}{avgSentiment}
+            </p>
+            <p className="text-xs text-gray-400 mt-1">{sentimentScores.length} testimonios analizados</p>
+          </div>
+
+          {/* Distribution */}
+          <div>
+            <p className="text-sm text-gray-500 mb-3">Distribución por sentimiento</p>
+            <div className="space-y-2">
+              {['muy_positivo', 'positivo', 'neutral', 'negativo', 'muy_negativo'].map(label => {
+                const count = sentimentDistribution[label] || 0
+                const total = sentimentScores.length || 1
+                const pct = Math.round((count / total) * 100)
+                return (
+                  <div key={label} className="flex items-center gap-2 text-sm">
+                    <span className="w-24 text-gray-600 text-xs">{sentimentLabelNames[label]}</span>
+                    <div className="flex-1 bg-gray-100 rounded-full h-2">
+                      <div
+                        className={`h-2 rounded-full ${sentimentLabelColors[label]}`}
+                        style={{ width: `${pct}%` }}
+                      />
+                    </div>
+                    <span className="text-xs text-gray-500 w-8 text-right">{count}</span>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+
+          {/* Top Key Phrases */}
+          <div>
+            <p className="text-sm text-gray-500 mb-3">Palabras clave frecuentes</p>
+            {topPhrases.length > 0 ? (
+              <div className="flex flex-wrap gap-1.5">
+                {topPhrases.map(([word, count]) => (
+                  <span
+                    key={word}
+                    className="inline-flex items-center gap-1 rounded-full bg-indigo-50 px-2.5 py-0.5 text-xs font-medium text-indigo-700"
+                  >
+                    {word}
+                    <span className="text-indigo-400">({count})</span>
+                  </span>
+                ))}
+              </div>
+            ) : (
+              <p className="text-xs text-gray-400">Sin datos de sentimiento aún</p>
+            )}
           </div>
         </div>
       </div>
