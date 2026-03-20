@@ -223,6 +223,102 @@ import { renderWidget, WidgetData } from './templates';
     startAutoplay();
   }
 
+  // ── Popup interactivity ──
+  function initPopup(shadowRoot: ShadowRoot): void {
+    const popup = shadowRoot.querySelector('.opinafy-popup') as HTMLElement | null;
+    if (!popup) return;
+
+    // Check if user dismissed in this session
+    const STORAGE_KEY = 'opinafy-popup-dismissed';
+    try {
+      if (sessionStorage.getItem(STORAGE_KEY) === '1') {
+        popup.style.display = 'none';
+        return;
+      }
+    } catch { /* sessionStorage may not be available */ }
+
+    const count = parseInt(popup.getAttribute('data-popup-count') || '0', 10);
+    if (count === 0) return;
+
+    let currentIndex = 0;
+    let autoHideTimer: ReturnType<typeof setTimeout> | null = null;
+    let cycleTimer: ReturnType<typeof setInterval> | null = null;
+
+    function getAllItems(): HTMLElement[] {
+      return Array.from(popup!.querySelectorAll('.opinafy-popup-item'));
+    }
+
+    function showItem(index: number): void {
+      const items = getAllItems();
+      items.forEach((item, i) => {
+        item.style.display = i === index ? '' : 'none';
+        item.classList.remove('opinafy-popup-hiding');
+      });
+    }
+
+    function hideCurrentItem(callback?: () => void): void {
+      const items = getAllItems();
+      const current = items[currentIndex];
+      if (current) {
+        current.classList.add('opinafy-popup-hiding');
+        setTimeout(() => {
+          current.style.display = 'none';
+          current.classList.remove('opinafy-popup-hiding');
+          if (callback) callback();
+        }, 400);
+      } else if (callback) {
+        callback();
+      }
+    }
+
+    function dismiss(): void {
+      if (autoHideTimer) clearTimeout(autoHideTimer);
+      if (cycleTimer) clearInterval(cycleTimer);
+      hideCurrentItem(() => {
+        popup!.style.display = 'none';
+      });
+      try {
+        sessionStorage.setItem(STORAGE_KEY, '1');
+      } catch { /* ignore */ }
+    }
+
+    function scheduleAutoHide(): void {
+      if (autoHideTimer) clearTimeout(autoHideTimer);
+      autoHideTimer = setTimeout(() => {
+        hideCurrentItem();
+      }, 8000);
+    }
+
+    function startCycle(): void {
+      if (count <= 1) return;
+      cycleTimer = setInterval(() => {
+        hideCurrentItem(() => {
+          currentIndex = (currentIndex + 1) % count;
+          showItem(currentIndex);
+          scheduleAutoHide();
+        });
+      }, 15000);
+    }
+
+    // Close button handler
+    popup.addEventListener('click', (e: Event) => {
+      const target = e.target as HTMLElement;
+      if (target.closest('[data-action="close-popup"]')) {
+        dismiss();
+      }
+    });
+
+    // Initially hide all, then show after 3s delay
+    const items = getAllItems();
+    items.forEach(item => { item.style.display = 'none'; });
+
+    setTimeout(() => {
+      showItem(0);
+      scheduleAutoHide();
+      startCycle();
+    }, 3000);
+  }
+
   // ── Initialize a single widget element ──
   async function initWidget(el: HTMLElement): Promise<void> {
     const projectId = el.getAttribute('data-project');
@@ -272,6 +368,11 @@ import { renderWidget, WidgetData } from './templates';
       // Init carousel interactivity if applicable
       if (data.config?.layout === 'carousel') {
         initCarousel(shadow);
+      }
+
+      // Init popup interactivity if applicable
+      if (data.config?.layout === 'popup') {
+        initPopup(shadow);
       }
 
       // Track impression

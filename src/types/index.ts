@@ -1,6 +1,6 @@
 export type Plan = 'free' | 'minisite' | 'pro' | 'business'
 export type TestimonialStatus = 'pending_verification' | 'pending' | 'approved' | 'rejected'
-export type WidgetLayout = 'carousel' | 'grid' | 'wall' | 'single' | 'badge'
+export type WidgetLayout = 'carousel' | 'grid' | 'wall' | 'single' | 'badge' | 'popup'
 export type WidgetTheme = 'light' | 'dark' | 'auto'
 
 export interface Profile {

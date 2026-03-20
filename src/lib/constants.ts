@@ -24,7 +24,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     testimonials: Infinity,
     video: false,
     removeBranding: true,
-    layouts: ['carousel', 'grid', 'wall', 'single', 'badge'] as WidgetLayout[],
+    layouts: ['carousel', 'grid', 'wall', 'single', 'badge', 'popup'] as WidgetLayout[],
     seats: 1,
     miniSite: true,
   },
@@ -33,7 +33,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     testimonials: Infinity,
     video: true,
     removeBranding: true,
-    layouts: ['carousel', 'grid', 'wall', 'single', 'badge'] as WidgetLayout[],
+    layouts: ['carousel', 'grid', 'wall', 'single', 'badge', 'popup'] as WidgetLayout[],
     seats: 3,
     miniSite: true,
   },
@@ -88,6 +88,7 @@ export const WIDGET_LAYOUTS: { value: WidgetLayout; label: string; description: 
   { value: 'wall', label: 'Muro (Masonry)', description: 'Diseño tipo Pinterest con alturas variables', proOnly: true },
   { value: 'single', label: 'Destacado', description: 'Un solo testimonio grande y prominente', proOnly: true },
   { value: 'badge', label: 'Badge Flotante', description: 'Badge compacto en esquina de la página', proOnly: true },
+  { value: 'popup', label: 'Popup FOMO', description: 'Popup con la última reseña para generar confianza', proOnly: true },
 ]
 
 export const DEFAULT_BRAND_COLOR = '#6366f1'

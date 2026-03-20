@@ -20,6 +20,7 @@ const layoutOptions: { value: WidgetLayout; label: string }[] = [
   { value: 'wall', label: 'Muro' },
   { value: 'single', label: 'Individual' },
   { value: 'badge', label: 'Insignia' },
+  { value: 'popup', label: 'Popup FOMO' },
 ]
 
 const themeOptions: { value: WidgetTheme; label: string }[] = [

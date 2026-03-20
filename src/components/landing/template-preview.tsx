@@ -187,7 +187,7 @@ export function TemplatePreview({
 }) {
   const { config, layout } = template
   const isVideo = template.category === 'Video'
-  const testimonials = compact ? FAKE_TESTIMONIALS.slice(0, 2) : FAKE_TESTIMONIALS
+  const testimonials = layout === 'popup' ? FAKE_TESTIMONIALS.slice(0, 1) : (compact ? FAKE_TESTIMONIALS.slice(0, 2) : FAKE_TESTIMONIALS)
 
   const containerPadding = compact ? 'p-3' : 'p-6'
 
@@ -243,36 +243,126 @@ export function TemplatePreview({
         </div>
       )}
 
-      {layout === 'badge' && (
-        <div className="flex items-center gap-3">
+      {layout === 'badge' && (() => {
+        const cardBg = config.theme === 'dark' ? lightenColor(config.background_color, 8) : '#ffffff'
+        const borderColor = config.theme === 'dark' ? lightenColor(config.background_color, 15) : '#e5e7eb'
+        const fontMap: Record<string, string> = {
+          modern: 'system-ui, -apple-system, sans-serif',
+          serif: '"Playfair Display", Georgia, "Times New Roman", serif',
+          rounded: '"Nunito", "Varela Round", system-ui, sans-serif',
+          minimal: '"DM Sans", "Inter", system-ui, sans-serif',
+          bold: '"Space Grotesk", system-ui, sans-serif',
+          handwritten: '"Caveat", cursive, sans-serif',
+          mono: '"JetBrains Mono", "Fira Code", monospace',
+          elegant: '"Cormorant Garamond", Georgia, serif',
+        }
+        const fontFamily = fontMap[config.font_style] || fontMap.modern
+        const latest = testimonials[0]
+
+        return (
           <div
-            className="flex items-center gap-2 rounded-full border px-4 py-2 shadow-sm"
+            className="border shadow-lg"
             style={{
-              backgroundColor: config.theme === 'dark' ? lightenColor(config.background_color, 10) : '#ffffff',
-              borderColor: config.theme === 'dark' ? lightenColor(config.background_color, 20) : '#e5e7eb',
+              maxWidth: compact ? '100%' : '300px',
+              borderRadius: `${config.border_radius}px`,
+              backgroundColor: cardBg,
+              borderColor,
+              fontFamily,
+              padding: compact ? '12px' : '16px',
             }}
           >
-            <div className="flex gap-0.5">
-              {[1, 2, 3, 4, 5].map((star) => (
-                <svg
-                  key={star}
-                  className="h-3.5 w-3.5"
-                  viewBox="0 0 20 20"
-                  fill={config.primary_color}
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
-              ))}
+            <div className="flex items-center gap-2.5" style={{ marginBottom: '8px' }}>
+              <span
+                className="font-bold"
+                style={{
+                  fontSize: compact ? '24px' : '28px',
+                  lineHeight: 1,
+                  color: config.primary_color,
+                }}
+              >
+                4.9
+              </span>
+              <div>
+                <StarRating rating={5} color={config.primary_color} />
+                <span className="text-xs opacity-60" style={{ color: config.text_color }}>
+                  127 opiniones
+                </span>
+              </div>
             </div>
-            <span className="text-xs font-semibold" style={{ color: config.text_color }}>
-              4.9/5
-            </span>
-            <span className="text-xs opacity-60" style={{ color: config.text_color }}>
-              · 127 opiniones
-            </span>
+            {latest && (
+              <div style={{ marginTop: '8px' }}>
+                <p
+                  className="text-xs italic leading-relaxed"
+                  style={{
+                    color: config.text_color,
+                    display: '-webkit-box',
+                    WebkitLineClamp: 2,
+                    WebkitBoxOrient: 'vertical' as const,
+                    overflow: 'hidden',
+                  }}
+                >
+                  &ldquo;{latest.text.substring(0, 80)}{latest.text.length > 80 ? '...' : ''}&rdquo;
+                </p>
+                <p className="mt-1 text-xs opacity-60" style={{ color: config.text_color }}>
+                  — {latest.name}
+                </p>
+              </div>
+            )}
           </div>
-        </div>
-      )}
+        )
+      })()}
+
+      {layout === 'popup' && (() => {
+        const cardBg = config.theme === 'dark' ? lightenColor(config.background_color, 8) : '#ffffff'
+        const borderColor = config.theme === 'dark' ? lightenColor(config.background_color, 15) : '#e5e7eb'
+        const fontMap: Record<string, string> = {
+          modern: 'system-ui, -apple-system, sans-serif',
+          serif: '"Playfair Display", Georgia, "Times New Roman", serif',
+          rounded: '"Nunito", "Varela Round", system-ui, sans-serif',
+          minimal: '"DM Sans", "Inter", system-ui, sans-serif',
+          bold: '"Space Grotesk", system-ui, sans-serif',
+          handwritten: '"Caveat", cursive, sans-serif',
+          mono: '"JetBrains Mono", "Fira Code", monospace',
+          elegant: '"Cormorant Garamond", Georgia, serif',
+        }
+        const fontFamily = fontMap[config.font_style] || fontMap.modern
+        const t = testimonials[0]
+
+        return (
+          <div className="flex items-end justify-start" style={{ minHeight: compact ? '80px' : '100px' }}>
+            <div
+              className="border shadow-lg"
+              style={{
+                maxWidth: compact ? '220px' : '280px',
+                borderRadius: `${config.border_radius}px`,
+                backgroundColor: cardBg,
+                borderColor,
+                fontFamily,
+                padding: compact ? '10px' : '12px',
+              }}
+            >
+              <div className="flex items-start gap-2.5">
+                {config.show_avatar && (
+                  <Avatar
+                    initials={t.initials}
+                    color={config.primary_color}
+                    bgColor={config.theme === 'dark' ? lightenColor(config.background_color, 20) : hexToRgba(config.primary_color, 0.1)}
+                  />
+                )}
+                <div className="min-w-0">
+                  <p className="text-xs font-medium" style={{ color: config.text_color }}>
+                    {t.name.split(' ').slice(0, 2).join(' ')} dejó una reseña de{' '}
+                    <span style={{ color: config.primary_color }}>★★★★★</span>
+                  </p>
+                  <p className="mt-0.5 text-xs opacity-50" style={{ color: config.text_color }}>
+                    Hace 2 minutos
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )
+      })()}
     </div>
   )
 }

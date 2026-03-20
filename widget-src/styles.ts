@@ -621,6 +621,119 @@ export function getStyles(config: any): string {
       margin-top: 6px;
     }
 
+    /* ══════════════════════════════════════
+       LAYOUT: Popup (FOMO)
+    ══════════════════════════════════════ */
+    .opinafy-popup {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      z-index: 9999;
+      max-width: 320px;
+      pointer-events: none;
+    }
+
+    .opinafy-popup-item {
+      pointer-events: auto;
+      animation: opinafy-popup-in 0.5s ease-out forwards;
+    }
+
+    .opinafy-popup-item.opinafy-popup-hiding {
+      animation: opinafy-popup-out 0.4s ease-in forwards;
+    }
+
+    @keyframes opinafy-popup-in {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes opinafy-popup-out {
+      from {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      to {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+    }
+
+    .opinafy-popup-card {
+      background: var(--opinafy-card-bg);
+      border: 1px solid var(--opinafy-border);
+      border-radius: var(--opinafy-radius);
+      padding: 14px 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+      position: relative;
+    }
+
+    .opinafy-popup-close {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      background: none;
+      border: none;
+      font-size: 18px;
+      line-height: 1;
+      cursor: pointer;
+      color: var(--opinafy-text-secondary);
+      padding: 0 4px;
+      transition: color 0.15s;
+    }
+
+    .opinafy-popup-close:hover {
+      color: var(--opinafy-text);
+    }
+
+    .opinafy-popup-content {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-right: 16px;
+    }
+
+    .opinafy-popup-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--opinafy-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 14px;
+      text-transform: uppercase;
+      flex-shrink: 0;
+    }
+
+    .opinafy-popup-text {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--opinafy-text);
+      line-height: 1.4;
+    }
+
+    .opinafy-popup-time {
+      font-size: 12px;
+      color: var(--opinafy-text-secondary);
+      margin-top: 2px;
+    }
+
+    @media (max-width: 480px) {
+      .opinafy-popup {
+        left: 12px;
+        right: 12px;
+        max-width: none;
+      }
+    }
+
     /* ── Carousel drag/swipe ── */
     .opinafy-carousel-track {
       cursor: grab;

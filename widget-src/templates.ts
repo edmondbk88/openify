@@ -29,7 +29,7 @@ const SOURCE_COLORS: Record<string, { name: string; color: string }> = {
 };
 
 interface WidgetConfig {
-  layout: 'carousel' | 'grid' | 'wall' | 'single' | 'badge';
+  layout: 'carousel' | 'grid' | 'wall' | 'single' | 'badge' | 'popup';
   primary_color: string;
   background_color: string;
   text_color: string;
@@ -79,6 +79,9 @@ export function renderWidget(data: WidgetData): string {
       break;
     case 'badge':
       content = renderBadge(data);
+      break;
+    case 'popup':
+      content = renderPopup(data);
       break;
     default:
       content = renderGrid(data);
@@ -164,6 +167,52 @@ export function renderBadge(data: WidgetData): string {
       </div>` : ''}
     </div>
   `;
+}
+
+// ── Popup Layout ──
+
+export function renderPopup(data: WidgetData): string {
+  const { testimonials } = data;
+
+  const popupItems = testimonials.map((t, i) => {
+    const initials = t.author_name.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2);
+    const stars = '★'.repeat(Math.min(t.rating, 5));
+    const timeAgo = getTimeAgo(t.created_at);
+    return `
+      <div class="opinafy-popup-item" data-popup-index="${i}" style="${i > 0 ? 'display:none;' : ''}">
+        <div class="opinafy-popup-card">
+          <button class="opinafy-popup-close" data-action="close-popup" aria-label="Cerrar">&times;</button>
+          <div class="opinafy-popup-content">
+            <div class="opinafy-popup-avatar">${initials}</div>
+            <div>
+              <div class="opinafy-popup-text">${escapeHtml(t.author_name)} dejó una reseña de ${stars}</div>
+              <div class="opinafy-popup-time">${timeAgo}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  return `<div class="opinafy-popup" data-popup-count="${testimonials.length}">${popupItems}</div>`;
+}
+
+function getTimeAgo(dateStr: string): string {
+  try {
+    const now = new Date();
+    const date = new Date(dateStr);
+    const diffMs = now.getTime() - date.getTime();
+    const diffMins = Math.floor(diffMs / 60000);
+    if (diffMins < 1) return 'Hace un momento';
+    if (diffMins < 60) return `Hace ${diffMins} minuto${diffMins === 1 ? '' : 's'}`;
+    const diffHours = Math.floor(diffMins / 60);
+    if (diffHours < 24) return `Hace ${diffHours} hora${diffHours === 1 ? '' : 's'}`;
+    const diffDays = Math.floor(diffHours / 24);
+    if (diffDays < 7) return `Hace ${diffDays} día${diffDays === 1 ? '' : 's'}`;
+    return `Hace ${Math.floor(diffDays / 7)} semana${Math.floor(diffDays / 7) === 1 ? '' : 's'}`;
+  } catch {
+    return 'Hace 2 minutos';
+  }
 }
 
 // ── Card Renderer ──

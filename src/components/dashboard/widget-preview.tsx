@@ -201,12 +201,52 @@ function BadgePreview({ config }: { config: PreviewConfig }) {
   )
 }
 
+function PopupPreview({ config }: { config: PreviewConfig }) {
+  const isDark = config.theme === 'dark'
+  const t = mockTestimonials[0]
+  return (
+    <div className="flex items-end" style={{ minHeight: '120px' }}>
+      <div
+        className="border shadow-lg"
+        style={{
+          maxWidth: '280px',
+          borderRadius: `${config.border_radius}px`,
+          backgroundColor: isDark ? '#1f2937' : '#ffffff',
+          borderColor: isDark ? '#374151' : '#e5e7eb',
+          padding: '12px 14px',
+        }}
+      >
+        <div className="flex items-center gap-3">
+          {config.show_avatar && (
+            <div
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full text-sm font-semibold text-white"
+              style={{ backgroundColor: config.primary_color }}
+            >
+              {t.name.split(' ').map(n => n[0]).join('')}
+            </div>
+          )}
+          <div>
+            <p className="text-xs font-medium" style={{ color: isDark ? '#f3f4f6' : config.text_color }}>
+              {t.name} dejó una reseña de{' '}
+              <span style={{ color: '#f59e0b' }}>★★★★★</span>
+            </p>
+            <p className="mt-0.5 text-xs" style={{ color: isDark ? '#9ca3af' : '#6b7280' }}>
+              Hace 2 minutos
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const layoutRenderers: Record<WidgetLayout, React.FC<{ config: PreviewConfig }>> = {
   carousel: CarouselPreview,
   grid: GridPreview,
   wall: WallPreview,
   single: SinglePreview,
   badge: BadgePreview,
+  popup: PopupPreview,
 }
 
 export default function WidgetPreview({ config }: WidgetPreviewProps) {

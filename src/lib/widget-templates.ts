@@ -3,7 +3,7 @@ export interface WidgetTemplate {
   name: string
   description: string
   category: string
-  layout: 'carousel' | 'grid' | 'wall' | 'single' | 'badge'
+  layout: 'carousel' | 'grid' | 'wall' | 'single' | 'badge' | 'popup'
   preview_image: string
   config: {
     theme: 'light' | 'dark'
@@ -29,6 +29,7 @@ export const TEMPLATE_CATEGORIES = [
   'Divertido',
   'Profesional',
   'Video',
+  'Popup',
 ] as const
 
 export type TemplateCategory = (typeof TEMPLATE_CATEGORIES)[number]
@@ -1267,6 +1268,110 @@ export const widgetTemplates: WidgetTemplate[] = [
       show_avatar: true,
       show_company: true,
       font_style: 'serif',
+    },
+  },
+
+  // ═══════════════════════════════════════════════════
+  // POPUP (5 templates)
+  // ═══════════════════════════════════════════════════
+  {
+    id: 'notificacion-sutil',
+    name: 'Notificación Sutil',
+    description: 'Popup minimalista y discreto que aparece como una notificación del sistema. Elegante y no intrusivo.',
+    category: 'Popup',
+    layout: 'popup',
+    preview_image: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
+    config: {
+      theme: 'light',
+      primary_color: '#2563eb',
+      background_color: '#ffffff',
+      text_color: '#1f2937',
+      border_radius: 12,
+      show_rating: true,
+      show_date: false,
+      show_avatar: true,
+      show_company: false,
+      font_style: 'modern',
+    },
+  },
+  {
+    id: 'alerta-oscura',
+    name: 'Alerta Oscura',
+    description: 'Popup dark mode con estilo premium. Perfecto para sitios con diseño oscuro o tecnológico.',
+    category: 'Popup',
+    layout: 'popup',
+    preview_image: 'linear-gradient(135deg, #0a0a0a 0%, #1f2937 100%)',
+    config: {
+      theme: 'dark',
+      primary_color: '#818cf8',
+      background_color: '#0a0a0a',
+      text_color: '#e2e8f0',
+      border_radius: 16,
+      show_rating: true,
+      show_date: false,
+      show_avatar: true,
+      show_company: false,
+      font_style: 'minimal',
+    },
+  },
+  {
+    id: 'fomo-vibrante',
+    name: 'FOMO Vibrante',
+    description: 'Popup llamativo con colores vivos que captura la atención al instante. Máximo impacto visual.',
+    category: 'Popup',
+    layout: 'popup',
+    preview_image: 'linear-gradient(135deg, #f97316 0%, #ec4899 100%)',
+    config: {
+      theme: 'light',
+      primary_color: '#ea580c',
+      background_color: '#fff7ed',
+      text_color: '#9a3412',
+      border_radius: 20,
+      show_rating: true,
+      show_date: false,
+      show_avatar: true,
+      show_company: true,
+      font_style: 'rounded',
+    },
+  },
+  {
+    id: 'confianza-verde',
+    name: 'Confianza Verde',
+    description: 'Verde confianza que transmite credibilidad. Ideal para ecommerce y servicios profesionales.',
+    category: 'Popup',
+    layout: 'popup',
+    preview_image: 'linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%)',
+    config: {
+      theme: 'light',
+      primary_color: '#16a34a',
+      background_color: '#f0fdf4',
+      text_color: '#14532d',
+      border_radius: 10,
+      show_rating: true,
+      show_date: false,
+      show_avatar: true,
+      show_company: true,
+      font_style: 'modern',
+    },
+  },
+  {
+    id: 'elegancia-dorada',
+    name: 'Elegancia Dorada',
+    description: 'Popup sofisticado con acentos dorados. Para marcas premium y servicios de lujo.',
+    category: 'Popup',
+    layout: 'popup',
+    preview_image: 'linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%)',
+    config: {
+      theme: 'light',
+      primary_color: '#a16207',
+      background_color: '#fffbeb',
+      text_color: '#713f12',
+      border_radius: 8,
+      show_rating: true,
+      show_date: false,
+      show_avatar: true,
+      show_company: false,
+      font_style: 'elegant',
     },
   },
 ]
