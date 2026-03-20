@@ -143,10 +143,55 @@ export async function POST(
     const supabase = createAdminClient()
 
     const body = await request.json().catch(() => ({}))
+    const type = body.type || 'impression'
+
+    // Handle click tracking on individual testimonial
+    if (type === 'click' && body.testimonialId) {
+      await supabase.rpc('increment_field', {
+        row_id: body.testimonialId,
+        table_name: 'testimonials',
+        field_name: 'click_count',
+      }).then(null, async () => {
+        // Fallback: direct update
+        const { data: current } = await supabase
+          .from('testimonials')
+          .select('click_count')
+          .eq('id', body.testimonialId)
+          .single()
+        await supabase
+          .from('testimonials')
+          .update({ click_count: (current?.click_count || 0) + 1 })
+          .eq('id', body.testimonialId)
+      })
+      return NextResponse.json({ success: true }, { headers: corsHeaders })
+    }
+
+    // Handle impression tracking on displayed testimonials
+    if (type === 'impression' && body.testimonialIds && Array.isArray(body.testimonialIds)) {
+      // Increment impression_count on each displayed testimonial
+      for (const tid of body.testimonialIds) {
+        await supabase.rpc('increment_field', {
+          row_id: tid,
+          table_name: 'testimonials',
+          field_name: 'impression_count',
+        }).then(null, async () => {
+          const { data: current } = await supabase
+            .from('testimonials')
+            .select('impression_count')
+            .eq('id', tid)
+            .single()
+          await supabase
+            .from('testimonials')
+            .update({ impression_count: (current?.impression_count || 0) + 1 })
+            .eq('id', tid)
+        })
+      }
+    }
+
+    // Also track widget-level impressions (existing logic)
     const referrerDomain = body.referrer_domain || null
     const today = new Date().toISOString().split('T')[0]
 
-    // Upsert impression count for today
     const { error } = await supabase.rpc('upsert_widget_impression', {
       p_project_id: projectId,
       p_referrer_domain: referrerDomain,

@@ -1,9 +1,9 @@
-"use strict";(()=>{var Y={modern:"'Inter', system-ui, -apple-system, sans-serif",serif:"'Playfair Display', Georgia, 'Times New Roman', serif",rounded:"'Nunito', system-ui, sans-serif",minimal:"'DM Sans', system-ui, sans-serif",bold:"'Space Grotesk', system-ui, sans-serif",handwritten:"'Caveat', cursive",mono:"'JetBrains Mono', 'Fira Code', monospace",elegant:"'Cormorant Garamond', Georgia, serif"};function C(o){let a=o.replace("#","");if(a.length<6)return!1;let i=parseInt(a.slice(0,2),16),n=parseInt(a.slice(2,4),16),d=parseInt(a.slice(4,6),16);return i<245||n<245||d<245}function N(o){let a=o?.primary_color||"#2563eb",i=o?.background_color||"#ffffff",n=o?.text_color||"#1f2937",l=(o?.theme||"light")==="dark",f=o?.font_style||"modern",h=Y[f]||Y.modern,x=l?"#1f2937":(C(i),"#ffffff"),k=l?"#374151":C(i)?"rgba(0,0,0,0.08)":"#e5e7eb",c=l?"0 1px 3px rgba(0,0,0,0.4)":C(i)?"0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)":"0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)",t=l?"0 4px 12px rgba(0,0,0,0.5)":C(i)?"0 8px 24px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.06)":"0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)";return`
+"use strict";(()=>{var U={modern:"'Inter', system-ui, -apple-system, sans-serif",serif:"'Playfair Display', Georgia, 'Times New Roman', serif",rounded:"'Nunito', system-ui, sans-serif",minimal:"'DM Sans', system-ui, sans-serif",bold:"'Space Grotesk', system-ui, sans-serif",handwritten:"'Caveat', cursive",mono:"'JetBrains Mono', 'Fira Code', monospace",elegant:"'Cormorant Garamond', Georgia, serif"};function z(e){let t=e.replace("#","");if(t.length<6)return!1;let n=parseInt(t.slice(0,2),16),i=parseInt(t.slice(2,4),16),l=parseInt(t.slice(4,6),16);return n<245||i<245||l<245}function G(e){let t=e?.primary_color||"#2563eb",n=e?.background_color||"#ffffff",i=e?.text_color||"#1f2937",c=(e?.theme||"light")==="dark",f=e?.font_style||"modern",b=U[f]||U.modern,_=c?"#1f2937":(z(n),"#ffffff"),y=c?"#374151":z(n)?"rgba(0,0,0,0.08)":"#e5e7eb",E=c?"0 1px 3px rgba(0,0,0,0.4)":z(n)?"0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)":"0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)",A=c?"0 4px 12px rgba(0,0,0,0.5)":z(n)?"0 8px 24px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.06)":"0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)";return`
     :host {
       display: block;
-      font-family: ${h};
+      font-family: ${b};
       line-height: 1.5;
-      color: ${l?"#f3f4f6":n};
+      color: ${c?"#f3f4f6":i};
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -16,18 +16,18 @@
 
     /* \u2500\u2500 CSS Custom Properties \u2500\u2500 */
     .opinafy-root {
-      --opinafy-primary: ${a};
-      --opinafy-bg: ${l?"#1f2937":i};
-      --opinafy-text: ${l?"#f3f4f6":n};
-      --opinafy-text-secondary: ${l?"#9ca3af":"#6b7280"};
-      --opinafy-border: ${k};
-      --opinafy-card-bg: ${x};
-      --opinafy-card-shadow: ${c};
-      --opinafy-card-shadow-hover: ${t};
+      --opinafy-primary: ${t};
+      --opinafy-bg: ${c?"#1f2937":n};
+      --opinafy-text: ${c?"#f3f4f6":i};
+      --opinafy-text-secondary: ${c?"#9ca3af":"#6b7280"};
+      --opinafy-border: ${y};
+      --opinafy-card-bg: ${_};
+      --opinafy-card-shadow: ${E};
+      --opinafy-card-shadow-hover: ${A};
       --opinafy-star-filled: #f59e0b;
-      --opinafy-star-empty: ${l?"#4b5563":"#d1d5db"};
-      --opinafy-radius: ${o?.border_radius??12}px;
-      --opinafy-radius-sm: ${Math.max((o?.border_radius??12)-4,4)}px;
+      --opinafy-star-empty: ${c?"#4b5563":"#d1d5db"};
+      --opinafy-radius: ${e?.border_radius??12}px;
+      --opinafy-radius-sm: ${Math.max((e?.border_radius??12)-4,4)}px;
 
       background: var(--opinafy-bg);
       color: var(--opinafy-text);
@@ -215,6 +215,24 @@
 
     .opinafy-card-video-only .opinafy-video {
       border-radius: var(--opinafy-radius);
+    }
+
+    /* \u2500\u2500 Audio Player \u2500\u2500 */
+    .opinafy-audio {
+      padding: 16px;
+      background: linear-gradient(135deg, var(--opinafy-primary), color-mix(in srgb, var(--opinafy-primary) 70%, #000));
+      border-radius: var(--opinafy-radius) var(--opinafy-radius) 0 0;
+    }
+
+    .opinafy-audio-player {
+      width: 100%;
+      height: 40px;
+      border-radius: 20px;
+    }
+
+    /* \u2500\u2500 Clickable cards (A/B tracking) \u2500\u2500 */
+    .opinafy-card[data-testimonial-id] {
+      cursor: pointer;
     }
 
     /* \u2500\u2500 Content \u2500\u2500 */
@@ -731,97 +749,104 @@
         display: none;
       }
     }
-  `}var V={google:{name:"Google",color:"#4285F4"},tripadvisor:{name:"TripAdvisor",color:"#00AF87"},trustpilot:{name:"Trustpilot",color:"#00B67A"},facebook:{name:"Facebook",color:"#1877F2"},yelp:{name:"Yelp",color:"#D32323"},capterra:{name:"Capterra",color:"#FF9D28"},g2:{name:"G2",color:"#FF492C"}};function G(o){let{config:a,testimonials:i}=o;if(!i||i.length===0)return'<div class="opinafy-root"><div class="opinafy-error"><p>No hay testimonios para mostrar.</p></div></div>';let n;switch(a.layout){case"carousel":n=K(o);break;case"grid":n=U(o);break;case"wall":n=Q(o);break;case"single":n=Z(o);break;case"badge":n=ee(o);break;case"popup":n=oe(o);break;default:n=U(o)}return`<div class="opinafy-root">${n}${a.show_branding?ne():""}</div>`}function K(o){let{testimonials:a,config:i}=o,n=i.autoplay_speed||5e3,d=a.length,l=d>1,f=a.map((x,k)=>`<div class="opinafy-carousel-slide" data-index="${k}">${H(x,i)}</div>`).join(""),h=d>3;return`
-    <div class="opinafy-carousel-wrapper${h?"":" opinafy-no-nav"}" data-autoplay-speed="${n}" data-count="${d}">
-      ${h?`<button class="opinafy-carousel-nav opinafy-carousel-prev" data-action="prev" aria-label="Anterior">
+  `}var Q={google:{name:"Google",color:"#4285F4"},tripadvisor:{name:"TripAdvisor",color:"#00AF87"},trustpilot:{name:"Trustpilot",color:"#00B67A"},facebook:{name:"Facebook",color:"#1877F2"},yelp:{name:"Yelp",color:"#D32323"},capterra:{name:"Capterra",color:"#FF9D28"},g2:{name:"G2",color:"#FF492C"}};function J(e){let{config:t,testimonials:n}=e;if(!n||n.length===0)return'<div class="opinafy-root"><div class="opinafy-error"><p>No hay testimonios para mostrar.</p></div></div>';let i;switch(t.layout){case"carousel":i=Z(e);break;case"grid":i=X(e);break;case"wall":i=ee(e);break;case"single":i=oe(e);break;case"badge":i=ae(e);break;case"popup":i=te(e);break;default:i=X(e)}return`<div class="opinafy-root">${i}${t.show_branding?re():""}</div>`}function Z(e){let{testimonials:t,config:n}=e,i=n.autoplay_speed||5e3,l=t.length,c=l>1,f=t.map((_,y)=>`<div class="opinafy-carousel-slide" data-index="${y}">${O(_,n)}</div>`).join(""),b=l>3;return`
+    <div class="opinafy-carousel-wrapper${b?"":" opinafy-no-nav"}" data-autoplay-speed="${i}" data-count="${l}">
+      ${b?`<button class="opinafy-carousel-nav opinafy-carousel-prev" data-action="prev" aria-label="Anterior">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       </button>`:""}
       <div class="opinafy-carousel-track">
         ${f}
       </div>
-      ${h?`<button class="opinafy-carousel-nav opinafy-carousel-next" data-action="next" aria-label="Siguiente">
+      ${b?`<button class="opinafy-carousel-nav opinafy-carousel-next" data-action="next" aria-label="Siguiente">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>`:""}
     </div>
-  `}function U(o){return`<div class="opinafy-grid">${o.testimonials.map(i=>H(i,o.config)).join("")}</div>`}function Q(o){return`<div class="opinafy-wall">${o.testimonials.map(i=>H(i,o.config)).join("")}</div>`}function Z(o){let a=o.testimonials[0];return`<div class="opinafy-single">${H(a,o.config)}</div>`}function ee(o){let{testimonials:a}=o,i=a.reduce((d,l)=>d+l.rating,0)/a.length,n=a[0];return`
+  `}function X(e){return`<div class="opinafy-grid">${e.testimonials.map(n=>O(n,e.config)).join("")}</div>`}function ee(e){return`<div class="opinafy-wall">${e.testimonials.map(n=>O(n,e.config)).join("")}</div>`}function oe(e){let t=e.testimonials[0];return`<div class="opinafy-single">${O(t,e.config)}</div>`}function ae(e){let{testimonials:t}=e,n=t.reduce((l,c)=>l+c.rating,0)/t.length,i=t[0];return`
     <div class="opinafy-badge">
       <div class="opinafy-badge-score">
-        <span class="opinafy-badge-number">${i.toFixed(1)}</span>
-        <div class="opinafy-stars opinafy-stars-sm">${O(Math.round(i))}</div>
-        <span class="opinafy-badge-count">${a.length} opiniones</span>
+        <span class="opinafy-badge-number">${n.toFixed(1)}</span>
+        <div class="opinafy-stars opinafy-stars-sm">${B(Math.round(n))}</div>
+        <span class="opinafy-badge-count">${t.length} opiniones</span>
       </div>
-      ${n?`<div class="opinafy-badge-latest">
-        <p class="opinafy-badge-text">"${v(n.content.substring(0,80))}${n.content.length>80?"...":""}"</p>
-        <span class="opinafy-badge-author">\u2014 ${v(n.author_name)}</span>
+      ${i?`<div class="opinafy-badge-latest">
+        <p class="opinafy-badge-text">"${x(i.content.substring(0,80))}${i.content.length>80?"...":""}"</p>
+        <span class="opinafy-badge-author">\u2014 ${x(i.author_name)}</span>
       </div>`:""}
     </div>
-  `}function oe(o){let{testimonials:a}=o,i=a.map((n,d)=>{let l=n.author_name.split(" ").map(x=>x[0]).join("").toUpperCase().slice(0,2),f="\u2605".repeat(Math.min(n.rating,5)),h=te(n.created_at);return`
-      <div class="opinafy-popup-item" data-popup-index="${d}" style="${d>0?"display:none;":""}">
+  `}function te(e){let{testimonials:t}=e,n=t.map((i,l)=>{let c=i.author_name.split(" ").map(_=>_[0]).join("").toUpperCase().slice(0,2),f="\u2605".repeat(Math.min(i.rating,5)),b=ie(i.created_at);return`
+      <div class="opinafy-popup-item" data-popup-index="${l}" style="${l>0?"display:none;":""}">
         <div class="opinafy-popup-card">
           <button class="opinafy-popup-close" data-action="close-popup" aria-label="Cerrar">&times;</button>
           <div class="opinafy-popup-content">
-            <div class="opinafy-popup-avatar">${l}</div>
+            <div class="opinafy-popup-avatar">${c}</div>
             <div>
-              <div class="opinafy-popup-text">${v(n.author_name)} dej\xF3 una rese\xF1a de ${f}</div>
-              <div class="opinafy-popup-time">${h}</div>
+              <div class="opinafy-popup-text">${x(i.author_name)} dej\xF3 una rese\xF1a de ${f}</div>
+              <div class="opinafy-popup-time">${b}</div>
             </div>
           </div>
         </div>
       </div>
-    `}).join("");return`<div class="opinafy-popup" data-popup-count="${a.length}">${i}</div>`}function te(o){try{let a=new Date,i=new Date(o),n=a.getTime()-i.getTime(),d=Math.floor(n/6e4);if(d<1)return"Hace un momento";if(d<60)return`Hace ${d} minuto${d===1?"":"s"}`;let l=Math.floor(d/60);if(l<24)return`Hace ${l} hora${l===1?"":"s"}`;let f=Math.floor(l/24);return f<7?`Hace ${f} d\xEDa${f===1?"":"s"}`:`Hace ${Math.floor(f/7)} semana${Math.floor(f/7)===1?"":"s"}`}catch{return"Hace 2 minutos"}}function H(o,a){let{author_name:i,company:n,role:d,content:l,rating:f,created_at:h,is_company_verified:x,video_url:k}=o,t=`<div class="opinafy-avatar">${i.split(" ").map(L=>L[0]).join("").toUpperCase().slice(0,2)}</div>`,e="";d&&n?e=`${v(d)} en ${v(n)}`:n?e=v(n):d&&(e=v(d)),x&&n&&(e+=' <span class="opinafy-verified" title="Empresa verificada">\u2713</span>');let p="";if(h)try{p=new Date(h).toLocaleDateString("es-ES",{day:"numeric",month:"short",year:"numeric"})}catch{}let s=!!k,u=s?`
+    `}).join("");return`<div class="opinafy-popup" data-popup-count="${t.length}">${n}</div>`}function ie(e){try{let t=new Date,n=new Date(e),i=t.getTime()-n.getTime(),l=Math.floor(i/6e4);if(l<1)return"Hace un momento";if(l<60)return`Hace ${l} minuto${l===1?"":"s"}`;let c=Math.floor(l/60);if(c<24)return`Hace ${c} hora${c===1?"":"s"}`;let f=Math.floor(c/24);return f<7?`Hace ${f} d\xEDa${f===1?"":"s"}`:`Hace ${Math.floor(f/7)} semana${Math.floor(f/7)===1?"":"s"}`}catch{return"Hace 2 minutos"}}function O(e,t){let{author_name:n,company:i,role:l,content:c,rating:f,created_at:b,is_company_verified:_,video_url:y}=e,A=`<div class="opinafy-avatar">${n.split(" ").map(M=>M[0]).join("").toUpperCase().slice(0,2)}</div>`,d="";l&&i?d=`${x(l)} en ${x(i)}`:i?d=x(i):l&&(d=x(l)),_&&i&&(d+=' <span class="opinafy-verified" title="Empresa verificada">\u2713</span>');let o="";if(b)try{o=new Date(b).toLocaleDateString("es-ES",{day:"numeric",month:"short",year:"numeric"})}catch{}let a=y?/\.(ogg|webm)$/i.test(y)&&!/video/i.test(y)||/audio/i.test(y)||/testimonio-audio/i.test(y):!1,r=!!y&&!a,p=!!y&&a,u=r?`
     <div class="opinafy-video-container">
       <video class="opinafy-video" controls playsinline preload="metadata">
-        <source src="${k}" type="video/mp4">
-        <source src="${k}" type="video/webm">
+        <source src="${y}" type="video/mp4">
+        <source src="${y}" type="video/webm">
       </video>
-    </div>`:"",y=a.video_display_mode||"full";if(s&&y!=="full"){if(y==="video_only")return`
-        <div class="opinafy-card opinafy-card-has-video opinafy-card-video-only">
+    </div>`:"",m=p?`
+    <div class="opinafy-audio">
+      <audio controls preload="metadata" class="opinafy-audio-player">
+        <source src="${y}" type="audio/webm">
+        <source src="${y}" type="audio/ogg">
+      </audio>
+    </div>`:"",w=t.video_display_mode||"full";if(r&&w!=="full"){if(w==="video_only")return`
+        <div class="opinafy-card opinafy-card-has-video opinafy-card-video-only" data-testimonial-id="${e.id}">
           ${u}
         </div>
-      `;if(y==="video_stars")return`
-        <div class="opinafy-card opinafy-card-has-video">
-          ${u}
-          <div class="opinafy-card-body">
-            <div class="opinafy-author-name">${v(i)}</div>
-            ${f>0?`<div class="opinafy-stars">${O(f)}</div>`:""}
-          </div>
-        </div>
-      `;if(y==="video_name")return`
-        <div class="opinafy-card opinafy-card-has-video">
+      `;if(w==="video_stars")return`
+        <div class="opinafy-card opinafy-card-has-video" data-testimonial-id="${e.id}">
           ${u}
           <div class="opinafy-card-body">
-            <div class="opinafy-author-name">${v(i)}</div>
-            ${n?`<div class="opinafy-author-meta">${v(n)}</div>`:""}
+            <div class="opinafy-author-name">${x(n)}</div>
+            ${f>0?`<div class="opinafy-stars">${B(f)}</div>`:""}
           </div>
         </div>
-      `}let _=l.length>250,m=a.show_avatar!==!1,b=a.show_rating!==!1,T=a.show_date!==!1,E=a.show_company!==!1;return`
-    <div class="opinafy-card${s?" opinafy-card-has-video":""}">
+      `;if(w==="video_name")return`
+        <div class="opinafy-card opinafy-card-has-video" data-testimonial-id="${e.id}">
+          ${u}
+          <div class="opinafy-card-body">
+            <div class="opinafy-author-name">${x(n)}</div>
+            ${i?`<div class="opinafy-author-meta">${x(i)}</div>`:""}
+          </div>
+        </div>
+      `}let v=c.length>250,h=t.show_avatar!==!1,L=t.show_rating!==!1,S=t.show_date!==!1,T=t.show_company!==!1;return`
+    <div class="opinafy-card${r?" opinafy-card-has-video":""}" data-testimonial-id="${e.id}">
       ${u}
-      <div class="${s?"opinafy-card-body":""}">
-        ${b&&f>0?`<div class="opinafy-stars">${O(f)}</div>`:""}
-        <div class="opinafy-content"><p>${v(l)}</p></div>
-        ${_?`<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer m\xE1s'">Leer m\xE1s</button>`:""}
+      ${m}
+      <div class="${r?"opinafy-card-body":""}">
+        ${L&&f>0?`<div class="opinafy-stars">${B(f)}</div>`:""}
+        <div class="opinafy-content"><p>${x(c)}</p></div>
+        ${v?`<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer m\xE1s'">Leer m\xE1s</button>`:""}
         <div class="opinafy-card-footer">
           <div class="opinafy-card-header">
-            ${m?t:""}
+            ${h?A:""}
             <div class="opinafy-author">
-              <div class="opinafy-author-name">${v(i)}</div>
-              ${E&&e?`<div class="opinafy-author-meta">${e}</div>`:""}
+              <div class="opinafy-author-name">${x(n)}</div>
+              ${T&&d?`<div class="opinafy-author-meta">${d}</div>`:""}
             </div>
           </div>
-          ${T&&p?`<div class="opinafy-date">${p}</div>`:""}
-          ${ae(o)}
+          ${S&&o?`<div class="opinafy-date">${o}</div>`:""}
+          ${ne(e)}
         </div>
       </div>
     </div>
-  `}function ae(o){let a=o.source_platform||o.source;if(!a||a==="form")return"";let i=V[a];if(!i)return"";let n=i.color;return`<div class="opinafy-source-badge" style="--badge-color: ${n}"><span class="opinafy-source-dot" style="background: ${n}"></span>${v(i.name)}</div>`}function O(o){let a=[];for(let i=1;i<=5;i++)i<=o?a.push('<svg class="opinafy-star opinafy-star-filled" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>'):a.push('<svg class="opinafy-star opinafy-star-empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>');return a.join("")}function ne(){return`
+  `}function ne(e){let t=e.source_platform||e.source;if(!t||t==="form")return"";let n=Q[t];if(!n)return"";let i=n.color;return`<div class="opinafy-source-badge" style="--badge-color: ${i}"><span class="opinafy-source-dot" style="background: ${i}"></span>${x(n.name)}</div>`}function B(e){let t=[];for(let n=1;n<=5;n++)n<=e?t.push('<svg class="opinafy-star opinafy-star-filled" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>'):t.push('<svg class="opinafy-star opinafy-star-empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>');return t.join("")}function re(){return`
     <div class="opinafy-branding">
       <a href="https://opinafy.com?ref=widget" target="_blank" rel="noopener noreferrer">
         <svg class="opinafy-branding-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd"/></svg>
         Powered by Opinafy
       </a>
     </div>
-  `}function v(o){return o.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}(function(){function o(){let c=document.querySelectorAll("script[src]");for(let t=0;t<c.length;t++){let e=c[t].src;if((e.includes("widget.js")||e.includes("opinafy"))&&(e.includes("localhost")||e.includes("127.0.0.1"))){let p=new URL(e);return`${p.protocol}//${p.host}`}}return"https://opinafy.com"}let a=o(),i={modern:{family:"Inter",weights:"400;500;600;700"},serif:{family:"Playfair+Display",weights:"400;500;600;700"},rounded:{family:"Nunito",weights:"400;500;600;700"},minimal:{family:"DM+Sans",weights:"400;500;600;700"},bold:{family:"Space+Grotesk",weights:"400;500;600;700"},handwritten:{family:"Caveat",weights:"400;500;600;700"},mono:{family:"JetBrains+Mono",weights:"400;500;600;700"},elegant:{family:"Cormorant+Garamond",weights:"400;500;600;700"}};function n(c){let t=c.font_style||"modern",e=i[t];return e?`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${e.family}:wght@${e.weights}&display=swap">`:""}async function d(c){let t=await fetch(`${a}/api/widget/${c}`,{method:"GET",headers:{Accept:"application/json"}});if(!t.ok)throw new Error(`HTTP ${t.status}`);return t.json()}function l(c){try{fetch(`${a}/api/widget/${c}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({type:"impression"})}).catch(()=>{})}catch{}}function f(c){let t=c.querySelector(".opinafy-carousel-wrapper");if(!t)return;let e=t.querySelector(".opinafy-carousel-track"),p=t.querySelectorAll(".opinafy-carousel-slide"),s=t.querySelectorAll(".opinafy-dot"),u=t.querySelector('[data-action="prev"]'),y=t.querySelector('[data-action="next"]');if(!e||p.length===0)return;let _=parseInt(t.getAttribute("data-autoplay-speed")||"5000",10),m=0,b=null;function T(){let r=e.scrollLeft,$=0,M=1/0;return p.forEach((X,J)=>{let q=Math.abs(X.offsetLeft-e.offsetLeft-r);q<M&&(M=q,$=J)}),$}function E(){if(s.length===0)return;let r=s.length===p.length?m:Math.min(Math.round(m*(s.length-1)/(p.length-1)),s.length-1);s.forEach(($,M)=>$.classList.toggle("active",M===r))}function L(r){r<0&&(r=p.length-1),r>=p.length&&(r=0),m=r;let $=p[m];e.scrollTo({left:$.offsetLeft-e.offsetLeft,behavior:"smooth"}),E()}function z(){L(m+1)}function w(){L(m-1)}u&&u.addEventListener("click",()=>{w(),D()}),y&&y.addEventListener("click",()=>{z(),D()}),s.forEach((r,$)=>{r.addEventListener("click",()=>{let M=s.length===p.length?$:Math.round($*(p.length-1)/(s.length-1));L(M),D()})});let S=null;e.addEventListener("scroll",()=>{S&&clearTimeout(S),S=setTimeout(()=>{let r=T();r!==m&&(m=r,E())},150)});let g=!1,A=!1,R=0,B=0;function F(r){g=!0,A=!1,R=r,B=e.scrollLeft,e.style.scrollSnapType="none",e.style.scrollBehavior="auto",W()}function P(r){if(!g)return;let $=r-R;Math.abs($)>5&&(A=!0),e.scrollLeft=B-$}function I(){if(!g)return;g=!1,e.style.scrollSnapType="x mandatory",e.style.scrollBehavior="smooth";let r=T();L(r),D()}e.addEventListener("mousedown",r=>{F(r.pageX),r.preventDefault()}),e.addEventListener("mousemove",r=>{g&&(P(r.pageX),r.preventDefault())}),e.addEventListener("mouseup",I),e.addEventListener("mouseleave",()=>{g&&I()}),e.addEventListener("click",r=>{A&&(r.preventDefault(),r.stopPropagation())},!0),e.addEventListener("touchstart",r=>{F(r.touches[0].pageX)},{passive:!0}),e.addEventListener("touchmove",r=>{P(r.touches[0].pageX)},{passive:!0}),e.addEventListener("touchend",I);function j(){b&&clearInterval(b),b=setInterval(z,_)}function W(){b&&(clearInterval(b),b=null)}function D(){j()}t.addEventListener("mouseenter",()=>{g||W()}),t.addEventListener("mouseleave",()=>{g||j()}),j()}function h(c){let t=c.querySelector(".opinafy-popup");if(!t)return;let e="opinafy-popup-dismissed";try{if(sessionStorage.getItem(e)==="1"){t.style.display="none";return}}catch{}let p=parseInt(t.getAttribute("data-popup-count")||"0",10);if(p===0)return;let s=0,u=null,y=null;function _(){return Array.from(t.querySelectorAll(".opinafy-popup-item"))}function m(w){_().forEach((g,A)=>{g.style.display=A===w?"":"none",g.classList.remove("opinafy-popup-hiding")})}function b(w){let g=_()[s];g?(g.classList.add("opinafy-popup-hiding"),setTimeout(()=>{g.style.display="none",g.classList.remove("opinafy-popup-hiding"),w&&w()},400)):w&&w()}function T(){u&&clearTimeout(u),y&&clearInterval(y),b(()=>{t.style.display="none"});try{sessionStorage.setItem(e,"1")}catch{}}function E(){u&&clearTimeout(u),u=setTimeout(()=>{b()},8e3)}function L(){p<=1||(y=setInterval(()=>{b(()=>{s=(s+1)%p,m(s),E()})},15e3))}t.addEventListener("click",w=>{w.target.closest('[data-action="close-popup"]')&&T()}),_().forEach(w=>{w.style.display="none"}),setTimeout(()=>{m(0),E(),L()},3e3)}async function x(c){let t=c.getAttribute("data-project");if(!t){console.warn("[Opinafy] Widget element missing data-project attribute.");return}if(c.shadowRoot)return;let e=c.attachShadow({mode:"open"});e.innerHTML=`
+  `}function x(e){return e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}(function(){function e(){let d=document.querySelectorAll("script[src]");for(let o=0;o<d.length;o++){let a=d[o].src;if((a.includes("widget.js")||a.includes("opinafy"))&&(a.includes("localhost")||a.includes("127.0.0.1"))){let r=new URL(a);return`${r.protocol}//${r.host}`}}return"https://opinafy.com"}let t=e(),n={modern:{family:"Inter",weights:"400;500;600;700"},serif:{family:"Playfair+Display",weights:"400;500;600;700"},rounded:{family:"Nunito",weights:"400;500;600;700"},minimal:{family:"DM+Sans",weights:"400;500;600;700"},bold:{family:"Space+Grotesk",weights:"400;500;600;700"},handwritten:{family:"Caveat",weights:"400;500;600;700"},mono:{family:"JetBrains+Mono",weights:"400;500;600;700"},elegant:{family:"Cormorant+Garamond",weights:"400;500;600;700"}};function i(d){let o=d.font_style||"modern",a=n[o];return a?`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${a.family}:wght@${a.weights}&display=swap">`:""}async function l(d){let o=await fetch(`${t}/api/widget/${d}`,{method:"GET",headers:{Accept:"application/json"}});if(!o.ok)throw new Error(`HTTP ${o.status}`);return o.json()}function c(d,o){try{fetch(`${t}/api/widget/${d}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({type:"impression",testimonialIds:o})}).catch(()=>{})}catch{}}function f(d,o){try{fetch(`${t}/api/widget/${d}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({type:"click",testimonialId:o})}).catch(()=>{})}catch{}}function b(d,o){d.querySelectorAll("[data-testimonial-id]").forEach(r=>{r.addEventListener("click",()=>{let p=r.getAttribute("data-testimonial-id");p&&f(o,p)})})}function _(d){let o=d.querySelector(".opinafy-carousel-wrapper");if(!o)return;let a=o.querySelector(".opinafy-carousel-track"),r=o.querySelectorAll(".opinafy-carousel-slide"),p=o.querySelectorAll(".opinafy-dot"),u=o.querySelector('[data-action="prev"]'),m=o.querySelector('[data-action="next"]');if(!a||r.length===0)return;let w=parseInt(o.getAttribute("data-autoplay-speed")||"5000",10),v=0,h=null;function L(){let s=a.scrollLeft,k=0,D=1/0;return r.forEach((V,K)=>{let N=Math.abs(V.offsetLeft-a.offsetLeft-s);N<D&&(D=N,k=K)}),k}function S(){if(p.length===0)return;let s=p.length===r.length?v:Math.min(Math.round(v*(p.length-1)/(r.length-1)),p.length-1);p.forEach((k,D)=>k.classList.toggle("active",D===s))}function T(s){s<0&&(s=r.length-1),s>=r.length&&(s=0),v=s;let k=r[v];a.scrollTo({left:k.offsetLeft-a.offsetLeft,behavior:"smooth"}),S()}function M(){T(v+1)}function $(){T(v-1)}u&&u.addEventListener("click",()=>{$(),I()}),m&&m.addEventListener("click",()=>{M(),I()}),p.forEach((s,k)=>{s.addEventListener("click",()=>{let D=p.length===r.length?k:Math.round(k*(r.length-1)/(p.length-1));T(D),I()})});let C=null;a.addEventListener("scroll",()=>{C&&clearTimeout(C),C=setTimeout(()=>{let s=L();s!==v&&(v=s,S())},150)});let g=!1,H=!1,P=0,F=0;function W(s){g=!0,H=!1,P=s,F=a.scrollLeft,a.style.scrollSnapType="none",a.style.scrollBehavior="auto",Y()}function q(s){if(!g)return;let k=s-P;Math.abs(k)>5&&(H=!0),a.scrollLeft=F-k}function j(){if(!g)return;g=!1,a.style.scrollSnapType="x mandatory",a.style.scrollBehavior="smooth";let s=L();T(s),I()}a.addEventListener("mousedown",s=>{W(s.pageX),s.preventDefault()}),a.addEventListener("mousemove",s=>{g&&(q(s.pageX),s.preventDefault())}),a.addEventListener("mouseup",j),a.addEventListener("mouseleave",()=>{g&&j()}),a.addEventListener("click",s=>{H&&(s.preventDefault(),s.stopPropagation())},!0),a.addEventListener("touchstart",s=>{W(s.touches[0].pageX)},{passive:!0}),a.addEventListener("touchmove",s=>{q(s.touches[0].pageX)},{passive:!0}),a.addEventListener("touchend",j);function R(){h&&clearInterval(h),h=setInterval(M,w)}function Y(){h&&(clearInterval(h),h=null)}function I(){R()}o.addEventListener("mouseenter",()=>{g||Y()}),o.addEventListener("mouseleave",()=>{g||R()}),R()}function y(d){let o=d.querySelector(".opinafy-popup");if(!o)return;let a="opinafy-popup-dismissed";try{if(sessionStorage.getItem(a)==="1"){o.style.display="none";return}}catch{}let r=parseInt(o.getAttribute("data-popup-count")||"0",10);if(r===0)return;let p=0,u=null,m=null;function w(){return Array.from(o.querySelectorAll(".opinafy-popup-item"))}function v($){w().forEach((g,H)=>{g.style.display=H===$?"":"none",g.classList.remove("opinafy-popup-hiding")})}function h($){let g=w()[p];g?(g.classList.add("opinafy-popup-hiding"),setTimeout(()=>{g.style.display="none",g.classList.remove("opinafy-popup-hiding"),$&&$()},400)):$&&$()}function L(){u&&clearTimeout(u),m&&clearInterval(m),h(()=>{o.style.display="none"});try{sessionStorage.setItem(a,"1")}catch{}}function S(){u&&clearTimeout(u),u=setTimeout(()=>{h()},8e3)}function T(){r<=1||(m=setInterval(()=>{h(()=>{p=(p+1)%r,v(p),S()})},15e3))}o.addEventListener("click",$=>{$.target.closest('[data-action="close-popup"]')&&L()}),w().forEach($=>{$.style.display="none"}),setTimeout(()=>{v(0),S(),T()},3e3)}async function E(d){let o=d.getAttribute("data-project");if(!o){console.warn("[Opinafy] Widget element missing data-project attribute.");return}if(d.shadowRoot)return;let a=d.attachShadow({mode:"open"});a.innerHTML=`
       <style>
         :host { display: block; }
         .opinafy-loading { display: flex; align-items: center; justify-content: center; padding: 48px 16px; }
@@ -829,7 +854,7 @@
         @keyframes s { to { transform: rotate(360deg); } }
       </style>
       <div class="opinafy-loading"><div class="opinafy-spinner"></div></div>
-    `;try{let p,s=window;s.__OPINAFY_PRELOAD__&&typeof s.__OPINAFY_PRELOAD__=="object"?(p=s.__OPINAFY_PRELOAD__,delete s.__OPINAFY_PRELOAD__):p=await d(t);let u=p.config||{},y=n(u),_=N(u),m=G(p);e.innerHTML=`${y}<style>${_}</style>${m}`,p.config?.layout==="carousel"&&f(e),p.config?.layout==="popup"&&h(e),l(t)}catch(p){e.innerHTML=`
+    `;try{let r,p=window;p.__OPINAFY_PRELOAD__&&typeof p.__OPINAFY_PRELOAD__=="object"?(r=p.__OPINAFY_PRELOAD__,delete p.__OPINAFY_PRELOAD__):r=await l(o);let u=r.config||{},m=i(u),w=G(u),v=J(r);a.innerHTML=`${m}<style>${w}</style>${v}`,r.config?.layout==="carousel"&&_(a),r.config?.layout==="popup"&&y(a),b(a,o);let h=(r.testimonials||[]).map(L=>L.id).filter(Boolean);c(o,h)}catch(r){a.innerHTML=`
         <style>
           :host { display: block; }
           .opinafy-error { text-align: center; padding: 32px 16px; color: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; }
@@ -838,4 +863,4 @@
           <p>No se pudieron cargar los testimonios.</p>
           <p>Por favor, intenta de nuevo m\xE1s tarde.</p>
         </div>
-      `,console.error("[Opinafy] Error loading widget:",p)}}function k(){document.querySelectorAll("#opinafy-widget, .opinafy-widget").forEach(t=>x(t))}if(document.readyState==="loading"?document.addEventListener("DOMContentLoaded",k):k(),typeof MutationObserver<"u"){let c=new MutationObserver(e=>{for(let p of e)for(let s of Array.from(p.addedNodes))s instanceof HTMLElement&&((s.id==="opinafy-widget"||s.classList.contains("opinafy-widget"))&&s.getAttribute("data-project")&&!s.shadowRoot&&x(s),(s.querySelectorAll?s.querySelectorAll("#opinafy-widget, .opinafy-widget"):[]).forEach(y=>{y instanceof HTMLElement&&y.getAttribute("data-project")&&!y.shadowRoot&&x(y)}))}),t=()=>{document.body&&c.observe(document.body,{childList:!0,subtree:!0})};document.body?t():document.addEventListener("DOMContentLoaded",t)}window.addEventListener("opinafy-init",()=>{document.querySelectorAll("#opinafy-widget, .opinafy-widget").forEach(t=>{t instanceof HTMLElement&&t.getAttribute("data-project")&&!t.shadowRoot&&x(t)})})})();})();
+      `,console.error("[Opinafy] Error loading widget:",r)}}function A(){document.querySelectorAll("#opinafy-widget, .opinafy-widget").forEach(o=>E(o))}if(document.readyState==="loading"?document.addEventListener("DOMContentLoaded",A):A(),typeof MutationObserver<"u"){let d=new MutationObserver(a=>{for(let r of a)for(let p of Array.from(r.addedNodes))p instanceof HTMLElement&&((p.id==="opinafy-widget"||p.classList.contains("opinafy-widget"))&&p.getAttribute("data-project")&&!p.shadowRoot&&E(p),(p.querySelectorAll?p.querySelectorAll("#opinafy-widget, .opinafy-widget"):[]).forEach(m=>{m instanceof HTMLElement&&m.getAttribute("data-project")&&!m.shadowRoot&&E(m)}))}),o=()=>{document.body&&d.observe(document.body,{childList:!0,subtree:!0})};document.body?o():document.addEventListener("DOMContentLoaded",o)}window.addEventListener("opinafy-init",()=>{document.querySelectorAll("#opinafy-widget, .opinafy-widget").forEach(o=>{o instanceof HTMLElement&&o.getAttribute("data-project")&&!o.shadowRoot&&E(o)})})})();})();

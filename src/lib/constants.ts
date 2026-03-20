@@ -5,6 +5,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     projects: 1,
     testimonials: 10,
     video: false,
+    audio: true,
     removeBranding: false,
     layouts: ['carousel', 'grid'] as WidgetLayout[],
     seats: 1,
@@ -14,6 +15,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     projects: 1,
     testimonials: 20,
     video: false,
+    audio: true,
     removeBranding: false,
     layouts: ['carousel', 'grid'] as WidgetLayout[],
     seats: 1,
@@ -23,6 +25,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     projects: 3,
     testimonials: Infinity,
     video: false,
+    audio: true,
     removeBranding: true,
     layouts: ['carousel', 'grid', 'wall', 'single', 'badge', 'popup'] as WidgetLayout[],
     seats: 1,
@@ -32,6 +35,7 @@ export const PLAN_LIMITS: Record<Plan, PlanLimits> = {
     projects: 20,
     testimonials: Infinity,
     video: true,
+    audio: true,
     removeBranding: true,
     layouts: ['carousel', 'grid', 'wall', 'single', 'badge', 'popup'] as WidgetLayout[],
     seats: 3,
@@ -99,3 +103,5 @@ export const MAX_FILE_SIZE = 5 * 1024 * 1024 // 5MB
 export const ACCEPTED_IMAGE_TYPES = ['image/jpeg', 'image/png', 'image/webp']
 export const ACCEPTED_VIDEO_TYPES = ['video/mp4', 'video/webm']
 export const MAX_VIDEO_SIZE = 50 * 1024 * 1024 // 50MB
+export const ACCEPTED_AUDIO_TYPES = ['audio/webm', 'audio/ogg', 'audio/mp4']
+export const MAX_AUDIO_SIZE = 10 * 1024 * 1024 // 10MB

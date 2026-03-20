@@ -54,16 +54,40 @@ import { renderWidget, WidgetData } from './templates';
   }
 
   // ── Track impression ──
-  function trackImpression(projectId: string): void {
+  function trackImpression(projectId: string, testimonialIds: string[]): void {
     try {
       fetch(`${BASE_URL}/api/widget/${projectId}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ type: 'impression' }),
+        body: JSON.stringify({ type: 'impression', testimonialIds }),
       }).catch(() => { /* silently fail */ });
     } catch {
       // ignore tracking errors
     }
+  }
+
+  // ── Track click ──
+  function trackClick(projectId: string, testimonialId: string): void {
+    try {
+      fetch(`${BASE_URL}/api/widget/${projectId}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ type: 'click', testimonialId }),
+      }).catch(() => { /* silently fail */ });
+    } catch {
+      // ignore tracking errors
+    }
+  }
+
+  // ── Add click listeners to cards ──
+  function initClickTracking(shadowRoot: ShadowRoot, projectId: string): void {
+    const cards = shadowRoot.querySelectorAll('[data-testimonial-id]');
+    cards.forEach((card) => {
+      card.addEventListener('click', () => {
+        const tid = card.getAttribute('data-testimonial-id');
+        if (tid) trackClick(projectId, tid);
+      });
+    });
   }
 
   // ── Carousel interactivity ──
@@ -375,8 +399,12 @@ import { renderWidget, WidgetData } from './templates';
         initPopup(shadow);
       }
 
-      // Track impression
-      trackImpression(projectId);
+      // Init click tracking on cards
+      initClickTracking(shadow, projectId);
+
+      // Track impression with testimonial IDs
+      const testimonialIds = (data.testimonials || []).map((t: { id?: string }) => t.id).filter(Boolean) as string[];
+      trackImpression(projectId, testimonialIds);
     } catch (err) {
       shadow.innerHTML = `
         <style>

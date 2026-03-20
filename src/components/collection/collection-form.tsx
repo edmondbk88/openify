@@ -9,6 +9,7 @@ import { useToast } from '@/components/ui/toast'
 import { StarInput } from './star-input'
 import { PhotoUpload } from './photo-upload'
 import { VideoUpload } from './video-upload'
+import { AudioUpload } from './audio-upload'
 
 interface CollectionFormProps {
   projectId: string
@@ -45,6 +46,7 @@ export function CollectionForm({
   const [loading, setLoading] = useState(false)
   const [photoUrl, setPhotoUrl] = useState<string | undefined>()
   const [videoUrl, setVideoUrl] = useState<string | undefined>()
+  const [audioUrl, setAudioUrl] = useState<string | undefined>()
   const [errors, setErrors] = useState<FieldErrors>({})
   const [formData, setFormData] = useState<FormData>({
     author_name: '',
@@ -105,7 +107,7 @@ export function CollectionForm({
         body: JSON.stringify({
           ...payload,
           author_avatar_url: photoUrl || null,
-          video_url: videoUrl || null,
+          video_url: videoUrl || audioUrl || null,
         }),
       })
 
@@ -203,8 +205,27 @@ export function CollectionForm({
         disabled={loading}
       />
 
+      {/* Audio Recorder - available for all plans */}
+      {!videoUrl && (
+        <div className="space-y-2">
+          <div>
+            <p className="text-sm font-medium text-gray-700">
+              ¿Prefieres grabar un audio?
+            </p>
+            <p className="text-xs text-gray-500">
+              Graba un audio de hasta 3 minutos compartiendo tu experiencia
+            </p>
+          </div>
+          <AudioUpload
+            value={audioUrl}
+            onChange={setAudioUrl}
+            brandColor={brandColor}
+          />
+        </div>
+      )}
+
       {/* Video Recorder */}
-      {allowVideo && (
+      {allowVideo && !audioUrl && (
         <div className="space-y-2">
           <div>
             <p className="text-sm font-medium text-gray-700">

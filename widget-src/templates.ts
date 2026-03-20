@@ -4,6 +4,8 @@
 interface Testimonial {
   id: string;
   author_name: string;
+  click_count?: number;
+  impression_count?: number;
   author_email?: string;
   author_avatar?: string;
   company?: string;
@@ -243,14 +245,25 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
     } catch { /* ignore */ }
   }
 
-  // Video
-  const hasVideo = !!video_url;
+  // Detect audio vs video
+  const isAudio = video_url ? /\.(ogg|webm)$/i.test(video_url) && !/video/i.test(video_url) || /audio/i.test(video_url) || /testimonio-audio/i.test(video_url) : false;
+  const hasVideo = !!video_url && !isAudio;
+  const hasAudio = !!video_url && isAudio;
+
   const videoHtml = hasVideo ? `
     <div class="opinafy-video-container">
       <video class="opinafy-video" controls playsinline preload="metadata">
         <source src="${video_url}" type="video/mp4">
         <source src="${video_url}" type="video/webm">
       </video>
+    </div>` : '';
+
+  const audioHtml = hasAudio ? `
+    <div class="opinafy-audio">
+      <audio controls preload="metadata" class="opinafy-audio-player">
+        <source src="${video_url}" type="audio/webm">
+        <source src="${video_url}" type="audio/ogg">
+      </audio>
     </div>` : '';
 
   // Video display mode: controls what is shown alongside video
@@ -260,7 +273,7 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
   if (hasVideo && videoMode !== 'full') {
     if (videoMode === 'video_only') {
       return `
-        <div class="opinafy-card opinafy-card-has-video opinafy-card-video-only">
+        <div class="opinafy-card opinafy-card-has-video opinafy-card-video-only" data-testimonial-id="${testimonial.id}">
           ${videoHtml}
         </div>
       `;
@@ -268,7 +281,7 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
 
     if (videoMode === 'video_stars') {
       return `
-        <div class="opinafy-card opinafy-card-has-video">
+        <div class="opinafy-card opinafy-card-has-video" data-testimonial-id="${testimonial.id}">
           ${videoHtml}
           <div class="opinafy-card-body">
             <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
@@ -280,7 +293,7 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
 
     if (videoMode === 'video_name') {
       return `
-        <div class="opinafy-card opinafy-card-has-video">
+        <div class="opinafy-card opinafy-card-has-video" data-testimonial-id="${testimonial.id}">
           ${videoHtml}
           <div class="opinafy-card-body">
             <div class="opinafy-author-name">${escapeHtml(author_name)}</div>
@@ -301,8 +314,9 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
   const showCompany = config.show_company !== false;
 
   return `
-    <div class="opinafy-card${hasVideo ? ' opinafy-card-has-video' : ''}">
+    <div class="opinafy-card${hasVideo ? ' opinafy-card-has-video' : ''}" data-testimonial-id="${testimonial.id}">
       ${videoHtml}
+      ${audioHtml}
       <div class="${hasVideo ? 'opinafy-card-body' : ''}">
         ${showRating && rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
         <div class="opinafy-content"><p>${escapeHtml(content)}</p></div>

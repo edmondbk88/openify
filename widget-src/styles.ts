@@ -262,6 +262,24 @@ export function getStyles(config: any): string {
       border-radius: var(--opinafy-radius);
     }
 
+    /* ── Audio Player ── */
+    .opinafy-audio {
+      padding: 16px;
+      background: linear-gradient(135deg, var(--opinafy-primary), color-mix(in srgb, var(--opinafy-primary) 70%, #000));
+      border-radius: var(--opinafy-radius) var(--opinafy-radius) 0 0;
+    }
+
+    .opinafy-audio-player {
+      width: 100%;
+      height: 40px;
+      border-radius: 20px;
+    }
+
+    /* ── Clickable cards (A/B tracking) ── */
+    .opinafy-card[data-testimonial-id] {
+      cursor: pointer;
+    }
+
     /* ── Content ── */
     .opinafy-content {
       font-size: 14px;

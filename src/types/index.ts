@@ -61,6 +61,8 @@ export interface Testimonial {
   sentiment_label: string | null
   key_phrases: string[] | null
   ai_summary: string | null
+  click_count: number
+  impression_count: number
   created_at: string
   updated_at: string
 }
@@ -109,6 +111,7 @@ export interface PlanLimits {
   projects: number
   testimonials: number
   video: boolean
+  audio: boolean
   removeBranding: boolean
   layouts: WidgetLayout[]
   seats: number

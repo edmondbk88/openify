@@ -177,7 +177,21 @@ export default function TestimonialCard({
       </div>
 
       {/* Actions */}
-      <div className="mt-4 flex items-center gap-2 border-t border-gray-100 pt-4">
+      <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-gray-100 pt-4">
+        {/* Share button */}
+        {testimonial.status === 'approved' && (
+          <a
+            href={`/compartir/${testimonial.id}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-indigo-200 bg-indigo-50 px-3 py-1.5 text-sm font-medium text-indigo-700 transition-colors hover:bg-indigo-100"
+          >
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z" />
+            </svg>
+            Compartir
+          </a>
+        )}
         {onApprove && testimonial.status !== 'approved' && (
           <button
             onClick={() => onApprove(testimonial.id)}
