@@ -20,14 +20,6 @@ export async function generateMetadata({
 
   const canonical = clampedPage === 1 ? '/blog' : `/blog?page=${clampedPage}`
 
-  const linkTags: Record<string, string> = {}
-  if (clampedPage > 1) {
-    linkTags.prev = clampedPage === 2 ? 'https://opinafy.com/blog' : `https://opinafy.com/blog?page=${clampedPage - 1}`
-  }
-  if (clampedPage < totalPages) {
-    linkTags.next = `https://opinafy.com/blog?page=${clampedPage + 1}`
-  }
-
   return {
     title: 'Blog - Opinafy | Consejos sobre Testimonios y Prueba Social',
     description:
@@ -50,7 +42,6 @@ export async function generateMetadata({
       locale: 'es_ES',
       images: [{ url: '/og.png', width: 1200, height: 630 }],
     },
-    other: linkTags,
   }
 }
 

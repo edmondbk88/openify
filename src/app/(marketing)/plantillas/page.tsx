@@ -4,9 +4,9 @@ import { PlantillasGallery } from './gallery'
 import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Plantillas de Testimonios | 60 Disenos Listos para Usar - Opinafy',
+  title: 'Plantillas de Testimonios | 60 Diseños Listos para Usar - Opinafy',
   description:
-    'Explora 60 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y mas. Personaliza tus testimonios con Opinafy.',
+    'Explora 60 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y más. Personaliza tus testimonios con Opinafy.',
   keywords: [
     'plantillas testimonios',
     'templates widget testimonios',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: 'Opinafy',
     title: '60 Plantillas de Testimonios Listas para Usar - Opinafy',
     description:
-      'Descubre 60 disenos profesionales para mostrar testimonios en tu web. Minimalistas, corporativos, coloridos, oscuros y mas.',
+      'Descubre 60 diseños profesionales para mostrar testimonios en tu web. Minimalistas, corporativos, coloridos, oscuros y más.',
     images: [
       {
         url: '/og.png',
