@@ -29,6 +29,13 @@ export default function LoginPage() {
         return
       }
 
+      // Set locale to Spanish since user logged in from Spanish page
+      await fetch('/api/profile', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ locale: 'es' }),
+      }).catch(() => {})
+
       router.push('/dashboard')
     } catch {
       setError('Ha ocurrido un error inesperado. Inténtalo de nuevo.')
