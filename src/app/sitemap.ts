@@ -4,6 +4,7 @@ import { blogArticlesEn } from '@/lib/blog-data-en'
 import { widgetTemplates } from '@/lib/widget-templates'
 import { miniSiteTemplates } from '@/lib/minisite-templates'
 import { industries } from '@/lib/industry-data'
+import { industriesEn } from '@/lib/industry-data-en'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -218,6 +219,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ]
 
+  const englishIndustryIndexPage: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/en/testimonials-for`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+  ]
+
+  const englishIndustryPages: MetadataRoute.Sitemap = industriesEn.map((industry) => ({
+    url: `${baseUrl}/en/testimonials-for/${industry.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
   const englishBlogPages: MetadataRoute.Sitemap = blogArticlesEn.map((article) => ({
     url: `${baseUrl}/en/blog/${article.slug}`,
     lastModified: new Date(article.date),
@@ -240,5 +257,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  return [...staticPages, ...englishPages, ...blogPages, ...englishBlogPages, ...templatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...profilePages]
+  return [...staticPages, ...englishPages, ...blogPages, ...englishBlogPages, ...templatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...englishIndustryIndexPage, ...englishIndustryPages, ...profilePages]
 }
