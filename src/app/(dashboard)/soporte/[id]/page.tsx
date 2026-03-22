@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect, useRef, use } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import type { SupportTicket, TicketMessage } from '@/types'
 import { useLocale } from '@/components/dashboard/locale-context'
@@ -37,8 +38,9 @@ function getCategoryLabels(locale: Locale): Record<string, string> {
   }
 }
 
-export default function TicketDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
+export default function TicketDetailPage() {
+  const params = useParams()
+  const id = params.id as string
   const locale = useLocale()
   const [ticket, setTicket] = useState<SupportTicket | null>(null)
   const [messages, setMessages] = useState<TicketMessage[]>([])
