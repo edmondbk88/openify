@@ -61,6 +61,26 @@ function CrossIcon() {
 // ManageSubscriptionButton is now a client component import
 import { ManageSubscriptionButton } from '@/components/dashboard/manage-subscription-button'
 
+async function getSubscriptionDetails(subscriptionId: string) {
+  if (!subscriptionId || !process.env.STRIPE_SECRET_KEY) return null
+
+  try {
+    const res = await fetch(`https://api.stripe.com/v1/subscriptions/${subscriptionId}`, {
+      headers: { 'Authorization': `Bearer ${process.env.STRIPE_SECRET_KEY}` },
+      cache: 'no-store',
+    })
+    if (!res.ok) return null
+    const data = await res.json()
+    return {
+      currentPeriodEnd: new Date(data.current_period_end * 1000),
+      cancelAtPeriodEnd: data.cancel_at_period_end as boolean,
+      status: data.status as string,
+    }
+  } catch {
+    return null
+  }
+}
+
 export default async function FacturacionPage({
   searchParams,
 }: {
@@ -86,6 +106,10 @@ export default async function FacturacionPage({
   const currentPlan: Plan = (profile?.plan as Plan) ?? 'free'
   const hasSubscription = !!profile?.stripe_subscription_id
   const limits = PLAN_LIMITS[currentPlan]
+
+  const subscriptionDetails = hasSubscription
+    ? await getSubscriptionDetails(profile!.stripe_subscription_id)
+    : null
 
   return (
     <div className="mx-auto max-w-4xl">
@@ -146,6 +170,13 @@ export default async function FacturacionPage({
                 </span>
               )}
             </div>
+            {subscriptionDetails && (
+              <p className={`mt-2 text-sm ${subscriptionDetails.cancelAtPeriodEnd ? 'text-red-600' : 'text-green-600'}`}>
+                {subscriptionDetails.cancelAtPeriodEnd
+                  ? `Tu suscripción se cancela el ${subscriptionDetails.currentPeriodEnd.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}`
+                  : `Tu suscripción se renueva el ${subscriptionDetails.currentPeriodEnd.toLocaleDateString('es-ES', { day: 'numeric', month: 'long', year: 'numeric' })}`}
+              </p>
+            )}
           </div>
           {hasSubscription && <ManageSubscriptionButton />}
         </div>

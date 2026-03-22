@@ -4,6 +4,7 @@ import Link from 'next/link'
 import type { Project, Testimonial, TestimonialStatus } from '@/types'
 import TestimonialListClient from './testimonial-list-client'
 import MinisiteToggle from './minisite-toggle'
+import DeleteProjectButton from './delete-project-button'
 
 export const metadata = {
   title: 'Detalle del proyecto - Opinafy',
@@ -225,6 +226,7 @@ export default async function ProyectoDetailPage({
             </svg>
             Ajustes recopilación
           </Link>
+          <DeleteProjectButton projectId={(project as Project).id} />
         </div>
       </div>
 
