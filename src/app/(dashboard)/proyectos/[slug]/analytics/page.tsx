@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react'
 import { createBrowserClient } from '@supabase/ssr'
 import Link from 'next/link'
 import { useParams } from 'next/navigation'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t as tr } from '@/lib/i18n'
 
 interface TestimonialAnalytics {
   id: string
@@ -18,6 +20,7 @@ interface TestimonialAnalytics {
 export default function AnalyticsPage() {
   const params = useParams()
   const slug = params.slug as string
+  const locale = useLocale()
   const [testimonials, setTestimonials] = useState<TestimonialAnalytics[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
@@ -37,7 +40,7 @@ export default function AnalyticsPage() {
         .single()
 
       if (projectError || !project) {
-        setError('Proyecto no encontrado')
+        setError(tr('analytics.projectNotFound', locale))
         setLoading(false)
         return
       }
@@ -103,13 +106,13 @@ export default function AnalyticsPage() {
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
-          Volver al proyecto
+          {tr('projects.backToProject', locale)}
         </Link>
       </div>
 
-      <h1 className="text-2xl font-bold text-gray-900">Analytics de testimonios</h1>
+      <h1 className="text-2xl font-bold text-gray-900">{tr('analytics.title', locale)}</h1>
       <p className="mt-1 text-sm text-gray-500">
-        A/B Testing: compara el rendimiento de tus testimonios.
+        {tr('analytics.subtitle', locale)}
       </p>
 
       {/* Highlights */}
@@ -117,7 +120,7 @@ export default function AnalyticsPage() {
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {best && (
             <div className="rounded-lg border border-green-200 bg-green-50 p-4">
-              <p className="text-xs font-semibold uppercase text-green-700">Mejor rendimiento</p>
+              <p className="text-xs font-semibold uppercase text-green-700">{tr('analytics.bestPerformance', locale)}</p>
               <p className="mt-1 font-medium text-gray-900">{best.author_name}</p>
               <p className="mt-0.5 text-sm text-gray-600">
                 CTR: {best.ctr.toFixed(1)}% ({best.click_count} clics / {best.impression_count} impresiones)
@@ -126,7 +129,7 @@ export default function AnalyticsPage() {
           )}
           {worst && (
             <div className="rounded-lg border border-red-200 bg-red-50 p-4">
-              <p className="text-xs font-semibold uppercase text-red-700">Peor rendimiento</p>
+              <p className="text-xs font-semibold uppercase text-red-700">{tr('analytics.worstPerformance', locale)}</p>
               <p className="mt-1 font-medium text-gray-900">{worst.author_name}</p>
               <p className="mt-0.5 text-sm text-gray-600">
                 CTR: {worst.ctr.toFixed(1)}% ({worst.click_count} clics / {worst.impression_count} impresiones)
@@ -139,7 +142,7 @@ export default function AnalyticsPage() {
       {/* Bar Chart */}
       {testimonials.length > 0 && (
         <div className="mt-8">
-          <h2 className="mb-4 text-lg font-semibold text-gray-900">Impresiones vs Clics</h2>
+          <h2 className="mb-4 text-lg font-semibold text-gray-900">{tr('analytics.impressionsVsClicks', locale)}</h2>
           <div className="space-y-3">
             {testimonials.map((t) => (
               <div key={t.id} className="rounded-lg border border-gray-200 bg-white p-3">
@@ -148,7 +151,7 @@ export default function AnalyticsPage() {
                 </p>
                 <div className="space-y-1.5">
                   <div className="flex items-center gap-2">
-                    <span className="w-24 text-xs text-gray-500">Impresiones</span>
+                    <span className="w-24 text-xs text-gray-500">{tr('analytics.impressions', locale)}</span>
                     <div className="flex-1 h-5 rounded-full bg-gray-100 overflow-hidden">
                       <div
                         className="h-full rounded-full bg-indigo-400 transition-all duration-500"
@@ -158,7 +161,7 @@ export default function AnalyticsPage() {
                     <span className="w-12 text-right text-xs font-medium text-gray-700">{t.impression_count}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="w-24 text-xs text-gray-500">Clics</span>
+                    <span className="w-24 text-xs text-gray-500">{tr('analytics.clicks', locale)}</span>
                     <div className="flex-1 h-5 rounded-full bg-gray-100 overflow-hidden">
                       <div
                         className="h-full rounded-full bg-green-400 transition-all duration-500"
@@ -176,18 +179,18 @@ export default function AnalyticsPage() {
 
       {/* Table */}
       <div className="mt-8">
-        <h2 className="mb-4 text-lg font-semibold text-gray-900">Tabla de rendimiento (por CTR)</h2>
+        <h2 className="mb-4 text-lg font-semibold text-gray-900">{tr('analytics.performanceTable', locale)}</h2>
         {testimonials.length === 0 ? (
-          <p className="text-sm text-gray-500">No hay testimonios aprobados con datos de analytics.</p>
+          <p className="text-sm text-gray-500">{tr('analytics.noData', locale)}</p>
         ) : (
           <div className="overflow-x-auto rounded-lg border border-gray-200">
             <table className="min-w-full divide-y divide-gray-200">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase text-gray-500">Autor</th>
-                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase text-gray-500">Estrellas</th>
-                  <th className="px-4 py-3 text-right text-xs font-semibold uppercase text-gray-500">Impresiones</th>
-                  <th className="px-4 py-3 text-right text-xs font-semibold uppercase text-gray-500">Clics</th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase text-gray-500">{tr('import.author', locale)}</th>
+                  <th className="px-4 py-3 text-left text-xs font-semibold uppercase text-gray-500">{tr('analytics.stars', locale)}</th>
+                  <th className="px-4 py-3 text-right text-xs font-semibold uppercase text-gray-500">{tr('analytics.impressions', locale)}</th>
+                  <th className="px-4 py-3 text-right text-xs font-semibold uppercase text-gray-500">{tr('analytics.clicks', locale)}</th>
                   <th className="px-4 py-3 text-right text-xs font-semibold uppercase text-gray-500">CTR</th>
                 </tr>
               </thead>

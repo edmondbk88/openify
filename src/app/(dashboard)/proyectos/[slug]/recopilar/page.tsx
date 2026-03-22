@@ -6,12 +6,15 @@ import { useToast } from '@/components/ui/toast'
 import { createClient } from '@/lib/supabase/client'
 import { QRCodeSVG } from 'qrcode.react'
 import type { Project } from '@/types'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 export default function RecopilarPage() {
   const params = useParams()
   const slug = params.slug as string
   const router = useRouter()
   const { toast } = useToast()
+  const locale = useLocale()
 
   const [project, setProject] = useState<Project | null>(null)
   const [loading, setLoading] = useState(true)
@@ -164,20 +167,20 @@ export default function RecopilarPage() {
       {/* Header */}
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-gray-900">
-          Ajustes de recopilación
+          {t('collect.title', locale)}
         </h1>
         <p className="mt-1 text-sm text-gray-500">
-          Configura la página pública donde tus clientes dejan testimonios.
+          {t('collect.subtitle', locale)}
         </p>
       </div>
 
       {/* Public URL */}
       <div className="rounded-xl border border-gray-200 bg-white p-6">
         <h2 className="text-sm font-semibold text-gray-900">
-          URL pública de recopilación
+          {t('collect.publicUrl', locale)}
         </h2>
         <p className="mt-1 text-sm text-gray-500">
-          Comparte este enlace con tus clientes para que dejen sus testimonios.
+          {t('collect.publicUrlDescription', locale)}
         </p>
         <div className="mt-4 flex items-center gap-2">
           <input
@@ -209,7 +212,7 @@ export default function RecopilarPage() {
                     d="m4.5 12.75 6 6 9-13.5"
                   />
                 </svg>
-                Copiado
+                {t('collect.copied', locale)}
               </>
             ) : (
               <>
@@ -226,7 +229,7 @@ export default function RecopilarPage() {
                     d="M15.666 3.888A2.25 2.25 0 0 0 13.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 0 1-.75.75H9.75a.75.75 0 0 1-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 0 1-2.25 2.25H6.75A2.25 2.25 0 0 1 4.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 0 1 1.927-.184"
                   />
                 </svg>
-                Copiar
+                {t('collect.copy', locale)}
               </>
             )}
           </button>
@@ -241,7 +244,7 @@ export default function RecopilarPage() {
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 7.5V6.108c0-1.135.845-2.098 1.976-2.192.373-.03.748-.057 1.123-.08M15.75 18H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08M15.75 18.75v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5A3.375 3.375 0 0 0 6.375 7.5H5.25m11.9-3.664A2.251 2.251 0 0 0 15 2.25h-1.5a2.251 2.251 0 0 0-2.15 1.586m5.8 0c.065.21.1.433.1.664v.75h-6V4.5c0-.231.035-.454.1-.664M6.75 7.5H4.875c-.621 0-1.125.504-1.125 1.125v12c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V16.5a9 9 0 0 0-9-9Z" />
             </svg>
-            Copiar enlace
+            {t('collect.copyLink', locale)}
           </button>
           <a
             href={`https://wa.me/?text=${encodeURIComponent(`\u00a1Hola! Me encantar\u00eda conocer tu opini\u00f3n sobre nuestro servicio. Puedes dejar tu testimonio aqu\u00ed: ${publicUrl}`)}`}
@@ -268,10 +271,9 @@ export default function RecopilarPage() {
 
       {/* QR Code */}
       <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6">
-        <h2 className="text-sm font-semibold text-gray-900">Código QR</h2>
+        <h2 className="text-sm font-semibold text-gray-900">{t('collect.qrCode', locale)}</h2>
         <p className="mt-1 text-sm text-gray-500">
-          Usa este código QR para compartir la página de recopilación de forma
-          física.
+          {t('collect.qrDescription', locale)}
         </p>
         <div className="mt-4 flex flex-col items-center gap-4">
           <div className="rounded-lg border border-gray-200 bg-white p-4" ref={qrRef}>
@@ -290,7 +292,7 @@ export default function RecopilarPage() {
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
             </svg>
-            Descargar QR
+            {t('collect.downloadQr', locale)}
           </button>
         </div>
       </div>
@@ -299,7 +301,7 @@ export default function RecopilarPage() {
       <form onSubmit={handleSave} className="mt-6 space-y-6">
         <div className="rounded-xl border border-gray-200 bg-white p-6">
           <h2 className="text-sm font-semibold text-gray-900">
-            Personalizar página de recopilación
+            {t('collect.customizePage', locale)}
           </h2>
 
           <div className="mt-4 space-y-4">
@@ -309,7 +311,7 @@ export default function RecopilarPage() {
                 htmlFor="collection_title"
                 className="block text-sm font-medium text-gray-700"
               >
-                Título
+                {t('collect.titleLabel', locale)}
               </label>
               <input
                 id="collection_title"
@@ -328,7 +330,7 @@ export default function RecopilarPage() {
                 htmlFor="collection_description"
                 className="block text-sm font-medium text-gray-700"
               >
-                Descripción
+                {t('collect.descriptionLabel', locale)}
               </label>
               <textarea
                 id="collection_description"
@@ -347,7 +349,7 @@ export default function RecopilarPage() {
                 htmlFor="thank_you_message"
                 className="block text-sm font-medium text-gray-700"
               >
-                Mensaje de agradecimiento
+                {t('collect.thankYouLabel', locale)}
               </label>
               <textarea
                 id="thank_you_message"
@@ -359,8 +361,7 @@ export default function RecopilarPage() {
                 className="mt-1.5 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
               />
               <p className="mt-1 text-xs text-gray-400">
-                Este mensaje se mostrará después de que el cliente envíe su
-                testimonio.
+                {t('collect.thankYouHint', locale)}
               </p>
             </div>
           </div>
@@ -393,7 +394,7 @@ export default function RecopilarPage() {
                 />
               </svg>
             )}
-            {saving ? 'Guardando...' : 'Guardar cambios'}
+            {saving ? t('projects.saving', locale) : t('projects.saveChanges', locale)}
           </button>
         </div>
       </form>

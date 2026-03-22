@@ -4,6 +4,8 @@ import { useState, useRef, useCallback } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { IMPORTABLE_PLATFORMS, PLATFORMS } from '@/lib/platform-logos'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 type Tab = 'platform' | 'manual' | 'csv'
 
@@ -31,6 +33,7 @@ export default function ImportarPage() {
   const params = useParams()
   const router = useRouter()
   const slug = params.slug as string
+  const locale = useLocale()
   const fileInputRef = useRef<HTMLInputElement>(null)
 
   const [activeTab, setActiveTab] = useState<Tab>('platform')
@@ -207,16 +210,16 @@ export default function ImportarPage() {
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
-          Volver al proyecto
+          {t('projects.backToProject', locale)}
         </Link>
       </div>
 
       <h1 className="text-2xl font-bold text-gray-900">
-        Importar testimonios
+        {t('import.title', locale)}
         <span className="ml-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold uppercase text-amber-700">Beta</span>
       </h1>
       <p className="mt-1 text-sm text-gray-500">
-        Importa resenas y testimonios desde plataformas externas para mostrarlos en tu widget.
+        {t('import.subtitle', locale)}
       </p>
 
       {/* Alerts */}
@@ -234,9 +237,9 @@ export default function ImportarPage() {
       {/* Tabs */}
       <div className="mt-6 flex gap-1 rounded-lg bg-gray-100 p-1">
         {([
-          { key: 'platform' as Tab, label: 'Por plataforma' },
-          { key: 'manual' as Tab, label: 'Manual' },
-          { key: 'csv' as Tab, label: 'Importar CSV' },
+          { key: 'platform' as Tab, label: t('import.byPlatform', locale) },
+          { key: 'manual' as Tab, label: t('import.manual', locale) },
+          { key: 'csv' as Tab, label: t('import.csv', locale) },
         ]).map((tab) => (
           <button
             key={tab.key}

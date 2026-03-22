@@ -3,34 +3,48 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import type { SupportTicket } from '@/types'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
+import type { Locale } from '@/lib/i18n'
 
-const STATUS_CONFIG: Record<string, { label: string; color: string }> = {
-  open: { label: 'Abierto', color: 'bg-blue-100 text-blue-700' },
-  in_progress: { label: 'En progreso', color: 'bg-yellow-100 text-yellow-700' },
-  waiting: { label: 'Esperando', color: 'bg-purple-100 text-purple-700' },
-  resolved: { label: 'Resuelto', color: 'bg-green-100 text-green-700' },
-  closed: { label: 'Cerrado', color: 'bg-gray-100 text-gray-600' },
+function getStatusConfig(locale: Locale): Record<string, { label: string; color: string }> {
+  return {
+    open: { label: t('support.open', locale), color: 'bg-blue-100 text-blue-700' },
+    in_progress: { label: t('support.inProgress', locale), color: 'bg-yellow-100 text-yellow-700' },
+    waiting: { label: t('support.waiting', locale), color: 'bg-purple-100 text-purple-700' },
+    resolved: { label: t('support.resolved', locale), color: 'bg-green-100 text-green-700' },
+    closed: { label: t('support.closed', locale), color: 'bg-gray-100 text-gray-600' },
+  }
 }
 
-const PRIORITY_CONFIG: Record<string, { label: string; color: string }> = {
-  low: { label: 'Baja', color: 'bg-gray-100 text-gray-600' },
-  medium: { label: 'Media', color: 'bg-blue-100 text-blue-700' },
-  high: { label: 'Alta', color: 'bg-orange-100 text-orange-700' },
-  urgent: { label: 'Urgente', color: 'bg-red-100 text-red-700' },
+function getPriorityConfig(locale: Locale): Record<string, { label: string; color: string }> {
+  return {
+    low: { label: t('support.priorityLow', locale), color: 'bg-gray-100 text-gray-600' },
+    medium: { label: t('support.priorityMedium', locale), color: 'bg-blue-100 text-blue-700' },
+    high: { label: t('support.priorityHigh', locale), color: 'bg-orange-100 text-orange-700' },
+    urgent: { label: t('support.priorityUrgent', locale), color: 'bg-red-100 text-red-700' },
+  }
 }
 
-const CATEGORY_LABELS: Record<string, string> = {
-  billing: 'Facturacion',
-  technical: 'Tecnico',
-  feature: 'Sugerencia',
-  account: 'Cuenta',
-  widget: 'Widget',
-  other: 'Otro',
+function getCategoryLabels(locale: Locale): Record<string, string> {
+  return {
+    billing: t('support.categoryBilling', locale),
+    technical: t('support.categoryTechnical', locale),
+    feature: t('support.categoryFeature', locale),
+    account: t('support.categoryAccount', locale),
+    widget: t('support.categoryWidget', locale),
+    other: t('support.categoryOther', locale),
+  }
 }
 
 export default function SoportePage() {
+  const locale = useLocale()
   const [tickets, setTickets] = useState<(SupportTicket & { last_message?: string })[]>([])
   const [loading, setLoading] = useState(true)
+
+  const STATUS_CONFIG = getStatusConfig(locale)
+  const PRIORITY_CONFIG = getPriorityConfig(locale)
+  const CATEGORY_LABELS = getCategoryLabels(locale)
 
   useEffect(() => {
     fetch('/api/tickets')
@@ -47,9 +61,9 @@ export default function SoportePage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Soporte</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{t('support.title', locale)}</h1>
           <p className="text-gray-500 text-sm mt-1">
-            Gestiona tus tickets de soporte
+            {t('support.subtitle', locale)}
           </p>
         </div>
         <Link
@@ -59,7 +73,7 @@ export default function SoportePage() {
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
           </svg>
-          Nuevo Ticket
+          {t('support.new', locale)}
         </Link>
       </div>
 
@@ -68,15 +82,15 @@ export default function SoportePage() {
         {loading ? (
           <div className="p-12 text-center">
             <div className="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-indigo-600 border-r-transparent" />
-            <p className="mt-3 text-gray-500 text-sm">Cargando tickets...</p>
+            <p className="mt-3 text-gray-500 text-sm">{t('support.loadingTickets', locale)}</p>
           </div>
         ) : tickets.length === 0 ? (
           <div className="p-12 text-center">
             <svg className="w-12 h-12 text-gray-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
             </svg>
-            <p className="text-gray-500 font-medium">No tienes tickets de soporte</p>
-            <p className="text-gray-400 text-sm mt-1">Crea uno nuevo si necesitas ayuda</p>
+            <p className="text-gray-500 font-medium">{t('support.empty', locale)}</p>
+            <p className="text-gray-400 text-sm mt-1">{t('support.emptyHint', locale)}</p>
           </div>
         ) : (
           <div className="divide-y divide-gray-100">
@@ -110,7 +124,7 @@ export default function SoportePage() {
                     <div className="flex items-center gap-3 mt-1 text-sm text-gray-500">
                       <span>{CATEGORY_LABELS[ticket.category] || ticket.category}</span>
                       <span>
-                        {new Date(ticket.created_at).toLocaleDateString('es-ES', {
+                        {new Date(ticket.created_at).toLocaleDateString(locale === 'en' ? 'en-US' : 'es-ES', {
                           day: 'numeric',
                           month: 'short',
                           hour: '2-digit',

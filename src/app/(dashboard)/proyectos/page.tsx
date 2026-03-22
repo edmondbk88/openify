@@ -2,6 +2,8 @@ import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import ProjectCard from '@/components/dashboard/project-card'
+import { getUserLocale } from '@/lib/get-locale'
+import { t } from '@/lib/i18n'
 import type { Project } from '@/types'
 
 export const metadata = {
@@ -18,6 +20,8 @@ export default async function ProyectosPage() {
   if (!user) {
     redirect('/login')
   }
+
+  const locale = await getUserLocale()
 
   // Fetch projects with testimonial counts
   const { data: projects } = await supabase
@@ -37,9 +41,9 @@ export default async function ProyectosPage() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Proyectos</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{t('projects.title', locale)}</h1>
           <p className="mt-1 text-sm text-gray-500">
-            Gestiona tus proyectos y testimonios.
+            {t('projects.subtitle', locale)}
           </p>
         </div>
         <Link
@@ -59,7 +63,7 @@ export default async function ProyectosPage() {
               d="M12 4.5v15m7.5-7.5h-15"
             />
           </svg>
-          Nuevo Proyecto
+          {t('projects.new', locale)}
         </Link>
       </div>
 
@@ -80,11 +84,10 @@ export default async function ProyectosPage() {
             />
           </svg>
           <h3 className="mt-4 text-lg font-semibold text-gray-900">
-            No tienes proyectos todavía
+            {t('projects.emptyTitle', locale)}
           </h3>
           <p className="mt-2 text-sm text-gray-500">
-            Crea tu primer proyecto para empezar a recopilar testimonios de tus
-            clientes.
+            {t('projects.emptyDescription', locale)}
           </p>
           <Link
             href="/proyectos/nuevo"
@@ -103,7 +106,7 @@ export default async function ProyectosPage() {
                 d="M12 4.5v15m7.5-7.5h-15"
               />
             </svg>
-            Crear primer proyecto
+            {t('projects.createFirst', locale)}
           </Link>
         </div>
       ) : (

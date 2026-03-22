@@ -3,16 +3,19 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
-
-const WEBHOOK_EVENTS = [
-  { id: 'new_testimonial', label: 'Nuevo testimonio recibido' },
-  { id: 'testimonial_approved', label: 'Testimonio aprobado' },
-  { id: 'testimonial_rejected', label: 'Testimonio rechazado' },
-]
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 export default function IntegracionesPage() {
   const params = useParams()
   const slug = params.slug as string
+  const locale = useLocale()
+
+  const WEBHOOK_EVENTS = [
+    { id: 'new_testimonial', label: t('integrations.eventNewTestimonial', locale) },
+    { id: 'testimonial_approved', label: t('integrations.eventApproved', locale) },
+    { id: 'testimonial_rejected', label: t('integrations.eventRejected', locale) },
+  ]
 
   const [projectId, setProjectId] = useState<string | null>(null)
   const [webhookUrl, setWebhookUrl] = useState('')
@@ -139,20 +142,20 @@ export default function IntegracionesPage() {
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
-          Volver al proyecto
+          {t('projects.backToProject', locale)}
         </Link>
       </div>
 
-      <h1 className="text-2xl font-bold text-gray-900">Integraciones</h1>
+      <h1 className="text-2xl font-bold text-gray-900">{t('integrations.title', locale)}</h1>
       <p className="mt-2 text-sm text-gray-600">
-        Conecta con Zapier, Make, n8n y mas. Configura un webhook para recibir notificaciones automaticas cuando ocurran eventos en tu proyecto.
+        {t('integrations.subtitle', locale)}
       </p>
 
       <div className="mt-8 max-w-2xl space-y-6">
         {/* Webhook URL */}
         <div>
           <label htmlFor="webhook_url" className="block text-sm font-medium text-gray-700">
-            URL del Webhook
+            {t('integrations.webhookUrl', locale)}
           </label>
           <input
             id="webhook_url"
@@ -163,14 +166,14 @@ export default function IntegracionesPage() {
             className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
           />
           <p className="mt-1 text-xs text-gray-500">
-            La URL que recibira las notificaciones via POST con datos en formato JSON.
+            {t('integrations.webhookUrlHint', locale)}
           </p>
         </div>
 
         {/* Events */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-3">
-            Eventos a notificar
+            {t('integrations.eventsToNotify', locale)}
           </label>
           <div className="space-y-3">
             {WEBHOOK_EVENTS.map((event) => (
@@ -210,20 +213,20 @@ export default function IntegracionesPage() {
             disabled={saving}
             className="inline-flex items-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700 disabled:opacity-50"
           >
-            {saving ? 'Guardando...' : 'Guardar configuracion'}
+            {saving ? t('integrations.saving', locale) : t('integrations.saveConfig', locale)}
           </button>
           <button
             onClick={handleTest}
             disabled={testing || !webhookUrl.trim()}
             className="inline-flex items-center rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50 disabled:opacity-50"
           >
-            {testing ? 'Enviando...' : 'Probar webhook'}
+            {testing ? t('integrations.sending', locale) : t('integrations.testWebhook', locale)}
           </button>
         </div>
 
         {/* Info */}
         <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
-          <h3 className="text-sm font-semibold text-gray-900 mb-2">Formato del payload</h3>
+          <h3 className="text-sm font-semibold text-gray-900 mb-2">{t('integrations.payloadFormat', locale)}</h3>
           <pre className="overflow-x-auto rounded bg-gray-900 p-3 text-xs text-gray-100">
 {`{
   "event": "new_testimonial",

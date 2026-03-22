@@ -8,6 +8,8 @@ import WidgetRealPreview from '@/components/dashboard/widget-real-preview'
 import EmbedCode from '@/components/dashboard/embed-code'
 import { createClient } from '@/lib/supabase/client'
 import type { WidgetConfig } from '@/types'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 type EditableConfig = Omit<
   WidgetConfig,
@@ -39,6 +41,7 @@ export default function WidgetPage() {
   const slug = params.slug as string
   const router = useRouter()
   const { toast } = useToast()
+  const locale = useLocale()
 
   const [projectId, setProjectId] = useState<string | null>(null)
   const [config, setConfig] = useState<EditableConfig>(defaultConfig)
@@ -173,10 +176,10 @@ export default function WidgetPage() {
       <div className="mb-8 flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">
-            Configurar Widget
+            {t('widget.title', locale)}
           </h1>
           <p className="mt-1 text-sm text-gray-500">
-            Personaliza cómo se muestran los testimonios en tu sitio web.
+            {t('widget.subtitle', locale)}
           </p>
         </div>
         <button
@@ -205,7 +208,7 @@ export default function WidgetPage() {
               />
             </svg>
           )}
-          {saving ? 'Guardando...' : 'Guardar cambios'}
+          {saving ? t('widget.saving', locale) : t('widget.save', locale)}
         </button>
       </div>
 

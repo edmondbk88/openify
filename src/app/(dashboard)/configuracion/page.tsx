@@ -4,11 +4,14 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/ui/toast'
 import { createClient } from '@/lib/supabase/client'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 export default function ConfiguracionPage() {
   const router = useRouter()
   const { toast } = useToast()
   const supabase = createClient()
+  const locale = useLocale()
 
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
@@ -82,9 +85,9 @@ export default function ConfiguracionPage() {
 
       if (error) throw error
 
-      toast('Perfil actualizado correctamente', 'success')
+      toast(locale === 'en' ? 'Profile updated successfully' : 'Perfil actualizado correctamente', 'success')
     } catch (err: unknown) {
-      toast(err instanceof Error ? err.message : 'Error al actualizar el perfil', 'error')
+      toast(err instanceof Error ? err.message : (locale === 'en' ? 'Error updating profile' : 'Error al actualizar el perfil'), 'error')
     } finally {
       setSaving(false)
     }
@@ -94,12 +97,12 @@ export default function ConfiguracionPage() {
     e.preventDefault()
 
     if (passwords.new_password.length < 6) {
-      toast('La contraseña debe tener al menos 6 caracteres', 'error')
+      toast(locale === 'en' ? 'Password must be at least 6 characters' : 'La contrase\u00f1a debe tener al menos 6 caracteres', 'error')
       return
     }
 
     if (passwords.new_password !== passwords.confirm_password) {
-      toast('Las contraseñas no coinciden', 'error')
+      toast(locale === 'en' ? 'Passwords do not match' : 'Las contrase\u00f1as no coinciden', 'error')
       return
     }
 
@@ -113,9 +116,9 @@ export default function ConfiguracionPage() {
       if (error) throw error
 
       setPasswords({ new_password: '', confirm_password: '' })
-      toast('Contraseña actualizada correctamente', 'success')
+      toast(locale === 'en' ? 'Password updated successfully' : 'Contrase\u00f1a actualizada correctamente', 'success')
     } catch (err: unknown) {
-      toast(err instanceof Error ? err.message : 'Error al cambiar la contraseña', 'error')
+      toast(err instanceof Error ? err.message : (locale === 'en' ? 'Error changing password' : 'Error al cambiar la contrase\u00f1a'), 'error')
     } finally {
       setChangingPassword(false)
     }
@@ -131,13 +134,13 @@ export default function ConfiguracionPage() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}))
-        throw new Error(data.error || 'Error al eliminar la cuenta')
+        throw new Error(data.error || (locale === 'en' ? 'Error deleting account' : 'Error al eliminar la cuenta'))
       }
 
       await supabase.auth.signOut()
       router.push('/')
     } catch (err: unknown) {
-      toast(err instanceof Error ? err.message : 'Error al eliminar la cuenta', 'error')
+      toast(err instanceof Error ? err.message : (locale === 'en' ? 'Error deleting account' : 'Error al eliminar la cuenta'), 'error')
       setDeleting(false)
     }
   }
@@ -172,9 +175,9 @@ export default function ConfiguracionPage() {
     <div className="mx-auto max-w-2xl">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Configuración</h1>
+        <h1 className="text-2xl font-bold text-gray-900">{t('settings.title', locale)}</h1>
         <p className="mt-1 text-sm text-gray-500">
-          Gestiona tu perfil y preferencias de cuenta.
+          {t('settings.profileSubtitle', locale)}
         </p>
       </div>
 
@@ -183,7 +186,7 @@ export default function ConfiguracionPage() {
         onSubmit={handleSaveProfile}
         className="rounded-xl border border-gray-200 bg-white p-6"
       >
-        <h2 className="text-lg font-semibold text-gray-900">Perfil</h2>
+        <h2 className="text-lg font-semibold text-gray-900">{t('settings.profile', locale)}</h2>
 
         <div className="mt-6 space-y-4">
           {/* Avatar URL */}
@@ -192,7 +195,7 @@ export default function ConfiguracionPage() {
               htmlFor="avatar_url"
               className="block text-sm font-medium text-gray-700"
             >
-              URL del avatar
+              {t('settings.avatarUrl', locale)}
             </label>
             <input
               id="avatar_url"
@@ -201,7 +204,7 @@ export default function ConfiguracionPage() {
               onChange={(e) =>
                 setProfile((prev) => ({ ...prev, avatar_url: e.target.value }))
               }
-              placeholder="https://ejemplo.com/mi-avatar.jpg"
+              placeholder="https://example.com/avatar.jpg"
               className="mt-1.5 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             />
           </div>
@@ -212,7 +215,7 @@ export default function ConfiguracionPage() {
               htmlFor="full_name"
               className="block text-sm font-medium text-gray-700"
             >
-              Nombre completo
+              {t('settings.name', locale)}
             </label>
             <input
               id="full_name"
@@ -231,7 +234,7 @@ export default function ConfiguracionPage() {
               htmlFor="email"
               className="block text-sm font-medium text-gray-700"
             >
-              Email
+              {t('settings.email', locale)}
             </label>
             <input
               id="email"
@@ -241,7 +244,7 @@ export default function ConfiguracionPage() {
               className="mt-1.5 w-full rounded-lg border border-gray-200 bg-gray-50 px-4 py-2.5 text-sm text-gray-500"
             />
             <p className="mt-1 text-xs text-gray-400">
-              El email no se puede cambiar.
+              {t('settings.emailReadonly', locale)}
             </p>
           </div>
 
@@ -251,7 +254,7 @@ export default function ConfiguracionPage() {
               htmlFor="locale"
               className="block text-sm font-medium text-gray-700"
             >
-              Idioma / Language
+              {t('settings.language', locale)} / Language
             </label>
             <select
               id="locale"
@@ -294,7 +297,7 @@ export default function ConfiguracionPage() {
                 />
               </svg>
             )}
-            {saving ? 'Guardando...' : 'Guardar perfil'}
+            {saving ? t('settings.savingProfile', locale) : t('settings.saveProfile', locale)}
           </button>
         </div>
       </form>
@@ -305,7 +308,7 @@ export default function ConfiguracionPage() {
         className="mt-6 rounded-xl border border-gray-200 bg-white p-6"
       >
         <h2 className="text-lg font-semibold text-gray-900">
-          Cambiar contraseña
+          {t('settings.password', locale)}
         </h2>
 
         <div className="mt-6 space-y-4">
@@ -314,7 +317,7 @@ export default function ConfiguracionPage() {
               htmlFor="new_password"
               className="block text-sm font-medium text-gray-700"
             >
-              Nueva contraseña
+              {t('settings.newPassword', locale)}
             </label>
             <input
               id="new_password"
@@ -326,7 +329,7 @@ export default function ConfiguracionPage() {
                   new_password: e.target.value,
                 }))
               }
-              placeholder="Mínimo 6 caracteres"
+              placeholder={t('settings.minChars', locale)}
               className="mt-1.5 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             />
           </div>
@@ -336,7 +339,7 @@ export default function ConfiguracionPage() {
               htmlFor="confirm_password"
               className="block text-sm font-medium text-gray-700"
             >
-              Confirmar contraseña
+              {t('settings.confirmPassword', locale)}
             </label>
             <input
               id="confirm_password"
@@ -380,17 +383,16 @@ export default function ConfiguracionPage() {
                 />
               </svg>
             )}
-            {changingPassword ? 'Cambiando...' : 'Cambiar contraseña'}
+            {changingPassword ? t('settings.changingPassword', locale) : t('settings.changePassword', locale)}
           </button>
         </div>
       </form>
 
       {/* Delete Account */}
       <div className="mt-6 rounded-xl border border-red-200 bg-white p-6">
-        <h2 className="text-lg font-semibold text-red-700">Zona de peligro</h2>
+        <h2 className="text-lg font-semibold text-red-700">{t('settings.dangerZone', locale)}</h2>
         <p className="mt-2 text-sm text-gray-500">
-          Al eliminar tu cuenta se borrarán permanentemente todos tus proyectos,
-          testimonios y datos asociados. Esta acción no se puede deshacer.
+          {t('settings.deleteWarning', locale)}
         </p>
 
         {!showDeleteConfirm ? (
@@ -411,12 +413,12 @@ export default function ConfiguracionPage() {
                 d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0"
               />
             </svg>
-            Eliminar mi cuenta
+            {t('settings.deleteMyAccount', locale)}
           </button>
         ) : (
           <div className="mt-4 rounded-lg border border-red-200 bg-red-50 p-4">
             <p className="text-sm font-medium text-red-700">
-              ¿Estás seguro? Esta acción es irreversible.
+              {t('settings.deleteConfirm', locale)}
             </p>
             <div className="mt-3 flex items-center gap-3">
               <button
@@ -445,13 +447,13 @@ export default function ConfiguracionPage() {
                     />
                   </svg>
                 )}
-                {deleting ? 'Eliminando...' : 'Sí, eliminar mi cuenta'}
+                {deleting ? t('settings.deletingAccount', locale) : t('settings.confirmDelete', locale)}
               </button>
               <button
                 onClick={() => setShowDeleteConfirm(false)}
                 className="rounded-lg border border-gray-300 px-4 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-white"
               >
-                Cancelar
+                {t('common.cancel', locale)}
               </button>
             </div>
           </div>

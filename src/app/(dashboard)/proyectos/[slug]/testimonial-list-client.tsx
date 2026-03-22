@@ -5,24 +5,27 @@ import { useRouter } from 'next/navigation'
 import { useToast } from '@/components/ui/toast'
 import TestimonialCard from '@/components/dashboard/testimonial-card'
 import type { Testimonial, TestimonialStatus } from '@/types'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 interface TestimonialListClientProps {
   initialTestimonials: Testimonial[]
 }
-
-const filterTabs: { label: string; value: TestimonialStatus | 'all' }[] = [
-  { label: 'Todos', value: 'all' },
-  { label: 'Verificación', value: 'pending_verification' },
-  { label: 'Pendientes', value: 'pending' },
-  { label: 'Aprobados', value: 'approved' },
-  { label: 'Rechazados', value: 'rejected' },
-]
 
 export default function TestimonialListClient({
   initialTestimonials,
 }: TestimonialListClientProps) {
   const router = useRouter()
   const { toast } = useToast()
+  const locale = useLocale()
+
+  const filterTabs: { label: string; value: TestimonialStatus | 'all' }[] = [
+    { label: t('testimonials.all', locale), value: 'all' },
+    { label: t('testimonials.pendingVerification', locale), value: 'pending_verification' },
+    { label: t('testimonials.pendingLabel', locale), value: 'pending' },
+    { label: t('testimonials.approvedLabel', locale), value: 'approved' },
+    { label: t('testimonials.rejectedLabel', locale), value: 'rejected' },
+  ]
   const [testimonials, setTestimonials] =
     useState<Testimonial[]>(initialTestimonials)
   const [activeFilter, setActiveFilter] = useState<
@@ -161,12 +164,12 @@ export default function TestimonialListClient({
             />
           </svg>
           <h3 className="mt-3 text-sm font-semibold text-gray-900">
-            No hay testimonios
+            {t('testimonials.noTestimonials', locale)}
           </h3>
           <p className="mt-1 text-sm text-gray-500">
             {activeFilter === 'all'
-              ? 'Aún no se han recibido testimonios para este proyecto.'
-              : `No hay testimonios con estado "${filterTabs.find((t) => t.value === activeFilter)?.label}".`}
+              ? t('testimonials.noTestimonialsAll', locale)
+              : t('testimonials.noTestimonialsFilter', locale).replace('{status}', filterTabs.find((tab) => tab.value === activeFilter)?.label || '')}
           </p>
         </div>
       ) : (

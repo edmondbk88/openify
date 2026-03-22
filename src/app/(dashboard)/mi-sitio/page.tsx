@@ -10,6 +10,8 @@ import { cn } from '@/lib/utils'
 import { miniSiteTemplates, MINISITE_CATEGORIES } from '@/lib/minisite-templates'
 import type { MiniSiteTemplate } from '@/lib/minisite-templates'
 import type { Plan } from '@/types'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 const ALL_CATEGORIES = ['Todas', ...MINISITE_CATEGORIES] as const
 
@@ -17,6 +19,7 @@ export default function MiSitioPage() {
   const router = useRouter()
   const { toast } = useToast()
   const supabase = createClient()
+  const locale = useLocale()
 
   const [loading, setLoading] = useState(true)
   const [saving, setSaving] = useState(false)
@@ -145,9 +148,9 @@ export default function MiSitioPage() {
     return (
       <div className="mx-auto max-w-2xl">
         <div className="mb-8">
-          <h1 className="text-2xl font-bold text-gray-900">Mi Sitio</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{t('mysite.title', locale)}</h1>
           <p className="mt-1 text-sm text-gray-500">
-            Tu pagina publica de testimonios.
+            {t('mysite.subtitle', locale)}
           </p>
         </div>
 
@@ -158,16 +161,16 @@ export default function MiSitioPage() {
             </svg>
           </div>
           <h2 className="text-xl font-semibold text-gray-900">
-            Funcion disponible en Mini Sitio, Pro y Business
+            {t('mysite.upgradeRequired', locale)}
           </h2>
           <p className="mt-2 text-gray-500 max-w-md mx-auto">
-            Con tu pagina publica de testimonios, tus clientes potenciales podran ver todos tus testimonios verificados en un solo lugar. Perfecto para compartir en redes sociales, email y tarjetas de visita.
+            {t('mysite.upgradeDescription', locale)}
           </p>
           <Link
             href="/facturacion"
             className="mt-6 inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
           >
-            Mejorar mi plan
+            {t('mysite.upgradePlan', locale)}
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
             </svg>
@@ -181,15 +184,15 @@ export default function MiSitioPage() {
     <div className="mx-auto max-w-3xl">
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Mi Sitio</h1>
+        <h1 className="text-2xl font-bold text-gray-900">{t('mysite.title', locale)}</h1>
         <p className="mt-1 text-sm text-gray-500">
-          Tu pagina publica de testimonios verificados.
+          {t('mysite.subtitleVerified', locale)}
         </p>
       </div>
 
       {/* URL & Share */}
       <div className="rounded-xl border border-gray-200 bg-white p-6">
-        <h2 className="text-lg font-semibold text-gray-900">Tu URL publica</h2>
+        <h2 className="text-lg font-semibold text-gray-900">{t('mysite.url', locale)}</h2>
 
         {profile.username ? (
           <>
@@ -207,14 +210,14 @@ export default function MiSitioPage() {
                     <svg className="h-4 w-4 text-green-600" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                     </svg>
-                    Copiado
+                    {t('mysite.copiedUrl', locale)}
                   </>
                 ) : (
                   <>
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75" />
                     </svg>
-                    Copiar
+                    {t('mysite.copyUrl', locale)}
                   </>
                 )}
               </button>
@@ -234,7 +237,7 @@ export default function MiSitioPage() {
               </div>
             </div>
             <p className="mt-2 text-center text-xs text-gray-400">
-              Escanea para visitar tu sitio
+              {t('mysite.scanQr', locale)}
             </p>
 
             {/* Share buttons */}
@@ -264,7 +267,7 @@ export default function MiSitioPage() {
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
                 </svg>
-                Copiar enlace
+                {t('mysite.shareLink', locale)}
               </button>
             </div>
 
@@ -279,7 +282,7 @@ export default function MiSitioPage() {
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
                 </svg>
-                Ver mi sitio
+                {t('mysite.viewSite', locale)}
               </a>
             </div>
           </>
@@ -300,11 +303,11 @@ export default function MiSitioPage() {
       {/* Template Selector */}
       <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6">
         <h2 className="text-lg font-semibold text-gray-900">
-          Elige una plantilla
+          {t('mysite.templatesBeta', locale)}
           <span className="ml-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold uppercase text-amber-700">Beta</span>
         </h2>
         <p className="mt-1 text-sm text-gray-500">
-          Selecciona un diseno predefinido para tu pagina de testimonios.
+          {t('mysite.templatesDescription', locale)}
         </p>
 
         {/* Category filter tabs */}
@@ -404,13 +407,13 @@ export default function MiSitioPage() {
 
       {/* Settings */}
       <form onSubmit={handleSave} className="mt-6 rounded-xl border border-gray-200 bg-white p-6">
-        <h2 className="text-lg font-semibold text-gray-900">Configuracion del sitio</h2>
+        <h2 className="text-lg font-semibold text-gray-900">{t('mysite.siteConfig', locale)}</h2>
 
         <div className="mt-6 space-y-4">
           {/* Bio */}
           <div>
             <label htmlFor="bio" className="block text-sm font-medium text-gray-700">
-              Bio / Tagline
+              {t('mysite.bioTagline', locale)}
             </label>
             <textarea
               id="bio"
@@ -432,7 +435,7 @@ export default function MiSitioPage() {
           {/* Website URL */}
           <div>
             <label htmlFor="website_url" className="block text-sm font-medium text-gray-700">
-              Sitio web
+              {t('mysite.website', locale)}
             </label>
             <input
               id="website_url"
@@ -459,7 +462,7 @@ export default function MiSitioPage() {
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
               </svg>
             )}
-            {saving ? 'Guardando...' : 'Guardar configuracion'}
+            {saving ? t('mysite.savingBio', locale) : t('mysite.saveBio', locale)}
           </button>
         </div>
       </form>

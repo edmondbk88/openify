@@ -3,6 +3,8 @@
 import { useEffect } from 'react'
 import { formatDate } from '@/lib/utils'
 import type { Project, Testimonial } from '@/types'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 interface ExportClientProps {
   project: Project
@@ -22,6 +24,7 @@ function StarRating({ rating }: { rating: number }) {
 }
 
 export default function ExportClient({ project, testimonials }: ExportClientProps) {
+  const locale = useLocale()
   useEffect(() => {
     // Small delay to let styles render
     const timer = setTimeout(() => {
@@ -53,7 +56,7 @@ export default function ExportClient({ project, testimonials }: ExportClientProp
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
           </svg>
-          Volver
+          {t('export.back', locale)}
         </button>
         <button
           onClick={() => window.print()}
@@ -62,7 +65,7 @@ export default function ExportClient({ project, testimonials }: ExportClientProp
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
           </svg>
-          Descargar PDF
+          {t('export.downloadPdf', locale)}
         </button>
       </div>
 
@@ -84,7 +87,7 @@ export default function ExportClient({ project, testimonials }: ExportClientProp
 
         {/* Testimonials */}
         {testimonials.length === 0 ? (
-          <p className="text-center text-gray-500">No hay testimonios aprobados para exportar.</p>
+          <p className="text-center text-gray-500">{t('export.noTestimonials', locale)}</p>
         ) : (
           <div className="space-y-5">
             {testimonials.map((t) => (

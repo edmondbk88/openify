@@ -4,6 +4,8 @@ import Link from 'next/link'
 import StatsCard from '@/components/dashboard/stats-card'
 import TestimonialCard from '@/components/dashboard/testimonial-card'
 import { PLAN_LIMITS } from '@/lib/constants'
+import { getUserLocale } from '@/lib/get-locale'
+import { t } from '@/lib/i18n'
 import type { Plan, Testimonial } from '@/types'
 
 export const metadata = {
@@ -20,6 +22,8 @@ export default async function DashboardPage() {
   if (!user) {
     redirect('/login')
   }
+
+  const locale = await getUserLocale()
 
   // Fetch user profile and projects
   const [{ data: profile }, { data: projects }] = await Promise.all([
@@ -102,9 +106,9 @@ export default async function DashboardPage() {
     <div>
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
+        <h1 className="text-2xl font-bold text-gray-900">{t('dashboard.title', locale)}</h1>
         <p className="mt-1 text-sm text-gray-500">
-          Resumen de tu cuenta y actividad reciente.
+          {t('dashboard.subtitle', locale)}
         </p>
       </div>
 
@@ -127,15 +131,15 @@ export default async function DashboardPage() {
             </svg>
             <div className="ml-3">
               <p className="text-sm text-amber-800">
-                Tu plan actual permite {planLimits.projects} proyecto(s). Tienes{' '}
-                {totalProjectCount} proyectos, de los cuales {inactiveProjectCount}{' '}
-                est{inactiveProjectCount === 1 ? 'a' : 'an'} desactivado
-                {inactiveProjectCount === 1 ? '' : 's'}.{' '}
+                {t('dashboard.downgradeWarning', locale)
+                  .replace('{limit}', String(planLimits.projects))
+                  .replace('{total}', String(totalProjectCount))
+                  .replace('{inactive}', String(inactiveProjectCount))}{' '}
                 <Link
                   href="/precios"
                   className="font-medium text-amber-800 underline hover:text-amber-900"
                 >
-                  Mejora tu plan para reactivarlos.
+                  {t('dashboard.upgradeCta', locale)}
                 </Link>
               </p>
             </div>
@@ -161,7 +165,7 @@ export default async function DashboardPage() {
               />
             </svg>
           }
-          label="Proyectos totales"
+          label={t('dashboard.totalProjectsLabel', locale)}
           value={totalProjects ?? 0}
         />
         <StatsCard
@@ -180,7 +184,7 @@ export default async function DashboardPage() {
               />
             </svg>
           }
-          label="Testimonios totales"
+          label={t('dashboard.totalTestimonialsLabel', locale)}
           value={totalTestimonials}
         />
         <StatsCard
@@ -199,7 +203,7 @@ export default async function DashboardPage() {
               />
             </svg>
           }
-          label="Testimonios pendientes"
+          label={t('dashboard.pendingTestimonialsLabel', locale)}
           value={pendingTestimonials}
         />
         <StatsCard
@@ -223,8 +227,8 @@ export default async function DashboardPage() {
               />
             </svg>
           }
-          label="Impresiones este mes"
-          value={totalImpressions.toLocaleString('es-ES')}
+          label={t('dashboard.impressionsThisMonth', locale)}
+          value={totalImpressions.toLocaleString(locale === 'en' ? 'en-US' : 'es-ES')}
         />
       </div>
 
@@ -232,14 +236,14 @@ export default async function DashboardPage() {
       <div className="mt-10">
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-gray-900">
-            Testimonios pendientes de revisión
+            {t('dashboard.pendingReview', locale)}
           </h2>
           {recentTestimonials.length > 0 && (
             <Link
               href="/proyectos"
               className="text-sm font-medium text-indigo-600 hover:text-indigo-700"
             >
-              Ver todos
+              {t('dashboard.viewAll', locale)}
             </Link>
           )}
         </div>
@@ -260,10 +264,10 @@ export default async function DashboardPage() {
               />
             </svg>
             <h3 className="mt-3 text-sm font-semibold text-gray-900">
-              No hay testimonios pendientes
+              {t('dashboard.noPending', locale)}
             </h3>
             <p className="mt-1 text-sm text-gray-500">
-              Todos los testimonios han sido revisados. ¡Buen trabajo!
+              {t('dashboard.allReviewed', locale)}
             </p>
           </div>
         ) : (

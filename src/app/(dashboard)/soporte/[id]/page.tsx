@@ -3,33 +3,43 @@
 import { useState, useEffect, useRef, use } from 'react'
 import Link from 'next/link'
 import type { SupportTicket, TicketMessage } from '@/types'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
+import type { Locale } from '@/lib/i18n'
 
-const STATUS_CONFIG: Record<string, { label: string; color: string }> = {
-  open: { label: 'Abierto', color: 'bg-blue-100 text-blue-700' },
-  in_progress: { label: 'En progreso', color: 'bg-yellow-100 text-yellow-700' },
-  waiting: { label: 'Esperando', color: 'bg-purple-100 text-purple-700' },
-  resolved: { label: 'Resuelto', color: 'bg-green-100 text-green-700' },
-  closed: { label: 'Cerrado', color: 'bg-gray-100 text-gray-600' },
+function getStatusConfig(locale: Locale): Record<string, { label: string; color: string }> {
+  return {
+    open: { label: t('support.open', locale), color: 'bg-blue-100 text-blue-700' },
+    in_progress: { label: t('support.inProgress', locale), color: 'bg-yellow-100 text-yellow-700' },
+    waiting: { label: t('support.waiting', locale), color: 'bg-purple-100 text-purple-700' },
+    resolved: { label: t('support.resolved', locale), color: 'bg-green-100 text-green-700' },
+    closed: { label: t('support.closed', locale), color: 'bg-gray-100 text-gray-600' },
+  }
 }
 
-const PRIORITY_CONFIG: Record<string, { label: string; color: string }> = {
-  low: { label: 'Baja', color: 'bg-gray-100 text-gray-600' },
-  medium: { label: 'Media', color: 'bg-blue-100 text-blue-700' },
-  high: { label: 'Alta', color: 'bg-orange-100 text-orange-700' },
-  urgent: { label: 'Urgente', color: 'bg-red-100 text-red-700' },
+function getPriorityConfig(locale: Locale): Record<string, { label: string; color: string }> {
+  return {
+    low: { label: t('support.priorityLow', locale), color: 'bg-gray-100 text-gray-600' },
+    medium: { label: t('support.priorityMedium', locale), color: 'bg-blue-100 text-blue-700' },
+    high: { label: t('support.priorityHigh', locale), color: 'bg-orange-100 text-orange-700' },
+    urgent: { label: t('support.priorityUrgent', locale), color: 'bg-red-100 text-red-700' },
+  }
 }
 
-const CATEGORY_LABELS: Record<string, string> = {
-  billing: 'Facturacion',
-  technical: 'Tecnico',
-  feature: 'Sugerencia',
-  account: 'Cuenta',
-  widget: 'Widget',
-  other: 'Otro',
+function getCategoryLabels(locale: Locale): Record<string, string> {
+  return {
+    billing: t('support.categoryBilling', locale),
+    technical: t('support.categoryTechnical', locale),
+    feature: t('support.categoryFeature', locale),
+    account: t('support.categoryAccount', locale),
+    widget: t('support.categoryWidget', locale),
+    other: t('support.categoryOther', locale),
+  }
 }
 
 export default function TicketDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params)
+  const locale = useLocale()
   const [ticket, setTicket] = useState<SupportTicket | null>(null)
   const [messages, setMessages] = useState<TicketMessage[]>([])
   const [reply, setReply] = useState('')
@@ -37,6 +47,10 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
   const [sending, setSending] = useState(false)
   const [closing, setClosing] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
+
+  const STATUS_CONFIG = getStatusConfig(locale)
+  const PRIORITY_CONFIG = getPriorityConfig(locale)
+  const CATEGORY_LABELS = getCategoryLabels(locale)
 
   const fetchTicket = async () => {
     try {
@@ -86,7 +100,7 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
   }
 
   const handleClose = async () => {
-    if (!confirm('Estas seguro de que quieres cerrar este ticket?')) return
+    if (!confirm(t('support.closeConfirm', locale))) return
     setClosing(true)
     try {
       const res = await fetch(`/api/tickets/${id}`, {
@@ -115,9 +129,9 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
   if (!ticket) {
     return (
       <div className="text-center py-20">
-        <p className="text-gray-500">Ticket no encontrado</p>
+        <p className="text-gray-500">{t('support.ticketNotFound', locale)}</p>
         <Link href="/soporte" className="text-indigo-600 text-sm mt-2 inline-block hover:underline">
-          Volver a soporte
+          {t('support.back', locale)}
         </Link>
       </div>
     )
@@ -137,7 +151,7 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
         </svg>
-        Volver a soporte
+        {t('support.back', locale)}
       </Link>
 
       {/* Ticket header */}
@@ -158,7 +172,7 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
                 {CATEGORY_LABELS[ticket.category] || ticket.category}
               </span>
               <span className="text-xs text-gray-400">
-                {new Date(ticket.created_at).toLocaleString('es-ES')}
+                {new Date(ticket.created_at).toLocaleString(locale === 'en' ? 'en-US' : 'es-ES')}
               </span>
             </div>
           </div>
@@ -168,7 +182,7 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
               disabled={closing}
               className="text-sm text-gray-500 hover:text-red-600 transition-colors whitespace-nowrap"
             >
-              {closing ? 'Cerrando...' : 'Cerrar ticket'}
+              {closing ? t('support.closing', locale) : t('support.closeTicket', locale)}
             </button>
           )}
         </div>
@@ -178,14 +192,14 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
       <div className="bg-white rounded-xl border border-gray-200 overflow-hidden">
         <div className="p-4 border-b border-gray-100">
           <h2 className="font-semibold text-gray-900 text-sm">
-            Conversacion ({messages.length} {messages.length === 1 ? 'mensaje' : 'mensajes'})
+            {t('support.conversation', locale)} ({messages.length} {messages.length === 1 ? t('support.messageSingular', locale) : t('support.messagePlural', locale)})
           </h2>
         </div>
 
         <div className="p-4 space-y-4 max-h-[500px] overflow-y-auto">
           {messages.length === 0 ? (
             <div className="text-center py-8 text-gray-400 text-sm">
-              No hay mensajes todavia
+              {t('support.noMessages', locale)}
             </div>
           ) : (
             messages.map((msg) => (
@@ -202,12 +216,12 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
                 >
                   {msg.is_admin && (
                     <p className={`text-xs font-semibold mb-1 ${msg.is_admin ? 'text-indigo-600' : 'text-indigo-200'}`}>
-                      Soporte Opinafy
+                      {t('support.opinafySupport', locale)}
                     </p>
                   )}
                   <p className="text-sm whitespace-pre-wrap">{msg.message}</p>
                   <p className={`text-xs mt-1 ${msg.is_admin ? 'text-gray-400' : 'text-indigo-200'}`}>
-                    {new Date(msg.created_at).toLocaleString('es-ES', {
+                    {new Date(msg.created_at).toLocaleString(locale === 'en' ? 'en-US' : 'es-ES', {
                       day: 'numeric',
                       month: 'short',
                       hour: '2-digit',
@@ -225,13 +239,13 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
         {isClosed ? (
           <div className="p-4 border-t border-gray-100 bg-gray-50 text-center">
             <p className="text-sm text-gray-500">
-              Este ticket esta cerrado. Abre uno nuevo si necesitas mas ayuda.
+              {t('support.ticketClosed', locale)}
             </p>
             <Link
               href="/soporte/nuevo"
               className="inline-block mt-2 text-sm text-indigo-600 hover:underline"
             >
-              Crear nuevo ticket
+              {t('support.createNew', locale)}
             </Link>
           </div>
         ) : (
@@ -240,7 +254,7 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
               <textarea
                 value={reply}
                 onChange={(e) => setReply(e.target.value)}
-                placeholder="Escribe tu respuesta..."
+                placeholder={t('support.writeReply', locale)}
                 rows={2}
                 className="flex-1 rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 outline-none transition-colors resize-none"
               />
@@ -249,7 +263,7 @@ export default function TicketDetailPage({ params }: { params: Promise<{ id: str
                 disabled={sending || !reply.trim()}
                 className="self-end rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
-                {sending ? 'Enviando...' : 'Enviar'}
+                {sending ? t('support.sending', locale) : t('support.send', locale)}
               </button>
             </div>
           </form>

@@ -5,6 +5,8 @@ import type { Project, Testimonial, TestimonialStatus } from '@/types'
 import TestimonialListClient from './testimonial-list-client'
 import MinisiteToggle from './minisite-toggle'
 import DeleteProjectButton from './delete-project-button'
+import { getUserLocale } from '@/lib/get-locale'
+import { t } from '@/lib/i18n'
 
 export const metadata = {
   title: 'Detalle del proyecto - Opinafy',
@@ -25,6 +27,8 @@ export default async function ProyectoDetailPage({
   if (!user) {
     redirect('/login')
   }
+
+  const locale = await getUserLocale()
 
   // Fetch project and user profile in parallel
   const [{ data: project, error: projectError }, { data: profile }] = await Promise.all([
@@ -85,7 +89,7 @@ export default async function ProyectoDetailPage({
               d="M15.75 19.5 8.25 12l7.5-7.5"
             />
           </svg>
-          Volver a proyectos
+          {t('projects.backToProjects', locale)}
         </Link>
       </div>
 
@@ -124,7 +128,7 @@ export default async function ProyectoDetailPage({
                 d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
               />
             </svg>
-            Página de recopilación
+            {t('projects.collectionPage', locale)}
           </Link>
           <Link
             href={`/proyectos/${(project as Project).slug}/widget`}
@@ -143,7 +147,7 @@ export default async function ProyectoDetailPage({
                 d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5"
               />
             </svg>
-            Configurar widget
+            {t('projects.configureWidget', locale)}
           </Link>
           <Link
             href={`/proyectos/${(project as Project).slug}/importar`}
@@ -162,7 +166,7 @@ export default async function ProyectoDetailPage({
                 d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5m-13.5-9L12 3m0 0 4.5 4.5M12 3v13.5"
               />
             </svg>
-            Importar testimonios
+            {t('projects.importTestimonials', locale)}
           </Link>
           <Link
             href={`/proyectos/${(project as Project).slug}/solicitar`}
@@ -181,7 +185,7 @@ export default async function ProyectoDetailPage({
                 d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
               />
             </svg>
-            Solicitar testimonios
+            {t('projects.requestTestimonials', locale)}
           </Link>
           <Link
             href={`/proyectos/${(project as Project).slug}/analytics`}
@@ -200,7 +204,7 @@ export default async function ProyectoDetailPage({
                 d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"
               />
             </svg>
-            Analytics
+            {t('projects.analytics', locale)}
           </Link>
           <Link
             href={`/proyectos/${(project as Project).slug}/exportar`}
@@ -219,7 +223,7 @@ export default async function ProyectoDetailPage({
                 d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z"
               />
             </svg>
-            Exportar PDF
+            {t('projects.exportPdf', locale)}
           </Link>
           <Link
             href={`/proyectos/${(project as Project).slug}/integraciones`}
@@ -238,7 +242,7 @@ export default async function ProyectoDetailPage({
                 d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244"
               />
             </svg>
-            Integraciones
+            {t('projects.integrations', locale)}
           </Link>
           <Link
             href={`/proyectos/${(project as Project).slug}/recopilar`}
@@ -262,7 +266,7 @@ export default async function ProyectoDetailPage({
                 d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
               />
             </svg>
-            Ajustes recopilación
+            {t('projects.collectionSettings', locale)}
           </Link>
           <DeleteProjectButton projectId={(project as Project).id} />
         </div>
@@ -280,19 +284,19 @@ export default async function ProyectoDetailPage({
       <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
         <div className="rounded-lg border border-purple-200 bg-purple-50 px-4 py-3 text-center">
           <p className="text-2xl font-bold text-purple-700">{counts.pending_verification}</p>
-          <p className="text-sm text-purple-600">Verificación</p>
+          <p className="text-sm text-purple-600">{t('projects.verification', locale)}</p>
         </div>
         <div className="rounded-lg border border-yellow-200 bg-yellow-50 px-4 py-3 text-center">
           <p className="text-2xl font-bold text-yellow-700">{counts.pending}</p>
-          <p className="text-sm text-yellow-600">Pendientes</p>
+          <p className="text-sm text-yellow-600">{t('projects.pendingStatus', locale)}</p>
         </div>
         <div className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-center">
           <p className="text-2xl font-bold text-green-700">{counts.approved}</p>
-          <p className="text-sm text-green-600">Aprobados</p>
+          <p className="text-sm text-green-600">{t('projects.approved', locale)}</p>
         </div>
         <div className="rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-center">
           <p className="text-2xl font-bold text-red-700">{counts.rejected}</p>
-          <p className="text-sm text-red-600">Rechazados</p>
+          <p className="text-sm text-red-600">{t('projects.rejected', locale)}</p>
         </div>
       </div>
 

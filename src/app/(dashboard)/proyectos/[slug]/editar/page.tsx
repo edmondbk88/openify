@@ -7,12 +7,15 @@ import { projectSchema } from '@/lib/validations'
 import { createClient } from '@/lib/supabase/client'
 import Link from 'next/link'
 import type { Project } from '@/types'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 export default function EditarProyectoPage() {
   const params = useParams()
   const slug = params.slug as string
   const router = useRouter()
   const { toast } = useToast()
+  const locale = useLocale()
 
   const [project, setProject] = useState<Project | null>(null)
   const [loading, setLoading] = useState(true)
@@ -157,13 +160,13 @@ export default function EditarProyectoPage() {
               d="M15.75 19.5 8.25 12l7.5-7.5"
             />
           </svg>
-          Volver al proyecto
+          {t('projects.backToProject', locale)}
         </Link>
         <h1 className="mt-3 text-2xl font-bold text-gray-900">
-          Editar Proyecto
+          {t('projects.editTitle', locale)}
         </h1>
         <p className="mt-1 text-sm text-gray-500">
-          Modifica los datos de tu proyecto.
+          {t('projects.editSubtitle', locale)}
         </p>
       </div>
 
@@ -175,7 +178,7 @@ export default function EditarProyectoPage() {
             htmlFor="name"
             className="block text-sm font-medium text-gray-700"
           >
-            Nombre del proyecto *
+            {t('projects.name', locale)}
           </label>
           <input
             id="name"
@@ -196,7 +199,7 @@ export default function EditarProyectoPage() {
             htmlFor="website_url"
             className="block text-sm font-medium text-gray-700"
           >
-            URL del sitio web
+            {t('projects.websiteUrl', locale)}
           </label>
           <input
             id="website_url"
@@ -217,7 +220,7 @@ export default function EditarProyectoPage() {
             htmlFor="brand_color"
             className="block text-sm font-medium text-gray-700"
           >
-            Color de marca *
+            {t('projects.brandColor', locale)}
           </label>
           <div className="mt-1.5 flex items-center gap-3">
             <input
@@ -245,7 +248,7 @@ export default function EditarProyectoPage() {
             htmlFor="collection_title"
             className="block text-sm font-medium text-gray-700"
           >
-            Titulo de la pagina de recopilacion *
+            {t('projects.collectionTitle', locale)}
           </label>
           <input
             id="collection_title"
@@ -267,7 +270,7 @@ export default function EditarProyectoPage() {
             htmlFor="collection_description"
             className="block text-sm font-medium text-gray-700"
           >
-            Descripcion de la pagina de recopilacion
+            {t('projects.collectionDescription', locale)}
           </label>
           <textarea
             id="collection_description"
@@ -292,7 +295,7 @@ export default function EditarProyectoPage() {
             htmlFor="thank_you_message"
             className="block text-sm font-medium text-gray-700"
           >
-            Mensaje de agradecimiento *
+            {t('projects.thankYouMessage', locale)}
           </label>
           <textarea
             id="thank_you_message"
@@ -336,13 +339,13 @@ export default function EditarProyectoPage() {
                 />
               </svg>
             )}
-            {saving ? 'Guardando...' : 'Guardar cambios'}
+            {saving ? t('projects.saving', locale) : t('projects.saveChanges', locale)}
           </button>
           <Link
             href={`/proyectos/${slug}`}
             className="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
           >
-            Cancelar
+            {t('common.cancel', locale)}
           </Link>
         </div>
       </form>

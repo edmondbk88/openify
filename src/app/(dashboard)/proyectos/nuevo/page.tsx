@@ -10,10 +10,13 @@ import {
   DEFAULT_THANK_YOU_MESSAGE,
 } from '@/lib/constants'
 import Link from 'next/link'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 export default function NuevoProyectoPage() {
   const router = useRouter()
   const { toast } = useToast()
+  const locale = useLocale()
   const [loading, setLoading] = useState(false)
   const [errors, setErrors] = useState<Record<string, string>>({})
 
@@ -96,14 +99,13 @@ export default function NuevoProyectoPage() {
               d="M15.75 19.5 8.25 12l7.5-7.5"
             />
           </svg>
-          Volver a proyectos
+          {t('projects.backToProjects', locale)}
         </Link>
         <h1 className="mt-3 text-2xl font-bold text-gray-900">
-          Nuevo Proyecto
+          {t('projects.createTitle', locale)}
         </h1>
         <p className="mt-1 text-sm text-gray-500">
-          Configura los datos básicos de tu proyecto para empezar a recopilar
-          testimonios.
+          {t('projects.createSubtitle', locale)}
         </p>
       </div>
 
@@ -115,7 +117,7 @@ export default function NuevoProyectoPage() {
             htmlFor="name"
             className="block text-sm font-medium text-gray-700"
           >
-            Nombre del proyecto *
+            {t('projects.name', locale)}
           </label>
           <input
             id="name"
@@ -136,7 +138,7 @@ export default function NuevoProyectoPage() {
             htmlFor="website_url"
             className="block text-sm font-medium text-gray-700"
           >
-            URL del sitio web
+            {t('projects.websiteUrl', locale)}
           </label>
           <input
             id="website_url"
@@ -157,7 +159,7 @@ export default function NuevoProyectoPage() {
             htmlFor="brand_color"
             className="block text-sm font-medium text-gray-700"
           >
-            Color de marca *
+            {t('projects.brandColor', locale)}
           </label>
           <div className="mt-1.5 flex items-center gap-3">
             <input
@@ -185,7 +187,7 @@ export default function NuevoProyectoPage() {
             htmlFor="collection_title"
             className="block text-sm font-medium text-gray-700"
           >
-            Título de la página de recopilación *
+            {t('projects.collectionTitle', locale)}
           </label>
           <input
             id="collection_title"
@@ -207,7 +209,7 @@ export default function NuevoProyectoPage() {
             htmlFor="collection_description"
             className="block text-sm font-medium text-gray-700"
           >
-            Descripción de la página de recopilación
+            {t('projects.collectionDescription', locale)}
           </label>
           <textarea
             id="collection_description"
@@ -232,7 +234,7 @@ export default function NuevoProyectoPage() {
             htmlFor="thank_you_message"
             className="block text-sm font-medium text-gray-700"
           >
-            Mensaje de agradecimiento *
+            {t('projects.thankYouMessage', locale)}
           </label>
           <textarea
             id="thank_you_message"
@@ -276,13 +278,13 @@ export default function NuevoProyectoPage() {
                 />
               </svg>
             )}
-            {loading ? 'Creando...' : 'Crear proyecto'}
+            {loading ? t('projects.creating', locale) : t('projects.create', locale)}
           </button>
           <Link
             href="/proyectos"
             className="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
           >
-            Cancelar
+            {t('common.cancel', locale)}
           </Link>
         </div>
       </form>

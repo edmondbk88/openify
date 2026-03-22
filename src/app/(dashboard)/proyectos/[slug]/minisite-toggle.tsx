@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import { useToast } from '@/components/ui/toast'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 interface MinisiteToggleProps {
   projectId: string
@@ -10,6 +12,7 @@ interface MinisiteToggleProps {
 
 export default function MinisiteToggle({ projectId, initialValue }: MinisiteToggleProps) {
   const { toast } = useToast()
+  const locale = useLocale()
   const [enabled, setEnabled] = useState(initialValue)
   const [saving, setSaving] = useState(false)
 
@@ -38,11 +41,11 @@ export default function MinisiteToggle({ projectId, initialValue }: MinisiteTogg
   return (
     <div className="flex items-center gap-3 rounded-lg border border-gray-200 bg-white px-4 py-3">
       <div className="flex-1 min-w-0">
-        <p className="text-sm font-medium text-gray-900">Mostrar en mi sitio</p>
+        <p className="text-sm font-medium text-gray-900">{t('minisite.showOnSite', locale)}</p>
         <p className="text-xs text-gray-500">
           {enabled
-            ? 'Los testimonios de este proyecto aparecen en tu pagina publica'
-            : 'Este proyecto esta oculto de tu pagina publica'}
+            ? t('minisite.visibleDescription', locale)
+            : t('minisite.hiddenDescription', locale)}
         </p>
       </div>
       <button
