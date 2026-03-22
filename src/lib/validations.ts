@@ -8,6 +8,8 @@ export const projectSchema = z.object({
   collection_description: z.string().max(500).optional().or(z.literal('')),
   thank_you_message: z.string().min(5).max(500),
   show_on_minisite: z.boolean().optional(),
+  webhook_url: z.string().url().nullable().optional().or(z.literal('')),
+  webhook_events: z.array(z.string()).optional(),
 })
 
 export const testimonialSchema = z.object({
@@ -18,6 +20,7 @@ export const testimonialSchema = z.object({
   author_role: z.string().max(100).optional().or(z.literal('')),
   author_avatar_url: z.string().url().nullable().optional(),
   video_url: z.string().url().nullable().optional(),
+  photo_url: z.string().url().nullable().optional(),
   content: z.string().min(10, 'El testimonio debe tener al menos 10 caracteres').max(2000),
   rating: z.number().int().min(1).max(5),
 })

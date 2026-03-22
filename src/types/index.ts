@@ -33,6 +33,8 @@ export interface Project {
   thank_you_message: string
   is_active: boolean
   show_on_minisite: boolean
+  webhook_url: string | null
+  webhook_events: string[]
   created_at: string
   updated_at: string
   testimonial_count?: number
@@ -61,6 +63,7 @@ export interface Testimonial {
   sentiment_label: string | null
   key_phrases: string[] | null
   ai_summary: string | null
+  photo_url: string | null
   owner_reply: string | null
   owner_reply_at: string | null
   click_count: number
@@ -105,7 +108,7 @@ export interface WidgetImpression {
 
 export interface WidgetData {
   project: Pick<Project, 'name' | 'logo_url' | 'brand_color'>
-  testimonials: Pick<Testimonial, 'id' | 'author_name' | 'author_company' | 'author_role' | 'author_avatar_url' | 'content' | 'rating' | 'is_company_verified' | 'source' | 'source_platform' | 'source_url' | 'owner_reply' | 'created_at'>[]
+  testimonials: Pick<Testimonial, 'id' | 'author_name' | 'author_company' | 'author_role' | 'author_avatar_url' | 'content' | 'rating' | 'is_company_verified' | 'source' | 'source_platform' | 'source_url' | 'owner_reply' | 'photo_url' | 'created_at'>[]
   config: WidgetConfig | null
 }
 

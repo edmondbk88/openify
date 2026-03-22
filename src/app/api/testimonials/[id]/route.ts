@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
 import { z } from 'zod'
+import { triggerWebhook } from '@/lib/webhook'
 
 const updateTestimonialSchema = z.object({
   status: z.enum(['pending', 'approved', 'rejected']).optional(),
@@ -70,6 +72,29 @@ export async function PATCH(
 
     if (error) {
       return NextResponse.json({ error: error.message }, { status: 500 })
+    }
+
+    // Trigger webhook on status change
+    if (parsed.data.status === 'approved' || parsed.data.status === 'rejected') {
+      try {
+        const admin = createAdminClient()
+        const { data: fullProject } = await admin
+          .from('projects')
+          .select('webhook_url, webhook_events, name')
+          .eq('id', testimonial.project_id)
+          .single()
+
+        if (fullProject) {
+          const event = parsed.data.status === 'approved' ? 'testimonial_approved' : 'testimonial_rejected'
+          await triggerWebhook(
+            { webhook_url: fullProject.webhook_url, webhook_events: fullProject.webhook_events || [] },
+            event,
+            { id: updated.id, author_name: updated.author_name, rating: updated.rating, status: updated.status, project_name: fullProject.name }
+          )
+        }
+      } catch {
+        // silent fail
+      }
     }
 
     return NextResponse.json(updated)

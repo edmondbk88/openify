@@ -8,6 +8,7 @@ import { Resend } from 'resend'
 import { getVerificationLevel } from '@/lib/utils'
 import { getEmailTemplates } from '@/lib/email-templates'
 import { analyzeSentiment } from '@/lib/sentiment'
+import { triggerWebhook } from '@/lib/webhook'
 
 function getResend() { return new Resend(process.env.RESEND_API_KEY) }
 
@@ -75,7 +76,7 @@ export async function POST(request: NextRequest) {
     // Verify project exists and is active
     const { data: project } = await supabase
       .from('projects')
-      .select('id, user_id, is_active, name, slug')
+      .select('id, user_id, is_active, name, slug, webhook_url, webhook_events')
       .eq('id', parsed.data.project_id)
       .single()
 
@@ -210,6 +211,17 @@ export async function POST(request: NextRequest) {
         // Log the error but don't fail the request — the testimonial is saved
         console.error('Error sending verification email:', emailError)
       }
+    }
+
+    // Trigger webhook for new testimonial
+    try {
+      await triggerWebhook(
+        { webhook_url: project.webhook_url, webhook_events: project.webhook_events || [] },
+        'new_testimonial',
+        { id: testimonial.id, author_name: parsed.data.author_name, rating: parsed.data.rating, content: parsed.data.content, project_name: project.name }
+      )
+    } catch {
+      // silent fail
     }
 
     return NextResponse.json(

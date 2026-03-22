@@ -6,7 +6,7 @@ const productLinks = [
   { label: 'Pricing', href: '/en/pricing' },
   { label: 'Templates', href: '/en/templates' },
   { label: 'Blog', href: '/en/blog' },
-  { label: 'Guides', href: '/en/guides/wordpress' },
+  { label: 'Guides', href: '/en/guides' },
 ]
 
 const legalLinks = [

@@ -45,6 +45,7 @@ export function CollectionForm({
   const { toast } = useToast()
   const [loading, setLoading] = useState(false)
   const [photoUrl, setPhotoUrl] = useState<string | undefined>()
+  const [testimonialPhotoUrl, setTestimonialPhotoUrl] = useState<string | undefined>()
   const [videoUrl, setVideoUrl] = useState<string | undefined>()
   const [audioUrl, setAudioUrl] = useState<string | undefined>()
   const [errors, setErrors] = useState<FieldErrors>({})
@@ -108,6 +109,7 @@ export function CollectionForm({
           ...payload,
           author_avatar_url: photoUrl || null,
           video_url: videoUrl || audioUrl || null,
+          photo_url: testimonialPhotoUrl || null,
         }),
       })
 
@@ -204,6 +206,63 @@ export function CollectionForm({
         error={errors.content}
         disabled={loading}
       />
+
+      {/* Testimonial Photo Upload */}
+      <div className="space-y-2">
+        <div>
+          <p className="text-sm font-medium text-gray-700">
+            Quieres anadir una foto?
+          </p>
+          <p className="text-xs text-gray-500">
+            Sube una foto del producto, experiencia o resultado (opcional)
+          </p>
+        </div>
+        {testimonialPhotoUrl ? (
+          <div className="relative inline-block">
+            <img
+              src={testimonialPhotoUrl}
+              alt="Foto del testimonio"
+              className="h-32 w-auto rounded-lg border border-gray-200 object-cover"
+            />
+            <button
+              type="button"
+              onClick={() => setTestimonialPhotoUrl(undefined)}
+              className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-red-500 text-xs text-white hover:bg-red-600"
+            >
+              X
+            </button>
+          </div>
+        ) : (
+          <label
+            className="flex cursor-pointer items-center gap-2 rounded-lg border border-dashed border-gray-300 px-4 py-3 text-sm text-gray-600 transition-colors hover:border-gray-400 hover:bg-gray-50"
+          >
+            <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" />
+            </svg>
+            Seleccionar foto
+            <input
+              type="file"
+              accept="image/*"
+              className="hidden"
+              disabled={loading}
+              onChange={async (e) => {
+                const file = e.target.files?.[0]
+                if (!file) return
+                const formData = new FormData()
+                formData.append('file', file)
+                formData.append('type', 'avatar')
+                try {
+                  const res = await fetch('/api/upload', { method: 'POST', body: formData })
+                  const data = await res.json()
+                  if (data.url) setTestimonialPhotoUrl(data.url)
+                } catch {
+                  toast('Error al subir la foto', 'error')
+                }
+              }}
+            />
+          </label>
+        )}
+      </div>
 
       {/* Audio Recorder - available for all plans */}
       {!videoUrl && (

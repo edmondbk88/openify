@@ -1,9 +1,9 @@
-"use strict";(()=>{var U={modern:"'Inter', system-ui, -apple-system, sans-serif",serif:"'Playfair Display', Georgia, 'Times New Roman', serif",rounded:"'Nunito', system-ui, sans-serif",minimal:"'DM Sans', system-ui, sans-serif",bold:"'Space Grotesk', system-ui, sans-serif",handwritten:"'Caveat', cursive",mono:"'JetBrains Mono', 'Fira Code', monospace",elegant:"'Cormorant Garamond', Georgia, serif"};function I(e){let t=e.replace("#","");if(t.length<6)return!1;let n=parseInt(t.slice(0,2),16),i=parseInt(t.slice(2,4),16),c=parseInt(t.slice(4,6),16);return n<245||i<245||c<245}function G(e){let t=e?.primary_color||"#2563eb",n=e?.background_color||"#ffffff",i=e?.text_color||"#1f2937",l=(e?.theme||"light")==="dark",f=e?.font_style||"modern",b=U[f]||U.modern,_=l?"#1f2937":(I(n),"#ffffff"),y=l?"#374151":I(n)?"rgba(0,0,0,0.08)":"#e5e7eb",E=l?"0 1px 3px rgba(0,0,0,0.4)":I(n)?"0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)":"0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)",A=l?"0 4px 12px rgba(0,0,0,0.5)":I(n)?"0 8px 24px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.06)":"0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)";return`
+"use strict";(()=>{var U={modern:"'Inter', system-ui, -apple-system, sans-serif",serif:"'Playfair Display', Georgia, 'Times New Roman', serif",rounded:"'Nunito', system-ui, sans-serif",minimal:"'DM Sans', system-ui, sans-serif",bold:"'Space Grotesk', system-ui, sans-serif",handwritten:"'Caveat', cursive",mono:"'JetBrains Mono', 'Fira Code', monospace",elegant:"'Cormorant Garamond', Georgia, serif"};function I(e){let t=e.replace("#","");if(t.length<6)return!1;let i=parseInt(t.slice(0,2),16),n=parseInt(t.slice(2,4),16),c=parseInt(t.slice(4,6),16);return i<245||n<245||c<245}function G(e){let t=e?.primary_color||"#2563eb",i=e?.background_color||"#ffffff",n=e?.text_color||"#1f2937",l=(e?.theme||"light")==="dark",f=e?.font_style||"modern",b=U[f]||U.modern,_=l?"#1f2937":(I(i),"#ffffff"),y=l?"#374151":I(i)?"rgba(0,0,0,0.08)":"#e5e7eb",E=l?"0 1px 3px rgba(0,0,0,0.4)":I(i)?"0 2px 8px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04)":"0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06)",A=l?"0 4px 12px rgba(0,0,0,0.5)":I(i)?"0 8px 24px rgba(0,0,0,0.12), 0 2px 4px rgba(0,0,0,0.06)":"0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06)";return`
     :host {
       display: block;
       font-family: ${b};
       line-height: 1.5;
-      color: ${l?"#f3f4f6":i};
+      color: ${l?"#f3f4f6":n};
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -17,8 +17,8 @@
     /* \u2500\u2500 CSS Custom Properties \u2500\u2500 */
     .opinafy-root {
       --opinafy-primary: ${t};
-      --opinafy-bg: ${l?"#1f2937":n};
-      --opinafy-text: ${l?"#f3f4f6":i};
+      --opinafy-bg: ${l?"#1f2937":i};
+      --opinafy-text: ${l?"#f3f4f6":n};
       --opinafy-text-secondary: ${l?"#9ca3af":"#6b7280"};
       --opinafy-border: ${y};
       --opinafy-card-bg: ${_};
@@ -257,6 +257,21 @@
     .opinafy-content-expanded p {
       display: block;
       -webkit-line-clamp: unset;
+    }
+
+    /* \u2500\u2500 Testimonial Photo \u2500\u2500 */
+    .opinafy-photo {
+      margin: 8px 0 12px;
+      border-radius: var(--opinafy-radius-sm);
+      overflow: hidden;
+    }
+
+    .opinafy-photo img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      display: block;
+      border-radius: var(--opinafy-radius-sm);
     }
 
     /* \u2500\u2500 Owner Reply \u2500\u2500 */
@@ -774,8 +789,8 @@
         display: none;
       }
     }
-  `}var Q={google:{name:"Google",color:"#4285F4"},tripadvisor:{name:"TripAdvisor",color:"#00AF87"},trustpilot:{name:"Trustpilot",color:"#00B67A"},facebook:{name:"Facebook",color:"#1877F2"},yelp:{name:"Yelp",color:"#D32323"},capterra:{name:"Capterra",color:"#FF9D28"},g2:{name:"G2",color:"#FF492C"}};function J(e){let{config:t,testimonials:n}=e;if(!n||n.length===0)return'<div class="opinafy-root"><div class="opinafy-error"><p>No hay testimonios para mostrar.</p></div></div>';let i;switch(t.layout){case"carousel":i=Z(e);break;case"grid":i=X(e);break;case"wall":i=ee(e);break;case"single":i=oe(e);break;case"badge":i=ae(e);break;case"popup":i=te(e);break;default:i=X(e)}return`<div class="opinafy-root">${i}${t.show_branding?re():""}</div>`}function Z(e){let{testimonials:t,config:n}=e,i=n.autoplay_speed||5e3,c=t.length,l=c>1,f=t.map((_,y)=>`<div class="opinafy-carousel-slide" data-index="${y}">${O(_,n)}</div>`).join(""),b=c>3;return`
-    <div class="opinafy-carousel-wrapper${b?"":" opinafy-no-nav"}" data-autoplay-speed="${i}" data-count="${c}">
+  `}var Q={google:{name:"Google",color:"#4285F4"},tripadvisor:{name:"TripAdvisor",color:"#00AF87"},trustpilot:{name:"Trustpilot",color:"#00B67A"},facebook:{name:"Facebook",color:"#1877F2"},yelp:{name:"Yelp",color:"#D32323"},capterra:{name:"Capterra",color:"#FF9D28"},g2:{name:"G2",color:"#FF492C"}};function J(e){let{config:t,testimonials:i}=e;if(!i||i.length===0)return'<div class="opinafy-root"><div class="opinafy-error"><p>No hay testimonios para mostrar.</p></div></div>';let n;switch(t.layout){case"carousel":n=Z(e);break;case"grid":n=X(e);break;case"wall":n=ee(e);break;case"single":n=oe(e);break;case"badge":n=ae(e);break;case"popup":n=te(e);break;default:n=X(e)}return`<div class="opinafy-root">${n}${t.show_branding?re():""}</div>`}function Z(e){let{testimonials:t,config:i}=e,n=i.autoplay_speed||5e3,c=t.length,l=c>1,f=t.map((_,y)=>`<div class="opinafy-carousel-slide" data-index="${y}">${O(_,i)}</div>`).join(""),b=c>3;return`
+    <div class="opinafy-carousel-wrapper${b?"":" opinafy-no-nav"}" data-autoplay-speed="${n}" data-count="${c}">
       ${b?`<button class="opinafy-carousel-nav opinafy-carousel-prev" data-action="prev" aria-label="Anterior">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       </button>`:""}
@@ -786,32 +801,32 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>`:""}
     </div>
-  `}function X(e){return`<div class="opinafy-grid">${e.testimonials.map(n=>O(n,e.config)).join("")}</div>`}function ee(e){return`<div class="opinafy-wall">${e.testimonials.map(n=>O(n,e.config)).join("")}</div>`}function oe(e){let t=e.testimonials[0];return`<div class="opinafy-single">${O(t,e.config)}</div>`}function ae(e){let{testimonials:t}=e,n=t.reduce((c,l)=>c+l.rating,0)/t.length,i=t[0];return`
+  `}function X(e){return`<div class="opinafy-grid">${e.testimonials.map(i=>O(i,e.config)).join("")}</div>`}function ee(e){return`<div class="opinafy-wall">${e.testimonials.map(i=>O(i,e.config)).join("")}</div>`}function oe(e){let t=e.testimonials[0];return`<div class="opinafy-single">${O(t,e.config)}</div>`}function ae(e){let{testimonials:t}=e,i=t.reduce((c,l)=>c+l.rating,0)/t.length,n=t[0];return`
     <div class="opinafy-badge">
       <div class="opinafy-badge-score">
-        <span class="opinafy-badge-number">${n.toFixed(1)}</span>
-        <div class="opinafy-stars opinafy-stars-sm">${B(Math.round(n))}</div>
+        <span class="opinafy-badge-number">${i.toFixed(1)}</span>
+        <div class="opinafy-stars opinafy-stars-sm">${B(Math.round(i))}</div>
         <span class="opinafy-badge-count">${t.length} opiniones</span>
       </div>
-      ${i?`<div class="opinafy-badge-latest">
-        <p class="opinafy-badge-text">"${x(i.content.substring(0,80))}${i.content.length>80?"...":""}"</p>
-        <span class="opinafy-badge-author">\u2014 ${x(i.author_name)}</span>
+      ${n?`<div class="opinafy-badge-latest">
+        <p class="opinafy-badge-text">"${h(n.content.substring(0,80))}${n.content.length>80?"...":""}"</p>
+        <span class="opinafy-badge-author">\u2014 ${h(n.author_name)}</span>
       </div>`:""}
     </div>
-  `}function te(e){let{testimonials:t}=e,n=t.map((i,c)=>{let l=i.author_name.split(" ").map(_=>_[0]).join("").toUpperCase().slice(0,2),f="\u2605".repeat(Math.min(i.rating,5)),b=ie(i.created_at);return`
+  `}function te(e){let{testimonials:t}=e,i=t.map((n,c)=>{let l=n.author_name.split(" ").map(_=>_[0]).join("").toUpperCase().slice(0,2),f="\u2605".repeat(Math.min(n.rating,5)),b=ie(n.created_at);return`
       <div class="opinafy-popup-item" data-popup-index="${c}" style="${c>0?"display:none;":""}">
         <div class="opinafy-popup-card">
           <button class="opinafy-popup-close" data-action="close-popup" aria-label="Cerrar">&times;</button>
           <div class="opinafy-popup-content">
             <div class="opinafy-popup-avatar">${l}</div>
             <div>
-              <div class="opinafy-popup-text">${x(i.author_name)} dej\xF3 una rese\xF1a de ${f}</div>
+              <div class="opinafy-popup-text">${h(n.author_name)} dej\xF3 una rese\xF1a de ${f}</div>
               <div class="opinafy-popup-time">${b}</div>
             </div>
           </div>
         </div>
       </div>
-    `}).join("");return`<div class="opinafy-popup" data-popup-count="${t.length}">${n}</div>`}function ie(e){try{let t=new Date,n=new Date(e),i=t.getTime()-n.getTime(),c=Math.floor(i/6e4);if(c<1)return"Hace un momento";if(c<60)return`Hace ${c} minuto${c===1?"":"s"}`;let l=Math.floor(c/60);if(l<24)return`Hace ${l} hora${l===1?"":"s"}`;let f=Math.floor(l/24);return f<7?`Hace ${f} d\xEDa${f===1?"":"s"}`:`Hace ${Math.floor(f/7)} semana${Math.floor(f/7)===1?"":"s"}`}catch{return"Hace 2 minutos"}}function O(e,t){let{author_name:n,company:i,role:c,content:l,rating:f,created_at:b,is_company_verified:_,video_url:y}=e,A=`<div class="opinafy-avatar">${n.split(" ").map(M=>M[0]).join("").toUpperCase().slice(0,2)}</div>`,d="";c&&i?d=`${x(c)} en ${x(i)}`:i?d=x(i):c&&(d=x(c)),_&&i&&(d+=' <span class="opinafy-verified" title="Empresa verificada">\u2713</span>');let o="";if(b)try{o=new Date(b).toLocaleDateString("es-ES",{day:"numeric",month:"short",year:"numeric"})}catch{}let a=y?/\.(ogg|webm)$/i.test(y)&&!/video/i.test(y)||/audio/i.test(y)||/testimonio-audio/i.test(y):!1,r=!!y&&!a,p=!!y&&a,u=r?`
+    `}).join("");return`<div class="opinafy-popup" data-popup-count="${t.length}">${i}</div>`}function ie(e){try{let t=new Date,i=new Date(e),n=t.getTime()-i.getTime(),c=Math.floor(n/6e4);if(c<1)return"Hace un momento";if(c<60)return`Hace ${c} minuto${c===1?"":"s"}`;let l=Math.floor(c/60);if(l<24)return`Hace ${l} hora${l===1?"":"s"}`;let f=Math.floor(l/24);return f<7?`Hace ${f} d\xEDa${f===1?"":"s"}`:`Hace ${Math.floor(f/7)} semana${Math.floor(f/7)===1?"":"s"}`}catch{return"Hace 2 minutos"}}function O(e,t){let{author_name:i,company:n,role:c,content:l,rating:f,created_at:b,is_company_verified:_,video_url:y}=e,A=`<div class="opinafy-avatar">${i.split(" ").map(M=>M[0]).join("").toUpperCase().slice(0,2)}</div>`,d="";c&&n?d=`${h(c)} en ${h(n)}`:n?d=h(n):c&&(d=h(c)),_&&n&&(d+=' <span class="opinafy-verified" title="Empresa verificada">\u2713</span>');let o="";if(b)try{o=new Date(b).toLocaleDateString("es-ES",{day:"numeric",month:"short",year:"numeric"})}catch{}let a=y?/\.(ogg|webm)$/i.test(y)&&!/video/i.test(y)||/audio/i.test(y)||/testimonio-audio/i.test(y):!1,r=!!y&&!a,p=!!y&&a,u=r?`
     <div class="opinafy-video-container">
       <video class="opinafy-video" controls playsinline preload="metadata">
         <source src="${y}" type="video/mp4">
@@ -831,7 +846,7 @@
         <div class="opinafy-card opinafy-card-has-video" data-testimonial-id="${e.id}">
           ${u}
           <div class="opinafy-card-body">
-            <div class="opinafy-author-name">${x(n)}</div>
+            <div class="opinafy-author-name">${h(i)}</div>
             ${f>0?`<div class="opinafy-stars">${B(f)}</div>`:""}
           </div>
         </div>
@@ -839,24 +854,25 @@
         <div class="opinafy-card opinafy-card-has-video" data-testimonial-id="${e.id}">
           ${u}
           <div class="opinafy-card-body">
-            <div class="opinafy-author-name">${x(n)}</div>
-            ${i?`<div class="opinafy-author-meta">${x(i)}</div>`:""}
+            <div class="opinafy-author-name">${h(i)}</div>
+            ${n?`<div class="opinafy-author-meta">${h(n)}</div>`:""}
           </div>
         </div>
-      `}let v=l.length>250,h=t.show_avatar!==!1,L=t.show_rating!==!1,S=t.show_date!==!1,T=t.show_company!==!1;return`
+      `}let v=l.length>250,x=t.show_avatar!==!1,L=t.show_rating!==!1,S=t.show_date!==!1,T=t.show_company!==!1;return`
     <div class="opinafy-card${r?" opinafy-card-has-video":""}" data-testimonial-id="${e.id}">
       ${u}
       ${m}
       <div class="${r?"opinafy-card-body":""}">
         ${L&&f>0?`<div class="opinafy-stars">${B(f)}</div>`:""}
-        <div class="opinafy-content"><p>${x(l)}</p></div>
+        <div class="opinafy-content"><p>${h(l)}</p></div>
         ${v?`<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer m\xE1s'">Leer m\xE1s</button>`:""}
-        ${e.owner_reply?`<div class="opinafy-reply"><div class="opinafy-reply-label">Respuesta del propietario</div><p class="opinafy-reply-text">${x(e.owner_reply)}</p></div>`:""}
+        ${e.photo_url?`<div class="opinafy-photo"><img src="${e.photo_url}" alt="Foto de ${h(i)}" loading="lazy" /></div>`:""}
+        ${e.owner_reply?`<div class="opinafy-reply"><div class="opinafy-reply-label">Respuesta del propietario</div><p class="opinafy-reply-text">${h(e.owner_reply)}</p></div>`:""}
         <div class="opinafy-card-footer">
           <div class="opinafy-card-header">
-            ${h?A:""}
+            ${x?A:""}
             <div class="opinafy-author">
-              <div class="opinafy-author-name">${x(n)}</div>
+              <div class="opinafy-author-name">${h(i)}</div>
               ${T&&d?`<div class="opinafy-author-meta">${d}</div>`:""}
             </div>
           </div>
@@ -865,14 +881,14 @@
         </div>
       </div>
     </div>
-  `}function ne(e){let t=e.source_platform||e.source;if(!t||t==="form")return"";let n=Q[t];if(!n)return"";let i=n.color;return`<div class="opinafy-source-badge" style="--badge-color: ${i}"><span class="opinafy-source-dot" style="background: ${i}"></span>${x(n.name)}</div>`}function B(e){let t=[];for(let n=1;n<=5;n++)n<=e?t.push('<svg class="opinafy-star opinafy-star-filled" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>'):t.push('<svg class="opinafy-star opinafy-star-empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>');return t.join("")}function re(){return`
+  `}function ne(e){let t=e.source_platform||e.source;if(!t||t==="form")return"";let i=Q[t];if(!i)return"";let n=i.color;return`<div class="opinafy-source-badge" style="--badge-color: ${n}"><span class="opinafy-source-dot" style="background: ${n}"></span>${h(i.name)}</div>`}function B(e){let t=[];for(let i=1;i<=5;i++)i<=e?t.push('<svg class="opinafy-star opinafy-star-filled" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>'):t.push('<svg class="opinafy-star opinafy-star-empty" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>');return t.join("")}function re(){return`
     <div class="opinafy-branding">
       <a href="https://opinafy.com?ref=widget" target="_blank" rel="noopener noreferrer">
         <svg class="opinafy-branding-icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a.75.75 0 000 1.5h.253a.25.25 0 01.244.304l-.459 2.066A1.75 1.75 0 0010.747 15H11a.75.75 0 000-1.5h-.253a.25.25 0 01-.244-.304l.459-2.066A1.75 1.75 0 009.253 9H9z" clip-rule="evenodd"/></svg>
         Powered by Opinafy
       </a>
     </div>
-  `}function x(e){return e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}(function(){function e(){let d=document.querySelectorAll("script[src]");for(let o=0;o<d.length;o++){let a=d[o].src;if((a.includes("widget.js")||a.includes("opinafy"))&&(a.includes("localhost")||a.includes("127.0.0.1"))){let r=new URL(a);return`${r.protocol}//${r.host}`}}return"https://opinafy.com"}let t=e(),n={modern:{family:"Inter",weights:"400;500;600;700"},serif:{family:"Playfair+Display",weights:"400;500;600;700"},rounded:{family:"Nunito",weights:"400;500;600;700"},minimal:{family:"DM+Sans",weights:"400;500;600;700"},bold:{family:"Space+Grotesk",weights:"400;500;600;700"},handwritten:{family:"Caveat",weights:"400;500;600;700"},mono:{family:"JetBrains+Mono",weights:"400;500;600;700"},elegant:{family:"Cormorant+Garamond",weights:"400;500;600;700"}};function i(d){let o=d.font_style||"modern",a=n[o];return a?`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${a.family}:wght@${a.weights}&display=swap">`:""}async function c(d){let o=await fetch(`${t}/api/widget/${d}`,{method:"GET",headers:{Accept:"application/json"}});if(!o.ok)throw new Error(`HTTP ${o.status}`);return o.json()}function l(d,o){try{fetch(`${t}/api/widget/${d}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({type:"impression",testimonialIds:o})}).catch(()=>{})}catch{}}function f(d,o){try{fetch(`${t}/api/widget/${d}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({type:"click",testimonialId:o})}).catch(()=>{})}catch{}}function b(d,o){d.querySelectorAll("[data-testimonial-id]").forEach(r=>{r.addEventListener("click",()=>{let p=r.getAttribute("data-testimonial-id");p&&f(o,p)})})}function _(d){let o=d.querySelector(".opinafy-carousel-wrapper");if(!o)return;let a=o.querySelector(".opinafy-carousel-track"),r=o.querySelectorAll(".opinafy-carousel-slide"),p=o.querySelectorAll(".opinafy-dot"),u=o.querySelector('[data-action="prev"]'),m=o.querySelector('[data-action="next"]');if(!a||r.length===0)return;let w=parseInt(o.getAttribute("data-autoplay-speed")||"5000",10),v=0,h=null;function L(){let s=a.scrollLeft,k=0,D=1/0;return r.forEach((V,K)=>{let N=Math.abs(V.offsetLeft-a.offsetLeft-s);N<D&&(D=N,k=K)}),k}function S(){if(p.length===0)return;let s=p.length===r.length?v:Math.min(Math.round(v*(p.length-1)/(r.length-1)),p.length-1);p.forEach((k,D)=>k.classList.toggle("active",D===s))}function T(s){s<0&&(s=r.length-1),s>=r.length&&(s=0),v=s;let k=r[v];a.scrollTo({left:k.offsetLeft-a.offsetLeft,behavior:"smooth"}),S()}function M(){T(v+1)}function $(){T(v-1)}u&&u.addEventListener("click",()=>{$(),H()}),m&&m.addEventListener("click",()=>{M(),H()}),p.forEach((s,k)=>{s.addEventListener("click",()=>{let D=p.length===r.length?k:Math.round(k*(r.length-1)/(p.length-1));T(D),H()})});let C=null;a.addEventListener("scroll",()=>{C&&clearTimeout(C),C=setTimeout(()=>{let s=L();s!==v&&(v=s,S())},150)});let g=!1,z=!1,P=0,F=0;function W(s){g=!0,z=!1,P=s,F=a.scrollLeft,a.style.scrollSnapType="none",a.style.scrollBehavior="auto",Y()}function q(s){if(!g)return;let k=s-P;Math.abs(k)>5&&(z=!0),a.scrollLeft=F-k}function j(){if(!g)return;g=!1,a.style.scrollSnapType="x mandatory",a.style.scrollBehavior="smooth";let s=L();T(s),H()}a.addEventListener("mousedown",s=>{W(s.pageX),s.preventDefault()}),a.addEventListener("mousemove",s=>{g&&(q(s.pageX),s.preventDefault())}),a.addEventListener("mouseup",j),a.addEventListener("mouseleave",()=>{g&&j()}),a.addEventListener("click",s=>{z&&(s.preventDefault(),s.stopPropagation())},!0),a.addEventListener("touchstart",s=>{W(s.touches[0].pageX)},{passive:!0}),a.addEventListener("touchmove",s=>{q(s.touches[0].pageX)},{passive:!0}),a.addEventListener("touchend",j);function R(){h&&clearInterval(h),h=setInterval(M,w)}function Y(){h&&(clearInterval(h),h=null)}function H(){R()}o.addEventListener("mouseenter",()=>{g||Y()}),o.addEventListener("mouseleave",()=>{g||R()}),R()}function y(d){let o=d.querySelector(".opinafy-popup");if(!o)return;let a="opinafy-popup-dismissed";try{if(sessionStorage.getItem(a)==="1"){o.style.display="none";return}}catch{}let r=parseInt(o.getAttribute("data-popup-count")||"0",10);if(r===0)return;let p=0,u=null,m=null;function w(){return Array.from(o.querySelectorAll(".opinafy-popup-item"))}function v($){w().forEach((g,z)=>{g.style.display=z===$?"":"none",g.classList.remove("opinafy-popup-hiding")})}function h($){let g=w()[p];g?(g.classList.add("opinafy-popup-hiding"),setTimeout(()=>{g.style.display="none",g.classList.remove("opinafy-popup-hiding"),$&&$()},400)):$&&$()}function L(){u&&clearTimeout(u),m&&clearInterval(m),h(()=>{o.style.display="none"});try{sessionStorage.setItem(a,"1")}catch{}}function S(){u&&clearTimeout(u),u=setTimeout(()=>{h()},8e3)}function T(){r<=1||(m=setInterval(()=>{h(()=>{p=(p+1)%r,v(p),S()})},15e3))}o.addEventListener("click",$=>{$.target.closest('[data-action="close-popup"]')&&L()}),w().forEach($=>{$.style.display="none"}),setTimeout(()=>{v(0),S(),T()},3e3)}async function E(d){let o=d.getAttribute("data-project");if(!o){console.warn("[Opinafy] Widget element missing data-project attribute.");return}if(d.shadowRoot)return;let a=d.attachShadow({mode:"open"});a.innerHTML=`
+  `}function h(e){return e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;")}(function(){function e(){let d=document.querySelectorAll("script[src]");for(let o=0;o<d.length;o++){let a=d[o].src;if((a.includes("widget.js")||a.includes("opinafy"))&&(a.includes("localhost")||a.includes("127.0.0.1"))){let r=new URL(a);return`${r.protocol}//${r.host}`}}return"https://opinafy.com"}let t=e(),i={modern:{family:"Inter",weights:"400;500;600;700"},serif:{family:"Playfair+Display",weights:"400;500;600;700"},rounded:{family:"Nunito",weights:"400;500;600;700"},minimal:{family:"DM+Sans",weights:"400;500;600;700"},bold:{family:"Space+Grotesk",weights:"400;500;600;700"},handwritten:{family:"Caveat",weights:"400;500;600;700"},mono:{family:"JetBrains+Mono",weights:"400;500;600;700"},elegant:{family:"Cormorant+Garamond",weights:"400;500;600;700"}};function n(d){let o=d.font_style||"modern",a=i[o];return a?`<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=${a.family}:wght@${a.weights}&display=swap">`:""}async function c(d){let o=await fetch(`${t}/api/widget/${d}`,{method:"GET",headers:{Accept:"application/json"}});if(!o.ok)throw new Error(`HTTP ${o.status}`);return o.json()}function l(d,o){try{fetch(`${t}/api/widget/${d}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({type:"impression",testimonialIds:o})}).catch(()=>{})}catch{}}function f(d,o){try{fetch(`${t}/api/widget/${d}`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({type:"click",testimonialId:o})}).catch(()=>{})}catch{}}function b(d,o){d.querySelectorAll("[data-testimonial-id]").forEach(r=>{r.addEventListener("click",()=>{let p=r.getAttribute("data-testimonial-id");p&&f(o,p)})})}function _(d){let o=d.querySelector(".opinafy-carousel-wrapper");if(!o)return;let a=o.querySelector(".opinafy-carousel-track"),r=o.querySelectorAll(".opinafy-carousel-slide"),p=o.querySelectorAll(".opinafy-dot"),u=o.querySelector('[data-action="prev"]'),m=o.querySelector('[data-action="next"]');if(!a||r.length===0)return;let w=parseInt(o.getAttribute("data-autoplay-speed")||"5000",10),v=0,x=null;function L(){let s=a.scrollLeft,k=0,D=1/0;return r.forEach((V,K)=>{let N=Math.abs(V.offsetLeft-a.offsetLeft-s);N<D&&(D=N,k=K)}),k}function S(){if(p.length===0)return;let s=p.length===r.length?v:Math.min(Math.round(v*(p.length-1)/(r.length-1)),p.length-1);p.forEach((k,D)=>k.classList.toggle("active",D===s))}function T(s){s<0&&(s=r.length-1),s>=r.length&&(s=0),v=s;let k=r[v];a.scrollTo({left:k.offsetLeft-a.offsetLeft,behavior:"smooth"}),S()}function M(){T(v+1)}function $(){T(v-1)}u&&u.addEventListener("click",()=>{$(),H()}),m&&m.addEventListener("click",()=>{M(),H()}),p.forEach((s,k)=>{s.addEventListener("click",()=>{let D=p.length===r.length?k:Math.round(k*(r.length-1)/(p.length-1));T(D),H()})});let C=null;a.addEventListener("scroll",()=>{C&&clearTimeout(C),C=setTimeout(()=>{let s=L();s!==v&&(v=s,S())},150)});let g=!1,z=!1,P=0,F=0;function W(s){g=!0,z=!1,P=s,F=a.scrollLeft,a.style.scrollSnapType="none",a.style.scrollBehavior="auto",Y()}function q(s){if(!g)return;let k=s-P;Math.abs(k)>5&&(z=!0),a.scrollLeft=F-k}function j(){if(!g)return;g=!1,a.style.scrollSnapType="x mandatory",a.style.scrollBehavior="smooth";let s=L();T(s),H()}a.addEventListener("mousedown",s=>{W(s.pageX),s.preventDefault()}),a.addEventListener("mousemove",s=>{g&&(q(s.pageX),s.preventDefault())}),a.addEventListener("mouseup",j),a.addEventListener("mouseleave",()=>{g&&j()}),a.addEventListener("click",s=>{z&&(s.preventDefault(),s.stopPropagation())},!0),a.addEventListener("touchstart",s=>{W(s.touches[0].pageX)},{passive:!0}),a.addEventListener("touchmove",s=>{q(s.touches[0].pageX)},{passive:!0}),a.addEventListener("touchend",j);function R(){x&&clearInterval(x),x=setInterval(M,w)}function Y(){x&&(clearInterval(x),x=null)}function H(){R()}o.addEventListener("mouseenter",()=>{g||Y()}),o.addEventListener("mouseleave",()=>{g||R()}),R()}function y(d){let o=d.querySelector(".opinafy-popup");if(!o)return;let a="opinafy-popup-dismissed";try{if(sessionStorage.getItem(a)==="1"){o.style.display="none";return}}catch{}let r=parseInt(o.getAttribute("data-popup-count")||"0",10);if(r===0)return;let p=0,u=null,m=null;function w(){return Array.from(o.querySelectorAll(".opinafy-popup-item"))}function v($){w().forEach((g,z)=>{g.style.display=z===$?"":"none",g.classList.remove("opinafy-popup-hiding")})}function x($){let g=w()[p];g?(g.classList.add("opinafy-popup-hiding"),setTimeout(()=>{g.style.display="none",g.classList.remove("opinafy-popup-hiding"),$&&$()},400)):$&&$()}function L(){u&&clearTimeout(u),m&&clearInterval(m),x(()=>{o.style.display="none"});try{sessionStorage.setItem(a,"1")}catch{}}function S(){u&&clearTimeout(u),u=setTimeout(()=>{x()},8e3)}function T(){r<=1||(m=setInterval(()=>{x(()=>{p=(p+1)%r,v(p),S()})},15e3))}o.addEventListener("click",$=>{$.target.closest('[data-action="close-popup"]')&&L()}),w().forEach($=>{$.style.display="none"}),setTimeout(()=>{v(0),S(),T()},3e3)}async function E(d){let o=d.getAttribute("data-project");if(!o){console.warn("[Opinafy] Widget element missing data-project attribute.");return}if(d.shadowRoot)return;let a=d.attachShadow({mode:"open"});a.innerHTML=`
       <style>
         :host { display: block; }
         .opinafy-loading { display: flex; align-items: center; justify-content: center; padding: 48px 16px; }
@@ -880,7 +896,7 @@
         @keyframes s { to { transform: rotate(360deg); } }
       </style>
       <div class="opinafy-loading"><div class="opinafy-spinner"></div></div>
-    `;try{let r,p=window;p.__OPINAFY_PRELOAD__&&typeof p.__OPINAFY_PRELOAD__=="object"?(r=p.__OPINAFY_PRELOAD__,delete p.__OPINAFY_PRELOAD__):r=await c(o);let u=r.config||{},m=i(u),w=G(u),v=J(r);a.innerHTML=`${m}<style>${w}</style>${v}`,r.config?.layout==="carousel"&&_(a),r.config?.layout==="popup"&&y(a),b(a,o);let h=(r.testimonials||[]).map(L=>L.id).filter(Boolean);l(o,h)}catch(r){a.innerHTML=`
+    `;try{let r,p=window;p.__OPINAFY_PRELOAD__&&typeof p.__OPINAFY_PRELOAD__=="object"?(r=p.__OPINAFY_PRELOAD__,delete p.__OPINAFY_PRELOAD__):r=await c(o);let u=r.config||{},m=n(u),w=G(u),v=J(r);a.innerHTML=`${m}<style>${w}</style>${v}`,r.config?.layout==="carousel"&&_(a),r.config?.layout==="popup"&&y(a),b(a,o);let x=(r.testimonials||[]).map(L=>L.id).filter(Boolean);l(o,x)}catch(r){a.innerHTML=`
         <style>
           :host { display: block; }
           .opinafy-error { text-align: center; padding: 32px 16px; color: #6b7280; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 14px; }

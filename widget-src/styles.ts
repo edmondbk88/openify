@@ -304,6 +304,21 @@ export function getStyles(config: any): string {
       -webkit-line-clamp: unset;
     }
 
+    /* ── Testimonial Photo ── */
+    .opinafy-photo {
+      margin: 8px 0 12px;
+      border-radius: var(--opinafy-radius-sm);
+      overflow: hidden;
+    }
+
+    .opinafy-photo img {
+      width: 100%;
+      max-height: 240px;
+      object-fit: cover;
+      display: block;
+      border-radius: var(--opinafy-radius-sm);
+    }
+
     /* ── Owner Reply ── */
     .opinafy-reply {
       margin: 10px 0 12px;
