@@ -2,8 +2,8 @@ import { blogArticles } from '@/lib/blog-data'
 import { blogArticlesEn } from '@/lib/blog-data-en'
 
 describe('Blog Data - Spanish', () => {
-  it('has 80 articles', () => {
-    expect(blogArticles.length).toBe(80)
+  it('has 110 articles', () => {
+    expect(blogArticles.length).toBe(110)
   })
 
   it('every article has required fields', () => {
@@ -54,8 +54,8 @@ describe('Blog Data - Spanish', () => {
 })
 
 describe('Blog Data - English', () => {
-  it('has 80 articles', () => {
-    expect(blogArticlesEn.length).toBe(80)
+  it('has 110 articles', () => {
+    expect(blogArticlesEn.length).toBe(110)
   })
 
   it('every article has required fields', () => {
