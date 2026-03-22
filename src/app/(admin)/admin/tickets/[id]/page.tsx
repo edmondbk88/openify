@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useEffect, useRef, use } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import type { TicketMessage } from '@/types'
 
@@ -45,8 +46,9 @@ const PLAN_LABELS: Record<string, string> = {
   business: 'Business',
 }
 
-export default function AdminTicketDetailPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = use(params)
+export default function AdminTicketDetailPage() {
+  const params = useParams()
+  const id = params.id as string
   const [ticket, setTicket] = useState<TicketWithProfile | null>(null)
   const [messages, setMessages] = useState<TicketMessage[]>([])
   const [reply, setReply] = useState('')

@@ -34,7 +34,7 @@ export async function GET(request: NextRequest) {
 
   let query = admin
     .from('support_tickets')
-    .select('*, profiles!support_tickets_user_id_fkey(full_name, email, plan)')
+    .select('*, profiles(full_name, email, plan)')
     .order('updated_at', { ascending: false })
 
   if (status) query = query.eq('status', status)

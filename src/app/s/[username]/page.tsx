@@ -273,7 +273,7 @@ export default async function MiniSitePage({ params }: PageProps) {
   const projectCount = projects.length
 
   // Limit testimonials rendered in HTML for performance (avoids 1MB+ pages with 100+ testimonials)
-  const TESTIMONIAL_DISPLAY_LIMIT = 30
+  const TESTIMONIAL_DISPLAY_LIMIT = 50
   const displayedTestimonials = testimonials.slice(0, TESTIMONIAL_DISPLAY_LIMIT)
   const hasMoreTestimonials = totalTestimonials > TESTIMONIAL_DISPLAY_LIMIT
 
@@ -581,11 +581,11 @@ export default async function MiniSitePage({ params }: PageProps) {
                 </p>
                 {projects[0] && (
                   <Link
-                    href={`/p/${username}/${projects[0].slug || projects[0].id}`}
+                    href={`/p/${username}/${projects[0]?.slug}`}
                     className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
                     style={{ color: accentColor }}
                   >
-                    Ver más testimonios
+                    Dejar un testimonio
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                     </svg>
