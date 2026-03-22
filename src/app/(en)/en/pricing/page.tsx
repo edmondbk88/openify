@@ -4,6 +4,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
+import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Pricing - Opinafy',
@@ -148,8 +149,27 @@ const faqs = [
 ]
 
 export default function PricingPageEn() {
+  const webPageJsonLd = webPageSchema({
+    name: 'Pricing - Opinafy',
+    url: 'https://opinafy.com/en/pricing',
+    description: 'Check out Opinafy plans and pricing. Start for free and scale as you need.',
+  })
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Home', url: 'https://opinafy.com/en' },
+    { name: 'Pricing', url: 'https://opinafy.com/en/pricing' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <NavbarEn />
       <div className="pt-16">
         {/* H1 Header */}

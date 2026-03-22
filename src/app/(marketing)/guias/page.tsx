@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Guias de instalacion - Opinafy',
+  title: 'Guías de instalación - Opinafy',
   description:
-    'Aprende a instalar el widget de testimonios de Opinafy en WordPress, Shopify, Wix, Squarespace y mas. Guias paso a paso.',
+    'Aprende a instalar el widget de testimonios de Opinafy en WordPress, Shopify, Wix, Squarespace y más. Guías paso a paso.',
   alternates: {
     canonical: 'https://opinafy.com/guias',
     languages: {
@@ -12,8 +13,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Guias de instalacion - Opinafy',
-    description: 'Guias paso a paso para instalar Opinafy en las plataformas mas populares.',
+    type: 'website',
+    title: 'Guías de instalación - Opinafy',
+    description: 'Guías paso a paso para instalar Opinafy en las plataformas más populares.',
     url: 'https://opinafy.com/guias',
   },
 }
@@ -82,17 +84,36 @@ const guides = [
 ]
 
 export default function GuiasIndexPage() {
+  const webPageJsonLd = webPageSchema({
+    name: 'Guías de instalación - Opinafy',
+    url: 'https://opinafy.com/guias',
+    description: 'Guías paso a paso para instalar Opinafy en las plataformas más populares.',
+  })
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://opinafy.com' },
+    { name: 'Guías', url: 'https://opinafy.com/guias' },
+  ])
+
   return (
     <div className="bg-gradient-to-b from-indigo-50/50 to-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="mx-auto max-w-4xl px-4 pb-12 pt-24 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Guias de instalacion
+            Guías de instalación
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Aprende a instalar el widget de testimonios de Opinafy en tu plataforma favorita.
-            Todas las guias incluyen instrucciones paso a paso.
+            Todas las guías incluyen instrucciones paso a paso.
           </p>
         </div>
       </section>

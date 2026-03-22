@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
 import Link from 'next/link'
+import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Descargas e Integraciones - Opinafy',
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: 'website',
     title: 'Descargas e Integraciones - Opinafy',
     description:
       'Plugins y snippets para integrar testimonios verificados en WordPress, Shopify, Wix, Squarespace y más.',
@@ -55,8 +57,27 @@ const shopifyCode = `{% comment %}
 {% endschema %}`
 
 export default function DescargasPage() {
+  const webPageJsonLd = webPageSchema({
+    name: 'Descargas e Integraciones - Opinafy',
+    url: 'https://opinafy.com/descargas',
+    description: 'Plugins y snippets para integrar testimonios verificados en WordPress, Shopify, Wix, Squarespace y más.',
+  })
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://opinafy.com' },
+    { name: 'Descargas', url: 'https://opinafy.com/descargas' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navbar />
       <div className="min-h-screen bg-gray-50 pt-28 pb-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">

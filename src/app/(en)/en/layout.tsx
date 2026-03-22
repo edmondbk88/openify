@@ -48,11 +48,15 @@ export const metadata: Metadata = {
     languages: {
       'es': 'https://opinafy.com',
       'en': 'https://opinafy.com/en',
+      'x-default': 'https://opinafy.com',
     },
   },
   robots: {
     index: true,
     follow: true,
+  },
+  other: {
+    'content-language': 'en',
   },
 }
 
@@ -63,6 +67,7 @@ export default function EnglishLayout({
 }) {
   return (
     <>
+      <script dangerouslySetInnerHTML={{ __html: 'document.documentElement.lang="en"' }} />
       {children}
       <CookieBanner />
     </>

@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
 import Link from 'next/link'
+import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Downloads & Integrations - Opinafy',
+  title: 'Downloads and Integrations - Opinafy',
   description:
     'Download the Opinafy plugin for WordPress, Shopify, Wix, Squarespace, and any website. Install verified testimonials in minutes.',
   alternates: {
@@ -16,7 +17,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Downloads & Integrations - Opinafy',
+    type: 'website',
+    title: 'Downloads and Integrations - Opinafy',
     description:
       'Plugins and snippets to integrate verified testimonials into WordPress, Shopify, Wix, Squarespace, and more.',
     url: 'https://opinafy.com/en/downloads',
@@ -56,15 +58,34 @@ const shopifyCode = `{% comment %}
 {% endschema %}`
 
 export default function DownloadsPage() {
+  const webPageJsonLd = webPageSchema({
+    name: 'Downloads and Integrations - Opinafy',
+    url: 'https://opinafy.com/en/downloads',
+    description: 'Plugins and snippets to integrate verified testimonials into WordPress, Shopify, Wix, Squarespace, and more.',
+  })
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Home', url: 'https://opinafy.com/en' },
+    { name: 'Downloads', url: 'https://opinafy.com/en/downloads' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <NavbarEn />
       <div className="min-h-screen bg-gray-50 pt-28 pb-16">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="mb-12 text-center">
             <h1 className="text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
-              Downloads & Integrations
+              Downloads and Integrations
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
               Integrate verified Opinafy testimonials into your website in

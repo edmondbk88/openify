@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Installation Guides - Opinafy',
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
+    type: 'website',
     title: 'Installation Guides - Opinafy',
     description: 'Step-by-step guides to install Opinafy on the most popular platforms.',
     url: 'https://opinafy.com/en/guides',
@@ -82,8 +84,27 @@ const guides = [
 ]
 
 export default function GuidesIndexPageEn() {
+  const webPageJsonLd = webPageSchema({
+    name: 'Installation Guides - Opinafy',
+    url: 'https://opinafy.com/en/guides',
+    description: 'Step-by-step guides to install Opinafy on the most popular platforms.',
+  })
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Home', url: 'https://opinafy.com/en' },
+    { name: 'Guides', url: 'https://opinafy.com/en/guides' },
+  ])
+
   return (
     <div className="bg-gradient-to-b from-indigo-50/50 to-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Hero */}
       <section className="mx-auto max-w-4xl px-4 pb-12 pt-24 sm:px-6 lg:px-8">
         <div className="text-center">

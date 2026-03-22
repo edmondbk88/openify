@@ -39,6 +39,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://opinafy.com/plantillas-minisitio',
+    languages: {
+      'es': 'https://opinafy.com/plantillas-minisitio',
+      'en': 'https://opinafy.com/en/minisite-templates',
+      'x-default': 'https://opinafy.com/plantillas-minisitio',
+    },
   },
   robots: {
     index: true,

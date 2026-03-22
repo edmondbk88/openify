@@ -4,6 +4,12 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
+import {
+  organizationSchema,
+  webSiteSchema,
+  softwareApplicationSchema,
+  breadcrumbSchema,
+} from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: { absolute: 'Opinafy - Turn Customer Opinions Into Your Best Sales Tool' },
@@ -878,8 +884,31 @@ function CtaSection() {
 /* ── Page ── */
 
 export default function HomePageEn() {
+  const orgJsonLd = organizationSchema()
+  const siteJsonLd = webSiteSchema()
+  const appJsonLd = softwareApplicationSchema()
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Home', url: 'https://opinafy.com/en' },
+  ])
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <NavbarEn />
       <Hero />
       <Features />
