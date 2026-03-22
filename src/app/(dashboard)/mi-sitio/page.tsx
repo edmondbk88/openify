@@ -30,6 +30,7 @@ export default function MiSitioPage() {
     website_url: '',
     plan: 'free' as Plan,
     minisite_config: null as Record<string, unknown> | null,
+    minisite_testimonial_limit: 30,
   })
   const [copied, setCopied] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState<string>('Todas')
@@ -47,7 +48,7 @@ export default function MiSitioPage() {
 
     const { data } = await supabase
       .from('profiles')
-      .select('username, full_name, bio, website_url, plan, minisite_config')
+      .select('username, full_name, bio, website_url, plan, minisite_config, minisite_testimonial_limit')
       .eq('id', user.id)
       .single()
 
@@ -59,6 +60,7 @@ export default function MiSitioPage() {
         website_url: data.website_url || '',
         plan: (data.plan as Plan) || 'free',
         minisite_config: (data.minisite_config as Record<string, unknown>) || null,
+        minisite_testimonial_limit: (data.minisite_testimonial_limit as number) || 30,
       })
       // Restore selected template if saved
       if (data.minisite_config && typeof data.minisite_config === 'object' && 'template_id' in (data.minisite_config as Record<string, unknown>)) {
@@ -94,6 +96,7 @@ export default function MiSitioPage() {
           bio: profile.bio || null,
           website_url: profile.website_url || null,
           minisite_config: profile.minisite_config || null,
+          minisite_testimonial_limit: profile.minisite_testimonial_limit,
         }),
       })
 
@@ -447,6 +450,30 @@ export default function MiSitioPage() {
               placeholder="https://tusitio.com"
               className="mt-1.5 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             />
+          </div>
+
+          {/* Testimonials per page */}
+          <div>
+            <label htmlFor="minisite_testimonial_limit" className="block text-sm font-medium text-gray-700">
+              {t('mysite.testimonialsPerPage', locale)}
+            </label>
+            <input
+              id="minisite_testimonial_limit"
+              type="number"
+              min={10}
+              max={100}
+              value={profile.minisite_testimonial_limit}
+              onChange={(e) => {
+                const val = parseInt(e.target.value, 10)
+                if (!isNaN(val) && val >= 10 && val <= 100) {
+                  setProfile((prev) => ({ ...prev, minisite_testimonial_limit: val }))
+                }
+              }}
+              className="mt-1.5 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            />
+            <p className="mt-1 text-xs text-gray-400">
+              {t('mysite.testimonialsPerPageHelp', locale)}
+            </p>
           </div>
         </div>
 

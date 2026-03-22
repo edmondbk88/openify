@@ -7,6 +7,7 @@ const profileUpdateSchema = z.object({
   bio: z.string().max(200).optional().nullable(),
   website_url: z.string().url('URL inv\u00e1lida').optional().nullable().or(z.literal('')),
   minisite_config: z.record(z.string(), z.unknown()).optional().nullable(),
+  minisite_testimonial_limit: z.number().int().min(10).max(100).optional(),
   locale: z.enum(['es', 'en']).optional(),
 })
 
@@ -37,6 +38,9 @@ export async function PATCH(request: NextRequest) {
     }
     if (parsed.data.minisite_config !== undefined) {
       updateData.minisite_config = parsed.data.minisite_config
+    }
+    if (parsed.data.minisite_testimonial_limit !== undefined) {
+      updateData.minisite_testimonial_limit = parsed.data.minisite_testimonial_limit
     }
     if (parsed.data.locale !== undefined) {
       updateData.locale = parsed.data.locale

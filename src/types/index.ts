@@ -16,6 +16,7 @@ export interface Profile {
   stripe_customer_id: string | null
   stripe_subscription_id: string | null
   minisite_config: Record<string, unknown> | null
+  minisite_testimonial_limit: number
   created_at: string
   updated_at: string
 }

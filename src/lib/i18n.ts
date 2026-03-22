@@ -351,6 +351,9 @@ const translations: Record<Locale, Record<string, string>> = {
     'mysite.siteConfig': 'Configuraci\u00f3n del sitio',
     'mysite.bioTagline': 'Bio / Tagline',
     'mysite.characters': 'caracteres',
+    'mysite.testimonialsPerPage': 'Testimonios por p\u00e1gina',
+    'mysite.testimonialsPerPageHelp': 'N\u00famero de testimonios visibles en tu p\u00e1gina p\u00fablica (10-100).',
+    'mysite.viewAll': 'Ver todos los testimonios',
 
     // Minisite toggle
     'minisite.showOnSite': 'Mostrar en mi sitio',
@@ -839,6 +842,9 @@ const translations: Record<Locale, Record<string, string>> = {
     'mysite.siteConfig': 'Site configuration',
     'mysite.bioTagline': 'Bio / Tagline',
     'mysite.characters': 'characters',
+    'mysite.testimonialsPerPage': 'Testimonials per page',
+    'mysite.testimonialsPerPageHelp': 'Number of testimonials visible on your public page (10-100).',
+    'mysite.viewAll': 'View all testimonials',
 
     // Minisite toggle
     'minisite.showOnSite': 'Show on my site',

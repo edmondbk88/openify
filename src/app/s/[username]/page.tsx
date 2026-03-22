@@ -33,10 +33,10 @@ async function getProfileByUsername(username: string) {
   const supabase = createAdminClient()
   const { data } = await supabase
     .from('profiles')
-    .select('id, email, full_name, avatar_url, plan, username, bio, website_url, minisite_config, is_admin, stripe_customer_id, stripe_subscription_id, created_at, updated_at')
+    .select('id, email, full_name, avatar_url, plan, username, bio, website_url, minisite_config, minisite_testimonial_limit, is_admin, stripe_customer_id, stripe_subscription_id, created_at, updated_at')
     .eq('username', username)
     .single()
-  return data as Profile | null
+  return data as (Profile & { minisite_testimonial_limit?: number }) | null
 }
 
 async function getProjectsAndTestimonials(userId: string) {
@@ -272,10 +272,10 @@ export default async function MiniSitePage({ params }: PageProps) {
     : 0
   const projectCount = projects.length
 
-  // Limit testimonials rendered in HTML for performance (avoids 1MB+ pages with 100+ testimonials)
-  const TESTIMONIAL_DISPLAY_LIMIT = 50
-  const displayedTestimonials = testimonials.slice(0, TESTIMONIAL_DISPLAY_LIMIT)
-  const hasMoreTestimonials = totalTestimonials > TESTIMONIAL_DISPLAY_LIMIT
+  // Use the user's configured testimonial limit (default 30)
+  const testimonialLimit = (profile as { minisite_testimonial_limit?: number }).minisite_testimonial_limit || 30
+  const displayedTestimonials = testimonials.slice(0, testimonialLimit)
+  const hasMoreTestimonials = totalTestimonials > testimonialLimit
 
   // Parse minisite config
   // Handle both string and object types (Supabase may return JSONB as string in some cases)
@@ -299,7 +299,7 @@ export default async function MiniSitePage({ params }: PageProps) {
 
   const fontFamily = getFontFamily(fontStyle)
   const headerAlign = getHeaderAlignment(headerStyle)
-  const layoutClasses = getLayoutClasses(layout, Math.min(totalTestimonials, TESTIMONIAL_DISPLAY_LIMIT))
+  const layoutClasses = getLayoutClasses(layout, Math.min(totalTestimonials, testimonialLimit))
   const cardRadius = getCardBorderRadius(cardStyle)
 
   // Derived colors for dark mode cards
@@ -577,20 +577,18 @@ export default async function MiniSitePage({ params }: PageProps) {
             {hasMoreTestimonials && (
               <div className="mt-10 text-center">
                 <p className="text-sm" style={{ color: subtextColor }}>
-                  Mostrando {TESTIMONIAL_DISPLAY_LIMIT} de {totalTestimonials} testimonios
+                  Mostrando {testimonialLimit} de {totalTestimonials} testimonios
                 </p>
-                {projects[0] && (
-                  <Link
-                    href={`/p/${username}/${projects[0]?.slug}`}
-                    className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
-                    style={{ color: accentColor }}
-                  >
-                    Dejar un testimonio
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                    </svg>
-                  </Link>
-                )}
+                <Link
+                  href={`/s/${username}/todos`}
+                  className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:opacity-80"
+                  style={{ color: accentColor }}
+                >
+                  Ver todos los testimonios
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </Link>
               </div>
             )}
           </>
