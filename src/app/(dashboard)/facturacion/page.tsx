@@ -207,7 +207,7 @@ export default async function FacturacionPage({
                 <h3 className="text-lg font-bold text-gray-900">{getPlanLabel('minisite', locale)}</h3>
                 <div className="mt-4">
                   <span className="text-4xl font-bold text-gray-900">
-                    {STRIPE_PRICES.minisite.price}\u20ac
+                    {STRIPE_PRICES.minisite.price}€
                   </span>
                   <span className="text-sm text-gray-500">{t('billing.month', locale)}</span>
                 </div>
@@ -251,7 +251,7 @@ export default async function FacturacionPage({
               </div>
               <div className="mt-4">
                 <span className="text-4xl font-bold text-gray-900">
-                  {STRIPE_PRICES.pro.price}\u20ac
+                  {STRIPE_PRICES.pro.price}€
                 </span>
                 <span className="text-sm text-gray-500">{t('billing.month', locale)}</span>
               </div>
@@ -292,7 +292,7 @@ export default async function FacturacionPage({
               <h3 className="text-lg font-bold text-gray-900">Business</h3>
               <div className="mt-4">
                 <span className="text-4xl font-bold text-gray-900">
-                  {STRIPE_PRICES.business.price}\u20ac
+                  {STRIPE_PRICES.business.price}€
                 </span>
                 <span className="text-sm text-gray-500">{t('billing.month', locale)}</span>
               </div>
@@ -466,16 +466,16 @@ export default async function FacturacionPage({
               <tr>
                 <td className="px-6 py-3 text-gray-700">{t('billing.price', locale)}</td>
                 <td className="px-6 py-3 text-center font-medium text-gray-900">
-                  0\u20ac
+                  0€
                 </td>
                 <td className="px-6 py-3 text-center font-medium text-teal-700">
-                  {STRIPE_PRICES.minisite.price}\u20ac{t('billing.month', locale)}
+                  {STRIPE_PRICES.minisite.price}€{t('billing.month', locale)}
                 </td>
                 <td className="px-6 py-3 text-center font-medium text-gray-900">
-                  {STRIPE_PRICES.pro.price}\u20ac{t('billing.month', locale)}
+                  {STRIPE_PRICES.pro.price}€{t('billing.month', locale)}
                 </td>
                 <td className="px-6 py-3 text-center font-medium text-gray-900">
-                  {STRIPE_PRICES.business.price}\u20ac{t('billing.month', locale)}
+                  {STRIPE_PRICES.business.price}€{t('billing.month', locale)}
                 </td>
               </tr>
             </tbody>
