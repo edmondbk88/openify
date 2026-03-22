@@ -41,6 +41,12 @@ export function Navbar() {
 
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 md:flex">
+          {/* Language switcher */}
+          <div className="flex items-center gap-1 text-xs font-medium text-gray-400">
+            <span className="text-indigo-600">ES</span>
+            <span>|</span>
+            <Link href="/en" className="transition-colors hover:text-indigo-600">EN</Link>
+          </div>
           <Link
             href="/login"
             className="text-sm font-medium text-gray-700 transition-colors hover:text-indigo-600"
@@ -90,6 +96,12 @@ export function Navbar() {
               </a>
             ))}
             <hr className="my-3 border-gray-100" />
+            {/* Language switcher mobile */}
+            <div className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-500">
+              <span className="text-indigo-600">ES</span>
+              <span>|</span>
+              <Link href="/en" className="hover:text-indigo-600">EN</Link>
+            </div>
             <Link
               href="/login"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"

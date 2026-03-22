@@ -48,13 +48,13 @@ export function NavbarEn() {
             <span className="text-indigo-600">EN</span>
           </div>
           <Link
-            href="/login"
+            href="/en/login"
             className="text-sm font-medium text-gray-700 transition-colors hover:text-indigo-600"
           >
             Sign In
           </Link>
           <Link
-            href="/registro"
+            href="/en/register"
             className="inline-flex h-10 items-center rounded-lg bg-indigo-600 px-5 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
           >
             Get Started Free
@@ -103,13 +103,13 @@ export function NavbarEn() {
               <span className="text-indigo-600">EN</span>
             </div>
             <Link
-              href="/login"
+              href="/en/login"
               className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50"
             >
               Sign In
             </Link>
             <Link
-              href="/registro"
+              href="/en/register"
               className="mt-2 block rounded-lg bg-indigo-600 px-3 py-2.5 text-center text-base font-medium text-white hover:bg-indigo-700"
             >
               Get Started Free

@@ -217,6 +217,24 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.6,
     },
+    {
+      url: `${baseUrl}/en/minisite-templates`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/en/login`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
+    {
+      url: `${baseUrl}/en/register`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.3,
+    },
   ]
 
   const englishIndustryIndexPage: MetadataRoute.Sitemap = [
@@ -242,6 +260,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }))
 
+  const englishTemplatePages: MetadataRoute.Sitemap = widgetTemplates.map((template) => ({
+    url: `${baseUrl}/en/templates/${template.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }))
+
+  const englishMiniSiteTemplatePages: MetadataRoute.Sitemap = miniSiteTemplates.map((template) => ({
+    url: `${baseUrl}/en/minisite-templates/${template.id}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }))
+
   // Dynamic profile pages (Pro/Business users with mini sites)
   const admin = createAdminClient()
   const { data: proProfiles } = await admin
@@ -257,5 +289,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  return [...staticPages, ...englishPages, ...blogPages, ...englishBlogPages, ...templatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...englishIndustryIndexPage, ...englishIndustryPages, ...profilePages]
+  return [...staticPages, ...englishPages, ...blogPages, ...englishBlogPages, ...templatePages, ...englishTemplatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...englishMiniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...englishIndustryIndexPage, ...englishIndustryPages, ...profilePages]
 }
