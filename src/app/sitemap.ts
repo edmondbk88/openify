@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { blogArticles } from '@/lib/blog-data'
+import { blogArticlesEn } from '@/lib/blog-data-en'
 import { widgetTemplates } from '@/lib/widget-templates'
 import { miniSiteTemplates } from '@/lib/minisite-templates'
 import { industries } from '@/lib/industry-data'
@@ -191,7 +192,38 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'yearly',
       priority: 0.2,
     },
+    {
+      url: `${baseUrl}/en/compare`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/en/compare/opinafy-vs-testimonial-to`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/en/compare/opinafy-vs-senja`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/en/compare/best-testimonial-tools`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    },
   ]
+
+  const englishBlogPages: MetadataRoute.Sitemap = blogArticlesEn.map((article) => ({
+    url: `${baseUrl}/en/blog/${article.slug}`,
+    lastModified: new Date(article.date),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
 
   // Dynamic profile pages (Pro/Business users with mini sites)
   const admin = createAdminClient()
@@ -208,5 +240,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  return [...staticPages, ...englishPages, ...blogPages, ...templatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...profilePages]
+  return [...staticPages, ...englishPages, ...blogPages, ...englishBlogPages, ...templatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...profilePages]
 }
