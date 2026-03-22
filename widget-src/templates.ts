@@ -18,6 +18,7 @@ interface Testimonial {
   source?: string;
   source_platform?: string;
   source_url?: string;
+  owner_reply?: string;
 }
 
 const SOURCE_COLORS: Record<string, { name: string; color: string }> = {
@@ -321,6 +322,7 @@ export function renderCard(testimonial: Testimonial, config: WidgetConfig): stri
         ${showRating && rating > 0 ? `<div class="opinafy-stars">${renderStars(rating)}</div>` : ''}
         <div class="opinafy-content"><p>${escapeHtml(content)}</p></div>
         ${isLong ? `<button class="opinafy-read-more" onclick="var c=this.previousElementSibling;c.classList.toggle('opinafy-content-expanded');this.textContent=c.classList.contains('opinafy-content-expanded')?'Leer menos':'Leer más'">Leer más</button>` : ''}
+        ${testimonial.owner_reply ? `<div class="opinafy-reply"><div class="opinafy-reply-label">Respuesta del propietario</div><p class="opinafy-reply-text">${escapeHtml(testimonial.owner_reply)}</p></div>` : ''}
         <div class="opinafy-card-footer">
           <div class="opinafy-card-header">
             ${showAvatar ? avatarHtml : ''}

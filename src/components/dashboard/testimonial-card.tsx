@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Image from 'next/image'
 import { cn, formatDate, truncate, getInitials } from '@/lib/utils'
 import { PLATFORMS } from '@/lib/platform-logos'
@@ -10,6 +11,8 @@ interface TestimonialCardProps {
   onApprove?: (id: string) => void
   onReject?: (id: string) => void
   onDelete?: (id: string) => void
+  onToggleFeatured?: (id: string, isFeatured: boolean) => void
+  onReply?: (id: string, reply: string | null) => void
 }
 
 const statusConfig: Record<TestimonialStatus, { label: string; className: string }> = {
@@ -41,12 +44,18 @@ export default function TestimonialCard({
   onApprove,
   onReject,
   onDelete,
+  onToggleFeatured,
+  onReply,
 }: TestimonialCardProps) {
   const status = statusConfig[testimonial.status]
+  const [showReplyForm, setShowReplyForm] = useState(false)
+  const [replyText, setReplyText] = useState(testimonial.owner_reply || '')
+  const [isSaving, setIsSaving] = useState(false)
 
   return (
     <div className={cn(
-      'rounded-xl border border-gray-200 bg-white shadow-sm',
+      'rounded-xl border bg-white shadow-sm',
+      testimonial.is_featured ? 'border-amber-300 ring-1 ring-amber-200' : 'border-gray-200',
       testimonial.video_url ? 'overflow-hidden' : 'p-5'
     )}>
       {/* Video */}
@@ -101,14 +110,32 @@ export default function TestimonialCard({
             )}
           </div>
         </div>
-        <span
-          className={cn(
-            'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium',
-            status.className
+        <div className="flex items-center gap-1.5">
+          {onToggleFeatured && (
+            <button
+              onClick={() => onToggleFeatured(testimonial.id, !testimonial.is_featured)}
+              className={cn(
+                'rounded-lg p-1 transition-colors',
+                testimonial.is_featured
+                  ? 'text-amber-500 hover:text-amber-600'
+                  : 'text-gray-300 hover:text-amber-400'
+              )}
+              title={testimonial.is_featured ? 'Quitar destacado' : 'Destacar testimonio'}
+            >
+              <svg className="h-5 w-5" fill={testimonial.is_featured ? 'currentColor' : 'none'} viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+              </svg>
+            </button>
           )}
-        >
-          {status.label}
-        </span>
+          <span
+            className={cn(
+              'inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium',
+              status.className
+            )}
+          >
+            {status.label}
+          </span>
+        </div>
       </div>
 
       {/* Rating */}
@@ -156,6 +183,89 @@ export default function TestimonialCard({
         </div>
       )}
 
+      {/* Owner Reply */}
+      {testimonial.owner_reply && !showReplyForm && (
+        <div className="mt-3 ml-4 rounded-lg border border-indigo-100 bg-indigo-50/50 p-3">
+          <p className="mb-1 text-xs font-semibold text-indigo-700">Respuesta del propietario</p>
+          <p className="text-sm text-gray-700">{testimonial.owner_reply}</p>
+          {testimonial.owner_reply_at && (
+            <p className="mt-1 text-xs text-gray-400">{formatDate(testimonial.owner_reply_at)}</p>
+          )}
+        </div>
+      )}
+
+      {/* Reply Form */}
+      {showReplyForm && (
+        <div className="mt-3 ml-4 rounded-lg border border-gray-200 bg-gray-50 p-3">
+          <textarea
+            value={replyText}
+            onChange={(e) => setReplyText(e.target.value)}
+            placeholder="Escribe tu respuesta..."
+            rows={3}
+            className="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+          />
+          <div className="mt-2 flex items-center gap-2">
+            <button
+              onClick={async () => {
+                if (!replyText.trim()) return
+                setIsSaving(true)
+                try {
+                  const res = await fetch(`/api/testimonials/${testimonial.id}`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ owner_reply: replyText.trim() }),
+                  })
+                  if (res.ok) {
+                    onReply?.(testimonial.id, replyText.trim())
+                    setShowReplyForm(false)
+                  }
+                } finally {
+                  setIsSaving(false)
+                }
+              }}
+              disabled={isSaving || !replyText.trim()}
+              className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3 py-1.5 text-sm font-medium text-white transition-colors hover:bg-indigo-700 disabled:opacity-50"
+            >
+              {isSaving ? 'Guardando...' : 'Guardar respuesta'}
+            </button>
+            {testimonial.owner_reply && (
+              <button
+                onClick={async () => {
+                  setIsSaving(true)
+                  try {
+                    const res = await fetch(`/api/testimonials/${testimonial.id}`, {
+                      method: 'PATCH',
+                      headers: { 'Content-Type': 'application/json' },
+                      body: JSON.stringify({ owner_reply: null }),
+                    })
+                    if (res.ok) {
+                      onReply?.(testimonial.id, null)
+                      setReplyText('')
+                      setShowReplyForm(false)
+                    }
+                  } finally {
+                    setIsSaving(false)
+                  }
+                }}
+                disabled={isSaving}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-red-300 px-3 py-1.5 text-sm font-medium text-red-600 transition-colors hover:bg-red-50 disabled:opacity-50"
+              >
+                Eliminar respuesta
+              </button>
+            )}
+            <button
+              onClick={() => {
+                setShowReplyForm(false)
+                setReplyText(testimonial.owner_reply || '')
+              }}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50"
+            >
+              Cancelar
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Date & Source */}
       <div className="mt-3 flex items-center gap-2">
         <p className="text-xs text-gray-400">{formatDate(testimonial.created_at)}</p>
@@ -178,6 +288,22 @@ export default function TestimonialCard({
 
       {/* Actions */}
       <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-gray-100 pt-4">
+        {/* Reply button */}
+        <button
+          onClick={() => setShowReplyForm(!showReplyForm)}
+          className={cn(
+            'inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors',
+            testimonial.owner_reply
+              ? 'border-indigo-200 bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
+              : 'border-gray-300 text-gray-600 hover:bg-gray-50 hover:text-indigo-600'
+          )}
+        >
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+          </svg>
+          {testimonial.owner_reply ? 'Editar respuesta' : 'Responder'}
+        </button>
+
         {/* Share button */}
         {testimonial.status === 'approved' && (
           <a

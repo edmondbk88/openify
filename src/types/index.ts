@@ -61,6 +61,8 @@ export interface Testimonial {
   sentiment_label: string | null
   key_phrases: string[] | null
   ai_summary: string | null
+  owner_reply: string | null
+  owner_reply_at: string | null
   click_count: number
   impression_count: number
   created_at: string
@@ -103,7 +105,7 @@ export interface WidgetImpression {
 
 export interface WidgetData {
   project: Pick<Project, 'name' | 'logo_url' | 'brand_color'>
-  testimonials: Pick<Testimonial, 'id' | 'author_name' | 'author_company' | 'author_role' | 'author_avatar_url' | 'content' | 'rating' | 'is_company_verified' | 'source' | 'source_platform' | 'source_url' | 'created_at'>[]
+  testimonials: Pick<Testimonial, 'id' | 'author_name' | 'author_company' | 'author_role' | 'author_avatar_url' | 'content' | 'rating' | 'is_company_verified' | 'source' | 'source_platform' | 'source_url' | 'owner_reply' | 'created_at'>[]
   config: WidgetConfig | null
 }
 

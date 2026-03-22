@@ -75,7 +75,7 @@ export async function POST(request: NextRequest) {
     // Verify project exists and is active
     const { data: project } = await supabase
       .from('projects')
-      .select('id, user_id, is_active, name')
+      .select('id, user_id, is_active, name, slug')
       .eq('id', parsed.data.project_id)
       .single()
 
@@ -172,6 +172,19 @@ export async function POST(request: NextRequest) {
     } catch (sentimentError) {
       // Log but don't fail the request
       console.error('Error running sentiment analysis:', sentimentError)
+    }
+
+    // Create in-app notification for project owner
+    try {
+      await supabase.from('notifications').insert({
+        user_id: project.user_id,
+        type: 'new_testimonial',
+        title: 'Nuevo testimonio recibido',
+        message: `Nuevo testimonio recibido en ${project.name} de ${parsed.data.author_name}.`,
+        link: `/proyectos/${project.slug}`,
+      })
+    } catch (notifError) {
+      console.error('Error creating notification:', notifError)
     }
 
     // Send verification email if author provided an email

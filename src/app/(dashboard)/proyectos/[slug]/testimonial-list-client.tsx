@@ -77,6 +77,27 @@ export default function TestimonialListClient({
     }
   }
 
+  async function handleToggleFeatured(id: string, isFeatured: boolean) {
+    setLoadingId(id)
+    try {
+      const res = await fetch(`/api/testimonials/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ is_featured: isFeatured }),
+      })
+      if (!res.ok) throw new Error('Error al actualizar testimonio')
+      setTestimonials((prev) =>
+        prev.map((t) => (t.id === id ? { ...t, is_featured: isFeatured } : t))
+      )
+      toast(isFeatured ? 'Testimonio destacado' : 'Testimonio sin destacar', 'success')
+      router.refresh()
+    } catch (err: unknown) {
+      toast(err instanceof Error ? err.message : 'Error inesperado', 'error')
+    } finally {
+      setLoadingId(null)
+    }
+  }
+
   async function handleDelete(id: string) {
     if (!confirm('¿Estás seguro de que quieres eliminar este testimonio? Esta acción no se puede deshacer.')) {
       return
@@ -160,6 +181,7 @@ export default function TestimonialListClient({
                 onApprove={handleApprove}
                 onReject={handleReject}
                 onDelete={handleDelete}
+                onToggleFeatured={handleToggleFeatured}
               />
             </div>
           ))}

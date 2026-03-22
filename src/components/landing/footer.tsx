@@ -9,6 +9,7 @@ const productLinks = [
   { label: 'Blog', href: '/blog' },
   { label: 'Comparativas', href: '/comparar' },
   { label: 'Industrias', href: '/testimonios-para' },
+  { label: 'Guias', href: '/guias/wordpress' },
 ]
 
 const legalLinks = [

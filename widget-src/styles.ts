@@ -304,6 +304,31 @@ export function getStyles(config: any): string {
       -webkit-line-clamp: unset;
     }
 
+    /* ── Owner Reply ── */
+    .opinafy-reply {
+      margin: 10px 0 12px;
+      padding: 10px 14px;
+      background: ${isDark ? '#374151' : '#f3f4f6'};
+      border-left: 3px solid var(--opinafy-primary);
+      border-radius: 0 var(--opinafy-radius-sm) var(--opinafy-radius-sm) 0;
+    }
+
+    .opinafy-reply-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--opinafy-primary);
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .opinafy-reply-text {
+      font-size: 13px;
+      line-height: 1.5;
+      color: var(--opinafy-text-secondary);
+      margin: 0;
+    }
+
     .opinafy-read-more {
       display: inline-block;
       margin-top: 6px;

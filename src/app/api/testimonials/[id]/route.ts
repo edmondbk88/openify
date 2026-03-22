@@ -6,6 +6,7 @@ const updateTestimonialSchema = z.object({
   status: z.enum(['pending', 'approved', 'rejected']).optional(),
   is_featured: z.boolean().optional(),
   tags: z.array(z.string()).optional(),
+  owner_reply: z.string().nullable().optional(),
 })
 
 export async function PATCH(
@@ -53,9 +54,16 @@ export async function PATCH(
       )
     }
 
+    const updateData: Record<string, unknown> = { ...parsed.data, updated_at: new Date().toISOString() }
+    if ('owner_reply' in updateData && updateData.owner_reply) {
+      updateData.owner_reply_at = new Date().toISOString()
+    } else if ('owner_reply' in updateData && !updateData.owner_reply) {
+      updateData.owner_reply_at = null
+    }
+
     const { data: updated, error } = await supabase
       .from('testimonials')
-      .update({ ...parsed.data, updated_at: new Date().toISOString() })
+      .update(updateData)
       .eq('id', id)
       .select()
       .single()
