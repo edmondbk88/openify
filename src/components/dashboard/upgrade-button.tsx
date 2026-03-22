@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 interface UpgradeButtonProps {
   plan: 'minisite' | 'pro' | 'business'
@@ -9,6 +11,7 @@ interface UpgradeButtonProps {
 }
 
 export function UpgradeButton({ plan, className, children }: UpgradeButtonProps) {
+  const locale = useLocale()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -26,14 +29,14 @@ export function UpgradeButton({ plan, className, children }: UpgradeButtonProps)
       const data = await res.json()
 
       if (!res.ok) {
-        throw new Error(data.error || 'Error al procesar la solicitud')
+        throw new Error(data.error || t('upgrade.errorProcessing', locale))
       }
 
       if (data.url) {
         window.location.href = data.url
       }
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error inesperado')
+      setError(err instanceof Error ? err.message : t('upgrade.unexpectedError', locale))
       setLoading(false)
     }
   }
@@ -51,7 +54,7 @@ export function UpgradeButton({ plan, className, children }: UpgradeButtonProps)
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
             </svg>
-            Procesando...
+            {t('upgrade.processing', locale)}
           </span>
         ) : children}
       </button>

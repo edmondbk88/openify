@@ -5,6 +5,8 @@ import { cn } from '@/lib/utils'
 import { widgetTemplates, TEMPLATE_CATEGORIES } from '@/lib/widget-templates'
 import type { WidgetTemplate } from '@/lib/widget-templates'
 import { TemplatePreview } from '@/components/landing/template-preview'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 import type { WidgetConfig, WidgetLayout, WidgetTheme } from '@/types'
 
 type EditableConfig = Omit<WidgetConfig, 'id' | 'project_id' | 'filter_tags' | 'custom_css' | 'created_at' | 'updated_at'>
@@ -14,24 +16,30 @@ interface WidgetConfiguratorProps {
   onChange: (config: EditableConfig) => void
 }
 
-const layoutOptions: { value: WidgetLayout; label: string; beta?: boolean }[] = [
-  { value: 'carousel', label: 'Carrusel' },
-  { value: 'grid', label: 'Cuadrícula' },
-  { value: 'wall', label: 'Muro' },
-  { value: 'single', label: 'Individual' },
-  { value: 'badge', label: 'Insignia' },
-  { value: 'popup', label: 'Popup FOMO', beta: true },
-]
+const layoutKeys: Record<WidgetLayout, string> = {
+  carousel: 'widgetConfig.carousel',
+  grid: 'widgetConfig.grid',
+  wall: 'widgetConfig.wall',
+  single: 'widgetConfig.single',
+  badge: 'widgetConfig.badge',
+  popup: 'widgetConfig.popup',
+}
 
-const themeOptions: { value: WidgetTheme; label: string }[] = [
-  { value: 'light', label: 'Claro' },
-  { value: 'dark', label: 'Oscuro' },
-  { value: 'auto', label: 'Automático' },
-]
+const layoutBeta: Partial<Record<WidgetLayout, boolean>> = {
+  popup: true,
+}
 
-const ALL_CATEGORIES = ['Todas', ...TEMPLATE_CATEGORIES] as const
+const themeKeys: Record<WidgetTheme, string> = {
+  light: 'widgetConfig.light',
+  dark: 'widgetConfig.dark',
+  auto: 'widgetConfig.auto',
+}
+
+const layoutOrder: WidgetLayout[] = ['carousel', 'grid', 'wall', 'single', 'badge', 'popup']
+const themeOrder: WidgetTheme[] = ['light', 'dark', 'auto']
 
 export default function WidgetConfigurator({ config, onChange }: WidgetConfiguratorProps) {
+  const locale = useLocale()
   const [selectedCategory, setSelectedCategory] = useState<string>('Todas')
   const [selectedTemplateId, setSelectedTemplateId] = useState<string | null>(null)
 
@@ -58,9 +66,19 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
     })
   }
 
-  const filteredTemplates = selectedCategory === 'Todas'
+  const ALL_CATEGORIES = [t('widgetConfig.allCategories', locale), ...TEMPLATE_CATEGORIES] as const
+
+  const filteredTemplates = selectedCategory === t('widgetConfig.allCategories', locale)
     ? widgetTemplates
-    : widgetTemplates.filter((t) => t.category === selectedCategory)
+    : widgetTemplates.filter((tmpl) => tmpl.category === selectedCategory)
+
+  const displayToggleOptions = [
+    { key: 'show_rating' as const, labelKey: 'widgetConfig.showRating' },
+    { key: 'show_date' as const, labelKey: 'widgetConfig.showDate' },
+    { key: 'show_avatar' as const, labelKey: 'widgetConfig.showAvatar' },
+    { key: 'show_company' as const, labelKey: 'widgetConfig.showCompany' },
+    { key: 'show_branding' as const, labelKey: 'widgetConfig.showBranding' },
+  ]
 
   return (
     <div className="space-y-10">
@@ -76,7 +94,7 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
           </svg>
-          No encuentras lo que buscas? Personaliza tu plantilla
+          {t('widgetConfig.customizeCta', locale)}
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
           </svg>
@@ -87,9 +105,9 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
       {/* TEMPLATE SELECTOR */}
       {/* ═══════════════════════════════════════════ */}
       <section>
-        <h3 className="text-base font-semibold text-gray-900">Elige una plantilla</h3>
+        <h3 className="text-base font-semibold text-gray-900">{t('widgetConfig.chooseTemplate', locale)}</h3>
         <p className="mt-1 text-sm text-gray-500">
-          Selecciona una plantilla prediseñada y luego ajusta los detalles abajo.
+          {t('widgetConfig.chooseTemplateDesc', locale)}
         </p>
 
         {/* Category filter tabs */}
@@ -157,29 +175,29 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
       {/* MANUAL CUSTOMIZATION */}
       {/* ═══════════════════════════════════════════ */}
       <div id="personalizacion-avanzada" className="border-t border-gray-200 pt-8 scroll-mt-8">
-        <h3 className="text-base font-semibold text-gray-900">Personalización avanzada</h3>
+        <h3 className="text-base font-semibold text-gray-900">{t('widgetConfig.advancedCustomization', locale)}</h3>
         <p className="mt-1 text-sm text-gray-500">
-          Ajusta cada detalle manualmente.
+          {t('widgetConfig.advancedCustomizationDesc', locale)}
         </p>
       </div>
 
       {/* Layout */}
       <section>
-        <h3 className="text-sm font-semibold text-gray-900">Diseño</h3>
+        <h3 className="text-sm font-semibold text-gray-900">{t('widgetConfig.layout', locale)}</h3>
         <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-5">
-          {layoutOptions.map((opt) => (
+          {layoutOrder.map((layoutValue) => (
             <button
-              key={opt.value}
-              onClick={() => update('layout', opt.value)}
+              key={layoutValue}
+              onClick={() => update('layout', layoutValue)}
               className={cn(
                 'rounded-lg border px-3 py-2.5 text-sm font-medium transition-colors',
-                config.layout === opt.value
+                config.layout === layoutValue
                   ? 'border-indigo-600 bg-indigo-50 text-indigo-600'
                   : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50'
               )}
             >
-              {opt.label}
-              {opt.beta && (
+              {t(layoutKeys[layoutValue], locale)}
+              {layoutBeta[layoutValue] && (
                 <span className="ml-1 rounded-full bg-amber-100 px-1.5 py-0.5 text-[9px] font-bold uppercase text-amber-700">Beta</span>
               )}
             </button>
@@ -189,20 +207,20 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
 
       {/* Theme */}
       <section>
-        <h3 className="text-sm font-semibold text-gray-900">Tema</h3>
+        <h3 className="text-sm font-semibold text-gray-900">{t('widgetConfig.theme', locale)}</h3>
         <div className="mt-3 flex gap-2">
-          {themeOptions.map((opt) => (
+          {themeOrder.map((themeValue) => (
             <button
-              key={opt.value}
-              onClick={() => update('theme', opt.value)}
+              key={themeValue}
+              onClick={() => update('theme', themeValue)}
               className={cn(
                 'rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors',
-                config.theme === opt.value
+                config.theme === themeValue
                   ? 'border-indigo-600 bg-indigo-50 text-indigo-600'
                   : 'border-gray-200 text-gray-600 hover:border-gray-300 hover:bg-gray-50'
               )}
             >
-              {opt.label}
+              {t(themeKeys[themeValue], locale)}
             </button>
           ))}
         </div>
@@ -210,10 +228,10 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
 
       {/* Colors */}
       <section>
-        <h3 className="text-sm font-semibold text-gray-900">Colores</h3>
+        <h3 className="text-sm font-semibold text-gray-900">{t('widgetConfig.colors', locale)}</h3>
         <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-3">
           <div>
-            <label className="block text-xs font-medium text-gray-500">Color primario</label>
+            <label className="block text-xs font-medium text-gray-500">{t('widgetConfig.primaryColor', locale)}</label>
             <div className="mt-1.5 flex items-center gap-2">
               <input
                 type="color"
@@ -230,7 +248,7 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
             </div>
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-500">Color de fondo</label>
+            <label className="block text-xs font-medium text-gray-500">{t('widgetConfig.backgroundColor', locale)}</label>
             <div className="mt-1.5 flex items-center gap-2">
               <input
                 type="color"
@@ -247,7 +265,7 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
             </div>
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-500">Color de texto</label>
+            <label className="block text-xs font-medium text-gray-500">{t('widgetConfig.textColor', locale)}</label>
             <div className="mt-1.5 flex items-center gap-2">
               <input
                 type="color"
@@ -268,7 +286,7 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
 
       {/* Border Radius */}
       <section>
-        <h3 className="text-sm font-semibold text-gray-900">Radio de borde</h3>
+        <h3 className="text-sm font-semibold text-gray-900">{t('widgetConfig.borderRadius', locale)}</h3>
         <div className="mt-3 flex items-center gap-4">
           <input
             type="range"
@@ -285,17 +303,11 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
 
       {/* Toggles */}
       <section>
-        <h3 className="text-sm font-semibold text-gray-900">Opciones de visualización</h3>
+        <h3 className="text-sm font-semibold text-gray-900">{t('widgetConfig.displayOptions', locale)}</h3>
         <div className="mt-3 space-y-3">
-          {([
-            { key: 'show_rating' as const, label: 'Mostrar valoración' },
-            { key: 'show_date' as const, label: 'Mostrar fecha' },
-            { key: 'show_avatar' as const, label: 'Mostrar avatar' },
-            { key: 'show_company' as const, label: 'Mostrar empresa' },
-            { key: 'show_branding' as const, label: 'Mostrar marca Opinafy' },
-          ]).map(({ key, label }) => (
+          {displayToggleOptions.map(({ key, labelKey }) => (
             <label key={key} className="flex items-center justify-between">
-              <span className="text-sm text-gray-700">{label}</span>
+              <span className="text-sm text-gray-700">{t(labelKey, locale)}</span>
               <button
                 type="button"
                 role="switch"
@@ -320,28 +332,28 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
 
       {/* Video Display Mode */}
       <section>
-        <h3 className="text-sm font-semibold text-gray-900">Modo de video</h3>
+        <h3 className="text-sm font-semibold text-gray-900">{t('widgetConfig.videoMode', locale)}</h3>
         <p className="mt-1 text-xs text-gray-500">
-          Controla qué información se muestra junto a los testimonios en vídeo.
+          {t('widgetConfig.videoModeDesc', locale)}
         </p>
         <select
           value={config.video_display_mode || 'full'}
           onChange={(e) => update('video_display_mode', e.target.value)}
           className="mt-2 w-full rounded-lg border border-gray-200 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
         >
-          <option value="full">Completo (video + todo)</option>
-          <option value="video_only">Solo video</option>
-          <option value="video_stars">Video + estrellas</option>
-          <option value="video_name">Video + nombre</option>
+          <option value="full">{t('widgetConfig.videoFull', locale)}</option>
+          <option value="video_only">{t('widgetConfig.videoOnly', locale)}</option>
+          <option value="video_stars">{t('widgetConfig.videoStars', locale)}</option>
+          <option value="video_name">{t('widgetConfig.videoName', locale)}</option>
         </select>
       </section>
 
       {/* Auto-play */}
       <section>
-        <h3 className="text-sm font-semibold text-gray-900">Reproducción automática</h3>
+        <h3 className="text-sm font-semibold text-gray-900">{t('widgetConfig.autoPlay', locale)}</h3>
         <div className="mt-3 space-y-3">
           <label className="flex items-center justify-between">
-            <span className="text-sm text-gray-700">Activar auto-play</span>
+            <span className="text-sm text-gray-700">{t('widgetConfig.enableAutoPlay', locale)}</span>
             <button
               type="button"
               role="switch"
@@ -362,7 +374,7 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
           </label>
           {config.auto_play && (
             <div className="flex items-center gap-4">
-              <label className="text-sm text-gray-500">Velocidad (ms)</label>
+              <label className="text-sm text-gray-500">{t('widgetConfig.speed', locale)}</label>
               <input
                 type="range"
                 min={1000}
@@ -380,10 +392,10 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
 
       {/* Max testimonials & min rating */}
       <section>
-        <h3 className="text-sm font-semibold text-gray-900">Filtros</h3>
+        <h3 className="text-sm font-semibold text-gray-900">{t('widgetConfig.filters', locale)}</h3>
         <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
-            <label className="block text-xs font-medium text-gray-500">Máximo de testimonios</label>
+            <label className="block text-xs font-medium text-gray-500">{t('widgetConfig.maxTestimonials', locale)}</label>
             <input
               type="number"
               min={1}
@@ -394,7 +406,7 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
             />
           </div>
           <div>
-            <label className="block text-xs font-medium text-gray-500">Valoración mínima</label>
+            <label className="block text-xs font-medium text-gray-500">{t('widgetConfig.minRating', locale)}</label>
             <select
               value={config.min_rating}
               onChange={(e) => update('min_rating', Number(e.target.value))}
@@ -402,7 +414,7 @@ export default function WidgetConfigurator({ config, onChange }: WidgetConfigura
             >
               {[1, 2, 3, 4, 5].map((n) => (
                 <option key={n} value={n}>
-                  {n} {n === 1 ? 'estrella' : 'estrellas'}
+                  {n} {n === 1 ? t('widgetConfig.star', locale) : t('widgetConfig.stars', locale)}
                 </option>
               ))}
             </select>

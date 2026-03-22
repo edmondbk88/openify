@@ -3,6 +3,8 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { formatRelativeDate } from '@/lib/utils'
+import { useLocale } from '@/components/dashboard/locale-context'
+import { t } from '@/lib/i18n'
 
 interface Notification {
   id: string
@@ -16,6 +18,7 @@ interface Notification {
 
 export default function NotificationBell() {
   const router = useRouter()
+  const locale = useLocale()
   const [notifications, setNotifications] = useState<Notification[]>([])
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -87,7 +90,7 @@ export default function NotificationBell() {
       <button
         onClick={() => setOpen(!open)}
         className="relative rounded-lg p-2 text-gray-400 transition-colors hover:bg-gray-100 hover:text-gray-600"
-        aria-label="Notificaciones"
+        aria-label={t('notifications.ariaLabel', locale)}
       >
         <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
@@ -102,13 +105,13 @@ export default function NotificationBell() {
       {open && (
         <div className="absolute right-0 top-full z-50 mt-2 w-80 rounded-xl border border-gray-200 bg-white shadow-lg">
           <div className="flex items-center justify-between border-b border-gray-100 px-4 py-3">
-            <h3 className="text-sm font-semibold text-gray-900">Notificaciones</h3>
+            <h3 className="text-sm font-semibold text-gray-900">{t('notifications.title', locale)}</h3>
             {unreadCount > 0 && (
               <button
                 onClick={markAllAsRead}
                 className="text-xs font-medium text-indigo-600 hover:text-indigo-700"
               >
-                Marcar todas como leídas
+                {t('notifications.markAllRead', locale)}
               </button>
             )}
           </div>
@@ -116,7 +119,7 @@ export default function NotificationBell() {
           <div className="max-h-80 overflow-y-auto">
             {notifications.length === 0 ? (
               <div className="px-4 py-8 text-center text-sm text-gray-500">
-                No tienes notificaciones
+                {t('notifications.empty', locale)}
               </div>
             ) : (
               notifications.map((notification) => (
@@ -137,7 +140,7 @@ export default function NotificationBell() {
                   </div>
                   <p className="text-xs text-gray-500">{notification.message}</p>
                   <p className="text-[10px] text-gray-400">
-                    {formatRelativeDate(notification.created_at)}
+                    {formatRelativeDate(notification.created_at, locale)}
                   </p>
                 </button>
               ))

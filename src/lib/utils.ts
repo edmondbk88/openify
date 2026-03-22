@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from 'clsx'
 import { twMerge } from 'tailwind-merge'
+import { t, type Locale } from '@/lib/i18n'
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -23,18 +24,19 @@ export function formatDate(date: string | Date): string {
   }).format(new Date(date))
 }
 
-export function formatRelativeDate(date: string | Date): string {
+export function formatRelativeDate(date: string | Date, locale?: Locale): string {
+  const loc = locale || 'es'
   const now = new Date()
   const d = new Date(date)
   const diffMs = now.getTime() - d.getTime()
   const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24))
 
-  if (diffDays === 0) return 'Hoy'
-  if (diffDays === 1) return 'Ayer'
-  if (diffDays < 7) return `Hace ${diffDays} días`
-  if (diffDays < 30) return `Hace ${Math.floor(diffDays / 7)} semanas`
-  if (diffDays < 365) return `Hace ${Math.floor(diffDays / 30)} meses`
-  return `Hace ${Math.floor(diffDays / 365)} años`
+  if (diffDays === 0) return t('dates.today', loc)
+  if (diffDays === 1) return t('dates.yesterday', loc)
+  if (diffDays < 7) return t('dates.daysAgo', loc).replace('{n}', String(diffDays))
+  if (diffDays < 30) return t('dates.weeksAgo', loc).replace('{n}', String(Math.floor(diffDays / 7)))
+  if (diffDays < 365) return t('dates.monthsAgo', loc).replace('{n}', String(Math.floor(diffDays / 30)))
+  return t('dates.yearsAgo', loc).replace('{n}', String(Math.floor(diffDays / 365)))
 }
 
 export function truncate(str: string, length: number): string {

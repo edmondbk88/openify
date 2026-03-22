@@ -46,14 +46,14 @@ export default function TestimonialListClient({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: 'approved' }),
       })
-      if (!res.ok) throw new Error('Error al aprobar el testimonio')
+      if (!res.ok) throw new Error(t('testimonials.errorApproving', locale))
       setTestimonials((prev) =>
         prev.map((t) => (t.id === id ? { ...t, status: 'approved' } : t))
       )
-      toast('Testimonio aprobado', 'success')
+      toast(t('testimonials.testimonialApproved', locale), 'success')
       router.refresh()
     } catch (err: unknown) {
-      toast(err instanceof Error ? err.message : 'Error inesperado', 'error')
+      toast(err instanceof Error ? err.message : t('testimonials.unexpectedError', locale), 'error')
     } finally {
       setLoadingId(null)
     }
@@ -67,14 +67,14 @@ export default function TestimonialListClient({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: 'rejected' }),
       })
-      if (!res.ok) throw new Error('Error al rechazar el testimonio')
+      if (!res.ok) throw new Error(t('testimonials.errorRejecting', locale))
       setTestimonials((prev) =>
         prev.map((t) => (t.id === id ? { ...t, status: 'rejected' } : t))
       )
-      toast('Testimonio rechazado', 'success')
+      toast(t('testimonials.testimonialRejected', locale), 'success')
       router.refresh()
     } catch (err: unknown) {
-      toast(err instanceof Error ? err.message : 'Error inesperado', 'error')
+      toast(err instanceof Error ? err.message : t('testimonials.unexpectedError', locale), 'error')
     } finally {
       setLoadingId(null)
     }
@@ -88,21 +88,21 @@ export default function TestimonialListClient({
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ is_featured: isFeatured }),
       })
-      if (!res.ok) throw new Error('Error al actualizar testimonio')
+      if (!res.ok) throw new Error(t('testimonials.errorUpdating', locale))
       setTestimonials((prev) =>
         prev.map((t) => (t.id === id ? { ...t, is_featured: isFeatured } : t))
       )
-      toast(isFeatured ? 'Testimonio destacado' : 'Testimonio sin destacar', 'success')
+      toast(isFeatured ? t('testimonials.featured', locale) : t('testimonials.unfeatured', locale), 'success')
       router.refresh()
     } catch (err: unknown) {
-      toast(err instanceof Error ? err.message : 'Error inesperado', 'error')
+      toast(err instanceof Error ? err.message : t('testimonials.unexpectedError', locale), 'error')
     } finally {
       setLoadingId(null)
     }
   }
 
   async function handleDelete(id: string) {
-    if (!confirm('¿Estás seguro de que quieres eliminar este testimonio? Esta acción no se puede deshacer.')) {
+    if (!confirm(t('testimonials.deleteConfirm', locale))) {
       return
     }
     setLoadingId(id)
@@ -110,12 +110,12 @@ export default function TestimonialListClient({
       const res = await fetch(`/api/testimonials/${id}`, {
         method: 'DELETE',
       })
-      if (!res.ok) throw new Error('Error al eliminar el testimonio')
+      if (!res.ok) throw new Error(t('testimonials.errorDeleting', locale))
       setTestimonials((prev) => prev.filter((t) => t.id !== id))
-      toast('Testimonio eliminado', 'success')
+      toast(t('testimonials.testimonialDeleted', locale), 'success')
       router.refresh()
     } catch (err: unknown) {
-      toast(err instanceof Error ? err.message : 'Error inesperado', 'error')
+      toast(err instanceof Error ? err.message : t('testimonials.unexpectedError', locale), 'error')
     } finally {
       setLoadingId(null)
     }
