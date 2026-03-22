@@ -20,6 +20,7 @@ export default function ConfiguracionPage() {
     full_name: '',
     email: '',
     avatar_url: '',
+    locale: 'es' as 'es' | 'en',
   })
 
   const [passwords, setPasswords] = useState({
@@ -40,7 +41,7 @@ export default function ConfiguracionPage() {
 
       const { data } = await supabase
         .from('profiles')
-        .select('full_name, email, avatar_url')
+        .select('full_name, email, avatar_url, locale')
         .eq('id', user.id)
         .single()
 
@@ -49,6 +50,7 @@ export default function ConfiguracionPage() {
           full_name: data.full_name || '',
           email: data.email || user.email || '',
           avatar_url: data.avatar_url || '',
+          locale: (data.locale as 'es' | 'en') || 'es',
         })
       }
 
@@ -74,6 +76,7 @@ export default function ConfiguracionPage() {
         .update({
           full_name: profile.full_name,
           avatar_url: profile.avatar_url || null,
+          locale: profile.locale,
         })
         .eq('id', user.id)
 
@@ -240,6 +243,27 @@ export default function ConfiguracionPage() {
             <p className="mt-1 text-xs text-gray-400">
               El email no se puede cambiar.
             </p>
+          </div>
+
+          {/* Language */}
+          <div>
+            <label
+              htmlFor="locale"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Idioma / Language
+            </label>
+            <select
+              id="locale"
+              value={profile.locale}
+              onChange={(e) =>
+                setProfile((prev) => ({ ...prev, locale: e.target.value as 'es' | 'en' }))
+              }
+              className="mt-1.5 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
+            >
+              <option value="es">Espa\u00f1ol</option>
+              <option value="en">English</option>
+            </select>
           </div>
         </div>
 

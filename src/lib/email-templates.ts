@@ -13,8 +13,13 @@ export function emailTemplate(options: {
   body: string
   buttonText?: string
   buttonUrl?: string
+  lang?: string
 }): string {
-  const { title, body, buttonText, buttonUrl } = options
+  const { title, body, buttonText, buttonUrl, lang = 'es' } = options
+
+  const footerText = lang === 'en'
+    ? 'All rights reserved.'
+    : 'Todos los derechos reservados.'
 
   const buttonHtml = buttonText && buttonUrl
     ? `
@@ -30,7 +35,7 @@ export function emailTemplate(options: {
     : ''
 
   return `<!DOCTYPE html>
-<html lang="es">
+<html lang="${lang}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,7 +68,7 @@ export function emailTemplate(options: {
           <tr>
             <td style="padding:20px 40px;background-color:#f9fafb;border-top:1px solid #e5e7eb;text-align:center;">
               <p style="margin:0;color:#9ca3af;font-size:12px;line-height:1.5;">
-                &copy; ${YEAR} Opinafy. Todos los derechos reservados.
+                &copy; ${YEAR} Opinafy. ${footerText}
               </p>
               <p style="margin:6px 0 0;color:#9ca3af;font-size:11px;">
                 <a href="https://opinafy.com" style="color:#9ca3af;text-decoration:underline;">opinafy.com</a>
@@ -77,6 +82,8 @@ export function emailTemplate(options: {
 </body>
 </html>`
 }
+
+// ─── Spanish templates (original) ───────────────────────────────────────────
 
 export function ticketCreatedEmail(subject: string, ticketId: string): string {
   return emailTemplate({
@@ -176,6 +183,137 @@ export function testimonialApprovedEmail(projectName: string, authorName: string
       </p>
     `,
   })
+}
+
+// ─── English templates ──────────────────────────────────────────────────────
+
+export function ticketCreatedEmailEn(subject: string, ticketId: string): string {
+  return emailTemplate({
+    title: 'New Support Ticket',
+    lang: 'en',
+    body: `
+      <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
+        A new support ticket has been created:
+      </p>
+      <div style="background-color:#f9fafb;border-left:4px solid #4f46e5;padding:16px;margin:16px 0;border-radius:0 8px 8px 0;">
+        <p style="margin:0;color:#374151;font-size:14px;font-weight:600;">${escapeHtml(subject)}</p>
+      </div>
+    `,
+    buttonText: 'View Ticket',
+    buttonUrl: `https://opinafy.com/admin/soporte/${ticketId}`,
+  })
+}
+
+export function ticketReplyEmailEn(subject: string, message: string, ticketId: string): string {
+  return emailTemplate({
+    title: 'New Reply on Your Ticket',
+    lang: 'en',
+    body: `
+      <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
+        There is a new reply on your ticket <strong>${escapeHtml(subject)}</strong>:
+      </p>
+      <div style="background-color:#f9fafb;border-left:4px solid #4f46e5;padding:16px;margin:16px 0;border-radius:0 8px 8px 0;">
+        <p style="margin:0;color:#374151;font-size:14px;line-height:1.6;white-space:pre-wrap;">${escapeHtml(message)}</p>
+      </div>
+    `,
+    buttonText: 'View Ticket',
+    buttonUrl: `https://opinafy.com/soporte/${ticketId}`,
+  })
+}
+
+export function ticketUserReplyEmailEn(subject: string, message: string, userEmail: string, ticketId: string): string {
+  return emailTemplate({
+    title: 'New Reply on Support Ticket',
+    lang: 'en',
+    body: `
+      <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
+        <strong>${escapeHtml(userEmail)}</strong> has replied to ticket <strong>${escapeHtml(subject)}</strong>:
+      </p>
+      <div style="background-color:#f9fafb;border-left:4px solid #4f46e5;padding:16px;margin:16px 0;border-radius:0 8px 8px 0;">
+        <p style="margin:0;color:#374151;font-size:14px;line-height:1.6;white-space:pre-wrap;">${escapeHtml(message)}</p>
+      </div>
+    `,
+    buttonText: 'View Ticket',
+    buttonUrl: `https://opinafy.com/admin/soporte/${ticketId}`,
+  })
+}
+
+export function welcomeEmailEn(name: string): string {
+  return emailTemplate({
+    title: 'Welcome to Opinafy',
+    lang: 'en',
+    body: `
+      <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
+        Hi ${escapeHtml(name)},
+      </p>
+      <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
+        Thank you for signing up for Opinafy. You can now start collecting verified testimonials from your customers and displaying them on your website.
+      </p>
+      <p style="margin:0 0 0;color:#4b5563;font-size:15px;line-height:1.7;">
+        Create your first project to start receiving testimonials.
+      </p>
+    `,
+    buttonText: 'Go to Dashboard',
+    buttonUrl: 'https://opinafy.com/proyectos',
+  })
+}
+
+export function testimonialVerificationEmailEn(projectName: string, verificationUrl: string, authorName?: string): string {
+  return emailTemplate({
+    title: 'Verify Your Testimonial',
+    lang: 'en',
+    body: `
+      <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
+        Hi${authorName ? ` ${escapeHtml(authorName)}` : ''},
+      </p>
+      <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
+        Thank you for leaving your testimonial for <strong>${escapeHtml(projectName)}</strong>. To complete the process, please verify your email by clicking the button below:
+      </p>
+      <p style="margin:24px 0 0;color:#9ca3af;font-size:13px;line-height:1.5;">
+        If you did not leave a testimonial, you can safely ignore this email.
+      </p>
+    `,
+    buttonText: 'Verify Testimonial',
+    buttonUrl: verificationUrl,
+  })
+}
+
+export function testimonialApprovedEmailEn(projectName: string, authorName: string): string {
+  return emailTemplate({
+    title: 'Your Testimonial Has Been Approved',
+    lang: 'en',
+    body: `
+      <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
+        Hi ${escapeHtml(authorName)},
+      </p>
+      <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
+        Your testimonial for <strong>${escapeHtml(projectName)}</strong> has been approved and is now publicly visible. Thank you for sharing your experience.
+      </p>
+    `,
+  })
+}
+
+// ─── Locale-based template selector ─────────────────────────────────────────
+
+export function getEmailTemplates(locale: 'es' | 'en') {
+  if (locale === 'en') {
+    return {
+      ticketCreated: ticketCreatedEmailEn,
+      ticketReply: ticketReplyEmailEn,
+      ticketUserReply: ticketUserReplyEmailEn,
+      welcome: welcomeEmailEn,
+      testimonialVerification: testimonialVerificationEmailEn,
+      testimonialApproved: testimonialApprovedEmailEn,
+    }
+  }
+  return {
+    ticketCreated: ticketCreatedEmail,
+    ticketReply: ticketReplyEmail,
+    ticketUserReply: ticketUserReplyEmail,
+    welcome: welcomeEmail,
+    testimonialVerification: testimonialVerificationEmail,
+    testimonialApproved: testimonialApprovedEmail,
+  }
 }
 
 /**

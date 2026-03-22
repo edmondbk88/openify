@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { Resend } from 'resend'
-import { ticketReplyEmail } from '@/lib/email-templates'
+import { getEmailTemplates } from '@/lib/email-templates'
 
 function getResend() { return new Resend(process.env.RESEND_API_KEY) }
 
@@ -79,7 +79,7 @@ export async function POST(
   // Get ticket with user info
   const { data: ticket, error: ticketError } = await admin
     .from('support_tickets')
-    .select('*, profiles!support_tickets_user_id_fkey(email, full_name)')
+    .select('*, profiles!support_tickets_user_id_fkey(email, full_name, locale)')
     .eq('id', id)
     .single()
 
@@ -112,15 +112,20 @@ export async function POST(
   }
 
   // Send email notification to user
-  const profile = ticket.profiles as { email: string; full_name: string } | null
+  const profile = ticket.profiles as { email: string; full_name: string; locale?: string } | null
   if (profile?.email) {
+    const userLocale = (profile.locale === 'en' ? 'en' : 'es') as 'es' | 'en'
+    const templates = getEmailTemplates(userLocale)
+    const emailSubject = userLocale === 'en'
+      ? `Reply to your ticket: ${ticket.subject}`
+      : `Respuesta a tu ticket: ${ticket.subject}`
     try {
       await getResend().emails.send({
         from: 'Opinafy <hola@opinafy.com>',
         to: profile.email,
         replyTo: 'hola@opinafy.com',
-        subject: `Respuesta a tu ticket: ${ticket.subject}`,
-        html: ticketReplyEmail(ticket.subject, message, id),
+        subject: emailSubject,
+        html: templates.ticketReply(ticket.subject, message, id),
         headers: {
           'List-Unsubscribe': '<mailto:hola@opinafy.com?subject=unsubscribe>',
         },

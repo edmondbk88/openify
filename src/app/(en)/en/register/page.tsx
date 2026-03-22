@@ -26,6 +26,7 @@ export default function RegisterPageEn() {
         options: {
           data: {
             full_name: fullName,
+            locale: 'en',
           },
         },
       })

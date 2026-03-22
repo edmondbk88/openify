@@ -5,7 +5,7 @@ import { createClient } from '@/lib/supabase/client'
 import Sidebar from '@/components/dashboard/sidebar'
 
 interface DashboardShellProps {
-  user: { full_name: string | null; email: string; avatar_url: string | null; plan: string }
+  user: { full_name: string | null; email: string; avatar_url: string | null; plan: string; locale: 'es' | 'en' }
   children: React.ReactNode
 }
 

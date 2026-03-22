@@ -5,8 +5,9 @@ import { z } from 'zod'
 const profileUpdateSchema = z.object({
   full_name: z.string().min(2).max(100).optional(),
   bio: z.string().max(200).optional().nullable(),
-  website_url: z.string().url('URL inválida').optional().nullable().or(z.literal('')),
+  website_url: z.string().url('URL inv\u00e1lida').optional().nullable().or(z.literal('')),
   minisite_config: z.record(z.string(), z.unknown()).optional().nullable(),
+  locale: z.enum(['es', 'en']).optional(),
 })
 
 export async function PATCH(request: NextRequest) {
@@ -36,6 +37,9 @@ export async function PATCH(request: NextRequest) {
     }
     if (parsed.data.minisite_config !== undefined) {
       updateData.minisite_config = parsed.data.minisite_config
+    }
+    if (parsed.data.locale !== undefined) {
+      updateData.locale = parsed.data.locale
     }
 
     if (Object.keys(updateData).length === 0) {

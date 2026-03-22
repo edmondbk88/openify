@@ -6,7 +6,7 @@ import { PLAN_LIMITS } from '@/lib/constants'
 import { Plan } from '@/types'
 import { Resend } from 'resend'
 import { getVerificationLevel } from '@/lib/utils'
-import { testimonialVerificationEmail } from '@/lib/email-templates'
+import { getEmailTemplates } from '@/lib/email-templates'
 import { analyzeSentiment } from '@/lib/sentiment'
 
 function getResend() { return new Resend(process.env.RESEND_API_KEY) }
@@ -108,11 +108,12 @@ export async function POST(request: NextRequest) {
     // Check testimonial limit per plan
     const { data: profile } = await supabase
       .from('profiles')
-      .select('plan')
+      .select('plan, locale')
       .eq('id', project.user_id)
       .single()
 
     const plan = (profile?.plan as Plan) || 'free'
+    const ownerLocale = (profile?.locale === 'en' ? 'en' : 'es') as 'es' | 'en'
     const limits = PLAN_LIMITS[plan]
 
     const { count } = await supabase
@@ -178,12 +179,16 @@ export async function POST(request: NextRequest) {
       const verificationUrl = `https://opinafy.com/api/testimonials/verify?token=${testimonial.verification_token}&id=${testimonial.id}`
 
       try {
+        const templates = getEmailTemplates(ownerLocale)
+        const verifySubject = ownerLocale === 'en'
+          ? `Verify your testimonial for ${project.name}`
+          : `Verifica tu testimonio para ${project.name}`
         await getResend().emails.send({
           from: 'Opinafy <hola@opinafy.com>',
           to: parsed.data.author_email!,
           replyTo: 'hola@opinafy.com',
-          subject: `Verifica tu testimonio para ${project.name}`,
-          html: testimonialVerificationEmail(project.name as string, verificationUrl, parsed.data.author_name),
+          subject: verifySubject,
+          html: templates.testimonialVerification(project.name as string, verificationUrl, parsed.data.author_name),
           headers: {
             'List-Unsubscribe': '<mailto:hola@opinafy.com?subject=unsubscribe>',
           },

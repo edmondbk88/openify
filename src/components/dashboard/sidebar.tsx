@@ -5,18 +5,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
+import { t, type Locale } from '@/lib/i18n'
 
 interface SidebarProps {
-  user: { full_name: string | null; email: string; avatar_url: string | null; plan: string }
+  user: { full_name: string | null; email: string; avatar_url: string | null; plan: string; locale: Locale }
   onLogout: () => void
 }
 
-const planLabels: Record<string, string> = {
-  free: 'Gratuito',
-  minisite: 'Mini Sitio',
-  pro: 'Pro',
-  business: 'Business',
-}
 const planColors: Record<string, string> = {
   free: 'bg-gray-100 text-gray-600',
   minisite: 'bg-teal-100 text-teal-700',
@@ -24,9 +19,16 @@ const planColors: Record<string, string> = {
   business: 'bg-purple-100 text-purple-700',
 }
 
+const planLabelKeys: Record<string, string> = {
+  free: 'common.free',
+  minisite: 'common.minisite',
+  pro: 'common.pro',
+  business: 'common.business',
+}
+
 const navItems = [
   {
-    label: 'Dashboard',
+    labelKey: 'nav.dashboard',
     href: '/dashboard',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -35,7 +37,7 @@ const navItems = [
     ),
   },
   {
-    label: 'Proyectos',
+    labelKey: 'nav.projects',
     href: '/proyectos',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -44,7 +46,7 @@ const navItems = [
     ),
   },
   {
-    label: 'Mi Sitio',
+    labelKey: 'nav.mysite',
     href: '/mi-sitio',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -53,7 +55,7 @@ const navItems = [
     ),
   },
   {
-    label: 'Configuración',
+    labelKey: 'nav.settings',
     href: '/configuracion',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -63,7 +65,7 @@ const navItems = [
     ),
   },
   {
-    label: 'Facturación',
+    labelKey: 'nav.billing',
     href: '/facturacion',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -72,7 +74,7 @@ const navItems = [
     ),
   },
   {
-    label: 'Soporte',
+    labelKey: 'nav.support',
     href: '/soporte',
     icon: (
       <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -85,6 +87,7 @@ const navItems = [
 export default function Sidebar({ user, onLogout }: SidebarProps) {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const locale = user.locale || 'es'
 
   const initials = user.full_name
     ? user.full_name
@@ -104,11 +107,11 @@ export default function Sidebar({ user, onLogout }: SidebarProps) {
         </Link>
         <div className="flex flex-col items-end gap-1">
           <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold ${planColors[user.plan] || planColors.free}`}>
-            {planLabels[user.plan] || 'Gratuito'}
+            {t(planLabelKeys[user.plan] || 'common.free', locale)}
           </span>
           {(user.plan === 'free' || user.plan === 'minisite') && (
             <Link href="/facturacion" className="text-[10px] font-medium text-indigo-600 hover:text-indigo-700">
-              Mejorar plan
+              {t('common.upgradePlan', locale)}
             </Link>
           )}
         </div>
@@ -133,7 +136,7 @@ export default function Sidebar({ user, onLogout }: SidebarProps) {
               <span className={cn(isActive ? 'text-indigo-600' : 'text-gray-400')}>
                 {item.icon}
               </span>
-              {item.label}
+              {t(item.labelKey, locale)}
             </Link>
           )
         })}
@@ -171,7 +174,7 @@ export default function Sidebar({ user, onLogout }: SidebarProps) {
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
           </svg>
-          Cerrar sesión
+          {t('nav.logout', locale)}
         </button>
       </div>
     </div>
@@ -183,7 +186,7 @@ export default function Sidebar({ user, onLogout }: SidebarProps) {
       <button
         onClick={() => setMobileOpen(true)}
         className="fixed left-4 top-4 z-40 rounded-lg bg-white p-2 shadow-md lg:hidden"
-        aria-label="Abrir menú"
+        aria-label={locale === 'en' ? 'Open menu' : 'Abrir men\u00fa'}
       >
         <svg className="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -208,7 +211,7 @@ export default function Sidebar({ user, onLogout }: SidebarProps) {
         <button
           onClick={() => setMobileOpen(false)}
           className="absolute right-3 top-4 rounded-lg p-1 text-gray-400 hover:text-gray-600"
-          aria-label="Cerrar menú"
+          aria-label={locale === 'en' ? 'Close menu' : 'Cerrar men\u00fa'}
         >
           <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />

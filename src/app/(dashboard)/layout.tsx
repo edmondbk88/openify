@@ -24,7 +24,7 @@ export default async function DashboardLayout({
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('full_name, email, avatar_url, plan')
+    .select('full_name, email, avatar_url, plan, locale')
     .eq('id', user.id)
     .single()
 
@@ -33,6 +33,7 @@ export default async function DashboardLayout({
     email: profile?.email ?? user.email ?? '',
     avatar_url: profile?.avatar_url ?? null,
     plan: (profile?.plan ?? 'free') as string,
+    locale: (profile?.locale ?? 'es') as 'es' | 'en',
   }
 
   return <DashboardShell user={userInfo}>{children}</DashboardShell>
