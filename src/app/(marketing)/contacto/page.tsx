@@ -10,6 +10,11 @@ export const metadata: Metadata = {
     'Contacta con el equipo de Opinafy. Estamos aqui para ayudarte con cualquier duda sobre testimonios, widgets o tu cuenta.',
   alternates: {
     canonical: 'https://opinafy.com/contacto',
+    languages: {
+      'es': 'https://opinafy.com/contacto',
+      'en': 'https://opinafy.com/en/contact',
+      'x-default': 'https://opinafy.com/contacto',
+    },
   },
   openGraph: {
     title: 'Contacto - Opinafy',

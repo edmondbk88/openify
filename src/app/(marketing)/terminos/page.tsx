@@ -2,6 +2,14 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Términos y Condiciones - Opinafy',
+  alternates: {
+    canonical: 'https://opinafy.com/terminos',
+    languages: {
+      'es': 'https://opinafy.com/terminos',
+      'en': 'https://opinafy.com/en/legal/terms',
+      'x-default': 'https://opinafy.com/terminos',
+    },
+  },
 }
 
 export default function TerminosPage() {

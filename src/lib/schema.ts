@@ -24,7 +24,7 @@ export function organizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
-      availableLanguage: ['Spanish'],
+      availableLanguage: ['Spanish', 'English'],
     },
   }
 }

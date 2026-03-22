@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     languages: {
       'es': 'https://opinafy.com/precios',
       'en': 'https://opinafy.com/en/pricing',
+      'x-default': 'https://opinafy.com/precios',
     },
   },
   openGraph: {

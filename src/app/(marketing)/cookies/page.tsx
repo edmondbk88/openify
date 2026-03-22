@@ -2,6 +2,14 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Política de Cookies - Opinafy',
+  alternates: {
+    canonical: 'https://opinafy.com/cookies',
+    languages: {
+      'es': 'https://opinafy.com/cookies',
+      'en': 'https://opinafy.com/en/legal/cookies',
+      'x-default': 'https://opinafy.com/cookies',
+    },
+  },
 }
 
 export default function CookiesPage() {

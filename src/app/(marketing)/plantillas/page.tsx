@@ -39,6 +39,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://opinafy.com/plantillas',
+    languages: {
+      'es': 'https://opinafy.com/plantillas',
+      'en': 'https://opinafy.com/en/templates',
+      'x-default': 'https://opinafy.com/plantillas',
+    },
   },
   robots: {
     index: true,

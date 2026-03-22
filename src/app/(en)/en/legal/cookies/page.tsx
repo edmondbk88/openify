@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     languages: {
       'es': 'https://opinafy.com/cookies',
       'en': 'https://opinafy.com/en/legal/cookies',
+      'x-default': 'https://opinafy.com/cookies',
     },
   },
   openGraph: {

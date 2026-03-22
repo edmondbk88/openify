@@ -2,6 +2,14 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Política de Privacidad - Opinafy',
+  alternates: {
+    canonical: 'https://opinafy.com/privacidad',
+    languages: {
+      'es': 'https://opinafy.com/privacidad',
+      'en': 'https://opinafy.com/en/legal/privacy',
+      'x-default': 'https://opinafy.com/privacidad',
+    },
+  },
 }
 
 export default function PrivacidadPage() {

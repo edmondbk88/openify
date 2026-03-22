@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://opinafy.com/comparar',
+    languages: {
+      'es': 'https://opinafy.com/comparar',
+      'en': 'https://opinafy.com/en/compare',
+      'x-default': 'https://opinafy.com/comparar',
+    },
   },
   openGraph: {
     title: 'Comparativas de herramientas de testimonios 2026 | Opinafy',

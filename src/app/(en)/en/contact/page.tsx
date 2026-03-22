@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     languages: {
       'es': 'https://opinafy.com/contacto',
       'en': 'https://opinafy.com/en/contact',
+      'x-default': 'https://opinafy.com/contacto',
     },
   },
   openGraph: {

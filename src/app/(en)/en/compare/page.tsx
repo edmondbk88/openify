@@ -18,8 +18,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://opinafy.com/en/compare',
     languages: {
-      es: 'https://opinafy.com/comparar',
-      en: 'https://opinafy.com/en/compare',
+      'es': 'https://opinafy.com/comparar',
+      'en': 'https://opinafy.com/en/compare',
+      'x-default': 'https://opinafy.com/comparar',
     },
   },
   openGraph: {

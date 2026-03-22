@@ -17,6 +17,11 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: 'https://opinafy.com/en/testimonials-for',
+    languages: {
+      'es': 'https://opinafy.com/testimonios-para',
+      'en': 'https://opinafy.com/en/testimonials-for',
+      'x-default': 'https://opinafy.com/testimonios-para',
+    },
   },
   openGraph: {
     title: 'Testimonials by Industry | Opinafy',

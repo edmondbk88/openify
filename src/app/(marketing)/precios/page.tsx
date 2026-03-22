@@ -13,6 +13,11 @@ export const metadata: Metadata = {
     'Consulta los planes y precios de Opinafy. Empieza gratis y escala según tus necesidades. Planes flexibles para autónomos, pequeñas empresas y agencias.',
   alternates: {
     canonical: 'https://opinafy.com/precios',
+    languages: {
+      'es': 'https://opinafy.com/precios',
+      'en': 'https://opinafy.com/en/pricing',
+      'x-default': 'https://opinafy.com/precios',
+    },
   },
   openGraph: {
     title: 'Precios - Opinafy',

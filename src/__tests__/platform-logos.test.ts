@@ -2,7 +2,7 @@ import { PLATFORMS, IMPORTABLE_PLATFORMS, getPlatform } from '@/lib/platform-log
 
 describe('PLATFORMS', () => {
   it('all platforms have name, color, and icon', () => {
-    for (const [key, platform] of Object.entries(PLATFORMS)) {
+    for (const [, platform] of Object.entries(PLATFORMS)) {
       expect(platform.name).toBeTruthy()
       expect(typeof platform.name).toBe('string')
       expect(platform.color).toMatch(/^#[0-9A-Fa-f]{6}$/)

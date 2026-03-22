@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     languages: {
       'es': 'https://opinafy.com/privacidad',
       'en': 'https://opinafy.com/en/legal/privacy',
+      'x-default': 'https://opinafy.com/privacidad',
     },
   },
   openGraph: {

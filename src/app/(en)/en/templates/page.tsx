@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     languages: {
       'es': 'https://opinafy.com/plantillas',
       'en': 'https://opinafy.com/en/templates',
+      'x-default': 'https://opinafy.com/plantillas',
     },
   },
   openGraph: {

@@ -36,8 +36,9 @@ export async function generateMetadata({
     alternates: {
       canonical,
       languages: {
-        es: 'https://opinafy.com/blog',
-        en: 'https://opinafy.com/en/blog',
+        'es': 'https://opinafy.com/blog',
+        'en': 'https://opinafy.com/en/blog',
+        'x-default': 'https://opinafy.com/blog',
       },
     },
     openGraph: {

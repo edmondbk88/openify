@@ -47,6 +47,7 @@ export const metadata: Metadata = {
     languages: {
       'es': 'https://opinafy.com',
       'en': 'https://opinafy.com/en',
+      'x-default': 'https://opinafy.com',
     },
   },
   robots: {
