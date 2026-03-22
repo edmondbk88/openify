@@ -81,6 +81,8 @@ export async function GET(
     html, body { width: 100%; min-height: 100%; }
     body { font-family: system-ui, -apple-system, sans-serif; padding: 8px; }
     #opinafy-widget { width: 100%; }
+    /* Override fixed positioning for popup in preview mode */
+    #opinafy-widget .opinafy-popup { position: relative !important; bottom: auto !important; left: auto !important; }
   </style>
 </head>
 <body>

@@ -30,6 +30,13 @@ export default function LoginPageEn() {
         return
       }
 
+      // Set locale to English since user logged in from English page
+      await fetch('/api/profile', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ locale: 'en' }),
+      }).catch(() => {})
+
       router.push('/dashboard')
     } catch {
       setError('An unexpected error occurred. Please try again.')

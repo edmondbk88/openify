@@ -248,18 +248,30 @@ import { renderWidget, WidgetData } from './templates';
   }
 
   // ── Popup interactivity ──
-  function initPopup(shadowRoot: ShadowRoot): void {
+  function initPopup(shadowRoot: ShadowRoot, isPreview = false): void {
     const popup = shadowRoot.querySelector('.opinafy-popup') as HTMLElement | null;
     if (!popup) return;
 
-    // Check if user dismissed in this session
+    // In preview mode: make popup relative so it's visible in the iframe
+    if (isPreview) {
+      popup.style.position = 'relative';
+      popup.style.bottom = 'auto';
+      popup.style.left = 'auto';
+      popup.style.maxWidth = '100%';
+      popup.style.pointerEvents = 'auto';
+    }
+
     const STORAGE_KEY = 'opinafy-popup-dismissed';
-    try {
-      if (sessionStorage.getItem(STORAGE_KEY) === '1') {
-        popup.style.display = 'none';
-        return;
-      }
-    } catch { /* sessionStorage may not be available */ }
+
+    // Check if user dismissed in this session (skip in preview)
+    if (!isPreview) {
+      try {
+        if (sessionStorage.getItem(STORAGE_KEY) === '1') {
+          popup.style.display = 'none';
+          return;
+        }
+      } catch { /* sessionStorage may not be available */ }
+    }
 
     const count = parseInt(popup.getAttribute('data-popup-count') || '0', 10);
     if (count === 0) return;
@@ -332,15 +344,18 @@ import { renderWidget, WidgetData } from './templates';
       }
     });
 
-    // Initially hide all, then show after 3s delay
+    // Initially hide all, then show after delay (instant in preview)
     const items = getAllItems();
     items.forEach(item => { item.style.display = 'none'; });
 
+    const delay = isPreview ? 0 : 3000;
     setTimeout(() => {
       showItem(0);
-      scheduleAutoHide();
-      startCycle();
-    }, 3000);
+      if (!isPreview) {
+        scheduleAutoHide();
+        startCycle();
+      }
+    }, delay);
   }
 
   // ── Initialize a single widget element ──
@@ -371,9 +386,11 @@ import { renderWidget, WidgetData } from './templates';
     try {
       // Check for pre-loaded data via global variable (used in preview mode)
       let data: WidgetData;
+      let isPreviewMode = false;
       const w = window as unknown as Record<string, unknown>;
       if (w.__OPINAFY_PRELOAD__ && typeof w.__OPINAFY_PRELOAD__ === 'object') {
         data = w.__OPINAFY_PRELOAD__ as WidgetData;
+        isPreviewMode = true;
         // Clear it so it's only used once
         delete w.__OPINAFY_PRELOAD__;
       } else {
@@ -396,7 +413,7 @@ import { renderWidget, WidgetData } from './templates';
 
       // Init popup interactivity if applicable
       if (data.config?.layout === 'popup') {
-        initPopup(shadow);
+        initPopup(shadow, isPreviewMode);
       }
 
       // Init click tracking on cards
