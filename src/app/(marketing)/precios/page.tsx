@@ -5,7 +5,7 @@ import { Navbar } from '@/components/landing/navbar'
 import { Pricing } from '@/components/landing/pricing'
 import { Faq } from '@/components/landing/faq'
 import { Footer } from '@/components/landing/footer'
-import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
+import { webPageSchema, breadcrumbSchema, faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Precios - Opinafy',
@@ -51,6 +51,34 @@ export default function PreciosPage() {
     { name: 'Precios', url: 'https://opinafy.com/precios' },
   ])
 
+  const pricingFaqJsonLd = faqPageSchema([
+    {
+      question: '¿Puedo cambiar de plan en cualquier momento?',
+      answer:
+        'Sí, puedes actualizar o reducir tu plan en cualquier momento desde tu panel de control. Si actualizas, el cambio se aplica inmediatamente y se prorratea el coste. Si reduces tu plan, el cambio se aplicará al inicio del siguiente ciclo de facturación.',
+    },
+    {
+      question: '¿Qué métodos de pago aceptan?',
+      answer:
+        'Aceptamos todas las tarjetas de crédito y débito principales (Visa, Mastercard, American Express). Los pagos se procesan de forma segura a través de Stripe. No almacenamos datos de tarjetas en nuestros servidores.',
+    },
+    {
+      question: '¿Hay descuento por pago anual?',
+      answer:
+        'Sí, ofrecemos un descuento del 20% en todos los planes si eliges facturación anual. Esto significa que el plan Pro pasa de 9€/mes a 7,20€/mes y el plan Business de 19€/mes a 15,20€/mes. Puedes cambiar entre facturación mensual y anual en cualquier momento.',
+    },
+    {
+      question: '¿Qué pasa si supero el límite de testimonios del plan gratuito?',
+      answer:
+        'Si alcanzas el límite de 10 testimonios en el plan gratuito, los testimonios existentes seguirán mostrándose con normalidad, pero no podrás añadir nuevos hasta que actualices a un plan de pago. Tus datos nunca se eliminan.',
+    },
+    {
+      question: '¿Puedo cancelar mi suscripción en cualquier momento?',
+      answer:
+        'Por supuesto. Puedes cancelar tu suscripción en cualquier momento sin penalizaciones. Seguirás teniendo acceso a las funciones de tu plan hasta el final del periodo de facturación actual. Después, tu cuenta pasará automáticamente al plan gratuito.',
+    },
+  ])
+
   return (
     <>
       <script
@@ -60,6 +88,10 @@ export default function PreciosPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqJsonLd) }}
       />
       <Navbar />
       <div className="pt-16">

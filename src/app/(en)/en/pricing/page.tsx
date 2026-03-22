@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
-import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
+import { webPageSchema, breadcrumbSchema, faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Pricing - Opinafy',
@@ -160,6 +160,34 @@ export default function PricingPageEn() {
     { name: 'Pricing', url: 'https://opinafy.com/en/pricing' },
   ])
 
+  const pricingFaqJsonLd = faqPageSchema([
+    {
+      question: 'Can I change plans at any time?',
+      answer:
+        'Yes, you can upgrade or downgrade your plan at any time from your dashboard. If you upgrade, the change takes effect immediately and the cost is prorated. If you downgrade, the change will apply at the beginning of the next billing cycle.',
+    },
+    {
+      question: 'What payment methods do you accept?',
+      answer:
+        'We accept all major credit and debit cards (Visa, Mastercard, American Express). Payments are processed securely through Stripe. We do not store card data on our servers.',
+    },
+    {
+      question: 'Is there a discount for annual billing?',
+      answer:
+        'Yes, we offer a 20% discount on all plans if you choose annual billing. This means the Pro plan goes from EUR 9/mo to EUR 7.20/mo and the Business plan from EUR 19/mo to EUR 15.20/mo. You can switch between monthly and annual billing at any time.',
+    },
+    {
+      question: 'What happens if I exceed the free plan testimonial limit?',
+      answer:
+        'If you reach the 10-testimonial limit on the free plan, your existing testimonials will continue to display normally, but you won\'t be able to add new ones until you upgrade to a paid plan. Your data is never deleted.',
+    },
+    {
+      question: 'Can I cancel my subscription at any time?',
+      answer:
+        'Absolutely. You can cancel your subscription at any time without penalties. You will continue to have access to your plan features until the end of the current billing period. After that, your account will automatically switch to the free plan.',
+    },
+  ])
+
   return (
     <>
       <script
@@ -169,6 +197,10 @@ export default function PricingPageEn() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingFaqJsonLd) }}
       />
       <NavbarEn />
       <div className="pt-16">

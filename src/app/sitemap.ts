@@ -10,153 +10,194 @@ import { createAdminClient } from '@/lib/supabase/admin'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://opinafy.com'
 
+  // Fixed date for content that doesn't change often (industry pages, templates, etc.)
+  const contentCreatedDate = new Date('2026-03-18')
+
+  // Helper to create bilingual alternates
+  const bilingual = (esPath: string, enPath: string) => ({
+    languages: {
+      es: `${baseUrl}${esPath}`,
+      en: `${baseUrl}${enPath}`,
+      'x-default': `${baseUrl}${esPath}`,
+    },
+  })
+
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
+      alternates: bilingual('', '/en'),
     },
     {
       url: `${baseUrl}/precios`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+      alternates: bilingual('/precios', '/en/pricing'),
     },
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.9,
+      alternates: bilingual('/blog', '/en/blog'),
     },
     {
       url: `${baseUrl}/plantillas`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+      alternates: bilingual('/plantillas', '/en/templates'),
     },
     {
       url: `${baseUrl}/legal`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.2,
+      alternates: bilingual('/legal', '/en/legal'),
     },
     {
       url: `${baseUrl}/privacidad`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.2,
+      alternates: bilingual('/privacidad', '/en/legal/privacy'),
     },
     {
       url: `${baseUrl}/terminos`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.2,
+      alternates: bilingual('/terminos', '/en/legal/terms'),
     },
     {
       url: `${baseUrl}/cookies`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.2,
+      alternates: bilingual('/cookies', '/en/legal/cookies'),
     },
     {
       url: `${baseUrl}/caracteristicas`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
+      alternates: bilingual('/caracteristicas', '/en/features'),
     },
     {
       url: `${baseUrl}/contacto`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.4,
+      alternates: bilingual('/contacto', '/en/contact'),
     },
     {
       url: `${baseUrl}/comparar`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+      alternates: bilingual('/comparar', '/en/compare'),
     },
     {
       url: `${baseUrl}/comparar/opinafy-vs-testimonial-to`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/comparar/opinafy-vs-testimonial-to', '/en/compare/opinafy-vs-testimonial-to'),
     },
     {
       url: `${baseUrl}/comparar/opinafy-vs-senja`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/comparar/opinafy-vs-senja', '/en/compare/opinafy-vs-senja'),
     },
     {
       url: `${baseUrl}/comparar/mejores-herramientas-testimonios`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/comparar/mejores-herramientas-testimonios', '/en/compare/best-testimonial-tools'),
     },
     {
       url: `${baseUrl}/descargas`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+      alternates: bilingual('/descargas', '/en/downloads'),
     },
     {
       url: `${baseUrl}/guias`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+      alternates: bilingual('/guias', '/en/guides'),
     },
     {
       url: `${baseUrl}/guias/wordpress`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/guias/wordpress', '/en/guides/wordpress'),
     },
     {
       url: `${baseUrl}/guias/shopify`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/guias/shopify', '/en/guides/shopify'),
     },
     {
       url: `${baseUrl}/guias/wix`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/guias/wix', '/en/guides/wix'),
     },
     {
       url: `${baseUrl}/guias/squarespace`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/guias/squarespace', '/en/guides/squarespace'),
     },
     {
       url: `${baseUrl}/guias/webflow`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/guias/webflow', '/en/guides/webflow'),
     },
     {
       url: `${baseUrl}/guias/google-tag-manager`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/guias/google-tag-manager', '/en/guides/google-tag-manager'),
     },
   ]
 
+  // Blog pages with article.date for lastmod and hreflang alternates
+  // ES and EN blog articles share the same slugs
+  const blogSlugsEn = new Set(blogArticlesEn.map((a) => a.slug))
   const blogPages: MetadataRoute.Sitemap = blogArticles.map((article) => ({
     url: `${baseUrl}/blog/${article.slug}`,
     lastModified: new Date(article.date),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
+    ...(blogSlugsEn.has(article.slug)
+      ? { alternates: bilingual(`/blog/${article.slug}`, `/en/blog/${article.slug}`) }
+      : {}),
   }))
 
   const templatePages: MetadataRoute.Sitemap = widgetTemplates.map((template) => ({
     url: `${baseUrl}/plantillas/${template.id}`,
-    lastModified: new Date(),
+    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
+    alternates: bilingual(`/plantillas/${template.id}`, `/en/templates/${template.id}`),
   }))
 
   const miniSiteTemplateIndexPage: MetadataRoute.Sitemap = [
@@ -165,14 +206,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+      alternates: bilingual('/plantillas-minisitio', '/en/minisite-templates'),
     },
   ]
 
   const miniSiteTemplatePages: MetadataRoute.Sitemap = miniSiteTemplates.map((template) => ({
     url: `${baseUrl}/plantillas-minisitio/${template.id}`,
-    lastModified: new Date(),
+    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
+    alternates: bilingual(`/plantillas-minisitio/${template.id}`, `/en/minisite-templates/${template.id}`),
   }))
 
   const industryIndexPage: MetadataRoute.Sitemap = [
@@ -181,107 +224,128 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+      alternates: bilingual('/testimonios-para', '/en/testimonials-for'),
     },
   ]
 
+  // Industry pages share the same slugs between ES and EN
+  const industrySlugsEn = new Set(industriesEn.map((i) => i.slug))
   const industryPages: MetadataRoute.Sitemap = industries.map((industry) => ({
     url: `${baseUrl}/testimonios-para/${industry.slug}`,
-    lastModified: new Date(),
+    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
+    ...(industrySlugsEn.has(industry.slug)
+      ? { alternates: bilingual(`/testimonios-para/${industry.slug}`, `/en/testimonials-for/${industry.slug}`) }
+      : {}),
   }))
 
-  // English static pages
+  // English static pages (with alternates pointing back to ES)
   const englishPages: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/en`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
+      alternates: bilingual('', '/en'),
     },
     {
       url: `${baseUrl}/en/pricing`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/precios', '/en/pricing'),
     },
     {
       url: `${baseUrl}/en/blog`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.7,
+      alternates: bilingual('/blog', '/en/blog'),
     },
     {
       url: `${baseUrl}/en/templates`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
+      alternates: bilingual('/plantillas', '/en/templates'),
     },
     {
       url: `${baseUrl}/en/features`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
+      alternates: bilingual('/caracteristicas', '/en/features'),
     },
     {
       url: `${baseUrl}/en/contact`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
+      alternates: bilingual('/contacto', '/en/contact'),
     },
     {
       url: `${baseUrl}/en/legal`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.2,
+      alternates: bilingual('/legal', '/en/legal'),
     },
     {
       url: `${baseUrl}/en/legal/privacy`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.2,
+      alternates: bilingual('/privacidad', '/en/legal/privacy'),
     },
     {
       url: `${baseUrl}/en/legal/terms`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.2,
+      alternates: bilingual('/terminos', '/en/legal/terms'),
     },
     {
       url: `${baseUrl}/en/legal/cookies`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.2,
+      alternates: bilingual('/cookies', '/en/legal/cookies'),
     },
     {
       url: `${baseUrl}/en/compare`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/comparar', '/en/compare'),
     },
     {
       url: `${baseUrl}/en/compare/opinafy-vs-testimonial-to`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+      alternates: bilingual('/comparar/opinafy-vs-testimonial-to', '/en/compare/opinafy-vs-testimonial-to'),
     },
     {
       url: `${baseUrl}/en/compare/opinafy-vs-senja`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+      alternates: bilingual('/comparar/opinafy-vs-senja', '/en/compare/opinafy-vs-senja'),
     },
     {
       url: `${baseUrl}/en/compare/best-testimonial-tools`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+      alternates: bilingual('/comparar/mejores-herramientas-testimonios', '/en/compare/best-testimonial-tools'),
     },
     {
       url: `${baseUrl}/en/minisite-templates`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
+      alternates: bilingual('/plantillas-minisitio', '/en/minisite-templates'),
     },
     {
       url: `${baseUrl}/en/login`,
@@ -300,48 +364,56 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/descargas', '/en/downloads'),
     },
     {
       url: `${baseUrl}/en/guides`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
+      alternates: bilingual('/guias', '/en/guides'),
     },
     {
       url: `${baseUrl}/en/guides/wordpress`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+      alternates: bilingual('/guias/wordpress', '/en/guides/wordpress'),
     },
     {
       url: `${baseUrl}/en/guides/shopify`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+      alternates: bilingual('/guias/shopify', '/en/guides/shopify'),
     },
     {
       url: `${baseUrl}/en/guides/wix`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+      alternates: bilingual('/guias/wix', '/en/guides/wix'),
     },
     {
       url: `${baseUrl}/en/guides/squarespace`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+      alternates: bilingual('/guias/squarespace', '/en/guides/squarespace'),
     },
     {
       url: `${baseUrl}/en/guides/webflow`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+      alternates: bilingual('/guias/webflow', '/en/guides/webflow'),
     },
     {
       url: `${baseUrl}/en/guides/google-tag-manager`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
+      alternates: bilingual('/guias/google-tag-manager', '/en/guides/google-tag-manager'),
     },
   ]
 
@@ -351,35 +423,46 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
+      alternates: bilingual('/testimonios-para', '/en/testimonials-for'),
     },
   ]
 
+  const industrySlugsEs = new Set(industries.map((i) => i.slug))
   const englishIndustryPages: MetadataRoute.Sitemap = industriesEn.map((industry) => ({
     url: `${baseUrl}/en/testimonials-for/${industry.slug}`,
-    lastModified: new Date(),
+    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
+    ...(industrySlugsEs.has(industry.slug)
+      ? { alternates: bilingual(`/testimonios-para/${industry.slug}`, `/en/testimonials-for/${industry.slug}`) }
+      : {}),
   }))
 
+  const blogSlugsEs = new Set(blogArticles.map((a) => a.slug))
   const englishBlogPages: MetadataRoute.Sitemap = blogArticlesEn.map((article) => ({
     url: `${baseUrl}/en/blog/${article.slug}`,
     lastModified: new Date(article.date),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
+    ...(blogSlugsEs.has(article.slug)
+      ? { alternates: bilingual(`/blog/${article.slug}`, `/en/blog/${article.slug}`) }
+      : {}),
   }))
 
   const englishTemplatePages: MetadataRoute.Sitemap = widgetTemplates.map((template) => ({
     url: `${baseUrl}/en/templates/${template.id}`,
-    lastModified: new Date(),
+    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.5,
+    alternates: bilingual(`/plantillas/${template.id}`, `/en/templates/${template.id}`),
   }))
 
   const englishMiniSiteTemplatePages: MetadataRoute.Sitemap = miniSiteTemplates.map((template) => ({
     url: `${baseUrl}/en/minisite-templates/${template.id}`,
-    lastModified: new Date(),
+    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.5,
+    alternates: bilingual(`/plantillas-minisitio/${template.id}`, `/en/minisite-templates/${template.id}`),
   }))
 
   // Dynamic profile pages (Pro/Business users with mini sites)

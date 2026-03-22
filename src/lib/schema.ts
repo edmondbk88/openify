@@ -251,7 +251,25 @@ export function faqSchema() {
 }
 
 // ──────────────────────────────────────────────
-// 8. Article -- improved version with image support
+// 8. FAQPage (custom) -- for any page with FAQ content
+// ──────────────────────────────────────────────
+export function faqPageSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+}
+
+// ──────────────────────────────────────────────
+// 9. Article -- improved version with image support
 // ──────────────────────────────────────────────
 export function articleSchema(opts: {
   title: string
