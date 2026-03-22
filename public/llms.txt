@@ -22,7 +22,7 @@ Opinafy is the first Spanish-native platform for collecting, managing, and displ
 - Homepage: https://opinafy.com
 - Blog: https://opinafy.com/blog (80 articles about testimonials and social proof)
 - Templates: https://opinafy.com/plantillas (60 widget designs)
-- Industries: https://opinafy.com/testimonios-para (80 industry-specific pages)
+- Industries: https://opinafy.com/testimonios-para (130 industry-specific pages)
 - Pricing: https://opinafy.com/precios
 - Comparisons: https://opinafy.com/comparar
 
