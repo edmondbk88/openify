@@ -1,0 +1,29 @@
+{% comment %}
+  Opinafy Testimonials Widget
+  Add this snippet to your theme's product page, homepage, or any section.
+  Replace YOUR_PROJECT_ID with your Opinafy project ID.
+{% endcomment %}
+
+{% assign opinafy_project_id = section.settings.project_id | default: 'YOUR_PROJECT_ID' %}
+
+<div id="opinafy-widget" data-project="{{ opinafy_project_id }}"></div>
+<script src="https://opinafy.com/widget.js" defer></script>
+
+{% schema %}
+{
+  "name": "Opinafy Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "project_id",
+      "label": "Opinafy Project ID",
+      "info": "Find your Project ID in your Opinafy dashboard"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Opinafy Testimonials"
+    }
+  ]
+}
+{% endschema %}

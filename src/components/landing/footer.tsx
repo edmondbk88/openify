@@ -10,6 +10,7 @@ const productLinks = [
   { label: 'Comparativas', href: '/comparar' },
   { label: 'Industrias', href: '/testimonios-para' },
   { label: 'Guias', href: '/guias' },
+  { label: 'Descargas', href: '/descargas' },
 ]
 
 const legalLinks = [
