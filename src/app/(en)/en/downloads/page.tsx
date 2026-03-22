@@ -150,6 +150,73 @@ export default function DownloadsPage() {
               </div>
             </div>
 
+            {/* WooCommerce */}
+            <div className="rounded-2xl bg-white p-8 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-purple-50">
+                  <svg
+                    className="h-8 w-8 text-purple-600"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M2.3 5.4C1.9 5.6 1.6 6 1.5 6.5L.1 13.4c-.3 1.2.5 2.4 1.7 2.6.1 0 .2 0 .4 0 1.1 0 2-.8 2.2-1.9l.8-4.2 1.3 5.1c.2.8.9 1.3 1.7 1.3.7 0 1.4-.5 1.6-1.2l2-5.7-.3 4.7c-.1 1.2.8 2.2 2 2.3h.1c1.1 0 2.1-.9 2.2-2l.5-7.5c.1-1.2-.7-2.3-1.9-2.5-.1 0-.3 0-.4 0-1 0-1.8.6-2.1 1.5l-1.8 5.1-1-4.1c-.2-.9-1-1.6-2-1.6-.8 0-1.6.5-1.9 1.3L3.5 11l-.3-4.1c-.1-.7-.5-1.2-.9-1.5zM20.8 5c-1.5 0-2.8 1-3.1 2.5l-.8 4.3c-.4 2 .9 3.9 2.8 4.3.2 0 .4.1.6.1 1.5 0 2.8-1 3.1-2.5l.8-4.3c.4-2-.9-3.9-2.8-4.3-.2-.1-.4-.1-.6-.1z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h2 className="text-2xl font-bold text-gray-900">
+                      WooCommerce
+                    </h2>
+                    <span className="rounded-full bg-purple-100 px-3 py-0.5 text-xs font-medium text-purple-700">
+                      Extension
+                    </span>
+                  </div>
+                  <p className="mt-2 text-gray-600">
+                    WooCommerce extension that automatically displays testimonials on product pages.
+                    Supports global or per-product Project ID.
+                  </p>
+
+                  <div className="mt-6">
+                    <a
+                      href="/downloads/opinafy-woocommerce.zip"
+                      className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"
+                    >
+                      <svg
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                        />
+                      </svg>
+                      Download extension v1.0.0
+                    </a>
+                  </div>
+
+                  <div className="mt-6 rounded-lg bg-gray-50 p-4">
+                    <h3 className="text-sm font-semibold text-gray-900">
+                      Installation:
+                    </h3>
+                    <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
+                      <li>Requires the main Opinafy WordPress plugin (download above).</li>
+                      <li>Download the WooCommerce ZIP file.</li>
+                      <li>
+                        In WordPress, go to{' '}
+                        <strong>Plugins &rarr; Add New &rarr; Upload Plugin</strong>.
+                      </li>
+                      <li>Upload the ZIP and activate the plugin.</li>
+                      <li>Testimonials will automatically appear on product pages.</li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Shopify */}
             <div className="rounded-2xl bg-white p-8 shadow-sm">
               <div className="flex items-start gap-4">
@@ -342,6 +409,189 @@ export default function DownloadsPage() {
                       className="text-indigo-600 hover:underline"
                     >
                       complete Squarespace guide
+                    </Link>{' '}
+                    for more details.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* PrestaShop */}
+            <div className="rounded-2xl bg-white p-8 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-pink-50">
+                  <svg
+                    className="h-8 w-8 text-pink-600"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M9.8 13.4V9.2c0-.5.4-.9.9-.9h2.6c.5 0 .9.4.9.9v4.2c0 .5-.4.9-.9.9h-2.6c-.5 0-.9-.4-.9-.9zm-4.5-1.8c0-3.7 3-6.6 6.7-6.6s6.7 3 6.7 6.6c0 3.7-3 6.6-6.7 6.6s-6.7-2.9-6.7-6.6zM12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h2 className="text-2xl font-bold text-gray-900">
+                      PrestaShop
+                    </h2>
+                    <span className="rounded-full bg-pink-100 px-3 py-0.5 text-xs font-medium text-pink-700">
+                      Module
+                    </span>
+                  </div>
+                  <p className="mt-2 text-gray-600">
+                    Official module for PrestaShop. Configure your Project ID from the back office
+                    and testimonials appear automatically in your store&apos;s footer.
+                  </p>
+
+                  <div className="mt-6">
+                    <a
+                      href="/downloads/opinafy-prestashop.zip"
+                      className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-indigo-700"
+                    >
+                      <svg
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+                        />
+                      </svg>
+                      Download module v1.0.0
+                    </a>
+                  </div>
+
+                  <div className="mt-6 rounded-lg bg-gray-50 p-4">
+                    <h3 className="text-sm font-semibold text-gray-900">
+                      Installation:
+                    </h3>
+                    <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
+                      <li>Download the ZIP file.</li>
+                      <li>
+                        In PrestaShop, go to{' '}
+                        <strong>Modules &rarr; Module Manager &rarr; Upload Module</strong>.
+                      </li>
+                      <li>Upload the ZIP and install the module.</li>
+                      <li>
+                        Click <strong>Configure</strong> and paste your Project ID.
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Webflow */}
+            <div className="rounded-2xl bg-white p-8 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-blue-50">
+                  <svg
+                    className="h-8 w-8 text-blue-600"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path d="M17.802 8.56l-1.986 6.496-1.95-6.46a.544.544 0 00-.526-.39.544.544 0 00-.525.39l-1.95 6.46L8.88 8.56a2.158 2.158 0 00-2.07-1.56 2.158 2.158 0 00-2.07 1.56L2 18h3.18l1.95-6.46 1.95 6.46c.072.234.288.39.526.39.24 0 .456-.156.526-.39l1.95-6.46L14.032 18h3.18l-2.742-9.44a2.158 2.158 0 00-2.07-1.56 2.158 2.158 0 00-2.07 1.56z" />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-gray-900">Webflow</h2>
+                  <p className="mt-2 text-gray-600">
+                    Integrate Opinafy into your Webflow site using project custom code,
+                    page-specific code, or Embed elements.
+                  </p>
+
+                  <div className="mt-6 rounded-lg bg-gray-50 p-4">
+                    <h3 className="text-sm font-semibold text-gray-900">
+                      Quick install:
+                    </h3>
+                    <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
+                      <li>
+                        Go to <strong>Project Settings &rarr; Custom Code</strong>.
+                      </li>
+                      <li>
+                        Paste the Opinafy code in the <strong>Footer Code</strong> field.
+                      </li>
+                      <li>
+                        Or use an <strong>Embed</strong> element for exact positioning.
+                      </li>
+                    </ol>
+                    <div className="mt-3 rounded-lg border border-gray-200 bg-gray-900 p-4">
+                      <pre className="overflow-x-auto text-sm text-green-400">
+                        <code>{embedCode}</code>
+                      </pre>
+                    </div>
+                  </div>
+
+                  <p className="mt-4 text-sm text-gray-500">
+                    Check our{' '}
+                    <Link
+                      href="/en/guides/webflow"
+                      className="text-indigo-600 hover:underline"
+                    >
+                      complete Webflow guide
+                    </Link>{' '}
+                    for more details.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Google Tag Manager */}
+            <div className="rounded-2xl bg-white p-8 shadow-sm">
+              <div className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-orange-50">
+                  <svg
+                    className="h-8 w-8 text-orange-600"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 6h.008v.008H6V6z"
+                    />
+                  </svg>
+                </div>
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Google Tag Manager
+                  </h2>
+                  <p className="mt-2 text-gray-600">
+                    Install the Opinafy widget via Google Tag Manager.
+                    Ideal if you already use GTM to manage your site scripts.
+                  </p>
+
+                  <div className="mt-6 rounded-lg bg-gray-50 p-4">
+                    <h3 className="text-sm font-semibold text-gray-900">
+                      Quick install:
+                    </h3>
+                    <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
+                      <li>
+                        In GTM, create a new <strong>Custom HTML</strong> tag.
+                      </li>
+                      <li>Paste the Opinafy code.</li>
+                      <li>Set the trigger (All Pages or specific pages).</li>
+                      <li>Publish the changes.</li>
+                    </ol>
+                  </div>
+
+                  <p className="mt-4 text-sm text-gray-500">
+                    Check our{' '}
+                    <Link
+                      href="/en/guides/google-tag-manager"
+                      className="text-indigo-600 hover:underline"
+                    >
+                      complete Google Tag Manager guide
                     </Link>{' '}
                     for more details.
                   </p>

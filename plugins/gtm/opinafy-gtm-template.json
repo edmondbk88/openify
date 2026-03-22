@@ -1,0 +1,24 @@
+{
+  "templateName": "Opinafy Testimonials Widget",
+  "description": "Add Opinafy testimonial widget to your site via Google Tag Manager",
+  "html": "<div id=\"opinafy-widget\" data-project=\"{{projectId}}\"></div>\n<script src=\"https://opinafy.com/widget.js\" defer></script>",
+  "parameters": [
+    {
+      "name": "projectId",
+      "displayName": "Opinafy Project ID",
+      "type": "TEXT",
+      "isRequired": true,
+      "help": "Find your Project ID in your Opinafy dashboard at https://opinafy.com"
+    }
+  ],
+  "permissions": [
+    {
+      "instance": {
+        "key": "inject_script",
+        "value": {
+          "urls": ["https://opinafy.com/widget.js"]
+        }
+      }
+    }
+  ]
+}

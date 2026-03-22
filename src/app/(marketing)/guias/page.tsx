@@ -59,6 +59,26 @@ const guides = [
       <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6zm4 4h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
     ),
   },
+  {
+    name: 'Webflow',
+    slug: 'webflow',
+    description: 'Integra Opinafy en tu sitio Webflow con codigo personalizado del proyecto, por pagina o con elementos Embed.',
+    color: 'bg-blue-100 text-blue-700',
+    iconColor: 'text-blue-600',
+    icon: (
+      <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.802 8.56l-1.986 6.496-1.95-6.46a.544.544 0 00-.526-.39.544.544 0 00-.525.39l-1.95 6.46L8.88 8.56a2.158 2.158 0 00-2.07-1.56 2.158 2.158 0 00-2.07 1.56L2 18h3.18l1.95-6.46 1.95 6.46c.072.234.288.39.526.39.24 0 .456-.156.526-.39l1.95-6.46L14.032 18h3.18l-2.742-9.44a2.158 2.158 0 00-2.07-1.56 2.158 2.158 0 00-2.07 1.56z"/></svg>
+    ),
+  },
+  {
+    name: 'Google Tag Manager',
+    slug: 'google-tag-manager',
+    description: 'Instala Opinafy con Google Tag Manager. Ideal si ya usas GTM para gestionar los scripts de tu sitio.',
+    color: 'bg-orange-100 text-orange-700',
+    iconColor: 'text-orange-600',
+    icon: (
+      <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+    ),
+  },
 ]
 
 export default function GuiasIndexPage() {
