@@ -421,12 +421,15 @@ import { renderWidget, WidgetData } from './templates';
         initPopup(shadow, isPreviewMode);
       }
 
-      // Init click tracking on cards
-      initClickTracking(shadow, projectId);
+      // Only track in production mode (not preview)
+      if (!isPreviewMode) {
+        // Init click tracking on cards
+        initClickTracking(shadow, projectId);
 
-      // Track impression with testimonial IDs
-      const testimonialIds = (data.testimonials || []).map((t: { id?: string }) => t.id).filter(Boolean) as string[];
-      trackImpression(projectId, testimonialIds);
+        // Track impression with testimonial IDs
+        const testimonialIds = (data.testimonials || []).map((t: { id?: string }) => t.id).filter(Boolean) as string[];
+        trackImpression(projectId, testimonialIds);
+      }
     } catch (err) {
       shadow.innerHTML = `
         <style>
