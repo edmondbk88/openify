@@ -2,10 +2,27 @@
 
 import { useState } from 'react'
 import { WidgetTemplate } from '@/lib/widget-templates'
-import { TemplateFilter } from '@/components/landing/template-filter'
 import { TemplateCardEn } from '@/components/landing/template-card-en'
 
 const INITIAL_COUNT = 12
+
+const CATEGORY_TRANSLATIONS: Record<string, string> = {
+  'Minimalista': 'Minimalist',
+  'Corporativo': 'Corporate',
+  'Colorido': 'Colorful',
+  'Oscuro': 'Dark',
+  'Moderno': 'Modern',
+  'Elegante': 'Elegant',
+  'Divertido': 'Fun',
+  'Profesional': 'Professional',
+  'Video': 'Video',
+  'Popup': 'Popup',
+  'Creativo': 'Creative',
+  'Bento': 'Bento',
+  'Social': 'Social',
+  'Premium': 'Premium',
+  'Retro': 'Retro',
+}
 
 export function TemplatesGalleryEn({
   templates,
@@ -14,16 +31,18 @@ export function TemplatesGalleryEn({
   templates: WidgetTemplate[]
   categories: string[]
 }) {
-  const [activeCategory, setActiveCategory] = useState('Todas')
+  const [activeCategory, setActiveCategory] = useState('All')
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT)
 
   const filtered =
-    activeCategory === 'Todas'
+    activeCategory === 'All'
       ? templates
-      : templates.filter((t) => t.category === activeCategory)
+      : templates.filter((t) => (CATEGORY_TRANSLATIONS[t.category] || t.category) === activeCategory)
 
   const visible = filtered.slice(0, visibleCount)
   const hasMore = visibleCount < filtered.length
+
+  const englishCategories = ['All', ...categories.map(c => CATEGORY_TRANSLATIONS[c] || c)]
 
   function handleCategoryChange(category: string) {
     setActiveCategory(category)
@@ -32,17 +51,25 @@ export function TemplatesGalleryEn({
 
   return (
     <>
-      <div className="mb-10">
-        <TemplateFilter
-          categories={categories}
-          activeCategory={activeCategory}
-          onChange={handleCategoryChange}
-        />
+      <div className="mb-10 flex flex-wrap justify-center gap-2">
+        {englishCategories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => handleCategoryChange(cat)}
+            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
+              activeCategory === cat
+                ? 'bg-indigo-600 text-white'
+                : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
       </div>
 
       <p className="mb-6 text-center text-sm text-gray-500">
         Showing {visible.length} of {filtered.length} template{filtered.length !== 1 ? 's' : ''}
-        {activeCategory !== 'Todas' ? ` in "${activeCategory}"` : ''}
+        {activeCategory !== 'All' ? ` in "${activeCategory}"` : ''}
       </p>
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
