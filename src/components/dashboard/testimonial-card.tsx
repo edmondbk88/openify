@@ -60,6 +60,7 @@ export default function TestimonialCard({
   const statusClassName = statusClassNames[testimonial.status]
   const statusLabel = t(statusKeys[testimonial.status], locale)
   const [showReplyForm, setShowReplyForm] = useState(false)
+  const [savedReply, setSavedReply] = useState<string | null>(testimonial.owner_reply || null)
   const [replyText, setReplyText] = useState(testimonial.owner_reply || '')
   const [isSaving, setIsSaving] = useState(false)
 
@@ -195,10 +196,10 @@ export default function TestimonialCard({
       )}
 
       {/* Owner Reply */}
-      {testimonial.owner_reply && !showReplyForm && (
+      {savedReply && !showReplyForm && (
         <div className="mt-3 ml-4 rounded-lg border border-indigo-100 bg-indigo-50/50 p-3">
           <p className="mb-1 text-xs font-semibold text-indigo-700">{t('testimonials.ownerReply', locale)}</p>
-          <p className="text-sm text-gray-700">{testimonial.owner_reply}</p>
+          <p className="text-sm text-gray-700">{savedReply}</p>
           {testimonial.owner_reply_at && (
             <p className="mt-1 text-xs text-gray-400">{formatDate(testimonial.owner_reply_at)}</p>
           )}
@@ -227,6 +228,7 @@ export default function TestimonialCard({
                     body: JSON.stringify({ owner_reply: replyText.trim() }),
                   })
                   if (res.ok) {
+                    setSavedReply(replyText.trim())
                     onReply?.(testimonial.id, replyText.trim())
                     setShowReplyForm(false)
                   }
@@ -239,7 +241,7 @@ export default function TestimonialCard({
             >
               {isSaving ? t('testimonials.savingReply', locale) : t('testimonials.saveReply', locale)}
             </button>
-            {testimonial.owner_reply && (
+            {savedReply && (
               <button
                 onClick={async () => {
                   setIsSaving(true)
@@ -250,6 +252,7 @@ export default function TestimonialCard({
                       body: JSON.stringify({ owner_reply: null }),
                     })
                     if (res.ok) {
+                      setSavedReply(null)
                       onReply?.(testimonial.id, null)
                       setReplyText('')
                       setShowReplyForm(false)
@@ -267,7 +270,7 @@ export default function TestimonialCard({
             <button
               onClick={() => {
                 setShowReplyForm(false)
-                setReplyText(testimonial.owner_reply || '')
+                setReplyText(savedReply || '')
               }}
               className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 px-3 py-1.5 text-sm font-medium text-gray-600 transition-colors hover:bg-gray-50"
             >
@@ -304,7 +307,7 @@ export default function TestimonialCard({
           onClick={() => setShowReplyForm(!showReplyForm)}
           className={cn(
             'inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-sm font-medium transition-colors',
-            testimonial.owner_reply
+            savedReply
               ? 'border-indigo-200 bg-indigo-50 text-indigo-700 hover:bg-indigo-100'
               : 'border-gray-300 text-gray-600 hover:bg-gray-50 hover:text-indigo-600'
           )}
@@ -312,7 +315,7 @@ export default function TestimonialCard({
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
           </svg>
-          {testimonial.owner_reply ? t('testimonials.editReply', locale) : t('testimonials.reply', locale)}
+          {savedReply ? t('testimonials.editReply', locale) : t('testimonials.reply', locale)}
         </button>
 
         {/* Share button */}
