@@ -7,7 +7,7 @@ import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Características de Opinafy - Todas las funciones de la plataforma de testimonios',
   description:
-    'Descubre todas las funcionalidades de Opinafy: widgets embebibles, video testimonios, verificación doble, 65+ plantillas, mini sitio público, importación desde Google y más. La plataforma de testimonios más completa en español.',
+    'Descubre todas las funcionalidades de Opinafy: widgets embebibles, video testimonios, verificación doble, 80+ plantillas, mini sitio público, importación desde Google, A/B testing, Health Score y más. La plataforma de testimonios más completa en español.',
   keywords: [
     'características opinafy',
     'funciones plataforma testimonios',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Características de Opinafy - Todas las funciones de la plataforma de testimonios',
     description:
-      'Widgets embebibles, video testimonios, verificación doble, 65+ plantillas, mini sitio y más. Todo lo que necesitas para gestionar testimonios.',
+      'Widgets embebibles, video testimonios, verificación doble, 80+ plantillas, mini sitio y más. Todo lo que necesitas para gestionar testimonios.',
     url: 'https://opinafy.com/caracteristicas',
     type: 'website',
     siteName: 'Opinafy',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Características de Opinafy - Todas las funciones',
     description:
-      'Widgets embebibles, video testimonios, verificación doble, 65+ plantillas y más. La plataforma de testimonios más completa en español.',
+      'Widgets embebibles, video testimonios, verificación doble, 80+ plantillas y más. La plataforma de testimonios más completa en español.',
     images: ['/og.png'],
   },
 }
@@ -52,10 +52,10 @@ export const metadata: Metadata = {
 /* ────────────────────────────────────────────── */
 
 const heroStats = [
+  { value: '80+', label: 'Plantillas personalizables' },
   { value: '160+', label: 'Industrias cubiertas' },
-  { value: '65+', label: 'Plantillas personalizables' },
-  { value: '7', label: 'Layouts de widget' },
-  { value: '8', label: 'Plataformas de importación' },
+  { value: '50+', label: 'Funcionalidades' },
+  { value: '8', label: 'Integraciones' },
 ]
 
 const coreFeatures = [
@@ -75,7 +75,7 @@ const coreFeatures = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
       </svg>
     ),
-    title: '65+ plantillas personalizables',
+    title: '80+ plantillas personalizables',
     description:
       'Elige entre más de 65 plantillas diseñadas profesionalmente para widgets y mini sitios. Personaliza colores, fuentes (8 Google Fonts), bordes, sombras y más para que coincidan con tu marca.',
   },
@@ -166,12 +166,27 @@ const differentiators = [
   {
     icon: '🌐',
     title: 'Mini sitio personalizable',
-    description: 'Cada cuenta incluye una página pública con todos sus testimonios. URL corta para compartir por WhatsApp, email, LinkedIn o Instagram.',
+    description: 'Cada cuenta incluye una página pública con todos sus testimonios. URL corta para compartir por WhatsApp, email, LinkedIn o Instagram. 30 plantillas por profesión.',
   },
   {
     icon: '🔔',
     title: 'FOMO Popup widget',
     description: 'Widget tipo notificación que muestra testimonios recientes como popups discretos. Ideal para aumentar conversiones en páginas de venta.',
+  },
+  {
+    icon: '🏆',
+    title: 'Certificación y Ranking',
+    description: 'Sistema de certificación por niveles (Bronce, Plata, Oro, Platino) y ranking/leaderboard público. Badge verificado dinámico (SVG) para tu web.',
+  },
+  {
+    icon: '🩺',
+    title: 'Health Score gratuito',
+    description: 'Analizador gratuito de tu presencia online. Evalúa tu web y te da recomendaciones para mejorar tu prueba social y reputación.',
+  },
+  {
+    icon: '📊',
+    title: 'Calculadora ROI',
+    description: 'Calcula el retorno de inversión de tus testimonios. Descubre cuánto impacto tienen en tus ventas con datos reales.',
   },
 ]
 
@@ -239,6 +254,61 @@ const businessFeatures = [
     title: 'QR code + WhatsApp sharing',
     description: 'Genera códigos QR para tu formulario de recopilación. Comparte por WhatsApp con un toque. Perfecto para negocios locales, restaurantes y comercios.',
   },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+      </svg>
+    ),
+    title: 'Automatización de solicitudes',
+    description: 'Programa emails automáticos para solicitar testimonios a tus clientes. Secuencias de seguimiento inteligentes con 6 plantillas pre-diseñadas.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+      </svg>
+    ),
+    title: 'Generador de posts sociales (IA)',
+    description: 'Convierte testimonios en 5 formatos de posts para redes sociales con IA. Genera contenido para Instagram, LinkedIn, Twitter, Facebook y más.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
+      </svg>
+    ),
+    title: 'Respuesta del propietario',
+    description: 'Responde públicamente a tus testimonios. Muestra atención al cliente y engagement con tu comunidad directamente en el widget.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+      </svg>
+    ),
+    title: 'Testimonios destacados/fijados',
+    description: 'Fija tus mejores testimonios en la parte superior del widget. Controla qué opiniones ven primero tus visitantes.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
+      </svg>
+    ),
+    title: 'Smart widget (filtrado por data-tags)',
+    description: 'Filtra testimonios por etiquetas directamente en el embed. Muestra testimonios relevantes según la página o producto.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h1.5C5.496 19.5 6 18.996 6 18.375m-2.625 0V5.625m0 12.75v-1.5c0-.621.504-1.125 1.125-1.125m18.375 2.625V5.625m0 12.75c0 .621-.504 1.125-1.125 1.125m1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125m0 3.75h-1.5A1.125 1.125 0 0118 18.375M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M20.625 4.5h-1.5C18.504 4.5 18 5.004 18 5.625m3.75 0v1.5c0 .621-.504 1.125-1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125M3.375 4.5h1.5C5.496 4.5 6 5.004 6 5.625m-2.625 0v1.5c0 .621.504 1.125 1.125 1.125m0 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125m1.5-3.75C5.496 8.25 6 7.746 6 7.125v-1.5M4.875 8.25C5.496 8.25 6 8.754 6 9.375v1.5m0-5.25v5.25m0-5.25C6 5.004 6.504 4.5 7.125 4.5h9.75c.621 0 1.125.504 1.125 1.125m1.125 2.625h1.5m-1.5 0A1.125 1.125 0 0118 7.125v-1.5m1.125 2.625c-.621 0-1.125.504-1.125 1.125v1.5m2.625-2.625c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125M18 5.625v5.25M7.125 12h9.75m-9.75 0A1.125 1.125 0 016 10.875M7.125 12C6.504 12 6 12.504 6 13.125m0-2.25C6 11.496 5.496 12 4.875 12M18 10.875c0 .621-.504 1.125-1.125 1.125M18 10.875c0 .621.504 1.125 1.125 1.125m-2.25 0c.621 0 1.125.504 1.125 1.125m-12 5.25v-5.25m0 5.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125m-12 0v-1.5c0-.621-.504-1.125-1.125-1.125M18 18.375v-5.25m0 5.25v-1.5c0-.621.504-1.125 1.125-1.125M18 13.125v1.5c0 .621.504 1.125 1.125 1.125M18 13.125c0-.621.504-1.125 1.125-1.125M6 13.125v1.5c0 .621-.504 1.125-1.125 1.125M6 13.125C6 12.504 5.496 12 4.875 12m-1.5 0h1.5m-1.5 0c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125M19.125 12h1.5m0 0c.621 0 1.125.504 1.125 1.125v1.5c0 .621-.504 1.125-1.125 1.125m-17.25 0h1.5m14.25 0h1.5" />
+      </svg>
+    ),
+    title: '4 modos de vídeo',
+    description: 'Muestra vídeo testimonios en 4 formatos diferentes: inline, modal, galería y thumbnail. Elige el que mejor encaje en tu web.',
+  },
 ]
 
 const devFeatures = [
@@ -263,9 +333,11 @@ const securityFeatures = [
 
 const supportFeatures = [
   { title: 'Sistema de tickets', description: 'Soporte técnico con seguimiento de tickets desde el dashboard. Respuesta en menos de 24h.' },
-  { title: 'Notificaciones in-app', description: 'Recibe alertas cuando llegan nuevos testimonios, se verifican o requieren moderación.' },
+  { title: 'Notificaciones in-app', description: 'Recibe alertas cuando llegan nuevos testimonios, se verifican o requieren moderación. Centro de notificaciones integrado.' },
   { title: 'Dashboard multiidioma (ES/EN)', description: 'Cambia el idioma del dashboard con un clic. Interfaz completa en español e inglés.' },
   { title: 'Guías de instalación', description: 'Guías paso a paso para WordPress, Shopify, Wix, Squarespace, Webflow y Google Tag Manager.' },
+  { title: 'Changelog público', description: 'Mantente al día de todas las novedades y mejoras de la plataforma. Actualizaciones frecuentes con nuevas funcionalidades.' },
+  { title: '421 páginas de ciudad+industria', description: 'Contenido SEO específico para tu ciudad e industria. Descubre cómo Opinafy ayuda a negocios como el tuyo en tu zona.' },
 ]
 
 export default function CaracteristicasPage() {
@@ -273,7 +345,7 @@ export default function CaracteristicasPage() {
     name: 'Características de Opinafy - Todas las funciones de la plataforma de testimonios',
     url: 'https://opinafy.com/caracteristicas',
     description:
-      'Descubre todas las funcionalidades de Opinafy: widgets embebibles, video testimonios, verificación doble, 65+ plantillas, mini sitio público, importación desde Google y más.',
+      'Descubre todas las funcionalidades de Opinafy: widgets embebibles, video testimonios, verificación doble, 80+ plantillas, A/B testing, Health Score, automatización y más.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

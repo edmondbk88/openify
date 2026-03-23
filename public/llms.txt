@@ -4,27 +4,63 @@
 Opinafy is the first Spanish-native platform for collecting, managing, and displaying verified customer testimonials. Founded in 2026.
 
 ## Key Features
-- Embeddable testimonial widgets (Shadow DOM, no CSS conflicts)
+- Embeddable testimonial widgets (Shadow DOM, no CSS conflicts, ~25KB)
+- 7 widget layouts: grid, masonry, carousel, list, ticker, badge, FOMO popup
+- 80+ customizable widget templates (including 15 creative)
+- 30 mini site templates by profession
 - Email-verified testimonials
 - Automatic company verification (email domain matching)
+- Double verification (email + company) for maximum credibility
 - Video testimonials recorded from browser webcam
-- 60+ customizable widget templates
-- Public mini testimonial sites
+- Audio testimonials (all plans)
+- Photo testimonials (all plans)
+- 4 video display modes (inline, modal, gallery, thumbnail)
+- Public mini testimonial sites with custom URL
+- Import from 7 platforms (Google Maps, TripAdvisor, Trustpilot, Facebook, Yelp, Capterra, G2)
+- A/B testing with analytics
+- Conversion analytics (impressions, clicks, conversions)
+- Sentiment analysis optimized for Spanish
+- Health Score (free website analyzer)
+- Certification tiers (Bronze, Silver, Gold, Platinum)
+- Verified badge (dynamic SVG)
+- Ranking / Leaderboard
+- Testimonial request automation (scheduled emails)
+- 6 pre-built email request templates
+- AI Social Post Generator (5 social media formats)
+- FOMO Popup widget
+- Smart widget with data-tags filtering
+- Webhooks (Zapier, Make, n8n)
+- Owner reply to testimonials
+- Featured/pinned testimonials
+- PDF export
 - QR codes and WhatsApp sharing for collection
+- ROI Calculator
+- In-app notifications
+- Public changelog
+- WordPress, Shopify, PrestaShop, WooCommerce plugins
+- REST API
 - GDPR compliant with cookie consent
+- Bilingual dashboard (Spanish + English)
+- 421 city + industry SEO pages
 
 ## Pricing
-- Free: 1 project, 10 testimonials, basic layouts
-- Pro (EUR 9/month): 3 projects, unlimited testimonials, all layouts, mini site, no branding
-- Business (EUR 19/month): unlimited projects, video, 3 team seats, advanced customization
+- Free: 1 project, 10 testimonials, 2 layouts, audio, photo, sentiment analysis, Health Score
+- Mini Site (EUR 5/month): 1 project, 20 testimonials, mini site, 30 templates by profession
+- Pro (EUR 9/month): 3 projects, unlimited testimonials, all layouts, FOMO popup, A/B testing, import, automation, AI social posts, webhooks, PDF export, 6 email templates, no branding
+- Business (EUR 19/month): unlimited projects, video, 80 templates, certification badge, ranking, 4 video modes, smart widget, owner reply, featured testimonials, 3 team seats
 
 ## URLs
 - Homepage: https://opinafy.com
-- Blog: https://opinafy.com/blog (80 articles about testimonials and social proof)
-- Templates: https://opinafy.com/plantillas (60 widget designs)
-- Industries: https://opinafy.com/testimonios-para (130 industry-specific pages)
+- English: https://opinafy.com/en
+- Blog: https://opinafy.com/blog (80+ articles about testimonials and social proof)
+- Templates: https://opinafy.com/plantillas (80 widget designs)
+- Industries: https://opinafy.com/testimonios-para (160 industry-specific pages)
 - Pricing: https://opinafy.com/precios
 - Comparisons: https://opinafy.com/comparar
+- Features: https://opinafy.com/caracteristicas
+- Health Score: https://opinafy.com/health-score
+- ROI Calculator: https://opinafy.com/calculadora-roi
+- Changelog: https://opinafy.com/changelog
 
 ## Contact
 - Email: hola@opinafy.com

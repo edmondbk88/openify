@@ -138,39 +138,9 @@ function Hero() {
 
 const features = [
   {
-    title: 'Customizable Collection Form',
+    title: 'Double Verification (Email + Company)',
     description:
-      'Create branded collection forms with custom colors and fields to gather testimonials professionally.',
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 00.75-.75 2.25 2.25 0 00-.1-.664m-5.8 0A2.251 2.251 0 0113.5 2.25H15a2.25 2.25 0 012.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Embeddable Widget',
-    description:
-      'Add testimonials to any website with a simple code snippet. Compatible with all platforms.',
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" />
-      </svg>
-    ),
-  },
-  {
-    title: 'Multiple Layouts',
-    description:
-      'Choose from carousel, grid, or wall layouts to display your testimonials the way that best fits your design.',
-    icon: (
-      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
-      </svg>
-    ),
-  },
-  {
-    title: 'No CSS Conflicts',
-    description:
-      'Thanks to Shadow DOM, the widget adapts without breaking your site design. Zero style conflicts.',
+      'The only platform that verifies both the author\'s email and the associated company. Maximum testimonial credibility.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
@@ -178,22 +148,52 @@ const features = [
     ),
   },
   {
-    title: 'Intuitive Dashboard',
+    title: '80 Templates + Mini Site',
     description:
-      'Approve, edit, and organize your testimonials from a simple dashboard. No technical skills needed.',
+      '80 widget templates (incl. 15 creative) and 30 mini site templates by profession. Customize colors, fonts and more.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
       </svg>
     ),
   },
   {
-    title: 'SEO & Social Proof',
+    title: 'Video, Audio & Photo Testimonials',
     description:
-      'Testimonials render as real HTML, improving your search engine rankings and building trust.',
+      'Record video/audio directly from the browser or upload photos. 4 video display modes for your website.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+        <path strokeLinecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Import from 7 Platforms',
+    description:
+      'Centralize reviews from Google Maps, TripAdvisor, Trustpilot, Facebook, Yelp, Capterra and G2 in one place.',
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5m-13.5-9L12 3m0 0l4.5 4.5M12 3v13.5" />
+      </svg>
+    ),
+  },
+  {
+    title: 'A/B Testing + Analytics',
+    description:
+      'Test different testimonials and measure impressions, clicks and conversions. Optimize social proof with real data.',
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+      </svg>
+    ),
+  },
+  {
+    title: 'Smart Automation',
+    description:
+      'Automated testimonial request emails, AI social post generator, and webhooks for Zapier/Make integration.',
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
       </svg>
     ),
   },
@@ -634,7 +634,7 @@ function TestimonialsPreview() {
             href="/en/templates"
             className="inline-flex items-center gap-2 text-base font-semibold text-indigo-600 hover:text-indigo-700"
           >
-            Explore all 60 available templates
+            Explore all 80 available templates
             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
@@ -654,8 +654,11 @@ const plans = [
       '1 project',
       '10 testimonials',
       '2 available layouts',
-      'Opinafy branding on widget',
+      'Audio & photo testimonials',
+      'Sentiment analysis',
+      'Free Health Score',
       'Company verification',
+      'Opinafy branding on widget',
     ],
     cta: 'Get Started Free',
     highlighted: false,
@@ -667,9 +670,12 @@ const plans = [
     features: [
       '1 project',
       '20 testimonials',
-      'Customizable public mini site',
+      'Customizable mini site',
+      '30 templates by profession',
       '2 available layouts',
-      'Opinafy branding on widget',
+      'Audio & photo testimonials',
+      'Sentiment analysis',
+      'Free Health Score',
       'Company verification',
     ],
     cta: 'Choose Mini Site',
@@ -682,10 +688,15 @@ const plans = [
     features: [
       '3 projects',
       'Unlimited testimonials',
-      'All layouts',
+      'All layouts + FOMO popup',
+      'A/B testing + analytics',
+      'Import from 7 platforms',
+      'Request automation',
+      'AI social post generator',
+      '6 email templates',
+      'Webhooks (Zapier/Make)',
+      'PDF export',
       'No Opinafy branding',
-      'Public mini site',
-      'Company verification',
       'Priority support',
     ],
     cta: 'Choose Pro',
@@ -699,14 +710,16 @@ const plans = [
     features: [
       'Unlimited projects',
       'Unlimited testimonials',
-      'Video testimonials',
-      'Video templates',
-      'Verified company badge',
-      'Public mini site',
-      'Company verification',
+      'Video testimonials (webcam)',
+      '80 templates (15 creative)',
+      'Verified certification badge',
+      'Ranking / Leaderboard',
+      '4 video display modes',
+      'Smart widget (data-tags)',
+      'Owner reply to testimonials',
+      'Featured/pinned testimonials',
       '3 team seats',
       'Dedicated support',
-      'Data export',
     ],
     cta: 'Choose Business',
     highlighted: false,

@@ -7,7 +7,7 @@ import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Opinafy Features - All Testimonial Platform Features',
   description:
-    'Discover all Opinafy features: embeddable widgets, video testimonials, double verification, 65+ templates, public mini site, Google import and more. The most complete testimonial platform.',
+    'Discover all Opinafy features: embeddable widgets, video testimonials, double verification, 80+ templates, public mini site, Google import and more. The most complete testimonial platform.',
   keywords: [
     'opinafy features',
     'testimonial platform features',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Opinafy Features - All Testimonial Platform Features',
     description:
-      'Embeddable widgets, video testimonials, double verification, 65+ templates, mini site and more. Everything you need to manage testimonials.',
+      'Embeddable widgets, video testimonials, double verification, 80+ templates, mini site and more. Everything you need to manage testimonials.',
     url: 'https://opinafy.com/en/features',
     type: 'website',
     siteName: 'Opinafy',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Opinafy Features - All Testimonial Platform Features',
     description:
-      'Embeddable widgets, video testimonials, double verification, 65+ templates and more. The most complete testimonial platform.',
+      'Embeddable widgets, video testimonials, double verification, 80+ templates and more. The most complete testimonial platform.',
     images: ['/og.png'],
   },
 }
@@ -52,10 +52,10 @@ export const metadata: Metadata = {
 /* ────────────────────────────────────────────── */
 
 const heroStats = [
+  { value: '80+', label: 'Customizable templates' },
   { value: '160+', label: 'Industries covered' },
-  { value: '65+', label: 'Customizable templates' },
-  { value: '7', label: 'Widget layouts' },
-  { value: '8', label: 'Import platforms' },
+  { value: '50+', label: 'Features' },
+  { value: '8', label: 'Integrations' },
 ]
 
 const coreFeatures = [
@@ -75,7 +75,7 @@ const coreFeatures = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
       </svg>
     ),
-    title: '65+ Customizable Templates',
+    title: '80+ Customizable Templates',
     description:
       'Choose from over 65 professionally designed templates for widgets and mini sites. Customize colors, fonts (8 Google Fonts), borders, shadows and more to match your brand.',
   },
@@ -107,7 +107,7 @@ const coreFeatures = [
     ),
     title: 'Public Mini Site',
     description:
-      'Every account gets a public mini site at opinafy.com/s/your-username with all your verified testimonials. Perfect for sharing on WhatsApp, email or social media. 30+ mini site templates.',
+      'Every account gets a public mini site at opinafy.com/s/your-username with all your verified testimonials. Perfect for sharing on WhatsApp, email or social media. 30 templates by profession.',
   },
   {
     icon: (
@@ -172,6 +172,21 @@ const differentiators = [
     icon: '🔔',
     title: 'FOMO Popup Widget',
     description: 'Notification-style widget that shows recent testimonials as discreet popups. Ideal for boosting conversions on sales pages.',
+  },
+  {
+    icon: '🏆',
+    title: 'Certification & Ranking',
+    description: 'Tiered certification system (Bronze, Silver, Gold, Platinum) and public leaderboard. Dynamic verified badge (SVG) for your website.',
+  },
+  {
+    icon: '🩺',
+    title: 'Free Health Score',
+    description: 'Free website analyzer that evaluates your online presence and gives recommendations to improve your social proof and reputation.',
+  },
+  {
+    icon: '📊',
+    title: 'ROI Calculator',
+    description: 'Calculate the return on investment of your testimonials. Discover how much impact they have on your sales with real data.',
   },
 ]
 
@@ -239,6 +254,61 @@ const businessFeatures = [
     title: 'QR Code + WhatsApp Sharing',
     description: 'Generate QR codes for your collection form. Share via WhatsApp with one tap. Perfect for local businesses, restaurants and shops.',
   },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+      </svg>
+    ),
+    title: 'Testimonial Request Automation',
+    description: 'Schedule automated emails to request testimonials from customers. Smart follow-up sequences with 6 pre-built email templates.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+      </svg>
+    ),
+    title: 'AI Social Post Generator',
+    description: 'Turn testimonials into social media posts in 5 formats with AI. Generate content for Instagram, LinkedIn, Twitter, Facebook and more.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
+      </svg>
+    ),
+    title: 'Owner Reply to Testimonials',
+    description: 'Publicly reply to your testimonials. Show customer care and engagement with your community directly in the widget.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+      </svg>
+    ),
+    title: 'Featured / Pinned Testimonials',
+    description: 'Pin your best testimonials to the top of the widget. Control which reviews your visitors see first.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.33a18.095 18.095 0 005.223-5.223c.542-.827.369-1.908-.33-2.607L11.16 3.66A2.25 2.25 0 009.568 3z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M6 6h.008v.008H6V6z" />
+      </svg>
+    ),
+    title: 'Smart Widget (data-tags filtering)',
+    description: 'Filter testimonials by tags directly in the embed code. Show relevant testimonials based on the page or product.',
+  },
+  {
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.375 19.5h17.25m-17.25 0a1.125 1.125 0 01-1.125-1.125M3.375 19.5h7.5c.621 0 1.125-.504 1.125-1.125M3.375 19.5c-.621 0-1.125-.504-1.125-1.125M20.625 4.5H3.375m17.25 0c.621 0 1.125.504 1.125 1.125M3.375 4.5c-.621 0-1.125.504-1.125 1.125m0 0v12.75" />
+      </svg>
+    ),
+    title: '4 Video Display Modes',
+    description: 'Show video testimonials in 4 different formats: inline, modal, gallery and thumbnail. Choose the best fit for your website.',
+  },
 ]
 
 const devFeatures = [
@@ -263,9 +333,11 @@ const securityFeatures = [
 
 const supportFeatures = [
   { title: 'Ticket System', description: 'Technical support with ticket tracking from the dashboard. Response in less than 24 hours.' },
-  { title: 'In-App Notifications', description: 'Receive alerts when new testimonials arrive, get verified or require moderation.' },
+  { title: 'In-App Notifications', description: 'Receive alerts when new testimonials arrive, get verified or require moderation. Integrated notification center.' },
   { title: 'Bilingual Dashboard (ES/EN)', description: 'Switch dashboard language with one click. Full interface in Spanish and English.' },
   { title: 'Installation Guides', description: 'Step-by-step guides for WordPress, Shopify, Wix, Squarespace, Webflow and Google Tag Manager.' },
+  { title: 'Public Changelog', description: 'Stay up to date with all platform improvements and new features. Frequent updates with new functionality.' },
+  { title: '421 City + Industry Pages', description: 'SEO content specific to your city and industry. Discover how Opinafy helps businesses like yours in your area.' },
 ]
 
 export default function FeaturesPage() {
@@ -273,7 +345,7 @@ export default function FeaturesPage() {
     name: 'Opinafy Features - All Testimonial Platform Features',
     url: 'https://opinafy.com/en/features',
     description:
-      'Discover all Opinafy features: embeddable widgets, video testimonials, double verification, 65+ templates, public mini site, Google import and more.',
+      'Discover all Opinafy features: embeddable widgets, video testimonials, double verification, 80+ templates, A/B testing, Health Score, automation and more.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
