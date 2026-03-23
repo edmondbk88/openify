@@ -19,6 +19,8 @@ const productLinks = [
   { label: 'Agencias', href: '/agencias' },
   { label: 'Health Score', href: '/health-score' },
   { label: 'Certificacion', href: '/certificacion' },
+  { label: 'Ranking', href: '/ranking' },
+  { label: 'Actualizaciones', href: '/actualizaciones' },
 ]
 
 const legalLinks = [

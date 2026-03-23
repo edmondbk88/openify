@@ -16,6 +16,8 @@ const productLinks = [
   { label: 'Agencies', href: '/en/agencies' },
   { label: 'Health Score', href: '/en/health-score' },
   { label: 'Certification', href: '/en/certification' },
+  { label: 'Ranking', href: '/en/ranking' },
+  { label: 'Changelog', href: '/en/changelog' },
 ]
 
 const legalLinks = [
