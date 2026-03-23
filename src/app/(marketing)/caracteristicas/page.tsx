@@ -7,7 +7,7 @@ import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Características de Opinafy - Todas las funciones de la plataforma de testimonios',
   description:
-    'Descubre todas las funcionalidades de Opinafy: widgets embebibles, video testimonios, verificación doble, 80+ plantillas, mini sitio público, importación desde Google, A/B testing, Health Score y más. La plataforma de testimonios más completa en español.',
+    'Descubre todas las funcionalidades de Opinafy: widgets embebibles, video testimonios, verificación doble, 100+ plantillas, mini sitio público, importación desde Google, A/B testing, Health Score y más. La plataforma de testimonios más completa en español.',
   keywords: [
     'características opinafy',
     'funciones plataforma testimonios',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Características de Opinafy - Todas las funciones de la plataforma de testimonios',
     description:
-      'Widgets embebibles, video testimonios, verificación doble, 80+ plantillas, mini sitio y más. Todo lo que necesitas para gestionar testimonios.',
+      'Widgets embebibles, video testimonios, verificación doble, 100+ plantillas, mini sitio y más. Todo lo que necesitas para gestionar testimonios.',
     url: 'https://opinafy.com/caracteristicas',
     type: 'website',
     siteName: 'Opinafy',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Características de Opinafy - Todas las funciones',
     description:
-      'Widgets embebibles, video testimonios, verificación doble, 80+ plantillas y más. La plataforma de testimonios más completa en español.',
+      'Widgets embebibles, video testimonios, verificación doble, 100+ plantillas y más. La plataforma de testimonios más completa en español.',
     images: ['/og.png'],
   },
 }
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 /* ────────────────────────────────────────────── */
 
 const heroStats = [
-  { value: '80+', label: 'Plantillas personalizables' },
+  { value: '100+', label: 'Plantillas personalizables' },
   { value: '160+', label: 'Industrias cubiertas' },
   { value: '50+', label: 'Funcionalidades' },
   { value: '8', label: 'Integraciones' },
@@ -75,7 +75,7 @@ const coreFeatures = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
       </svg>
     ),
-    title: '80+ plantillas personalizables',
+    title: '100+ plantillas personalizables',
     description:
       'Elige entre más de 65 plantillas diseñadas profesionalmente para widgets y mini sitios. Personaliza colores, fuentes (8 Google Fonts), bordes, sombras y más para que coincidan con tu marca.',
   },
@@ -345,7 +345,7 @@ export default function CaracteristicasPage() {
     name: 'Características de Opinafy - Todas las funciones de la plataforma de testimonios',
     url: 'https://opinafy.com/caracteristicas',
     description:
-      'Descubre todas las funcionalidades de Opinafy: widgets embebibles, video testimonios, verificación doble, 80+ plantillas, A/B testing, Health Score, automatización y más.',
+      'Descubre todas las funcionalidades de Opinafy: widgets embebibles, video testimonios, verificación doble, 100+ plantillas, A/B testing, Health Score, automatización y más.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

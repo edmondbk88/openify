@@ -319,7 +319,7 @@ export const helpGuides: HelpGuide[] = [
     description: 'Elige plantilla, personaliza colores, configura layouts y embebe el widget en tu web con una sola linea.',
     content: `
 <h2 id="elegir-plantilla">Elegir una plantilla</h2>
-<p>Opinafy ofrece <strong>mas de 80 plantillas</strong> de widget prediseñadas, organizadas por estilo y caso de uso.</p>
+<p>Opinafy ofrece <strong>mas de 100 plantillas</strong> de widget prediseñadas, organizadas por estilo y caso de uso.</p>
 <h3>Tipos de plantillas</h3>
 <ul>
 <li><strong>Clasicas:</strong> Disenos limpios y profesionales para cualquier sector.</li>

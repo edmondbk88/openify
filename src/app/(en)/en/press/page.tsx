@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 }
 
 const stats = [
-  { label: 'Widget templates', value: '80+' },
+  { label: 'Widget templates', value: '100+' },
   { label: 'Mini-site templates', value: '30+' },
   { label: 'Languages supported', value: '2' },
   { label: 'Blog articles', value: '320+' },
@@ -42,7 +42,7 @@ const screenshots = [
   },
   {
     title: 'Widget editor',
-    description: 'Customization interface with 80+ templates: grid, masonry, carousel, terminal, polaroid, and more.',
+    description: 'Customization interface with 100+ templates: grid, masonry, carousel, terminal, polaroid, and more.',
   },
   {
     title: 'Collection form',

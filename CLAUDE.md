@@ -24,7 +24,7 @@ Opinafy is a Spanish-native SaaS platform for collecting, managing, and displayi
 - `src/lib/stripe.ts` - Stripe helper (lazy init, but prefer REST API)
 - `src/lib/constants.ts` - Plan limits, prices
 - `src/lib/blog-data.ts` - 80+ blog articles (static)
-- `src/lib/widget-templates.ts` - 80 widget templates (incl 15 creative)
+- `src/lib/widget-templates.ts` - 100 widget templates (incl 35 creative)
 - `src/lib/minisite-templates.ts` - 30 mini site templates by profession
 - `src/lib/industry-data.ts` - 160 industry pages + 421 city+industry SEO pages
 - `widget-src/` - Widget source (compile with `node widget-src/build.mjs`)

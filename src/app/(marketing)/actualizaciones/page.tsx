@@ -111,8 +111,8 @@ const updates: ProductUpdate[] = [
   },
   {
     date: '2026-03-19',
-    title: '80+ plantillas de widgets',
-    description: 'Biblioteca de mas de 80 plantillas de widgets personalizables: carouseles, grids, muros, badges y mas. Cada plantilla con multiples temas.',
+    title: '100+ plantillas de widgets',
+    description: 'Biblioteca de mas de 100 plantillas de widgets personalizables: carouseles, grids, muros, badges y mas. Cada plantilla con multiples temas.',
     category: 'nuevo',
   },
   {

@@ -7,7 +7,7 @@ import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Opinafy Features - All Testimonial Platform Features',
   description:
-    'Discover all Opinafy features: embeddable widgets, video testimonials, double verification, 80+ templates, public mini site, Google import and more. The most complete testimonial platform.',
+    'Discover all Opinafy features: embeddable widgets, video testimonials, double verification, 100+ templates, public mini site, Google import and more. The most complete testimonial platform.',
   keywords: [
     'opinafy features',
     'testimonial platform features',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Opinafy Features - All Testimonial Platform Features',
     description:
-      'Embeddable widgets, video testimonials, double verification, 80+ templates, mini site and more. Everything you need to manage testimonials.',
+      'Embeddable widgets, video testimonials, double verification, 100+ templates, mini site and more. Everything you need to manage testimonials.',
     url: 'https://opinafy.com/en/features',
     type: 'website',
     siteName: 'Opinafy',
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Opinafy Features - All Testimonial Platform Features',
     description:
-      'Embeddable widgets, video testimonials, double verification, 80+ templates and more. The most complete testimonial platform.',
+      'Embeddable widgets, video testimonials, double verification, 100+ templates and more. The most complete testimonial platform.',
     images: ['/og.png'],
   },
 }
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 /* ────────────────────────────────────────────── */
 
 const heroStats = [
-  { value: '80+', label: 'Customizable templates' },
+  { value: '100+', label: 'Customizable templates' },
   { value: '160+', label: 'Industries covered' },
   { value: '50+', label: 'Features' },
   { value: '8', label: 'Integrations' },
@@ -75,7 +75,7 @@ const coreFeatures = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
       </svg>
     ),
-    title: '80+ Customizable Templates',
+    title: '100+ Customizable Templates',
     description:
       'Choose from over 65 professionally designed templates for widgets and mini sites. Customize colors, fonts (8 Google Fonts), borders, shadows and more to match your brand.',
   },
@@ -345,7 +345,7 @@ export default function FeaturesPage() {
     name: 'Opinafy Features - All Testimonial Platform Features',
     url: 'https://opinafy.com/en/features',
     description:
-      'Discover all Opinafy features: embeddable widgets, video testimonials, double verification, 80+ templates, A/B testing, Health Score, automation and more.',
+      'Discover all Opinafy features: embeddable widgets, video testimonials, double verification, 100+ templates, A/B testing, Health Score, automation and more.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

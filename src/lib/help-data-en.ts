@@ -319,7 +319,7 @@ export const helpGuidesEn: HelpGuideEn[] = [
     description: 'Choose a template, customize colors, configure layouts, and embed the widget on your site with one line.',
     content: `
 <h2 id="choose-template">Choosing a template</h2>
-<p>Opinafy offers <strong>over 80 widget templates</strong> organized by style and use case.</p>
+<p>Opinafy offers <strong>over 100 widget templates</strong> organized by style and use case.</p>
 <h3>Template types</h3>
 <ul>
 <li><strong>Classic:</strong> Clean, professional designs for any industry.</li>
@@ -811,7 +811,7 @@ export const helpGuidesEn: HelpGuideEn[] = [
 <ul>
 <li>10 projects</li>
 <li>Unlimited testimonials</li>
-<li>All widget templates (80+)</li>
+<li>All widget templates (100+)</li>
 <li>A/B testimonial testing</li>
 <li>Advanced analytics</li>
 <li>Public response to testimonials</li>

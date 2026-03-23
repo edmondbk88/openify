@@ -111,8 +111,8 @@ const updates: ProductUpdate[] = [
   },
   {
     date: '2026-03-19',
-    title: '80+ widget templates',
-    description: 'Library of over 80 customizable widget templates: carousels, grids, walls, badges, and more. Each template with multiple themes.',
+    title: '100+ widget templates',
+    description: 'Library of over 100 customizable widget templates: carousels, grids, walls, badges, and more. Each template with multiple themes.',
     category: 'new',
   },
   {

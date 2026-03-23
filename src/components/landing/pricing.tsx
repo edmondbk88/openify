@@ -66,7 +66,7 @@ const plans = [
       'Proyectos ilimitados',
       'Testimonios ilimitados',
       'Vídeo testimonios (webcam)',
-      '80 plantillas (15 creativas)',
+      '100 plantillas (35 creativas)',
       'Badge certificación verificada',
       'Ranking / Leaderboard',
       '4 modos de vídeo',

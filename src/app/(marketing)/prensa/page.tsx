@@ -41,7 +41,7 @@ const screenshots = [
   },
   {
     title: 'Editor de widgets',
-    description: 'Interfaz de personalizacion con 80+ plantillas: grid, masonry, carrusel, terminal, polaroid y mas.',
+    description: 'Interfaz de personalizacion con 100+ plantillas: grid, masonry, carrusel, terminal, polaroid y mas.',
   },
   {
     title: 'Formulario de recopilacion',
@@ -106,7 +106,7 @@ export default function PrensaPage() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Opinafy es la primera plataforma de gestion de testimonios de clientes creada nativamente en espanol.
                 Permite a negocios y profesionales recopilar, verificar y mostrar testimonios autenticos en sus sitios web
-                mediante widgets embebibles con mas de 80 plantillas profesionales.
+                mediante widgets embebibles con mas de 100 plantillas profesionales.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 La plataforma ofrece verificacion doble (por email y por dominio de empresa), grabacion de video testimonios
