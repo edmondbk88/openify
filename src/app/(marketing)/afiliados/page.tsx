@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
-import { breadcrumbSchema } from '@/lib/schema'
+import { breadcrumbSchema, organizationSchema, webPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Programa de Afiliados - Gana comisiones recomendando Opinafy',
@@ -163,12 +163,26 @@ export default function AfiliadosPage() {
     { name: 'Inicio', url: 'https://opinafy.com' },
     { name: 'Programa de Afiliados', url: 'https://opinafy.com/afiliados' },
   ])
+  const orgJsonLd = organizationSchema()
+  const webPageJsonLd = webPageSchema({
+    name: 'Programa de Afiliados - Opinafy',
+    url: 'https://opinafy.com/afiliados',
+    description: 'Gana un 30% de comision recurrente recomendando Opinafy, la plataforma #1 de testimonios en espanol.',
+  })
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <Navbar />
 

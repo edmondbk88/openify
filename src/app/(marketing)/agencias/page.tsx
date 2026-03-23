@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
-import { breadcrumbSchema } from '@/lib/schema'
+import { breadcrumbSchema, organizationSchema, webPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'Opinafy para Agencias - Gestiona testimonios de todos tus clientes',
@@ -136,12 +136,26 @@ export default function AgenciasPage() {
     { name: 'Inicio', url: 'https://opinafy.com' },
     { name: 'Agencias', url: 'https://opinafy.com/agencias' },
   ])
+  const orgJsonLd = organizationSchema()
+  const webPageJsonLd = webPageSchema({
+    name: 'Opinafy para Agencias - Gestiona testimonios de todos tus clientes',
+    url: 'https://opinafy.com/agencias',
+    description: 'Gestiona los testimonios de todos tus clientes desde un solo lugar. Multi-proyecto, white-label, dashboard centralizado y mas.',
+  })
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <Navbar />
 

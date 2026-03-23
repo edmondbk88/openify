@@ -391,18 +391,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: bilingual('/plantillas-minisitio', '/en/minisite-templates'),
     },
     {
-      url: `${baseUrl}/en/login`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/en/register`,
-      lastModified: new Date(),
-      changeFrequency: 'yearly',
-      priority: 0.3,
-    },
-    {
       url: `${baseUrl}/en/downloads`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
