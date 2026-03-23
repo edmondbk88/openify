@@ -139,20 +139,45 @@ export default function AutomatizacionPage() {
   }
 
   const handleAddContact = async () => {
-    if (!ruleId || !newContactEmail.trim()) {
-      setMessage({ type: 'error', text: 'Guarda la regla primero y proporciona un email.' })
-      return
-    }
+    if (!newContactEmail.trim()) return
     setAddingContact(true)
     setMessage(null)
 
     try {
+      // Auto-create rule if it doesn't exist yet
+      let currentRuleId = ruleId
+      if (!currentRuleId && projectId) {
+        const saveRes = await fetch('/api/automation', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            project_id: projectId,
+            is_active: isActive,
+            delay_days: delayDays,
+            email_subject: emailSubject,
+            email_body: emailBody,
+          }),
+        })
+        if (saveRes.ok) {
+          const saveData = await saveRes.json()
+          if (saveData.rule?.id) {
+            currentRuleId = saveData.rule.id
+            setRuleId(currentRuleId)
+          }
+        }
+        if (!currentRuleId) {
+          setMessage({ type: 'error', text: 'Error al crear la regla de automatización.' })
+          setAddingContact(false)
+          return
+        }
+      }
+
       const res = await fetch('/api/automation', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           action: 'add-contacts',
-          rule_id: ruleId,
+          rule_id: currentRuleId,
           contacts: [{ name: newContactName.trim() || null, email: newContactEmail.trim() }],
         }),
       })
@@ -466,7 +491,7 @@ export default function AutomatizacionPage() {
               />
               <button
                 onClick={handleAddContact}
-                disabled={addingContact || !newContactEmail.trim() || !ruleId}
+                disabled={addingContact || !newContactEmail.trim()}
                 className="inline-flex items-center justify-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700 disabled:opacity-50"
               >
                 {addingContact ? 'Agregando...' : 'Agregar'}
@@ -485,7 +510,7 @@ export default function AutomatizacionPage() {
               type="file"
               accept=".csv,.txt"
               onChange={handleCSVImport}
-              disabled={!ruleId}
+              disabled={false}
               className="block text-sm text-gray-500 file:mr-4 file:rounded-lg file:border-0 file:bg-indigo-50 file:px-4 file:py-2 file:text-sm file:font-medium file:text-indigo-700 hover:file:bg-indigo-100 disabled:opacity-50"
             />
           </div>
