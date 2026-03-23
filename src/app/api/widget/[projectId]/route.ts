@@ -14,7 +14,7 @@ export async function OPTIONS() {
 }
 
 export async function GET(
-  _request: NextRequest,
+  request: NextRequest,
   { params }: { params: Promise<{ projectId: string }> }
 ) {
   try {
@@ -59,6 +59,15 @@ export async function GET(
       .eq('status', 'approved')
       .order('is_featured', { ascending: false })
       .order('created_at', { ascending: false })
+
+    // Apply tag filter from query param (widget data-tags attribute)
+    const tagsParam = request.nextUrl.searchParams.get('tags')
+    if (tagsParam) {
+      const requestedTags = tagsParam.split(',').map((t) => t.trim()).filter(Boolean)
+      if (requestedTags.length > 0) {
+        query = query.overlaps('tags', requestedTags)
+      }
+    }
 
     // Apply config filters
     if (config) {

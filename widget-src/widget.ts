@@ -42,8 +42,12 @@ import { renderWidget, WidgetData } from './templates';
   }
 
   // ── Fetch widget data ──
-  async function fetchWidgetData(projectId: string): Promise<WidgetData> {
-    const res = await fetch(`${BASE_URL}/api/widget/${projectId}`, {
+  async function fetchWidgetData(projectId: string, tags?: string): Promise<WidgetData> {
+    let url = `${BASE_URL}/api/widget/${projectId}`;
+    if (tags) {
+      url += `?tags=${encodeURIComponent(tags)}`;
+    }
+    const res = await fetch(url, {
       method: 'GET',
       headers: { 'Accept': 'application/json' },
     });
@@ -394,7 +398,8 @@ import { renderWidget, WidgetData } from './templates';
         // Clear it so it's only used once
         delete w.__OPINAFY_PRELOAD__;
       } else {
-        data = await fetchWidgetData(projectId);
+        const tags = el.getAttribute('data-tags') || undefined;
+        data = await fetchWidgetData(projectId, tags);
       }
 
       // Inject Google Fonts + styles + rendered HTML

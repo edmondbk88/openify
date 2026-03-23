@@ -73,6 +73,28 @@ export default function EmbedCode({ projectId }: EmbedCodeProps) {
           {t('embed.instructions', locale)}
         </p>
       </div>
+
+      {/* Advanced Usage: Tags */}
+      <div className="border-t border-gray-200 px-4 py-4">
+        <h4 className="text-sm font-semibold text-gray-900 mb-2">
+          {locale === 'en' ? 'Advanced Usage' : 'Uso avanzado'}
+        </h4>
+        <p className="text-xs text-gray-500 mb-3">
+          {locale === 'en'
+            ? 'Filter testimonials by tags using the data-tags attribute. This lets you show different testimonials on different pages.'
+            : 'Filtra testimonios por etiquetas usando el atributo data-tags. Esto te permite mostrar diferentes testimonios en distintas paginas.'}
+        </p>
+        <div className="overflow-x-auto rounded bg-gray-900 p-3">
+          <pre className="text-xs leading-relaxed text-gray-100">
+            <code>{`<!-- ${locale === 'en' ? 'Filter by tags' : 'Filtrar por etiquetas'} -->\n<div class="opinafy-widget" data-project="${projectId}" data-tags="producto,calidad"></div>\n<script src="https://opinafy.com/widget.js" defer></script>`}</code>
+          </pre>
+        </div>
+        <p className="mt-2 text-xs text-gray-400">
+          {locale === 'en'
+            ? 'Separate multiple tags with commas. Only testimonials matching any of the specified tags will be displayed.'
+            : 'Separa las etiquetas con comas. Solo se mostraran testimonios que coincidan con alguna de las etiquetas especificadas.'}
+        </p>
+      </div>
     </div>
   )
 }

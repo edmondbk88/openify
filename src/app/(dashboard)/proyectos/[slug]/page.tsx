@@ -245,6 +245,25 @@ export default async function ProyectoDetailPage({
             {t('projects.integrations', locale)}
           </Link>
           <Link
+            href={`/proyectos/${(project as Project).slug}/automatizacion`}
+            className="inline-flex items-center gap-1.5 rounded-lg border border-gray-300 bg-white px-3.5 py-2 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
+          >
+            <svg
+              className="h-4 w-4"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+              />
+            </svg>
+            {locale === 'en' ? 'Automation' : 'Automatizacion'}
+          </Link>
+          <Link
             href={`/proyectos/${(project as Project).slug}/recopilar`}
             className="inline-flex items-center gap-1.5 rounded-lg bg-indigo-600 px-3.5 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
           >
