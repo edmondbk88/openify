@@ -156,23 +156,81 @@ function hexToRgba(hex: string, alpha: number): string {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`
 }
 
-function VideoPlayOverlay({ config }: { config: WidgetTemplate['config'] }) {
+const DEMO_VIDEOS = [
+  'https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/videos/testimonio-video-1.mp4',
+  'https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/videos/demos/demo-testimonial-1.mp4',
+  'https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/videos/demos/demo-testimonial-2.mp4',
+]
+
+function VideoTestimonialCard({
+  testimonial,
+  config,
+  videoIndex = 0,
+}: {
+  testimonial: (typeof FAKE_TESTIMONIALS)[0]
+  config: WidgetTemplate['config']
+  videoIndex?: number
+}) {
+  const fontMap: Record<string, string> = {
+    modern: 'system-ui, -apple-system, sans-serif',
+    serif: '"Playfair Display", Georgia, "Times New Roman", serif',
+    rounded: '"Nunito", "Varela Round", system-ui, sans-serif',
+    minimal: '"DM Sans", "Inter", system-ui, sans-serif',
+    bold: '"Space Grotesk", system-ui, sans-serif',
+    handwritten: '"Caveat", cursive, sans-serif',
+    mono: '"JetBrains Mono", "Fira Code", monospace',
+    elegant: '"Cormorant Garamond", Georgia, serif',
+  }
+  const fontFamily = fontMap[config.font_style] || fontMap.modern
+  const cardBg = config.theme === 'dark' ? lightenColor(config.background_color, 8) : '#ffffff'
+  const borderColor = config.theme === 'dark' ? lightenColor(config.background_color, 15) : '#e5e7eb'
+  const videoUrl = DEMO_VIDEOS[videoIndex % DEMO_VIDEOS.length]
+
   return (
-    <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-      <div
-        className="flex h-12 w-12 items-center justify-center rounded-full shadow-lg"
-        style={{
-          backgroundColor: config.theme === 'dark' ? 'rgba(255,255,255,0.2)' : 'rgba(0,0,0,0.15)',
-          backdropFilter: 'blur(4px)',
-        }}
-      >
-        <svg
-          className="ml-0.5 h-5 w-5"
-          viewBox="0 0 20 20"
-          fill={config.theme === 'dark' ? '#ffffff' : '#1f2937'}
-        >
-          <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
-        </svg>
+    <div
+      className="overflow-hidden border shadow-sm"
+      style={{
+        borderRadius: `${config.border_radius}px`,
+        backgroundColor: cardBg,
+        borderColor,
+        fontFamily,
+        color: config.text_color,
+      }}
+    >
+      <div className="relative" style={{ aspectRatio: '16/9', background: '#000' }}>
+        <video
+          src={videoUrl}
+          className="h-full w-full object-cover"
+          controls
+          playsInline
+          preload="metadata"
+          muted
+        />
+      </div>
+      <div className="p-4">
+        {config.show_rating && (
+          <div className="mb-2">
+            <StarRating rating={testimonial.rating} color={config.primary_color} />
+          </div>
+        )}
+        <p className="text-sm leading-relaxed" style={{ color: config.text_color }}>
+          &ldquo;{testimonial.text.substring(0, 100)}...&rdquo;
+        </p>
+        <div className="mt-3 flex items-center gap-2">
+          {config.show_avatar && (
+            <Avatar
+              initials={testimonial.initials}
+              color={config.primary_color}
+              bgColor={config.theme === 'dark' ? lightenColor(config.background_color, 20) : hexToRgba(config.primary_color, 0.1)}
+            />
+          )}
+          <div>
+            <p className="text-sm font-semibold" style={{ color: config.text_color }}>{testimonial.name}</p>
+            {config.show_company && (
+              <p className="text-xs opacity-70">{testimonial.company}</p>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -202,9 +260,12 @@ export function TemplatePreview({
       {layout === 'grid' && (
         <div style={{ display: 'grid', gridTemplateColumns: compact ? 'repeat(2, 1fr)' : 'repeat(3, 1fr)', gap: '16px' }}>
           {testimonials.map((t, i) => (
-            <div key={i} className="relative">
-              <TestimonialCard testimonial={t} config={config} />
-              {isVideo && i === 0 && <VideoPlayOverlay config={config} />}
+            <div key={i}>
+              {isVideo && i < 2 ? (
+                <VideoTestimonialCard testimonial={t} config={config} videoIndex={i} />
+              ) : (
+                <TestimonialCard testimonial={t} config={config} />
+              )}
             </div>
           ))}
         </div>
@@ -216,10 +277,12 @@ export function TemplatePreview({
             <div
               key={i}
               style={{ flex: compact ? '0 0 90%' : '0 0 calc(33.333% - 11px)', minWidth: 0 }}
-              className="relative"
             >
-              <TestimonialCard testimonial={t} config={config} />
-              {isVideo && i === 0 && <VideoPlayOverlay config={config} />}
+              {isVideo && i < 2 ? (
+                <VideoTestimonialCard testimonial={t} config={config} videoIndex={i} />
+              ) : (
+                <TestimonialCard testimonial={t} config={config} />
+              )}
             </div>
           ))}
         </div>
@@ -228,18 +291,24 @@ export function TemplatePreview({
       {layout === 'wall' && (
         <div style={{ columnCount: compact ? 2 : 3, columnGap: '16px' }}>
           {testimonials.map((t, i) => (
-            <div key={i} className="relative mb-4 break-inside-avoid">
-              <TestimonialCard testimonial={t} config={config} />
-              {isVideo && i === 0 && <VideoPlayOverlay config={config} />}
+            <div key={i} className="mb-4 break-inside-avoid">
+              {isVideo && i < 2 ? (
+                <VideoTestimonialCard testimonial={t} config={config} videoIndex={i} />
+              ) : (
+                <TestimonialCard testimonial={t} config={config} />
+              )}
             </div>
           ))}
         </div>
       )}
 
       {layout === 'single' && (
-        <div className="relative mx-auto max-w-xl">
-          <TestimonialCard testimonial={testimonials[0]} config={config} />
-          {isVideo && <VideoPlayOverlay config={config} />}
+        <div className="mx-auto max-w-xl">
+          {isVideo ? (
+            <VideoTestimonialCard testimonial={testimonials[0]} config={config} videoIndex={0} />
+          ) : (
+            <TestimonialCard testimonial={testimonials[0]} config={config} />
+          )}
         </div>
       )}
 
