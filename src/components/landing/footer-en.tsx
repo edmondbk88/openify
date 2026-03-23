@@ -8,6 +8,12 @@ const productLinks = [
   { label: 'Blog', href: '/en/blog' },
   { label: 'Guides', href: '/en/guides' },
   { label: 'Downloads', href: '/en/downloads' },
+  { label: 'Case Studies', href: '/en/case-studies' },
+  { label: 'ROI Calculator', href: '/en/roi-calculator' },
+  { label: 'Social Proof Report', href: '/en/state-of-social-proof-2026' },
+  { label: 'Affiliates', href: '/en/affiliates' },
+  { label: 'Verified Badge', href: '/en/verified' },
+  { label: 'Agencies', href: '/en/agencies' },
 ]
 
 const legalLinks = [

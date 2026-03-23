@@ -129,6 +129,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: bilingual('/descargas', '/en/downloads'),
     },
     {
+      url: `${baseUrl}/calculadora-roi`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      alternates: bilingual('/calculadora-roi', '/en/roi-calculator'),
+    },
+    {
+      url: `${baseUrl}/informe-prueba-social-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      alternates: bilingual('/informe-prueba-social-2026', '/en/state-of-social-proof-2026'),
+    },
+    {
+      url: `${baseUrl}/casos-de-exito`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      alternates: bilingual('/casos-de-exito', '/en/case-studies'),
+    },
+    {
       url: `${baseUrl}/guias`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -176,6 +197,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.7,
       alternates: bilingual('/guias/google-tag-manager', '/en/guides/google-tag-manager'),
+    },
+    {
+      url: `${baseUrl}/afiliados`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: bilingual('/afiliados', '/en/affiliates'),
+    },
+    {
+      url: `${baseUrl}/verificado-badge`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: bilingual('/verificado-badge', '/en/verified'),
+    },
+    {
+      url: `${baseUrl}/agencias`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      alternates: bilingual('/agencias', '/en/agencies'),
     },
   ]
 
@@ -367,6 +409,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: bilingual('/descargas', '/en/downloads'),
     },
     {
+      url: `${baseUrl}/en/roi-calculator`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: bilingual('/calculadora-roi', '/en/roi-calculator'),
+    },
+    {
+      url: `${baseUrl}/en/state-of-social-proof-2026`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: bilingual('/informe-prueba-social-2026', '/en/state-of-social-proof-2026'),
+    },
+    {
+      url: `${baseUrl}/en/case-studies`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: bilingual('/casos-de-exito', '/en/case-studies'),
+    },
+    {
       url: `${baseUrl}/en/guides`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
@@ -414,6 +477,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.6,
       alternates: bilingual('/guias/google-tag-manager', '/en/guides/google-tag-manager'),
+    },
+    {
+      url: `${baseUrl}/en/affiliates`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+      alternates: bilingual('/afiliados', '/en/affiliates'),
+    },
+    {
+      url: `${baseUrl}/en/verified`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+      alternates: bilingual('/verificado-badge', '/en/verified'),
+    },
+    {
+      url: `${baseUrl}/en/agencies`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: bilingual('/agencias', '/en/agencies'),
     },
   ]
 

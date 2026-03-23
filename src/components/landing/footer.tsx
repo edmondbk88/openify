@@ -11,6 +11,12 @@ const productLinks = [
   { label: 'Industrias', href: '/testimonios-para' },
   { label: 'Guias', href: '/guias' },
   { label: 'Descargas', href: '/descargas' },
+  { label: 'Casos de Exito', href: '/casos-de-exito' },
+  { label: 'Calculadora ROI', href: '/calculadora-roi' },
+  { label: 'Informe Prueba Social', href: '/informe-prueba-social-2026' },
+  { label: 'Afiliados', href: '/afiliados' },
+  { label: 'Badge Verificado', href: '/verificado-badge' },
+  { label: 'Agencias', href: '/agencias' },
 ]
 
 const legalLinks = [
