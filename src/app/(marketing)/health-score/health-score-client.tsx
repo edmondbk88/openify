@@ -190,7 +190,7 @@ export default function HealthScoreClient() {
                 Recopila testimonios verificados, muestralos con widgets profesionales y sube tu puntuacion de prueba social.
               </p>
               <Link
-                href="/register"
+                href="/registro"
                 className="mt-6 inline-block rounded-lg bg-white px-8 py-3 text-sm font-semibold text-indigo-600 transition-colors hover:bg-indigo-50"
               >
                 Empieza gratis

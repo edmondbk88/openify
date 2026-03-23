@@ -260,7 +260,7 @@ export default function PricingPageEn() {
                     ))}
                   </ul>
                   <Link
-                    href="/registro"
+                    href="/en/register"
                     className={`mt-8 inline-flex h-11 items-center justify-center rounded-lg text-sm font-semibold transition-colors ${
                       plan.highlighted
                         ? 'bg-indigo-600 text-white hover:bg-indigo-700'

@@ -170,7 +170,7 @@ export default async function IndustryPageEn({ params }: IndustryPageProps) {
           </p>
           <div className="mt-8 flex justify-center gap-4">
             <Link
-              href="/registro"
+              href="/en/register"
               className="inline-flex items-center rounded-lg bg-indigo-600 px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700"
             >
               {industry.ctaText}
@@ -298,7 +298,7 @@ export default async function IndustryPageEn({ params }: IndustryPageProps) {
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/registro"
+              href="/en/register"
               className="inline-flex items-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-indigo-600 shadow-sm transition-colors hover:bg-indigo-50"
             >
               Create free account

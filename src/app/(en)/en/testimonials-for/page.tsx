@@ -178,7 +178,7 @@ export default function TestimonialsByIndustryPage() {
             Start for free today and discover how testimonials can transform your business.
           </p>
           <Link
-            href="/registro"
+            href="/en/register"
             className="mt-8 inline-flex items-center rounded-lg bg-white px-6 py-3 text-base font-semibold text-indigo-600 shadow-sm transition-colors hover:bg-indigo-50"
           >
             Create free account

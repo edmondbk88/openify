@@ -99,7 +99,7 @@ export default function ZapierIntegrationPage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
-                href="/register"
+                href="/registro"
                 className="rounded-lg bg-indigo-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
               >
                 Crear cuenta gratis
@@ -309,7 +309,7 @@ export default function ZapierIntegrationPage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link
-                href="/register"
+                href="/registro"
                 className="rounded-lg bg-white px-6 py-3 text-sm font-medium text-indigo-600 transition-colors hover:bg-indigo-50"
               >
                 Crear cuenta gratis

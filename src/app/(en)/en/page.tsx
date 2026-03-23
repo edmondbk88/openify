@@ -51,7 +51,7 @@ function Hero() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/registro"
+              href="/en/register"
               className="inline-flex h-12 w-full items-center justify-center rounded-lg bg-indigo-600 px-8 text-base font-semibold text-white shadow-lg shadow-indigo-200 transition-all hover:bg-indigo-700 hover:shadow-xl hover:shadow-indigo-200 sm:w-auto"
             >
               Get Started Free
@@ -400,7 +400,7 @@ function MiniSiteShowcase() {
 
             <div className="mt-10">
               <Link
-                href="/registro"
+                href="/en/register"
                 className="inline-flex h-12 items-center rounded-lg bg-white px-8 text-base font-semibold text-indigo-700 shadow-lg transition-all hover:bg-indigo-50 hover:shadow-xl"
               >
                 Create your mini site free
@@ -758,7 +758,7 @@ function Pricing() {
                 ))}
               </ul>
               <Link
-                href="/registro"
+                href="/en/register"
                 className={`mt-8 inline-flex h-11 items-center justify-center rounded-lg text-sm font-semibold transition-colors ${
                   plan.highlighted
                     ? 'bg-indigo-600 text-white hover:bg-indigo-700'
@@ -868,7 +868,7 @@ function CtaSection() {
         </p>
         <div className="mt-10">
           <Link
-            href="/registro"
+            href="/en/register"
             className="inline-flex h-12 items-center rounded-lg bg-white px-8 text-base font-semibold text-indigo-600 shadow-lg transition-all hover:bg-indigo-50 hover:shadow-xl"
           >
             Create free account

@@ -191,7 +191,7 @@ export default function CertificacionPage() {
             Crea tu cuenta gratuita, recopila testimonios y obtén tu primera insignia Bronze con solo 5 opiniones.
           </p>
           <Link
-            href="/register"
+            href="/registro"
             className="mt-6 inline-block rounded-lg bg-white px-8 py-3 text-sm font-semibold text-indigo-600 transition-colors hover:bg-indigo-50"
           >
             Crear cuenta gratis

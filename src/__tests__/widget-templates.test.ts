@@ -1,8 +1,8 @@
 import { widgetTemplates, TEMPLATE_CATEGORIES } from '@/lib/widget-templates'
 
 describe('Widget Templates', () => {
-  it('has 65 templates', () => {
-    expect(widgetTemplates.length).toBe(65)
+  it('has 80 templates', () => {
+    expect(widgetTemplates.length).toBe(80)
   })
 
   it('has no duplicate IDs', () => {
