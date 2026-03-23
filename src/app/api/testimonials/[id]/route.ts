@@ -2,8 +2,12 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { z } from 'zod'
+import { Resend } from 'resend'
 import { triggerWebhook } from '@/lib/webhook'
 import { getCertificationTier } from '@/lib/certification'
+import { getEmailTemplates } from '@/lib/email-templates'
+
+function getResend() { return new Resend(process.env.RESEND_API_KEY) }
 
 const updateTestimonialSchema = z.object({
   status: z.enum(['pending', 'approved', 'rejected']).optional(),
@@ -95,6 +99,41 @@ export async function PATCH(
         }
       } catch {
         // silent fail
+      }
+    }
+
+    // Send email notification when testimonial is approved
+    if (parsed.data.status === 'approved' && updated.author_email) {
+      try {
+        const admin = createAdminClient()
+        const { data: proj } = await admin
+          .from('projects')
+          .select('name, user_id')
+          .eq('id', testimonial.project_id)
+          .single()
+
+        if (proj) {
+          // Get project owner's locale for email language
+          const { data: ownerProfile } = await admin
+            .from('profiles')
+            .select('locale')
+            .eq('id', proj.user_id)
+            .single()
+
+          const locale = (ownerProfile?.locale as 'es' | 'en') || 'es'
+          const templates = getEmailTemplates(locale)
+
+          await getResend().emails.send({
+            from: 'Opinafy <hola@opinafy.com>',
+            to: updated.author_email,
+            replyTo: 'hola@opinafy.com',
+            subject: locale === 'en' ? `Your testimonial has been approved - ${proj.name}` : `Tu testimonio ha sido aprobado - ${proj.name}`,
+            html: templates.testimonialApproved(proj.name, updated.author_name),
+            headers: { 'List-Unsubscribe': '<mailto:hola@opinafy.com?subject=unsubscribe>' },
+          })
+        }
+      } catch {
+        // silent fail — email is non-critical
       }
     }
 
