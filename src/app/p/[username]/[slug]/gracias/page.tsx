@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/server'
 import type { Project } from '@/types'
+import { detectLocale, getCollectionTexts } from '@/lib/collection-translations'
 
 interface PageProps {
   params: Promise<{ username: string; slug: string }>
@@ -35,12 +37,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { username, slug } = await params
   const project = await getProject(username, slug)
 
+  const headersList = await headers()
+  const acceptLang = headersList.get('accept-language') || 'es'
+  const locale = detectLocale(acceptLang)
+  const t = getCollectionTexts(locale)
+
   if (!project) {
-    return { title: 'No encontrado' }
+    return { title: t.metaNotFound }
   }
 
   return {
-    title: `Gracias - ${project.name}`,
+    title: `${t.metaThanks} - ${project.name}`,
     robots: { index: false, follow: false },
   }
 }
@@ -53,6 +60,11 @@ export default async function GraciasPage({ params, searchParams }: PageProps) {
   if (!project) {
     notFound()
   }
+
+  const headersList = await headers()
+  const acceptLang = headersList.get('accept-language') || 'es'
+  const locale = detectLocale(acceptLang)
+  const t = getCollectionTexts(locale)
 
   const isVerificationPending = verificacion === 'pendiente'
 
@@ -79,13 +91,13 @@ export default async function GraciasPage({ params, searchParams }: PageProps) {
             </div>
 
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-              Revisa tu bandeja de entrada
+              {t.graciasCheckInbox}
             </h1>
             <p className="mt-4 text-gray-600">
-              Te hemos enviado un email de verificación. Revisa tu bandeja de entrada y haz clic en el enlace para confirmar tu testimonio.
+              {t.graciasVerificationSent}
             </p>
             <p className="mt-2 text-sm text-gray-500">
-              Si no ves el email, revisa tu carpeta de spam.
+              {t.graciasCheckSpam}
             </p>
           </>
         ) : (
@@ -134,7 +146,7 @@ export default async function GraciasPage({ params, searchParams }: PageProps) {
                 d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
               />
             </svg>
-            Volver
+            {t.graciasBack}
           </Link>
         </div>
 

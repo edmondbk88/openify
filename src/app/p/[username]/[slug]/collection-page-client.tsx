@@ -2,6 +2,7 @@
 
 import { useRouter } from 'next/navigation'
 import { CollectionForm } from '@/components/collection/collection-form'
+import type { CollectionLocale } from '@/lib/collection-translations'
 
 interface CollectionPageClientProps {
   username: string
@@ -9,6 +10,7 @@ interface CollectionPageClientProps {
   projectId: string
   brandColor: string
   allowVideo?: boolean
+  locale: CollectionLocale
 }
 
 export function CollectionPageClient({
@@ -17,6 +19,7 @@ export function CollectionPageClient({
   projectId,
   brandColor,
   allowVideo = false,
+  locale,
 }: CollectionPageClientProps) {
   const router = useRouter()
 
@@ -25,6 +28,7 @@ export function CollectionPageClient({
       projectId={projectId}
       brandColor={brandColor}
       allowVideo={allowVideo}
+      locale={locale}
       onSuccess={(verificationPending) => {
         const params = verificationPending ? '?verificacion=pendiente' : ''
         router.push(`/p/${username}/${slug}/gracias${params}`)

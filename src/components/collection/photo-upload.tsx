@@ -4,6 +4,7 @@ import { useCallback, useRef, useState } from 'react'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { Spinner } from '@/components/ui/spinner'
+import { getCollectionTexts, type CollectionLocale } from '@/lib/collection-translations'
 
 const ACCEPTED_TYPES = ['image/jpeg', 'image/png', 'image/webp']
 const MAX_SIZE_BYTES = 5 * 1024 * 1024 // 5MB
@@ -12,9 +13,11 @@ interface PhotoUploadProps {
   value?: string
   onChange: (url: string | undefined) => void
   brandColor?: string
+  locale?: CollectionLocale
 }
 
-export function PhotoUpload({ value, onChange, brandColor }: PhotoUploadProps) {
+export function PhotoUpload({ value, onChange, brandColor, locale = 'es' }: PhotoUploadProps) {
+  const t = getCollectionTexts(locale)
   const inputRef = useRef<HTMLInputElement>(null)
   const [uploading, setUploading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -25,12 +28,12 @@ export function PhotoUpload({ value, onChange, brandColor }: PhotoUploadProps) {
       setError(null)
 
       if (!ACCEPTED_TYPES.includes(file.type)) {
-        setError('Formato no soportado. Usa JPG, PNG o WebP.')
+        setError(t.photoFormatError)
         return
       }
 
       if (file.size > MAX_SIZE_BYTES) {
-        setError('La imagen no puede superar los 5MB.')
+        setError(t.photoSizeError)
         return
       }
 
@@ -47,20 +50,20 @@ export function PhotoUpload({ value, onChange, brandColor }: PhotoUploadProps) {
 
         if (!res.ok) {
           const data = await res.json().catch(() => null)
-          throw new Error(data?.error || 'Error al subir la imagen')
+          throw new Error(data?.error || t.photoUploadError)
         }
 
         const data = await res.json()
         onChange(data.url)
       } catch (err) {
         setError(
-          err instanceof Error ? err.message : 'Error al subir la imagen'
+          err instanceof Error ? err.message : t.photoUploadError
         )
       } finally {
         setUploading(false)
       }
     },
-    [onChange]
+    [onChange, t]
   )
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -92,7 +95,7 @@ export function PhotoUpload({ value, onChange, brandColor }: PhotoUploadProps) {
   return (
     <div className="w-full">
       <label className="mb-1.5 block text-sm font-medium text-gray-700">
-        Foto (opcional)
+        {t.photoLabel}
       </label>
 
       {value ? (
@@ -100,7 +103,7 @@ export function PhotoUpload({ value, onChange, brandColor }: PhotoUploadProps) {
           <div className="relative h-20 w-20 overflow-hidden rounded-full border-2 border-gray-200">
             <Image
               src={value}
-              alt="Foto de perfil"
+              alt={t.photoAlt}
               width={80}
               height={80}
               className="h-full w-full object-cover"
@@ -111,7 +114,7 @@ export function PhotoUpload({ value, onChange, brandColor }: PhotoUploadProps) {
             onClick={handleRemove}
             className="text-sm text-red-600 hover:text-red-700 underline"
           >
-            Eliminar foto
+            {t.photoRemove}
           </button>
         </div>
       ) : (
@@ -137,7 +140,7 @@ export function PhotoUpload({ value, onChange, brandColor }: PhotoUploadProps) {
             uploading && 'pointer-events-none opacity-60'
           )}
           style={dragOver && brandColor ? { borderColor: brandColor } : undefined}
-          aria-label="Subir foto"
+          aria-label={t.photoAriaLabel}
         >
           {uploading ? (
             <Spinner className="h-6 w-6 text-gray-400" />
@@ -161,7 +164,7 @@ export function PhotoUpload({ value, onChange, brandColor }: PhotoUploadProps) {
                   d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"
                 />
               </svg>
-              <span className="mt-1 text-xs text-gray-500">Subir</span>
+              <span className="mt-1 text-xs text-gray-500">{t.photoUpload}</span>
             </>
           )}
         </div>

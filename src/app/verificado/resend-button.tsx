@@ -1,12 +1,15 @@
 'use client'
 
 import { useState } from 'react'
+import { getCollectionTexts, type CollectionLocale } from '@/lib/collection-translations'
 
 interface Props {
   testimonialId: string
+  locale?: CollectionLocale
 }
 
-export function ResendVerificationButton({ testimonialId }: Props) {
+export function ResendVerificationButton({ testimonialId, locale = 'es' }: Props) {
+  const t = getCollectionTexts(locale)
   const [loading, setLoading] = useState(false)
   const [sent, setSent] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -25,13 +28,13 @@ export function ResendVerificationButton({ testimonialId }: Props) {
       const data = await res.json()
 
       if (!res.ok) {
-        setError(data.error || 'Error al reenviar el email')
+        setError(data.error || t.verificadoResendError)
         return
       }
 
       setSent(true)
     } catch {
-      setError('Error al reenviar el email. Inténtalo de nuevo.')
+      setError(t.verificadoResendRetry)
     } finally {
       setLoading(false)
     }
@@ -40,7 +43,7 @@ export function ResendVerificationButton({ testimonialId }: Props) {
   if (sent) {
     return (
       <p className="text-sm font-medium text-green-600">
-        ¡Email de verificación reenviado! Revisa tu bandeja de entrada.
+        {t.verificadoResent}
       </p>
     )
   }
@@ -52,7 +55,7 @@ export function ResendVerificationButton({ testimonialId }: Props) {
         disabled={loading}
         className="inline-flex items-center gap-2 rounded-lg bg-amber-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
       >
-        {loading ? 'Reenviando...' : 'Reenviar email de verificación'}
+        {loading ? t.verificadoResending : t.verificadoResend}
       </button>
       {error && (
         <p className="mt-3 text-sm text-red-600">{error}</p>

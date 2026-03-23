@@ -1,9 +1,11 @@
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import Link from 'next/link'
+import { detectLocale, getCollectionTexts } from '@/lib/collection-translations'
 import { ResendVerificationButton } from './resend-button'
 
 export const metadata: Metadata = {
-  title: 'Verificación - Opinafy',
+  title: 'Verification - Opinafy',
   robots: { index: false, follow: false },
 }
 
@@ -13,6 +15,11 @@ interface PageProps {
 
 export default async function VerificadoPage({ searchParams }: PageProps) {
   const { estado, id } = await searchParams
+
+  const headersList = await headers()
+  const acceptLang = headersList.get('accept-language') || 'es'
+  const locale = detectLocale(acceptLang)
+  const t = getCollectionTexts(locale)
 
   const isSuccess = estado === 'ok'
   const isAlreadyVerified = estado === 'ya_verificado'
@@ -40,10 +47,10 @@ export default async function VerificadoPage({ searchParams }: PageProps) {
               </svg>
             </div>
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-              ¡Tu testimonio ha sido verificado!
+              {t.verificadoSuccess}
             </h1>
             <p className="mt-4 text-gray-600">
-              Gracias por verificar tu testimonio. El propietario del negocio lo revisará pronto.
+              {t.verificadoSuccessDesc}
             </p>
           </>
         ) : isAlreadyVerified ? (
@@ -65,10 +72,10 @@ export default async function VerificadoPage({ searchParams }: PageProps) {
               </svg>
             </div>
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-              Testimonio ya verificado
+              {t.verificadoAlready}
             </h1>
             <p className="mt-4 text-gray-600">
-              Este testimonio ya ha sido verificado anteriormente. No necesitas hacer nada más.
+              {t.verificadoAlreadyDesc}
             </p>
           </>
         ) : isExpired ? (
@@ -90,14 +97,14 @@ export default async function VerificadoPage({ searchParams }: PageProps) {
               </svg>
             </div>
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-              Tu enlace de verificación ha expirado
+              {t.verificadoExpired}
             </h1>
             <p className="mt-4 text-gray-600">
-              El enlace de verificación tiene una validez de 7 días. Puedes solicitar uno nuevo haciendo clic en el botón de abajo.
+              {t.verificadoExpiredDesc}
             </p>
             {id && (
               <div className="mt-6">
-                <ResendVerificationButton testimonialId={id} />
+                <ResendVerificationButton testimonialId={id} locale={locale} />
               </div>
             )}
           </>
@@ -120,10 +127,10 @@ export default async function VerificadoPage({ searchParams }: PageProps) {
               </svg>
             </div>
             <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
-              Error de verificación
+              {t.verificadoError}
             </h1>
             <p className="mt-4 text-gray-600">
-              No se pudo verificar el testimonio. El enlace puede ser inválido o haber expirado.
+              {t.verificadoErrorDesc}
             </p>
           </>
         )}
@@ -133,7 +140,7 @@ export default async function VerificadoPage({ searchParams }: PageProps) {
             href="https://opinafy.com"
             className="inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
-            Ir a Opinafy
+            {t.verificadoGoTo}
           </Link>
         </div>
       </div>

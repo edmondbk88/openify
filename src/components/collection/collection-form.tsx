@@ -10,12 +10,14 @@ import { StarInput } from './star-input'
 import { PhotoUpload } from './photo-upload'
 import { VideoUpload } from './video-upload'
 import { AudioUpload } from './audio-upload'
+import { getCollectionTexts, type CollectionLocale } from '@/lib/collection-translations'
 
 interface CollectionFormProps {
   projectId: string
   brandColor: string
   onSuccess: (verificationPending: boolean) => void
   allowVideo?: boolean
+  locale?: CollectionLocale
 }
 
 interface FormData {
@@ -41,7 +43,9 @@ export function CollectionForm({
   brandColor,
   onSuccess,
   allowVideo = false,
+  locale = 'es',
 }: CollectionFormProps) {
+  const t = getCollectionTexts(locale)
   const { toast } = useToast()
   const [loading, setLoading] = useState(false)
   const [photoUrl, setPhotoUrl] = useState<string | undefined>()
@@ -93,7 +97,7 @@ export function CollectionForm({
         }
       }
       if (formData.rating === 0) {
-        fieldErrors.rating = 'Selecciona una calificación'
+        fieldErrors.rating = t.ratingError
       }
       setErrors(fieldErrors)
       return
@@ -116,14 +120,14 @@ export function CollectionForm({
       const data = await res.json().catch(() => null)
 
       if (!res.ok) {
-        throw new Error(data?.error || 'Error al enviar el testimonio')
+        throw new Error(data?.error || t.submitError)
       }
 
-      toast('¡Testimonio enviado con éxito! Gracias.', 'success')
+      toast(t.submitSuccess, 'success')
       onSuccess(!!data?.verification_pending)
     } catch (err) {
       toast(
-        err instanceof Error ? err.message : 'Error al enviar el testimonio',
+        err instanceof Error ? err.message : t.submitError,
         'error'
       )
     } finally {
@@ -139,14 +143,15 @@ export function CollectionForm({
           value={photoUrl}
           onChange={setPhotoUrl}
           brandColor={brandColor}
+          locale={locale}
         />
       </div>
 
       {/* Name */}
       <Input
         name="author_name"
-        label="Tu nombre *"
-        placeholder="Ej: María García"
+        label={t.name}
+        placeholder={t.namePlaceholder}
         value={formData.author_name}
         onChange={(e) => updateField('author_name', e.target.value)}
         error={errors.author_name}
@@ -156,13 +161,13 @@ export function CollectionForm({
       {/* Email */}
       <Input
         name="author_email"
-        label="Email"
+        label={t.email}
         type="email"
-        placeholder="tu@email.com"
+        placeholder={t.emailPlaceholder}
         value={formData.author_email}
         onChange={(e) => updateField('author_email', e.target.value)}
         error={errors.author_email}
-        helperText="No se mostrará públicamente"
+        helperText={t.emailHelper}
         disabled={loading}
       />
 
@@ -170,8 +175,8 @@ export function CollectionForm({
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <Input
           name="author_company"
-          label="Empresa"
-          placeholder="Ej: Acme S.L."
+          label={t.company}
+          placeholder={t.companyPlaceholder}
           value={formData.author_company}
           onChange={(e) => updateField('author_company', e.target.value)}
           error={errors.author_company}
@@ -179,8 +184,8 @@ export function CollectionForm({
         />
         <Input
           name="author_role"
-          label="Cargo"
-          placeholder="Ej: CEO"
+          label={t.role}
+          placeholder={t.rolePlaceholder}
           value={formData.author_role}
           onChange={(e) => updateField('author_role', e.target.value)}
           error={errors.author_role}
@@ -193,13 +198,14 @@ export function CollectionForm({
         value={formData.rating}
         onChange={(val) => updateField('rating', val)}
         error={errors.rating}
+        locale={locale}
       />
 
       {/* Testimonial Content */}
       <Textarea
         name="content"
-        label="Tu testimonio *"
-        placeholder="Cuéntanos sobre tu experiencia..."
+        label={t.content}
+        placeholder={t.contentPlaceholder}
         rows={4}
         value={formData.content}
         onChange={(e) => updateField('content', e.target.value)}
@@ -211,17 +217,17 @@ export function CollectionForm({
       <div className="space-y-2">
         <div>
           <p className="text-sm font-medium text-gray-700">
-            Quieres anadir una foto?
+            {t.testimonialPhotoLabel}
           </p>
           <p className="text-xs text-gray-500">
-            Sube una foto del producto, experiencia o resultado (opcional)
+            {t.testimonialPhotoSubtitle}
           </p>
         </div>
         {testimonialPhotoUrl ? (
           <div className="relative inline-block">
             <img
               src={testimonialPhotoUrl}
-              alt="Foto del testimonio"
+              alt={t.testimonialPhotoAlt}
               className="h-32 w-auto rounded-lg border border-gray-200 object-cover"
             />
             <button
@@ -239,7 +245,7 @@ export function CollectionForm({
             <svg className="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" />
             </svg>
-            Seleccionar foto
+            {t.testimonialPhotoSelect}
             <input
               type="file"
               accept="image/*"
@@ -256,7 +262,7 @@ export function CollectionForm({
                   const data = await res.json()
                   if (data.url) setTestimonialPhotoUrl(data.url)
                 } catch {
-                  toast('Error al subir la foto', 'error')
+                  toast(t.testimonialPhotoUploadError, 'error')
                 }
               }}
             />
@@ -269,16 +275,17 @@ export function CollectionForm({
         <div className="space-y-2">
           <div>
             <p className="text-sm font-medium text-gray-700">
-              ¿Prefieres grabar un audio?
+              {t.audioLabel}
             </p>
             <p className="text-xs text-gray-500">
-              Graba un audio de hasta 3 minutos compartiendo tu experiencia
+              {t.audioSubtitle}
             </p>
           </div>
           <AudioUpload
             value={audioUrl}
             onChange={setAudioUrl}
             brandColor={brandColor}
+            locale={locale}
           />
         </div>
       )}
@@ -288,16 +295,17 @@ export function CollectionForm({
         <div className="space-y-2">
           <div>
             <p className="text-sm font-medium text-gray-700">
-              ¿Quieres grabar un video testimonio?
+              {t.videoLabel}
             </p>
             <p className="text-xs text-gray-500">
-              Graba un video de hasta 2 minutos compartiendo tu experiencia
+              {t.videoSubtitle}
             </p>
           </div>
           <VideoUpload
             value={videoUrl}
             onChange={setVideoUrl}
             brandColor={brandColor}
+            locale={locale}
           />
         </div>
       )}
@@ -310,7 +318,7 @@ export function CollectionForm({
         className="w-full"
         style={{ backgroundColor: brandColor }}
       >
-        Enviar testimonio
+        {loading ? t.submitting : t.submit}
       </Button>
     </form>
   )

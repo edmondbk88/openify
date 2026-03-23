@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 import { Spinner } from '@/components/ui/spinner'
+import { getCollectionTexts, type CollectionLocale } from '@/lib/collection-translations'
 
 type RecorderState = 'idle' | 'recording' | 'review' | 'uploading' | 'done'
 
@@ -12,9 +13,11 @@ interface AudioUploadProps {
   value?: string
   onChange: (url: string | undefined) => void
   brandColor?: string
+  locale?: CollectionLocale
 }
 
-export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
+export function AudioUpload({ value, onChange, brandColor, locale = 'es' }: AudioUploadProps) {
+  const t = getCollectionTexts(locale)
   const mediaRecorderRef = useRef<MediaRecorder | null>(null)
   const streamRef = useRef<MediaStream | null>(null)
   const chunksRef = useRef<Blob[]>([])
@@ -166,9 +169,9 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
         }
       }, 250)
     } catch {
-      setError('Necesitas dar permiso a tu microfono para grabar un audio testimonio.')
+      setError(t.audioPermissionError)
     }
-  }, [recordedUrl, stopAllTracks, drawWaveform])
+  }, [recordedUrl, stopAllTracks, drawWaveform, t])
 
   const stopRecording = useCallback(() => {
     if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
@@ -213,7 +216,7 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
 
       if (!res.ok) {
         const data = await res.json().catch(() => null)
-        throw new Error(data?.error || 'Error al subir el audio')
+        throw new Error(data?.error || t.audioUploadError)
       }
 
       const data = await res.json()
@@ -224,10 +227,10 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
       setRecordedUrl(null)
       setRecordedBlob(null)
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error al subir el audio')
+      setError(err instanceof Error ? err.message : t.audioUploadError)
       setState('review')
     }
-  }, [recordedBlob, recordedUrl, onChange])
+  }, [recordedBlob, recordedUrl, onChange, t])
 
   const handleRemove = useCallback(() => {
     onChange(undefined)
@@ -265,7 +268,7 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
           <svg className="h-7 w-7 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
           </svg>
-          <span className="text-sm font-medium text-gray-600">Grabar audio testimonio</span>
+          <span className="text-sm font-medium text-gray-600">{t.audioRecord}</span>
         </button>
       )}
 
@@ -284,7 +287,7 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
             <div className="mt-3 flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="inline-block h-3 w-3 animate-pulse rounded-full bg-red-500" />
-                <span className="text-xs font-semibold text-white">Grabando</span>
+                <span className="text-xs font-semibold text-white">{t.audioRecording}</span>
               </div>
               <span className={cn(
                 'text-sm font-mono font-semibold',
@@ -310,7 +313,7 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
                 <rect x="6" y="6" width="12" height="12" rx="2" />
               </svg>
-              Detener
+              {t.audioStop}
             </button>
           </div>
         </div>
@@ -332,7 +335,7 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
               onClick={reRecord}
               className="rounded-lg border border-gray-600 px-4 py-2 text-sm font-medium text-gray-300 transition-colors hover:bg-gray-800"
             >
-              Grabar de nuevo
+              {t.audioReRecord}
             </button>
             <button
               type="button"
@@ -340,7 +343,7 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
               className="rounded-lg px-5 py-2 text-sm font-medium text-white transition-colors hover:opacity-90"
               style={{ backgroundColor: accentColor }}
             >
-              Usar este audio
+              {t.audioUse}
             </button>
           </div>
         </div>
@@ -351,7 +354,7 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
         <div className="overflow-hidden rounded-xl bg-gray-900">
           <div className="flex w-full flex-col items-center justify-center gap-4 p-8">
             <Spinner className="h-8 w-8 text-white" />
-            <p className="text-sm text-gray-300">Subiendo audio...</p>
+            <p className="text-sm text-gray-300">{t.audioUploading}</p>
             <div className="mx-auto w-48 overflow-hidden rounded-full bg-gray-700">
               <div
                 className="h-2 rounded-full transition-all duration-300"
@@ -379,13 +382,13 @@ export function AudioUpload({ value, onChange, brandColor }: AudioUploadProps) {
             </div>
           </div>
           <div className="flex items-center justify-between px-4 py-2">
-            <span className="text-xs font-medium text-green-600">Audio grabado correctamente</span>
+            <span className="text-xs font-medium text-green-600">{t.audioDone}</span>
             <button
               type="button"
               onClick={handleRemove}
               className="text-sm text-red-600 underline hover:text-red-700"
             >
-              Eliminar
+              {t.audioRemove}
             </button>
           </div>
         </div>

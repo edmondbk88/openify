@@ -1,11 +1,13 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
+import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import type { Project, Plan } from '@/types'
 import { PLAN_LIMITS } from '@/lib/constants'
 import Image from 'next/image'
 import { CollectionPageClient } from './collection-page-client'
+import { detectLocale, getCollectionTexts } from '@/lib/collection-translations'
 
 interface PageProps {
   params: Promise<{ username: string; slug: string }>
@@ -50,12 +52,17 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { username, slug } = await params
   const project = await getProject(username, slug)
 
+  const headersList = await headers()
+  const acceptLang = headersList.get('accept-language') || 'es'
+  const locale = detectLocale(acceptLang)
+  const t = getCollectionTexts(locale)
+
   if (!project) {
-    return { title: 'No encontrado' }
+    return { title: t.metaNotFound }
   }
 
   return {
-    title: `Deja tu testimonio - ${project.name}`,
+    title: `${t.metaLeaveTestimonial} - ${project.name}`,
     description: project.collection_title,
     robots: { index: false, follow: false },
   }
@@ -68,6 +75,10 @@ export default async function CollectionPage({ params }: PageProps) {
   if (!project) {
     notFound()
   }
+
+  const headersList = await headers()
+  const acceptLang = headersList.get('accept-language') || 'es'
+  const locale = detectLocale(acceptLang)
 
   return (
     <div className="min-h-screen bg-white">
@@ -113,6 +124,7 @@ export default async function CollectionPage({ params }: PageProps) {
             projectId={project.id}
             brandColor={project.brand_color}
             allowVideo={await getAllowVideo(project.user_id)}
+            locale={locale}
           />
         </div>
 

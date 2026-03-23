@@ -1,18 +1,22 @@
 'use client'
 
 import { StarRating } from '@/components/ui/star-rating'
+import { getCollectionTexts, type CollectionLocale } from '@/lib/collection-translations'
 
 interface StarInputProps {
   value: number
   onChange: (value: number) => void
   error?: string
+  locale?: CollectionLocale
 }
 
-export function StarInput({ value, onChange, error }: StarInputProps) {
+export function StarInput({ value, onChange, error, locale = 'es' }: StarInputProps) {
+  const t = getCollectionTexts(locale)
+
   return (
     <div className="w-full">
       <label className="mb-1.5 block text-sm font-medium text-gray-700">
-        ¿Cómo calificarías tu experiencia?
+        {t.rating}
       </label>
       <div className="py-2">
         <StarRating
