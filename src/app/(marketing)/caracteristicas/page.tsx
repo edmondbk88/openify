@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 /* ────────────────────────────────────────────── */
 
 const heroStats = [
-  { value: '130+', label: 'Industrias cubiertas' },
+  { value: '160+', label: 'Industrias cubiertas' },
   { value: '65+', label: 'Plantillas personalizables' },
   { value: '7', label: 'Layouts de widget' },
   { value: '8', label: 'Plataformas de importación' },

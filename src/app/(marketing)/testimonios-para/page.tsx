@@ -7,7 +7,7 @@ import { IndustrySearch } from '@/components/landing/industry-search'
 export const metadata: Metadata = {
   title: 'Testimonios por Industria | Opinafy',
   description:
-    'Descubre cómo Opinafy ayuda a cada sector a recopilar y mostrar testimonios de clientes. Soluciones adaptadas a más de 130 industrias diferentes.',
+    'Descubre cómo Opinafy ayuda a cada sector a recopilar y mostrar testimonios de clientes. Soluciones adaptadas a más de 160 industrias diferentes.',
   keywords: [
     'testimonios para empresas',
     'testimonios por sector',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Testimonios por Industria | Opinafy',
     description:
-      'Soluciones de testimonios adaptadas a más de 130 industrias diferentes.',
+      'Soluciones de testimonios adaptadas a más de 160 industrias diferentes.',
     images: ['/og.png'],
   },
 }
@@ -136,7 +136,7 @@ export default function TestimoniosPorIndustriaPage() {
               cliente; los negocios locales se benefician de codigos QR fisicos; y las empresas
               B2B requieren testimonios que destaquen resultados medibles y ROI. Opinafy se adapta
               a cada uno de estos escenarios con plantillas, formularios y widgets disenados
-              pensando en las particularidades de mas de 130 industrias diferentes.
+              pensando en las particularidades de mas de 160 industrias diferentes.
             </p>
             <p className="mt-4 leading-relaxed">
               A continuacion encontraras una guia para cada sector con consejos especificos,

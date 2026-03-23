@@ -2,8 +2,8 @@ import { industries } from '@/lib/industry-data'
 import { industriesEn } from '@/lib/industry-data-en'
 
 describe('Industry Data - Spanish', () => {
-  it('has 130 industries', () => {
-    expect(industries.length).toBe(130)
+  it('has 160 industries', () => {
+    expect(industries.length).toBe(160)
   })
 
   it('every industry has required fields', () => {
@@ -72,8 +72,8 @@ describe('Industry Data - Spanish', () => {
 })
 
 describe('Industry Data - English', () => {
-  it('has 130 industries', () => {
-    expect(industriesEn.length).toBe(130)
+  it('has 160 industries', () => {
+    expect(industriesEn.length).toBe(160)
   })
 
   it('every industry has required fields', () => {
