@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { ResendVerificationButton } from './resend-button'
 
 export const metadata: Metadata = {
   title: 'Verificación - Opinafy',
@@ -7,14 +8,15 @@ export const metadata: Metadata = {
 }
 
 interface PageProps {
-  searchParams: Promise<{ estado?: string }>
+  searchParams: Promise<{ estado?: string; id?: string }>
 }
 
 export default async function VerificadoPage({ searchParams }: PageProps) {
-  const { estado } = await searchParams
+  const { estado, id } = await searchParams
 
   const isSuccess = estado === 'ok'
   const isAlreadyVerified = estado === 'ya_verificado'
+  const isExpired = estado === 'expirado'
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-white px-4">
@@ -68,6 +70,36 @@ export default async function VerificadoPage({ searchParams }: PageProps) {
             <p className="mt-4 text-gray-600">
               Este testimonio ya ha sido verificado anteriormente. No necesitas hacer nada más.
             </p>
+          </>
+        ) : isExpired ? (
+          <>
+            {/* Clock/Expired Icon */}
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-amber-100">
+              <svg
+                className="h-10 w-10 text-amber-600"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={2.5}
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
+            </div>
+            <h1 className="text-2xl font-bold text-gray-900 sm:text-3xl">
+              Tu enlace de verificación ha expirado
+            </h1>
+            <p className="mt-4 text-gray-600">
+              El enlace de verificación tiene una validez de 7 días. Puedes solicitar uno nuevo haciendo clic en el botón de abajo.
+            </p>
+            {id && (
+              <div className="mt-6">
+                <ResendVerificationButton testimonialId={id} />
+              </div>
+            )}
           </>
         ) : (
           <>
