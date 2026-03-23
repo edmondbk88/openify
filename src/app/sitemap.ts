@@ -257,6 +257,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
       alternates: bilingual('/ayuda', '/en/help'),
     },
+    {
+      url: `${baseUrl}/prensa`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+      alternates: bilingual('/prensa', '/en/press'),
+    },
   ]
 
   // Help center guide pages (ES)
@@ -568,6 +575,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'weekly',
       priority: 0.7,
       alternates: bilingual('/ayuda', '/en/help'),
+    },
+    {
+      url: `${baseUrl}/en/press`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+      alternates: bilingual('/prensa', '/en/press'),
     },
   ]
 
