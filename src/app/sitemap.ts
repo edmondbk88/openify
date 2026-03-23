@@ -5,6 +5,7 @@ import { widgetTemplates } from '@/lib/widget-templates'
 import { miniSiteTemplates } from '@/lib/minisite-templates'
 import { industries } from '@/lib/industry-data'
 import { industriesEn } from '@/lib/industry-data-en'
+import { cities, topIndustrySlugs } from '@/lib/cities-data'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -549,6 +550,34 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     alternates: bilingual(`/plantillas-minisitio/${template.id}`, `/en/minisite-templates/${template.id}`),
   }))
 
+  // City index page
+  const cityIndexPage: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/testimonios-en`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+  ]
+
+  // City pages (20 cities)
+  const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
+    url: `${baseUrl}/testimonios-en/${city.slug}`,
+    lastModified: contentCreatedDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+  }))
+
+  // City + Industry pages (20 cities x 20 industries = 400 pages)
+  const cityIndustryPages: MetadataRoute.Sitemap = cities.flatMap((city) =>
+    topIndustrySlugs.map((industrySlug) => ({
+      url: `${baseUrl}/testimonios-en/${city.slug}/${industrySlug}`,
+      lastModified: contentCreatedDate,
+      changeFrequency: 'monthly' as const,
+      priority: 0.5,
+    }))
+  )
+
   // Dynamic profile pages (Pro/Business users with mini sites)
   const admin = createAdminClient()
   const { data: proProfiles } = await admin
@@ -564,5 +593,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  return [...staticPages, ...englishPages, ...blogPages, ...englishBlogPages, ...templatePages, ...englishTemplatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...englishMiniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...englishIndustryIndexPage, ...englishIndustryPages, ...profilePages]
+  return [...staticPages, ...englishPages, ...blogPages, ...englishBlogPages, ...templatePages, ...englishTemplatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...englishMiniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...englishIndustryIndexPage, ...englishIndustryPages, ...cityIndexPage, ...cityPages, ...cityIndustryPages, ...profilePages]
 }
