@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { blogArticles } from '@/lib/blog-data'
 import { blogArticlesEn } from '@/lib/blog-data-en'
+import { helpGuides } from '@/lib/help-data'
+import { helpGuidesEn } from '@/lib/help-data-en'
 import { widgetTemplates } from '@/lib/widget-templates'
 import { miniSiteTemplates } from '@/lib/minisite-templates'
 import { industries } from '@/lib/industry-data'
@@ -248,7 +250,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
       alternates: bilingual('/actualizaciones', '/en/changelog'),
     },
+    {
+      url: `${baseUrl}/ayuda`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+      alternates: bilingual('/ayuda', '/en/help'),
+    },
   ]
+
+  // Help center guide pages (ES)
+  const helpPages: MetadataRoute.Sitemap = helpGuides.map((guide) => ({
+    url: `${baseUrl}/ayuda/${guide.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+    alternates: bilingual(`/ayuda/${guide.slug}`, `/en/help/${guide.slugEn}`),
+  }))
 
   // Blog pages with article.date for lastmod and hreflang alternates
   // ES and EN blog articles share the same slugs
@@ -544,7 +562,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
       alternates: bilingual('/actualizaciones', '/en/changelog'),
     },
+    {
+      url: `${baseUrl}/en/help`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.7,
+      alternates: bilingual('/ayuda', '/en/help'),
+    },
   ]
+
+  // Help center guide pages (EN)
+  const englishHelpPages: MetadataRoute.Sitemap = helpGuidesEn.map((guide) => ({
+    url: `${baseUrl}/en/help/${guide.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.6,
+    alternates: bilingual(`/ayuda/${guide.slugEs}`, `/en/help/${guide.slug}`),
+  }))
 
   const englishIndustryIndexPage: MetadataRoute.Sitemap = [
     {
@@ -637,5 +671,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.5,
   }))
 
-  return [...staticPages, ...englishPages, ...blogPages, ...englishBlogPages, ...templatePages, ...englishTemplatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...englishMiniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...englishIndustryIndexPage, ...englishIndustryPages, ...cityIndexPage, ...cityPages, ...cityIndustryPages, ...profilePages]
+  return [...staticPages, ...englishPages, ...helpPages, ...englishHelpPages, ...blogPages, ...englishBlogPages, ...templatePages, ...englishTemplatePages, ...miniSiteTemplateIndexPage, ...miniSiteTemplatePages, ...englishMiniSiteTemplatePages, ...industryIndexPage, ...industryPages, ...englishIndustryIndexPage, ...englishIndustryPages, ...cityIndexPage, ...cityPages, ...cityIndustryPages, ...profilePages]
 }

@@ -21,6 +21,7 @@ const productLinks = [
   { label: 'Certificacion', href: '/certificacion' },
   { label: 'Ranking', href: '/ranking' },
   { label: 'Actualizaciones', href: '/actualizaciones' },
+  { label: 'Ayuda', href: '/ayuda' },
 ]
 
 const legalLinks = [

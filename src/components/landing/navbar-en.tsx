@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Templates', href: '/en/templates' },
   { label: 'Industries', href: '/en/testimonials-for' },
   { label: 'Blog', href: '/en/blog' },
+  { label: 'Help', href: '/en/help' },
 ]
 
 export function NavbarEn() {
