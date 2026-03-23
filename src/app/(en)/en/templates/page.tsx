@@ -7,9 +7,9 @@ import { TemplatesGalleryEn } from './gallery-en'
 import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Testimonial Templates | 60+ Ready-to-Use Designs - Opinafy',
+  title: 'Testimonial Templates | 80+ Ready-to-Use Designs - Opinafy',
   description:
-    'Explore 60+ testimonial widget templates ready to use. Minimalist, corporate, colorful, dark, and more styles. Customize your testimonials with Opinafy.',
+    'Explore 80+ testimonial widget templates ready to use. Minimalist, corporate, colorful, dark, and more styles. Customize your testimonials with Opinafy.',
   keywords: [
     'testimonial templates',
     'testimonial widget templates',
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://opinafy.com/en/templates',
     siteName: 'Opinafy',
-    title: '60+ Testimonial Templates Ready to Use - Opinafy',
+    title: '80+ Testimonial Templates Ready to Use - Opinafy',
     description:
-      'Discover 60+ professional designs to display customer testimonials on your website. Minimalist, corporate, colorful, dark, and more.',
+      'Discover 80+ professional designs to display customer testimonials on your website. Minimalist, corporate, colorful, dark, and more.',
     images: [
       {
         url: '/og.png',
@@ -55,10 +55,10 @@ export const metadata: Metadata = {
 
 export default function TemplatesPageEn() {
   const collectionJsonLd = collectionPageSchema({
-    name: '60+ Testimonial Templates - Opinafy',
+    name: '80+ Testimonial Templates - Opinafy',
     url: 'https://opinafy.com/en/templates',
     description:
-      'Explore 60+ testimonial widget templates ready to use. Minimalist, corporate, colorful, dark, and more styles.',
+      'Explore 80+ testimonial widget templates ready to use. Minimalist, corporate, colorful, dark, and more styles.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -85,13 +85,13 @@ export default function TemplatesPageEn() {
             Template Gallery
           </span>
           <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
-            60+ Testimonial Templates{' '}
+            80+ Testimonial Templates{' '}
             <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               Ready to Use
             </span>
           </h1>
           <p className="mt-6 text-lg text-gray-600 sm:text-xl">
-            Choose from 60+ professional designs to showcase your customer testimonials.
+            Choose from 80+ professional designs to showcase your customer testimonials.
             Every template is fully customizable and adapts to any website.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3 text-sm text-gray-500">
@@ -127,7 +127,7 @@ export default function TemplatesPageEn() {
             <p className="mt-4 leading-relaxed">
               The way you present customer testimonials can make a big difference in your conversions.
               A well-designed testimonial conveys trust, professionalism, and authenticity. That is why
-              we have created a collection of 60+ professional templates organized into 8 design categories,
+              we have created a collection of 80+ professional templates organized into 8 design categories,
               so you can find exactly the style that matches your brand identity.
             </p>
             <p className="mt-4 leading-relaxed">
