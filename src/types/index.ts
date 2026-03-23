@@ -36,6 +36,7 @@ export interface Project {
   show_on_minisite: boolean
   webhook_url: string | null
   webhook_events: string[]
+  certification_tier: string | null
   created_at: string
   updated_at: string
   testimonial_count?: number

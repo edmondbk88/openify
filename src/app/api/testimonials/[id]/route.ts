@@ -3,6 +3,7 @@ import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { z } from 'zod'
 import { triggerWebhook } from '@/lib/webhook'
+import { getCertificationTier } from '@/lib/certification'
 
 const updateTestimonialSchema = z.object({
   status: z.enum(['pending', 'approved', 'rejected']).optional(),
@@ -94,6 +95,26 @@ export async function PATCH(
         }
       } catch {
         // silent fail
+      }
+    }
+
+    // Recalculate certification tier after status change
+    if (parsed.data.status === 'approved' || parsed.data.status === 'rejected') {
+      try {
+        const admin = createAdminClient()
+        const { count } = await admin
+          .from('testimonials')
+          .select('id', { count: 'exact', head: true })
+          .eq('project_id', testimonial.project_id)
+          .eq('status', 'approved')
+
+        const tier = getCertificationTier(count ?? 0)
+        await admin
+          .from('projects')
+          .update({ certification_tier: tier })
+          .eq('id', testimonial.project_id)
+      } catch {
+        // silent fail — certification update is non-critical
       }
     }
 

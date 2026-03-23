@@ -14,6 +14,8 @@ const productLinks = [
   { label: 'Affiliates', href: '/en/affiliates' },
   { label: 'Verified Badge', href: '/en/verified' },
   { label: 'Agencies', href: '/en/agencies' },
+  { label: 'Health Score', href: '/en/health-score' },
+  { label: 'Certification', href: '/en/certification' },
 ]
 
 const legalLinks = [

@@ -220,6 +220,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
       alternates: bilingual('/agencias', '/en/agencies'),
     },
+    {
+      url: `${baseUrl}/health-score`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      alternates: bilingual('/health-score', '/en/health-score'),
+    },
+    {
+      url: `${baseUrl}/certificacion`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+      alternates: bilingual('/certificacion', '/en/certification'),
+    },
   ]
 
   // Blog pages with article.date for lastmod and hreflang alternates
@@ -487,6 +501,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.7,
       alternates: bilingual('/agencias', '/en/agencies'),
+    },
+    {
+      url: `${baseUrl}/en/health-score`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: bilingual('/health-score', '/en/health-score'),
+    },
+    {
+      url: `${baseUrl}/en/certification`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: bilingual('/certificacion', '/en/certification'),
     },
   ]
 
