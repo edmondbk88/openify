@@ -104,6 +104,7 @@ export default async function MiniSiteTemplateDetailPageEn({ params }: PageProps
     name: `"${template.name}" Template - Testimonial Mini Site`,
     url: `https://opinafy.com/en/minisite-templates/${template.id}`,
     description: template.description,
+    lang: 'en',
   })
 
   return (
@@ -169,7 +170,7 @@ export default async function MiniSiteTemplateDetailPageEn({ params }: PageProps
                 <div className="h-3 w-3 rounded-full bg-red-400" />
                 <div className="h-3 w-3 rounded-full bg-yellow-400" />
                 <div className="h-3 w-3 rounded-full bg-green-400" />
-                <span className="ml-3 text-xs text-gray-400">Mini site preview</span>
+                <span className="ml-3 text-xs text-gray-500">Mini site preview</span>
               </div>
             </div>
             <div

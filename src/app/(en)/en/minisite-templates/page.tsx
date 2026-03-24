@@ -59,6 +59,7 @@ export default function MiniSiteTemplatesPageEn() {
     url: 'https://opinafy.com/en/minisite-templates',
     description:
       'Explore 30 mini site testimonial templates organized by profession. Create your professional testimonial page.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

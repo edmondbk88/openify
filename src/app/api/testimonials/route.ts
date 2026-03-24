@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { testimonialSchema } from '@/lib/validations'
-import { PLAN_LIMITS } from '@/lib/constants'
-import { Plan } from '@/types'
+import { PLAN_LIMITS, getEffectivePlan } from '@/lib/constants'
 import { Resend } from 'resend'
 import { getVerificationLevel } from '@/lib/utils'
 import { getEmailTemplates } from '@/lib/email-templates'
@@ -109,11 +108,11 @@ export async function POST(request: NextRequest) {
     // Check testimonial limit per plan
     const { data: profile } = await supabase
       .from('profiles')
-      .select('plan, locale')
+      .select('plan, locale, gifted_plan, gifted_plan_expires_at')
       .eq('id', project.user_id)
       .single()
 
-    const plan = (profile?.plan as Plan) || 'free'
+    const plan = getEffectivePlan(profile || { plan: 'free' })
     const ownerLocale = (profile?.locale === 'en' ? 'en' : 'es') as 'es' | 'en'
     const limits = PLAN_LIMITS[plan]
 

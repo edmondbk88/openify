@@ -43,7 +43,7 @@ export function Navbar() {
         {/* Desktop CTAs */}
         <div className="hidden items-center gap-3 md:flex">
           {/* Language switcher */}
-          <div className="flex items-center gap-1 text-xs font-medium text-gray-400">
+          <div className="ml-2 flex items-center gap-1.5 text-xs font-medium text-gray-500">
             <span className="text-indigo-600">ES</span>
             <span>|</span>
             <Link href="/en" className="transition-colors hover:text-indigo-600">EN</Link>

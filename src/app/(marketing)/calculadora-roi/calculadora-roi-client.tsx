@@ -119,7 +119,7 @@ export default function CalculadoraROIClient() {
                     onChange={(e) => setVisitors(Number(e.target.value) || 0)}
                     className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
                   />
-                  <p className="mt-1 text-xs text-gray-400">Visitas unicas a tu web por mes</p>
+                  <p className="mt-1 text-xs text-gray-500">Visitas unicas a tu web por mes</p>
                 </div>
 
                 <div>
@@ -136,7 +136,7 @@ export default function CalculadoraROIClient() {
                     onChange={(e) => setConversionRate(Number(e.target.value) || 0)}
                     className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
                   />
-                  <p className="mt-1 text-xs text-gray-400">Porcentaje de visitantes que compran o contratan</p>
+                  <p className="mt-1 text-xs text-gray-500">Porcentaje de visitantes que compran o contratan</p>
                 </div>
 
                 <div>
@@ -144,7 +144,7 @@ export default function CalculadoraROIClient() {
                     Valor medio del pedido / servicio
                   </label>
                   <div className="relative mt-1">
-                    <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-lg text-gray-400">&euro;</span>
+                    <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-lg text-gray-500">&euro;</span>
                     <input
                       id="avgOrder"
                       type="number"
@@ -155,7 +155,7 @@ export default function CalculadoraROIClient() {
                       className="w-full rounded-lg border border-gray-300 py-3 pl-10 pr-4 text-lg font-semibold text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
                     />
                   </div>
-                  <p className="mt-1 text-xs text-gray-400">Ingreso medio por cliente / pedido</p>
+                  <p className="mt-1 text-xs text-gray-500">Ingreso medio por cliente / pedido</p>
                 </div>
               </div>
 
@@ -232,7 +232,7 @@ export default function CalculadoraROIClient() {
               <div key={item.stat} className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm">
                 <p className="text-4xl font-extrabold text-indigo-600">{item.stat}</p>
                 <p className="mt-2 text-sm text-gray-600">{item.desc}</p>
-                <p className="mt-1 text-xs text-gray-400">Fuente: {item.src}</p>
+                <p className="mt-1 text-xs text-gray-500">Fuente: {item.src}</p>
               </div>
             ))}
           </div>

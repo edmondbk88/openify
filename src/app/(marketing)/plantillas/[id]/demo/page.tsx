@@ -82,7 +82,7 @@ export default async function DemoPage({ params }: PageProps) {
               <div className="h-3 w-3 rounded-full bg-red-400" />
               <div className="h-3 w-3 rounded-full bg-yellow-400" />
               <div className="h-3 w-3 rounded-full bg-green-400" />
-              <span className="ml-3 text-xs text-gray-400">tu-web.com — Demo con 30 testimonios</span>
+              <span className="ml-3 text-xs text-gray-500">tu-web.com — Demo con 30 testimonios</span>
             </div>
           </div>
           <DemoWidgetClient templateId={id} />

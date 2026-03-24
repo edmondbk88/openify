@@ -17,7 +17,7 @@ export default function PrivacidadPage() {
     <div className="min-h-screen bg-gray-50 py-16 px-4">
       <div className="mx-auto max-w-4xl">
         <div className="rounded-2xl bg-white p-8 shadow-sm sm:p-12">
-          <p className="mb-2 text-sm text-gray-400">
+          <p className="mb-2 text-sm text-gray-500">
             Última actualización: marzo 2026
           </p>
           <h1 className="mb-10 text-3xl font-bold text-gray-900 sm:text-4xl">

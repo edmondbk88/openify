@@ -59,7 +59,7 @@ export async function PATCH(request: NextRequest) {
   }
 
   const body = await request.json()
-  const { userId, plan, is_admin } = body
+  const { userId, plan, is_admin, gifted_plan, gifted_days } = body
 
   if (!userId) {
     return NextResponse.json({ error: 'userId requerido' }, { status: 400 })
@@ -73,6 +73,27 @@ export async function PATCH(request: NextRequest) {
   }
   if (typeof is_admin === 'boolean') {
     updates.is_admin = is_admin
+  }
+
+  // Handle gift plan
+  if (gifted_plan !== undefined) {
+    if (gifted_plan === null) {
+      // Revoke gift
+      updates.gifted_plan = null
+      updates.gifted_plan_expires_at = null
+      updates.gifted_by = null
+    } else if (['minisite', 'pro', 'business'].includes(gifted_plan) && gifted_days > 0) {
+      // Grant gift
+      const expiresAt = new Date()
+      expiresAt.setDate(expiresAt.getDate() + gifted_days)
+      updates.gifted_plan = gifted_plan
+      updates.gifted_plan_expires_at = expiresAt.toISOString()
+
+      // Get admin email
+      const supabase = await createClient()
+      const { data: { user: adminUser } } = await supabase.auth.getUser()
+      updates.gifted_by = adminUser?.email || 'admin'
+    }
   }
 
   if (Object.keys(updates).length === 0) {

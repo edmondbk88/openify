@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     languages: {
       'es': 'https://opinafy.com',
       'en': 'https://opinafy.com/en',
+      'x-default': 'https://opinafy.com',
     },
   },
   openGraph: {
@@ -331,7 +332,7 @@ function MiniSiteShowcase() {
                 <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
                 <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
                 <div className="h-2.5 w-2.5 rounded-full bg-green-400" />
-                <div className="ml-3 flex-1 rounded-md bg-white px-3 py-1 text-xs text-gray-400">
+                <div className="ml-3 flex-1 rounded-md bg-white px-3 py-1 text-xs text-gray-500">
                   opinafy.com/s/sarah-coach
                 </div>
               </div>
@@ -347,7 +348,7 @@ function MiniSiteShowcase() {
                       <StarIcon key={i} className="h-3.5 w-3.5 text-amber-400" />
                     ))}
                     <span className="ml-1 text-xs font-medium text-gray-600">4.9</span>
-                    <span className="text-xs text-gray-400">(47)</span>
+                    <span className="text-xs text-gray-500">(47)</span>
                   </div>
                 </div>
                 <div className="mt-5 space-y-3">
@@ -513,7 +514,7 @@ function TestimonialCard({ t }: { t: typeof sampleTestimonials[number] }) {
             <p className="text-xs text-gray-500">{t.company}</p>
             {t.is_company_verified && <VerifiedBadge />}
           </div>
-          <p className="text-xs text-gray-400">{t.role}</p>
+          <p className="text-xs text-gray-500">{t.role}</p>
         </div>
       </div>
     </div>
@@ -625,7 +626,7 @@ function TestimonialsPreview() {
           </div>
         </div>
 
-        <p className="mt-8 text-center text-xs italic text-gray-400">
+        <p className="mt-8 text-center text-xs italic text-gray-500">
           * The testimonials shown are demo examples of how they would look on your website.
         </p>
 
@@ -957,8 +958,8 @@ function CtaSection() {
 /* ── Page ── */
 
 export default function HomePageEn() {
-  const orgJsonLd = organizationSchema()
-  const siteJsonLd = webSiteSchema()
+  const orgJsonLd = organizationSchema({ lang: 'en' })
+  const siteJsonLd = webSiteSchema({ lang: 'en' })
   const appJsonLd = softwareApplicationSchema()
   const breadcrumbJsonLd = breadcrumbSchema([
     { name: 'Home', url: 'https://opinafy.com/en' },

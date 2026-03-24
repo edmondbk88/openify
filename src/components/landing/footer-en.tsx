@@ -114,14 +114,14 @@ export function FooterEn() {
         </div>
 
         {/* Language switcher */}
-        <div className="mt-8 flex items-center justify-center gap-3 text-sm text-gray-400">
+        <div className="mt-8 flex items-center justify-center gap-3 text-sm text-gray-500">
           <Link href="/" className="transition-colors hover:text-indigo-600">Espa&ntilde;ol</Link>
           <span>|</span>
           <span className="font-medium text-indigo-600">English</span>
         </div>
 
         <div className="mt-6 border-t border-gray-100 pt-8 text-center">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-500">
             &copy; 2026 Opinafy. All rights reserved.
           </p>
         </div>

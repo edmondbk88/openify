@@ -72,6 +72,7 @@ export default function ComparePage() {
     url: 'https://opinafy.com/en/compare',
     description:
       'Compare Opinafy with the best testimonial tools on the market. Detailed analysis, pricing, and features.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

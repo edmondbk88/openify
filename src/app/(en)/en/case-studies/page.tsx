@@ -210,7 +210,7 @@ export default function CaseStudiesPage() {
                         Case #{idx + 1}
                       </span>
                       <span className="text-sm text-gray-500">{cs.industry}</span>
-                      <span className="text-sm text-gray-400">|</span>
+                      <span className="text-sm text-gray-500">|</span>
                       <span className="text-sm text-gray-500">{cs.location}</span>
                     </div>
                     <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl">{cs.headline}</h2>

@@ -29,7 +29,7 @@ export function CitySearch({ cities }: { cities: CityItem[] }) {
       {/* Search bar */}
       <div className="relative mx-auto max-w-xl">
         <svg
-          className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
+          className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-500"
           fill="none"
           viewBox="0 0 24 24"
           strokeWidth={1.5}
@@ -51,7 +51,7 @@ export function CitySearch({ cities }: { cities: CityItem[] }) {
         {query && (
           <button
             onClick={() => setQuery('')}
-            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-1 text-gray-400 hover:bg-gray-100 hover:text-gray-600"
+            className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-1 text-gray-500 hover:bg-gray-100 hover:text-gray-600"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />

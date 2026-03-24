@@ -44,7 +44,7 @@ export function TemplateCard({ template }: { template: WidgetTemplate }) {
           <span className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${categoryBadgeColors[template.category] || 'bg-gray-100 text-gray-700'}`}>
             {template.category}
           </span>
-          <span className="text-xs text-gray-400">
+          <span className="text-xs text-gray-500">
             {layoutLabels[template.layout]}
           </span>
         </div>

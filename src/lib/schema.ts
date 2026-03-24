@@ -8,15 +8,26 @@
 // ──────────────────────────────────────────────
 // 1. Organization -- site-wide, render in root layout or homepage
 // ──────────────────────────────────────────────
-export function organizationSchema() {
+export function organizationSchema(opts?: { lang?: string }) {
+  const lang = opts?.lang || 'es'
+  const description =
+    lang === 'en'
+      ? 'Opinafy is the #1 platform for collecting, managing, and displaying customer testimonials.'
+      : 'Opinafy es la plataforma #1 en espanol para recopilar, gestionar y mostrar testimonios de clientes.'
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': 'https://opinafy.com/#organization',
     name: 'Opinafy',
     url: 'https://opinafy.com',
-    logo: 'https://opinafy.com/logo-opinafy.png',
-    description:
-      'Opinafy es la plataforma #1 en espanol para recopilar, gestionar y mostrar testimonios de clientes.',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://opinafy.com/logo-opinafy.png',
+      width: 512,
+      height: 512,
+    },
+    description,
     foundingDate: '2026',
     sameAs: [
       'https://www.linkedin.com/company/opinafy',
@@ -24,6 +35,7 @@ export function organizationSchema() {
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'customer support',
+      email: 'hola@opinafy.com',
       availableLanguage: ['Spanish', 'English'],
     },
   }
@@ -32,17 +44,28 @@ export function organizationSchema() {
 // ──────────────────────────────────────────────
 // 2. WebSite -- enables sitelinks search box in Google
 // ──────────────────────────────────────────────
-export function webSiteSchema() {
+export function webSiteSchema(opts?: { lang?: string }) {
+  const lang = opts?.lang || 'es'
+
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': 'https://opinafy.com/#website',
     name: 'Opinafy',
     url: 'https://opinafy.com',
-    inLanguage: 'es',
+    inLanguage: lang,
     publisher: {
       '@type': 'Organization',
       name: 'Opinafy',
       url: 'https://opinafy.com',
+    },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://opinafy.com/blog?q={search_term}',
+      },
+      'query-input': 'required name=search_term',
     },
   }
 }
@@ -68,6 +91,25 @@ export function softwareApplicationSchema() {
         priceCurrency: 'EUR',
         url: 'https://opinafy.com/precios',
         description: 'Perfecto para probar la plataforma. 1 proyecto, 10 testimonios, 2 layouts.',
+      },
+      {
+        '@type': 'Offer',
+        name: 'Mini Sitio',
+        price: '5',
+        priceCurrency: 'EUR',
+        url: 'https://opinafy.com/precios',
+        priceSpecification: {
+          '@type': 'UnitPriceSpecification',
+          price: '5',
+          priceCurrency: 'EUR',
+          billingDuration: {
+            '@type': 'QuantitativeValue',
+            value: 1,
+            unitCode: 'MON',
+          },
+        },
+        description:
+          'Mini sitio profesional para testimonios. Página pública personalizable con dominio propio.',
       },
       {
         '@type': 'Offer',
@@ -139,7 +181,9 @@ export function webPageSchema(opts: {
   name: string
   url: string
   description: string
+  lang?: string
 }) {
+  const lang = opts.lang || 'es'
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
@@ -157,7 +201,7 @@ export function webPageSchema(opts: {
       url: 'https://opinafy.com',
       logo: 'https://opinafy.com/logo-opinafy.png',
     },
-    inLanguage: 'es',
+    inLanguage: lang,
   }
 }
 
@@ -168,7 +212,9 @@ export function collectionPageSchema(opts: {
   name: string
   url: string
   description: string
+  lang?: string
 }) {
+  const lang = opts.lang || 'es'
   return {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
@@ -185,7 +231,7 @@ export function collectionPageSchema(opts: {
       name: 'Opinafy',
       url: 'https://opinafy.com',
     },
-    inLanguage: 'es',
+    inLanguage: lang,
   }
 }
 
@@ -269,7 +315,7 @@ export function faqPageSchema(faqs: { question: string; answer: string }[]) {
 }
 
 // ──────────────────────────────────────────────
-// 9. Article -- improved version with image support
+// 9. Article -- improved version with image and language support
 // ──────────────────────────────────────────────
 export function articleSchema(opts: {
   title: string
@@ -278,7 +324,12 @@ export function articleSchema(opts: {
   date: string
   keywords: string[]
   image?: string
+  lang?: string
 }) {
+  const lang = opts.lang || 'es'
+  const blogPrefix = lang === 'en' ? '/en/blog/' : '/blog/'
+  const authorName = lang === 'en' ? 'Opinafy Team' : 'Equipo Opinafy'
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -287,7 +338,7 @@ export function articleSchema(opts: {
     image: opts.image || 'https://opinafy.com/og.png',
     author: {
       '@type': 'Person',
-      name: 'Equipo Opinafy',
+      name: authorName,
       url: 'https://opinafy.com',
     },
     publisher: {
@@ -303,9 +354,9 @@ export function articleSchema(opts: {
     dateModified: opts.date,
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://opinafy.com/blog/${opts.slug}`,
+      '@id': `https://opinafy.com${blogPrefix}${opts.slug}`,
     },
     keywords: opts.keywords.join(', '),
-    inLanguage: 'es',
+    inLanguage: lang,
   }
 }

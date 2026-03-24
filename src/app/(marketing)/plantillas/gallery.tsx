@@ -65,7 +65,7 @@ export function PlantillasGallery({
       )}
 
       {filtered.length === 0 && (
-        <p className="py-16 text-center text-gray-400">
+        <p className="py-16 text-center text-gray-500">
           No se encontraron plantillas en esta categoría.
         </p>
       )}

@@ -3,9 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { PLAN_LIMITS } from '@/lib/constants'
+import { PLAN_LIMITS, getEffectivePlan } from '@/lib/constants'
 import { formatDate, getInitials } from '@/lib/utils'
-import type { Plan, Profile, Project, Testimonial } from '@/types'
+import type { Profile, Project, Testimonial } from '@/types'
 
 export const dynamic = 'force-dynamic'
 
@@ -188,7 +188,7 @@ export default async function TodosPage({ params }: PageProps) {
     notFound()
   }
 
-  const plan = profile.plan as Plan
+  const plan = getEffectivePlan(profile)
   const limits = PLAN_LIMITS[plan]
 
   if (!limits.miniSite) {

@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import { PLAN_LIMITS } from '@/lib/constants'
-import { Plan } from '@/types'
+import { PLAN_LIMITS, getEffectivePlan } from '@/lib/constants'
 import { z } from 'zod'
 
 const importTestimonialSchema = z.object({
@@ -56,11 +55,11 @@ export async function POST(request: NextRequest) {
     // Check plan limits
     const { data: profile } = await adminClient
       .from('profiles')
-      .select('plan')
+      .select('plan, gifted_plan, gifted_plan_expires_at')
       .eq('id', user.id)
       .single()
 
-    const plan = (profile?.plan as Plan) || 'free'
+    const plan = getEffectivePlan(profile || { plan: 'free' })
     const limits = PLAN_LIMITS[plan]
 
     const { count } = await adminClient

@@ -128,7 +128,7 @@ export default async function TemplateDetailPage({ params }: PageProps) {
               <div className="h-3 w-3 rounded-full bg-red-400" />
               <div className="h-3 w-3 rounded-full bg-yellow-400" />
               <div className="h-3 w-3 rounded-full bg-green-400" />
-              <span className="ml-3 text-xs text-gray-400">Vista previa en vivo</span>
+              <span className="ml-3 text-xs text-gray-500">Vista previa en vivo</span>
             </div>
           </div>
           <TemplateDetailClient template={template} />

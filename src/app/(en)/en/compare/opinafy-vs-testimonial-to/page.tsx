@@ -113,6 +113,7 @@ export default function OpinafyVsTestimonialToPage() {
     url: 'https://opinafy.com/en/compare/opinafy-vs-testimonial-to',
     description:
       'Detailed comparison between Opinafy and Testimonial.to. Features, pricing, language support, and verification head to head.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

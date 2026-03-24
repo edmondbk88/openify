@@ -306,7 +306,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
               </div>
             ))}
           </div>
-          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-gray-400 italic">
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-gray-500 italic">
             * Los testimonios mostrados son ejemplos ilustrativos de como se verian los
             testimonios reales de tus clientes.
           </p>

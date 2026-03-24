@@ -3,8 +3,8 @@ import type { Metadata } from 'next'
 import { headers } from 'next/headers'
 import { createClient } from '@/lib/supabase/server'
 import { createAdminClient } from '@/lib/supabase/admin'
-import type { Project, Plan } from '@/types'
-import { PLAN_LIMITS } from '@/lib/constants'
+import type { Project } from '@/types'
+import { PLAN_LIMITS, getEffectivePlan } from '@/lib/constants'
 import Image from 'next/image'
 import { CollectionPageClient } from './collection-page-client'
 import { detectLocale, getCollectionTexts } from '@/lib/collection-translations'
@@ -40,11 +40,11 @@ async function getAllowVideo(userId: string): Promise<boolean> {
   const supabase = createAdminClient()
   const { data: profile } = await supabase
     .from('profiles')
-    .select('plan')
+    .select('plan, gifted_plan, gifted_plan_expires_at')
     .eq('id', userId)
     .single()
 
-  const plan = (profile?.plan as Plan) || 'free'
+  const plan = getEffectivePlan(profile || { plan: 'free' })
   return PLAN_LIMITS[plan].video
 }
 

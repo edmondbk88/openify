@@ -97,7 +97,7 @@ function TestimonialCard({ t }: { t: typeof sampleTestimonials[number] }) {
             <p className="text-xs text-gray-500">{t.company}</p>
             {t.is_company_verified && <VerifiedBadge />}
           </div>
-          <p className="text-xs text-gray-400">{t.role}</p>
+          <p className="text-xs text-gray-500">{t.role}</p>
         </div>
       </div>
     </div>
@@ -212,7 +212,7 @@ export function TestimonialsPreview() {
           </div>
         </div>
 
-        <p className="mt-8 text-center text-xs italic text-gray-400">
+        <p className="mt-8 text-center text-xs italic text-gray-500">
           * Los testimonios mostrados son ejemplos demostrativos de cómo se verían en tu web.
         </p>
 

@@ -96,20 +96,20 @@ export default function ROICalculatorClient() {
                 <div>
                   <label htmlFor="visitors" className="block text-sm font-medium text-gray-700">Monthly visitors</label>
                   <input id="visitors" type="number" min={0} value={visitors} onChange={(e) => setVisitors(Number(e.target.value) || 0)} className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-indigo-500 focus:ring-indigo-500" />
-                  <p className="mt-1 text-xs text-gray-400">Unique visits to your website per month</p>
+                  <p className="mt-1 text-xs text-gray-500">Unique visits to your website per month</p>
                 </div>
                 <div>
                   <label htmlFor="convRate" className="block text-sm font-medium text-gray-700">Current conversion rate (%)</label>
                   <input id="convRate" type="number" min={0} max={100} step={0.1} value={conversionRate} onChange={(e) => setConversionRate(Number(e.target.value) || 0)} className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-indigo-500 focus:ring-indigo-500" />
-                  <p className="mt-1 text-xs text-gray-400">Percentage of visitors who buy or hire</p>
+                  <p className="mt-1 text-xs text-gray-500">Percentage of visitors who buy or hire</p>
                 </div>
                 <div>
                   <label htmlFor="avgOrder" className="block text-sm font-medium text-gray-700">Average order value</label>
                   <div className="relative mt-1">
-                    <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-lg text-gray-400">&euro;</span>
+                    <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-lg text-gray-500">&euro;</span>
                     <input id="avgOrder" type="number" min={0} step={1} value={avgOrder} onChange={(e) => setAvgOrder(Number(e.target.value) || 0)} className="w-full rounded-lg border border-gray-300 py-3 pl-10 pr-4 text-lg font-semibold text-gray-900 focus:border-indigo-500 focus:ring-indigo-500" />
                   </div>
-                  <p className="mt-1 text-xs text-gray-400">Average revenue per customer / order</p>
+                  <p className="mt-1 text-xs text-gray-500">Average revenue per customer / order</p>
                 </div>
               </div>
               <div className="mt-8 rounded-lg bg-gray-50 p-4">
@@ -156,7 +156,7 @@ export default function ROICalculatorClient() {
               <div key={item.stat} className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm">
                 <p className="text-4xl font-extrabold text-indigo-600">{item.stat}</p>
                 <p className="mt-2 text-sm text-gray-600">{item.desc}</p>
-                <p className="mt-1 text-xs text-gray-400">Source: {item.src}</p>
+                <p className="mt-1 text-xs text-gray-500">Source: {item.src}</p>
               </div>
             ))}
           </div>

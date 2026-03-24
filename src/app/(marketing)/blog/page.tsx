@@ -1,3 +1,5 @@
+export const revalidate = 3600
+
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -250,7 +252,7 @@ export default async function BlogPage({
                 &larr; Anterior
               </Link>
             ) : (
-              <span className="inline-flex h-10 items-center rounded-lg border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-400 cursor-not-allowed">
+              <span className="inline-flex h-10 items-center rounded-lg border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-500 cursor-not-allowed">
                 &larr; Anterior
               </span>
             )}
@@ -277,7 +279,7 @@ export default async function BlogPage({
                 Siguiente &rarr;
               </Link>
             ) : (
-              <span className="inline-flex h-10 items-center rounded-lg border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-400 cursor-not-allowed">
+              <span className="inline-flex h-10 items-center rounded-lg border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-500 cursor-not-allowed">
                 Siguiente &rarr;
               </span>
             )}

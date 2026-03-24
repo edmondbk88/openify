@@ -88,6 +88,7 @@ export default function GuidesIndexPageEn() {
     name: 'Installation Guides - Opinafy',
     url: 'https://opinafy.com/en/guides',
     description: 'Step-by-step guides to install Opinafy on the most popular platforms.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

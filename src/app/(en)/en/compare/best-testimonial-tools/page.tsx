@@ -114,6 +114,7 @@ export default function BestTestimonialToolsPage() {
     name: '7 Best Testimonial Tools in 2026',
     url: 'https://opinafy.com/en/compare/best-testimonial-tools',
     description: 'Complete ranking of the best testimonial and review platforms in 2026.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

@@ -237,7 +237,7 @@ export default function OpinafyVsTestimonialToPage() {
               </tbody>
             </table>
           </div>
-          <p className="mt-4 text-xs text-gray-400">
+          <p className="mt-4 text-xs text-gray-500">
             Leyenda: verde = disponible, rojo = no disponible, amarillo = parcial o en desarrollo. Datos actualizados a marzo 2026.
           </p>
         </section>
@@ -411,7 +411,7 @@ export default function OpinafyVsTestimonialToPage() {
                 <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-gray-900 font-medium hover:text-indigo-600">
                   {faq.q}
                   <svg
-                    className="ml-4 h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+                    className="ml-4 h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"

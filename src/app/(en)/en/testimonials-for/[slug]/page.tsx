@@ -246,7 +246,7 @@ export default async function IndustryPageEn({ params }: IndustryPageProps) {
               </div>
             ))}
           </div>
-          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-gray-400 italic">
+          <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-gray-500 italic">
             * The testimonials shown are illustrative examples of how real customer testimonials would look.
           </p>
         </div>
@@ -270,7 +270,7 @@ export default async function IndustryPageEn({ params }: IndustryPageProps) {
                 <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-left font-semibold text-gray-900 hover:text-indigo-600">
                   <span>{faq.question}</span>
                   <svg
-                    className="ml-4 h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+                    className="ml-4 h-5 w-5 flex-shrink-0 text-gray-500 transition-transform group-open:rotate-180"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={2}

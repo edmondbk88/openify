@@ -133,27 +133,27 @@ const pricingExamples = [
 
 const faqs = [
   {
-    question: 'Como funciona la comision del 30%?',
+    question: '¿Como funciona la comision del 30%?',
     answer: 'Recibes el 30% de la suscripcion mensual de cada cliente que se registre a traves de tu enlace de referido. La comision es recurrente: mientras el cliente siga pagando, tu sigues ganando.',
   },
   {
-    question: 'Cuando recibo mis pagos?',
+    question: '¿Cuando recibo mis pagos?',
     answer: 'Los pagos se procesan mensualmente. Las comisiones se calculan al final de cada mes y se transfieren en los primeros 10 dias del mes siguiente.',
   },
   {
-    question: 'Que es la cookie de 90 dias?',
+    question: '¿Que es la cookie de 90 dias?',
     answer: 'Cuando alguien hace clic en tu enlace de referido, se guarda una cookie en su navegador durante 90 dias. Si esa persona se registra en cualquier momento dentro de esos 90 dias, tu recibes la comision.',
   },
   {
-    question: 'Necesito ser cliente de Opinafy para ser afiliado?',
+    question: '¿Necesito ser cliente de Opinafy para ser afiliado?',
     answer: 'No es obligatorio, pero te recomendamos probar la plataforma (tiene un plan gratuito) para que puedas hablar con conocimiento de causa sobre sus beneficios.',
   },
   {
-    question: 'Hay un minimo de pago?',
+    question: '¿Hay un minimo de pago?',
     answer: 'Si, el minimo de pago es de 50 EUR. Si tus comisiones no alcanzan ese monto en un mes, se acumulan para el siguiente.',
   },
   {
-    question: 'Puedo ser afiliado si estoy fuera de Espana?',
+    question: '¿Puedo ser afiliado si estoy fuera de Espana?',
     answer: 'Si, el programa de afiliados esta abierto a personas de cualquier pais. Los pagos se realizan via transferencia bancaria o PayPal.',
   },
 ]
@@ -335,7 +335,7 @@ export default function AfiliadosPage() {
                 <summary className="flex cursor-pointer items-center justify-between font-semibold text-gray-900">
                   {faq.question}
                   <svg
-                    className="h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+                    className="h-5 w-5 flex-shrink-0 text-gray-500 transition-transform group-open:rotate-180"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}

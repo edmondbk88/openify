@@ -99,7 +99,7 @@ function StatGrid({ stats }: { stats: StatCard[] }) {
         <div key={i} className={`rounded-xl border-2 p-6 ${s.color}`}>
           <p className="text-4xl font-extrabold">{s.value}</p>
           <p className="mt-2 text-sm font-medium text-gray-700">{s.label}</p>
-          <p className="mt-2 text-xs text-gray-400">Fuente: {s.source}</p>
+          <p className="mt-2 text-xs text-gray-500">Fuente: {s.source}</p>
         </div>
       ))}
     </div>

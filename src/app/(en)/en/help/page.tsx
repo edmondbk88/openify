@@ -53,6 +53,7 @@ export default function HelpIndexPage() {
     name: 'Help Center - Opinafy',
     url: 'https://opinafy.com/en/help',
     description: 'Comprehensive guides to get the most out of Opinafy.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

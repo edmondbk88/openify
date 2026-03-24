@@ -93,6 +93,7 @@ export default function OpinafyVsSenjaPage() {
     name: 'Opinafy vs Senja: Full Comparison 2026',
     url: 'https://opinafy.com/en/compare/opinafy-vs-senja',
     description: 'Detailed comparison between Opinafy and Senja. Features, pricing, video testimonials, and verification.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

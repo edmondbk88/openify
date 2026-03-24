@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 const COOKIE_CONSENT_KEY = 'opinafy-cookie-consent'
@@ -13,6 +14,8 @@ declare global {
 
 export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false)
+  const pathname = usePathname()
+  const isEnglish = pathname.startsWith('/en')
 
   useEffect(() => {
     const consent = localStorage.getItem(COOKIE_CONSENT_KEY)
@@ -45,33 +48,52 @@ export function CookieBanner() {
   if (!isVisible) return null
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white p-4 shadow-lg sm:p-6">
-      <div className="mx-auto flex max-w-5xl flex-col items-center gap-4 sm:flex-row sm:justify-between">
-        <p className="text-center text-sm leading-relaxed text-gray-600 sm:text-left">
-          Utilizamos cookies para mejorar tu experiencia y analizar el tráfico. Consulta nuestra{' '}
-          <Link
-            href="/cookies"
-            className="font-medium text-indigo-600 underline hover:text-indigo-800"
-          >
-            Política de Cookies
-          </Link>{' '}
-          para más información.
-        </p>
-        <div className="flex shrink-0 gap-3">
-          <button
-            onClick={handleReject}
-            className="rounded-lg border border-gray-300 px-5 py-2.5 text-sm font-medium text-gray-700 transition-colors hover:bg-gray-50"
-          >
-            Rechazar
-          </button>
-          <button
-            onClick={handleAccept}
-            className="rounded-lg bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-          >
-            Aceptar
-          </button>
+    <>
+      {/* Spacer to prevent banner from overlapping page content */}
+      <div className="h-16 sm:h-20" />
+      <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-gray-200 bg-white px-3 py-2.5 shadow-lg sm:p-4">
+        <div className="mx-auto flex max-w-5xl items-center gap-3 sm:gap-4">
+          <p className="flex-1 text-xs leading-snug text-gray-600 sm:text-sm sm:leading-relaxed">
+            {isEnglish ? (
+              <>
+                We use cookies to improve your experience. By continuing, you accept our{' '}
+                <Link
+                  href="/en/cookies"
+                  className="font-medium text-indigo-600 underline hover:text-indigo-800"
+                >
+                  Cookie Policy
+                </Link>
+                .
+              </>
+            ) : (
+              <>
+                Utilizamos cookies para mejorar tu experiencia. Consulta nuestra{' '}
+                <Link
+                  href="/cookies"
+                  className="font-medium text-indigo-600 underline hover:text-indigo-800"
+                >
+                  Pol&iacute;tica de Cookies
+                </Link>
+                .
+              </>
+            )}
+          </p>
+          <div className="flex shrink-0 gap-2 sm:gap-3">
+            <button
+              onClick={handleReject}
+              className="rounded-lg border border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-700 transition-colors hover:bg-gray-50 sm:px-5 sm:py-2.5 sm:text-sm"
+            >
+              {isEnglish ? 'Reject' : 'Rechazar'}
+            </button>
+            <button
+              onClick={handleAccept}
+              className="rounded-lg bg-indigo-600 px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-6 sm:py-2.5 sm:text-sm"
+            >
+              {isEnglish ? 'Accept' : 'Aceptar'}
+            </button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }

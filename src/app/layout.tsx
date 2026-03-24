@@ -90,10 +90,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={inter.variable}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
+      <head />
       <body className={`${inter.className} antialiased`}>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CPLGLSLYHR"

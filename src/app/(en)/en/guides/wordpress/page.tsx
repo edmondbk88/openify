@@ -22,7 +22,7 @@ function CodeBlock({ code, language = 'html' }: { code: string; language?: strin
   return (
     <div className="relative my-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-900">
       <div className="flex items-center justify-between border-b border-gray-700 px-4 py-2">
-        <span className="text-xs font-medium uppercase text-gray-400">{language}</span>
+        <span className="text-xs font-medium uppercase text-gray-500">{language}</span>
       </div>
       <pre className="overflow-x-auto p-4 text-sm leading-relaxed text-gray-100">
         <code>{code}</code>

@@ -153,6 +153,7 @@ export default function PricingPageEn() {
     name: 'Pricing - Opinafy',
     url: 'https://opinafy.com/en/pricing',
     description: 'Check out Opinafy plans and pricing. Start for free and scale as you need.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -310,7 +311,7 @@ export default function PricingPageEn() {
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Public mini site</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-teal-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
@@ -324,23 +325,23 @@ export default function PricingPageEn() {
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Premium templates</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">No Opinafy branding</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Video testimonials</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr className="bg-gray-50/50">
@@ -352,29 +353,29 @@ export default function PricingPageEn() {
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Priority support</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Dedicated support</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Data export</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">CSS customization</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
@@ -419,7 +420,7 @@ export default function PricingPageEn() {
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
                 Can I change plans at any time?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
@@ -432,7 +433,7 @@ export default function PricingPageEn() {
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
                 What payment methods do you accept?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
@@ -444,7 +445,7 @@ export default function PricingPageEn() {
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
                 Is there a discount for annual billing?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
@@ -457,7 +458,7 @@ export default function PricingPageEn() {
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
                 What happens if I exceed the free plan testimonial limit?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
@@ -470,7 +471,7 @@ export default function PricingPageEn() {
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
                 Can I cancel my subscription at any time?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>

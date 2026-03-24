@@ -321,7 +321,7 @@ export default function AffiliatesPage() {
                 <summary className="flex cursor-pointer items-center justify-between font-semibold text-gray-900">
                   {faq.question}
                   <svg
-                    className="h-5 w-5 flex-shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+                    className="h-5 w-5 flex-shrink-0 text-gray-500 transition-transform group-open:rotate-180"
                     fill="none"
                     viewBox="0 0 24 24"
                     strokeWidth={1.5}

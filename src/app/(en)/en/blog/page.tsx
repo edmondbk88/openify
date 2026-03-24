@@ -116,6 +116,7 @@ export default async function BlogPageEn({
     url: 'https://opinafy.com/en/blog',
     description:
       'Articles, guides, and strategies on customer testimonials, social proof, and how to increase your business conversions.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -253,7 +254,7 @@ export default async function BlogPageEn({
                 &larr; Previous
               </Link>
             ) : (
-              <span className="inline-flex h-10 items-center rounded-lg border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-400 cursor-not-allowed">
+              <span className="inline-flex h-10 items-center rounded-lg border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-500 cursor-not-allowed">
                 &larr; Previous
               </span>
             )}
@@ -280,7 +281,7 @@ export default async function BlogPageEn({
                 Next &rarr;
               </Link>
             ) : (
-              <span className="inline-flex h-10 items-center rounded-lg border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-400 cursor-not-allowed">
+              <span className="inline-flex h-10 items-center rounded-lg border border-gray-200 bg-gray-50 px-4 text-sm font-medium text-gray-500 cursor-not-allowed">
                 Next &rarr;
               </span>
             )}

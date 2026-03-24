@@ -151,7 +151,7 @@ export default function ZapierIntegrationPageEN() {
                     </div>
                     <h4 className="font-semibold text-gray-900">{trigger.name}</h4>
                     <p className="mt-2 text-sm text-gray-600">{trigger.description}</p>
-                    <p className="mt-3 text-xs text-gray-400 font-mono">
+                    <p className="mt-3 text-xs text-gray-500 font-mono">
                       Event: {trigger.event}
                     </p>
                   </div>
@@ -231,12 +231,12 @@ export default function ZapierIntegrationPageEN() {
                     <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
                     <p className="mt-2 text-sm text-gray-600">{item.description}</p>
                     {item.step === 1 && (
-                      <div className="mt-4 rounded-lg border border-gray-200 bg-gray-100 p-4 text-center text-sm text-gray-400">
+                      <div className="mt-4 rounded-lg border border-gray-200 bg-gray-100 p-4 text-center text-sm text-gray-500">
                         [Screenshot: Opinafy integrations panel]
                       </div>
                     )}
                     {item.step === 2 && (
-                      <div className="mt-4 rounded-lg border border-gray-200 bg-gray-100 p-4 text-center text-sm text-gray-400">
+                      <div className="mt-4 rounded-lg border border-gray-200 bg-gray-100 p-4 text-center text-sm text-gray-500">
                         [Screenshot: Create Zap in Zapier]
                       </div>
                     )}

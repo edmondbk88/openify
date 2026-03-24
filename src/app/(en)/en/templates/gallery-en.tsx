@@ -92,7 +92,7 @@ export function TemplatesGalleryEn({
       )}
 
       {filtered.length === 0 && (
-        <p className="py-16 text-center text-gray-400">
+        <p className="py-16 text-center text-gray-500">
           No templates found in this category.
         </p>
       )}

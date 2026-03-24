@@ -107,6 +107,7 @@ export default async function BlogPostPageEn({ params }: BlogPostPageProps) {
     date: article.date,
     keywords: article.keywords,
     image: article.image,
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

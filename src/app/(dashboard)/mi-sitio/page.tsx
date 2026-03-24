@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { createClient } from '@/lib/supabase/client'
-import { PLAN_LIMITS } from '@/lib/constants'
+import { PLAN_LIMITS, getEffectivePlan } from '@/lib/constants'
 import { useToast } from '@/components/ui/toast'
 import { cn } from '@/lib/utils'
 import { miniSiteTemplates, MINISITE_CATEGORIES } from '@/lib/minisite-templates'
@@ -37,7 +37,7 @@ export default function MiSitioPage() {
   const [selectedTemplateId, setSelectedTemplateId] = useState<string | null>(null)
 
   const siteUrl = profile.username ? `https://opinafy.com/s/${profile.username}` : ''
-  const hasAccess = PLAN_LIMITS[profile.plan].miniSite
+  const hasAccess = PLAN_LIMITS[getEffectivePlan(profile)].miniSite
 
   const loadProfile = useCallback(async () => {
     const { data: { user } } = await supabase.auth.getUser()

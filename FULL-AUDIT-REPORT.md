@@ -1,193 +1,306 @@
-# Full SEO Audit Report — opinafy.com
+# Opinafy.com — Full SEO Audit Report
 
-**Date:** 2026-03-19
-**Business Type:** SaaS — Customer Testimonial Platform
-**Stack:** Next.js 14 (App Router), Vercel, Supabase, Stripe
-**Target Market:** Spanish-speaking (lang="es")
+**Date:** 2026-03-24
+**Site:** https://opinafy.com
+**Business Type:** SaaS (Spanish testimonial management platform)
+**Stack:** Next.js 14, Supabase, Stripe, Vercel
+**Total Pages:** ~1,414 URLs in sitemap
+**Audited by:** 6 parallel specialist agents (Technical, Content, Schema, Sitemap, Performance, Visual)
+
+---
+
+## SEO Health Score: 68/100
+
+| Category | Weight | Score | Weighted |
+|----------|--------|-------|----------|
+| Technical SEO | 25% | 82/100 | 20.5 |
+| Content Quality | 25% | 62/100 | 15.5 |
+| On-Page SEO | 20% | 75/100 | 15.0 |
+| Schema / Structured Data | 10% | 60/100 | 6.0 |
+| Performance (CWV) | 10% | 80/100 | 8.0 |
+| Images | 5% | 55/100 | 2.8 |
+| AI Search Readiness | 5% | 72/100 | 3.6 |
+| **TOTAL** | **100%** | | **71.4** |
+
+**Adjusted Score: 68/100** (penalty applied for critical i18n issues affecting ~30% of pages)
 
 ---
 
 ## Executive Summary
 
-### Overall SEO Health Score: 72/100
-
-| Category | Weight | Score | Weighted |
-|----------|--------|-------|----------|
-| Technical SEO | 25% | 82 | 20.5 |
-| Content Quality | 25% | 68 | 17.0 |
-| On-Page SEO | 20% | 75 | 15.0 |
-| Schema / Structured Data | 10% | 95 | 9.5 |
-| Performance (CWV) | 10% | 80 | 8.0 |
-| Images | 5% | 70 | 3.5 |
-| AI Search Readiness | 5% | 72 | 3.6 |
-| **TOTAL** | **100%** | | **77.1** |
+Opinafy has an impressive technical foundation for a site launched less than a week ago. Vercel delivers excellent TTFB (~120ms), SSR ensures all content is crawlable, and the structured data implementation covers more schema types than most SaaS competitors. However, several critical issues drag the score down significantly:
 
 ### Top 5 Critical Issues
-1. **Homepage has fabricated testimonials** — destroys trust for a testimonial platform
-2. **"Cientos de negocios" claim is false** — site launched yesterday
-3. **Missing LSSI-CE legal data** — no NIF/CIF, no physical address (legally required in Spain)
-4. **www.opinafy.com not redirecting to non-www** — duplicate content risk
-5. **No Content-Security-Policy header** — security gap
 
-### Top 5 Quick Wins
-1. Add www → non-www redirect via vercel.json
-2. Add `noindex` to /login and /registro pages
-3. Move GA script from `<head>` to `<body>` (perf improvement)
-4. Add `priority` to navbar logo image
-5. Add FAQPage schema to FAQ sections
+1. **190 blog articles with future `lastmod` dates (up to 2027)** — Google may distrust ALL lastmod values sitewide
+2. **English pages render `<html lang="es">` server-side** — Googlebot may index EN content as Spanish
+3. **No real social proof for Opinafy itself** — A testimonial platform with zero real testimonials is a major credibility gap
+4. **English blog/schema uses Spanish language, URLs, and descriptions** — Confuses Google's language classification
+5. **420 city+industry programmatic pages risk doorway page penalty** — Template-based pages with only city/industry name swapped
+
+### Top 5 Quick Wins (< 30 min each)
+
+1. **Fix `lang="en"` on EN layout** — Change `src/app/(en)/en/layout.tsx` to render `<html lang="en">`
+2. **Filter future dates from sitemap** — Add `blogArticles.filter(a => new Date(a.date) <= now)` in `sitemap.ts`
+3. **Enable WebP/AVIF images** — Add `images: { formats: ['image/avif', 'image/webp'] }` to `next.config.mjs`
+4. **Remove unnecessary Google Fonts preconnect** — Delete 2 `<link rel="preconnect">` tags from `layout.tsx`
+5. **Add `revalidate = 3600` to blog page** — Currently renders dynamically on every request
 
 ---
 
 ## 1. Technical SEO — 82/100
 
-### Crawlability (90/100)
-- ✅ robots.txt present and properly configured
-- ✅ Sitemap with 77 URLs, valid XML
-- ✅ Dashboard routes blocked in robots.txt
-- ⚠️ No AI crawler directives (GPTBot, ClaudeBot, etc.)
-- ⚠️ /login and /registro not blocked
+**Source:** AUDIT-TECHNICAL.md
 
-### Indexability (88/100)
-- ✅ Canonical tags correct on all pages
-- ✅ Meta robots: index, follow on public pages
-- ❌ www.opinafy.com returns 200 instead of redirecting (duplicate content)
-- ⚠️ Title tag repeats "Opinafy" twice
-- ⚠️ /login and /registro are indexable (should be noindex)
+### What's Working Well
+- SSR on all pages — content visible without JS
+- Correct canonical tags on all sampled pages
+- Security headers are industry-leading (HSTS 2 years, CSP, X-Frame-Options)
+- Proper redirects: HTTP→HTTPS (308), www→non-www (308)
+- 1,414 URLs in sitemap with bilingual hreflang support
+- AI bot access explicitly allowed (GPTBot, ClaudeBot, PerplexityBot)
+- Clean URL structure in both languages
 
-### Security Headers (85/100)
-- ✅ HTTPS enforced (308 redirect)
-- ✅ HSTS: max-age=63072000
-- ✅ X-Content-Type-Options: nosniff
-- ✅ X-Frame-Options: DENY
-- ✅ Referrer-Policy: strict-origin-when-cross-origin
-- ✅ Permissions-Policy configured
-- ❌ Content-Security-Policy: MISSING
+### Critical Issues
 
-### URL Structure (92/100)
-- ✅ Clean Spanish-language slugs
-- ✅ No trailing slashes (properly redirected)
-- ✅ Max 2 levels deep
-- ✅ All lowercase, hyphenated
+| # | Issue | Impact | Fix |
+|---|-------|--------|-----|
+| T1 | EN pages render `<html lang="es">` server-side | Google may index EN content as Spanish | Fix in `src/app/(en)/en/layout.tsx` |
+| T2 | EN homepage missing `x-default` hreflang in HTML head | Wrong language shown to users in unsupported locales | Add to EN layout metadata |
 
-### Mobile Optimization (88/100)
-- ✅ Viewport meta tag correct
-- ✅ Responsive Tailwind CSS throughout
-- ⚠️ Navbar logo uses loading="lazy" (should be priority)
+### High Issues
 
-### Core Web Vitals (72/100)
-- ⚠️ 155KB HTML payload on homepage (above 100KB threshold)
-- ⚠️ GA script preloaded in `<head>` (wastes bandwidth)
-- ✅ Font preloaded correctly (Inter woff2)
-- ✅ CSS well-optimized (10.5KB Brotli)
+| # | Issue | Impact | Fix |
+|---|-------|--------|-----|
+| T3 | Homepage HTML payload 256KB (uncompressed) | Slow parse time on mobile | Reduce RSC inline payloads |
+| T4 | EN WebSite schema declares `inLanguage: "es"` | Conflicting language signals | Add `lang` param to schema functions |
 
-### Structured Data (95/100)
-- ✅ Organization schema with contact info
-- ✅ WebSite schema with language
-- ✅ SoftwareApplication with 3 price offers
-- ✅ BreadcrumbList on all pages
-- ✅ Article schema on blog posts
-- ⚠️ Organization sameAs array is empty
-- ⚠️ No FAQPage schema despite having FAQ content
+### Medium Issues
 
-### JavaScript Rendering (78/100)
-- ✅ Full SSR with React Server Components
-- ✅ Vercel edge caching active
-- ⚠️ Only 2 images in SSR HTML for 155KB page
-- ⚠️ 11+ JS chunks on homepage
+| # | Issue | Impact |
+|---|-------|--------|
+| T5 | No UTM parameter blocking in robots.txt | Potential duplicate content from campaigns |
+| T6 | Blog page renders dynamically (no cache) | 257ms TTFB vs 119ms for cached pages |
 
 ---
 
-## 2. Content Quality — 68/100
+## 2. Content Quality — 62/100
 
-### Page Scores
-| Page | Score | Key Issue |
-|------|-------|-----------|
-| Homepage | 58 | Fabricated testimonials, false claims |
-| /precios | 72 | Slightly thin, duplicate FAQ |
-| /blog listing | 64 | Thin hub, no filtering |
-| Blog articles (50) | 65 | No named author, no source links |
-| /plantillas | 71 | Good content, needs real examples |
-| /contacto | 55 | Non-functional form, missing address |
-| Legal pages | 62 | Missing NIF, address |
+**Source:** AUDIT-CONTENT.md
 
-### E-E-A-T Assessment — 42.6/100
-| Factor | Weight | Score |
-|--------|--------|-------|
-| Experience | 20% | 35 |
-| Expertise | 25% | 55 |
-| Authoritativeness | 25% | 25 |
-| Trustworthiness | 30% | 52 |
+### E-E-A-T Breakdown
 
-### AI Content Risk: HIGH
-- 50 articles published within days of launch
-- Repetitive structural patterns across articles
-- No first-person experience voice
-- No original research or data
+| Signal | Score | Severity |
+|--------|-------|----------|
+| Experience | 35/100 | CRITICAL |
+| Expertise | 55/100 | HIGH |
+| Authoritativeness | 30/100 | CRITICAL |
+| Trustworthiness | 65/100 | MEDIUM |
 
-### Duplicate Content Issues
-- FAQ component renders identically on homepage and /precios
-- Pricing component renders on both pages
-- All blog articles end with identical CTA copy
+### Critical Issues
 
----
+| # | Issue | Impact |
+|---|-------|--------|
+| C1 | No real customer testimonials about Opinafy itself | Destroys credibility for a testimonial platform |
+| C2 | No About/Team page with real founder identity | Visitors can't verify who built the product |
+| C3 | Fabricated case studies at `/casos-de-exito` | Google QRG explicitly penalizes fake testimonials |
+| C4 | Missing company NIF/CIF per Spanish LSSI law | Legal requirement for Spanish businesses |
+| C5 | No product screenshots in any marketing page | Can't demonstrate the product is real |
 
-## 3. Performance — 80/100
+### High Issues
 
-### Estimated Core Web Vitals
-| Page | LCP | INP | CLS |
-|------|-----|-----|-----|
-| / | ~1.0-1.5s (GOOD) | <100ms (GOOD) | <0.05 (GOOD) |
-| /blog | ~2.0-2.5s (NEEDS WORK) | <100ms (GOOD) | <0.05 (GOOD) |
-| /precios | ~0.8-1.2s (GOOD) | <100ms (GOOD) | <0.05 (GOOD) |
-| /plantillas | ~2.0-3.0s (POOR) | ~150-300ms (AT RISK) | <0.05 (GOOD) |
-
-### Key Performance Issues
-- /plantillas: 353KB HTML, 2,242 DOM elements (too heavy)
-- GA preloaded in `<head>` — wastes critical bandwidth
-- Blog first image lacks `priority` prop
-- No `preconnect` for Supabase storage domain
+| # | Issue | Impact |
+|---|-------|--------|
+| C6 | All 162 blog articles by anonymous "Equipo Opinafy" | No author identity = low E-E-A-T for YMYL content |
+| C7 | Statistics in blog posts lack source hyperlinks | Claims without verification reduce trust |
+| C8 | City programmatic pages are thin content (boilerplate + city swap) | Risk of doorway page penalty |
+| C9 | 162 blog articles published in 2-3 days | Clear AI-generated content signal |
+| C10 | No internal linking within blog article bodies | Missed topical clustering opportunity |
 
 ---
 
-## 4. Schema / Structured Data — 95/100
+## 3. Schema / Structured Data — 60/100
 
-### Implemented
-- ✅ Organization (name, URL, logo, contact)
-- ✅ WebSite (name, language, publisher)
-- ✅ SoftwareApplication (3 offers with EUR pricing)
-- ✅ BreadcrumbList (all pages)
-- ✅ Article (blog posts with image, author, dates)
-- ✅ CollectionPage (blog listing, templates listing)
+**Source:** AUDIT-SCHEMA.md
 
-### Missing
-- ❌ FAQPage schema (content exists, schema doesn't)
-- ❌ HowTo schema for "Cómo funciona" section
-- ⚠️ Empty sameAs array in Organization
+### What Exists (Good)
+- Organization, WebSite, SoftwareApplication, FAQPage, BreadcrumbList on homepage
+- Article schema on blog posts
+- CollectionPage schema on templates/industry pages
+- ItemList schema on gallery pages
 
----
+### Critical Issues
 
-## 5. AI Search Readiness — 72/100
+| # | Issue | Impact |
+|---|-------|--------|
+| S1 | EN blog `articleSchema()` hardcodes `/blog/` instead of `/en/blog/` | Wrong URL in structured data |
+| S2 | EN blog articles have `inLanguage: "es"` | Tells Google English content is Spanish |
+| S3 | EN homepage reuses Spanish Organization/WebSite schemas | All descriptions in Spanish on EN page |
+| S4 | SoftwareApplication missing `aggregateRating` or `review` | Zero chance of rich results in SERPs |
 
-### Positive
-- Clean HTML hierarchy with semantic headings
-- Quotable statistics with specific numbers
-- JSON-LD structured data on all major pages
-- Spanish-language niche (less competition)
-- Well-formatted bullet lists and bold terms
+### High Issues
 
-### Negative
-- Statistics lack source attribution links
-- No original research or proprietary data
-- No dateModified updates on articles
-- Article author is Organization, not Person
+| # | Issue | Impact |
+|---|-------|--------|
+| S5 | Missing Mini Sitio plan (€5) in SoftwareApplication offers | Incomplete pricing data |
+| S6 | No `SearchAction` on WebSite schema | Can't get sitelinks search box |
+| S7 | No `@id` properties on any entities | Potential duplicate entity conflicts |
 
 ---
 
-## 6. Images — 70/100
+## 4. Sitemap — Grade C+
 
-- ✅ 50 blog images from Unsplash stored in Supabase
-- ✅ Next.js Image component with srcSet and dimensions
-- ✅ Blog images have alt text matching article title
-- ⚠️ Navbar logo uses lazy loading instead of priority
-- ⚠️ No preconnect for Supabase image CDN
-- ⚠️ No hero image on homepage (text-only hero)
+**Source:** AUDIT-SITEMAP.md
+
+### What's Working
+- Valid XML, correct namespaces
+- All sampled URLs return 200
+- 1,414 URLs with good bilingual coverage
+- Properly referenced in robots.txt
+
+### Critical Issues
+
+| # | Issue | Impact |
+|---|-------|--------|
+| SM1 | 190 blog articles with future lastmod dates (up to 2027) | Google distrusts all lastmod values |
+| SM2 | 1,000 URLs share identical lastmod `2026-03-18` | Signals unreliable date data |
+
+### High Issues
+
+| # | Issue | Impact |
+|---|-------|--------|
+| SM3 | 422 URLs (30%) missing hreflang annotations | Google can't determine language targeting |
+| SM4 | EN blog/industry paths use Spanish slugs | Hurts English keyword targeting |
+| SM5 | 420 city+industry pages exceed doorway page safe threshold | Algorithmic penalty risk |
+
+---
+
+## 5. Performance — 80/100
+
+**Source:** AUDIT-PERFORMANCE.md
+
+### Per-Page Summary
+
+| Page | TTFB | Est. LCP | Est. CLS | Status |
+|------|------|----------|----------|--------|
+| Homepage ES | 119ms | 1.2-1.8s | < 0.05 | Good |
+| Homepage EN | 166ms | 1.3-1.9s | < 0.05 | Good |
+| Plantillas | 118ms | 1.5-2.0s | < 0.05 | Good |
+| Precios | 114ms | 1.5-2.0s | < 0.05 | Good |
+| Blog | 257ms | 2.0-2.8s | < 0.05 | Needs attention |
+
+### Issues
+
+| # | Severity | Issue | Fix |
+|---|----------|-------|-----|
+| P1 | HIGH | Images served as PNG/JPEG, not WebP/AVIF | Add `images.formats` to next.config.mjs |
+| P2 | HIGH | Unnecessary preconnect to fonts.googleapis.com | Remove 2 link tags from layout.tsx |
+| P3 | HIGH | Blog page dynamic (no ISR cache) | Add `revalidate = 3600` |
+| P4 | MEDIUM | Pricing page revalidates every 60s (excessive) | Change to 3600 |
+| P5 | MEDIUM | Plantillas serializes all 100 templates in HTML | Only serialize initial 12 |
+| P6 | LOW | Auth layout chunk preloaded on marketing pages | Minor waste |
+
+---
+
+## 6. Visual & UX — Grade B+
+
+**Source:** AUDIT-VISUAL.md
+
+### What's Working
+- Clean, professional design with consistent color system
+- Hero CTA visible above fold on all viewports
+- Proper responsive grid collapse
+- Sticky header with hamburger menu on mobile
+
+### Issues
+
+| # | Severity | Issue |
+|---|----------|-------|
+| V1 | HIGH | Cookie banner blocks mobile CTAs — users can't reach "Empezar Gratis" |
+| V2 | HIGH | Cookie banner is in Spanish on `/en` pages |
+| V3 | MEDIUM | `text-gray-400` fails WCAG AA contrast (3.0:1 vs required 4.5:1) |
+| V4 | MEDIUM | Pricing page on mobile: no pricing card visible above fold |
+| V5 | MEDIUM | Tablet navbar (768px): "AyudaES | EN" runs together |
+| V6 | LOW | Hamburger touch target ~40px (recommended 48px) |
+| V7 | LOW | FAQ questions missing opening inverted question mark |
+
+---
+
+## 7. AI Search Readiness — 72/100
+
+### What's Working
+- AI bots explicitly allowed in robots.txt (GPTBot, ClaudeBot, PerplexityBot, etc.)
+- Comprehensive JSON-LD structured data on every page type
+- Clean URL structure with descriptive slugs
+- FAQ content answers common questions directly
+- 162 blog articles provide substantial topical coverage
+
+### Needs Improvement
+- No TL;DR summaries at top of blog articles (AI engines prefer extractable summaries)
+- Blog statistics lack hyperlinked sources (reduces citability)
+- No `llms.txt` file at root
+- No author pages with verifiable credentials
+- Fabricated testimonials reduce trust signals that AI uses for citation ranking
+
+---
+
+## Priority Action Plan
+
+### CRITICAL (Fix Immediately) — 10 issues
+
+1. **SM1** — Filter future lastmod dates from sitemap
+2. **T1** — Fix `lang="en"` on EN layout
+3. **S1-S3** — Fix English schema language issues (all in `schema.ts`)
+4. **C1** — Add real testimonials about Opinafy
+5. **C2** — Create About/Team page
+6. **C3** — Remove or mark fabricated case studies
+7. **C4** — Add company legal details (LSSI compliance)
+8. **SM2** — Fix identical lastmod dates
+9. **T2** — Add x-default hreflang to EN pages
+10. **S4** — Add aggregateRating to SoftwareApplication
+
+### HIGH (Fix Within 1 Week) — 12 issues
+
+1. **V1** — Fix cookie banner blocking mobile CTAs
+2. **V2** — Translate cookie banner for EN pages
+3. **P1** — Enable WebP/AVIF images
+4. **P2** — Remove unnecessary preconnect hints
+5. **P3** — Add caching to blog page
+6. **C6** — Add real author names to blog posts
+7. **C7** — Add source hyperlinks to statistics
+8. **SM4** — EN slugs in Spanish (architectural — may require migration)
+9. **SM5** — Evaluate doorway page risk for city pages
+10. **S5-S7** — Schema improvements (Mini Sitio plan, SearchAction, @id)
+11. **T3** — Reduce homepage HTML payload
+12. **C10** — Add internal links within blog article bodies
+
+### MEDIUM (Fix Within 1 Month) — 8 issues
+
+1. **V3** — Fix contrast ratio on gray-400 text
+2. **V4** — Reduce pricing page mobile top padding
+3. **V5** — Fix tablet navbar spacing
+4. **P4** — Adjust pricing page revalidation
+5. **P5** — Lazy-load template data on plantillas page
+6. **C5** — Add product screenshots to marketing pages
+7. **C8** — Enrich city programmatic pages with unique content
+8. **C9** — Stagger blog publication dates
+
+### LOW (Backlog) — 6 issues
+
+1. **V6** — Increase hamburger touch target
+2. **V7** — Add opening inverted question mark to FAQ questions
+3. **P6** — Remove auth chunk preload on marketing pages
+4. **T5** — Block UTM parameters in robots.txt
+5. Add `llms.txt` file
+6. Add TL;DR summaries to blog posts
+
+---
+
+## Detailed Audit Reports
+
+- [AUDIT-TECHNICAL.md](./AUDIT-TECHNICAL.md) — Crawlability, indexability, security, headers
+- [AUDIT-CONTENT.md](./AUDIT-CONTENT.md) — E-E-A-T, readability, thin content
+- [AUDIT-SCHEMA.md](./AUDIT-SCHEMA.md) — Structured data validation, missing opportunities
+- [AUDIT-SITEMAP.md](./AUDIT-SITEMAP.md) — Sitemap structure, hreflang, URL analysis
+- [AUDIT-PERFORMANCE.md](./AUDIT-PERFORMANCE.md) — Core Web Vitals, resource optimization
+- [AUDIT-VISUAL.md](./AUDIT-VISUAL.md) — Screenshots, mobile UX, above-fold analysis

@@ -59,6 +59,7 @@ export default function TemplatesPageEn() {
     url: 'https://opinafy.com/en/templates',
     description:
       'Explore 100+ testimonial widget templates ready to use. Minimalist, corporate, colorful, dark, and more styles.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([

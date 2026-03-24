@@ -62,6 +62,7 @@ export default function DownloadsPage() {
     name: 'Downloads and Integrations - Opinafy',
     url: 'https://opinafy.com/en/downloads',
     description: 'Plugins and snippets to integrate verified testimonials into WordPress, Shopify, Wix, Squarespace, and more.',
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -268,7 +269,7 @@ export default function DownloadsPage() {
                   <div className="mt-6">
                     <div className="rounded-lg border border-gray-200 bg-gray-900 p-4">
                       <div className="mb-2 flex items-center justify-between">
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-gray-500">
                           opinafy-section.liquid
                         </span>
                       </div>
@@ -649,7 +650,7 @@ export default function DownloadsPage() {
 
                   <div className="mt-6 rounded-lg border border-gray-200 bg-gray-900 p-4">
                     <div className="mb-2 flex items-center justify-between">
-                      <span className="text-xs text-gray-400">HTML</span>
+                      <span className="text-xs text-gray-500">HTML</span>
                     </div>
                     <pre className="overflow-x-auto text-sm text-green-400">
                       <code>{embedCode}</code>

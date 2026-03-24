@@ -12,9 +12,7 @@ import { createAdminClient } from '@/lib/supabase/admin'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://opinafy.com'
-
-  // Fixed date for content that doesn't change often (industry pages, templates, etc.)
-  const contentCreatedDate = new Date('2026-03-18')
+  const now = new Date()
 
   // Helper to create bilingual alternates
   const bilingual = (esPath: string, enPath: string) => ({
@@ -22,6 +20,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       es: `${baseUrl}${esPath}`,
       en: `${baseUrl}${enPath}`,
       'x-default': `${baseUrl}${esPath}`,
+    },
+  })
+
+  // Helper for Spanish-only pages (self-referencing hreflang)
+  const esOnly = (path: string) => ({
+    languages: {
+      es: `${baseUrl}${path}`,
+      'x-default': `${baseUrl}${path}`,
     },
   })
 
@@ -277,20 +283,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Blog pages with article.date for lastmod and hreflang alternates
   // ES and EN blog articles share the same slugs
+  // Filter out articles with future dates
   const blogSlugsEn = new Set(blogArticlesEn.map((a) => a.slug))
-  const blogPages: MetadataRoute.Sitemap = blogArticles.map((article) => ({
-    url: `${baseUrl}/blog/${article.slug}`,
-    lastModified: new Date(article.date),
-    changeFrequency: 'monthly' as const,
-    priority: 0.7,
-    ...(blogSlugsEn.has(article.slug)
-      ? { alternates: bilingual(`/blog/${article.slug}`, `/en/blog/${article.slug}`) }
-      : {}),
-  }))
+  const blogPages: MetadataRoute.Sitemap = blogArticles
+    .filter((a) => new Date(a.date) <= now)
+    .map((article) => ({
+      url: `${baseUrl}/blog/${article.slug}`,
+      lastModified: new Date(article.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+      ...(blogSlugsEn.has(article.slug)
+        ? { alternates: bilingual(`/blog/${article.slug}`, `/en/blog/${article.slug}`) }
+        : {}),
+    }))
 
   const templatePages: MetadataRoute.Sitemap = widgetTemplates.map((template) => ({
     url: `${baseUrl}/plantillas/${template.id}`,
-    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
     alternates: bilingual(`/plantillas/${template.id}`, `/en/templates/${template.id}`),
@@ -308,7 +316,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const miniSiteTemplatePages: MetadataRoute.Sitemap = miniSiteTemplates.map((template) => ({
     url: `${baseUrl}/plantillas-minisitio/${template.id}`,
-    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
     alternates: bilingual(`/plantillas-minisitio/${template.id}`, `/en/minisite-templates/${template.id}`),
@@ -328,7 +335,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const industrySlugsEn = new Set(industriesEn.map((i) => i.slug))
   const industryPages: MetadataRoute.Sitemap = industries.map((industry) => ({
     url: `${baseUrl}/testimonios-para/${industry.slug}`,
-    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
     ...(industrySlugsEn.has(industry.slug)
@@ -607,7 +613,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const industrySlugsEs = new Set(industries.map((i) => i.slug))
   const englishIndustryPages: MetadataRoute.Sitemap = industriesEn.map((industry) => ({
     url: `${baseUrl}/en/testimonials-for/${industry.slug}`,
-    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
     ...(industrySlugsEs.has(industry.slug)
@@ -616,19 +621,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }))
 
   const blogSlugsEs = new Set(blogArticles.map((a) => a.slug))
-  const englishBlogPages: MetadataRoute.Sitemap = blogArticlesEn.map((article) => ({
-    url: `${baseUrl}/en/blog/${article.slug}`,
-    lastModified: new Date(article.date),
-    changeFrequency: 'monthly' as const,
-    priority: 0.6,
-    ...(blogSlugsEs.has(article.slug)
-      ? { alternates: bilingual(`/blog/${article.slug}`, `/en/blog/${article.slug}`) }
-      : {}),
-  }))
+  const englishBlogPages: MetadataRoute.Sitemap = blogArticlesEn
+    .filter((a) => new Date(a.date) <= now)
+    .map((article) => ({
+      url: `${baseUrl}/en/blog/${article.slug}`,
+      lastModified: new Date(article.date),
+      changeFrequency: 'monthly' as const,
+      priority: 0.6,
+      ...(blogSlugsEs.has(article.slug)
+        ? { alternates: bilingual(`/blog/${article.slug}`, `/en/blog/${article.slug}`) }
+        : {}),
+    }))
 
   const englishTemplatePages: MetadataRoute.Sitemap = widgetTemplates.map((template) => ({
     url: `${baseUrl}/en/templates/${template.id}`,
-    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.5,
     alternates: bilingual(`/plantillas/${template.id}`, `/en/templates/${template.id}`),
@@ -636,7 +642,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const englishMiniSiteTemplatePages: MetadataRoute.Sitemap = miniSiteTemplates.map((template) => ({
     url: `${baseUrl}/en/minisite-templates/${template.id}`,
-    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.5,
     alternates: bilingual(`/plantillas-minisitio/${template.id}`, `/en/minisite-templates/${template.id}`),
@@ -646,27 +651,28 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const cityIndexPage: MetadataRoute.Sitemap = [
     {
       url: `${baseUrl}/testimonios-en`,
-      lastModified: new Date(),
+      lastModified: now,
       changeFrequency: 'weekly',
       priority: 0.8,
+      alternates: esOnly('/testimonios-en'),
     },
   ]
 
   // City pages (20 cities)
   const cityPages: MetadataRoute.Sitemap = cities.map((city) => ({
     url: `${baseUrl}/testimonios-en/${city.slug}`,
-    lastModified: contentCreatedDate,
     changeFrequency: 'monthly' as const,
     priority: 0.6,
+    alternates: esOnly(`/testimonios-en/${city.slug}`),
   }))
 
   // City + Industry pages (20 cities x 20 industries = 400 pages)
   const cityIndustryPages: MetadataRoute.Sitemap = cities.flatMap((city) =>
     topIndustrySlugs.map((industrySlug) => ({
       url: `${baseUrl}/testimonios-en/${city.slug}/${industrySlug}`,
-      lastModified: contentCreatedDate,
       changeFrequency: 'monthly' as const,
       priority: 0.5,
+      alternates: esOnly(`/testimonios-en/${city.slug}/${industrySlug}`),
     }))
   )
 

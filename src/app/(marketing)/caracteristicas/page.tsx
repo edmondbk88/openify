@@ -504,7 +504,7 @@ export default function CaracteristicasPage() {
             <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
               Integración en minutos, no en días
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-400">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-500">
               Una línea de código para empezar. REST API, plugins nativos y documentación completa para cuando necesites más.
             </p>
           </div>
@@ -515,7 +515,7 @@ export default function CaracteristicasPage() {
               <span className="h-3 w-3 rounded-full bg-red-500" />
               <span className="h-3 w-3 rounded-full bg-yellow-500" />
               <span className="h-3 w-3 rounded-full bg-green-500" />
-              <span className="ml-3 text-xs text-gray-400">index.html</span>
+              <span className="ml-3 text-xs text-gray-500">index.html</span>
             </div>
             <pre className="overflow-x-auto p-4 text-sm leading-relaxed">
               <code className="text-green-400">{'<script src="https://opinafy.com/widget.js" data-id="TU_ID"></script>'}</code>
@@ -529,7 +529,7 @@ export default function CaracteristicasPage() {
                 className="rounded-xl border border-gray-700 bg-gray-800/50 p-5 transition-all hover:border-indigo-500/50 hover:bg-gray-800"
               >
                 <h3 className="font-semibold text-white">{feature.title}</h3>
-                <p className="mt-1 text-sm text-gray-400">{feature.description}</p>
+                <p className="mt-1 text-sm text-gray-500">{feature.description}</p>
               </div>
             ))}
           </div>

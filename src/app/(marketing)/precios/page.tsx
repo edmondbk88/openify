@@ -1,4 +1,4 @@
-export const revalidate = 60 // revalidate every 60 seconds
+export const revalidate = 3600 // revalidate every hour
 
 import type { Metadata } from 'next'
 import { Navbar } from '@/components/landing/navbar'
@@ -144,7 +144,7 @@ export default function PreciosPage() {
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Mini sitio público</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-teal-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
@@ -158,23 +158,23 @@ export default function PreciosPage() {
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Plantillas premium</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Sin marca Opinafy</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Testimonios en vídeo</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr className="bg-gray-50/50">
@@ -186,29 +186,29 @@ export default function PreciosPage() {
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Soporte prioritario</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Soporte dedicado</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-3.5 text-gray-700">Exportación de datos</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
                 <tr className="bg-gray-50/50">
                   <td className="px-6 py-3.5 text-gray-700">Personalización CSS</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
-                  <td className="px-6 py-3.5 text-center text-gray-400">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
+                  <td className="px-6 py-3.5 text-center text-gray-500">&mdash;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                   <td className="px-6 py-3.5 text-center text-indigo-600">&#10003;</td>
                 </tr>
@@ -252,8 +252,8 @@ export default function PreciosPage() {
           <div className="space-y-4">
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
-                Puedo cambiar de plan en cualquier momento?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                ¿Puedo cambiar de plan en cualquier momento?
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
@@ -265,8 +265,8 @@ export default function PreciosPage() {
             </details>
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
-                Qué métodos de pago aceptan?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                ¿Qué métodos de pago aceptan?
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
@@ -277,8 +277,8 @@ export default function PreciosPage() {
             </details>
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
-                Hay descuento por pago anual?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                ¿Hay descuento por pago anual?
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
@@ -290,8 +290,8 @@ export default function PreciosPage() {
             </details>
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
-                Qué pasa si supero el límite de testimonios del plan gratuito?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                ¿Qué pasa si supero el límite de testimonios del plan gratuito?
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>
@@ -303,8 +303,8 @@ export default function PreciosPage() {
             </details>
             <details className="group rounded-xl border border-gray-200 bg-white">
               <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-base font-medium text-gray-900">
-                Puedo cancelar mi suscripción en cualquier momento?
-                <svg className="h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                ¿Puedo cancelar mi suscripción en cualquier momento?
+                <svg className="h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                 </svg>
               </summary>

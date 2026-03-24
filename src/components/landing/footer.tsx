@@ -117,7 +117,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-gray-100 pt-8 text-center">
-          <p className="text-sm text-gray-400">
+          <p className="text-sm text-gray-500">
             &copy; 2026 Opinafy. Todos los derechos reservados.
           </p>
         </div>

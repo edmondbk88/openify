@@ -101,7 +101,7 @@ export default async function AyudaGuidePage({ params }: Props) {
               href={`/ayuda/${prev.slug}`}
               className="flex flex-1 flex-col rounded-xl border border-gray-200 bg-white p-5 transition-all hover:border-indigo-200 hover:shadow-md"
             >
-              <span className="text-xs font-medium text-gray-400">Anterior</span>
+              <span className="text-xs font-medium text-gray-500">Anterior</span>
               <span className="mt-1 text-sm font-semibold text-gray-900">{prev.title}</span>
             </Link>
           ) : <div className="flex-1" />}
@@ -110,7 +110,7 @@ export default async function AyudaGuidePage({ params }: Props) {
               href={`/ayuda/${next.slug}`}
               className="flex flex-1 flex-col items-end rounded-xl border border-gray-200 bg-white p-5 text-right transition-all hover:border-indigo-200 hover:shadow-md"
             >
-              <span className="text-xs font-medium text-gray-400">Siguiente</span>
+              <span className="text-xs font-medium text-gray-500">Siguiente</span>
               <span className="mt-1 text-sm font-semibold text-gray-900">{next.title}</span>
             </Link>
           ) : <div className="flex-1" />}

@@ -24,7 +24,7 @@ function FakeMiniSite() {
         <div className="h-2.5 w-2.5 rounded-full bg-red-400" />
         <div className="h-2.5 w-2.5 rounded-full bg-yellow-400" />
         <div className="h-2.5 w-2.5 rounded-full bg-green-400" />
-        <div className="ml-3 flex-1 rounded-md bg-white px-3 py-1 text-xs text-gray-400">
+        <div className="ml-3 flex-1 rounded-md bg-white px-3 py-1 text-xs text-gray-500">
           opinafy.com/s/laura-coach
         </div>
       </div>
@@ -43,7 +43,7 @@ function FakeMiniSite() {
               <StarIcon key={i} className="h-3.5 w-3.5 text-amber-400" />
             ))}
             <span className="ml-1 text-xs font-medium text-gray-600">4.9</span>
-            <span className="text-xs text-gray-400">(47)</span>
+            <span className="text-xs text-gray-500">(47)</span>
           </div>
         </div>
 

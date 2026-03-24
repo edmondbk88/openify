@@ -120,7 +120,7 @@ export default function HealthScoreClient() {
                 {result.score}
               </p>
               <p className="mt-1 text-lg text-gray-500">/ {result.maxScore}</p>
-              <p className="mt-2 text-xs text-gray-400">{result.url}</p>
+              <p className="mt-2 text-xs text-gray-500">{result.url}</p>
             </div>
 
             {/* Checks */}
@@ -172,11 +172,11 @@ export default function HealthScoreClient() {
                   className={`inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-sm font-bold ${getScoreBg(result.score)} ${getScoreColor(result.score)}`}
                 >
                   Social Proof Score: {result.score}/{result.maxScore}
-                  <span className="text-xs font-normal text-gray-400">Powered by Opinafy</span>
+                  <span className="text-xs font-normal text-gray-500">Powered by Opinafy</span>
                 </div>
               </div>
               <div className="mt-3 overflow-hidden rounded-lg border border-gray-200 bg-gray-900 p-4">
-                <p className="mb-2 text-xs font-medium text-gray-400">Codigo para insertar:</p>
+                <p className="mb-2 text-xs font-medium text-gray-500">Codigo para insertar:</p>
                 <code className="block text-xs text-green-400 whitespace-pre-wrap break-all">
                   {`<a href="https://opinafy.com/health-score?url=${encodeURIComponent(result.url)}" target="_blank" rel="noopener">\n  <img src="https://img.shields.io/badge/Social_Proof_Score-${result.score}%2F100-${result.score >= 80 ? 'brightgreen' : result.score >= 50 ? 'yellow' : 'red'}?style=for-the-badge&label=Social%20Proof%20Score&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJ3aGl0ZSI+PHBhdGggZD0iTTEyIDJsMS45IDUuOUgyMGwtNC4xIDMgMS42IDUuOS00LjUtMy4zTDguNSAxNi44bDEuNi01LjlMMiA3LjloNi4xeiIvPjwvc3ZnPg==" alt="Social Proof Score: ${result.score}/100 — Powered by Opinafy" />\n</a>`}
                 </code>

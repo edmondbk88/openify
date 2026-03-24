@@ -45,6 +45,7 @@ export default async function HelpGuidePage({ params }: Props) {
     name: `${guide.title} - Help Center | Opinafy`,
     url: `https://opinafy.com/en/help/${guide.slug}`,
     description: guide.description,
+    lang: 'en',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -101,7 +102,7 @@ export default async function HelpGuidePage({ params }: Props) {
               href={`/en/help/${prev.slug}`}
               className="flex flex-1 flex-col rounded-xl border border-gray-200 bg-white p-5 transition-all hover:border-indigo-200 hover:shadow-md"
             >
-              <span className="text-xs font-medium text-gray-400">Previous</span>
+              <span className="text-xs font-medium text-gray-500">Previous</span>
               <span className="mt-1 text-sm font-semibold text-gray-900">{prev.title}</span>
             </Link>
           ) : <div className="flex-1" />}
@@ -110,7 +111,7 @@ export default async function HelpGuidePage({ params }: Props) {
               href={`/en/help/${next.slug}`}
               className="flex flex-1 flex-col items-end rounded-xl border border-gray-200 bg-white p-5 text-right transition-all hover:border-indigo-200 hover:shadow-md"
             >
-              <span className="text-xs font-medium text-gray-400">Next</span>
+              <span className="text-xs font-medium text-gray-500">Next</span>
               <span className="mt-1 text-sm font-semibold text-gray-900">{next.title}</span>
             </Link>
           ) : <div className="flex-1" />}

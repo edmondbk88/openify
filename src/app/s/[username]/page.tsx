@@ -4,9 +4,9 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { createAdminClient } from '@/lib/supabase/admin'
 import { createClient } from '@/lib/supabase/server'
-import { PLAN_LIMITS } from '@/lib/constants'
+import { PLAN_LIMITS, getEffectivePlan } from '@/lib/constants'
 import { formatDate, getInitials } from '@/lib/utils'
-import type { Plan, Profile, Project, Testimonial } from '@/types'
+import type { Profile, Project, Testimonial } from '@/types'
 
 // Force dynamic rendering - user config changes must be reflected immediately
 export const dynamic = 'force-dynamic'
@@ -214,7 +214,7 @@ export default async function MiniSitePage({ params }: PageProps) {
     notFound()
   }
 
-  const plan = profile.plan as Plan
+  const plan = getEffectivePlan(profile)
   const limits = PLAN_LIMITS[plan]
 
   // Check if user is on free plan - show upgrade page

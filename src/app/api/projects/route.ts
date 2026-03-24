@@ -2,8 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/server'
 import { projectSchema } from '@/lib/validations'
 import { generateSlug } from '@/lib/utils'
-import { PLAN_LIMITS } from '@/lib/constants'
-import { Plan } from '@/types'
+import { PLAN_LIMITS, getEffectivePlan } from '@/lib/constants'
 
 export async function GET() {
   try {
@@ -52,11 +51,11 @@ export async function POST(request: NextRequest) {
     // Check plan limits
     const { data: profile } = await supabase
       .from('profiles')
-      .select('plan')
+      .select('plan, gifted_plan, gifted_plan_expires_at')
       .eq('id', user.id)
       .single()
 
-    const plan = (profile?.plan as Plan) || 'free'
+    const plan = getEffectivePlan(profile || { plan: 'free' })
     const limits = PLAN_LIMITS[plan]
 
     const { count } = await supabase

@@ -269,7 +269,7 @@ export default function DescargasPage() {
                   <div className="mt-6">
                     <div className="rounded-lg border border-gray-200 bg-gray-900 p-4">
                       <div className="mb-2 flex items-center justify-between">
-                        <span className="text-xs text-gray-400">
+                        <span className="text-xs text-gray-500">
                           opinafy-section.liquid
                         </span>
                       </div>
@@ -648,7 +648,7 @@ export default function DescargasPage() {
 
                   <div className="mt-6 rounded-lg border border-gray-200 bg-gray-900 p-4">
                     <div className="mb-2 flex items-center justify-between">
-                      <span className="text-xs text-gray-400">HTML</span>
+                      <span className="text-xs text-gray-500">HTML</span>
                     </div>
                     <pre className="overflow-x-auto text-sm text-green-400">
                       <code>{embedCode}</code>

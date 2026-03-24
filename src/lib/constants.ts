@@ -95,6 +95,29 @@ export const WIDGET_LAYOUTS: { value: WidgetLayout; label: string; description: 
   { value: 'popup', label: 'Popup FOMO', description: 'Popup con la última reseña para generar confianza', proOnly: true },
 ]
 
+/**
+ * Returns the effective plan considering gifted plan.
+ * The higher-tier plan wins (gift or base).
+ */
+const PLAN_RANK: Record<string, number> = { free: 0, minisite: 1, pro: 2, business: 3 }
+
+export function getEffectivePlan(profile: {
+  plan: string
+  gifted_plan?: string | null
+  gifted_plan_expires_at?: string | null
+}): Plan {
+  const basePlan = (profile.plan || 'free') as Plan
+  if (profile.gifted_plan && profile.gifted_plan_expires_at) {
+    const expires = new Date(profile.gifted_plan_expires_at)
+    if (expires > new Date()) {
+      const giftedPlan = profile.gifted_plan as Plan
+      // Return whichever is higher tier
+      return (PLAN_RANK[giftedPlan] || 0) > (PLAN_RANK[basePlan] || 0) ? giftedPlan : basePlan
+    }
+  }
+  return basePlan
+}
+
 export const DEFAULT_BRAND_COLOR = '#6366f1'
 export const DEFAULT_COLLECTION_TITLE = '¿Qué opinas de nuestro servicio?'
 export const DEFAULT_THANK_YOU_MESSAGE = '¡Muchas gracias por tu testimonio! Tu opinión es muy valiosa para nosotros.'

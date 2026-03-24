@@ -500,7 +500,7 @@ export default function MejoresHerramientasTestimoniosPage() {
                 <summary className="flex cursor-pointer items-center justify-between px-6 py-4 text-gray-900 font-medium hover:text-indigo-600">
                   {faq.q}
                   <svg
-                    className="ml-4 h-5 w-5 shrink-0 text-gray-400 transition-transform group-open:rotate-180"
+                    className="ml-4 h-5 w-5 shrink-0 text-gray-500 transition-transform group-open:rotate-180"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
