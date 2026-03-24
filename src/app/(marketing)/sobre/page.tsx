@@ -44,7 +44,7 @@ const values = [
     ),
     title: 'Simplicidad',
     description:
-      'Creemos que gestionar testimonios no deberia requerir un manual. Nuestra plataforma es intuitiva desde el primer minuto.',
+      'Creemos que gestionar testimonios no debería requerir un manual. Nuestra plataforma es intuitiva desde el primer minuto.',
   },
   {
     icon: (
@@ -55,7 +55,7 @@ const values = [
     ),
     title: 'Transparencia',
     description:
-      'Precios claros, sin costes ocultos, y verificacion real de cada testimonio. Lo que ves es lo que obtienes.',
+      'Precios claros, sin costes ocultos, y verificación real de cada testimonio. Lo que ves es lo que obtienes.',
   },
   {
     icon: (
@@ -73,9 +73,9 @@ const values = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
       </svg>
     ),
-    title: 'Innovacion',
+    title: 'Innovación',
     description:
-      '100+ plantillas, verificacion doble, video testimonios, A/B testing — funcionalidades que los competidores cobran mucho mas.',
+      '100+ plantillas, verificación doble, video testimonios, A/B testing — funcionalidades que los competidores cobran mucho más.',
   },
 ]
 
@@ -119,7 +119,7 @@ export default function SobrePage() {
             Sobre Opinafy
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-indigo-100 sm:text-xl">
-            Nacimos con una mision: ayudar a negocios hispanohablantes a convertir
+            Nacimos con una misión: ayudar a negocios hispanohablantes a convertir
             la voz de sus clientes en su mejor herramienta de crecimiento.
           </p>
         </div>
@@ -129,27 +129,27 @@ export default function SobrePage() {
       <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Nuestra Mision
+            Nuestra Misión
           </h2>
           <div className="mt-6 space-y-4 text-lg leading-relaxed text-gray-600">
             <p>
               Cuando empezamos a investigar el mercado de testimonios de clientes, nos dimos
-              cuenta de algo evidente: no existia una herramienta nativa en espanol. Todas
-              las plataformas líderes — Testimonial.to, Senja, Famewall — estan
-              pensadas para el mercado angloparlante. Interfaz en ingles, soporte en ingles,
-              plantillas en ingles.
+              cuenta de algo evidente: no existía una herramienta nativa en español. Todas
+              las plataformas líderes — Testimonial.to, Senja, Famewall — están
+              pensadas para el mercado angloparlante. Interfaz en inglés, soporte en inglés,
+              plantillas en inglés.
             </p>
             <p>
               Los negocios de habla hispana merecen una herramienta que hable su idioma, que
-              entienda su mercado y que este disenada desde cero para sus necesidades. Esa
+              entienda su mercado y que esté diseñada desde cero para sus necesidades. Esa
               herramienta es <strong>Opinafy</strong>.
             </p>
             <p>
-              Nuestra mision es democratizar el acceso a la prueba social profesional para
+              Nuestra misión es democratizar el acceso a la prueba social profesional para
               cualquier negocio hispanohablante, ya sea un freelancer que empieza, una pyme
               consolidada o una empresa con equipos distribuidos. Queremos que gestionar
               testimonios sea tan sencillo como enviar un mensaje y tan potente como una
-              campana de publicidad.
+              campaña de publicidad.
             </p>
           </div>
         </div>
@@ -163,7 +163,7 @@ export default function SobrePage() {
               Nuestros Valores
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Los principios que guian cada decision que tomamos.
+              Los principios que guían cada decisión que tomamos.
             </p>
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -186,10 +186,10 @@ export default function SobrePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Opinafy en numeros
+              Opinafy en números
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-              Todo lo que necesitas para convertir la satisfaccion de tus clientes en
+              Todo lo que necesitas para convertir la satisfacción de tus clientes en
               crecimiento real.
             </p>
           </div>
@@ -210,17 +210,17 @@ export default function SobrePage() {
       <section className="bg-indigo-600 py-16 sm:py-20">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Tienes preguntas?
+            ¿Tienes preguntas?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-lg text-indigo-100">
-            Estamos aqui para ayudarte. Escribenos y te respondemos lo antes posible.
+            Estamos aquí para ayudarte. Escríbenos y te respondemos lo antes posible.
           </p>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="/contacto"
               className="inline-flex items-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-indigo-600 shadow-sm transition-colors hover:bg-indigo-50"
             >
-              Contactanos
+              Contáctanos
             </Link>
             <Link
               href="/registro"

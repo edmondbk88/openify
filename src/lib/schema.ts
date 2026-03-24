@@ -46,6 +46,7 @@ export function organizationSchema(opts?: { lang?: string }) {
 // ──────────────────────────────────────────────
 export function webSiteSchema(opts?: { lang?: string }) {
   const lang = opts?.lang || 'es'
+  const searchPath = lang === 'en' ? '/en/blog' : '/blog'
 
   return {
     '@context': 'https://schema.org',
@@ -63,7 +64,7 @@ export function webSiteSchema(opts?: { lang?: string }) {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: 'https://opinafy.com/blog?q={search_term}',
+        urlTemplate: `https://opinafy.com${searchPath}?q={search_term}`,
       },
       'query-input': 'required name=search_term',
     },
@@ -73,7 +74,16 @@ export function webSiteSchema(opts?: { lang?: string }) {
 // ──────────────────────────────────────────────
 // 3. SoftwareApplication -- describes the SaaS product
 // ──────────────────────────────────────────────
-export function softwareApplicationSchema() {
+export function softwareApplicationSchema(opts?: { lang?: string }) {
+  const lang = opts?.lang || 'es'
+  const isEn = lang === 'en'
+
+  const description = isEn
+    ? 'SaaS platform to collect, manage, and display customer testimonials with customizable widgets.'
+    : 'Plataforma SaaS para recopilar, gestionar y mostrar testimonios de clientes con widgets personalizables.'
+
+  const pricingUrl = isEn ? 'https://opinafy.com/en/pricing' : 'https://opinafy.com/precios'
+
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -81,23 +91,24 @@ export function softwareApplicationSchema() {
     url: 'https://opinafy.com',
     applicationCategory: 'BusinessApplication',
     operatingSystem: 'Web',
-    description:
-      'Plataforma SaaS para recopilar, gestionar y mostrar testimonios de clientes con widgets personalizables.',
+    description,
     offers: [
       {
         '@type': 'Offer',
-        name: 'Gratis',
+        name: isEn ? 'Free' : 'Gratis',
         price: '0',
         priceCurrency: 'EUR',
-        url: 'https://opinafy.com/precios',
-        description: 'Perfecto para probar la plataforma. 1 proyecto, 10 testimonios, 2 layouts.',
+        url: pricingUrl,
+        description: isEn
+          ? 'Perfect for trying the platform. 1 project, 10 testimonials, 2 layouts.'
+          : 'Perfecto para probar la plataforma. 1 proyecto, 10 testimonios, 2 layouts.',
       },
       {
         '@type': 'Offer',
         name: 'Mini Sitio',
         price: '5',
         priceCurrency: 'EUR',
-        url: 'https://opinafy.com/precios',
+        url: pricingUrl,
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           price: '5',
@@ -108,15 +119,16 @@ export function softwareApplicationSchema() {
             unitCode: 'MON',
           },
         },
-        description:
-          'Mini sitio profesional para testimonios. Página pública personalizable con dominio propio.',
+        description: isEn
+          ? 'Professional mini site for testimonials. Customizable public page with custom domain.'
+          : 'Mini sitio profesional para testimonios. Página pública personalizable con dominio propio.',
       },
       {
         '@type': 'Offer',
         name: 'Pro',
         price: '9',
         priceCurrency: 'EUR',
-        url: 'https://opinafy.com/precios',
+        url: pricingUrl,
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           price: '9',
@@ -127,15 +139,16 @@ export function softwareApplicationSchema() {
             unitCode: 'MON',
           },
         },
-        description:
-          'Para negocios que quieren crecer. 3 proyectos, testimonios ilimitados, todos los layouts.',
+        description: isEn
+          ? 'For businesses that want to grow. 3 projects, unlimited testimonials, all layouts.'
+          : 'Para negocios que quieren crecer. 3 proyectos, testimonios ilimitados, todos los layouts.',
       },
       {
         '@type': 'Offer',
         name: 'Business',
         price: '19',
         priceCurrency: 'EUR',
-        url: 'https://opinafy.com/precios',
+        url: pricingUrl,
         priceSpecification: {
           '@type': 'UnitPriceSpecification',
           price: '19',
@@ -146,8 +159,9 @@ export function softwareApplicationSchema() {
             unitCode: 'MON',
           },
         },
-        description:
-          'Para equipos y agencias. Proyectos ilimitados, testimonios en video, 3 asientos de equipo.',
+        description: isEn
+          ? 'For teams and agencies. Unlimited projects, video testimonials, 3 team seats.'
+          : 'Para equipos y agencias. Proyectos ilimitados, testimonios en video, 3 asientos de equipo.',
       },
     ],
   }

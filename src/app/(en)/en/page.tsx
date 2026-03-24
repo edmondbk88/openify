@@ -960,7 +960,7 @@ function CtaSection() {
 export default function HomePageEn() {
   const orgJsonLd = organizationSchema({ lang: 'en' })
   const siteJsonLd = webSiteSchema({ lang: 'en' })
-  const appJsonLd = softwareApplicationSchema()
+  const appJsonLd = softwareApplicationSchema({ lang: 'en' })
   const breadcrumbJsonLd = breadcrumbSchema([
     { name: 'Home', url: 'https://opinafy.com/en' },
   ])
