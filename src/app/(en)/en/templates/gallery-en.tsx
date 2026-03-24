@@ -25,6 +25,11 @@ const CATEGORY_TRANSLATIONS: Record<string, string> = {
   'Retro': 'Retro',
 }
 
+// Reverse map: English → Spanish (for API calls since categories are stored in Spanish)
+const REVERSE_TRANSLATIONS: Record<string, string> = Object.fromEntries(
+  Object.entries(CATEGORY_TRANSLATIONS).map(([es, en]) => [en, es])
+)
+
 export function TemplatesGalleryEn({
   templates: initialTemplates,
   categories,
@@ -38,23 +43,43 @@ export function TemplatesGalleryEn({
   const [activeCategory, setActiveCategory] = useState('All')
   const [visibleCount, setVisibleCount] = useState(INITIAL_COUNT)
   const [loading, setLoading] = useState(false)
-
-  const filtered =
-    activeCategory === 'All'
-      ? allTemplates
-      : allTemplates.filter((t) => (CATEGORY_TRANSLATIONS[t.category] || t.category) === activeCategory)
-
-  const visible = filtered.slice(0, visibleCount)
-  const hasMore = activeCategory === 'All'
-    ? visibleCount < totalCount
-    : visibleCount < filtered.length
+  const [categoryTemplates, setCategoryTemplates] = useState<Record<string, TemplatePreviewData[]>>({})
+  const [categoryTotals, setCategoryTotals] = useState<Record<string, number>>({})
 
   const englishCategories = ['All', ...categories.map(c => CATEGORY_TRANSLATIONS[c] || c)]
+
+  // Get templates for current view
+  const currentTemplates = activeCategory === 'All' ? allTemplates : (categoryTemplates[activeCategory] || [])
+  const currentTotal = activeCategory === 'All' ? totalCount : (categoryTotals[activeCategory] ?? 0)
+
+  const visible = currentTemplates.slice(0, visibleCount)
+  const hasMore = visibleCount < currentTotal
+
+  const fetchCategoryTemplates = useCallback(async (enCategory: string) => {
+    if (categoryTemplates[enCategory]) return
+    setLoading(true)
+    try {
+      // API uses Spanish category names
+      const esCategory = REVERSE_TRANSLATIONS[enCategory] || enCategory
+      const res = await fetch(`/api/templates?category=${encodeURIComponent(esCategory)}&limit=200`)
+      const data = await res.json()
+      if (data.templates?.length) {
+        setCategoryTemplates((prev) => ({ ...prev, [enCategory]: data.templates }))
+        setCategoryTotals((prev) => ({ ...prev, [enCategory]: data.total }))
+      } else {
+        setCategoryTemplates((prev) => ({ ...prev, [enCategory]: [] }))
+        setCategoryTotals((prev) => ({ ...prev, [enCategory]: 0 }))
+      }
+    } catch {
+      // Silently fail
+    } finally {
+      setLoading(false)
+    }
+  }, [categoryTemplates])
 
   const handleShowMore = useCallback(async () => {
     const nextVisible = visibleCount + LOAD_BATCH
 
-    // If we need more templates than we have loaded and viewing "all", fetch from API
     if (activeCategory === 'All' && nextVisible > allTemplates.length && allTemplates.length < totalCount) {
       setLoading(true)
       try {
@@ -64,7 +89,7 @@ export function TemplatesGalleryEn({
           setAllTemplates((prev) => [...prev, ...data.templates])
         }
       } catch {
-        // Silently fail — user can retry
+        // Silently fail
       } finally {
         setLoading(false)
       }
@@ -76,11 +101,12 @@ export function TemplatesGalleryEn({
   function handleCategoryChange(category: string) {
     setActiveCategory(category)
     setVisibleCount(INITIAL_COUNT)
+    if (category !== 'All') {
+      fetchCategoryTemplates(category)
+    }
   }
 
-  const remaining = activeCategory === 'All'
-    ? totalCount - visibleCount
-    : filtered.length - visibleCount
+  const remaining = Math.max(0, currentTotal - visibleCount)
 
   return (
     <>
@@ -101,17 +127,24 @@ export function TemplatesGalleryEn({
       </div>
 
       <p className="mb-6 text-center text-sm text-gray-500">
-        Showing {visible.length} of {activeCategory === 'All' ? totalCount : filtered.length} template{(activeCategory === 'All' ? totalCount : filtered.length) !== 1 ? 's' : ''}
+        Showing {visible.length} of {currentTotal} template{currentTotal !== 1 ? 's' : ''}
         {activeCategory !== 'All' ? ` in "${activeCategory}"` : ''}
       </p>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {visible.map((template) => (
-          <div key={template.id} style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
-            <TemplateCardEn template={template} />
-          </div>
-        ))}
-      </div>
+      {loading && visible.length === 0 ? (
+        <div className="py-16 text-center">
+          <div className="mx-auto h-8 w-8 animate-spin rounded-full border-2 border-gray-300 border-t-indigo-600" />
+          <p className="mt-3 text-sm text-gray-500">Loading templates...</p>
+        </div>
+      ) : (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {visible.map((template) => (
+            <div key={template.id} style={{ contentVisibility: 'auto', containIntrinsicSize: '0 400px' }}>
+              <TemplateCardEn template={template} />
+            </div>
+          ))}
+        </div>
+      )}
 
       {hasMore && remaining > 0 && (
         <div className="mt-10 text-center">
@@ -120,12 +153,12 @@ export function TemplatesGalleryEn({
             disabled={loading}
             className="inline-flex h-12 items-center rounded-lg border border-gray-300 bg-white px-8 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50 disabled:opacity-50"
           >
-            {loading ? 'Loading...' : `Show more templates (${Math.max(0, remaining)} remaining)`}
+            {loading ? 'Loading...' : `Show more templates (${remaining} remaining)`}
           </button>
         </div>
       )}
 
-      {filtered.length === 0 && (
+      {!loading && visible.length === 0 && (
         <p className="py-16 text-center text-gray-500">
           No templates found in this category.
         </p>
