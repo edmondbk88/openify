@@ -1,16 +1,19 @@
 export const revalidate = 3600 // revalidate every hour — homepage content rarely changes
 
+import dynamic from 'next/dynamic'
 import { Navbar } from '@/components/landing/navbar'
 import { Hero } from '@/components/landing/hero'
 import { Features } from '@/components/landing/features'
-import { HowItWorks } from '@/components/landing/how-it-works'
-import { TestimonialsPreview } from '@/components/landing/testimonials-preview'
-import { Pricing } from '@/components/landing/pricing'
-import { Faq } from '@/components/landing/faq'
-import { Integrations } from '@/components/landing/integrations'
-import { MiniSiteShowcase } from '@/components/landing/minisite-showcase'
-import { CtaSection } from '@/components/landing/cta-section'
 import { Footer } from '@/components/landing/footer'
+
+// Dynamic imports for below-the-fold sections to reduce initial HTML payload
+const HowItWorks = dynamic(() => import('@/components/landing/how-it-works').then(m => ({ default: m.HowItWorks })))
+const TestimonialsPreview = dynamic(() => import('@/components/landing/testimonials-preview').then(m => ({ default: m.TestimonialsPreview })))
+const Pricing = dynamic(() => import('@/components/landing/pricing').then(m => ({ default: m.Pricing })))
+const Faq = dynamic(() => import('@/components/landing/faq').then(m => ({ default: m.Faq })))
+const Integrations = dynamic(() => import('@/components/landing/integrations').then(m => ({ default: m.Integrations })))
+const MiniSiteShowcase = dynamic(() => import('@/components/landing/minisite-showcase').then(m => ({ default: m.MiniSiteShowcase })))
+const CtaSection = dynamic(() => import('@/components/landing/cta-section').then(m => ({ default: m.CtaSection })))
 import {
   organizationSchema,
   webSiteSchema,

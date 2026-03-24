@@ -277,6 +277,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
       alternates: bilingual('/prensa', '/en/press'),
     },
+    {
+      url: `${baseUrl}/integraciones/zapier`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+      alternates: bilingual('/integraciones/zapier', '/en/integrations/zapier'),
+    },
   ]
 
   // Help center guide pages (ES)
@@ -595,6 +602,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: 'monthly',
       priority: 0.5,
       alternates: bilingual('/prensa', '/en/press'),
+    },
+    {
+      url: `${baseUrl}/en/integrations/zapier`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+      alternates: bilingual('/integraciones/zapier', '/en/integrations/zapier'),
     },
   ]
 

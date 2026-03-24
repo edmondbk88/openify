@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
-import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
+import { webPageSchema, breadcrumbSchema, organizationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
   title: 'About Us - Opinafy',
@@ -100,6 +100,15 @@ export default function AboutPage() {
     { name: 'About', url: 'https://opinafy.com/en/about' },
   ])
 
+  const orgJsonLd = {
+    ...organizationSchema({ lang: 'en' }),
+    founder: {
+      '@type': 'Person',
+      name: 'Edmond Bojalil',
+      url: 'https://www.linkedin.com/in/edmondbojalil/',
+    },
+  }
+
   return (
     <>
       <script
@@ -109,6 +118,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
       />
       <NavbarEn />
 
@@ -156,8 +169,54 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Values */}
+      {/* Founder */}
       <section className="bg-gray-50 py-20 sm:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Founder
+          </h2>
+          <div className="mt-10 flex flex-col items-center gap-8 sm:flex-row sm:items-start">
+            <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-indigo-600 text-3xl font-bold text-white">
+              EB
+            </div>
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-900">Edmond Bojalil</h3>
+              <p className="text-lg font-medium text-indigo-600">Founder &amp; Lead Developer</p>
+              <div className="mt-4 space-y-3 text-lg leading-relaxed text-gray-600">
+                <p>
+                  Mexican-born developer with 15+ years of experience, based in Madrid, Spain.
+                  Currently Senior Backend &amp; Full Stack Developer at Rankia, one of the largest
+                  Spanish-speaking financial communities. Holds a degree in Design &amp; New
+                  Technologies from IBERO Puebla, graduating with the highest GPA medal in his class.
+                </p>
+                <p>
+                  Creator of{' '}
+                  <a href="https://recetasmexas.com" className="font-medium text-indigo-600 underline hover:text-indigo-800" target="_blank" rel="noopener noreferrer">
+                    RecetasMexas.com
+                  </a>
+                  , the largest Mexican cuisine reference in Spain, featuring 400+ adapted recipes,
+                  150+ mapped stores, and 550+ restaurants. He built Opinafy because he spotted an
+                  obvious gap in the market: no testimonial platform existed natively in Spanish.
+                </p>
+              </div>
+              <a
+                href="https://www.linkedin.com/in/edmondbojalil/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-base font-medium text-indigo-600 hover:text-indigo-800"
+              >
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-white py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -183,7 +242,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stats */}
-      <section className="bg-white py-20 sm:py-24">
+      <section className="bg-gray-50 py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

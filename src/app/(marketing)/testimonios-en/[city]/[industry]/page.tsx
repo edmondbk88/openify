@@ -4,7 +4,19 @@ import { notFound } from 'next/navigation'
 import { cities, topIndustrySlugs } from '@/lib/cities-data'
 import { industries } from '@/lib/industry-data'
 import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
-import { getCityDescription, generateCityIndustryFAQs } from '@/lib/city-industry-content'
+import {
+  getCityDescription,
+  generateCityIndustryFAQs,
+  getCityProfile,
+  getIndustryInsight,
+  getIndustryBlogLinks,
+  getRelatedIndustries,
+  getNearbyRelatedCities,
+  formatPopulation,
+  generateUniqueIntro,
+  generateWhyTestimonialsMatter,
+  getCityTier,
+} from '@/lib/city-industry-content'
 
 interface CityIndustryPageProps {
   params: Promise<{ city: string; industry: string }>
@@ -94,11 +106,34 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
   }
 
   const pageTitle = `Testimonios para ${industry.name} en ${city.name}`
+  const industryLower = industry.name.toLowerCase()
+
+  // Gather all unique data
+  const cityProfile = getCityProfile(city.slug)
+  const industryInsight = getIndustryInsight(industry.slug)
+  const blogLinks = getIndustryBlogLinks(industry.slug)
+  const relatedIndustrySlugs = getRelatedIndustries(industry.slug)
+  const nearbyRelatedCitySlugs = getNearbyRelatedCities(city.slug)
+  const cityTier = getCityTier(city.slug)
+  const cityDescription = getCityDescription(city.slug)
+  const cityFAQs = generateCityIndustryFAQs(city.slug, city.name, industry.slug, industry.name)
+  const uniqueIntro = generateUniqueIntro(city.slug, city.name, city.country, industry.slug, industry.name)
+  const whyBullets = generateWhyTestimonialsMatter(city.slug, city.name, industry.slug, industry.name)
+
+  // Resolve related industries to full objects
+  const relatedIndustryObjects = relatedIndustrySlugs
+    .map((slug) => topIndustries.find((i) => i.slug === slug))
+    .filter(Boolean) as typeof topIndustries
+
+  // Resolve nearby cities
+  const nearbyCityObjects = nearbyRelatedCitySlugs
+    .map((slug) => cities.find((c) => c.slug === slug))
+    .filter(Boolean) as typeof cities
 
   const pageJsonLd = webPageSchema({
     name: pageTitle,
     url: `https://opinafy.com/testimonios-en/${city.slug}/${industry.slug}`,
-    description: `Recopila y muestra testimonios de clientes para ${industry.name.toLowerCase()} en ${city.name}.`,
+    description: `Recopila y muestra testimonios de clientes para ${industryLower} en ${city.name}.`,
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -113,9 +148,6 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
       url: `https://opinafy.com/testimonios-en/${city.slug}/${industry.slug}`,
     },
   ])
-
-  const cityDescription = getCityDescription(city.slug)
-  const cityFAQs = generateCityIndustryFAQs(city.slug, city.name, industry.slug, industry.name)
 
   const faqJsonLd = {
     '@context': 'https://schema.org',
@@ -134,7 +166,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: `${industry.name} en ${city.name}`,
-    description: `Testimonios de clientes para ${industry.name.toLowerCase()} en ${city.name}, ${city.country}`,
+    description: `Testimonios de clientes para ${industryLower} en ${city.name}, ${city.country}`,
     address: {
       '@type': 'PostalAddress',
       addressLocality: city.name,
@@ -146,6 +178,14 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
       name: city.name,
     },
   }
+
+  // Tier label for display
+  const tierLabel =
+    cityTier === 'grande'
+      ? 'Mercado grande y competitivo'
+      : cityTier === 'mediana'
+        ? 'Mercado en crecimiento'
+        : 'Mercado local especializado'
 
   return (
     <>
@@ -210,6 +250,23 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
             {city.region ? `, ${city.region}` : ''}, {city.country}, los clientes buscan
             opiniones reales antes de elegir. Muestra la confianza que genera tu negocio.
           </p>
+          {/* City quick stats */}
+          {cityProfile && (
+            <div className="mt-8 flex flex-wrap justify-center gap-6">
+              <div className="rounded-lg bg-white px-4 py-2 shadow-sm border border-gray-100">
+                <span className="text-sm text-gray-500">Poblacion</span>
+                <p className="font-semibold text-gray-900">{formatPopulation(cityProfile.population)}</p>
+              </div>
+              <div className="rounded-lg bg-white px-4 py-2 shadow-sm border border-gray-100">
+                <span className="text-sm text-gray-500">Tipo de mercado</span>
+                <p className="font-semibold text-gray-900">{tierLabel}</p>
+              </div>
+              <div className="rounded-lg bg-white px-4 py-2 shadow-sm border border-gray-100">
+                <span className="text-sm text-gray-500">Sectores clave</span>
+                <p className="font-semibold text-gray-900">{cityProfile.keyIndustries.slice(0, 2).join(', ')}</p>
+              </div>
+            </div>
+          )}
           <div className="mt-8 flex justify-center gap-4">
             <Link
               href="/registro"
@@ -227,57 +284,116 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Unique intro + city economic context */}
       <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
-            ¿Por que los testimonios son clave para {industry.name.toLowerCase()} en{' '}
-            {city.name}?
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-gray-600">
-            Ventajas especificas de usar testimonios para tu negocio de{' '}
-            {industry.name.toLowerCase()} en {city.name}.
-          </p>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {industry.benefits.map((benefit, index) => (
-              <div
-                key={index}
-                className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm"
-              >
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100 text-indigo-600 font-bold">
-                  {index + 1}
-                </div>
-                <p className="mt-4 text-gray-700">{benefit}</p>
-              </div>
-            ))}
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="prose prose-lg prose-indigo mx-auto">
+            <h2>
+              {industryLower.charAt(0).toUpperCase() + industryLower.slice(1)} en {city.name}: el papel de los testimonios en tu crecimiento
+            </h2>
+            <p>{uniqueIntro}</p>
+            {cityDescription && (
+              <p>
+                {city.name}, {cityDescription}, ofrece un entorno singular para el sector de{' '}
+                {industryLower}. Comprender esta dinamica local es clave para aprovechar al maximo
+                la prueba social como herramienta de captacion y fidelizacion de clientes.
+              </p>
+            )}
           </div>
         </div>
       </section>
 
-      {/* City-specific content */}
+      {/* Why testimonials matter - unique per city+industry */}
+      {whyBullets.length > 0 && (
+        <section className="bg-indigo-50 py-16 sm:py-24">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl mb-8">
+              ¿Por que los testimonios son decisivos para {industryLower} en {city.name}?
+            </h2>
+            <div className="space-y-6">
+              {whyBullets.map((bullet, index) => (
+                <div
+                  key={index}
+                  className="flex gap-4 rounded-xl bg-white p-6 shadow-sm border border-indigo-100"
+                >
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-indigo-600 text-white font-bold text-sm">
+                    {index + 1}
+                  </div>
+                  <p className="text-gray-700 leading-relaxed">{bullet}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Statistics callout - industry specific metric */}
+      {industryInsight && (
+        <section className="py-12">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <div className="rounded-2xl bg-gradient-to-r from-indigo-600 to-indigo-700 p-8 text-center shadow-lg">
+              <p className="text-lg text-indigo-100 font-medium mb-2">Dato clave para {industryLower}</p>
+              <p className="text-xl text-white font-semibold leading-relaxed">
+                {industryInsight.metrics}
+              </p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Best practices - industry specific */}
+      {industryInsight && (
+        <section className="py-16 sm:py-24">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
+              Mejores practicas de testimonios para {industryLower}
+            </h2>
+            <p className="mx-auto mb-10 max-w-2xl text-center text-lg text-gray-600">
+              Consejos especificos para maximizar el impacto de los testimonios en el sector de {industryLower} en {city.name}.
+            </p>
+            <div className="space-y-6">
+              {industryInsight.bestPractices.map((practice, index) => (
+                <div
+                  key={index}
+                  className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
+                >
+                  <div className="flex gap-4">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-green-100 text-green-700 font-bold">
+                      {index + 1}
+                    </div>
+                    <p className="text-gray-700 leading-relaxed">{practice}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Industry challenges */}
+            <div className="mt-12">
+              <h3 className="text-xl font-bold text-gray-900 mb-6">
+                Retos especificos de {industryLower} con la reputacion online
+              </h3>
+              <div className="space-y-4">
+                {industryInsight.challenges.map((challenge, index) => (
+                  <div key={index} className="flex gap-3">
+                    <span className="shrink-0 text-amber-500 mt-1">
+                      <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                    <p className="text-gray-600">{challenge}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* How Opinafy works - city-contextualized */}
       <section className="bg-gray-50 py-16 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg prose-indigo mx-auto">
-            <h2>
-              Testimonios para {industry.name} en {city.name}: guia completa
-            </h2>
-            <p>
-              Si tienes un negocio de {industry.name.toLowerCase()} en {city.name},{' '}
-              {city.country}, sabes lo importante que es la reputacion online. Los clientes
-              locales en {city.name} confian en las opiniones de otros clientes antes de
-              tomar decisiones, y tener testimonios autenticos puede marcar la diferencia
-              entre ganar o perder un cliente.
-            </p>
-            {cityDescription && (
-              <p>
-                {city.name}, {cityDescription}, ofrece un entorno unico para los negocios de{' '}
-                {industry.name.toLowerCase()}. La dinamica del mercado local hace que la
-                confianza digital sea un factor decisivo para captar y retener clientes.
-                Mostrar testimonios reales de clientes en {city.name} te posiciona como una
-                opcion fiable frente a la competencia local.
-              </p>
-            )}
-            <h3>¿Como funciona Opinafy para {industry.name.toLowerCase()}?</h3>
+            <h2>¿Como funciona Opinafy para {industryLower} en {city.name}?</h2>
             <ol>
               <li>
                 <strong>Recopila testimonios facilmente:</strong> Crea formularios
@@ -294,17 +410,17 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
               </li>
               <li>
                 <strong>Mejora tu SEO local:</strong> Los testimonios generan contenido
-                fresco con palabras clave naturales sobre {industry.name.toLowerCase()} en{' '}
+                fresco con palabras clave naturales sobre {industryLower} en{' '}
                 {city.name}.
               </li>
             </ol>
             <h3>Ventaja competitiva en {city.name}</h3>
             <p>
-              En un mercado competitivo como {city.name}, los testimonios de clientes
-              reales te ayudan a destacar. Mientras otros negocios de{' '}
-              {industry.name.toLowerCase()} dependen solo de redes sociales, tu puedes
-              mostrar prueba social directamente en tu web, donde los clientes toman la
-              decision final.
+              {cityTier === 'grande'
+                ? `En un mercado masivo como ${city.name}, los testimonios de clientes reales te ayudan a sobresalir entre la multitud. Mientras cientos de negocios de ${industryLower} dependen solo de redes sociales, tu puedes mostrar prueba social verificada directamente en tu web, donde los clientes toman la decision final. Con ${cityProfile ? formatPopulation(cityProfile.population) + ' de potenciales clientes' : 'millones de consumidores'}, cada testimonio adicional amplifica tu alcance.`
+                : cityTier === 'mediana'
+                  ? `${city.name} es un mercado en crecimiento donde los negocios que invierten en reputacion digital hoy seran los lideres de manana. Tu negocio de ${industryLower} puede aprovechar el momento: la competencia aun no ha saturado el espacio de testimonios online, y posicionarte ahora te dara una ventaja dificil de replicar cuando el mercado madure.`
+                  : `En ${city.name}, la cercania y la confianza son valores fundamentales. Los testimonios digitales traducen el boca a boca local al mundo online, donde cada vez mas residentes y visitantes buscan servicios de ${industryLower}. Al ser un mercado mas compacto, cada testimonio positivo tiene un peso especifico mayor y contribuye a consolidarte como la referencia de ${industryLower} en la zona.`}
             </p>
           </div>
         </div>
@@ -314,7 +430,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
-            Asi se verian los testimonios de {industry.name.toLowerCase()} en {city.name}
+            Asi se verian los testimonios de {industryLower} en {city.name}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-gray-600">
             Ejemplos de como se mostrarian los testimonios de tus clientes con Opinafy.
@@ -347,7 +463,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl mb-12">
-            Preguntas frecuentes sobre testimonios para {industry.name.toLowerCase()} en{' '}
+            Preguntas frecuentes sobre testimonios para {industryLower} en{' '}
             {city.name}
           </h2>
           <div className="space-y-8">
@@ -361,8 +477,34 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
         </div>
       </section>
 
-      {/* Related Pages */}
-      <section className="bg-gray-50 py-16 sm:py-24">
+      {/* Blog articles - industry specific */}
+      {blogLinks.length > 0 && (
+        <section className="bg-gray-50 py-16 sm:py-24">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              Articulos relacionados con {industryLower}
+            </h2>
+            <p className="text-gray-600 mb-8">
+              Profundiza en estrategias de testimonios especificas para {industryLower} con estos recursos de nuestro blog.
+            </p>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {blogLinks.map((link) => (
+                <Link
+                  key={link.slug}
+                  href={`/blog/${link.slug}`}
+                  className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-indigo-300 hover:shadow-md transition-all"
+                >
+                  <p className="font-semibold text-gray-900 hover:text-indigo-600">{link.title}</p>
+                  <p className="mt-2 text-sm text-indigo-600">Leer articulo &rarr;</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related pages - curated links */}
+      <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* Link to industry main page */}
           <div className="mb-12 text-center">
@@ -377,27 +519,76 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
             </Link>
           </div>
 
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            {industry.name} en otras ciudades
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {cities
-              .filter((c) => c.slug !== city.slug)
-              .map((otherCity) => (
-                <Link
-                  key={otherCity.slug}
-                  href={`/testimonios-en/${otherCity.slug}/${industry.slug}`}
-                  className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-700 hover:border-indigo-300 hover:text-indigo-600 transition-colors"
-                >
-                  {industry.name} en {otherCity.name}
-                </Link>
-              ))}
+          {/* Related industries in same city - curated 3 */}
+          {relatedIndustryObjects.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                Industrias relacionadas en {city.name}
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Si te interesa {industryLower}, tambien podrian interesarte estas industrias cercanas en {city.name}.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {relatedIndustryObjects.map((otherIndustry) => (
+                  <Link
+                    key={otherIndustry.slug}
+                    href={`/testimonios-en/${city.slug}/${otherIndustry.slug}`}
+                    className="rounded-full border border-indigo-200 bg-indigo-50 px-4 py-2 text-sm font-medium text-indigo-700 hover:bg-indigo-100 transition-colors"
+                  >
+                    {otherIndustry.name} en {city.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Same industry in nearby/related cities - curated 2-3 */}
+          {nearbyCityObjects.length > 0 && (
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                {industry.name} en ciudades cercanas
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Explora como los testimonios impulsan a los negocios de {industryLower} en otras ciudades relacionadas con {city.name}.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {nearbyCityObjects.map((otherCity) => (
+                  <Link
+                    key={otherCity.slug}
+                    href={`/testimonios-en/${otherCity.slug}/${industry.slug}`}
+                    className="rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-medium text-green-700 hover:bg-green-100 transition-colors"
+                  >
+                    {industry.name} en {otherCity.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* All other cities - compact list */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">
+              {industry.name} en todas las ciudades
+            </h2>
+            <div className="flex flex-wrap gap-3">
+              {cities
+                .filter((c) => c.slug !== city.slug)
+                .map((otherCity) => (
+                  <Link
+                    key={otherCity.slug}
+                    href={`/testimonios-en/${otherCity.slug}/${industry.slug}`}
+                    className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-700 hover:border-indigo-300 hover:text-indigo-600 transition-colors"
+                  >
+                    {industry.name} en {otherCity.name}
+                  </Link>
+                ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Other industries in this city */}
-      <section className="py-16 sm:py-24">
+      <section className="bg-gray-50 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             Otras industrias en {city.name}

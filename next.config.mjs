@@ -13,6 +13,16 @@ const nextConfig = {
   },
   async headers() {
     return [
+      // Content-Language for English pages
+      {
+        source: '/en/:path*',
+        headers: [{ key: 'Content-Language', value: 'en' }],
+      },
+      // Content-Language for Spanish pages (exclude en, _next, api)
+      {
+        source: '/((?!en|_next|api).*)',
+        headers: [{ key: 'Content-Language', value: 'es' }],
+      },
       {
         source: '/api/widget-preview/:path*',
         headers: [
@@ -27,8 +37,20 @@ const nextConfig = {
           { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://fonts.googleapis.com data:; connect-src 'self' https://*.supabase.co;" },
         ],
       },
+      // Collection pages (/p/*) — allow camera & microphone for video/audio testimonials
       {
-        source: '/((?!api/widget-preview|api/widget-demo).*)',
+        source: '/p/:path*',
+        headers: [
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          { key: 'Permissions-Policy', value: 'camera=(self), microphone=(self), geolocation=()' },
+          { key: 'Content-Security-Policy', value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; img-src 'self' data: https: blob:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; connect-src 'self' https://*.supabase.co https://*.stripe.com https://www.google-analytics.com https://region1.google-analytics.com; frame-src 'self' https://js.stripe.com; media-src 'self' blob:;" },
+        ],
+      },
+      // All other non-widget pages — restrict camera & microphone
+      {
+        source: '/((?!api/widget-preview|api/widget-demo|p/).*)',
         headers: [
           { key: 'X-Content-Type-Options', value: 'nosniff' },
           { key: 'X-Frame-Options', value: 'DENY' },

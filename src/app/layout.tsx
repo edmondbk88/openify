@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     'confianza del cliente',
     'SaaS testimonios',
   ],
-  authors: [{ name: 'Opinafy' }],
+  authors: [{ name: 'Edmond Bojalil', url: 'https://www.linkedin.com/in/edmondbojalil/' }],
   creator: 'Opinafy',
   openGraph: {
     type: 'website',

@@ -29,8 +29,14 @@ export function organizationSchema(opts?: { lang?: string }) {
     },
     description,
     foundingDate: '2026',
+    founder: {
+      '@type': 'Person',
+      name: 'Edmond Bojalil',
+      url: 'https://www.linkedin.com/in/edmondbojalil/',
+    },
     sameAs: [
       'https://www.linkedin.com/company/opinafy',
+      'https://www.linkedin.com/in/edmondbojalil/',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
@@ -342,7 +348,6 @@ export function articleSchema(opts: {
 }) {
   const lang = opts.lang || 'es'
   const blogPrefix = lang === 'en' ? '/en/blog/' : '/blog/'
-  const authorName = lang === 'en' ? 'Opinafy Team' : 'Equipo Opinafy'
 
   return {
     '@context': 'https://schema.org',
@@ -352,8 +357,8 @@ export function articleSchema(opts: {
     image: opts.image || 'https://opinafy.com/og.png',
     author: {
       '@type': 'Person',
-      name: authorName,
-      url: 'https://opinafy.com',
+      name: 'Edmond Bojalil',
+      url: 'https://www.linkedin.com/in/edmondbojalil/',
     },
     publisher: {
       '@type': 'Organization',
