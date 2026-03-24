@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { WidgetTemplate } from '@/lib/widget-templates'
+import type { TemplatePreviewData } from '@/lib/widget-templates'
 import { TemplatePreview } from './template-preview'
 
 const categoryBadgeColors: Record<string, string> = {
@@ -23,7 +23,7 @@ const layoutLabels: Record<string, string> = {
   badge: 'Badge',
 }
 
-export function TemplateCard({ template }: { template: WidgetTemplate }) {
+export function TemplateCard({ template }: { template: TemplatePreviewData }) {
   return (
     <Link
       href={`/plantillas/${template.id}`}

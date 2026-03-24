@@ -165,6 +165,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           />
         </div>
 
+        {/* TL;DR */}
+        {article.tldr && (
+          <div className="mb-8 rounded-lg border border-indigo-200 bg-indigo-50 p-4">
+            <p className="text-sm font-semibold text-indigo-900">TL;DR</p>
+            <p className="mt-1 text-sm text-indigo-800">{article.tldr}</p>
+          </div>
+        )}
+
         {/* Content */}
         <div
           className="prose prose-lg prose-gray mx-auto max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-h2:mt-12 prose-h2:text-2xl prose-h3:mt-8 prose-h3:text-xl prose-p:leading-relaxed prose-a:text-indigo-600 prose-a:no-underline hover:prose-a:underline prose-strong:text-gray-900 prose-ul:my-6 prose-li:my-1"

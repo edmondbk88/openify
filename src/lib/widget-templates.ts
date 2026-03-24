@@ -19,6 +19,21 @@ export interface WidgetTemplate {
   }
 }
 
+/** Slimmed-down type for gallery cards — excludes preview_image to reduce RSC payload */
+export type TemplatePreviewData = Omit<WidgetTemplate, 'preview_image'>
+
+/** Map full templates to the slim preview type */
+export function toPreviewData(templates: WidgetTemplate[]): TemplatePreviewData[] {
+  return templates.map(({ id, name, description, category, layout, config }) => ({
+    id,
+    name,
+    description,
+    category,
+    layout,
+    config,
+  }))
+}
+
 export const TEMPLATE_CATEGORIES = [
   'Minimalista',
   'Corporativo',

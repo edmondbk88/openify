@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 import { cities, topIndustrySlugs } from '@/lib/cities-data'
 import { industries } from '@/lib/industry-data'
 import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
+import { getCityDescription, generateCityIndustryFAQs } from '@/lib/city-industry-content'
 
 interface CityIndustryPageProps {
   params: Promise<{ city: string; industry: string }>
@@ -113,6 +114,22 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
     },
   ])
 
+  const cityDescription = getCityDescription(city.slug)
+  const cityFAQs = generateCityIndustryFAQs(city.slug, city.name, industry.slug, industry.name)
+
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: cityFAQs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  }
+
   const localBusinessJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
@@ -143,6 +160,10 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* Breadcrumbs */}
@@ -247,6 +268,15 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
               tomar decisiones, y tener testimonios autenticos puede marcar la diferencia
               entre ganar o perder un cliente.
             </p>
+            {cityDescription && (
+              <p>
+                {city.name}, {cityDescription}, ofrece un entorno unico para los negocios de{' '}
+                {industry.name.toLowerCase()}. La dinamica del mercado local hace que la
+                confianza digital sea un factor decisivo para captar y retener clientes.
+                Mostrar testimonios reales de clientes en {city.name} te posiciona como una
+                opcion fiable frente a la competencia local.
+              </p>
+            )}
             <h3>¿Como funciona Opinafy para {industry.name.toLowerCase()}?</h3>
             <ol>
               <li>
@@ -313,9 +343,40 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
         </div>
       </section>
 
-      {/* Other cities for this industry */}
+      {/* FAQ Section */}
+      <section className="bg-white py-16 sm:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl mb-12">
+            Preguntas frecuentes sobre testimonios para {industry.name.toLowerCase()} en{' '}
+            {city.name}
+          </h2>
+          <div className="space-y-8">
+            {cityFAQs.map((faq, index) => (
+              <div key={index} className="rounded-xl border border-gray-200 p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Pages */}
       <section className="bg-gray-50 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          {/* Link to industry main page */}
+          <div className="mb-12 text-center">
+            <p className="text-gray-600 mb-4">
+              Descubre todo sobre testimonios para esta industria:
+            </p>
+            <Link
+              href={`/testimonios-para/${industry.slug}`}
+              className="inline-flex items-center rounded-lg border-2 border-indigo-600 bg-white px-6 py-3 text-base font-semibold text-indigo-600 shadow-sm transition-colors hover:bg-indigo-50"
+            >
+              Ver pagina completa de {industry.name}
+            </Link>
+          </div>
+
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             {industry.name} en otras ciudades
           </h2>

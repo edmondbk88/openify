@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { widgetTemplates, TEMPLATE_CATEGORIES } from '@/lib/widget-templates'
+import { widgetTemplates, TEMPLATE_CATEGORIES, toPreviewData } from '@/lib/widget-templates'
 import { PlantillasGallery } from './gallery'
 import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
 
@@ -50,6 +50,8 @@ export const metadata: Metadata = {
     follow: true,
   },
 }
+
+const INITIAL_TEMPLATES = 24
 
 export default function PlantillasPage() {
   const collectionJsonLd = collectionPageSchema({
@@ -157,8 +159,9 @@ export default function PlantillasPage() {
       <section className="px-4 pb-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <PlantillasGallery
-            templates={widgetTemplates}
+            templates={toPreviewData(widgetTemplates.slice(0, INITIAL_TEMPLATES))}
             categories={[...TEMPLATE_CATEGORIES]}
+            totalCount={widgetTemplates.length}
           />
         </div>
       </section>

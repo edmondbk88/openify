@@ -65,7 +65,7 @@ export function Navbar() {
         {/* Mobile hamburger */}
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-gray-600 hover:bg-gray-100 md:hidden"
+          className="inline-flex min-h-[48px] min-w-[48px] items-center justify-center rounded-md p-3 text-gray-600 hover:bg-gray-100 md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-expanded={mobileOpen}
           aria-label="Abrir menú"

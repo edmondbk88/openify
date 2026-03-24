@@ -206,7 +206,7 @@ export default function PricingPageEn() {
       <NavbarEn />
       <div className="pt-16">
         {/* H1 Header */}
-        <section className="bg-white px-4 pb-0 pt-16 sm:px-6 lg:px-8">
+        <section className="bg-white px-4 pb-0 pt-8 sm:pt-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
               Plans & Pricing
@@ -218,7 +218,7 @@ export default function PricingPageEn() {
         </section>
 
         {/* Pricing cards */}
-        <section id="pricing" className="bg-white py-20 sm:py-28">
+        <section id="pricing" className="bg-white py-10 sm:py-28">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">

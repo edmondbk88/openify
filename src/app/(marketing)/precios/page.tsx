@@ -96,7 +96,7 @@ export default function PreciosPage() {
       <Navbar />
       <div className="pt-16">
         {/* H1 Header */}
-        <section className="bg-white px-4 pb-0 pt-16 sm:px-6 lg:px-8">
+        <section className="bg-white px-4 pb-0 pt-8 sm:pt-16 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
               Planes y Precios

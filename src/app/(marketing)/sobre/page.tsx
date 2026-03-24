@@ -1,0 +1,238 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { Navbar } from '@/components/landing/navbar'
+import { Footer } from '@/components/landing/footer'
+import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
+
+export const metadata: Metadata = {
+  title: 'Sobre Nosotros - Opinafy',
+  description:
+    'Conoce al equipo detrás de Opinafy, la plataforma líder en español para testimonios de clientes.',
+  alternates: {
+    canonical: 'https://opinafy.com/sobre',
+    languages: {
+      es: 'https://opinafy.com/sobre',
+      en: 'https://opinafy.com/en/about',
+      'x-default': 'https://opinafy.com/sobre',
+    },
+  },
+  openGraph: {
+    title: 'Sobre Nosotros - Opinafy',
+    description:
+      'Conoce al equipo detrás de Opinafy, la plataforma líder en español para testimonios de clientes.',
+    url: 'https://opinafy.com/sobre',
+    type: 'website',
+    siteName: 'Opinafy',
+    locale: 'es_ES',
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Sobre Nosotros - Opinafy',
+    description:
+      'Conoce al equipo detrás de Opinafy, la plataforma líder en español para testimonios de clientes.',
+    images: ['/og.png'],
+  },
+}
+
+const values = [
+  {
+    icon: (
+      <svg className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456z" />
+      </svg>
+    ),
+    title: 'Simplicidad',
+    description:
+      'Creemos que gestionar testimonios no deberia requerir un manual. Nuestra plataforma es intuitiva desde el primer minuto.',
+  },
+  {
+    icon: (
+      <svg className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+    title: 'Transparencia',
+    description:
+      'Precios claros, sin costes ocultos, y verificacion real de cada testimonio. Lo que ves es lo que obtienes.',
+  },
+  {
+    icon: (
+      <svg className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+      </svg>
+    ),
+    title: 'Accesibilidad',
+    description:
+      'Herramientas profesionales al alcance de cualquier negocio, desde freelancers hasta empresas con equipos grandes.',
+  },
+  {
+    icon: (
+      <svg className="h-8 w-8 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+      </svg>
+    ),
+    title: 'Innovacion',
+    description:
+      '100+ plantillas, verificacion doble, video testimonios, A/B testing — funcionalidades que los competidores cobran mucho mas.',
+  },
+]
+
+const stats = [
+  { value: '100+', label: 'Plantillas de widgets' },
+  { value: '7', label: 'Layouts diferentes' },
+  { value: '30', label: 'Plantillas de mini sitio' },
+  { value: '10+', label: 'Integraciones' },
+]
+
+export default function SobrePage() {
+  const pageJsonLd = webPageSchema({
+    name: 'Sobre Nosotros - Opinafy',
+    url: 'https://opinafy.com/sobre',
+    description:
+      'Conoce al equipo detrás de Opinafy, la plataforma líder en español para testimonios de clientes.',
+  })
+
+  const breadcrumbJsonLd = breadcrumbSchema([
+    { name: 'Inicio', url: 'https://opinafy.com' },
+    { name: 'Sobre Nosotros', url: 'https://opinafy.com/sobre' },
+  ])
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <Navbar />
+
+      {/* Hero */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-700 py-24 text-white sm:py-32">
+        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+        <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            Sobre Opinafy
+          </h1>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-indigo-100 sm:text-xl">
+            Nacimos con una mision: ayudar a negocios hispanohablantes a convertir
+            la voz de sus clientes en su mejor herramienta de crecimiento.
+          </p>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Nuestra Mision
+          </h2>
+          <div className="mt-6 space-y-4 text-lg leading-relaxed text-gray-600">
+            <p>
+              Cuando empezamos a investigar el mercado de testimonios de clientes, nos dimos
+              cuenta de algo evidente: no existia una herramienta nativa en espanol. Todas
+              las plataformas líderes — Testimonial.to, Senja, Famewall — estan
+              pensadas para el mercado angloparlante. Interfaz en ingles, soporte en ingles,
+              plantillas en ingles.
+            </p>
+            <p>
+              Los negocios de habla hispana merecen una herramienta que hable su idioma, que
+              entienda su mercado y que este disenada desde cero para sus necesidades. Esa
+              herramienta es <strong>Opinafy</strong>.
+            </p>
+            <p>
+              Nuestra mision es democratizar el acceso a la prueba social profesional para
+              cualquier negocio hispanohablante, ya sea un freelancer que empieza, una pyme
+              consolidada o una empresa con equipos distribuidos. Queremos que gestionar
+              testimonios sea tan sencillo como enviar un mensaje y tan potente como una
+              campana de publicidad.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-gray-50 py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Nuestros Valores
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              Los principios que guian cada decision que tomamos.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {values.map((value) => (
+              <div
+                key={value.title}
+                className="rounded-2xl bg-white p-8 shadow-sm transition-shadow hover:shadow-md"
+              >
+                <div className="mb-4">{value.icon}</div>
+                <h3 className="text-xl font-semibold text-gray-900">{value.title}</h3>
+                <p className="mt-2 text-gray-600">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Opinafy en numeros
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              Todo lo que necesitas para convertir la satisfaccion de tus clientes en
+              crecimiento real.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label} className="text-center">
+                <p className="text-4xl font-extrabold text-indigo-600 sm:text-5xl">
+                  {stat.value}
+                </p>
+                <p className="mt-2 text-lg font-medium text-gray-700">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-indigo-600 py-16 sm:py-20">
+        <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Tienes preguntas?
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-indigo-100">
+            Estamos aqui para ayudarte. Escribenos y te respondemos lo antes posible.
+          </p>
+          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <Link
+              href="/contacto"
+              className="inline-flex items-center rounded-lg bg-white px-8 py-3 text-base font-semibold text-indigo-600 shadow-sm transition-colors hover:bg-indigo-50"
+            >
+              Contactanos
+            </Link>
+            <Link
+              href="/registro"
+              className="inline-flex items-center rounded-lg border-2 border-white px-8 py-3 text-base font-semibold text-white transition-colors hover:bg-white/10"
+            >
+              Empieza gratis
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  )
+}

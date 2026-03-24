@@ -1,6 +1,6 @@
 'use client'
 
-import { WidgetTemplate } from '@/lib/widget-templates'
+import type { TemplatePreviewData } from '@/lib/widget-templates'
 
 const FAKE_TESTIMONIALS = [
   {
@@ -73,7 +73,7 @@ function TestimonialCard({
   config,
 }: {
   testimonial: (typeof FAKE_TESTIMONIALS)[0]
-  config: WidgetTemplate['config']
+  config: TemplatePreviewData['config']
 }) {
   const fontMap: Record<string, string> = {
     modern: 'system-ui, -apple-system, sans-serif',
@@ -168,7 +168,7 @@ function VideoTestimonialCard({
   videoIndex = 0,
 }: {
   testimonial: (typeof FAKE_TESTIMONIALS)[0]
-  config: WidgetTemplate['config']
+  config: TemplatePreviewData['config']
   videoIndex?: number
 }) {
   const fontMap: Record<string, string> = {
@@ -240,7 +240,7 @@ export function TemplatePreview({
   template,
   compact = false,
 }: {
-  template: WidgetTemplate
+  template: TemplatePreviewData
   compact?: boolean
 }) {
   const { config, layout } = template
