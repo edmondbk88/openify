@@ -5,7 +5,7 @@ import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Opinafy vs Testimonial.to: Comparativa 2026',
   description:
-    'Comparativa detallada entre Opinafy y Testimonial.to. Funcionalidades, precios, idioma, soporte y verificacion frente a frente para elegir la mejor plataforma.',
+    'Comparativa detallada entre Opinafy y Testimonial.to. Funcionalidades, precios, idioma, soporte y verificación frente a frente para elegir la mejor plataforma.',
   keywords: [
     'opinafy vs testimonial.to',
     'alternativa testimonial.to',
@@ -83,15 +83,15 @@ const faqs = [
   },
   {
     q: '¿Testimonial.to tiene interfaz en espanol?',
-    a: 'No, Testimonial.to esta disponible unicamente en ingles. Tanto su panel de administracion como los formularios de recopilacion estan en ingles, lo que puede ser una barrera para negocios hispanohablantes y sus clientes.',
+    a: 'No, Testimonial.to esta disponible unicamente en ingles. Tanto su panel de administracion como los formularios de recopilación están en inglés, lo que puede ser una barrera para negocios hispanohablantes y sus clientes.',
   },
   {
     q: '¿Cual es mas barata, Opinafy o Testimonial.to?',
     a: 'Opinafy ofrece precios mas competitivos en EUR. El plan Pro de Opinafy cuesta 9 EUR/mes (sin cambio de divisa), mientras que Testimonial.to parte de $20 USD/mes en su plan basico de pago. Ademas, Opinafy incluye un plan gratuito generoso con hasta 10 testimonios.',
   },
   {
-    q: '¿Testimonial.to ofrece verificacion de empresas?',
-    a: 'No, Testimonial.to no ofrece un sistema de verificacion de empresa. Opinafy permite verificar que el testimonio proviene de una empresa real, anadiendo una capa extra de credibilidad y confianza para los visitantes de tu web.',
+    q: '¿Testimonial.to ofrece verificación de empresas?',
+    a: 'No, Testimonial.to no ofrece un sistema de verificación de empresa. Opinafy permite verificar que el testimonio proviene de una empresa real, añadiendo una capa extra de credibilidad y confianza para los visitantes de tu web.',
   },
   {
     q: '¿Cual tiene mejores integraciones?',
@@ -108,7 +108,7 @@ export default function OpinafyVsTestimonialToPage() {
     name: 'Opinafy vs Testimonial.to: Comparativa completa 2026',
     url: 'https://opinafy.com/comparar/opinafy-vs-testimonial-to',
     description:
-      'Comparativa detallada entre Opinafy y Testimonial.to. Funcionalidades, precios, idioma, soporte y verificacion frente a frente.',
+      'Comparativa detallada entre Opinafy y Testimonial.to. Funcionalidades, precios, idioma, soporte y verificación frente a frente.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -175,7 +175,7 @@ export default function OpinafyVsTestimonialToPage() {
           </p>
           <p className="mt-4 text-gray-600 leading-7">
             <strong>Opinafy</strong> es una plataforma de testimonios disenada desde cero para el mercado hispanohablante.
-            Ofrece una experiencia completamente en espanol, precios en euros, verificacion de empresa, y un enfoque claro
+            Ofrece una experiencia completamente en espanol, precios en euros, verificación de empresa, y un enfoque claro
             en la autenticidad de los testimonios. Es ideal para autonomos, pymes y agencias que operan en Espana y
             Latinoamerica.
           </p>
@@ -185,7 +185,7 @@ export default function OpinafyVsTestimonialToPage() {
               <ul className="mt-3 space-y-2 text-sm text-indigo-800">
                 <li>Tu negocio opera en espanol</li>
                 <li>Quieres precios en EUR sin comisiones por cambio de divisa</li>
-                <li>Necesitas verificacion de empresa para mayor credibilidad</li>
+                <li>Necesitas verificación de empresa para mayor credibilidad</li>
                 <li>Prefieres soporte en tu idioma</li>
                 <li>Buscas la mejor relacion calidad-precio</li>
               </ul>
@@ -304,9 +304,9 @@ export default function OpinafyVsTestimonialToPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">2. Verificacion de empresa</h3>
+              <h3 className="text-lg font-semibold text-gray-900">2. Verificación de empresa</h3>
               <p className="mt-2 text-gray-600 leading-7">
-                Una funcionalidad unica de Opinafy es la verificacion de empresa. Cuando un cliente deja un testimonio,
+                Una funcionalidad única de Opinafy es la verificación de empresa. Cuando un cliente deja un testimonio,
                 se puede verificar que pertenece a una empresa real. Esto anade una capa de credibilidad que Testimonial.to
                 no ofrece, y que es especialmente valiosa en sectores B2B donde la confianza es determinante.
               </p>
@@ -383,7 +383,7 @@ export default function OpinafyVsTestimonialToPage() {
           </p>
           <p className="mt-4 text-gray-600 leading-7">
             Si tu negocio opera en el mercado hispanohablante, ya sea en Espana o en Latinoamerica, <strong>Opinafy es
-            la mejor opcion</strong>. La experiencia nativa en espanol, la verificacion de empresa, los precios en euros
+            la mejor opcion</strong>. La experiencia nativa en espanol, la verificación de empresa, los precios en euros
             y el soporte en tu idioma hacen que sea una herramienta pensada para ti. Tus clientes tendran una experiencia
             sin fricciones al dejar testimonios, lo que se traduce en mas respuestas y mejor calidad.
           </p>
@@ -394,7 +394,7 @@ export default function OpinafyVsTestimonialToPage() {
           <div className="mt-8 rounded-2xl bg-indigo-50 p-6 sm:p-8">
             <p className="text-lg font-semibold text-indigo-900">
               Para el mercado hispanohablante, Opinafy gana en 5 de los 6 criterios mas importantes: idioma, precios,
-              verificacion, soporte y relacion calidad-precio.
+              verificación, soporte y relación calidad-precio.
             </p>
           </div>
         </section>

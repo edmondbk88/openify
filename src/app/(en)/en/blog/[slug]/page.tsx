@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   }
 
   return {
-    title: `${article.title} | Opinafy Blog`,
+    title: `${article.title} - Blog`,
     description: article.metaDescription,
     keywords: article.keywords,
     authors: [{ name: 'Opinafy Team' }],

@@ -5,7 +5,7 @@ import { ContactFormEn } from '@/components/contact-form-en'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Contact - Opinafy',
+  title: 'Contact',
   description:
     'Contact the Opinafy team. We are here to help you with any questions about testimonials, widgets, or your account.',
   alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Contact - Opinafy',
+    title: 'Contact',
     description:
       'Contact the Opinafy team. We are here to help you.',
     url: 'https://opinafy.com/en/contact',

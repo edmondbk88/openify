@@ -9,7 +9,7 @@ import type { CertificationTier } from '@/lib/certification'
 export const revalidate = 3600
 
 export const metadata: Metadata = {
-  title: 'Top Rated Businesses - Verified Ranking | Opinafy',
+  title: 'Top Rated Businesses - Verified Ranking',
   description:
     'Discover the top-rated businesses by their customers. Verified testimonial ranking with real scores and trust certifications.',
   keywords: [

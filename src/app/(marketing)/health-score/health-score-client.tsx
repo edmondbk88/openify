@@ -74,7 +74,7 @@ export default function HealthScoreClient() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Descubre como de bien aprovecha tu sitio web los testimonios y la prueba social.
-            Recibe recomendaciones personalizadas para mejorar tu puntuacion.
+            Recibe recomendaciones personalizadas para mejorar tu puntuación.
           </p>
         </div>
 
@@ -163,9 +163,9 @@ export default function HealthScoreClient() {
 
             {/* Embeddable badge */}
             <div className="rounded-lg border border-gray-200 bg-white p-6">
-              <h2 className="text-lg font-bold text-gray-900">Comparte tu puntuacion</h2>
+              <h2 className="text-lg font-bold text-gray-900">Comparte tu puntuación</h2>
               <p className="mt-1 text-sm text-gray-500">
-                Inserta este badge en tu web para mostrar tu puntuacion de prueba social.
+                Inserta este badge en tu web para mostrar tu puntuación de prueba social.
               </p>
               <div className="mt-4 flex items-center gap-3 rounded-lg bg-gray-50 p-4">
                 <div
@@ -185,9 +185,9 @@ export default function HealthScoreClient() {
 
             {/* CTA */}
             <div className="rounded-2xl bg-indigo-600 p-8 text-center text-white">
-              <h2 className="text-2xl font-bold">Mejora tu puntuacion con Opinafy</h2>
+              <h2 className="text-2xl font-bold">Mejora tu puntuación con Opinafy</h2>
               <p className="mx-auto mt-2 max-w-lg text-indigo-100">
-                Recopila testimonios verificados, muestralos con widgets profesionales y sube tu puntuacion de prueba social.
+                Recopila testimonios verificados, muestralos con widgets profesionales y sube tu puntuación de prueba social.
               </p>
               <Link
                 href="/registro"

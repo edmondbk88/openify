@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Installation Guides - Opinafy',
+  title: 'Installation Guides',
   description:
     'Learn how to install the Opinafy testimonial widget on WordPress, Shopify, Wix, Squarespace, and more. Step-by-step guides.',
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    title: 'Installation Guides - Opinafy',
+    title: 'Installation Guides',
     description: 'Step-by-step guides to install Opinafy on the most popular platforms.',
     url: 'https://opinafy.com/en/guides',
   },

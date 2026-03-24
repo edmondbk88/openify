@@ -78,6 +78,8 @@ const translations: Record<Locale, Record<string, string>> = {
     'projects.create': 'Crear proyecto',
     'projects.saving': 'Guardando...',
     'projects.saveChanges': 'Guardar cambios',
+    'projects.createdSuccess': 'Proyecto creado correctamente',
+    'projects.errorCreating': 'Error al crear el proyecto',
 
     // Collection / Recopilar
     'collect.title': 'Ajustes de recopilaci\u00f3n',
@@ -243,6 +245,7 @@ const translations: Record<Locale, Record<string, string>> = {
     'billing.errorNoSubscription': 'No tienes una suscripci\u00f3n activa.',
     'billing.checkoutSuccess': '\u00a1Tu plan ha sido actualizado correctamente! Los cambios pueden tardar unos segundos en reflejarse.',
     'billing.checkoutCancelled': 'Has cancelado el proceso de pago. No se ha realizado ning\u00fan cargo.',
+    'billing.giftedPlanNotice': 'Tienes un plan {plan} regalado que expira el {date}.',
 
     // Settings
     'settings.title': 'Configuraci\u00f3n',
@@ -355,6 +358,15 @@ const translations: Record<Locale, Record<string, string>> = {
     'mysite.testimonialsPerPage': 'Testimonios por p\u00e1gina',
     'mysite.testimonialsPerPageHelp': 'N\u00famero de testimonios visibles en tu p\u00e1gina p\u00fablica (10-100).',
     'mysite.viewAll': 'Ver todos los testimonios',
+    'mysite.savedSuccess': 'Configuracion guardada correctamente',
+    'mysite.errorSaving': 'Error al guardar',
+    'mysite.urlCopied': 'URL copiada al portapapeles',
+    'mysite.shareWhatsappText': 'Mira mis testimonios verificados: {url}',
+    'mysite.shareEmailSubject': 'Mis testimonios verificados - {name}',
+    'mysite.shareEmailBody': 'Hola,\n\nTe comparto mi pagina de testimonios verificados:\n{url}\n\nSaludos,\n{name}',
+    'mysite.noUsernameNotice': 'Necesitas configurar un nombre de usuario para activar tu pagina publica.',
+    'mysite.goToSettingsPrefix': 'Ve a',
+    'mysite.goToSettingsSuffix': 'para establecer tu username.',
 
     // Minisite toggle
     'minisite.showOnSite': 'Mostrar en mi sitio',
@@ -570,6 +582,8 @@ const translations: Record<Locale, Record<string, string>> = {
     'projects.create': 'Create project',
     'projects.saving': 'Saving...',
     'projects.saveChanges': 'Save changes',
+    'projects.createdSuccess': 'Project created successfully',
+    'projects.errorCreating': 'Error creating project',
 
     // Collection / Recopilar
     'collect.title': 'Collection settings',
@@ -735,6 +749,7 @@ const translations: Record<Locale, Record<string, string>> = {
     'billing.errorNoSubscription': 'You do not have an active subscription.',
     'billing.checkoutSuccess': 'Your plan has been updated successfully! Changes may take a few seconds to reflect.',
     'billing.checkoutCancelled': 'You cancelled the payment process. No charges were made.',
+    'billing.giftedPlanNotice': 'You have a gifted {plan} plan that expires on {date}.',
 
     // Settings
     'settings.title': 'Settings',
@@ -847,6 +862,15 @@ const translations: Record<Locale, Record<string, string>> = {
     'mysite.testimonialsPerPage': 'Testimonials per page',
     'mysite.testimonialsPerPageHelp': 'Number of testimonials visible on your public page (10-100).',
     'mysite.viewAll': 'View all testimonials',
+    'mysite.savedSuccess': 'Configuration saved successfully',
+    'mysite.errorSaving': 'Error saving',
+    'mysite.urlCopied': 'URL copied to clipboard',
+    'mysite.shareWhatsappText': 'Check out my verified testimonials: {url}',
+    'mysite.shareEmailSubject': 'My verified testimonials - {name}',
+    'mysite.shareEmailBody': 'Hi,\n\nI\'m sharing my verified testimonials page:\n{url}\n\nBest regards,\n{name}',
+    'mysite.noUsernameNotice': 'You need to set up a username to activate your public page.',
+    'mysite.goToSettingsPrefix': 'Go to',
+    'mysite.goToSettingsSuffix': 'to set your username.',
 
     // Minisite toggle
     'minisite.showOnSite': 'Show on my site',

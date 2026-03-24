@@ -3,7 +3,7 @@ import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service - Opinafy',
+  title: 'Terms of Service',
   description:
     'Read the terms and conditions for using Opinafy. These terms govern the use of our testimonial collection and display platform.',
   alternates: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Terms of Service - Opinafy',
+    title: 'Terms of Service',
     description: 'Terms and conditions for using the Opinafy platform.',
     url: 'https://opinafy.com/en/legal/terms',
     locale: 'en_US',

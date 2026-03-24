@@ -4,7 +4,7 @@ import { FooterEn } from '@/components/landing/footer-en'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Legal Notice - Opinafy',
+  title: 'Legal Notice',
   description:
     'Legal notice and company information for Opinafy. Learn about our legal entity, contact details, and regulatory information.',
   alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Legal Notice - Opinafy',
+    title: 'Legal Notice',
     description: 'Legal notice and company information for Opinafy.',
     url: 'https://opinafy.com/en/legal',
     locale: 'en_US',

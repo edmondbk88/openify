@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import HealthScoreEnClient from './health-score-en-client'
 
 export const metadata: Metadata = {
-  title: 'Free Social Proof Checker - Analyze Your Website | Opinafy',
+  title: 'Free Social Proof Checker - Analyze Your Website',
   description:
     'Analyze your website social proof for free. Check if you have testimonials, ratings, structured data and more. Get a score and recommendations to improve.',
   keywords: [
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Free Social Proof Checker | Opinafy',
+    title: 'Free Social Proof Checker',
     description:
       'Discover how well your website leverages testimonials and social proof. Free score + recommendations.',
     url: 'https://opinafy.com/en/health-score',
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Free Social Proof Checker | Opinafy',
+    title: 'Free Social Proof Checker',
     description:
       'Analyze your website for free and discover your social proof score.',
     images: ['/og.png'],

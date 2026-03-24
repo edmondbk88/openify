@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'Gestiona los testimonios de todos tus clientes desde un solo lugar. Multi-proyecto, white-label, dashboard centralizado, reportes PDF y mas. Plan Business desde 19 EUR/mes.',
   keywords: [
     'testimonios para agencias',
-    'gestion testimonios agencia marketing',
+    'gestión testimonios agencia marketing',
     'plataforma testimonios white label',
     'herramienta testimonios agencias',
     'opinafy agencias',
@@ -82,7 +82,7 @@ const agencyFeatures = [
     ),
   },
   {
-    title: 'Webhooks para automatizacion',
+    title: 'Webhooks para automatización',
     description: 'Conecta Opinafy con tus herramientas favoritas. Recibe notificaciones en tiempo real de nuevos testimonios.',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -241,10 +241,10 @@ export default function AgenciasPage() {
                 '65+ plantillas personalizables',
                 'Mini sitio publico por proyecto',
                 'Reportes PDF exportables',
-                'Webhooks para automatizacion',
+                'Webhooks para automatización',
                 'Soporte prioritario',
                 'Video testimonios',
-                'Importacion desde Google, Trustpilot y mas',
+                'Importación desde Google, Trustpilot y más',
               ].map((feature) => (
                 <li key={feature} className="flex items-start gap-3">
                   <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">

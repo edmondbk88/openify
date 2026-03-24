@@ -7,7 +7,7 @@ import { FooterEn } from '@/components/landing/footer-en'
 import { webPageSchema, breadcrumbSchema, faqPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Pricing - Opinafy',
+  title: 'Pricing',
   description:
     'Check out Opinafy plans and pricing. Start for free and scale as you need. Flexible plans for freelancers, small businesses, and agencies.',
   alternates: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Pricing - Opinafy',
+    title: 'Pricing',
     description:
       'Flexible plans to collect and display customer testimonials. Start for free.',
     url: 'https://opinafy.com/en/pricing',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Pricing - Opinafy',
+    title: 'Pricing',
     description:
       'Flexible plans to collect and display customer testimonials. Start for free.',
     images: ['/og.png'],

@@ -5,14 +5,14 @@ import { Footer } from '@/components/landing/footer'
 import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Casos de Exito - Historias de Clientes que Crecieron con Opinafy',
+  title: 'Casos de Éxito - Historias de Clientes que Crecieron con Opinafy',
   description:
-    'Descubre como empresas reales usan Opinafy para recopilar testimonios, aumentar conversiones y generar confianza. Casos de exito con resultados medibles.',
+    'Descubre como empresas reales usan Opinafy para recopilar testimonios, aumentar conversiones y generar confianza. Casos de éxito con resultados medibles.',
   keywords: [
-    'casos de exito opinafy',
+    'casos de éxito opinafy',
     'testimonios clientes',
     'aumentar conversiones testimonios',
-    'historias de exito testimonios',
+    'historias de éxito testimonios',
     'prueba social resultados',
     'opinafy resultados',
   ],
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Casos de Exito de Opinafy - Historias que Inspiran',
+    title: 'Casos de Éxito de Opinafy - Historias que Inspiran',
     description: 'Empresas reales que aumentaron sus conversiones con testimonios verificados.',
     url: 'https://opinafy.com/casos-de-exito',
     type: 'website',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Casos de Exito de Opinafy',
+    title: 'Casos de Éxito de Opinafy',
     description: 'Historias de clientes que crecieron con testimonios verificados.',
     images: ['/og.png'],
   },
@@ -57,9 +57,9 @@ const caseStudies = [
       text: 'Estudio Creativo Luna llevaba 3 anos en el mercado con un portfolio excelente, pero su tasa de conversion web era del 1.8%. Los visitantes navegaban el portfolio, pero no se decidian a contactar. Ana Torres, la directora creativa, sabia que algo faltaba: prueba social. "Teniamos clientes muy satisfechos, pero sus opiniones estaban dispersas en correos y mensajes de WhatsApp. No habia forma de que un visitante nuevo viera esas experiencias positivas."',
     },
     solution: {
-      title: 'La solucion con Opinafy',
+      title: 'La solución con Opinafy',
       steps: [
-        'Crearon una pagina de recopilacion personalizada con el branding de Luna',
+        'Crearon una página de recopilación personalizada con el branding de Luna',
         'Enviaron solicitudes de testimonios a sus 45 clientes existentes por email',
         'En la primera semana, recibieron 28 testimonios escritos y 6 video testimonios',
         'Implementaron un widget carousel en la homepage y un grid en la pagina de servicios',
@@ -91,10 +91,10 @@ const caseStudies = [
       text: 'TechSolutions Madrid es una consultora IT con 8 anos de experiencia y mas de 200 proyectos entregados. Sin embargo, su presencia online no reflejaba su track record. "Teniamos cero resenas online", explica Carlos Mendez, CEO. "Cuando un prospect nos buscaba en Google, no encontraba ninguna referencia de otros clientes. En el sector B2B, eso es un problema serio porque los directores de tecnologia quieren ver pruebas antes de invertir."',
     },
     solution: {
-      title: 'La solucion con Opinafy',
+      title: 'La solución con Opinafy',
       steps: [
         'Crearon 3 proyectos en Opinafy: uno para desarrollo web, otro para consultoria cloud y otro para ciberseguridad',
-        'Disenaron un flujo de recopilacion con email automatizado post-proyecto',
+        'Diseñaron un flujo de recopilación con email automatizado post-proyecto',
         'Utilizaron los video testimonios para los proyectos mas impactantes',
         'Implementaron un widget de testimonios con filtro por servicio en su web',
         'Publicaron su mini sitio y lo anadieron a propuestas comerciales',
@@ -125,9 +125,9 @@ const caseStudies = [
       text: 'Laura Vidal es coach de vida y bienestar con 5 anos de experiencia. Su negocio dependia casi exclusivamente del boca a boca. "El 90% de mis clientes venian por recomendacion personal, lo cual era genial, pero limitaba mi crecimiento", cuenta Laura. "Cuando alguien me descubria por Instagram o Google, no tenia forma de demostrarle rapidamente que mi metodo funciona. Necesitaba que mis clientes satisfechos hablaran por mi, incluso cuando yo no estaba presente."',
     },
     solution: {
-      title: 'La solucion con Opinafy',
+      title: 'La solución con Opinafy',
       steps: [
-        'Creo una pagina de recopilacion centrada en resultados: que cambio en tu vida despues del coaching',
+        'Creó una página de recopilación centrada en resultados: qué cambió en tu vida después del coaching',
         'Pidio testimonios al finalizar cada programa de 12 semanas',
         'Recopilo 4 video testimonios con historias de transformacion',
         'Configuro un mini sitio publico con diseno calido y profesional',
@@ -156,13 +156,13 @@ const colorMap: Record<string, { bg: string; border: string; text: string; light
 
 export default function CasosDeExitoPage() {
   const jsonLdWebPage = webPageSchema({
-    name: 'Casos de Exito - Opinafy',
+    name: 'Casos de Éxito - Opinafy',
     url: 'https://opinafy.com/casos-de-exito',
     description: 'Descubre como empresas reales aumentaron sus conversiones con testimonios verificados de Opinafy.',
   })
   const jsonLdBreadcrumb = breadcrumbSchema([
     { name: 'Inicio', url: 'https://opinafy.com' },
-    { name: 'Casos de Exito', url: 'https://opinafy.com/casos-de-exito' },
+    { name: 'Casos de Éxito', url: 'https://opinafy.com/casos-de-exito' },
   ])
 
   return (
@@ -278,7 +278,7 @@ export default function CasosDeExitoPage() {
         <section className="bg-gradient-to-r from-indigo-600 to-purple-700">
           <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white">
-              Tu historia de exito empieza aqui
+              Tu historia de éxito empieza aquí
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-indigo-200">
               Unete a los negocios que ya estan aumentando sus conversiones con testimonios verificados.

@@ -32,13 +32,13 @@ const tools = [
     name: 'Opinafy',
     tagline: 'La mejor plataforma de testimonios en español',
     description:
-      'Opinafy es una plataforma de testimonios diseñada desde cero para el mercado hispanohablante. Ofrece formularios de recopilacion, widgets embebibles, muro de testimonios, video testimonios, verificacion de email y empresa, y schema markup para SEO. Toda la experiencia, desde el panel de administracion hasta los formularios que reciben tus clientes, esta nativamente en español.',
+      'Opinafy es una plataforma de testimonios diseñada desde cero para el mercado hispanohablante. Ofrece formularios de recopilación, widgets embebibles, muro de testimonios, video testimonios, verificación de email y empresa, y schema markup para SEO. Toda la experiencia, desde el panel de administracion hasta los formularios que reciben tus clientes, esta nativamente en español.',
     pricing: 'Gratis (10 testimonios) / Pro 9 EUR/mes / Business 19 EUR/mes',
     bestFor: 'Negocios hispanohablantes, autonomos, pymes y agencias en España y Latinoamerica',
     pros: [
       'Completamente en español (interfaz, formularios, soporte)',
       'Precios en EUR, los mas competitivos del mercado',
-      'Verificacion de empresa unica en el sector',
+      'Verificación de empresa única en el sector',
       'Schema markup SEO automatico',
       'Video testimonios incluidos',
       'Plan gratuito generoso',
@@ -68,7 +68,7 @@ const tools = [
     cons: [
       'Solo disponible en ingles',
       'Precios en USD (comision de cambio para zona euro)',
-      'Sin verificacion de empresa',
+      'Sin verificación de empresa',
       'Sin soporte en español',
       'Precios mas elevados',
     ],
@@ -79,7 +79,7 @@ const tools = [
     name: 'Senja',
     tagline: 'Herramienta moderna con buen diseño',
     description:
-      'Senja es una plataforma de testimonios que destaca por su interfaz moderna y cuidada. Ofrece funcionalidades para recopilar, gestionar y compartir testimonios, con un enfoque especial en la creacion de contenido para redes sociales. Su diseño visual es uno de sus puntos fuertes.',
+      'Senja es una plataforma de testimonios que destaca por su interfaz moderna y cuidada. Ofrece funcionalidades para recopilar, gestionar y compartir testimonios, con un enfoque especial en la creación de contenido para redes sociales. Su diseño visual es uno de sus puntos fuertes.',
     pricing: 'Gratis (15 testimonios) / Premium ~29 USD/mes / Agency ~49 USD/mes',
     bestFor: 'Negocios anglosajones que priorizan diseño y redes sociales',
     pros: [
@@ -92,7 +92,7 @@ const tools = [
     cons: [
       'Solo en ingles',
       'Precios en USD, mas caros que Opinafy',
-      'Sin verificacion de empresa',
+      'Sin verificación de empresa',
       'Sin soporte en español',
     ],
     url: '/comparar/opinafy-vs-senja',
@@ -102,7 +102,7 @@ const tools = [
     name: 'Famewall',
     tagline: 'Muro de testimonios sencillo',
     description:
-      'Famewall se centra en crear muros de testimonios visualmente atractivos. Es una herramienta sencilla y enfocada que permite recopilar testimonios de multiples fuentes y mostrarlos en un muro embebible. Ideal para quienes buscan simplicidad, aunque le faltan funcionalidades avanzadas como video testimonios o verificacion.',
+      'Famewall se centra en crear muros de testimonios visualmente atractivos. Es una herramienta sencilla y enfocada que permite recopilar testimonios de multiples fuentes y mostrarlos en un muro embebible. Ideal para quienes buscan simplicidad, aunque le faltan funcionalidades avanzadas como video testimonios o verificación.',
     pricing: 'Gratis (limitado) / Pro ~19 USD/mes / Business ~49 USD/mes',
     bestFor: 'Freelancers y negocios pequeños que quieren un muro de testimonios basico',
     pros: [
@@ -115,7 +115,7 @@ const tools = [
       'Solo en ingles',
       'Sin video testimonios',
       'Funcionalidades limitadas comparado con alternativas',
-      'Sin verificacion de empresa o email',
+      'Sin verificación de empresa ni email',
       'Sin soporte en español',
     ],
     url: null,
@@ -125,14 +125,14 @@ const tools = [
     name: 'Trustpilot',
     tagline: 'Plataforma de reseñas global',
     description:
-      'Trustpilot es una de las plataformas de reseñas mas grandes del mundo. A diferencia de las herramientas anteriores, Trustpilot es un marketplace de reseñas publico donde los consumidores pueden dejar opiniones sobre cualquier negocio. Ofrece widgets para mostrar tu puntuacion y reseñas en tu web, pero el control sobre el contenido es limitado ya que las reseñas son publicas.',
+      'Trustpilot es una de las plataformas de reseñas mas grandes del mundo. A diferencia de las herramientas anteriores, Trustpilot es un marketplace de reseñas publico donde los consumidores pueden dejar opiniones sobre cualquier negocio. Ofrece widgets para mostrar tu puntuación y reseñas en tu web, pero el control sobre el contenido es limitado ya que las reseñas son publicas.',
     pricing: 'Gratis (basico) / Planes de pago desde ~199 USD/mes',
     bestFor: 'Empresas grandes que necesitan reputacion publica y reseñas verificadas',
     pros: [
       'Reconocimiento de marca global',
       'Disponible parcialmente en español',
       'Las reseñas son publicas (genera confianza externa)',
-      'Integracion con Google Shopping y anuncios',
+      'Integración con Google Shopping y anuncios',
       'Alto volumen de reseñas potenciales',
     ],
     cons: [
@@ -165,7 +165,7 @@ const tools = [
       'Reseñas negativas publicas y dificiles de gestionar',
       'Sin widgets personalizables',
       'Sin video testimonios',
-      'No es una herramienta de gestion de testimonios',
+      'No es una herramienta de gestión de testimonios',
     ],
     url: null,
   },
@@ -208,11 +208,11 @@ const summaryTable = [
 const faqs = [
   {
     q: '¿Cual es la mejor herramienta de testimonios para negocios en español?',
-    a: 'Opinafy es la mejor opcion para negocios que operan en español. Es la unica plataforma de testimonios con experiencia completa en español, precios en euros y verificacion de empresa. Las demas alternativas (Testimonial.to, Senja, Famewall) estan solo en ingles.',
+    a: 'Opinafy es la mejor opcion para negocios que operan en español. Es la unica plataforma de testimonios con experiencia completa en español, precios en euros y verificación de empresa. Las demas alternativas (Testimonial.to, Senja, Famewall) estan solo en ingles.',
   },
   {
     q: '¿Puedo usar varias herramientas de testimonios a la vez?',
-    a: 'Si, muchos negocios combinan herramientas. Por ejemplo, puedes usar Opinafy para gestionar y mostrar testimonios curados en tu web, mientras mantienes presencia en Google Reviews para SEO local y en Trustpilot para reputacion publica. Lo ideal es centralizar la gestion en una plataforma principal.',
+    a: 'Si, muchos negocios combinan herramientas. Por ejemplo, puedes usar Opinafy para gestionar y mostrar testimonios curados en tu web, mientras mantienes presencia en Google Reviews para SEO local y en Trustpilot para reputacion publica. Lo ideal es centralizar la gestión en una plataforma principal.',
   },
   {
     q: '¿Merece la pena pagar por una herramienta de testimonios?',
@@ -227,8 +227,8 @@ const faqs = [
     a: 'Si. Segun multiples estudios de marketing digital, los video testimonios generan hasta un 80% mas de confianza que los testimonios en texto. El video permite ver la expresion y escuchar el tono del cliente, lo que crea una conexion emocional mas fuerte con el visitante de tu web.',
   },
   {
-    q: '¿Que es la verificacion de empresa en Opinafy?',
-    a: 'Es una funcionalidad unica de Opinafy que permite verificar que el testimonio proviene de una empresa real. El remitente del testimonio recibe una insignia de verificacion que confirma que su empresa ha sido validada. Esto anade una capa extra de credibilidad, especialmente relevante en el mercado B2B.',
+    q: '¿Qué es la verificación de empresa en Opinafy?',
+    a: 'Es una funcionalidad única de Opinafy que permite verificar que el testimonio proviene de una empresa real. El remitente del testimonio recibe una insignia de verificación que confirma que su empresa ha sido validada. Esto anade una capa extra de credibilidad, especialmente relevante en el mercado B2B.',
   },
 ]
 
@@ -289,7 +289,7 @@ export default function MejoresHerramientasTestimoniosPage() {
           <p className="mt-6 text-lg leading-8 text-gray-600">
             Elegir la herramienta de testimonios adecuada puede marcar la diferencia entre una web que genera confianza
             y otra que deja dudas. En esta guia analizamos las 7 mejores plataformas del mercado para que encuentres la
-            que mejor se adapta a tu negocio. Incluimos herramientas de gestion de testimonios y plataformas de reseñas
+            que mejor se adapta a tu negocio. Incluimos herramientas de gestión de testimonios y plataformas de reseñas
             publicas para cubrir todas las necesidades.
           </p>
         </header>
@@ -471,7 +471,7 @@ export default function MejoresHerramientasTestimoniosPage() {
           </p>
           <p className="mt-4 text-gray-600 leading-7">
             <strong>Opinafy llena esa brecha.</strong> Es la unica plataforma de testimonios construida nativamente
-            en español, con precios en euros, verificacion de empresa y soporte en tu idioma. Para cualquier negocio
+            en español, con precios en euros, verificación de empresa y soporte en tu idioma. Para cualquier negocio
             que opere en España o Latinoamerica, es la opcion que ofrece la mejor experiencia tanto para ti como para
             tus clientes.
           </p>

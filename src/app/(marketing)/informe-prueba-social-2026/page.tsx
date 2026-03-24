@@ -74,7 +74,7 @@ const videoStats: StatCard[] = [
 const industryStats: StatCard[] = [
   { value: '97%', label: 'De compradores B2B dicen que el contenido generado por usuarios (como testimonios) es mas creible', source: 'Demand Gen Report', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
   { value: '88%', label: 'De consumidores confian en resenas online tanto como en recomendaciones personales', source: 'BrightLocal', color: 'bg-blue-50 border-blue-200 text-blue-700' },
-  { value: '4.2', label: 'Estrellas es la puntuacion minima que los consumidores consideran aceptable', source: 'ReviewTrackers', color: 'bg-purple-50 border-purple-200 text-purple-700' },
+  { value: '4.2', label: 'Estrellas es la puntuación mínima que los consumidores consideran aceptable', source: 'ReviewTrackers', color: 'bg-purple-50 border-purple-200 text-purple-700' },
   { value: '52%', label: 'De la intencion de compra positiva proviene de resenas positivas', source: 'Dimensional Research', color: 'bg-green-50 border-green-200 text-green-700' },
   { value: '15%', label: 'Mayor confianza cuando los testimonios incluyen nombre y foto reales', source: 'Northwestern University', color: 'bg-amber-50 border-amber-200 text-amber-700' },
 ]
@@ -88,7 +88,7 @@ const mobileStats: StatCard[] = [
 const aiStats: StatCard[] = [
   { value: '71%', label: 'De consumidores pueden detectar una resena falsa generada por IA', source: 'Pew Research', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
   { value: '62%', label: 'De compradores valoran mas los testimonios verificados desde la implantacion de la IA generativa', source: 'Gartner', color: 'bg-blue-50 border-blue-200 text-blue-700' },
-  { value: '45%', label: 'Aumento en la demanda de sistemas de verificacion de testimonios en 2025', source: 'TrustRadius', color: 'bg-purple-50 border-purple-200 text-purple-700' },
+  { value: '45%', label: 'Aumento en la demanda de sistemas de verificación de testimonios en 2025', source: 'TrustRadius', color: 'bg-purple-50 border-purple-200 text-purple-700' },
   { value: '89%', label: 'De los responsables de marketing planean invertir mas en UGC autentico en 2026', source: 'Content Marketing Institute', color: 'bg-green-50 border-green-200 text-green-700' },
 ]
 
@@ -172,7 +172,7 @@ export default function InformePruebaSocial2026Page() {
             <p>
               La prueba social se ha convertido en el factor decisivo numero uno para los consumidores
               en 2026. En un mundo donde la inteligencia artificial puede generar contenido convincente
-              en segundos, la autenticidad y la verificacion de los testimonios han cobrado una
+              en segundos, la autenticidad y la verificación de los testimonios han cobrado una
               importancia sin precedentes.
             </p>
             <p>
@@ -190,7 +190,7 @@ export default function InformePruebaSocial2026Page() {
             </p>
             <p>
               Para los negocios, la conclusion es clara: implementar una estrategia solida de
-              recopilacion y exhibicion de testimonios ya no es opcional, es una necesidad competitiva.
+              recopilación y exhibición de testimonios ya no es opcional, es una necesidad competitiva.
               Las empresas que invierten en prueba social autentica ven retornos significativos en
               confianza del consumidor, tasas de conversion y valor del ciclo de vida del cliente.
             </p>
@@ -288,7 +288,7 @@ export default function InformePruebaSocial2026Page() {
             generan un <strong>15% mas de confianza</strong> que los anonimos.
           </p>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
-            ReviewTrackers revela que los consumidores consideran que la puntuacion minima aceptable
+            ReviewTrackers revela que los consumidores consideran que la puntuación mínima aceptable
             es de <strong>4.2 estrellas</strong>. Esto significa que no solo necesitas testimonios,
             sino que necesitas testimonios positivos y genuinos. La calidad importa tanto como la
             cantidad. Un negocio con 20 testimonios autenticos de 5 estrellas puede superar a uno
@@ -344,18 +344,18 @@ export default function InformePruebaSocial2026Page() {
             Esta desconfianza ha elevado el valor de los testimonios verificados. Gartner informa
             que el <strong>62% de los compradores</strong> valoran mas los testimonios verificados
             desde la implantacion masiva de la IA generativa. Las plataformas que ofrecen mecanismos
-            de verificacion (como la doble verificacion de Opinafy) tienen una ventaja competitiva
+            de verificación (como la doble verificación de Opinafy) tienen una ventaja competitiva
             significativa.
           </p>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             TrustRadius reporta un <strong>aumento del 45%</strong> en la demanda de sistemas de
-            verificacion de testimonios durante 2025. Y el Content Marketing Institute senala que
+            verificación de testimonios durante 2025. Y el Content Marketing Institute senala que
             el <strong>89% de los responsables de marketing</strong> planean invertir mas en
             contenido generado por usuarios (UGC) autentico en 2026, reconociendo que la
             autenticidad es el antidoto contra la fatiga de contenido generado por IA.
           </p>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
-            El futuro de la prueba social es claro: verificacion, autenticidad y video. Las
+            El futuro de la prueba social es claro: verificación, autenticidad y video. Las
             empresas que adopten herramientas especializadas para recopilar y mostrar testimonios
             verificados estaran mejor posicionadas para ganar la confianza del consumidor en la
             era de la IA. La prueba social no va a desaparecer; al contrario, su importancia

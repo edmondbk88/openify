@@ -3,7 +3,7 @@ import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - Opinafy',
+  title: 'Privacy Policy',
   description:
     'Learn how Opinafy collects, uses, and protects your personal data. Our privacy policy explains your rights under GDPR and how we handle your information.',
   alternates: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Privacy Policy - Opinafy',
+    title: 'Privacy Policy',
     description: 'Learn how Opinafy collects, uses, and protects your personal data.',
     url: 'https://opinafy.com/en/legal/privacy',
     locale: 'en_US',

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Aviso Legal - Opinafy',
+  description: 'Aviso legal y condiciones de uso de Opinafy. Información sobre el titular del sitio web, propiedad intelectual y limitaciones de responsabilidad.',
   alternates: {
     canonical: 'https://opinafy.com/legal',
     languages: {

@@ -54,7 +54,7 @@ const guides = [
   {
     name: 'Squarespace',
     slug: 'squarespace',
-    description: 'Muestra testimonios en Squarespace con bloques de codigo, inyeccion de codigo o configuracion por pagina.',
+    description: 'Muestra testimonios en Squarespace con bloques de código, inyección de código o configuración por página.',
     color: 'bg-gray-200 text-gray-700',
     iconColor: 'text-gray-700',
     icon: (

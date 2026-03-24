@@ -78,6 +78,15 @@ const nextConfig = {
       },
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/ayuda/empezar',
+        destination: '/ayuda/primeros-pasos',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig

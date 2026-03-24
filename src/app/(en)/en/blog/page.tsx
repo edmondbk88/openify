@@ -9,7 +9,7 @@ import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
 
 export const metadata: Metadata = {
-  title: 'Blog - Opinafy | Tips on Testimonials and Social Proof',
+  title: 'Blog | Tips on Testimonials and Social Proof',
   description:
     'Articles, guides, and strategies on customer testimonials, social proof, and how to increase your business conversions. Content by the Opinafy team.',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Blog - Opinafy | Tips on Testimonials and Social Proof',
+    title: 'Blog | Tips on Testimonials and Social Proof',
     url: 'https://opinafy.com/en/blog',
     type: 'website',
     siteName: 'Opinafy',

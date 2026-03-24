@@ -4,7 +4,7 @@ import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
 
 export const metadata: Metadata = {
-  title: 'Certification Program - Bronze, Silver, Gold & Platinum Badges | Opinafy',
+  title: 'Certification Program - Bronze, Silver, Gold & Platinum Badges',
   description:
     'Earn your Opinafy certification badge. Prove the authenticity of your testimonials with Bronze, Silver, Gold or Platinum badges based on verified reviews.',
   keywords: [

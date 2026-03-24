@@ -81,11 +81,11 @@ export default function WebflowGuidePage() {
           </ol>
         </StepCard>
 
-        <StepCard number={2} title="Obtener el codigo de integracion">
+        <StepCard number={2} title="Obtener el código de integración">
           <ol className="ml-4 list-decimal space-y-2">
             <li>Dentro de tu proyecto, ve a la seccion <strong>&quot;Widget&quot;</strong>.</li>
             <li>Personaliza el diseno: elige layout (carrusel, cuadricula, muro...), colores y tipografia.</li>
-            <li>Copia el codigo de integracion que aparece debajo de la vista previa.</li>
+            <li>Copia el código de integración que aparece debajo de la vista previa.</li>
           </ol>
           <p className="mt-3">El codigo tendra esta forma:</p>
           <CodeBlock code={embedCode} />
@@ -112,7 +112,7 @@ export default function WebflowGuidePage() {
               <h4 className="mb-2 font-semibold text-gray-900">Opcion B: Codigo personalizado por pagina (pagina especifica)</h4>
               <ol className="ml-4 list-decimal space-y-2">
                 <li>Ve a <strong>Pages</strong> y selecciona la pagina deseada.</li>
-                <li>Haz clic en el icono de configuracion de la pagina (engranaje).</li>
+                <li>Haz clic en el icono de configuración de la página (engranaje).</li>
                 <li>Desplazate hasta <strong>&quot;Custom Code&quot;</strong> &rarr; <strong>&quot;Before {'</body>'} tag&quot;</strong>.</li>
                 <li>Pega el codigo de Opinafy.</li>
                 <li>Guarda y publica.</li>

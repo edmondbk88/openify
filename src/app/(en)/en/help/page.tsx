@@ -4,7 +4,7 @@ import { helpGuidesEn, helpCategoriesEn } from '@/lib/help-data-en'
 import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Help Center - Opinafy',
+  title: 'Help Center',
   description:
     'Find guides, tutorials, and answers about how to use all of Opinafy features: testimonials, widgets, mini site, integrations, billing, and more.',
   alternates: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    title: 'Help Center - Opinafy',
+    title: 'Help Center',
     description: 'Comprehensive guides to get the most out of Opinafy.',
     url: 'https://opinafy.com/en/help',
   },

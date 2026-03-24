@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'How to Install Opinafy on Squarespace - Step by Step Guide | Opinafy',
+  title: 'How to Install Opinafy on Squarespace - Step by Step Guide',
   description:
     'Learn how to install the Opinafy testimonial widget on your Squarespace site in minutes. Complete step-by-step guide.',
   alternates: {

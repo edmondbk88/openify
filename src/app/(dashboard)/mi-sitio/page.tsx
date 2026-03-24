@@ -102,12 +102,12 @@ export default function MiSitioPage() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}))
-        throw new Error(data.error || 'Error al guardar')
+        throw new Error(data.error || t('mysite.errorSaving', locale))
       }
 
-      toast('Configuracion guardada correctamente', 'success')
+      toast(t('mysite.savedSuccess', locale), 'success')
     } catch (err: unknown) {
-      toast(err instanceof Error ? err.message : 'Error al guardar', 'error')
+      toast(err instanceof Error ? err.message : t('mysite.errorSaving', locale), 'error')
     } finally {
       setSaving(false)
     }
@@ -116,24 +116,24 @@ export default function MiSitioPage() {
   function handleCopyUrl() {
     navigator.clipboard.writeText(siteUrl)
     setCopied(true)
-    toast('URL copiada al portapapeles', 'success')
+    toast(t('mysite.urlCopied', locale), 'success')
     setTimeout(() => setCopied(false), 2000)
   }
 
   function handleShareWhatsApp() {
-    const text = encodeURIComponent(`Mira mis testimonios verificados: ${siteUrl}`)
+    const text = encodeURIComponent(t('mysite.shareWhatsappText', locale).replace('{url}', siteUrl))
     window.open(`https://wa.me/?text=${text}`, '_blank')
   }
 
   function handleShareEmail() {
-    const subject = encodeURIComponent(`Mis testimonios verificados - ${profile.full_name}`)
-    const body = encodeURIComponent(`Hola,\n\nTe comparto mi pagina de testimonios verificados:\n${siteUrl}\n\nSaludos,\n${profile.full_name}`)
+    const subject = encodeURIComponent(t('mysite.shareEmailSubject', locale).replace('{name}', profile.full_name))
+    const body = encodeURIComponent(t('mysite.shareEmailBody', locale).replace('{url}', siteUrl).replace('{name}', profile.full_name))
     window.open(`mailto:?subject=${subject}&body=${body}`)
   }
 
   const filteredTemplates = selectedCategory === 'Todas'
     ? miniSiteTemplates
-    : miniSiteTemplates.filter((t) => t.category === selectedCategory)
+    : miniSiteTemplates.filter((tmpl) => tmpl.category === selectedCategory)
 
   if (loading) {
     return (
@@ -292,12 +292,12 @@ export default function MiSitioPage() {
         ) : (
           <div className="mt-4 rounded-lg border border-yellow-200 bg-yellow-50 p-4">
             <p className="text-sm text-yellow-800">
-              Necesitas configurar un nombre de usuario para activar tu pagina publica.
-              Ve a{' '}
+              {t('mysite.noUsernameNotice', locale)}{' '}
+              {t('mysite.goToSettingsPrefix', locale)}{' '}
               <Link href="/configuracion" className="font-medium underline">
-                Configuracion
+                {t('mysite.goToSettings', locale)}
               </Link>{' '}
-              para establecer tu username.
+              {t('mysite.goToSettingsSuffix', locale)}
             </p>
           </div>
         )}
@@ -431,7 +431,7 @@ export default function MiSitioPage() {
               className="mt-1.5 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             />
             <p className="mt-1 text-xs text-gray-400">
-              {profile.bio.length}/200 caracteres
+              {profile.bio.length}/200 {t('mysite.characters', locale)}
             </p>
           </div>
 

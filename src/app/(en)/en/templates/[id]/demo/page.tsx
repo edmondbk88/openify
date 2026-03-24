@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!template) return {}
 
   return {
-    title: `Live Demo - "${template.name}" with 30 Testimonials | Opinafy`,
+    title: `Live Demo - "${template.name}" with 30 Testimonials`,
     description: `See how the "${template.name}" template looks with 30 real testimonials. Interactive demo of the Opinafy testimonial widget.`,
     robots: {
       index: true,

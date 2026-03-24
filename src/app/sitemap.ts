@@ -394,6 +394,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: bilingual('/caracteristicas', '/en/features'),
     },
     {
+      url: `${baseUrl}/en/about`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.6,
+      alternates: bilingual('/sobre', '/en/about'),
+    },
+    {
       url: `${baseUrl}/en/contact`,
       lastModified: new Date(),
       changeFrequency: 'yearly',

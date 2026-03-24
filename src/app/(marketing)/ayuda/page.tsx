@@ -6,7 +6,7 @@ import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Centro de Ayuda - Opinafy',
   description:
-    'Encuentra guias, tutoriales y respuestas sobre como usar todas las funciones de Opinafy: testimonios, widgets, mini sitio, integraciones, facturacion y mas.',
+    'Encuentra guías, tutoriales y respuestas sobre cómo usar todas las funciones de Opinafy: testimonios, widgets, mini sitio, integraciones, facturación y más.',
   alternates: {
     canonical: 'https://opinafy.com/ayuda',
     languages: {

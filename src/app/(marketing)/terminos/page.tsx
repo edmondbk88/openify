@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Términos y Condiciones - Opinafy',
+  description: 'Términos y condiciones de uso de la plataforma Opinafy. Derechos, obligaciones y condiciones del servicio de testimonios.',
   alternates: {
     canonical: 'https://opinafy.com/terminos',
     languages: {

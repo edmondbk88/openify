@@ -5,7 +5,7 @@ import { FooterEn } from '@/components/landing/footer-en'
 import { webPageSchema, breadcrumbSchema, organizationSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'About Us - Opinafy',
+  title: 'About Us',
   description:
     'Meet the team behind Opinafy, the leading Spanish-native platform for customer testimonials.',
   alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'About Us - Opinafy',
+    title: 'About Us',
     description:
       'Meet the team behind Opinafy, the leading Spanish-native platform for customer testimonials.',
     url: 'https://opinafy.com/en/about',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Us - Opinafy',
+    title: 'About Us',
     description:
       'Meet the team behind Opinafy, the leading Spanish-native platform for customer testimonials.',
     images: ['/og.png'],

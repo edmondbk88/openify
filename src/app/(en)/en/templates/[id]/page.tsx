@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!template) return {}
 
   return {
-    title: `"${template.name}" Template - Testimonial Widget | Opinafy`,
+    title: `"${template.name}" Template - Testimonial Widget`,
     description: `${template.description} A ${template.category.toLowerCase()} style template with ${template.layout} layout. Perfect for displaying customer testimonials on your website.`,
     keywords: [
       `testimonial template ${template.name.toLowerCase()}`,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       locale: 'en_US',
       url: `https://opinafy.com/en/templates/${template.id}`,
       siteName: 'Opinafy',
-      title: `"${template.name}" Template - Opinafy`,
+      title: `"${template.name}" - Widget Template`,
       description: template.description,
     },
     alternates: {

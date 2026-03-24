@@ -79,15 +79,15 @@ export default function WixGuidePage() {
             <li>Comparte el enlace de recogida con tus clientes o importa testimonios existentes.</li>
           </ol>
           <div className="mt-4 rounded-lg bg-gray-100 p-4 text-center text-sm text-gray-500">
-            [Captura de pantalla: panel de creacion de proyecto]
+            [Captura de pantalla: panel de creación de proyecto]
           </div>
         </StepCard>
 
-        <StepCard number={2} title="Obtener el codigo de integracion">
+        <StepCard number={2} title="Obtener el código de integración">
           <ol className="ml-4 list-decimal space-y-2">
             <li>Dentro de tu proyecto, ve a la seccion <strong>&quot;Widget&quot;</strong>.</li>
             <li>Personaliza el diseno: elige layout (carrusel, cuadricula, muro...), colores y tipografia.</li>
-            <li>Copia el codigo de integracion que aparece debajo de la vista previa.</li>
+            <li>Copia el código de integración que aparece debajo de la vista previa.</li>
           </ol>
           <p className="mt-3">El codigo tendra esta forma:</p>
           <CodeBlock code={embedCode} />

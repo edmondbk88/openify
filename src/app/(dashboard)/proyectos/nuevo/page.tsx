@@ -65,14 +65,14 @@ export default function NuevoProyectoPage() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}))
-        throw new Error(data.error || 'Error al crear el proyecto')
+        throw new Error(data.error || t('projects.errorCreating', locale))
       }
 
       const { slug } = await res.json()
-      toast('Proyecto creado correctamente', 'success')
+      toast(t('projects.createdSuccess', locale), 'success')
       router.push(`/proyectos/${slug}`)
     } catch (err: unknown) {
-      toast(err instanceof Error ? err.message : 'Error al crear el proyecto', 'error')
+      toast(err instanceof Error ? err.message : t('projects.errorCreating', locale), 'error')
     } finally {
       setLoading(false)
     }

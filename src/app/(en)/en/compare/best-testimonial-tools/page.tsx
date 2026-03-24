@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: '7 Best Testimonial Tools in 2026 | Opinafy',
+  title: '7 Best Testimonial Tools in 2026',
   description:
     'Ranking of the best testimonial and review platforms in 2026. Opinafy, Testimonial.to, Senja, Famewall, TrustPilot, Google Reviews, and Capterra compared.',
   keywords: [

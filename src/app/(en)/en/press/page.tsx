@@ -4,7 +4,7 @@ import { FooterEn } from '@/components/landing/footer-en'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Press Kit - Opinafy',
+  title: 'Press Kit',
   description:
     'Opinafy press kit. Download logos, screenshots, and find media information about the testimonial platform for Spanish-speaking businesses.',
   alternates: {
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Press Kit - Opinafy',
+    title: 'Press Kit',
     description:
       'Opinafy press kit. Logos, screenshots, and media resources.',
     url: 'https://opinafy.com/en/press',

@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation'
 import Link from 'next/link'
 import StatsCard from '@/components/dashboard/stats-card'
 import TestimonialCard from '@/components/dashboard/testimonial-card'
-import { PLAN_LIMITS } from '@/lib/constants'
+import { PLAN_LIMITS, getEffectivePlan } from '@/lib/constants'
 import { getUserLocale } from '@/lib/get-locale'
 import { t } from '@/lib/i18n'
 import type { Plan, Testimonial } from '@/types'
@@ -27,11 +27,11 @@ export default async function DashboardPage() {
 
   // Fetch user profile and projects
   const [{ data: profile }, { data: projects }] = await Promise.all([
-    supabase.from('profiles').select('plan').eq('id', user.id).single(),
+    supabase.from('profiles').select('plan, gifted_plan, gifted_plan_expires_at').eq('id', user.id).single(),
     supabase.from('projects').select('id, is_active').eq('user_id', user.id),
   ])
 
-  const userPlan = (profile?.plan as Plan) || 'free'
+  const userPlan = profile ? getEffectivePlan(profile) : ('free' as Plan)
   const planLimits = PLAN_LIMITS[userPlan]
   const projectIds = projects?.map((p) => p.id) ?? []
   const totalProjectCount = projects?.length ?? 0

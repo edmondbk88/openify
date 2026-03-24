@@ -260,7 +260,7 @@ export default async function RankingPage() {
               href="/certificacion"
               className="inline-flex rounded-lg border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10"
             >
-              Programa de certificacion
+              Programa de certificación
             </Link>
           </div>
         </div>

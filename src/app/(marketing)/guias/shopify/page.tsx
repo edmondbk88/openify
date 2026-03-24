@@ -79,15 +79,15 @@ export default function ShopifyGuidePage() {
             <li>Comparte el enlace de recogida con tus clientes o importa resenas existentes.</li>
           </ol>
           <div className="mt-4 rounded-lg bg-gray-100 p-4 text-center text-sm text-gray-500">
-            [Captura de pantalla: panel de creacion de proyecto]
+            [Captura de pantalla: panel de creación de proyecto]
           </div>
         </StepCard>
 
-        <StepCard number={2} title="Obtener el codigo de integracion">
+        <StepCard number={2} title="Obtener el código de integración">
           <ol className="ml-4 list-decimal space-y-2">
             <li>Dentro de tu proyecto, ve a la seccion <strong>&quot;Widget&quot;</strong>.</li>
             <li>Personaliza el diseno: elige layout, colores y tipografia que combinen con tu tienda.</li>
-            <li>Copia el codigo de integracion.</li>
+            <li>Copia el código de integración.</li>
           </ol>
           <p className="mt-3">El codigo tendra esta forma:</p>
           <CodeBlock code={embedCode} />
@@ -188,7 +188,7 @@ ${embedCode}
               },
               {
                 q: 'Puedo mostrar testimonios diferentes en distintas paginas?',
-                a: 'Si. Puedes crear multiples proyectos en Opinafy (uno por pagina de producto, por ejemplo) y usar diferentes codigos de integracion.',
+                a: 'Si. Puedes crear multiples proyectos en Opinafy (uno por pagina de producto, por ejemplo) y usar diferentes códigos de integración.',
               },
               {
                 q: 'Es compatible con Shopify Markets (multi-idioma)?',

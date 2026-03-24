@@ -3,35 +3,52 @@ import { createAdminClient } from '@/lib/supabase/admin'
 export default async function AdminSuscripcionesPage() {
   const admin = createAdminClient()
 
-  const [freeRes, proRes, businessRes, payingUsersRes] = await Promise.all([
+  const [freeRes, minisiteRes, proRes, businessRes, payingUsersRes] = await Promise.all([
     admin.from('profiles').select('*', { count: 'exact', head: true }).eq('plan', 'free'),
+    admin.from('profiles').select('*', { count: 'exact', head: true }).eq('plan', 'minisite'),
     admin.from('profiles').select('*', { count: 'exact', head: true }).eq('plan', 'pro'),
     admin.from('profiles').select('*', { count: 'exact', head: true }).eq('plan', 'business'),
     admin
       .from('profiles')
       .select('id, full_name, email, plan, stripe_customer_id, created_at')
-      .in('plan', ['pro', 'business'])
+      .in('plan', ['minisite', 'pro', 'business'])
       .order('created_at', { ascending: false }),
   ])
 
   const freeCount = freeRes.count || 0
+  const minisiteCount = minisiteRes.count || 0
   const proCount = proRes.count || 0
   const businessCount = businessRes.count || 0
   const payingUsers = payingUsersRes.data || []
 
+  const mrrMinisite = minisiteCount * 5
   const mrrPro = proCount * 9
   const mrrBusiness = businessCount * 19
-  const mrrTotal = mrrPro + mrrBusiness
+  const mrrTotal = mrrMinisite + mrrPro + mrrBusiness
+
+  const planBadgeColor = (plan: string) => {
+    switch (plan) {
+      case 'minisite': return 'bg-emerald-100 text-emerald-700'
+      case 'pro': return 'bg-indigo-100 text-indigo-700'
+      case 'business': return 'bg-pink-100 text-pink-700'
+      default: return 'bg-gray-100 text-gray-700'
+    }
+  }
 
   return (
     <div>
       <h1 className="text-2xl font-bold text-gray-900 mb-6">Suscripciones</h1>
 
       {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
           <p className="text-sm text-gray-500">Usuarios Free</p>
           <p className="text-2xl font-bold text-gray-900 mt-1">{freeCount}</p>
+        </div>
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
+          <p className="text-sm text-gray-500">Usuarios Mini Sitio</p>
+          <p className="text-2xl font-bold text-emerald-600 mt-1">{minisiteCount}</p>
+          <p className="text-xs text-gray-400 mt-1">MRR: {mrrMinisite}&euro;/mes</p>
         </div>
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
           <p className="text-sm text-gray-500">Usuarios Pro</p>
@@ -46,7 +63,7 @@ export default async function AdminSuscripcionesPage() {
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
           <p className="text-sm text-gray-500">MRR Total</p>
           <p className="text-2xl font-bold text-green-600 mt-1">{mrrTotal}&euro;</p>
-          <p className="text-xs text-gray-400 mt-1">{proCount + businessCount} suscriptores</p>
+          <p className="text-xs text-gray-400 mt-1">{minisiteCount + proCount + businessCount} suscriptores</p>
         </div>
       </div>
 
@@ -73,9 +90,7 @@ export default async function AdminSuscripcionesPage() {
                     <td className="py-2 text-gray-900">{u.full_name || '-'}</td>
                     <td className="py-2 text-gray-600">{u.email}</td>
                     <td className="py-2">
-                      <span className={`inline-block text-xs px-2 py-0.5 rounded-full font-medium ${
-                        u.plan === 'business' ? 'bg-pink-100 text-pink-700' : 'bg-indigo-100 text-indigo-700'
-                      }`}>
+                      <span className={`inline-block text-xs px-2 py-0.5 rounded-full font-medium ${planBadgeColor(u.plan)}`}>
                         {u.plan}
                       </span>
                     </td>

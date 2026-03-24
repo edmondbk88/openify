@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!guide) return {}
 
   return {
-    title: `${guide.title} - Help Center | Opinafy`,
+    title: `${guide.title} - Help Center`,
     description: guide.description,
     alternates: {
       canonical: `https://opinafy.com/en/help/${guide.slug}`,
@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       type: 'article',
-      title: `${guide.title} - Opinafy`,
+      title: `${guide.title} - Help`,
       description: guide.description,
       url: `https://opinafy.com/en/help/${guide.slug}`,
     },

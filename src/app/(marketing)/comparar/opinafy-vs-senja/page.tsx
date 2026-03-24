@@ -5,7 +5,7 @@ import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Opinafy vs Senja: Comparativa completa 2026',
   description:
-    'Comparativa detallada entre Opinafy y Senja. Funcionalidades, precios, video testimonios, verificacion y soporte en espanol frente a frente.',
+    'Comparativa detallada entre Opinafy y Senja. Funcionalidades, precios, video testimonios, verificación y soporte en español frente a frente.',
   keywords: [
     'opinafy vs senja',
     'alternativa senja',
@@ -83,7 +83,7 @@ const faqs = [
   },
   {
     q: '¿Senja tiene interfaz en espanol?',
-    a: 'No, Senja solo esta disponible en ingles. Su panel de administracion, formularios de recopilacion y documentacion estan enteramente en ingles. Esto puede suponer una barrera para tus clientes hispanohablantes a la hora de dejar testimonios.',
+    a: 'No, Senja solo esta disponible en ingles. Su panel de administracion, formularios de recopilación y documentación están enteramente en ingles. Esto puede suponer una barrera para tus clientes hispanohablantes a la hora de dejar testimonios.',
   },
   {
     q: '¿Cual es mas barata, Opinafy o Senja?',
@@ -99,7 +99,7 @@ const faqs = [
   },
   {
     q: '¿Opinafy es buena alternativa a Senja para el mercado hispanohablante?',
-    a: 'Opinafy es la mejor alternativa a Senja si tu negocio opera en español. Toda la experiencia esta diseñada nativamente en español, desde los formularios hasta el soporte. Ademas, la verificacion de empresa de Opinafy anade una capa de credibilidad que Senja no ofrece.',
+    a: 'Opinafy es la mejor alternativa a Senja si tu negocio opera en español. Toda la experiencia esta diseñada nativamente en español, desde los formularios hasta el soporte. Ademas, la verificación de empresa de Opinafy añade una capa de credibilidad que Senja no ofrece.',
   },
 ]
 
@@ -108,7 +108,7 @@ export default function OpinafyVsSenjaPage() {
     name: 'Opinafy vs Senja: Comparativa completa 2026',
     url: 'https://opinafy.com/comparar/opinafy-vs-senja',
     description:
-      'Comparativa detallada entre Opinafy y Senja. Funcionalidades, precios, video testimonios, verificacion y soporte en espanol.',
+      'Comparativa detallada entre Opinafy y Senja. Funcionalidades, precios, video testimonios, verificación y soporte en español.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -168,15 +168,15 @@ export default function OpinafyVsSenjaPage() {
         <section className="mt-12">
           <h2 className="text-2xl font-bold text-gray-900">Resumen rapido</h2>
           <p className="mt-4 text-gray-600 leading-7">
-            <strong>Senja</strong> es una herramienta de gestion de testimonios que destaca por su interfaz moderna y
+            <strong>Senja</strong> es una herramienta de gestión de testimonios que destaca por su interfaz moderna y
             atractiva. Ofrece funcionalidades solidas para recopilar testimonios en texto y video, compartirlos en redes
             sociales y mostrarlos en tu web. Sin embargo, esta completamente en ingles, sus precios estan en dolares y
             no ofrece soporte en español.
           </p>
           <p className="mt-4 text-gray-600 leading-7">
             <strong>Opinafy</strong> es la plataforma de testimonios creada para el mercado hispanohablante. Ofrece una
-            experiencia completa en español, precios en euros, verificacion de empresa y un enfoque centrado en la
-            autenticidad y la credibilidad de los testimonios. Es la solucion ideal para negocios en España y
+            experiencia completa en español, precios en euros, verificación de empresa y un enfoque centrado en la
+            autenticidad y la credibilidad de los testimonios. Es la solución ideal para negocios en España y
             Latinoamerica que quieren maximizar su prueba social.
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -185,7 +185,7 @@ export default function OpinafyVsSenjaPage() {
               <ul className="mt-3 space-y-2 text-sm text-indigo-800">
                 <li>Tu negocio y tus clientes hablan español</li>
                 <li>Quieres precios transparentes en EUR</li>
-                <li>Necesitas verificacion de empresa para credibilidad B2B</li>
+                <li>Necesitas verificación de empresa para credibilidad B2B</li>
                 <li>Valoras el soporte tecnico en tu idioma</li>
                 <li>Buscas optimizacion SEO con schema markup</li>
               </ul>
@@ -304,12 +304,12 @@ export default function OpinafyVsSenjaPage() {
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">2. Verificacion de email y empresa</h3>
+              <h3 className="text-lg font-semibold text-gray-900">2. Verificación de email y empresa</h3>
               <p className="mt-2 text-gray-600 leading-7">
-                Opinafy ofrece un sistema de doble verificacion: por email y por empresa. Esto significa que cada
-                testimonio puede ir acompañado de una insignia de verificacion que confirma la autenticidad del
+                Opinafy ofrece un sistema de doble verificación: por email y por empresa. Esto significa que cada
+                testimonio puede ir acompañado de una insignia de verificación que confirma la autenticidad del
                 remitente. Para negocios B2B, esta funcionalidad es extremadamente valiosa ya que genera una capa
-                extra de confianza que puede ser decisiva en el proceso de compra. Senja ofrece verificacion de email
+                extra de confianza que puede ser decisiva en el proceso de compra. Senja ofrece verificación de email
                 pero no de empresa.
               </p>
             </div>
@@ -369,7 +369,7 @@ export default function OpinafyVsSenjaPage() {
             <div>
               <h3 className="text-lg font-semibold text-gray-900">3. Funcionalidades de redes sociales</h3>
               <p className="mt-2 text-gray-600 leading-7">
-                Senja facilita la creacion de contenido visual a partir de tus testimonios para compartir en redes
+                Senja facilita la creación de contenido visual a partir de tus testimonios para compartir en redes
                 sociales. Genera automaticamente imagenes optimizadas para Instagram, Twitter y LinkedIn. Esta
                 funcionalidad es util si tu estrategia de marketing se apoya mucho en redes sociales y quieres
                 maximizar el alcance de cada testimonio recibido.
@@ -388,7 +388,7 @@ export default function OpinafyVsSenjaPage() {
           </p>
           <p className="mt-4 text-gray-600 leading-7">
             Si tu negocio se dirige al mercado hispanohablante, <strong>Opinafy es la opcion mas logica</strong>.
-            La experiencia completamente en español, la verificacion de empresa, los precios en euros y el soporte en
+            La experiencia completamente en español, la verificación de empresa, los precios en euros y el soporte en
             tu idioma crean una ventaja competitiva clara. Tus clientes tendran una experiencia sin fricciones, lo que
             se traduce directamente en mas testimonios recibidos y de mayor calidad.
           </p>
@@ -400,7 +400,7 @@ export default function OpinafyVsSenjaPage() {
           <div className="mt-8 rounded-2xl bg-indigo-50 p-6 sm:p-8">
             <p className="text-lg font-semibold text-indigo-900">
               Para negocios hispanohablantes, Opinafy ofrece mejor relacion calidad-precio, experiencia nativa en
-              español y verificacion de empresa: tres ventajas decisivas frente a Senja.
+              español y verificación de empresa: tres ventajas decisivas frente a Senja.
             </p>
           </div>
         </section>

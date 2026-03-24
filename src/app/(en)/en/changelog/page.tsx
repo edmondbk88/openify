@@ -4,7 +4,7 @@ import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
 
 export const metadata: Metadata = {
-  title: 'Product Updates - Changelog | Opinafy',
+  title: 'Product Updates - Changelog',
   description:
     'All the latest features, improvements, and fixes in Opinafy. Stay up to date with the latest updates to the testimonial platform.',
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Product Updates - Opinafy',
+    title: 'Product Updates',
     description: 'All the latest features, improvements, and fixes in Opinafy.',
     url: 'https://opinafy.com/en/changelog',
     type: 'website',

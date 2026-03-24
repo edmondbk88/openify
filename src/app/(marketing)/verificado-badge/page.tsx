@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'badge verificado testimonios',
     'testimonios verificados',
     'sello de confianza testimonios',
-    'verificacion testimonios',
+    'verificación testimonios',
     'opinafy verificado',
     'prueba social verificada',
   ],
@@ -139,7 +139,7 @@ export default function VerificadoBadgePage() {
             </div>
           </div>
           <p className="mt-6 text-sm text-gray-500">
-            El badge muestra la valoracion media y el numero de testimonios verificados de tu proyecto.
+            El badge muestra la valoración media y el número de testimonios verificados de tu proyecto.
           </p>
         </div>
       </section>
@@ -151,7 +151,7 @@ export default function VerificadoBadgePage() {
             Que significa el badge
           </h2>
           <p className="mt-4 text-center text-lg text-gray-600">
-            Un proceso de verificacion en tres pasos para garantizar la autenticidad
+            Un proceso de verificación en tres pasos para garantizar la autenticidad
           </p>
           <div className="mt-12 grid gap-8 sm:grid-cols-3">
             {verificationSteps.map((step) => (
@@ -227,7 +227,7 @@ export default function VerificadoBadgePage() {
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white">2</div>
               <div>
                 <h3 className="text-lg font-semibold text-gray-900">Recopila testimonios verificados</h3>
-                <p className="mt-1 text-gray-600">Tus clientes recibiran un email de verificacion. Solo los testimonios verificados cuentan para el badge.</p>
+                <p className="mt-1 text-gray-600">Tus clientes recibirán un email de verificación. Solo los testimonios verificados cuentan para el badge.</p>
               </div>
             </div>
             <div className="flex items-start gap-4">

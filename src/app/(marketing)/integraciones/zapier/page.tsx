@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     'Integra Opinafy con Zapier para automatizar flujos de trabajo cuando recibes nuevos testimonios. Conecta con Slack, Google Sheets, Mailchimp y mas de 5000 aplicaciones.',
   keywords: [
     'opinafy zapier',
-    'integracion zapier testimonios',
+    'integración zapier testimonios',
     'automatizar testimonios',
     'webhook testimonios',
     'zapier testimonials',
@@ -120,7 +120,7 @@ export default function ZapierIntegrationPage() {
         <section className="px-4 py-16">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-center text-3xl font-bold text-gray-900">
-              Que puedes hacer con la integracion
+              Qué puedes hacer con la integración
             </h2>
             <p className="mt-4 text-center text-gray-600">
               Opinafy se conecta con Zapier mediante webhooks, permitiendote automatizar
@@ -182,7 +182,7 @@ export default function ZapierIntegrationPage() {
                 </div>
                 <h4 className="font-semibold text-gray-900">Solicitar Testimonio</h4>
                 <p className="mt-2 text-sm text-gray-600">
-                  Envia automaticamente tu URL de recopilacion a un contacto para solicitar un
+                  Envía automáticamente tu URL de recopilación a un contacto para solicitar un
                   testimonio. Ideal para integrar con CRMs y formularios.
                 </p>
               </div>
@@ -194,7 +194,7 @@ export default function ZapierIntegrationPage() {
         <section className="border-t border-gray-100 bg-gray-50 px-4 py-16">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-center text-3xl font-bold text-gray-900">
-              Guia de configuracion
+              Guía de configuración
             </h2>
             <p className="mt-4 text-center text-gray-600">
               Conecta Opinafy con Zapier en solo 4 pasos.
@@ -218,7 +218,7 @@ export default function ZapierIntegrationPage() {
                   step: 3,
                   title: 'Copia la URL del webhook de Zapier',
                   description:
-                    'Zapier te proporcionara una URL unica. Copia esta URL y pegala en la configuracion de webhook de tu proyecto en Opinafy.',
+                    'Zapier te proporcionará una URL única. Copia esta URL y pégala en la configuración de webhook de tu proyecto en Opinafy.',
                 },
                 {
                   step: 4,
@@ -258,7 +258,7 @@ export default function ZapierIntegrationPage() {
               Flujos de trabajo de ejemplo
             </h2>
             <p className="mt-4 text-center text-gray-600">
-              Inspira tu automatizacion con estos flujos populares.
+              Inspira tu automatización con estos flujos populares.
             </p>
 
             <div className="mt-12 grid gap-6 sm:grid-cols-3">

@@ -7,7 +7,7 @@ import { TemplatesGalleryEn } from './gallery-en'
 import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Testimonial Templates | 100+ Ready-to-Use Designs - Opinafy',
+  title: 'Testimonial Templates | 100+ Ready-to-Use Designs',
   description:
     'Explore 100+ testimonial widget templates ready to use. Minimalist, corporate, colorful, dark, and more styles. Customize your testimonials with Opinafy.',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://opinafy.com/en/templates',
     siteName: 'Opinafy',
-    title: '100+ Testimonial Templates Ready to Use - Opinafy',
+    title: '100+ Testimonial Templates Ready to Use',
     description:
       'Discover 100+ professional designs to display customer testimonials on your website. Minimalist, corporate, colorful, dark, and more.',
     images: [

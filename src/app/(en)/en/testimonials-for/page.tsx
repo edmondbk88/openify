@@ -4,7 +4,7 @@ import { industriesEn } from '@/lib/industry-data-en'
 import { IndustrySearchEn } from '@/components/landing/industry-search-en'
 
 export const metadata: Metadata = {
-  title: 'Testimonials by Industry | Opinafy',
+  title: 'Testimonials by Industry',
   description:
     'Discover how Opinafy helps every industry collect and display customer testimonials. Tailored solutions for over 80 different industries.',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Testimonials by Industry | Opinafy',
+    title: 'Testimonials by Industry',
     description:
       'Discover how Opinafy helps every industry collect and display customer testimonials.',
     url: 'https://opinafy.com/en/testimonials-for',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Testimonials by Industry | Opinafy',
+    title: 'Testimonials by Industry',
     description:
       'Tailored testimonial solutions for over 80 different industries.',
     images: ['/og.png'],

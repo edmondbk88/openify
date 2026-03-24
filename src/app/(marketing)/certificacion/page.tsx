@@ -4,11 +4,11 @@ import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
 
 export const metadata: Metadata = {
-  title: 'Programa de Certificacion Opinafy - Insignias Bronze, Silver, Gold y Platinum | Opinafy',
+  title: 'Programa de Certificación Opinafy - Insignias Bronze, Silver, Gold y Platinum | Opinafy',
   description:
-    'Obtén tu insignia de certificacion Opinafy. Demuestra la autenticidad de tus testimonios con insignias Bronze, Silver, Gold o Platinum segun el numero de opiniones verificadas.',
+    'Obtén tu insignia de certificación Opinafy. Demuestra la autenticidad de tus testimonios con insignias Bronze, Silver, Gold o Platinum segun el numero de opiniones verificadas.',
   keywords: [
-    'certificacion testimonios',
+    'certificación testimonios',
     'insignia testimonios verificados',
     'badge prueba social',
     'certificado opiniones clientes',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Programa de Certificacion Opinafy',
+    title: 'Programa de Certificación Opinafy',
     description:
       'Demuestra la autenticidad de tus testimonios con insignias verificadas de Opinafy.',
     url: 'https://opinafy.com/certificacion',
@@ -104,10 +104,10 @@ export default function CertificacionPage() {
       <main className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-            Programa de Certificacion Opinafy
+            Programa de Certificación Opinafy
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Gana insignias de certificacion basadas en el numero de testimonios verificados
+            Gana insignias de certificación basadas en el número de testimonios verificados
             que recopilas. Demuestra a tus visitantes que la confianza de tus clientes es real.
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function CertificacionPage() {
               </div>
               <h3 className="mt-4 font-semibold text-gray-900">Sube de nivel</h3>
               <p className="mt-2 text-sm text-gray-500">
-                Tu certificacion se actualiza automaticamente cuando alcanzas un nuevo umbral.
+                Tu certificación se actualiza automáticamente cuando alcanzas un nuevo umbral.
               </p>
             </div>
             <div className="rounded-lg border border-gray-200 bg-white p-6 text-center">
@@ -148,7 +148,7 @@ export default function CertificacionPage() {
 
         {/* Tiers */}
         <div className="mt-16">
-          <h2 className="text-center text-2xl font-bold text-gray-900">Niveles de certificacion</h2>
+          <h2 className="text-center text-2xl font-bold text-gray-900">Niveles de certificación</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {tiers.map((tier) => (
               <div

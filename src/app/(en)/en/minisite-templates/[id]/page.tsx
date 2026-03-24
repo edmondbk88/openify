@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!template) return {}
 
   return {
-    title: `"${template.name}" Template - Testimonial Mini Site | Opinafy`,
+    title: `"${template.name}" Template - Testimonial Mini Site`,
     description: `${template.description} A mini site template for ${template.category.toLowerCase()} with ${template.config.layout} layout. Create your professional testimonial page.`,
     keywords: [
       `mini site template ${template.name.toLowerCase()}`,
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       locale: 'en_US',
       url: `https://opinafy.com/en/minisite-templates/${template.id}`,
       siteName: 'Opinafy',
-      title: `"${template.name}" Template - Opinafy Mini Site`,
+      title: `"${template.name}" - Mini Site Template`,
       description: template.description,
     },
     alternates: {

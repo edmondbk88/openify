@@ -1,6 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { redirect } from 'next/navigation'
-import { PLAN_LIMITS, STRIPE_PRICES } from '@/lib/constants'
+import { PLAN_LIMITS, STRIPE_PRICES, getEffectivePlan } from '@/lib/constants'
 import { UpgradeButton } from '@/components/dashboard/upgrade-button'
 import { getUserLocale } from '@/lib/get-locale'
 import { t } from '@/lib/i18n'
@@ -105,13 +105,14 @@ export default async function FacturacionPage({
 
   const { data: profile } = await supabase
     .from('profiles')
-    .select('plan, stripe_subscription_id')
+    .select('plan, stripe_subscription_id, gifted_plan, gifted_plan_expires_at')
     .eq('id', user.id)
     .single()
 
-  const currentPlan: Plan = (profile?.plan as Plan) ?? 'free'
+  const currentPlan: Plan = profile ? getEffectivePlan(profile) : 'free'
   const hasSubscription = !!profile?.stripe_subscription_id
   const limits = PLAN_LIMITS[currentPlan]
+  const hasGiftedPlan = profile?.gifted_plan && profile?.gifted_plan_expires_at && new Date(profile.gifted_plan_expires_at) > new Date()
 
   const subscriptionDetails = hasSubscription
     ? await getSubscriptionDetails(profile!.stripe_subscription_id)
@@ -188,6 +189,13 @@ export default async function FacturacionPage({
           </div>
           {hasSubscription && <ManageSubscriptionButton />}
         </div>
+        {hasGiftedPlan && (
+          <div className="mt-4 rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">
+            {t('billing.giftedPlanNotice', locale)
+              .replace('{plan}', getPlanLabel(profile!.gifted_plan as Plan, locale))
+              .replace('{date}', new Date(profile!.gifted_plan_expires_at!).toLocaleDateString(dateLocale, { day: 'numeric', month: 'long', year: 'numeric' }))}
+          </div>
+        )}
       </div>
 
       {/* Upgrade Cards (show if not on highest plan) */}

@@ -52,7 +52,7 @@ const updates: ProductUpdate[] = [
   {
     date: '2026-03-23',
     title: 'Ranking de empresas mejor valoradas',
-    description: 'Nueva pagina publica de ranking que muestra las empresas con mejores testimonios verificados en Opinafy, ordenadas por valoracion media y numero de testimonios.',
+    description: 'Nueva pagina publica de ranking que muestra las empresas con mejores testimonios verificados en Opinafy, ordenadas por valoración media y número de testimonios.',
     category: 'nuevo',
   },
   {
@@ -81,14 +81,14 @@ const updates: ProductUpdate[] = [
   },
   {
     date: '2026-03-21',
-    title: 'Programa de certificacion con insignias',
-    description: 'Sistema de certificacion con insignias Bronze, Silver, Gold y Platinum basado en el numero de testimonios verificados. Inserta las insignias en tu web.',
+    title: 'Programa de certificación con insignias',
+    description: 'Sistema de certificación con insignias Bronze, Silver, Gold y Platinum basado en el número de testimonios verificados. Inserta las insignias en tu web.',
     category: 'nuevo',
   },
   {
     date: '2026-03-21',
     title: 'Health Score de testimonios',
-    description: 'Evaluacion automatica del estado de tu estrategia de testimonios con puntuacion y recomendaciones personalizadas para mejorar.',
+    description: 'Evaluación automática del estado de tu estrategia de testimonios con puntuación y recomendaciones personalizadas para mejorar.',
     category: 'nuevo',
   },
   {
@@ -135,8 +135,8 @@ const updates: ProductUpdate[] = [
   },
   {
     date: '2026-03-18',
-    title: 'Verificacion de email de autores',
-    description: 'Sistema de verificacion de identidad de autores de testimonios. Los testimonios verificados muestran un sello de autenticidad.',
+    title: 'Verificación de email de autores',
+    description: 'Sistema de verificación de identidad de autores de testimonios. Los testimonios verificados muestran un sello de autenticidad.',
     category: 'nuevo',
   },
   {
@@ -171,8 +171,8 @@ const updates: ProductUpdate[] = [
   },
   {
     date: '2026-03-18',
-    title: 'Guias de integracion',
-    description: 'Guias paso a paso para integrar Opinafy en WordPress, Shopify, Wix, Squarespace, Webflow y Google Tag Manager.',
+    title: 'Guías de integración',
+    description: 'Guías paso a paso para integrar Opinafy en WordPress, Shopify, Wix, Squarespace, Webflow y Google Tag Manager.',
     category: 'nuevo',
   },
   {

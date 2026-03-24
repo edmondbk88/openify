@@ -3,7 +3,7 @@ import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy - Opinafy',
+  title: 'Cookie Policy',
   description:
     'Learn about how Opinafy uses cookies on our website. This policy explains what cookies we use, why, and how you can manage your preferences.',
   alternates: {
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Cookie Policy - Opinafy',
+    title: 'Cookie Policy',
     description: 'Learn about how Opinafy uses cookies on our website.',
     url: 'https://opinafy.com/en/legal/cookies',
     locale: 'en_US',

@@ -6,7 +6,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Prensa - Opinafy',
   description:
-    'Kit de prensa de Opinafy. Descarga logos, capturas de pantalla y encuentra informacion para medios de comunicacion sobre la plataforma de testimonios.',
+    'Kit de prensa de Opinafy. Descarga logos, capturas de pantalla y encuentra información para medios de comunicación sobre la plataforma de testimonios.',
   alternates: {
     canonical: 'https://opinafy.com/prensa',
     languages: {
@@ -44,8 +44,8 @@ const screenshots = [
     description: 'Interfaz de personalizacion con 100+ plantillas: grid, masonry, carrusel, terminal, polaroid y mas.',
   },
   {
-    title: 'Formulario de recopilacion',
-    description: 'Formulario de envio de testimonios con verificacion por email y grabacion de video/audio.',
+    title: 'Formulario de recopilación',
+    description: 'Formulario de envío de testimonios con verificación por email y grabación de video/audio.',
   },
   {
     title: 'Mini sitio profesional',
@@ -56,8 +56,8 @@ const screenshots = [
     description: 'Panel de pruebas A/B mostrando comparativa de rendimiento entre diferentes widgets.',
   },
   {
-    title: 'Importacion de resenas',
-    description: 'Herramienta de importacion compatible con Google Business, TripAdvisor, Trustpilot y mas.',
+    title: 'Importación de reseñas',
+    description: 'Herramienta de importación compatible con Google Business, TripAdvisor, Trustpilot y más.',
   },
 ]
 
@@ -81,8 +81,8 @@ export default function PrensaPage() {
               Kit de prensa
             </h1>
             <p className="mt-4 text-lg text-gray-600 max-w-2xl">
-              Recursos oficiales de Opinafy para periodistas, bloggers y medios de comunicacion.
-              Aqui encontraras logos, estadisticas y toda la informacion que necesitas.
+              Recursos oficiales de Opinafy para periodistas, bloggers y medios de comunicación.
+              Aquí encontrarás logos, estadísticas y toda la información que necesitas.
             </p>
             <div className="mt-6">
               <a
@@ -104,12 +104,12 @@ export default function PrensaPage() {
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Sobre Opinafy</h2>
             <div className="rounded-xl bg-white p-6 sm:p-8 shadow-sm border border-gray-100">
               <p className="text-gray-700 leading-relaxed mb-4">
-                Opinafy es la primera plataforma de gestion de testimonios de clientes creada nativamente en espanol.
+                Opinafy es la primera plataforma de gestión de testimonios de clientes creada nativamente en español.
                 Permite a negocios y profesionales recopilar, verificar y mostrar testimonios autenticos en sus sitios web
                 mediante widgets embebibles con mas de 100 plantillas profesionales.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                La plataforma ofrece verificacion doble (por email y por dominio de empresa), grabacion de video testimonios
+                La plataforma ofrece verificación doble (por email y por dominio de empresa), grabación de video testimonios
                 directamente desde el navegador (sin subida de archivos para garantizar autenticidad), mini sitios profesionales
                 para quienes no tienen web propia, A/B testing integrado, analisis de sentimiento e importacion de resenas
                 desde Google Business, TripAdvisor y otras plataformas.

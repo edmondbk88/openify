@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Política de Privacidad - Opinafy',
+  description: 'Política de privacidad de Opinafy. Cómo recopilamos, usamos y protegemos tus datos personales conforme al RGPD.',
   alternates: {
     canonical: 'https://opinafy.com/privacidad',
     languages: {

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Testimonial Tool Comparisons 2026 | Opinafy',
+  title: 'Testimonial Tool Comparisons 2026',
   description:
     'Compare Opinafy with the best testimonial tools on the market. Detailed analysis, pricing, and features to help you choose the best option.',
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Testimonial Tool Comparisons 2026 | Opinafy',
+    title: 'Testimonial Tool Comparisons 2026',
     description:
       'Compare Opinafy with the best testimonial tools. Detailed and honest analysis.',
     url: 'https://opinafy.com/en/compare',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Testimonial Tool Comparisons 2026 | Opinafy',
+    title: 'Testimonial Tool Comparisons 2026',
     description:
       'Compare Opinafy with the best testimonial tools. Detailed and honest analysis.',
     images: ['/og.png'],

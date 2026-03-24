@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import HealthScoreClient from './health-score-client'
 
 export const metadata: Metadata = {
-  title: 'Analizar Prueba Social Web Gratis - Social Proof Checker | Opinafy',
+  title: 'Analizar Prueba Social Web Gratis - Verificador de Prueba Social | Opinafy',
   description:
-    'Analiza gratis la prueba social de tu web. Descubre si tienes testimonios, valoraciones, datos estructurados y mas. Recibe una puntuacion y recomendaciones para mejorar.',
+    'Analiza gratis la prueba social de tu web. Descubre si tienes testimonios, valoraciones, datos estructurados y mas. Recibe una puntuación y recomendaciones para mejorar.',
   keywords: [
     'analizar prueba social web gratis',
     'social proof checker',
     'analizar testimonios web',
-    'puntuacion prueba social',
+    'puntuación prueba social',
     'health score web',
     'verificar testimonios sitio web',
     'herramienta seo testimonios',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Analizar Prueba Social Web Gratis | Opinafy',
     description:
-      'Analiza gratis tu web y descubre tu puntuacion de prueba social.',
+      'Analiza gratis tu web y descubre tu puntuación de prueba social.',
     images: ['/og.png'],
   },
 }

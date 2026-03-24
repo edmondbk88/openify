@@ -7,7 +7,7 @@ import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
 import { MiniSiteGalleryEn } from './gallery-en'
 
 export const metadata: Metadata = {
-  title: 'Mini Site Templates by Profession | 30 Designs - Opinafy',
+  title: 'Mini Site Templates by Profession | 30 Designs',
   description:
     'Explore 30 mini site testimonial templates organized by profession. Health, legal, creatives, education, and more. Create your professional testimonial page with Opinafy.',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://opinafy.com/en/minisite-templates',
     siteName: 'Opinafy',
-    title: '30 Mini Site Testimonial Templates by Profession - Opinafy',
+    title: '30 Mini Site Testimonial Templates by Profession',
     description:
       'Discover 30 professional designs for your public testimonial page. Organized by profession: health, legal, creatives, education, and more.',
     images: [

@@ -4,7 +4,7 @@ import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
 
 export const metadata: Metadata = {
-  title: 'The State of Social Proof in 2026 - Statistics & Data | Opinafy',
+  title: 'The State of Social Proof in 2026 - Statistics & Data',
   description:
     'Comprehensive report with 25+ statistics about testimonials, reviews and social proof in 2026. Data from BrightLocal, BigCommerce, VWO, Wyzowl and more.',
   keywords: [
