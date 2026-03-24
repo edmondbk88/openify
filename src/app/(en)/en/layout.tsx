@@ -1,15 +1,4 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Script from 'next/script'
-import { ToastProvider } from '@/components/ui/toast'
-import { CookieBanner } from '@/components/landing/cookie-banner'
-import '@/app/globals.css'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://opinafy.com'),
@@ -82,39 +71,10 @@ export const metadata: Metadata = {
   },
 }
 
-export default function EnglishRootLayout({
+export default function EnglishLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="en" className={inter.variable}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
-      <body className={`${inter.className} antialiased`}>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-CPLGLSLYHR"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('consent', 'default', {
-              'analytics_storage': 'denied',
-              'ad_storage': 'denied'
-            });
-            gtag('config', 'G-CPLGLSLYHR');
-          `}
-        </Script>
-        <ToastProvider>
-          {children}
-          <CookieBanner />
-        </ToastProvider>
-      </body>
-    </html>
-  )
+  return children
 }
