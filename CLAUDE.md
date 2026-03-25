@@ -15,7 +15,7 @@ Opinafy is a bilingual (ES/EN) SaaS platform for collecting, managing, and displ
 - **Deploy:** Vercel (auto-deploy from GitHub on push to main)
 - **Widget:** Vanilla JS + Shadow DOM (~25KB), compiled with esbuild
 - **Testing:** Playwright (E2E), Jest (unit), GitHub Actions CI/CD
-- **SEO Score:** 82/100 (as of 2026-03-24)
+- **SEO Score:** ~86/100 (as of 2026-03-25)
 
 ## Pricing (4 plans)
 | Plan | Price | Projects | Testimonials | Video | Mini Site |
@@ -166,16 +166,18 @@ npx playwright test --ui  # Interactive test runner
 - Bug fix → add regression test
 
 ## Common Gotchas
-1. **"Permission denied" on Supabase:** GRANT missing for roles
-2. **Stripe errors:** Use REST API, not SDK. Trim env vars (Vercel adds `\n`)
-3. **Widget not updating:** Rebuild with `node widget-src/build.mjs` + commit output
-4. **EN pages wrong lang:** Ensure middleware sets x-locale header, root layout reads it
-5. **Template filters empty:** API route must support `?category=` param, gallery must fetch on filter
+1. **NEVER call `headers()` or `cookies()` in root layout** — forces ALL pages dynamic, kills ISR sitewide. The root layout uses hardcoded `lang="es"`, EN layout uses inline script to set `lang="en"`
+2. **"Permission denied" on Supabase:** GRANT missing for roles
+3. **Stripe errors:** Use REST API, not SDK. Trim env vars (Vercel adds `\n`)
+4. **Widget not updating:** Rebuild with `node widget-src/build.mjs` + commit output
+5. **Template filters empty:** API route must support `?category=` param, gallery must fetch ALL templates for that category from API on filter change
 6. **Blog not caching:** Don't access `searchParams` in server component (forces dynamic). Use client component with `useSearchParams()`
 7. **Schema on EN pages:** Pass `{ lang: 'en' }` to ALL schema functions
 8. **New DB columns:** ALTER TABLE + GRANT permissions + update TypeScript types
 9. **Env vars on Vercel:** Use `printf` not `echo` (trailing newlines). NEXT_PUBLIC_ vars need redeploy
 10. **Gifted plans:** Always use `getEffectivePlan(profile)` not `profile.plan` directly
+11. **Search inputs must have 400ms debounce** if they trigger API calls (admin search, etc). Client-side filtering (blog, templates) doesn't need it
+12. **Template preview must use real widget** — detail pages use iframe to `/api/widget-demo/[id]`, NOT the TemplatePreview CSS mockup component. This ensures preview matches the actual widget
 
 ## Security Headers (next.config.mjs)
 - HSTS (2 years), CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy
@@ -183,10 +185,13 @@ npx playwright test --ui  # Interactive test runner
 - Content-Language: en for /en/*, es for everything else
 - CORS enabled for /api/widget/* and /widget.js
 
-## SEO Status (2026-03-24)
-- **Score:** 82/100 (up from 68)
-- **Pages:** ~1,414 in sitemap (bilingual with hreflang)
-- **Schema:** Organization, WebSite, SoftwareApplication, FAQPage, Article, BreadcrumbList, CollectionPage
+## SEO Status (2026-03-25)
+- **Score:** ~86/100 (journey: 68 → 82 → 86)
+- **Technical:** 93/100 | **Schema:** 95/100 | **Visual:** A | **Sitemap:** B+
+- **Content:** 76/100 (limited by missing real testimonials and NIF/CIF)
+- **Pages:** ~1,418 in sitemap (bilingual with hreflang)
+- **Schema:** Organization (with founder+photo), WebSite (with SearchAction), SoftwareApplication (4 plans EN/ES), FAQPage, Article (Edmond Bojalil author), BreadcrumbList, CollectionPage
 - **AI crawlers:** Allowed (GPTBot, ClaudeBot, PerplexityBot, etc.)
 - **llms.txt:** Present at /llms.txt
-- **Remaining:** Real testimonials, NIF/CIF legal data, product screenshots needed for 90+
+- **ISR caching:** Restored (root layout no longer calls headers())
+- **Remaining for 95+:** Real user testimonials, NIF/CIF in /legal, product screenshots, external backlinks
