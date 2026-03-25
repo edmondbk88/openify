@@ -96,7 +96,7 @@ export default function TestimoniosPorCiudadPage() {
             Testimonios por Ciudad
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-            Descubre como Opinafy ayuda a negocios locales en {cities.length} ciudades a
+            Descubre cómo Opinafy ayuda a negocios locales en {cities.length} ciudades a
             recopilar, gestionar y mostrar testimonios de clientes que generan confianza y
             aumentan las conversiones.
           </p>

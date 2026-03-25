@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: CityIndustryPageProps): Promi
   const industry = topIndustries.find((i) => i.slug === industrySlug)
 
   if (!city || !industry) {
-    return { title: 'Pagina no encontrada' }
+    return { title: 'Página no encontrada' }
   }
 
   const title = `Testimonios para ${industry.name} en ${city.name} | Opinafy`
@@ -120,10 +120,23 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
   const uniqueIntro = generateUniqueIntro(city.slug, city.name, city.country, industry.slug, industry.name)
   const whyBullets = generateWhyTestimonialsMatter(city.slug, city.name, industry.slug, industry.name)
 
-  // Resolve related industries to full objects
+  // Resolve related industries to full objects (3 related + up to 3 others = max 6)
   const relatedIndustryObjects = relatedIndustrySlugs
     .map((slug) => topIndustries.find((i) => i.slug === slug))
     .filter(Boolean) as typeof topIndustries
+
+  // Add a few more industries for variety (seeded by city+industry for consistency)
+  const relatedSet = new Set([industry.slug, ...relatedIndustrySlugs])
+  const otherIndustries = topIndustries
+    .filter((i) => !relatedSet.has(i.slug))
+    .sort((a, b) => {
+      // Deterministic shuffle based on city+industry slug
+      const seedA = (citySlug + industrySlug + a.slug).split('').reduce((acc, c) => acc + c.charCodeAt(0), 0)
+      const seedB = (citySlug + industrySlug + b.slug).split('').reduce((acc, c) => acc + c.charCodeAt(0), 0)
+      return seedA - seedB
+    })
+    .slice(0, 3)
+  const allRelatedIndustries = [...relatedIndustryObjects, ...otherIndustries]
 
   // Resolve nearby cities
   const nearbyCityObjects = nearbyRelatedCitySlugs
@@ -254,7 +267,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
           {cityProfile && (
             <div className="mt-8 flex flex-wrap justify-center gap-6">
               <div className="rounded-lg bg-white px-4 py-2 shadow-sm border border-gray-100">
-                <span className="text-sm text-gray-500">Poblacion</span>
+                <span className="text-sm text-gray-500">Población</span>
                 <p className="font-semibold text-gray-900">{formatPopulation(cityProfile.population)}</p>
               </div>
               <div className="rounded-lg bg-white px-4 py-2 shadow-sm border border-gray-100">
@@ -295,8 +308,8 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
             {cityDescription && (
               <p>
                 {city.name}, {cityDescription}, ofrece un entorno singular para el sector de{' '}
-                {industryLower}. Comprender esta dinamica local es clave para aprovechar al maximo
-                la prueba social como herramienta de captacion y fidelizacion de clientes.
+                {industryLower}. Comprender esta dinámica local es clave para aprovechar al máximo
+                la prueba social como herramienta de captación y fidelización de clientes.
               </p>
             )}
           </div>
@@ -308,7 +321,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
         <section className="bg-indigo-50 py-16 sm:py-24">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl mb-8">
-              ¿Por que los testimonios son decisivos para {industryLower} en {city.name}?
+              ¿Por qué los testimonios son decisivos para {industryLower} en {city.name}?
             </h2>
             <div className="space-y-6">
               {whyBullets.map((bullet, index) => (
@@ -346,10 +359,10 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
         <section className="py-16 sm:py-24">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl mb-4">
-              Mejores practicas de testimonios para {industryLower}
+              Mejores prácticas de testimonios para {industryLower}
             </h2>
             <p className="mx-auto mb-10 max-w-2xl text-center text-lg text-gray-600">
-              Consejos especificos para maximizar el impacto de los testimonios en el sector de {industryLower} en {city.name}.
+              Consejos específicos para maximizar el impacto de los testimonios en el sector de {industryLower} en {city.name}.
             </p>
             <div className="space-y-6">
               {industryInsight.bestPractices.map((practice, index) => (
@@ -370,7 +383,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
             {/* Industry challenges */}
             <div className="mt-12">
               <h3 className="text-xl font-bold text-gray-900 mb-6">
-                Retos especificos de {industryLower} con la reputacion online
+                Retos específicos de {industryLower} con la reputación online
               </h3>
               <div className="space-y-4">
                 {industryInsight.challenges.map((challenge, index) => (
@@ -393,19 +406,19 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
       <section className="bg-gray-50 py-16 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <div className="prose prose-lg prose-indigo mx-auto">
-            <h2>¿Como funciona Opinafy para {industryLower} en {city.name}?</h2>
+            <h2>¿Cómo funciona Opinafy para {industryLower} en {city.name}?</h2>
             <ol>
               <li>
-                <strong>Recopila testimonios facilmente:</strong> Crea formularios
-                personalizados y compartelos con tus clientes en {city.name} via enlace,
+                <strong>Recopila testimonios fácilmente:</strong> Crea formularios
+                personalizados y compártelos con tus clientes en {city.name} vía enlace,
                 QR, email o WhatsApp.
               </li>
               <li>
                 <strong>Gestiona y modera:</strong> Revisa y aprueba cada testimonio
-                antes de publicarlo. Tu tienes el control total.
+                antes de publicarlo. Tú tienes el control total.
               </li>
               <li>
-                <strong>Muestra con estilo:</strong> Elige entre mas de 60 widgets
+                <strong>Muestra con estilo:</strong> Elige entre más de 60 widgets
                 personalizables para mostrar los testimonios en tu web.
               </li>
               <li>
@@ -417,10 +430,10 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
             <h3>Ventaja competitiva en {city.name}</h3>
             <p>
               {cityTier === 'grande'
-                ? `En un mercado masivo como ${city.name}, los testimonios de clientes reales te ayudan a sobresalir entre la multitud. Mientras cientos de negocios de ${industryLower} dependen solo de redes sociales, tu puedes mostrar prueba social verificada directamente en tu web, donde los clientes toman la decision final. Con ${cityProfile ? formatPopulation(cityProfile.population) + ' de potenciales clientes' : 'millones de consumidores'}, cada testimonio adicional amplifica tu alcance.`
+                ? `En un mercado masivo como ${city.name}, los testimonios de clientes reales te ayudan a sobresalir entre la multitud. Mientras cientos de negocios de ${industryLower} dependen solo de redes sociales, tú puedes mostrar prueba social verificada directamente en tu web, donde los clientes toman la decisión final. Con ${cityProfile ? formatPopulation(cityProfile.population) + ' de potenciales clientes' : 'millones de consumidores'}, cada testimonio adicional amplifica tu alcance.`
                 : cityTier === 'mediana'
-                  ? `${city.name} es un mercado en crecimiento donde los negocios que invierten en reputacion digital hoy seran los lideres de manana. Tu negocio de ${industryLower} puede aprovechar el momento: la competencia aun no ha saturado el espacio de testimonios online, y posicionarte ahora te dara una ventaja dificil de replicar cuando el mercado madure.`
-                  : `En ${city.name}, la cercania y la confianza son valores fundamentales. Los testimonios digitales traducen el boca a boca local al mundo online, donde cada vez mas residentes y visitantes buscan servicios de ${industryLower}. Al ser un mercado mas compacto, cada testimonio positivo tiene un peso especifico mayor y contribuye a consolidarte como la referencia de ${industryLower} en la zona.`}
+                  ? `${city.name} es un mercado en crecimiento donde los negocios que invierten en reputación digital hoy serán los líderes de mañana. Tu negocio de ${industryLower} puede aprovechar el momento: la competencia aún no ha saturado el espacio de testimonios online, y posicionarte ahora te dará una ventaja difícil de replicar cuando el mercado madure.`
+                  : `En ${city.name}, la cercanía y la confianza son valores fundamentales. Los testimonios digitales traducen el boca a boca local al mundo online, donde cada vez más residentes y visitantes buscan servicios de ${industryLower}. Al ser un mercado más compacto, cada testimonio positivo tiene un peso específico mayor y contribuye a consolidarte como la referencia de ${industryLower} en la zona.`}
             </p>
           </div>
         </div>
@@ -430,10 +443,10 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
       <section className="py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
-            Asi se verian los testimonios de {industryLower} en {city.name}
+            Así se verían los testimonios de {industryLower} en {city.name}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-lg text-gray-600">
-            Ejemplos de como se mostrarian los testimonios de tus clientes con Opinafy.
+            Ejemplos de cómo se mostrarían los testimonios de tus clientes con Opinafy.
           </p>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {industry.testimonialExamples.map((testimonial, index) => (
@@ -453,7 +466,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
             ))}
           </div>
           <p className="mx-auto mt-8 max-w-2xl text-center text-sm text-gray-500 italic">
-            * Los testimonios mostrados son ejemplos ilustrativos de como se verian los
+            * Los testimonios mostrados son ejemplos ilustrativos de cómo se verían los
             testimonios reales de tus clientes.
           </p>
         </div>
@@ -482,10 +495,10 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
         <section className="bg-gray-50 py-16 sm:py-24">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Articulos relacionados con {industryLower}
+              Artículos relacionados con {industryLower}
             </h2>
             <p className="text-gray-600 mb-8">
-              Profundiza en estrategias de testimonios especificas para {industryLower} con estos recursos de nuestro blog.
+              Profundiza en estrategias de testimonios específicas para {industryLower} con estos recursos de nuestro blog.
             </p>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {blogLinks.map((link) => (
@@ -495,7 +508,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
                   className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-indigo-300 hover:shadow-md transition-all"
                 >
                   <p className="font-semibold text-gray-900 hover:text-indigo-600">{link.title}</p>
-                  <p className="mt-2 text-sm text-indigo-600">Leer articulo &rarr;</p>
+                  <p className="mt-2 text-sm text-indigo-600">Leer artículo &rarr;</p>
                 </Link>
               ))}
             </div>
@@ -515,21 +528,21 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
               href={`/testimonios-para/${industry.slug}`}
               className="inline-flex items-center rounded-lg border-2 border-indigo-600 bg-white px-6 py-3 text-base font-semibold text-indigo-600 shadow-sm transition-colors hover:bg-indigo-50"
             >
-              Ver pagina completa de {industry.name}
+              Ver página completa de {industry.name}
             </Link>
           </div>
 
-          {/* Related industries in same city - curated 3 */}
-          {relatedIndustryObjects.length > 0 && (
+          {/* Related industries in same city - curated 6 */}
+          {allRelatedIndustries.length > 0 && (
             <div className="mb-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 Industrias relacionadas en {city.name}
               </h2>
               <p className="text-gray-600 mb-6">
-                Si te interesa {industryLower}, tambien podrian interesarte estas industrias cercanas en {city.name}.
+                Si te interesa {industryLower}, también podrían interesarte estas industrias cercanas en {city.name}.
               </p>
               <div className="flex flex-wrap gap-3">
-                {relatedIndustryObjects.map((otherIndustry) => (
+                {allRelatedIndustries.map((otherIndustry) => (
                   <Link
                     key={otherIndustry.slug}
                     href={`/testimonios-en/${city.slug}/${otherIndustry.slug}`}
@@ -549,7 +562,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
                 {industry.name} en ciudades cercanas
               </h2>
               <p className="text-gray-600 mb-6">
-                Explora como los testimonios impulsan a los negocios de {industryLower} en otras ciudades relacionadas con {city.name}.
+                Explora cómo los testimonios impulsan a los negocios de {industryLower} en otras ciudades relacionadas con {city.name}.
               </p>
               <div className="flex flex-wrap gap-3">
                 {nearbyCityObjects.map((otherCity) => (
@@ -565,47 +578,6 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
             </div>
           )}
 
-          {/* All other cities - compact list */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              {industry.name} en todas las ciudades
-            </h2>
-            <div className="flex flex-wrap gap-3">
-              {cities
-                .filter((c) => c.slug !== city.slug)
-                .map((otherCity) => (
-                  <Link
-                    key={otherCity.slug}
-                    href={`/testimonios-en/${otherCity.slug}/${industry.slug}`}
-                    className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-700 hover:border-indigo-300 hover:text-indigo-600 transition-colors"
-                  >
-                    {industry.name} en {otherCity.name}
-                  </Link>
-                ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Other industries in this city */}
-      <section className="bg-gray-50 py-16 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Otras industrias en {city.name}
-          </h2>
-          <div className="flex flex-wrap gap-3">
-            {topIndustries
-              .filter((i) => i.slug !== industry.slug)
-              .map((otherIndustry) => (
-                <Link
-                  key={otherIndustry.slug}
-                  href={`/testimonios-en/${city.slug}/${otherIndustry.slug}`}
-                  className="rounded-full border border-gray-200 bg-white px-4 py-2 text-sm text-gray-700 hover:border-indigo-300 hover:text-indigo-600 transition-colors"
-                >
-                  {otherIndustry.name} en {city.name}
-                </Link>
-              ))}
-          </div>
         </div>
       </section>
 

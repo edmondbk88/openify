@@ -121,7 +121,7 @@ export default async function CityPage({ params }: CityPageProps) {
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
             Opinafy ayuda a negocios en {city.name}{city.region ? `, ${city.region}` : ''}{' '}
             a recopilar y mostrar testimonios de clientes que generan confianza y aumentan
-            las ventas. Elige tu industria para descubrir como.
+            las ventas. Elige tu industria para descubrir cómo.
           </p>
         </div>
       </section>
@@ -158,36 +158,36 @@ export default async function CityPage({ params }: CityPageProps) {
       <section className="bg-gray-50 py-16 sm:py-24">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
-            ¿Por que los negocios en {city.name} necesitan testimonios?
+            ¿Por qué los negocios en {city.name} necesitan testimonios?
           </h2>
           <div className="prose prose-lg prose-indigo mx-auto">
             <p>
               En {city.name}, {city.country}, la competencia entre negocios locales es
               intensa. Los consumidores buscan opiniones reales antes de tomar decisiones de
-              compra, y los testimonios de clientes satisfechos son la herramienta mas
+              compra, y los testimonios de clientes satisfechos son la herramienta más
               poderosa para generar confianza.
             </p>
             <p>
               Con Opinafy, los negocios en {city.name} pueden recopilar testimonios de
               forma sencilla, mostrarlos en su web con widgets personalizables y convertir
-              la satisfaccion de sus clientes en nuevas ventas.
+              la satisfacción de sus clientes en nuevas ventas.
             </p>
             <ul>
               <li>
                 <strong>Confianza local:</strong> Los testimonios de clientes de{' '}
-                {city.name} generan mas credibilidad que cualquier anuncio publicitario
+                {city.name} generan más credibilidad que cualquier anuncio publicitario
               </li>
               <li>
                 <strong>SEO local:</strong> Las opiniones mejoran tu posicionamiento en
-                busquedas como &ldquo;mejor [negocio] en {city.name}&rdquo;
+                búsquedas como &ldquo;mejor [negocio] en {city.name}&rdquo;
               </li>
               <li>
-                <strong>Decision de compra:</strong> El 92% de los consumidores lee
+                <strong>Decisión de compra:</strong> El 92% de los consumidores lee
                 opiniones online antes de visitar un negocio local
               </li>
               <li>
-                <strong>Diferenciacion:</strong> Destaca frente a tu competencia en{' '}
-                {city.name} mostrando prueba social autentica
+                <strong>Diferenciación:</strong> Destaca frente a tu competencia en{' '}
+                {city.name} mostrando prueba social auténtica
               </li>
             </ul>
           </div>
