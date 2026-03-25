@@ -158,7 +158,7 @@ export default async function BlogPostPageEn({ params }: BlogPostPageProps) {
           </h1>
 
           <div className="mt-6 flex items-center gap-4">
-            <Image src="/edmond-bojalil.webp" alt="Edmond Bojalil" width={40} height={40} className="rounded-full object-cover" />
+            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/edmond-bojalil.webp" alt="Edmond Bojalil" width={40} height={40} className="rounded-full object-cover" />
             <div>
               <p className="text-sm font-medium text-gray-900">Edmond Bojalil</p>
               <p className="text-sm text-gray-500">

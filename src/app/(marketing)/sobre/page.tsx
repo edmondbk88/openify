@@ -106,7 +106,7 @@ export default function SobrePage() {
       '@type': 'Person',
       name: 'Edmond Bojalil',
       url: 'https://www.linkedin.com/in/edmondbojalil/',
-      image: 'https://opinafy.com/edmond-bojalil.jpg',
+      image: 'https://opinafy.comhttps://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/edmond-bojalil.jpg',
     },
   }
 
@@ -178,7 +178,7 @@ export default function SobrePage() {
           </h2>
           <div className="mt-10 flex flex-col items-center gap-8 sm:flex-row sm:items-start">
             <Image
-              src="/edmond-bojalil.webp"
+              src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/edmond-bojalil.webp"
               alt="Edmond Bojalil — Fundador de Opinafy"
               width={96}
               height={96}
@@ -286,21 +286,21 @@ export default function SobrePage() {
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/dashboard.png" alt="Panel de control de Opinafy" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/dashboard.png" alt="Panel de control de Opinafy" width={1440} height={900} className="w-full" />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900">Dashboard intuitivo</h3>
                 <p className="mt-1 text-sm text-gray-600">Gestiona todos tus testimonios y proyectos desde un panel centralizado.</p>
               </div>
             </div>
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/plantillas.png" alt="Galería de plantillas de Opinafy" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/plantillas.png" alt="Galería de plantillas de Opinafy" width={1440} height={900} className="w-full" />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900">100+ plantillas</h3>
                 <p className="mt-1 text-sm text-gray-600">Elige entre más de 100 plantillas profesionales para widgets y mini sitios.</p>
               </div>
             </div>
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/collection-form.png" alt="Formulario de recopilación de testimonios" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/collection-form.png" alt="Formulario de recopilación de testimonios" width={1440} height={900} className="w-full" />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900">Formulario de recopilación</h3>
                 <p className="mt-1 text-sm text-gray-600">Recopila testimonios con texto, foto, vídeo y audio directamente desde el navegador.</p>

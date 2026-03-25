@@ -107,7 +107,7 @@ export default function AboutPage() {
       '@type': 'Person',
       name: 'Edmond Bojalil',
       url: 'https://www.linkedin.com/in/edmondbojalil/',
-      image: 'https://opinafy.com/edmond-bojalil.jpg',
+      image: 'https://opinafy.comhttps://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/edmond-bojalil.jpg',
     },
   }
 
@@ -179,7 +179,7 @@ export default function AboutPage() {
           </h2>
           <div className="mt-10 flex flex-col items-center gap-8 sm:flex-row sm:items-start">
             <Image
-              src="/edmond-bojalil.webp"
+              src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/edmond-bojalil.webp"
               alt="Edmond Bojalil — Founder of Opinafy"
               width={96}
               height={96}
@@ -285,21 +285,21 @@ export default function AboutPage() {
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/dashboard.png" alt="Opinafy dashboard" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/dashboard.png" alt="Opinafy dashboard" width={1440} height={900} className="w-full" />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900">Intuitive dashboard</h3>
                 <p className="mt-1 text-sm text-gray-600">Manage all your testimonials and projects from a centralized panel.</p>
               </div>
             </div>
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/plantillas.png" alt="Opinafy templates gallery" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/plantillas.png" alt="Opinafy templates gallery" width={1440} height={900} className="w-full" />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900">100+ templates</h3>
                 <p className="mt-1 text-sm text-gray-600">Choose from over 100 professional templates for widgets and mini sites.</p>
               </div>
             </div>
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/collection-form.png" alt="Testimonial collection form" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/collection-form.png" alt="Testimonial collection form" width={1440} height={900} className="w-full" />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900">Collection form</h3>
                 <p className="mt-1 text-sm text-gray-600">Collect testimonials with text, photo, video, and audio directly from the browser.</p>

@@ -438,7 +438,7 @@ export default function FeaturesPage() {
 
           {/* Dashboard screenshot */}
           <div className="mt-16 overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-            <Image src="/screenshots/dashboard.png" alt="Opinafy dashboard with stats cards and sidebar navigation" width={1440} height={900} className="w-full" />
+            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/dashboard.png" alt="Opinafy dashboard with stats cards and sidebar navigation" width={1440} height={900} className="w-full" />
           </div>
         </div>
       </section>
@@ -471,7 +471,7 @@ export default function FeaturesPage() {
 
           {/* Templates screenshot */}
           <div className="mt-16 overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-            <Image src="/screenshots/plantilla-detalle.png" alt="Template detail with widget preview showing testimonial layouts" width={1440} height={900} className="w-full" />
+            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/plantilla-detalle.png" alt="Template detail with widget preview showing testimonial layouts" width={1440} height={900} className="w-full" />
           </div>
         </div>
       </section>
@@ -509,10 +509,10 @@ export default function FeaturesPage() {
           {/* Collection form & mini site screenshots */}
           <div className="mt-16 grid gap-8 sm:grid-cols-2">
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/collection-form.png" alt="Public testimonial collection form" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/collection-form.png" alt="Public testimonial collection form" width={1440} height={900} className="w-full" />
             </div>
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/mini-site.png" alt="Public mini site displaying verified testimonials" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/mini-site.png" alt="Public mini site displaying verified testimonials" width={1440} height={900} className="w-full" />
             </div>
           </div>
         </div>

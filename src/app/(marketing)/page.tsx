@@ -71,7 +71,7 @@ export default function HomePage() {
             </p>
           </div>
           <div className="mt-10 overflow-hidden rounded-xl border border-gray-200 shadow-2xl">
-            <Image src="/screenshots/dashboard.png" alt="Panel de control de Opinafy mostrando estadísticas y testimonios" width={1440} height={900} className="w-full" />
+            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/dashboard.png" alt="Panel de control de Opinafy mostrando estadísticas y testimonios" width={1440} height={900} className="w-full" />
           </div>
         </div>
       </section>

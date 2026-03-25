@@ -437,7 +437,7 @@ export default function CaracteristicasPage() {
 
           {/* Dashboard screenshot */}
           <div className="mt-16 overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-            <Image src="/screenshots/dashboard.png" alt="Panel de control de Opinafy con estadísticas y sidebar" width={1440} height={900} className="w-full" />
+            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/dashboard.png" alt="Panel de control de Opinafy con estadísticas y sidebar" width={1440} height={900} className="w-full" />
           </div>
         </div>
       </section>
@@ -470,7 +470,7 @@ export default function CaracteristicasPage() {
 
           {/* Templates screenshot */}
           <div className="mt-16 overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-            <Image src="/screenshots/plantilla-detalle.png" alt="Detalle de plantilla con vista previa del widget de testimonios" width={1440} height={900} className="w-full" />
+            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/plantilla-detalle.png" alt="Detalle de plantilla con vista previa del widget de testimonios" width={1440} height={900} className="w-full" />
           </div>
         </div>
       </section>
@@ -508,10 +508,10 @@ export default function CaracteristicasPage() {
           {/* Collection form & mini site screenshots */}
           <div className="mt-16 grid gap-8 sm:grid-cols-2">
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/collection-form.png" alt="Formulario público de recopilación de testimonios" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/collection-form.png" alt="Formulario público de recopilación de testimonios" width={1440} height={900} className="w-full" />
             </div>
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="/screenshots/mini-site.png" alt="Mini sitio público con testimonios verificados" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/mini-site.png" alt="Mini sitio público con testimonios verificados" width={1440} height={900} className="w-full" />
             </div>
           </div>
         </div>
