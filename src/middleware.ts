@@ -5,8 +5,32 @@ export async function middleware(request: NextRequest) {
   return await updateSession(request)
 }
 
+// Only run auth middleware on routes that need session management.
+// Marketing pages (/blog, /plantillas, /precios, etc.) are ISR-cached
+// and must NOT go through middleware that touches cookies/headers.
 export const config = {
   matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|widget.js|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+    '/dashboard/:path*',
+    '/proyectos/:path*',
+    '/configuracion/:path*',
+    '/facturacion/:path*',
+    '/mi-sitio/:path*',
+    '/soporte/:path*',
+    '/admin/:path*',
+    '/login',
+    '/registro',
+    '/forgot-password',
+    '/api/projects/:path*',
+    '/api/testimonials/:path*',
+    '/api/upload/:path*',
+    '/api/profile/:path*',
+    '/api/stripe/:path*',
+    '/api/tickets/:path*',
+    '/api/automation/:path*',
+    '/api/admin/:path*',
+    '/api/account/:path*',
+    '/api/notifications/:path*',
+    '/api/widget-preview/:path*',
+    '/api/auth/:path*',
   ],
 }
