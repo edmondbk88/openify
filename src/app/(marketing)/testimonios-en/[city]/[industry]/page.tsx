@@ -175,20 +175,20 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
     })),
   }
 
-  const localBusinessJsonLd = {
+  const collectionJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: `${industry.name} en ${city.name}`,
-    description: `Testimonios de clientes para ${industryLower} en ${city.name}, ${city.country}`,
-    address: {
-      '@type': 'PostalAddress',
-      addressLocality: city.name,
-      ...(city.region ? { addressRegion: city.region } : {}),
-      addressCountry: city.country,
-    },
-    areaServed: {
-      '@type': 'City',
-      name: city.name,
+    '@type': 'CollectionPage',
+    name: `Testimonios para ${industry.name} en ${city.name}`,
+    description: `Recopilación de testimonios de clientes para ${industryLower} en ${city.name}, ${city.country}`,
+    url: `https://opinafy.com/testimonios-en/${city.slug}/${industry.slug}`,
+    inLanguage: 'es',
+    about: {
+      '@type': 'Service',
+      name: `Gestión de testimonios para ${industryLower}`,
+      areaServed: {
+        '@type': 'City',
+        name: city.name,
+      },
     },
   }
 
@@ -212,7 +212,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
       />
       <script
         type="application/ld+json"
