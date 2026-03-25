@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'es_ES',
-    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Características de Opinafy - Todas las funciones',
     description:
       'Widgets embebibles, video testimonios, verificación doble, 100+ plantillas y más. La plataforma de testimonios más completa en español.',
-    images: ['/og.jpg'],
+    images: ['/og.png'],
   },
 }
 

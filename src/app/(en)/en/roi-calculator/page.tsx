@@ -28,14 +28,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'en_US',
-    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Testimonial ROI Calculator',
     description:
       'Calculate how much revenue you lose without testimonials. Discover your ROI with Opinafy.',
-    images: ['/og.jpg'],
+    images: ['/og.png'],
   },
 }
 

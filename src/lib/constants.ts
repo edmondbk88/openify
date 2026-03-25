@@ -65,7 +65,7 @@ export const APP_CONFIG = {
   name: 'Opinafy',
   description: 'La plataforma #1 en español para recopilar y mostrar testimonios de clientes. Aumenta tu credibilidad y convierte más visitantes en clientes.',
   url: 'https://opinafy.com',
-  ogImage: 'https://opinafy.com/og.jpg',
+  ogImage: 'https://opinafy.com/og.png',
   creator: 'Opinafy',
   keywords: [
     'testimonios',

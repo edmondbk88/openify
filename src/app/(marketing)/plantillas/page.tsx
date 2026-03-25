@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Descubre 100 diseños profesionales para mostrar testimonios en tu web. Minimalistas, corporativos, coloridos, oscuros y más.',
     images: [
       {
-        url: '/og.jpg',
+        url: '/og.png',
         width: 1200,
         height: 630,
         alt: 'Plantillas de Testimonios Opinafy',

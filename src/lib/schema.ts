@@ -355,7 +355,7 @@ export function articleSchema(opts: {
     '@type': 'Article',
     headline: opts.title,
     description: opts.description,
-    image: opts.image || 'https://opinafy.com/og.jpg',
+    image: opts.image || 'https://opinafy.com/og.png',
     author: {
       '@type': 'Person',
       name: 'Edmond Bojalil',

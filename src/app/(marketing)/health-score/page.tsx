@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'es_ES',
-    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Analizar Prueba Social Web Gratis | Opinafy',
     description:
       'Analiza gratis tu web y descubre tu puntuación de prueba social.',
-    images: ['/og.jpg'],
+    images: ['/og.png'],
   },
 }
 

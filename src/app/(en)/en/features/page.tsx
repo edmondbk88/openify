@@ -37,14 +37,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'en_US',
-    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Opinafy Features - All Testimonial Platform Features',
     description:
       'Embeddable widgets, video testimonials, double verification, 100+ templates and more. The most complete testimonial platform.',
-    images: ['/og.jpg'],
+    images: ['/og.png'],
   },
 }
 

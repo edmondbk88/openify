@@ -35,13 +35,13 @@ export const metadata: Metadata = {
     type: 'article',
     siteName: 'Opinafy',
     locale: 'es_ES',
-    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/og.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'El Estado de la Prueba Social en 2026',
     description: '25+ estadisticas clave sobre testimonios y prueba social.',
-    images: ['/og.jpg'],
+    images: ['/og.png'],
   },
 }
 

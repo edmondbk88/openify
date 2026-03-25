@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       'Discover 100+ professional designs to display customer testimonials on your website. Minimalist, corporate, colorful, dark, and more.',
     images: [
       {
-        url: '/og.jpg',
+        url: '/og.png',
         width: 1200,
         height: 630,
         alt: 'Opinafy Testimonial Templates',
