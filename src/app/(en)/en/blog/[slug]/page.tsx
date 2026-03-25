@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
     title: `${article.title} - Blog`,
     description: article.metaDescription,
     keywords: article.keywords,
-    authors: [{ name: 'Opinafy Team' }],
+    authors: [{ name: 'Edmond Bojalil' }],
     openGraph: {
       title: article.title,
       description: article.metaDescription,
@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       url: `https://opinafy.com/en/blog/${article.slug}`,
       siteName: 'Opinafy',
       publishedTime: article.date,
-      authors: ['Opinafy Team'],
+      authors: ['Edmond Bojalil'],
       images: [
         {
           url: article.image,
@@ -158,11 +158,9 @@ export default async function BlogPostPageEn({ params }: BlogPostPageProps) {
           </h1>
 
           <div className="mt-6 flex items-center gap-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white">
-              OT
-            </div>
+            <Image src="/edmond-bojalil.webp" alt="Edmond Bojalil" width={40} height={40} className="rounded-full object-cover" />
             <div>
-              <p className="text-sm font-medium text-gray-900">Opinafy Team</p>
+              <p className="text-sm font-medium text-gray-900">Edmond Bojalil</p>
               <p className="text-sm text-gray-500">
                 {new Date(article.date).toLocaleDateString('en-US', {
                   year: 'numeric',

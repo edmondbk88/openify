@@ -4,7 +4,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useState, useCallback, useEffect, useMemo } from 'react'
-import type { BlogArticle } from '@/lib/blog-data'
+type ArticlePreview = {
+  slug: string
+  title: string
+  excerpt: string
+  category: string
+  keywords: string[]
+  date: string
+  readTime: string
+  image: string
+  tldr?: string
+}
 
 const ARTICLES_PER_PAGE = 12
 
@@ -60,7 +70,7 @@ const categoryColors: Record<string, string> = {
   Metrics: 'bg-indigo-100 text-indigo-700',
 }
 
-export function BlogListEn({ articles }: { articles: BlogArticle[] }) {
+export function BlogListEn({ articles }: { articles: ArticlePreview[] }) {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [query, setQuery] = useState(searchParams.get('q') || '')

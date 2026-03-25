@@ -310,7 +310,7 @@ export const blogArticles: BlogArticle[] = [
       'conversión web',
       'UX testimonios',
     ],
-    date: '2025-10-18',
+    date: '2025-10-17',
     readTime: '8 min',
     metaDescription:
       'Aprende dónde colocar testimonios en tu web para máximo impacto. Guía con las 8 ubicaciones más efectivas, ejemplos y consejos de diseño para aumentar conversiones.',
@@ -396,7 +396,7 @@ export const blogArticles: BlogArticle[] = [
       'email testimonios',
       'mensajes para pedir reseñas',
     ],
-    date: '2025-10-19',
+    date: '2025-10-20',
     readTime: '9 min',
     metaDescription:
       'Plantillas listas para pedir testimonios a tus clientes por email, WhatsApp y redes sociales. Copia, pega y adapta estos mensajes probados que consiguen respuestas.',
@@ -916,7 +916,7 @@ export const blogArticles: BlogArticle[] = [
       'opiniones clientes',
       'reseñas vs testimonios',
     ],
-    date: '2025-10-24',
+    date: '2025-10-27',
     readTime: '8 min',
     metaDescription:
       'Diferencias entre testimonios, reseñas y opiniones de clientes. Aprende cuándo usar cada formato para maximizar la confianza y las conversiones de tu negocio.',
@@ -1012,7 +1012,7 @@ export const blogArticles: BlogArticle[] = [
       'generar confianza web',
       'técnicas confianza ecommerce',
     ],
-    date: '2025-10-25',
+    date: '2025-10-27',
     readTime: '10 min',
     metaDescription:
       'Aprende 12 técnicas infalibles para aumentar la confianza de tus clientes online. Desde testimonios hasta garantías, construye la credibilidad que tu negocio digital necesita.',
@@ -1096,7 +1096,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios mentores',
       'reseñas consultoría',
     ],
-    date: '2025-10-26',
+    date: '2025-10-28',
     readTime: '10 min',
     metaDescription:
       'Aprende cómo los coaches y consultores pueden recopilar, gestionar y mostrar testimonios que generen confianza y atraigan nuevos clientes. Estrategias específicas para el sector.',
@@ -1177,7 +1177,7 @@ export const blogArticles: BlogArticle[] = [
       'página testimonios',
       'prueba social visual',
     ],
-    date: '2025-10-27',
+    date: '2025-10-28',
     readTime: '9 min',
     metaDescription:
       'Aprende qué es un Wall of Love o muro de testimonios, por qué es tan efectivo para generar confianza y cómo crear uno profesional para tu negocio en minutos.',
@@ -1261,7 +1261,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios hotel',
       'prueba social hostelería',
     ],
-    date: '2025-10-28',
+    date: '2025-10-29',
     readTime: '9 min',
     metaDescription:
       'Aprende cómo los restaurantes y negocios de hostelería pueden usar testimonios para atraer más clientes y reservas. Estrategias prácticas y ejemplos reales.',
@@ -1486,7 +1486,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios Google',
       'rich snippets testimonios',
     ],
-    date: '2025-10-31',
+    date: '2025-10-30',
     readTime: '9 min',
     metaDescription:
       'Aprende cómo los testimonios de clientes impactan positivamente en tu SEO. Desde contenido fresco hasta rich snippets, descubre las conexiones entre prueba social y posicionamiento.',
@@ -1555,7 +1555,7 @@ export const blogArticles: BlogArticle[] = [
       'automatización opiniones',
       'flujos automáticos testimonios',
     ],
-    date: '2025-11-01',
+    date: '2025-10-31',
     readTime: '9 min',
     metaDescription:
       'Descubre cómo automatizar la recopilación de testimonios en tu negocio. Guía paso a paso para crear flujos automáticos que generan testimonios sin esfuerzo manual.',
@@ -1783,7 +1783,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social inmobiliaria',
       'testimonios sector inmobiliario',
     ],
-    date: '2025-11-03',
+    date: '2025-11-04',
     readTime: '9 min',
     metaDescription:
       'Aprende cómo los agentes inmobiliarios e inmobiliarias pueden usar testimonios para generar confianza, conseguir más mandatos y cerrar más operaciones.',
@@ -1999,7 +1999,7 @@ export const blogArticles: BlogArticle[] = [
       'caso éxito testimonios',
       'conversiones tienda online',
     ],
-    date: '2025-11-06',
+    date: '2025-11-05',
     readTime: '10 min',
     metaDescription:
       'Caso de estudio real: descubre paso a paso cómo una tienda online aumentó sus conversiones un 47% implementando una estrategia de testimonios con Opinafy.',
@@ -2078,7 +2078,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios agencia publicidad',
       'marketing agencias clientes',
     ],
-    date: '2025-11-07',
+    date: '2025-11-06',
     readTime: '10 min',
     metaDescription:
       'Guía definitiva de testimonios para agencias de marketing. Aprende a recopilar y mostrar testimonios que demuestren tus resultados y atraigan clientes de mayor valor.',
@@ -2151,7 +2151,7 @@ export const blogArticles: BlogArticle[] = [
       'digitalizar opiniones',
       'reseñas tiendas',
     ],
-    date: '2025-11-08',
+    date: '2025-11-07',
     readTime: '10 min',
     metaDescription:
       'Guía completa para digitalizar las opiniones de clientes en tiendas físicas y negocios locales. Estrategias prácticas para recopilar y mostrar testimonios que atraigan más clientes.',
@@ -2244,7 +2244,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios Facebook',
       'marketing redes sociales testimonios',
     ],
-    date: '2025-11-09',
+    date: '2025-11-07',
     readTime: '10 min',
     metaDescription:
       'Aprende a usar testimonios de clientes en Instagram, Facebook, LinkedIn y TikTok para atraer clientes. Estrategias prácticas con ejemplos y formatos para cada plataforma.',
@@ -2324,7 +2324,7 @@ export const blogArticles: BlogArticle[] = [
       'ventas entre empresas',
       'casos de éxito empresarial',
     ],
-    date: '2025-11-10',
+    date: '2025-11-08',
     readTime: '11 min',
     metaDescription:
       'Aprende a recopilar y usar testimonios B2B para cerrar más ventas entre empresas. Estrategias específicas para referencias empresariales, casos de éxito y prueba social corporativa.',
@@ -2412,7 +2412,7 @@ export const blogArticles: BlogArticle[] = [
       'estructura landing page',
       'optimización conversión',
     ],
-    date: '2025-11-11',
+    date: '2025-11-10',
     readTime: '10 min',
     metaDescription:
       'Guía completa para crear landing pages con testimonios que convierten. Estructura, posicionamiento, tipos de testimonios y ejemplos prácticos para maximizar tus conversiones.',
@@ -2497,7 +2497,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios centros formación',
       'prueba social educación',
     ],
-    date: '2025-11-12',
+    date: '2025-11-10',
     readTime: '10 min',
     metaDescription:
       'Aprende a usar testimonios de alumnos para atraer más matrículas en tu academia o centro de formación online. Estrategias específicas para el sector educativo.',
@@ -2579,7 +2579,7 @@ export const blogArticles: BlogArticle[] = [
       'métricas prueba social',
       'retorno inversión opiniones',
     ],
-    date: '2025-11-13',
+    date: '2025-11-11',
     readTime: '10 min',
     metaDescription:
       'Guía para medir el ROI de los testimonios en tu negocio. Métricas clave, herramientas de medición y metodologías prácticas para cuantificar el impacto de las opiniones de clientes.',
@@ -2672,7 +2672,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social bodas',
       'marketing fotógrafo bodas',
     ],
-    date: '2025-11-14',
+    date: '2025-11-12',
     readTime: '10 min',
     metaDescription:
       'Aprende a recopilar y usar testimonios de parejas para conseguir más contratos como fotógrafo o videógrafo de bodas. Estrategias específicas para el sector nupcial.',
@@ -2759,7 +2759,7 @@ export const blogArticles: BlogArticle[] = [
       'marketing UGC',
       'prueba social contenido',
     ],
-    date: '2025-11-15',
+    date: '2025-11-12',
     readTime: '10 min',
     metaDescription:
       'Aprende cómo el contenido generado por usuarios (UGC) y los testimonios impulsan las ventas. Estrategias para recopilar, gestionar y aprovechar el contenido de tus clientes.',
@@ -2835,7 +2835,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social veterinaria',
       'marketing veterinario',
     ],
-    date: '2025-11-16',
+    date: '2025-11-13',
     readTime: '10 min',
     metaDescription:
       'Aprende a recopilar y mostrar testimonios de dueños de mascotas para atraer más clientes a tu veterinaria. Estrategias específicas para clínicas veterinarias y servicios para mascotas.',
@@ -2916,7 +2916,7 @@ export const blogArticles: BlogArticle[] = [
       'confianza web',
       'sellos seguridad tienda online',
     ],
-    date: '2025-11-17',
+    date: '2025-11-14',
     readTime: '10 min',
     metaDescription:
       'Aprende a usar badges de confianza y sellos en tu web para aumentar conversiones. Tipos de sellos, ubicación óptima y cómo combinarlos con testimonios para máximo impacto.',
@@ -2996,7 +2996,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social fitness',
       'marketing gimnasio',
     ],
-    date: '2025-11-18',
+    date: '2025-11-17',
     readTime: '10 min',
     metaDescription:
       'Aprende a recopilar y usar testimonios de socios para atraer nuevos miembros a tu gimnasio o centro de fitness. Estrategias específicas para el sector deportivo.',
@@ -3072,7 +3072,7 @@ export const blogArticles: BlogArticle[] = [
       'conversión email marketing',
       'newsletters testimonios',
     ],
-    date: '2025-11-19',
+    date: '2025-11-17',
     readTime: '10 min',
     metaDescription:
       'Guía para incluir testimonios en tu estrategia de email marketing. Formatos, secuencias, automatizaciones y técnicas para aumentar conversiones con prueba social en tus emails.',
@@ -3157,7 +3157,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social dentista',
       'marketing dental',
     ],
-    date: '2025-11-20',
+    date: '2025-11-18',
     readTime: '10 min',
     metaDescription:
       'Aprende a usar testimonios de pacientes para atraer más consultas a tu clínica dental. Estrategias específicas para dentistas y odontólogos, incluyendo aspectos legales y éticos.',
@@ -3234,7 +3234,7 @@ export const blogArticles: BlogArticle[] = [
       'copywriting testimonios',
       'testimonios persuasivos',
     ],
-    date: '2025-11-21',
+    date: '2025-11-18',
     readTime: '11 min',
     metaDescription:
       'Guía para aplicar storytelling a los testimonios de clientes. Transforma opiniones en historias que conectan emocionalmente y venden. Técnicas de narrativa para prueba social.',
@@ -3325,7 +3325,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social peluquería',
       'marketing estética',
     ],
-    date: '2025-11-22',
+    date: '2025-11-19',
     readTime: '10 min',
     metaDescription:
       'Aprende a usar testimonios de clientes para atraer más visitas a tu peluquería o centro de estética. Estrategias específicas para el sector de la belleza y el cuidado personal.',
@@ -3409,7 +3409,7 @@ export const blogArticles: BlogArticle[] = [
       'widget testimonios WordPress',
       'opiniones clientes WordPress',
     ],
-    date: '2025-11-23',
+    date: '2025-11-19',
     readTime: '12 min',
     metaDescription:
       'Guía paso a paso para integrar testimonios de clientes en WordPress. Descubre plugins, widgets y el método más sencillo con Opinafy para mostrar opiniones en tu web.',
@@ -3489,7 +3489,7 @@ export const blogArticles: BlogArticle[] = [
       'reseñas Shopify',
       'testimonios tienda online',
     ],
-    date: '2025-11-24',
+    date: '2025-11-20',
     readTime: '12 min',
     metaDescription:
       'Descubre cómo añadir testimonios de clientes en tu tienda Shopify para aumentar la confianza y las ventas. Guía paso a paso con estrategias de prueba social para ecommerce.',
@@ -3578,7 +3578,7 @@ export const blogArticles: BlogArticle[] = [
       'embajadores marca',
       'métricas satisfacción',
     ],
-    date: '2025-11-25',
+    date: '2025-11-20',
     readTime: '11 min',
     metaDescription:
       'Aprende a conectar tu estrategia de NPS con la recopilación de testimonios. Convierte promotores en embajadores de marca y multiplica tu prueba social con Opinafy.',
@@ -3656,7 +3656,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social turismo',
       'reservas directas testimonios',
     ],
-    date: '2025-11-26',
+    date: '2025-11-21',
     readTime: '12 min',
     metaDescription:
       'Aprende a usar testimonios de clientes para aumentar las reservas directas de tu hotel o alojamiento turístico. Estrategias específicas para el sector hotelero y turístico.',
@@ -3736,7 +3736,7 @@ export const blogArticles: BlogArticle[] = [
       'UI testimonios',
       'diseño prueba social',
     ],
-    date: '2025-11-27',
+    date: '2025-11-21',
     readTime: '13 min',
     metaDescription:
       'Guía visual con 15 ejemplos de diseño de tarjetas de testimonios para tu web. Aprende principios de diseño que hacen los testimonios más atractivos, creíbles y efectivos.',
@@ -3832,7 +3832,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social apps',
       'ratings aplicaciones',
     ],
-    date: '2025-11-28',
+    date: '2025-11-24',
     readTime: '11 min',
     metaDescription:
       'Aprende a conseguir más y mejores testimonios para tu app móvil. Estrategias para aumentar valoraciones en App Store y Google Play, y cómo usar la prueba social para crecer.',
@@ -3919,7 +3919,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social contabilidad',
       'marketing asesorías',
     ],
-    date: '2025-11-29',
+    date: '2025-11-24',
     readTime: '11 min',
     metaDescription:
       'Aprende a usar testimonios de clientes para atraer más clientes a tu despacho de contabilidad o asesoría fiscal. Estrategias específicas para profesionales del sector fiscal.',
@@ -4004,7 +4004,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios automatizados',
       'futuro testimonios IA',
     ],
-    date: '2025-11-30',
+    date: '2025-11-26',
     readTime: '12 min',
     metaDescription:
       'Explora cómo la inteligencia artificial está transformando la forma en que las empresas recopilan, analizan y utilizan testimonios de clientes. Tendencias y estrategias para 2026.',
@@ -4088,7 +4088,7 @@ export const blogArticles: BlogArticle[] = [
       'social proof early stage',
       'startups primeras opiniones',
     ],
-    date: '2025-12-01',
+    date: '2025-11-27',
     readTime: '11 min',
     metaDescription:
       'Aprende a conseguir testimonios para tu startup aunque tengas pocos clientes. Estrategias creativas y prácticas para construir prueba social desde la fase más temprana.',
@@ -4163,7 +4163,7 @@ export const blogArticles: BlogArticle[] = [
       'estrategias prueba social',
       'social proof marketing',
     ],
-    date: '2025-12-02',
+    date: '2025-11-28',
     readTime: '14 min',
     metaDescription:
       'La guía definitiva del social proof en 2026. Tendencias, estrategias y herramientas para implementar una estrategia de prueba social integral que multiplique tus conversiones.',
@@ -4255,7 +4255,7 @@ export const blogArticles: BlogArticle[] = [
       'estructura testimonios web',
       'página reseñas clientes',
     ],
-    date: '2025-12-03',
+    date: '2025-11-28',
     readTime: '10 min',
     metaDescription:
       'Guía completa para crear una página de testimonios perfecta para tu web. Diseño, estructura, SEO y mejores prácticas para convertir visitantes en clientes.',
@@ -4346,7 +4346,7 @@ export const blogArticles: BlogArticle[] = [
       'reseñas trabajadores independientes',
       'portfolio testimonios',
     ],
-    date: '2025-12-04',
+    date: '2025-12-01',
     readTime: '10 min',
     metaDescription:
       'Guía completa de testimonios para freelancers y autónomos. Aprende a recopilar, gestionar y mostrar opiniones que te diferencien de la competencia.',
@@ -4421,7 +4421,7 @@ export const blogArticles: BlogArticle[] = [
       'WhatsApp Business reseñas',
       'canal testimonios clientes',
     ],
-    date: '2025-12-05',
+    date: '2025-12-02',
     readTime: '9 min',
     metaDescription:
       'Guía práctica para usar WhatsApp como canal de recopilación de testimonios. Plantillas de mensajes, mejores prácticas y automatización.',
@@ -4502,7 +4502,7 @@ export const blogArticles: BlogArticle[] = [
       'Google Business Profile',
       'reseñas locales negocio',
     ],
-    date: '2025-12-06',
+    date: '2025-12-03',
     readTime: '10 min',
     metaDescription:
       'Descubre cómo combinar testimonios en tu web con reseñas en Google My Business para crear una estrategia de prueba social completa y efectiva.',
@@ -4577,7 +4577,7 @@ export const blogArticles: BlogArticle[] = [
       'mejorar recopilación opiniones',
       'estrategias recopilar testimonios',
     ],
-    date: '2025-12-07',
+    date: '2025-12-04',
     readTime: '11 min',
     metaDescription:
       'Aprende 10 trucos probados para aumentar la tasa de respuesta de tus solicitudes de testimonios hasta el 60%. Estrategias prácticas y aplicables hoy.',
@@ -4670,7 +4670,7 @@ export const blogArticles: BlogArticle[] = [
       'storytelling testimonios',
       'casos éxito antes después',
     ],
-    date: '2025-12-08',
+    date: '2025-12-04',
     readTime: '10 min',
     metaDescription:
       'Guía completa sobre testimonios antes y después. Aprende a usar el formato más persuasivo para mostrar la transformación real de tus clientes.',
@@ -4748,7 +4748,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios bootcamps',
       'prueba social educación',
     ],
-    date: '2025-12-09',
+    date: '2025-12-05',
     readTime: '10 min',
     metaDescription:
       'Guía completa de testimonios para el sector educativo: universidades, cursos online, bootcamps y academias. Estrategias para convertir alumnos en embajadores.',
@@ -4828,7 +4828,7 @@ export const blogArticles: BlogArticle[] = [
       'consentimiento testimonios',
       'legalidad testimonios España',
     ],
-    date: '2025-12-10',
+    date: '2025-12-05',
     readTime: '11 min',
     metaDescription:
       'Guía legal completa sobre RGPD y testimonios en España. Consentimiento, derechos ARCO, almacenamiento y publicación de opiniones de clientes conforme a la ley.',
@@ -4913,7 +4913,7 @@ export const blogArticles: BlogArticle[] = [
       'marketing influencia testimonios',
       'prueba social influencers',
     ],
-    date: '2025-12-11',
+    date: '2025-12-06',
     readTime: '10 min',
     metaDescription:
       'Guía para conseguir testimonios de influencers y microinfluencers. Estrategias de acercamiento, formatos efectivos y cómo maximizar el impacto.',
@@ -4989,7 +4989,7 @@ export const blogArticles: BlogArticle[] = [
       'tasa respuesta formularios',
       'UX formularios testimonios',
     ],
-    date: '2025-12-12',
+    date: '2025-12-08',
     readTime: '10 min',
     metaDescription:
       'Guía completa para optimizar formularios de testimonios. Diseño, preguntas, UX y estrategias para maximizar respuestas y calidad.',
@@ -5071,7 +5071,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social inmobiliaria',
       'testimonios compradores vivienda',
     ],
-    date: '2025-12-12',
+    date: '2025-12-10',
     readTime: '10 min',
     metaDescription:
       'Guía de testimonios para el sector inmobiliario de lujo. Estrategias para generar confianza en transacciones de alto valor con opiniones de clientes.',
@@ -5146,7 +5146,7 @@ export const blogArticles: BlogArticle[] = [
       'motivación testimonios',
       'programa recompensas reseñas',
     ],
-    date: '2025-12-13',
+    date: '2025-12-10',
     readTime: '10 min',
     metaDescription:
       'Guía de gamificación para recopilar testimonios. Técnicas de recompensa, programas de puntos y estrategias que aumentan la participación manteniendo la autenticidad.',
@@ -5221,7 +5221,7 @@ export const blogArticles: BlogArticle[] = [
       'opiniones despacho profesional',
       'cerrar contratos testimonios',
     ],
-    date: '2025-12-14',
+    date: '2025-12-11',
     readTime: '10 min',
     metaDescription:
       'Guía de testimonios para servicios profesionales B2B. Estrategias para despachos, consultoras y agencias que quieren cerrar más contratos con prueba social.',
@@ -5299,7 +5299,7 @@ export const blogArticles: BlogArticle[] = [
       'analítica testimonios',
       'minería opiniones',
     ],
-    date: '2025-12-15',
+    date: '2025-12-11',
     readTime: '10 min',
     metaDescription:
       'Guía sobre análisis de sentimiento en testimonios. Aprende a extraer insights, identificar tendencias y tomar decisiones basadas en la voz del cliente.',
@@ -5376,7 +5376,7 @@ export const blogArticles: BlogArticle[] = [
       'confianza marketplace',
       'valoraciones plataforma',
     ],
-    date: '2025-12-16',
+    date: '2025-12-12',
     readTime: '10 min',
     metaDescription:
       'Guía técnica de testimonios para marketplaces y plataformas digitales. Arquitectura, moderación, verificación y mejores prácticas.',
@@ -5453,7 +5453,7 @@ export const blogArticles: BlogArticle[] = [
       'advocacy marketing',
       'clientes embajadores',
     ],
-    date: '2025-12-17',
+    date: '2025-12-15',
     readTime: '10 min',
     metaDescription:
       'Guía para crear un programa de embajadores de marca basado en testimonios. Selección, activación, beneficios y gestión de tu comunidad de embajadores.',
@@ -5532,7 +5532,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios experiencias turísticas',
       'prueba social turismo',
     ],
-    date: '2025-12-18',
+    date: '2025-12-16',
     readTime: '10 min',
     metaDescription:
       'Guía de testimonios para el sector turismo. Estrategias para hoteles, tours y experiencias que quieren convertir viajeros satisfechos en embajadores.',
@@ -5606,7 +5606,7 @@ export const blogArticles: BlogArticle[] = [
       'test testimonios web',
       'experimentación prueba social',
     ],
-    date: '2025-12-19',
+    date: '2025-12-17',
     readTime: '10 min',
     metaDescription:
       'Guía práctica de A/B testing con testimonios. Aprende qué testear, cómo diseñar experimentos y cómo interpretar resultados para optimizar conversiones.',
@@ -5688,7 +5688,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios seguros',
       'compliance testimonios finanzas',
     ],
-    date: '2025-12-20',
+    date: '2025-12-18',
     readTime: '10 min',
     metaDescription:
       'Guía de testimonios para el sector financiero. Compliance, regulación, estrategias y mejores prácticas para banca, fintech y servicios financieros.',
@@ -5759,7 +5759,7 @@ export const blogArticles: BlogArticle[] = [
       'workflow testimonios',
       'integración Zapier testimonios',
     ],
-    date: '2025-12-21',
+    date: '2025-12-18',
     readTime: '10 min',
     metaDescription:
       'Guía técnica para integrar testimonios con tu CRM. Automatización, triggers, segmentación y flujos de trabajo para maximizar la recopilación.',
@@ -5838,7 +5838,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social eventos',
       'testimonios asistentes',
     ],
-    date: '2025-12-22',
+    date: '2025-12-19',
     readTime: '10 min',
     metaDescription:
       'Guía de testimonios para eventos y conferencias. Estrategias para recopilar opiniones de asistentes y usarlas para vender futuras ediciones.',
@@ -5918,7 +5918,7 @@ export const blogArticles: BlogArticle[] = [
       'copywriting testimonios',
       'textos solicitud reseñas',
     ],
-    date: '2025-12-23',
+    date: '2025-12-22',
     readTime: '9 min',
     metaDescription:
       'Guía de microcopy para testimonios. Aprende a escribir los textos de formularios, emails y solicitudes que maximizan las respuestas de tus clientes.',
@@ -6003,7 +6003,7 @@ export const blogArticles: BlogArticle[] = [
       'valoraciones repartidores',
       'prueba social delivery',
     ],
-    date: '2025-12-24',
+    date: '2025-12-22',
     readTime: '9 min',
     metaDescription:
       'Guía de testimonios para apps de delivery y servicios a domicilio. Estrategias de valoración, gestión de experiencia y diferenciación competitiva.',
@@ -6071,7 +6071,7 @@ export const blogArticles: BlogArticle[] = [
       'construir credibilidad',
       'primeros testimonios negocio',
     ],
-    date: '2025-12-25',
+    date: '2025-12-23',
     readTime: '10 min',
     metaDescription:
       'Guía para construir confianza cuando lanzas una marca nueva. Estrategias de testimonios para startups y negocios que empiezan desde cero.',
@@ -6140,7 +6140,7 @@ export const blogArticles: BlogArticle[] = [
       'ética testimonios abogados',
       'marketing legal testimonios',
     ],
-    date: '2025-12-26',
+    date: '2025-12-23',
     readTime: '10 min',
     metaDescription:
       'Guía de testimonios para el sector legal. Ética profesional, normativa deontológica y estrategias para despachos de abogados y profesionales del derecho.',
@@ -6206,7 +6206,7 @@ export const blogArticles: BlogArticle[] = [
       'customización testimonios',
       'branding widgets reseñas',
     ],
-    date: '2025-12-27',
+    date: '2025-12-24',
     readTime: '9 min',
     metaDescription:
       'Guía completa de personalización de widgets de testimonios. Colores, tipografía, layouts y branding para una integración perfecta con tu web.',
@@ -6280,7 +6280,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social coworking',
       'testimonios miembros coworking',
     ],
-    date: '2025-12-28',
+    date: '2025-12-24',
     readTime: '9 min',
     metaDescription:
       'Guía de testimonios para centros de coworking. Estrategias para convertir miembros satisfechos en embajadores que atraigan nuevos profesionales.',
@@ -6344,7 +6344,7 @@ export const blogArticles: BlogArticle[] = [
       'user generated content',
       'marketing contenido opiniones',
     ],
-    date: '2025-12-29',
+    date: '2025-12-25',
     readTime: '10 min',
     metaDescription:
       'Guía para crear una estrategia de contenido basada en testimonios. Transforma las voces de tus clientes en contenido persuasivo para todos tus canales.',
@@ -6412,7 +6412,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social alimentación',
       'testimonios tienda gourmet',
     ],
-    date: '2025-12-30',
+    date: '2025-12-26',
     readTime: '9 min',
     metaDescription:
       'Guía de testimonios para marcas de alimentación y productos gourmet. Estrategias para generar confianza y diferenciación con opiniones de clientes.',
@@ -6471,7 +6471,7 @@ export const blogArticles: BlogArticle[] = [
       'blockchain reseñas',
       'innovación testimonios',
     ],
-    date: '2025-12-31',
+    date: '2025-12-26',
     readTime: '11 min',
     metaDescription:
       'Descubre las tendencias que definirán el futuro de los testimonios en 2027. IA generativa, verificación blockchain, personalización avanzada y más.',
@@ -6547,7 +6547,7 @@ export const blogArticles: BlogArticle[] = [
       'mejor plataforma reseñas',
       'software testimonios',
     ],
-    date: '2026-01-01',
+    date: '2025-12-29',
     readTime: '12 min',
     metaDescription:
       'Aprende a elegir la mejor plataforma de testimonios para tu negocio. Comparativa de funcionalidades, precios y criterios clave para tomar la decisión correcta.',
@@ -6608,7 +6608,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social conversión',
       'testimonios CRO',
     ],
-    date: '2026-01-02',
+    date: '2025-12-31',
     readTime: '11 min',
     metaDescription:
       'Aprende cómo los testimonios pueden aumentar la conversión de tu landing page hasta un 270%. Técnicas, posiciones óptimas y ejemplos reales.',
@@ -6673,7 +6673,7 @@ export const blogArticles: BlogArticle[] = [
       'confianza reseñas',
       'reseñas falsas',
     ],
-    date: '2026-01-03',
+    date: '2026-01-02',
     readTime: '10 min',
     metaDescription:
       'Guía completa sobre reseñas verificadas: qué son, por qué son esenciales y cómo implementar verificación en tus testimonios para máxima credibilidad.',
@@ -6733,7 +6733,7 @@ export const blogArticles: BlogArticle[] = [
       'prueba social redes',
       'estrategia testimonios social media',
     ],
-    date: '2026-01-04',
+    date: '2026-01-05',
     readTime: '11 min',
     metaDescription:
       'Estrategia completa de testimonios en redes sociales. Aprende a amplificar tu prueba social en Instagram, LinkedIn, Facebook y TikTok con técnicas probadas.',
@@ -6912,7 +6912,7 @@ export const blogArticles: BlogArticle[] = [
       'flujo automatización reseñas',
       'pedir testimonios',
     ],
-    date: '2026-01-07',
+    date: '2026-01-06',
     readTime: '10 min',
     metaDescription:
       'Guía para automatizar la solicitud de testimonios a tus clientes. Timing perfecto, emails efectivos y flujos que maximizan respuestas sin molestar.',
@@ -6979,7 +6979,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios con imagen',
       'confianza testimonios foto',
     ],
-    date: '2026-01-08',
+    date: '2026-01-07',
     readTime: '9 min',
     metaDescription:
       'Los testimonios con foto generan un 35% más de confianza. Aprende a recopilar fotos de clientes de forma natural y a presentarlas para máximo impacto.',
@@ -7037,7 +7037,7 @@ export const blogArticles: BlogArticle[] = [
       'freelance testimonios',
       'portafolio testimonios',
     ],
-    date: '2026-01-09',
+    date: '2026-01-07',
     readTime: '10 min',
     metaDescription:
       'Cómo un mini sitio de testimonios ayuda a profesionales independientes y freelancers a cerrar más ventas. Guía completa con ejemplos y estrategias.',
@@ -7096,7 +7096,7 @@ export const blogArticles: BlogArticle[] = [
       'verificación reseñas',
       'comparativa testimonios',
     ],
-    date: '2026-01-10',
+    date: '2026-01-08',
     readTime: '10 min',
     metaDescription:
       'Comparativa entre testimonios verificados y anónimos. Descubre cuál genera más confianza, mejores conversiones y cuándo usar cada tipo.',
@@ -7154,7 +7154,7 @@ export const blogArticles: BlogArticle[] = [
       'FOMO marketing',
       'popup conversión testimonios',
     ],
-    date: '2026-01-11',
+    date: '2026-01-08',
     readTime: '10 min',
     metaDescription:
       'Los popups FOMO con testimonios pueden aumentar las conversiones hasta un 30%. Aprende a implementarlos correctamente sin molestar a tus visitantes.',
@@ -7217,7 +7217,7 @@ export const blogArticles: BlogArticle[] = [
       'widget reseñas Google',
       'integrar Google Reviews',
     ],
-    date: '2026-01-12',
+    date: '2026-01-09',
     readTime: '9 min',
     metaDescription:
       'Aprende a importar y mostrar tus reseñas de Google Business en tu web. Centraliza tu prueba social de Google para máximo impacto en conversiones.',
@@ -7273,7 +7273,7 @@ export const blogArticles: BlogArticle[] = [
       'formato audio reseñas',
       'tendencias testimonios',
     ],
-    date: '2026-01-13',
+    date: '2026-01-12',
     readTime: '9 min',
     metaDescription:
       'Los testimonios en audio son la tendencia emergente que combina autenticidad vocal con facilidad de creación. Aprende a implementarlos en tu estrategia.',
@@ -7334,7 +7334,7 @@ export const blogArticles: BlogArticle[] = [
       'experimentación testimonios',
       'CRO testimonios',
     ],
-    date: '2026-01-14',
+    date: '2026-01-12',
     readTime: '11 min',
     metaDescription:
       'Guía práctica de A/B testing con testimonios. Aprende qué variables probar, cómo medir resultados y cómo optimizar tus testimonios para máxima conversión.',
@@ -7393,7 +7393,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios yoga',
       'prueba social bienestar',
     ],
-    date: '2026-01-15',
+    date: '2026-01-13',
     readTime: '10 min',
     metaDescription:
       'Guía de testimonios para spas, centros wellness, yoga y meditación. Estrategias adaptadas al sector del bienestar holístico.',
@@ -7447,7 +7447,7 @@ export const blogArticles: BlogArticle[] = [
       'automatización testimonios',
       'integración testimonios API',
     ],
-    date: '2026-01-16',
+    date: '2026-01-14',
     readTime: '11 min',
     metaDescription:
       'Aprende a usar webhooks para conectar tu plataforma de testimonios con Zapier, Make y más. Automatiza flujos de trabajo con testimonios en tiempo real.',
@@ -7509,7 +7509,7 @@ export const blogArticles: BlogArticle[] = [
       'engagement testimonios',
       'respuestas profesionales reseñas',
     ],
-    date: '2026-01-17',
+    date: '2026-01-15',
     readTime: '10 min',
     metaDescription:
       'Aprende a responder testimonios públicamente de forma profesional. Técnicas para responder testimonios positivos y negativos que generan más confianza.',
@@ -7573,7 +7573,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios en cámara',
       'autenticidad vídeo testimonios',
     ],
-    date: '2026-01-18',
+    date: '2026-01-16',
     readTime: '11 min',
     metaDescription:
       'Los testimonios en vídeo por webcam combinan autenticidad máxima con facilidad de creación. Guía completa para recopilarlos y presentarlos profesionalmente.',
@@ -7758,7 +7758,7 @@ export const blogArticles: BlogArticle[] = [
       'analítica testimonios',
       'datos testimonios',
     ],
-    date: '2026-01-20',
+    date: '2026-01-21',
     readTime: '11 min',
     metaDescription:
       'Aprende a aplicar análisis de sentimiento a tus testimonios para extraer insights de negocio. Detecta tendencias, problemas y oportunidades automáticamente.',
@@ -7935,7 +7935,7 @@ export const blogArticles: BlogArticle[] = [
       'layout testimonios web',
       'diseño widget testimonios',
     ],
-    date: '2026-01-23',
+    date: '2026-01-26',
     readTime: '10 min',
     metaDescription:
       'Explora 65 plantillas de testimonios y aprende a elegir la perfecta para tu negocio. Guía de diseño, layout y formato para máximo impacto.',
@@ -7997,7 +7997,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios empresariales verificados',
       'autenticidad B2B',
     ],
-    date: '2026-01-24',
+    date: '2026-01-26',
     readTime: '10 min',
     metaDescription:
       'Cómo funciona la verificación automática de empresa en testimonios B2B. Técnicas de verificación de dominio, LinkedIn y datos corporativos.',
@@ -8057,7 +8057,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios bootcamp',
       'prueba social cursos online',
     ],
-    date: '2026-01-25',
+    date: '2026-01-27',
     readTime: '10 min',
     metaDescription:
       'Guía de testimonios para educación online y cursos digitales. Estrategias que maximizan matriculaciones y demuestran resultados de aprendizaje.',
@@ -8116,7 +8116,7 @@ export const blogArticles: BlogArticle[] = [
       'materiales venta testimonios',
       'propuestas comerciales testimonios',
     ],
-    date: '2026-01-26',
+    date: '2026-01-28',
     readTime: '9 min',
     metaDescription:
       'Exporta tus testimonios a PDF profesional para presentaciones comerciales y propuestas de venta. Guía con mejores prácticas y diseños recomendados.',
@@ -8174,7 +8174,7 @@ export const blogArticles: BlogArticle[] = [
       'testimonios globales',
       'traducción testimonios',
     ],
-    date: '2026-01-27',
+    date: '2026-01-29',
     readTime: '10 min',
     metaDescription:
       'Gestiona testimonios en múltiples idiomas para tu negocio global. Estrategias de recopilación multilingüe, traducción y presentación internacional.',
@@ -8234,7 +8234,7 @@ export const blogArticles: BlogArticle[] = [
       'Slack testimonios',
       'notificaciones reseñas',
     ],
-    date: '2026-01-28',
+    date: '2026-01-29',
     readTime: '9 min',
     metaDescription:
       'Configura notificaciones en tiempo real para nuevos testimonios. Integra con Slack, email, webhooks y herramientas de automatización.',
@@ -8299,7 +8299,7 @@ export const blogArticles: BlogArticle[] = [
       'métricas testimonios',
       'calcular ROI reseñas',
     ],
-    date: '2026-01-29',
+    date: '2026-01-30',
     readTime: '11 min',
     metaDescription:
       'Calcula el ROI real de tus testimonios con métricas concretas. Aprende a medir el impacto en conversiones, ventas y retención de clientes.',
@@ -8497,7 +8497,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre estrategias para recopilar testimonios de clientes que han realizado mudanzas internacionales y cómo usarlos para generar confianza en el servicio global.",
     category: 'Industrias',
     keywords: ["testimonios mudanzas internacionales","opiniones empresa mudanzas","reseñas mudanza internacional","marketing mudanzas"],
-    date: '2026-02-01',
+    date: '2026-02-02',
     readTime: '11 min',
     metaDescription: "Cómo empresas de mudanzas internacionales pueden recopilar y usar testimonios para convencer a clientes que planifican mudanzas globales.",
     content: `
@@ -8567,7 +8567,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende cómo los asesores inmobiliarios independientes pueden construir una reputación sólida usando testimonios de compradores y vendedores satisfechos.",
     category: 'Industrias',
     keywords: ["testimonios inmobiliarios","opiniones asesor inmobiliario","reseñas agente inmobiliario","marketing inmobiliario"],
-    date: '2026-02-02',
+    date: '2026-02-03',
     readTime: '10 min',
     metaDescription: "Cómo los asesores inmobiliarios independientes pueden usar testimonios de clientes para diferenciarse y conseguir más propiedades y compradores.",
     content: `
@@ -8637,7 +8637,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo los centros de fisioterapia animal pueden usar testimonios con historias de recuperación para atraer dueños de mascotas con problemas de movilidad.",
     category: 'Industrias',
     keywords: ["testimonios fisioterapia animal","opiniones rehabilitación mascotas","reseñas fisio animal","marketing fisioterapia veterinaria"],
-    date: '2026-02-03',
+    date: '2026-02-04',
     readTime: '10 min',
     metaDescription: "Cómo los centros de fisioterapia animal pueden recopilar testimonios de recuperaciones exitosas para atraer más clientes con mascotas.",
     content: `
@@ -8917,7 +8917,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo las agencias de traducción pueden usar testimonios de clientes internacionales para demostrar la calidad y precisión de sus servicios lingüísticos.",
     category: 'Industrias',
     keywords: ["testimonios agencia traducción","opiniones traducción profesional","reseñas servicios lingüísticos","marketing traducción"],
-    date: '2026-02-07',
+    date: '2026-02-06',
     readTime: '10 min',
     metaDescription: "Cómo las agencias de traducción pueden recopilar y mostrar testimonios que demuestren la calidad de sus servicios lingüísticos profesionales.",
     content: `
@@ -8987,7 +8987,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende cómo las empresas de outsourcing pueden utilizar testimonios de clientes corporativos para demostrar resultados y cerrar contratos de mayor valor.",
     category: 'Industrias',
     keywords: ["testimonios outsourcing","opiniones empresa outsourcing","reseñas externalización","marketing outsourcing B2B"],
-    date: '2026-02-08',
+    date: '2026-02-09',
     readTime: '11 min',
     metaDescription: "Cómo las empresas de outsourcing pueden usar testimonios de clientes corporativos para cerrar contratos B2B de alto valor.",
     content: `
@@ -9207,7 +9207,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a crear una estrategia de testimonios que funcione en múltiples canales simultáneamente para maximizar el impacto de la prueba social.",
     category: 'Estrategia',
     keywords: ["estrategia testimonios multicanal","testimonios omnicanal","prueba social multicanal","marketing testimonios"],
-    date: '2026-02-11',
+    date: '2026-02-10',
     readTime: '12 min',
     metaDescription: "Cómo crear una estrategia de testimonios que funcione en web, email, redes sociales y más canales simultáneamente.",
     content: `
@@ -9282,7 +9282,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo integrar testimonios estratégicamente en tus secuencias de email marketing automatizadas para aumentar aperturas y conversiones.",
     category: 'Estrategia',
     keywords: ["testimonios email marketing","drip campaigns testimonios","email automatizado testimonios","secuencias email prueba social"],
-    date: '2026-02-12',
+    date: '2026-02-11',
     readTime: '11 min',
     metaDescription: "Guía paso a paso para integrar testimonios en campañas de email automatizadas y aumentar conversiones.",
     content: `
@@ -9357,7 +9357,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Técnicas psicológicas y prácticas para convencer a clientes reticentes a dejar testimonios, incluyendo B2B, servicios premium y clientes ocupados.",
     category: 'Conversión',
     keywords: ["conseguir testimonios clientes difíciles","pedir testimonios clientes","recopilar opiniones clientes reticentes","testimonios B2B"],
-    date: '2026-02-13',
+    date: '2026-02-12',
     readTime: '11 min',
     metaDescription: "Técnicas probadas para conseguir testimonios de clientes difíciles, ocupados o reticentes a dejar opiniones.",
     content: `
@@ -9432,7 +9432,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende las reglas especiales para manejar testimonios en marcas de lujo, donde la exclusividad y la discreción deben equilibrarse con la prueba social.",
     category: 'Estrategia',
     keywords: ["testimonios sector lujo","prueba social lujo","opiniones marcas premium","testimonios exclusivos"],
-    date: '2026-02-14',
+    date: '2026-02-12',
     readTime: '10 min',
     metaDescription: "Cómo manejar testimonios en el sector lujo equilibrando exclusividad, discreción y prueba social sofisticada.",
     content: `
@@ -9507,7 +9507,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo usar testimonios estratégicamente en páginas de comparativa de productos para inclinar la balanza a favor de tu solución.",
     category: 'Conversión',
     keywords: ["testimonios comparativas","testimonios vs competencia","prueba social comparativas","comparación productos testimonios"],
-    date: '2026-02-15',
+    date: '2026-02-13',
     readTime: '10 min',
     metaDescription: "Cómo usar testimonios en páginas de comparativa de productos para influir en la decisión de compra a tu favor.",
     content: `
@@ -9657,7 +9657,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a usar testimonios en campañas de retargeting para reconvertir visitantes que abandonaron tu web sin comprar.",
     category: 'Estrategia',
     keywords: ["testimonios retargeting","remarketing testimonios","recuperar clientes testimonios","retargeting prueba social"],
-    date: '2026-02-17',
+    date: '2026-02-16',
     readTime: '10 min',
     metaDescription: "Cómo usar testimonios en campañas de retargeting y remarketing para recuperar visitantes que no compraron.",
     content: `
@@ -9732,7 +9732,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo automatizar la recopilación, gestión y publicación de testimonios integrando Opinafy con tu CRM, HubSpot, Salesforce y más.",
     category: 'Estrategia',
     keywords: ["automatización testimonios CRM","HubSpot testimonios","integración CRM testimonios","Salesforce testimonios"],
-    date: '2026-02-18',
+    date: '2026-02-17',
     readTime: '12 min',
     metaDescription: "Guía completa para automatizar la gestión de testimonios integrando Opinafy con CRM como HubSpot y Salesforce.",
     content: `
@@ -9807,7 +9807,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Guía técnica completa sobre cómo usar la API de Opinafy para crear integraciones personalizadas de testimonios en cualquier plataforma.",
     category: 'Técnico',
     keywords: ["API testimonios","integración personalizada testimonios","API reseñas","desarrollo testimonios API"],
-    date: '2026-02-19',
+    date: '2026-02-17',
     readTime: '13 min',
     metaDescription: "Guía técnica para usar la API de testimonios de Opinafy y crear integraciones personalizadas en cualquier plataforma.",
     content: `
@@ -9882,7 +9882,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Entiende cómo la tecnología Shadow DOM permite mostrar widgets de testimonios sin conflictos CSS con tu sitio web existente.",
     category: 'Técnico',
     keywords: ["Shadow DOM testimonios","widget sin conflictos CSS","testimonios aislados CSS","Shadow DOM widget"],
-    date: '2026-02-20',
+    date: '2026-02-18',
     readTime: '11 min',
     metaDescription: "Cómo Shadow DOM permite integrar widgets de testimonios sin conflictos CSS con el diseño existente de tu web.",
     content: `
@@ -9957,7 +9957,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a integrar Google Fonts en widgets de testimonios para que la tipografía coincida perfectamente con la identidad visual de tu marca.",
     category: 'Técnico',
     keywords: ["Google Fonts testimonios","tipografía widgets","personalizar fuentes widget","Google Fonts widget testimonios"],
-    date: '2026-02-21',
+    date: '2026-02-18',
     readTime: '9 min',
     metaDescription: "Guía para integrar Google Fonts en widgets de testimonios y conseguir una personalización tipográfica perfecta.",
     content: `
@@ -10032,7 +10032,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre técnicas para optimizar el rendimiento de los widgets de testimonios y garantizar que no afecten la velocidad de carga de tu sitio web.",
     category: 'Técnico',
     keywords: ["rendimiento widget testimonios","optimizar velocidad widget","performance widget reseñas","Core Web Vitals testimonios"],
-    date: '2026-02-22',
+    date: '2026-02-19',
     readTime: '11 min',
     metaDescription: "Técnicas para optimizar el rendimiento de widgets de testimonios sin afectar la velocidad de tu web.",
     content: `
@@ -10107,7 +10107,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Guía técnica para desarrolladores sobre cómo integrar testimonios en aplicaciones Next.js y React, incluyendo SSR, SSG y componentes dinámicos.",
     category: 'Técnico',
     keywords: ["testimonios Next.js","React testimonios","widget Next.js React","integración testimonios framework"],
-    date: '2026-02-23',
+    date: '2026-02-19',
     readTime: '12 min',
     metaDescription: "Guía técnica completa para integrar testimonios en Next.js y React con SSR, SSG y componentes dinámicos.",
     content: `
@@ -10182,7 +10182,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo integrar testimonios con los principales headless CMS para gestión de contenidos flexible y escalable en cualquier frontend.",
     category: 'Técnico',
     keywords: ["testimonios headless CMS","Strapi testimonios","Sanity testimonios","Contentful testimonios"],
-    date: '2026-02-24',
+    date: '2026-02-20',
     readTime: '11 min',
     metaDescription: "Cómo integrar testimonios con headless CMS como Strapi, Sanity y Contentful para cualquier frontend.",
     content: `
@@ -10257,7 +10257,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a implementar schema markup para testimonios y conseguir rich snippets con estrellas en los resultados de Google para tu negocio.",
     category: 'Técnico',
     keywords: ["schema markup testimonios","SEO testimonios","rich snippets reseñas","schema.org testimonios"],
-    date: '2026-02-25',
+    date: '2026-02-23',
     readTime: '12 min',
     metaDescription: "Guía SEO definitiva para implementar schema markup en testimonios y conseguir rich snippets con estrellas en Google.",
     content: `
@@ -10332,7 +10332,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo integrar testimonios en PWAs con soporte offline, caching inteligente y experiencia nativa para usuarios móviles.",
     category: 'Técnico',
     keywords: ["testimonios PWA","Progressive Web App testimonios","testimonios offline","PWA reseñas"],
-    date: '2026-02-26',
+    date: '2026-02-25',
     readTime: '11 min',
     metaDescription: "Guía de implementación para integrar testimonios en Progressive Web Apps con soporte offline y caching.",
     content: `
@@ -10407,7 +10407,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a configurar CDN para servir widgets de testimonios con latencia mínima a usuarios de todo el mundo.",
     category: 'Técnico',
     keywords: ["CDN testimonios","velocidad widget testimonios","CDN widgets","optimización CDN reseñas"],
-    date: '2026-02-27',
+    date: '2026-02-26',
     readTime: '10 min',
     metaDescription: "Cómo configurar CDN para servir widgets de testimonios con máxima velocidad y mínima latencia global.",
     content: `
@@ -10482,7 +10482,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Metodología completa para hacer A/B testing de widgets de testimonios: qué probar, cómo medir y cómo iterar para maximizar conversiones.",
     category: 'Técnico',
     keywords: ["A/B testing testimonios","testing widgets testimonios","optimización testimonios testing","CRO testing reseñas"],
-    date: '2026-02-28',
+    date: '2026-02-26',
     readTime: '12 min',
     metaDescription: "Guía completa de A/B testing para widgets de testimonios: qué probar, cómo medir y cómo iterar.",
     content: `
@@ -10557,7 +10557,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre tácticas de growth hacking basadas en testimonios para escalar tu negocio rápidamente con bajo presupuesto.",
     category: 'Marketing',
     keywords: ["growth hacking testimonios","crecimiento rápido testimonios","tácticas growth testimonios","hack crecimiento reseñas"],
-    date: '2026-02-28',
+    date: '2026-02-27',
     readTime: '11 min',
     metaDescription: "Tácticas avanzadas de growth hacking basadas en testimonios para escalar tu negocio rápidamente.",
     content: `
@@ -10632,7 +10632,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a integrar testimonios en tu estrategia de inbound marketing para atraer clientes de forma orgánica y natural.",
     category: 'Marketing',
     keywords: ["testimonios inbound marketing","inbound testimonios","marketing atracción testimonios","contenido testimonios inbound"],
-    date: '2026-03-01',
+    date: '2026-02-27',
     readTime: '11 min',
     metaDescription: "Cómo integrar testimonios en tu estrategia de inbound marketing para atraer clientes de forma orgánica.",
     content: `
@@ -10857,7 +10857,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo usar testimonios en LinkedIn para generar leads B2B cualificados y construir autoridad profesional en tu sector.",
     category: 'Marketing',
     keywords: ["testimonios LinkedIn B2B","estrategia LinkedIn testimonios","leads B2B testimonios","LinkedIn prueba social"],
-    date: '2026-03-04',
+    date: '2026-03-03',
     readTime: '11 min',
     metaDescription: "Estrategia completa de testimonios en LinkedIn para generar leads B2B cualificados y construir autoridad.",
     content: `
@@ -10932,7 +10932,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a crear testimonios en formato corto para TikTok e Instagram Reels que capten la atención y generen conversiones rápidas.",
     category: 'Marketing',
     keywords: ["testimonios TikTok","testimonios Instagram Reels","video corto testimonios","formato corto prueba social"],
-    date: '2026-03-05',
+    date: '2026-03-04',
     readTime: '10 min',
     metaDescription: "Cómo crear testimonios en formato corto para TikTok e Instagram Reels que generen conversiones rápidas.",
     content: `
@@ -11007,7 +11007,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo crear y usar testimonios en vídeo para YouTube como parte de tu estrategia de marketing de contenidos visual.",
     category: 'Marketing',
     keywords: ["testimonios YouTube","vídeos testimonios YouTube","estrategia YouTube testimonios","marketing vídeo testimonios"],
-    date: '2026-03-06',
+    date: '2026-03-05',
     readTime: '11 min',
     metaDescription: "Cómo crear y usar testimonios en vídeo para YouTube como parte de tu estrategia de contenidos.",
     content: `
@@ -11082,7 +11082,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a usar testimonios para potenciar tu programa de afiliados y aumentar las conversiones de tus partners de referencia.",
     category: 'Marketing',
     keywords: ["testimonios marketing afiliados","afiliados testimonios","programa referidos testimonios","comisiones prueba social"],
-    date: '2026-03-07',
+    date: '2026-03-05',
     readTime: '10 min',
     metaDescription: "Cómo usar testimonios para potenciar tu programa de marketing de afiliados y aumentar conversiones.",
     content: `
@@ -11157,7 +11157,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo combinar testimonios de clientes reales con marketing de influencers para máxima autenticidad y conversión.",
     category: 'Marketing',
     keywords: ["testimonios influencer","influencer marketing testimonios","testimonios auténticos influencers","prueba social influencers"],
-    date: '2026-03-08',
+    date: '2026-03-06',
     readTime: '11 min',
     metaDescription: "Cómo combinar testimonios de clientes reales con influencer marketing para máxima autenticidad.",
     content: `
@@ -11232,7 +11232,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a crear un programa de referidos potenciado por testimonios que genere crecimiento viral orgánico para tu negocio.",
     category: 'Marketing',
     keywords: ["programa referidos testimonios","marketing referidos","crecimiento viral testimonios","referral marketing prueba social"],
-    date: '2026-03-09',
+    date: '2026-03-06',
     readTime: '11 min',
     metaDescription: "Cómo crear un programa de referidos potenciado por testimonios para crecimiento viral orgánico.",
     content: `
@@ -11307,7 +11307,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Explora cómo la inteligencia artificial está transformando la recopilación, análisis y presentación de testimonios en 2027.",
     category: 'Tendencias',
     keywords: ["IA testimonios","inteligencia artificial reseñas","testimonios 2027","futuro testimonios IA"],
-    date: '2026-03-10',
+    date: '2026-03-09',
     readTime: '12 min',
     metaDescription: "Cómo la inteligencia artificial transforma la gestión de testimonios en 2027: tendencias y oportunidades.",
     content: `
@@ -11382,7 +11382,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo la realidad aumentada está creando nuevas formas de mostrar testimonios interactivos e inmersivos a potenciales clientes.",
     category: 'Tendencias',
     keywords: ["testimonios realidad aumentada","AR testimonios","prueba social inmersiva","testimonios interactivos AR"],
-    date: '2026-03-11',
+    date: '2026-03-10',
     readTime: '11 min',
     metaDescription: "Cómo la realidad aumentada crea nuevas formas de mostrar testimonios inmersivos e interactivos.",
     content: `
@@ -11457,7 +11457,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Explora cómo la tecnología blockchain puede usarse para verificar la autenticidad de los testimonios y eliminar las reseñas falsas.",
     category: 'Tendencias',
     keywords: ["blockchain testimonios","verificación reseñas blockchain","testimonios verificados","autenticidad blockchain"],
-    date: '2026-03-12',
+    date: '2026-03-13',
     readTime: '11 min',
     metaDescription: "Cómo la tecnología blockchain puede verificar la autenticidad de testimonios y eliminar reseñas falsas.",
     content: `
@@ -11532,7 +11532,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a optimizar tus testimonios para búsquedas por voz con Alexa, Google Assistant y Siri para captar tráfico conversacional.",
     category: 'Tendencias',
     keywords: ["testimonios búsqueda voz","voice search testimonios","optimizar voz reseñas","Alexa Google testimonios"],
-    date: '2026-03-13',
+    date: '2026-03-16',
     readTime: '10 min',
     metaDescription: "Cómo optimizar testimonios para búsquedas por voz con Alexa, Google Assistant y Siri.",
     content: `
@@ -11607,7 +11607,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre cómo integrar testimonios en chatbots conversacionales para proporcionar prueba social contextual durante conversaciones de venta.",
     category: 'Tendencias',
     keywords: ["testimonios chatbot","chatbot conversacional testimonios","prueba social automatizada","bot testimonios"],
-    date: '2026-03-14',
+    date: '2026-03-17',
     readTime: '10 min',
     metaDescription: "Cómo integrar testimonios en chatbots conversacionales para prueba social automatizada en ventas.",
     content: `
@@ -11682,7 +11682,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Aprende a usar personalización dinámica para mostrar automáticamente los testimonios más relevantes según el perfil y comportamiento de cada visitante.",
     category: 'Tendencias',
     keywords: ["personalización testimonios","testimonios dinámicos","personalización dinámica prueba social","testimonios contextuales"],
-    date: '2026-03-15',
+    date: '2026-03-17',
     readTime: '11 min',
     metaDescription: "Cómo usar personalización dinámica para mostrar testimonios relevantes a cada visitante automáticamente.",
     content: `
@@ -11757,7 +11757,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre las métricas avanzadas de analytics para testimonios y cómo usar datos para optimizar continuamente tu estrategia de prueba social.",
     category: 'Tendencias',
     keywords: ["analytics testimonios","métricas testimonios","datos prueba social","analytics avanzado reseñas"],
-    date: '2026-03-16',
+    date: '2026-03-18',
     readTime: '12 min',
     metaDescription: "Métricas avanzadas de analytics para testimonios y cómo usarlas para optimizar tu estrategia de prueba social.",
     content: `
@@ -11832,7 +11832,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Todo lo que necesitas saber sobre las regulaciones legales de testimonios, RGPD, publicidad engañosa y mejores prácticas de compliance.",
     category: 'Tendencias',
     keywords: ["compliance testimonios","regulaciones testimonios","RGPD testimonios","legal testimonios publicidad"],
-    date: '2026-03-17',
+    date: '2026-03-19',
     readTime: '12 min',
     metaDescription: "Guía legal actualizada sobre compliance y regulaciones de testimonios: RGPD, publicidad y mejores prácticas.",
     content: `
@@ -11907,7 +11907,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Explora cómo los testimonios funcionan en mercados emergentes de Latinoamérica, Asia y África, y adapta tu estrategia a diferentes culturas.",
     category: 'Tendencias',
     keywords: ["testimonios mercados emergentes","prueba social Latinoamérica","testimonios global","marketing testimonios internacional"],
-    date: '2026-03-18',
+    date: '2026-03-19',
     readTime: '11 min',
     metaDescription: "Cómo funcionan los testimonios en mercados emergentes y cómo adaptar tu estrategia a diferentes culturas.",
     content: `
@@ -11982,7 +11982,7 @@ export const blogArticles: BlogArticle[] = [
     excerpt: "Descubre las tendencias que definirán el futuro de las reseñas verificadas en 2028 y cómo preparar tu negocio para los cambios que vienen.",
     category: 'Tendencias',
     keywords: ["futuro reseñas 2028","reseñas verificadas futuro","tendencias testimonios 2028","predicciones prueba social"],
-    date: '2026-03-19',
+    date: '2026-03-20',
     readTime: '12 min',
     metaDescription: "Tendencias y predicciones para el futuro de las reseñas verificadas en 2028 y cómo preparar tu negocio.",
     content: `

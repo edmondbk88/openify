@@ -87,7 +87,7 @@ export default function BlogPage() {
         </div>
 
         <Suspense fallback={null}>
-          <BlogList articles={blogArticles} />
+          <BlogList articles={blogArticles.map(({ slug, title, excerpt, category, keywords, date, readTime, image, tldr }) => ({ slug, title, excerpt, category, keywords, date, readTime, image, tldr }))} />
         </Suspense>
       </div>
     </>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
@@ -106,6 +107,7 @@ export default function AboutPage() {
       '@type': 'Person',
       name: 'Edmond Bojalil',
       url: 'https://www.linkedin.com/in/edmondbojalil/',
+      image: 'https://opinafy.com/edmond-bojalil.jpg',
     },
   }
 
@@ -176,9 +178,14 @@ export default function AboutPage() {
             Founder
           </h2>
           <div className="mt-10 flex flex-col items-center gap-8 sm:flex-row sm:items-start">
-            <div className="flex h-24 w-24 flex-shrink-0 items-center justify-center rounded-full bg-indigo-600 text-3xl font-bold text-white">
-              EB
-            </div>
+            <Image
+              src="/edmond-bojalil.webp"
+              alt="Edmond Bojalil — Founder of Opinafy"
+              width={96}
+              height={96}
+              className="rounded-full object-cover"
+              priority
+            />
             <div>
               <h3 className="text-2xl font-semibold text-gray-900">Edmond Bojalil</h3>
               <p className="text-lg font-medium text-indigo-600">Founder &amp; Lead Developer</p>
