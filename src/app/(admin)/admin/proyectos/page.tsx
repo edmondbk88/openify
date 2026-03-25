@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 
 interface ProjectRow {
   id: string
@@ -16,17 +16,25 @@ export default function AdminProyectosPage() {
   const [projects, setProjects] = useState<ProjectRow[]>([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const [debouncedSearch, setDebouncedSearch] = useState('')
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current)
+    debounceRef.current = setTimeout(() => setDebouncedSearch(search), 400)
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current) }
+  }, [search])
 
   const fetchProjects = useCallback(async () => {
     setLoading(true)
     const params = new URLSearchParams()
-    if (search) params.set('search', search)
+    if (debouncedSearch) params.set('search', debouncedSearch)
 
     const res = await fetch(`/api/admin/projects?${params.toString()}`)
     const data = await res.json()
     setProjects(data.projects || [])
     setLoading(false)
-  }, [search])
+  }, [debouncedSearch])
 
   useEffect(() => {
     fetchProjects()

@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 
 interface UserRow {
   id: string
@@ -27,23 +27,32 @@ export default function AdminUsuariosPage() {
   const [users, setUsers] = useState<UserRow[]>([])
   const [loading, setLoading] = useState(true)
   const [search, setSearch] = useState('')
+  const [debouncedSearch, setDebouncedSearch] = useState('')
   const [planFilter, setPlanFilter] = useState('')
   const [giftModal, setGiftModal] = useState<UserRow | null>(null)
   const [giftPlan, setGiftPlan] = useState('pro')
   const [giftDays, setGiftDays] = useState(30)
   const [giftLoading, setGiftLoading] = useState(false)
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  // Debounce search input (400ms)
+  useEffect(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current)
+    debounceRef.current = setTimeout(() => setDebouncedSearch(search), 400)
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current) }
+  }, [search])
 
   const fetchUsers = useCallback(async () => {
     setLoading(true)
     const params = new URLSearchParams()
-    if (search) params.set('search', search)
+    if (debouncedSearch) params.set('search', debouncedSearch)
     if (planFilter) params.set('plan', planFilter)
 
     const res = await fetch(`/api/admin/users?${params.toString()}`)
     const data = await res.json()
     setUsers(data.users || [])
     setLoading(false)
-  }, [search, planFilter])
+  }, [debouncedSearch, planFilter])
 
   useEffect(() => {
     fetchUsers()
