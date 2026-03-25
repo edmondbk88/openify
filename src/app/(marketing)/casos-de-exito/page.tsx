@@ -73,18 +73,18 @@ export default function CasosDeExitoPage() {
             <nav className="mb-6 text-sm text-gray-500">
               <Link href="/" className="hover:text-indigo-600">Inicio</Link>
               <span className="mx-2">/</span>
-              <span className="text-gray-900">Casos de Exito</span>
+              <span className="text-gray-900">Casos de Éxito</span>
             </nav>
 
             <span className="inline-block rounded-full bg-indigo-100 px-4 py-1.5 text-sm font-semibold text-indigo-700 mb-6">
-              Proximamente
+              Próximamente
             </span>
             <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-              Proximamente: Casos de Exito
+              Próximamente: Casos de Éxito
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600 leading-relaxed">
-              Estamos recopilando los primeros casos de exito de nuestros clientes. Pronto
-              compartiremos historias reales de negocios que han transformado su reputacion
+              Estamos recopilando los primeros casos de éxito de nuestros clientes. Pronto
+              compartiremos historias reales de negocios que han transformado su reputación
               online con Opinafy.
             </p>
           </div>
@@ -133,10 +133,10 @@ export default function CasosDeExitoPage() {
         <section className="bg-gradient-to-r from-indigo-600 to-purple-700">
           <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
             <h2 className="text-3xl font-extrabold text-white">
-              ¿Quieres ser uno de nuestros primeros casos de exito?
+              ¿Quieres ser uno de nuestros primeros casos de éxito?
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-indigo-200">
-              Empieza gratis y transforma la reputacion online de tu negocio con testimonios
+              Empieza gratis y transforma la reputación online de tu negocio con testimonios
               verificados. Sin tarjeta de credito.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
