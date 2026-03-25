@@ -739,7 +739,7 @@ export function generateUniqueIntro(
     if (category === 'salud') {
       return `${cityName}, con ${popFormatted} de habitantes, es uno de los mercados de salud más competitivos del mundo hispanohablante. Para un negocio de ${industryLower} en está metropoli, la saturación de opciones disponibles obliga a diferenciarse con algo más que buenas instalaciones o precios competitivos. ${profile.economicProfile} En este contexto, los testimonios verificados de pacientes reales se convierten en el factor de decisión número uno: resuelven la incertidumbre, generan empatia y transmiten la calidad humana de tu equipo de forma que ningun anuncio puede igualar.`
     }
-    if (category === 'hostelería') {
+    if (category === 'hosteleria') {
       return `En una metropoli como ${cityName}, con ${popFormatted} de residentes y millones de visitantes anuales, el sector de ${industryLower} enfrenta una competencia sin precedentes. ${profile.economicProfile} Cada dia, miles de personas en ${cityName} deciden donde ir basándose en opiniones de otros clientes. Los testimonios verificados de comensales y huespedes satisfechos son tu herramienta más poderosa para convertir esa búsqueda online en una reserva confirmada, destacando entre cientos de opciones que compiten por la misma atención.`
     }
     if (category === 'servicios-profesionales') {
@@ -758,7 +758,7 @@ export function generateUniqueIntro(
     if (category === 'bienestar') {
       return `En ${cityName}, con ${popFormatted} de residentes, el sector de ${industryLower} está en plena expansión. ${profile.economicProfile} Los consumidores de está ciudad buscan servicios de bienestar que combinen profesionalidad con un trato cercano, y las recomendaciones de otros clientes locales son el principal motor de decisión. Los testimonios verificados te permiten captar esa demanda creciente demostrando que otros vecinos de ${cityName} ya confian en ti.`
     }
-    if (category === 'hostelería') {
+    if (category === 'hosteleria') {
       return `${cityName} se ha consolidado como un destino gastronómico y turístico con identidad propia, atrayendo cada vez más visitantes nacionales e internacionales a su oferta de ${industryLower}. ${profile.economicProfile} En un mercado donde la oferta crece rápido, los testimonios de clientes satisfechos te ayudan a destacar ante un público que investiga online antes de cada visita y valora las experiencias auténticas por encima de la publicidad.`
     }
     return `${cityName}, con ${popFormatted} de habitantes, representa un mercado en crecimiento donde los negocios de ${industryLower} tienen una ventana de oportunidad para establecerse como referentes. ${profile.economicProfile} En una ciudad de tamano medio, cada testimonio de un cliente local tiene un efecto multiplicador: la comunidad es lo suficientemente grande para generar volumen, pero lo bastante cercana para que las recomendaciones se compartan orgánicamente.`
@@ -768,7 +768,7 @@ export function generateUniqueIntro(
   if (category === 'salud') {
     return `En ${cityName}, con ${popFormatted}, la confianza personal es el pilar de la relación médico-paciente. ${profile.economicProfile} Los residentes de ${cityName} prefieren profesionales de ${industryLower} que vengan avalados por otros miembros de la comunidad. Los testimonios digitales extienden esas recomendaciones personales las 24 horas del dia, llegando a residentes, expatriados y nuevos habitantes que aun no tienen una red de contactos local.`
   }
-  if (category === 'hostelería') {
+  if (category === 'hosteleria') {
     return `${cityName} ofrece un mercado de ${industryLower} donde la calidad personal del servicio marca la diferencia. ${profile.economicProfile} Con una comunidad más compacta, cada experiencia positiva de un cliente se convierte en una recomendación que resuena con fuerza. Los testimonios verificados en tu web capturan esa energía del boca a boca local y la hacen visible para turistas y nuevos residentes que descubren ${cityName} por primera vez.`
   }
   return `En ${cityName}, con ${popFormatted}, los negocios de ${industryLower} construyen su reputación sobre la confianza de una comunidad cercana. ${profile.economicProfile} Aunque el mercado es más compacto, esto juega a tu favor: menos competencia online significa que posicionarte como la referencia local es alcanzable, y cada testimonio de un cliente satisfecho tiene un impacto proporcionalmente mayor que en las grandes ciudades.`
