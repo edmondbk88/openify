@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'en_US',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Verified by Opinafy Badge',
     description:
       'Real and verified testimonials. The trust badge for your website.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 

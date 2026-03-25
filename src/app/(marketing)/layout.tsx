@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       'Recopila, gestiona y muestra testimonios de clientes en tu web. Widgets personalizables, prueba social y mas conversiones.',
     images: [
       {
-        url: '/og.png',
+        url: '/og.jpg',
         width: 1200,
         height: 630,
         alt: 'Opinafy - Plataforma de Testimonios de Clientes',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'Opinafy - Testimonios de Clientes que Convierten',
     description:
       'Recopila, gestiona y muestra testimonios de clientes en tu web. Prueba social que convierte.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
   alternates: {
     canonical: 'https://opinafy.com',

@@ -1,6 +1,7 @@
 export const revalidate = 3600 // revalidate every hour — homepage content rarely changes
 
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 import { Navbar } from '@/components/landing/navbar'
 import { Hero } from '@/components/landing/hero'
 import { Features } from '@/components/landing/features'
@@ -57,6 +58,24 @@ export default function HomePage() {
       <Hero />
       <Features />
       <HowItWorks />
+
+      {/* Product screenshot */}
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+              Conoce el panel de control
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600">
+              Gestiona todos tus testimonios, proyectos y widgets desde un dashboard intuitivo.
+            </p>
+          </div>
+          <div className="mt-10 overflow-hidden rounded-xl border border-gray-200 shadow-2xl">
+            <Image src="/screenshots/dashboard.png" alt="Panel de control de Opinafy mostrando estadísticas y testimonios" width={1440} height={900} className="w-full" />
+          </div>
+        </div>
+      </section>
+
       <MiniSiteShowcase />
       <TestimonialsPreview />
       <Pricing />

@@ -31,13 +31,13 @@ export const metadata: Metadata = {
     type: 'article',
     siteName: 'Opinafy',
     locale: 'en_US',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The State of Social Proof in 2026',
     description: '25+ key statistics about testimonials and social proof.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 

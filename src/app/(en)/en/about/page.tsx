@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'en_US',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Us',
     description:
       'Meet the team behind Opinafy, the leading Spanish-native platform for customer testimonials.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 
@@ -268,6 +268,43 @@ export default function AboutPage() {
                 <p className="mt-2 text-lg font-medium text-gray-700">{stat.label}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Product */}
+      <section className="bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Our Product
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              A complete platform to collect, manage, and display customer testimonials.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/dashboard.png" alt="Opinafy dashboard" width={1440} height={900} className="w-full" />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900">Intuitive dashboard</h3>
+                <p className="mt-1 text-sm text-gray-600">Manage all your testimonials and projects from a centralized panel.</p>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/plantillas.png" alt="Opinafy templates gallery" width={1440} height={900} className="w-full" />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900">100+ templates</h3>
+                <p className="mt-1 text-sm text-gray-600">Choose from over 100 professional templates for widgets and mini sites.</p>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/collection-form.png" alt="Testimonial collection form" width={1440} height={900} className="w-full" />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900">Collection form</h3>
+                <p className="mt-1 text-sm text-gray-600">Collect testimonials with text, photo, video, and audio directly from the browser.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -32,14 +32,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'es_ES',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Programa de Afiliados de Opinafy - 30% comision recurrente',
     description:
       'Recomienda Opinafy y gana un 30% de comision recurrente por cada cliente referido.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 

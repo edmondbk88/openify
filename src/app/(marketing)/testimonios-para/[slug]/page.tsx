@@ -35,7 +35,7 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
       siteName: 'Opinafy',
       images: [
         {
-          url: '/og.png',
+          url: '/og.jpg',
           width: 1200,
           height: 630,
           alt: industry.title,

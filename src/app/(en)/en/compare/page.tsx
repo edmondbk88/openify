@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'en_US',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Testimonial Tool Comparisons 2026',
     description:
       'Compare Opinafy with the best testimonial tools. Detailed and honest analysis.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 

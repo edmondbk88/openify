@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Descubre 30 diseños profesionales para tu página pública de testimonios. Organizadas por profesión: salud, legal, creativos, educación y más.',
     images: [
       {
-        url: '/og.png',
+        url: '/og.jpg',
         width: 1200,
         height: 630,
         alt: 'Plantillas de Mini Sitio Opinafy',

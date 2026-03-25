@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'en_US',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Pricing',
     description:
       'Flexible plans to collect and display customer testimonials. Start for free.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 

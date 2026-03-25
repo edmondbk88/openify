@@ -25,14 +25,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'es_ES',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Sobre Nosotros - Opinafy',
     description:
       'Conoce al equipo detrás de Opinafy, la plataforma líder en español para testimonios de clientes.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 
@@ -269,6 +269,43 @@ export default function SobrePage() {
                 <p className="mt-2 text-lg font-medium text-gray-700">{stat.label}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Nuestro Producto */}
+      <section className="bg-white py-20 sm:py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Nuestro Producto
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+              Una plataforma completa para recopilar, gestionar y mostrar testimonios de clientes.
+            </p>
+          </div>
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/dashboard.png" alt="Panel de control de Opinafy" width={1440} height={900} className="w-full" />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900">Dashboard intuitivo</h3>
+                <p className="mt-1 text-sm text-gray-600">Gestiona todos tus testimonios y proyectos desde un panel centralizado.</p>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/plantillas.png" alt="Galería de plantillas de Opinafy" width={1440} height={900} className="w-full" />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900">100+ plantillas</h3>
+                <p className="mt-1 text-sm text-gray-600">Elige entre más de 100 plantillas profesionales para widgets y mini sitios.</p>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/collection-form.png" alt="Formulario de recopilación de testimonios" width={1440} height={900} className="w-full" />
+              <div className="p-4">
+                <h3 className="font-semibold text-gray-900">Formulario de recopilación</h3>
+                <p className="mt-1 text-sm text-gray-600">Recopila testimonios con texto, foto, vídeo y audio directamente desde el navegador.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

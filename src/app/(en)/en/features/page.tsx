@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
@@ -36,14 +37,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'en_US',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Opinafy Features - All Testimonial Platform Features',
     description:
       'Embeddable widgets, video testimonials, double verification, 100+ templates and more. The most complete testimonial platform.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 
@@ -434,6 +435,11 @@ export default function FeaturesPage() {
               </div>
             ))}
           </div>
+
+          {/* Dashboard screenshot */}
+          <div className="mt-16 overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+            <Image src="/screenshots/dashboard.png" alt="Opinafy dashboard with stats cards and sidebar navigation" width={1440} height={900} className="w-full" />
+          </div>
         </div>
       </section>
 
@@ -461,6 +467,11 @@ export default function FeaturesPage() {
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">{item.description}</p>
               </div>
             ))}
+          </div>
+
+          {/* Templates screenshot */}
+          <div className="mt-16 overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+            <Image src="/screenshots/plantilla-detalle.png" alt="Template detail with widget preview showing testimonial layouts" width={1440} height={900} className="w-full" />
           </div>
         </div>
       </section>
@@ -493,6 +504,16 @@ export default function FeaturesPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Collection form & mini site screenshots */}
+          <div className="mt-16 grid gap-8 sm:grid-cols-2">
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/collection-form.png" alt="Public testimonial collection form" width={1440} height={900} className="w-full" />
+            </div>
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/mini-site.png" alt="Public mini site displaying verified testimonials" width={1440} height={900} className="w-full" />
+            </div>
           </div>
         </div>
       </section>

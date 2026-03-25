@@ -1,6 +1,7 @@
 export const revalidate = 3600
 
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { NavbarEn } from '@/components/landing/navbar-en'
 import { FooterEn } from '@/components/landing/footer-en'
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'en_US',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
 }
 
@@ -1004,6 +1005,24 @@ export default function HomePageEn() {
       <Hero />
       <Features />
       <HowItWorks />
+
+      {/* Product screenshot */}
+      <section className="bg-white py-16 sm:py-20">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+              Meet the dashboard
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-lg text-gray-600">
+              Manage all your testimonials, projects, and widgets from an intuitive dashboard.
+            </p>
+          </div>
+          <div className="mt-10 overflow-hidden rounded-xl border border-gray-200 shadow-2xl">
+            <Image src="/screenshots/dashboard.png" alt="Opinafy dashboard showing statistics and testimonials" width={1440} height={900} className="w-full" />
+          </div>
+        </div>
+      </section>
+
       <MiniSiteShowcase />
       <TestimonialsPreview />
       <Pricing />

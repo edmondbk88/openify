@@ -31,14 +31,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'Opinafy',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Testimonials by Industry',
     description:
       'Tailored testimonial solutions for over 80 different industries.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
@@ -36,14 +37,14 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: 'Opinafy',
     locale: 'es_ES',
-    images: [{ url: '/og.png', width: 1200, height: 630 }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Características de Opinafy - Todas las funciones',
     description:
       'Widgets embebibles, video testimonios, verificación doble, 100+ plantillas y más. La plataforma de testimonios más completa en español.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 }
 
@@ -433,6 +434,11 @@ export default function CaracteristicasPage() {
               </div>
             ))}
           </div>
+
+          {/* Dashboard screenshot */}
+          <div className="mt-16 overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+            <Image src="/screenshots/dashboard.png" alt="Panel de control de Opinafy con estadísticas y sidebar" width={1440} height={900} className="w-full" />
+          </div>
         </div>
       </section>
 
@@ -460,6 +466,11 @@ export default function CaracteristicasPage() {
                 <p className="mt-2 text-sm leading-relaxed text-gray-600">{item.description}</p>
               </div>
             ))}
+          </div>
+
+          {/* Templates screenshot */}
+          <div className="mt-16 overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+            <Image src="/screenshots/plantilla-detalle.png" alt="Detalle de plantilla con vista previa del widget de testimonios" width={1440} height={900} className="w-full" />
           </div>
         </div>
       </section>
@@ -492,6 +503,16 @@ export default function CaracteristicasPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Collection form & mini site screenshots */}
+          <div className="mt-16 grid gap-8 sm:grid-cols-2">
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/collection-form.png" alt="Formulario público de recopilación de testimonios" width={1440} height={900} className="w-full" />
+            </div>
+            <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
+              <Image src="/screenshots/mini-site.png" alt="Mini sitio público con testimonios verificados" width={1440} height={900} className="w-full" />
+            </div>
           </div>
         </div>
       </section>

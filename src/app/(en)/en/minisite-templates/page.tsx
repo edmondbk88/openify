@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       'Discover 30 professional designs for your public testimonial page. Organized by profession: health, legal, creatives, education, and more.',
     images: [
       {
-        url: '/og.png',
+        url: '/og.jpg',
         width: 1200,
         height: 630,
         alt: 'Opinafy Mini Site Templates',
