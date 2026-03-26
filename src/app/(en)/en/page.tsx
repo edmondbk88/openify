@@ -1018,7 +1018,7 @@ export default function HomePageEn() {
             </p>
           </div>
           <div className="mt-10 overflow-hidden rounded-xl border border-gray-200 shadow-2xl">
-            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/dashboard.png" alt="Opinafy dashboard showing statistics and testimonials" width={1440} height={900} className="w-full" />
+            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/plantillas.png" alt="Opinafy testimonial templates gallery" width={1440} height={900} className="w-full" />
           </div>
         </div>
       </section>

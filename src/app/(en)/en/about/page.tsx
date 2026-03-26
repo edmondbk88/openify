@@ -285,7 +285,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <div className="overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/dashboard.png" alt="Opinafy dashboard" width={1440} height={900} className="w-full" />
+              <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/plantillas.png" alt="Opinafy dashboard" width={1440} height={900} className="w-full" />
               <div className="p-4">
                 <h3 className="font-semibold text-gray-900">Intuitive dashboard</h3>
                 <p className="mt-1 text-sm text-gray-600">Manage all your testimonials and projects from a centralized panel.</p>

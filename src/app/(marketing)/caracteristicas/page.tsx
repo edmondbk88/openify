@@ -435,9 +435,9 @@ export default function CaracteristicasPage() {
             ))}
           </div>
 
-          {/* Dashboard screenshot */}
+          {/* Product screenshot */}
           <div className="mt-16 overflow-hidden rounded-xl border border-gray-200 shadow-lg">
-            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/dashboard.png" alt="Panel de control de Opinafy con estadísticas y sidebar" width={1440} height={900} className="w-full" />
+            <Image src="https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/screenshots/plantilla-detalle.png" alt="Vista previa de plantilla de testimonios en Opinafy" width={1440} height={900} className="w-full" />
           </div>
         </div>
       </section>
