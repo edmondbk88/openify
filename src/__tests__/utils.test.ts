@@ -38,7 +38,7 @@ describe('generateSlug', () => {
   })
 
   it('handles Spanish characters (ñ, ü)', () => {
-    expect(generateSlug('Año Nuevo')).toBe('ano-nuevo')
+    expect(generateSlug('Año Nuevo')).toBe('año-nuevo')
     expect(generateSlug('Pingüino Azul')).toBe('pinguino-azul')
   })
 

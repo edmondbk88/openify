@@ -121,13 +121,13 @@ export default function CompararPage() {
           <h2 className="text-xl font-bold text-gray-900">Como realizamos nuestras comparativas</h2>
           <p className="mt-4 leading-relaxed">
             Cada comparativa se elabora probando las herramientas en escenarios reales: creamos
-            proyectos, anadimos testimonios, personalizamos widgets e integramos el codigo en sitios
+            proyectos, anadimos testimonios, personalizamos widgets e integramos el código en sitios
             web de prueba. Evaluamos cada plataforma en base a seis criterios clave:
             <strong> funcionalidades</strong> (tipos de widget, formatos de testimonios, personalizacion),
             <strong> facilidad de uso</strong> (curva de aprendizaje, UX del panel),
             <strong> rendimiento</strong> (velocidad de carga del widget, peso del script),
             <strong> precio</strong> (relacion calidad-coste, limites del plan gratuito),
-            <strong> soporte en espanol</strong> (idioma de la interfaz, documentacion, atencion al cliente)
+            <strong> soporte en español</strong> (idioma de la interfaz, documentacion, atencion al cliente)
             y <strong>integraciones</strong> disponibles.
           </p>
           <p className="mt-4 leading-relaxed">
@@ -144,7 +144,7 @@ export default function CompararPage() {
               <thead>
                 <tr className="border-b border-gray-200 bg-gray-50">
                   <th className="px-4 py-3 font-semibold text-gray-900">Herramienta</th>
-                  <th className="px-4 py-3 font-semibold text-gray-900">Espanol nativo</th>
+                  <th className="px-4 py-3 font-semibold text-gray-900">Español nativo</th>
                   <th className="px-4 py-3 font-semibold text-gray-900">Plan gratuito</th>
                   <th className="px-4 py-3 font-semibold text-gray-900">Desde</th>
                 </tr>

@@ -75,7 +75,7 @@ export default function PressPage() {
                 href="/prensa"
                 className="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
               >
-                &larr; Version en espanol
+                &larr; Version en español
               </Link>
             </div>
             <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl">

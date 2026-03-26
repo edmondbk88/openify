@@ -6,7 +6,7 @@ import { Footer } from '@/components/landing/footer'
 export const metadata: Metadata = {
   title: 'Actualizaciones de Producto - Changelog | Opinafy',
   description:
-    'Todas las novedades, mejoras y correcciones de Opinafy. Mantente al dia con las ultimas actualizaciones de la plataforma de testimonios.',
+    'Todas las novedades, mejoras y correcciones de Opinafy. Mantente al dia con las últimas actualizaciones de la plataforma de testimonios.',
   keywords: [
     'opinafy actualizaciones',
     'changelog opinafy',
@@ -52,31 +52,31 @@ const updates: ProductUpdate[] = [
   {
     date: '2026-03-23',
     title: 'Ranking de empresas mejor valoradas',
-    description: 'Nueva pagina publica de ranking que muestra las empresas con mejores testimonios verificados en Opinafy, ordenadas por valoración media y número de testimonios.',
+    description: 'Nueva página pública de ranking que muestra las empresas con mejores testimonios verificados en Opinafy, ordenadas por valoración media y número de testimonios.',
     category: 'nuevo',
   },
   {
     date: '2026-03-23',
     title: 'Plantillas de email para solicitar testimonios',
-    description: '6 plantillas de email predefinidas para solicitar testimonios a tus clientes: post-compra, recordatorio, logro, temporada, feedback positivo y video. Disponibles en espanol e ingles con variables personalizables.',
+    description: '6 plantillas de email predefinidas para solicitar testimonios a tus clientes: post-compra, recordatorio, logro, temporada, feedback positivo y video. Disponibles en español e ingles con variables personalizables.',
     category: 'nuevo',
   },
   {
     date: '2026-03-23',
-    title: 'Pagina de actualizaciones de producto',
-    description: 'Nuevo changelog publico donde compartimos todas las novedades, mejoras y correcciones de la plataforma.',
+    title: 'Página de actualizaciones de producto',
+    description: 'Nuevo changelog público donde compartimos todas las novedades, mejoras y correcciones de la plataforma.',
     category: 'nuevo',
   },
   {
     date: '2026-03-22',
     title: 'Generador de posts para redes sociales',
-    description: 'Convierte tus mejores testimonios en posts listos para compartir en Instagram, Twitter/X, LinkedIn y Facebook con disenos profesionales.',
+    description: 'Convierte tus mejores testimonios en posts listos para compartir en Instagram, Twitter/X, LinkedIn y Facebook con diseños profesionales.',
     category: 'nuevo',
   },
   {
     date: '2026-03-22',
     title: 'Automatizacion de solicitud de testimonios',
-    description: 'Configura emails automaticos para solicitar testimonios a tus clientes despues de una compra o servicio. Secuencias con recordatorios automaticos.',
+    description: 'Configura emails automáticos para solicitar testimonios a tus clientes despues de una compra o servicio. Secuencias con recordatorios automáticos.',
     category: 'nuevo',
   },
   {
@@ -100,31 +100,31 @@ const updates: ProductUpdate[] = [
   {
     date: '2026-03-20',
     title: 'Integraciones con plataformas externas',
-    description: 'Conecta Opinafy con Zapier, Slack, Google Sheets y mas. Webhooks personalizables para automatizar tu flujo de trabajo.',
+    description: 'Conecta Opinafy con Zapier, Slack, Google Sheets y más. Webhooks personalizables para automatizar tu flujo de trabajo.',
     category: 'nuevo',
   },
   {
     date: '2026-03-20',
-    title: 'Analisis y estadisticas avanzadas',
+    title: 'Análisis y estadísticas avanzadas',
     description: 'Dashboard de analytics con metricas de testimonios, conversion, sentimiento y tendencias temporales para cada proyecto.',
     category: 'nuevo',
   },
   {
     date: '2026-03-19',
     title: '100+ plantillas de widgets',
-    description: 'Biblioteca de mas de 100 plantillas de widgets personalizables: carouseles, grids, muros, badges y mas. Cada plantilla con multiples temas.',
+    description: 'Biblioteca de más de 100 plantillas de widgets personalizables: carouseles, grids, muros, badges y más. Cada plantilla con multiples temas.',
     category: 'nuevo',
   },
   {
     date: '2026-03-19',
     title: '30 plantillas de mini sitios',
-    description: 'Temas profesionales para tu mini sitio de testimonios: corporate, creative, startup, minimal y muchos mas.',
+    description: 'Temas profesionales para tu mini sitio de testimonios: corporate, creative, startup, minimal y muchos más.',
     category: 'nuevo',
   },
   {
     date: '2026-03-19',
     title: 'Widget JavaScript con Shadow DOM',
-    description: 'Widget ligero (~25KB) que se inserta en cualquier web con una linea de codigo. Shadow DOM para aislamiento CSS total.',
+    description: 'Widget ligero (~25KB) que se inserta en cualquier web con una linea de código. Shadow DOM para aislamiento CSS total.',
     category: 'nuevo',
   },
   {
@@ -142,7 +142,7 @@ const updates: ProductUpdate[] = [
   {
     date: '2026-03-18',
     title: 'Mini sitios de testimonios',
-    description: 'Pagina publica dedicada para cada usuario con sus testimonios, accesible en /s/tu-usuario. SEO optimizado con schema markup.',
+    description: 'Página pública dedicada para cada usuario con sus testimonios, accesible en /s/tu-usuario. SEO optimizado con schema markup.',
     category: 'nuevo',
   },
   {
@@ -154,19 +154,19 @@ const updates: ProductUpdate[] = [
   {
     date: '2026-03-18',
     title: 'Solicitud de testimonios por enlace',
-    description: 'Genera enlaces unicos para enviar a tus clientes y recopilar testimonios de forma sencilla con un formulario personalizado.',
+    description: 'Genera enlaces únicos para enviar a tus clientes y recopilar testimonios de forma sencilla con un formulario personalizado.',
     category: 'nuevo',
   },
   {
     date: '2026-03-18',
     title: 'Paginas SEO por industria y ciudad',
-    description: 'Mas de 160 paginas por industria y 400+ paginas por ciudad e industria para posicionamiento local en buscadores.',
+    description: 'Mas de 160 páginas por industria y 400+ páginas por ciudad e industria para posicionamiento local en buscadores.',
     category: 'nuevo',
   },
   {
     date: '2026-03-18',
-    title: 'Blog con 160+ articulos',
-    description: 'Blog completo con mas de 160 articulos en espanol e ingles sobre testimonios, prueba social, marketing y conversion.',
+    title: 'Blog con 160+ artículos',
+    description: 'Blog completo con más de 160 artículos en español e ingles sobre testimonios, prueba social, marketing y conversion.',
     category: 'nuevo',
   },
   {
@@ -178,13 +178,13 @@ const updates: ProductUpdate[] = [
   {
     date: '2026-03-18',
     title: 'Soporte bilingue completo',
-    description: 'Toda la plataforma disponible en espanol e ingles, incluyendo dashboard, widgets, mini sitios y toda la documentacion.',
+    description: 'Toda la plataforma disponible en español e ingles, incluyendo dashboard, widgets, mini sitios y toda la documentacion.',
     category: 'nuevo',
   },
   {
     date: '2026-03-18',
     title: 'Badge Verificado por Opinafy',
-    description: 'Insignia SVG dinamica que muestra el numero de testimonios verificados de tu negocio. Insertable en cualquier web.',
+    description: 'Insignia SVG dinamica que muestra el número de testimonios verificados de tu negocio. Insertable en cualquier web.',
     category: 'nuevo',
   },
   {

@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://opinafy.com/en/case-studies',
     languages: {
-      es: 'https://opinafy.com/casos-de-exito',
+      es: 'https://opinafy.com/casos-de-éxito',
       en: 'https://opinafy.com/en/case-studies',
-      'x-default': 'https://opinafy.com/casos-de-exito',
+      'x-default': 'https://opinafy.com/casos-de-éxito',
     },
   },
   openGraph: {

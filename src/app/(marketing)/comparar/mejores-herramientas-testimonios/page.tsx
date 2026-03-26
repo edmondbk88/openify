@@ -5,13 +5,13 @@ import { webPageSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Las 7 mejores herramientas de testimonios 2026',
   description:
-    'Ranking de las mejores plataformas de testimonios y resenas en 2026. Opinafy, Testimonial.to, Senja, Famewall, TrustPilot, Google Reviews y Capterra comparadas.',
+    'Ranking de las mejores plataformas de testimonios y reseñas en 2026. Opinafy, Testimonial.to, Senja, Famewall, TrustPilot, Google Reviews y Capterra comparadas.',
   keywords: [
     'mejores herramientas testimonios 2026',
     'plataformas testimonios',
     'herramientas prueba social',
     'recopilar testimonios clientes',
-    'mejores plataformas resenas',
+    'mejores plataformas reseñas',
     'opinafy vs competidores',
     'herramientas testimonios español',
   ],
@@ -37,14 +37,14 @@ const tools = [
     bestFor: 'Negocios hispanohablantes, autonomos, pymes y agencias en España y Latinoamerica',
     pros: [
       'Completamente en español (interfaz, formularios, soporte)',
-      'Precios en EUR, los mas competitivos del mercado',
+      'Precios en EUR, los más competitivos del mercado',
       'Verificación de empresa única en el sector',
-      'Schema markup SEO automatico',
+      'Schema markup SEO automático',
       'Video testimonios incluidos',
       'Plan gratuito generoso',
     ],
     cons: [
-      'Plataforma mas nueva (menos tiempo en el mercado)',
+      'Plataforma más nueva (menos tiempo en el mercado)',
       'Menos integraciones nativas que competidores anglosajones',
       'Comunidad de usuarios en crecimiento',
     ],
@@ -55,7 +55,7 @@ const tools = [
     name: 'Testimonial.to',
     tagline: 'Popular herramienta anglosajona de testimonios',
     description:
-      'Testimonial.to es una de las herramientas de testimonios mas establecidas del mercado. Fundada en 2021, permite recopilar testimonios en texto y video, mostrarlos con widgets personalizables e integrarlos con multiples herramientas de terceros. Es una opcion solida para el mercado anglosajón con un ecosistema maduro de integraciones.',
+      'Testimonial.to es una de las herramientas de testimonios más establecidas del mercado. Fundada en 2021, permite recopilar testimonios en texto y video, mostrarlos con widgets personalizables e integrarlos con multiples herramientas de terceros. Es una opcion solida para el mercado anglosajón con un ecosistema maduro de integraciones.',
     pricing: 'Gratis (limitado) / Starter ~20 USD/mes / Premium ~50 USD/mes',
     bestFor: 'Negocios del mercado anglosajón que necesitan muchas integraciones',
     pros: [
@@ -70,7 +70,7 @@ const tools = [
       'Precios en USD (comision de cambio para zona euro)',
       'Sin verificación de empresa',
       'Sin soporte en español',
-      'Precios mas elevados',
+      'Precios más elevados',
     ],
     url: '/comparar/opinafy-vs-testimonial-to',
   },
@@ -91,7 +91,7 @@ const tools = [
     ],
     cons: [
       'Solo en ingles',
-      'Precios en USD, mas caros que Opinafy',
+      'Precios en USD, más caros que Opinafy',
       'Sin verificación de empresa',
       'Sin soporte en español',
     ],
@@ -104,12 +104,12 @@ const tools = [
     description:
       'Famewall se centra en crear muros de testimonios visualmente atractivos. Es una herramienta sencilla y enfocada que permite recopilar testimonios de multiples fuentes y mostrarlos en un muro embebible. Ideal para quienes buscan simplicidad, aunque le faltan funcionalidades avanzadas como video testimonios o verificación.',
     pricing: 'Gratis (limitado) / Pro ~19 USD/mes / Business ~49 USD/mes',
-    bestFor: 'Freelancers y negocios pequeños que quieren un muro de testimonios basico',
+    bestFor: 'Freelancers y negocios pequeños que quieren un muro de testimonios básico',
     pros: [
-      'Interfaz sencilla y facil de usar',
+      'Interfaz sencilla y fácil de usar',
       'Importacion de testimonios desde varias fuentes',
       'Muro de testimonios visualmente atractivo',
-      'Precio accesible en el plan basico',
+      'Precio accesible en el plan básico',
     ],
     cons: [
       'Solo en ingles',
@@ -125,9 +125,9 @@ const tools = [
     name: 'Trustpilot',
     tagline: 'Plataforma de reseñas global',
     description:
-      'Trustpilot es una de las plataformas de reseñas mas grandes del mundo. A diferencia de las herramientas anteriores, Trustpilot es un marketplace de reseñas publico donde los consumidores pueden dejar opiniones sobre cualquier negocio. Ofrece widgets para mostrar tu puntuación y reseñas en tu web, pero el control sobre el contenido es limitado ya que las reseñas son publicas.',
-    pricing: 'Gratis (basico) / Planes de pago desde ~199 USD/mes',
-    bestFor: 'Empresas grandes que necesitan reputacion publica y reseñas verificadas',
+      'Trustpilot es una de las plataformas de reseñas más grandes del mundo. A diferencia de las herramientas anteriores, Trustpilot es un marketplace de reseñas público donde los consumidores pueden dejar opiniones sobre cualquier negocio. Ofrece widgets para mostrar tu puntuación y reseñas en tu web, pero el control sobre el contenido es limitado ya que las reseñas son publicas.',
+    pricing: 'Gratis (básico) / Planes de pago desde ~199 USD/mes',
+    bestFor: 'Empresas grandes que necesitan reputacion pública y reseñas verificadas',
     pros: [
       'Reconocimiento de marca global',
       'Disponible parcialmente en español',
@@ -199,7 +199,7 @@ const summaryTable = [
   { name: 'Opinafy', language: 'Español', price: 'Desde 0 EUR', video: 'Si', verification: 'Email + Empresa', best: 'Mercado hispano' },
   { name: 'Testimonial.to', language: 'Ingles', price: 'Desde 0 USD', video: 'Si', verification: 'Email', best: 'Mercado anglosajón' },
   { name: 'Senja', language: 'Ingles', price: 'Desde 0 USD', video: 'Si', verification: 'Email', best: 'Diseño + RRSS' },
-  { name: 'Famewall', language: 'Ingles', price: 'Desde 0 USD', video: 'No', verification: 'No', best: 'Muro basico' },
+  { name: 'Famewall', language: 'Ingles', price: 'Desde 0 USD', video: 'No', verification: 'No', best: 'Muro básico' },
   { name: 'Trustpilot', language: 'Multi', price: 'Desde 199 USD', video: 'No', verification: 'Si', best: 'Reputacion global' },
   { name: 'Google Reviews', language: 'Multi', price: 'Gratis', video: 'No', verification: 'Google', best: 'SEO local' },
   { name: 'Capterra', language: 'Multi', price: 'Gratis + PPC', video: 'No', verification: 'Si', best: 'B2B / SaaS' },
@@ -208,27 +208,27 @@ const summaryTable = [
 const faqs = [
   {
     q: '¿Cual es la mejor herramienta de testimonios para negocios en español?',
-    a: 'Opinafy es la mejor opcion para negocios que operan en español. Es la unica plataforma de testimonios con experiencia completa en español, precios en euros y verificación de empresa. Las demas alternativas (Testimonial.to, Senja, Famewall) estan solo en ingles.',
+    a: 'Opinafy es la mejor opcion para negocios que operan en español. Es la única plataforma de testimonios con experiencia completa en español, precios en euros y verificación de empresa. Las demas alternativas (Testimonial.to, Senja, Famewall) estan solo en ingles.',
   },
   {
     q: '¿Puedo usar varias herramientas de testimonios a la vez?',
-    a: 'Si, muchos negocios combinan herramientas. Por ejemplo, puedes usar Opinafy para gestionar y mostrar testimonios curados en tu web, mientras mantienes presencia en Google Reviews para SEO local y en Trustpilot para reputacion publica. Lo ideal es centralizar la gestión en una plataforma principal.',
+    a: 'Si, muchos negocios combinan herramientas. Por ejemplo, puedes usar Opinafy para gestionar y mostrar testimonios curados en tu web, mientras mantienes presencia en Google Reviews para SEO local y en Trustpilot para reputacion pública. Lo ideal es centralizar la gestión en una plataforma principal.',
   },
   {
     q: '¿Merece la pena pagar por una herramienta de testimonios?',
-    a: 'Si tu negocio depende de la confianza del cliente (que es casi cualquier negocio), si. Los testimonios bien presentados pueden aumentar las conversiones entre un 15% y un 34% segun estudios del sector. El retorno de inversion suele ser muy rapido, especialmente con herramientas asequibles como Opinafy que empiezan desde 9 EUR/mes.',
+    a: 'Si tu negocio depende de la confianza del cliente (que es casi cualquier negocio), si. Los testimonios bien presentados pueden aumentar las conversiones entre un 15% y un 34% segun estudios del sector. El retorno de inversion suele ser muy rápido, especialmente con herramientas asequibles como Opinafy que empiezan desde 9 EUR/mes.',
   },
   {
     q: '¿Cual es la diferencia entre una plataforma de testimonios y una de reseñas?',
-    a: 'Las plataformas de testimonios (Opinafy, Testimonial.to, Senja) te permiten recopilar, curar y mostrar testimonios seleccionados en tu web con widgets personalizables. Las plataformas de reseñas (Trustpilot, Google Reviews, Capterra) son marketplaces publicos donde cualquier persona puede dejar una opinion, positiva o negativa, y tu control es limitado.',
+    a: 'Las plataformas de testimonios (Opinafy, Testimonial.to, Senja) te permiten recopilar, curar y mostrar testimonios seleccionados en tu web con widgets personalizables. Las plataformas de reseñas (Trustpilot, Google Reviews, Capterra) son marketplaces públicos donde cualquier persona puede dejar una opinion, positiva o negativa, y tu control es limitado.',
   },
   {
     q: '¿Los video testimonios realmente convierten mas?',
-    a: 'Si. Segun multiples estudios de marketing digital, los video testimonios generan hasta un 80% mas de confianza que los testimonios en texto. El video permite ver la expresion y escuchar el tono del cliente, lo que crea una conexion emocional mas fuerte con el visitante de tu web.',
+    a: 'Si. Segun multiples estudios de marketing digital, los video testimonios generan hasta un 80% más de confianza que los testimonios en texto. El video permite ver la expresion y escuchar el tono del cliente, lo que crea una conexion emocional más fuerte con el visitante de tu web.',
   },
   {
     q: '¿Qué es la verificación de empresa en Opinafy?',
-    a: 'Es una funcionalidad única de Opinafy que permite verificar que el testimonio proviene de una empresa real. El remitente del testimonio recibe una insignia de verificación que confirma que su empresa ha sido validada. Esto anade una capa extra de credibilidad, especialmente relevante en el mercado B2B.',
+    a: 'Es una funcionalidad única de Opinafy que permite verificar que el testimonio proviene de una empresa real. El remitente del testimonio recibe una insignia de verificación que confirma que su empresa ha sido validada. Esto añade una capa extra de credibilidad, especialmente relevante en el mercado B2B.',
   },
 ]
 
@@ -298,7 +298,7 @@ export default function MejoresHerramientasTestimoniosPage() {
         <section className="mt-12">
           <h2 className="text-2xl font-bold text-gray-900">Tabla resumen</h2>
           <p className="mt-4 text-gray-600">
-            Antes de entrar en detalle, aqui tienes un resumen rapido de las 7 herramientas que analizamos:
+            Antes de entrar en detalle, aquí tienes un resumen rápido de las 7 herramientas que analizamos:
           </p>
           <div className="mt-8 overflow-x-auto">
             <table className="w-full text-left text-sm">
@@ -334,7 +334,7 @@ export default function MejoresHerramientasTestimoniosPage() {
 
         {/* Detailed Reviews */}
         <section className="mt-16">
-          <h2 className="text-2xl font-bold text-gray-900">Analisis detallado de cada herramienta</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Análisis detallado de cada herramienta</h2>
           <p className="mt-4 text-gray-600">
             A continuacion, analizamos cada herramienta en profundidad. Incluimos descripcion, precios, pros, contras
             y para quien es ideal cada una.
@@ -423,15 +423,15 @@ export default function MejoresHerramientasTestimoniosPage() {
           <h2 className="text-2xl font-bold text-gray-900">¿Como elegir la herramienta adecuada?</h2>
           <p className="mt-4 text-gray-600 leading-7">
             La eleccion de la herramienta de testimonios depende de varios factores clave. Aqui te damos una guia
-            rapida para tomar la decision correcta:
+            rápida para tomar la decision correcta:
           </p>
           <div className="mt-6 space-y-4">
             <div className="rounded-xl border border-gray-200 p-6">
               <h3 className="font-semibold text-gray-900">Si tu mercado es hispanohablante → Opinafy</h3>
               <p className="mt-2 text-sm text-gray-600">
-                Es la unica plataforma con experiencia completa en español. Tus clientes recibiran formularios en
+                Es la única plataforma con experiencia completa en español. Tus clientes recibiran formularios en
                 su idioma, lo que aumenta significativamente la tasa de respuesta. Ademas, los precios en EUR y
-                el soporte en español lo convierten en la opcion mas logica.
+                el soporte en español lo convierten en la opcion más logica.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 p-6">
@@ -443,7 +443,7 @@ export default function MejoresHerramientasTestimoniosPage() {
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 p-6">
-              <h3 className="font-semibold text-gray-900">Si quieres reputacion publica → Trustpilot o Google Reviews</h3>
+              <h3 className="font-semibold text-gray-900">Si quieres reputacion pública → Trustpilot o Google Reviews</h3>
               <p className="mt-2 text-sm text-gray-600">
                 Si tu objetivo es tener reseñas publicas visibles en buscadores, estas plataformas son las indicadas.
                 Ten en cuenta que no tendras control total sobre las reseñas y los planes de pago de Trustpilot son
@@ -464,13 +464,13 @@ export default function MejoresHerramientasTestimoniosPage() {
         <section className="mt-16">
           <h2 className="text-2xl font-bold text-gray-900">Conclusion</h2>
           <p className="mt-4 text-gray-600 leading-7">
-            El mercado de herramientas de testimonios ha madurado considerablemente en los ultimos años, y en 2026
+            El mercado de herramientas de testimonios ha madurado considerablemente en los últimos años, y en 2026
             hay opciones para todos los presupuestos y necesidades. Sin embargo, la gran mayoria de estas herramientas
             estan diseñadas para el mercado anglosajón, lo que deja una brecha importante para los negocios
             hispanohablantes.
           </p>
           <p className="mt-4 text-gray-600 leading-7">
-            <strong>Opinafy llena esa brecha.</strong> Es la unica plataforma de testimonios construida nativamente
+            <strong>Opinafy llena esa brecha.</strong> Es la única plataforma de testimonios construida nativamente
             en español, con precios en euros, verificación de empresa y soporte en tu idioma. Para cualquier negocio
             que opere en España o Latinoamerica, es la opcion que ofrece la mejor experiencia tanto para ti como para
             tus clientes.
@@ -478,11 +478,11 @@ export default function MejoresHerramientasTestimoniosPage() {
           <p className="mt-4 text-gray-600 leading-7">
             Dicho esto, cada negocio es diferente. Si operas exclusivamente en ingles o necesitas funcionalidades muy
             especificas como un amplio catalogo de integraciones, herramientas como Testimonial.to o Senja pueden ser
-            buenas alternativas. Y si necesitas reputacion publica, combinar Opinafy con Google Reviews o Trustpilot
-            puede ser la estrategia mas completa.
+            buenas alternativas. Y si necesitas reputacion pública, combinar Opinafy con Google Reviews o Trustpilot
+            puede ser la estrategia más completa.
           </p>
           <p className="mt-4 text-gray-600 leading-7">
-            Lo importante es empezar a recopilar testimonios. La prueba social es uno de los factores mas influyentes
+            Lo importante es empezar a recopilar testimonios. La prueba social es uno de los factores más influyentes
             en la decision de compra, y cuanto antes empieces a construir tu base de testimonios, antes veras
             resultados en tus conversiones.
           </p>

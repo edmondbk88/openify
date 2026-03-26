@@ -34,7 +34,7 @@ const guides = [
   {
     name: 'Shopify',
     slug: 'shopify',
-    description: 'Agrega testimonios a tu tienda Shopify editando el tema, con secciones personalizadas o en paginas especificas.',
+    description: 'Agrega testimonios a tu tienda Shopify editando el tema, con secciones personalizadas o en páginas especificas.',
     color: 'bg-green-100 text-green-700',
     iconColor: 'text-green-600',
     icon: (
@@ -64,7 +64,7 @@ const guides = [
   {
     name: 'Webflow',
     slug: 'webflow',
-    description: 'Integra Opinafy en tu sitio Webflow con codigo personalizado del proyecto, por pagina o con elementos Embed.',
+    description: 'Integra Opinafy en tu sitio Webflow con código personalizado del proyecto, por página o con elementos Embed.',
     color: 'bg-blue-100 text-blue-700',
     iconColor: 'text-blue-600',
     icon: (
@@ -152,7 +152,7 @@ export default function GuiasIndexPage() {
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900">No encuentras tu plataforma?</h2>
           <p className="mx-auto mt-3 max-w-xl text-gray-600">
-            Opinafy funciona con cualquier sitio web que acepte HTML. Solo necesitas pegar una linea de codigo.
+            Opinafy funciona con cualquier sitio web que acepte HTML. Solo necesitas pegar una linea de código.
             Si necesitas ayuda, contactanos.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

@@ -88,7 +88,7 @@ export async function GET(request: NextRequest) {
       labelEn: 'Testimonials section',
       passed: hasTestimonials,
       score: 25,
-      recommendation: 'Anade una seccion de testimonios de clientes en tu web para aumentar la confianza.',
+      recommendation: 'Añade una seccion de testimonios de clientes en tu web para aumentar la confianza.',
       recommendationEn: 'Add a customer testimonials section to your website to build trust.',
       ctaLink: '/caracteristicas',
     })
@@ -114,7 +114,7 @@ export async function GET(request: NextRequest) {
       labelEn: 'Structured data (Schema.org)',
       passed: hasStructuredData,
       score: 15,
-      recommendation: 'Anade datos estructurados de tipo Review o AggregateRating para aparecer con estrellas en Google.',
+      recommendation: 'Añade datos estructurados de tipo Review o AggregateRating para aparecer con estrellas en Google.',
       recommendationEn: 'Add Review or AggregateRating structured data to show stars in Google results.',
       ctaLink: '/caracteristicas',
     })
@@ -142,7 +142,7 @@ export async function GET(request: NextRequest) {
       labelEn: 'Trust badges',
       passed: hasTrustBadges,
       score: 10,
-      recommendation: 'Anade insignias de confianza (verificado, seguro, garantia) para reducir la friccion de compra.',
+      recommendation: 'Añade insignias de confianza (verificado, seguro, garantia) para reducir la friccion de compra.',
       recommendationEn: 'Add trust badges (verified, secure, guarantee) to reduce purchase friction.',
       ctaLink: '/verificado-badge',
     })

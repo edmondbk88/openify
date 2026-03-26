@@ -143,7 +143,7 @@ export function MiniSiteGallery({
             onClick={() => setVisibleCount((prev) => prev + 12)}
             className="inline-flex h-12 items-center rounded-lg border border-gray-300 bg-white px-8 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50"
           >
-            Ver mas plantillas ({filtered.length - visibleCount} restantes)
+            Ver más plantillas ({filtered.length - visibleCount} restantes)
           </button>
         </div>
       )}

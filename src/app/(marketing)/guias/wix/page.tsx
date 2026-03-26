@@ -62,7 +62,7 @@ export default function WixGuidePage() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Agrega testimonios de clientes verificados a tu sitio Wix en menos de 5 minutos.
-            Sin necesidad de conocimientos tecnicos.
+            Sin necesidad de conocimientos técnicos.
           </p>
         </div>
       </section>
@@ -86,28 +86,28 @@ export default function WixGuidePage() {
         <StepCard number={2} title="Obtener el código de integración">
           <ol className="ml-4 list-decimal space-y-2">
             <li>Dentro de tu proyecto, ve a la seccion <strong>&quot;Widget&quot;</strong>.</li>
-            <li>Personaliza el diseno: elige layout (carrusel, cuadricula, muro...), colores y tipografia.</li>
+            <li>Personaliza el diseño: elige layout (carrusel, cuadricula, muro...), colores y tipografia.</li>
             <li>Copia el código de integración que aparece debajo de la vista previa.</li>
           </ol>
-          <p className="mt-3">El codigo tendra esta forma:</p>
+          <p className="mt-3">El código tendra esta forma:</p>
           <CodeBlock code={embedCode} />
           <p className="text-sm text-gray-500">
             Sustituye <code className="rounded bg-gray-200 px-1 text-xs">TU_PROJECT_ID</code> por el ID real de tu proyecto.
           </p>
         </StepCard>
 
-        <StepCard number={3} title="Agrega el codigo a Wix">
+        <StepCard number={3} title="Agrega el código a Wix">
           <p className="mb-4">Tienes dos opciones para insertar el widget en tu sitio Wix:</p>
 
           <div className="space-y-6">
             <div>
               <h4 className="mb-2 font-semibold text-gray-900">Opcion A: Elemento HTML embebido (recomendado)</h4>
               <ol className="ml-4 list-decimal space-y-2">
-                <li>Abre el <strong>Editor de Wix</strong> y navega a la pagina donde quieres mostrar los testimonios.</li>
+                <li>Abre el <strong>Editor de Wix</strong> y navega a la página donde quieres mostrar los testimonios.</li>
                 <li>Haz clic en <strong>&quot;Agregar&quot;</strong> (icono +) en la barra lateral izquierda.</li>
                 <li>Selecciona <strong>&quot;Embeds&quot;</strong> &gt; <strong>&quot;HTML embebido&quot;</strong> (o &quot;Embed a Widget&quot;).</li>
-                <li>Arrastra el elemento a la posicion deseada en tu pagina.</li>
-                <li>Haz clic en <strong>&quot;Introducir codigo&quot;</strong> y pega el codigo de Opinafy.</li>
+                <li>Arrastra el elemento a la posicion deseada en tu página.</li>
+                <li>Haz clic en <strong>&quot;Introducir código&quot;</strong> y pega el código de Opinafy.</li>
                 <li>Haz clic en <strong>&quot;Actualizar&quot;</strong> y luego <strong>&quot;Publicar&quot;</strong>.</li>
               </ol>
               <div className="mt-3 rounded-lg bg-gray-100 p-4 text-center text-sm text-gray-500">
@@ -121,8 +121,8 @@ export default function WixGuidePage() {
               <ol className="ml-4 list-decimal space-y-2">
                 <li>Ve a <strong>Wix App Market</strong> y busca <strong>&quot;Custom Element&quot;</strong> o <strong>&quot;HTML iFrame&quot;</strong>.</li>
                 <li>Instala la aplicacion en tu sitio.</li>
-                <li>Configura la aplicacion pegando el codigo de Opinafy.</li>
-                <li>Ajusta el tamano del elemento y publica tu sitio.</li>
+                <li>Configura la aplicacion pegando el código de Opinafy.</li>
+                <li>Ajusta el tamaño del elemento y pública tu sitio.</li>
               </ol>
             </div>
 
@@ -130,8 +130,8 @@ export default function WixGuidePage() {
               <h4 className="mb-2 font-semibold text-gray-900">Opcion C: Wix Velo (usuarios avanzados)</h4>
               <p className="mb-2">Si usas Wix Velo (antes Corvid):</p>
               <ol className="ml-4 list-decimal space-y-2">
-                <li>Agrega un elemento <strong>HTML personalizado</strong> (Custom Element) a tu pagina.</li>
-                <li>En el codigo del componente, carga el script de Opinafy dinamicamente.</li>
+                <li>Agrega un elemento <strong>HTML personalizado</strong> (Custom Element) a tu página.</li>
+                <li>En el código del componente, carga el script de Opinafy dinamicamente.</li>
                 <li>Esto te permite controlar cuando y donde se muestra el widget.</li>
               </ol>
             </div>
@@ -141,7 +141,7 @@ export default function WixGuidePage() {
         <StepCard number={4} title="Verifica que funciona">
           <ol className="ml-4 list-decimal space-y-2">
             <li>Publica tu sitio Wix y visitalo.</li>
-            <li>El widget deberia cargar automaticamente mostrando tus testimonios aprobados.</li>
+            <li>El widget deberia cargar automáticamente mostrando tus testimonios aprobados.</li>
             <li>Si no ves nada, verifica que tienes testimonios con estado <strong>&quot;Aprobado&quot;</strong> en tu panel.</li>
             <li>Comprueba que el ID del proyecto es correcto.</li>
           </ol>
@@ -158,9 +158,9 @@ export default function WixGuidePage() {
           <h3 className="mb-3 text-lg font-semibold text-blue-900">Consejos para Wix</h3>
           <ul className="ml-4 list-disc space-y-2 text-sm text-blue-800">
             <li>Ajusta la altura del elemento HTML embebido para que se muestre correctamente todo el contenido del widget.</li>
-            <li>Usa el layout <strong>&quot;Carrusel&quot;</strong> si tu pagina tiene un ancho limitado.</li>
+            <li>Usa el layout <strong>&quot;Carrusel&quot;</strong> si tu página tiene un ancho limitado.</li>
             <li>Usa el layout <strong>&quot;Cuadricula&quot;</strong> o <strong>&quot;Muro&quot;</strong> en secciones de ancho completo.</li>
-            <li>El widget se adapta automaticamente al ancho del contenedor (responsive).</li>
+            <li>El widget se adapta automáticamente al ancho del contenedor (responsive).</li>
             <li>Funciona tanto en sitios Wix clasicos como en Wix Studio.</li>
           </ul>
         </div>
@@ -181,12 +181,12 @@ export default function WixGuidePage() {
                 a: 'Si. El widget funciona tanto en el editor clasico de Wix como en Wix Studio. Solo necesitas agregar un elemento HTML embebido.',
               },
               {
-                q: 'Puedo personalizar el tamano del widget?',
-                a: 'Si. El widget se adapta automaticamente al ancho del contenedor. Puedes ajustar la altura del elemento HTML embebido en Wix para controlar el espacio visible.',
+                q: 'Puedo personalizar el tamaño del widget?',
+                a: 'Si. El widget se adapta automáticamente al ancho del contenedor. Puedes ajustar la altura del elemento HTML embebido en Wix para controlar el espacio visible.',
               },
               {
-                q: 'Necesito actualizar el codigo cuando agrego nuevos testimonios?',
-                a: 'No. El widget se actualiza automaticamente. Cuando apruebas un nuevo testimonio, aparece en tu sitio sin tocar codigo.',
+                q: 'Necesito actualizar el código cuando agrego nuevos testimonios?',
+                a: 'No. El widget se actualiza automáticamente. Cuando apruebas un nuevo testimonio, aparece en tu sitio sin tocar código.',
               },
               {
                 q: 'Es compatible con dominios personalizados en Wix?',

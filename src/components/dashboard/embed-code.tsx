@@ -82,7 +82,7 @@ export default function EmbedCode({ projectId }: EmbedCodeProps) {
         <p className="text-xs text-gray-500 mb-3">
           {locale === 'en'
             ? 'Filter testimonials by tags using the data-tags attribute. This lets you show different testimonials on different pages.'
-            : 'Filtra testimonios por etiquetas usando el atributo data-tags. Esto te permite mostrar diferentes testimonios en distintas paginas.'}
+            : 'Filtra testimonios por etiquetas usando el atributo data-tags. Esto te permite mostrar diferentes testimonios en distintas páginas.'}
         </p>
         <div className="overflow-x-auto rounded bg-gray-900 p-3">
           <pre className="text-xs leading-relaxed text-gray-100">

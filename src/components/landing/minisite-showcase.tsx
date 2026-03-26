@@ -87,7 +87,7 @@ const FEATURES = [
     description: 'Disenos adaptados a cada sector profesional',
   },
   {
-    title: 'Verificacion de empresa automatica',
+    title: 'Verificacion de empresa automática',
     description: 'Sello de confianza para tus clientes',
   },
   {
@@ -114,7 +114,7 @@ export function MiniSiteShowcase() {
             Mini Sitio Opinafy
           </span>
           <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            Tu pagina profesional de testimonios
+            Tu página profesional de testimonios
           </h2>
           <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-indigo-200">
             No tienes web? No la necesitas. Con Opinafy tu mini sitio recopila y muestra testimonios
@@ -151,7 +151,7 @@ export function MiniSiteShowcase() {
                 Crea tu mini sitio gratis
               </Link>
               <p className="mt-3 text-sm text-indigo-300">
-                Sin tarjeta de credito. Configura tu pagina en 2 minutos.
+                Sin tarjeta de credito. Configura tu página en 2 minutos.
               </p>
             </div>
           </div>

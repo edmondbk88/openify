@@ -75,7 +75,7 @@ export default function PreciosPage() {
     {
       question: '¿Puedo cancelar mi suscripción en cualquier momento?',
       answer:
-        'Por supuesto. Puedes cancelar tu suscripción en cualquier momento sin penalizaciones. Seguirás teniendo acceso a las funciones de tu plan hasta el final del periodo de facturación actual. Después, tu cuenta pasará automáticamente al plan gratuito.',
+        'Por supuesto. Puedes cancelar tu suscripción en cualquier momento sin penalizaciones. Seguirás teniendo acceso a las funciones de tu plan hasta el final del período de facturación actual. Después, tu cuenta pasará automáticamente al plan gratuito.',
     },
   ])
 
@@ -310,7 +310,7 @@ export default function PreciosPage() {
               </summary>
               <div className="px-6 pb-4 text-sm leading-relaxed text-gray-600">
                 Por supuesto. Puedes cancelar tu suscripción en cualquier momento sin penalizaciones.
-                Seguirás teniendo acceso a las funciones de tu plan hasta el final del periodo de
+                Seguirás teniendo acceso a las funciones de tu plan hasta el final del período de
                 facturación actual. Después, tu cuenta pasará automáticamente al plan gratuito.
               </div>
             </details>

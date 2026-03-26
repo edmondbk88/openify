@@ -120,7 +120,7 @@ export default async function AyudaGuidePage({ params }: Props) {
       {/* CTA */}
       <section className="border-t border-gray-200 bg-gray-50">
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900">Necesitas mas ayuda?</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Necesitas más ayuda?</h2>
           <p className="mx-auto mt-3 max-w-xl text-gray-600">
             Si tienes alguna duda, contactanos y te responderemos lo antes posible.
           </p>

@@ -6,7 +6,7 @@ import { Footer } from '@/components/landing/footer'
 export const metadata: Metadata = {
   title: 'Programa de Certificación Opinafy - Insignias Bronze, Silver, Gold y Platinum | Opinafy',
   description:
-    'Obtén tu insignia de certificación Opinafy. Demuestra la autenticidad de tus testimonios con insignias Bronze, Silver, Gold o Platinum segun el numero de opiniones verificadas.',
+    'Obtén tu insignia de certificación Opinafy. Demuestra la autenticidad de tus testimonios con insignias Bronze, Silver, Gold o Platinum segun el número de opiniones verificadas.',
   keywords: [
     'certificación testimonios',
     'insignia testimonios verificados',
@@ -46,7 +46,7 @@ const tiers = [
     benefits: [
       'Insignia Bronze para tu web',
       'Demuestra que tienes testimonios reales',
-      'Aumenta la confianza basica de visitantes',
+      'Aumenta la confianza básica de visitantes',
     ],
   },
   {

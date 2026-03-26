@@ -85,7 +85,7 @@ export default function AyudaIndexPage() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Encuentra guias detalladas sobre todas las funciones de Opinafy.
-            Desde los primeros pasos hasta las herramientas mas avanzadas.
+            Desde los primeros pasos hasta las herramientas más avanzadas.
           </p>
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function AyudaIndexPage() {
           <h2 className="text-2xl font-bold text-gray-900">No encuentras lo que buscas?</h2>
           <p className="mx-auto mt-3 max-w-xl text-gray-600">
             Si tienes alguna pregunta que no esta cubierta en nuestras guias, no dudes en contactarnos.
-            Estamos aqui para ayudarte.
+            Estamos aquí para ayudarte.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link

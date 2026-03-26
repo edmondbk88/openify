@@ -62,7 +62,7 @@ export default function SquarespaceGuidePage() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Agrega testimonios de clientes verificados a tu sitio Squarespace en menos de 5 minutos.
-            Perfectamente integrado con tu diseno.
+            Perfectamente integrado con tu diseño.
           </p>
         </div>
       </section>
@@ -86,46 +86,46 @@ export default function SquarespaceGuidePage() {
         <StepCard number={2} title="Obtener el código de integración">
           <ol className="ml-4 list-decimal space-y-2">
             <li>Dentro de tu proyecto, ve a la seccion <strong>&quot;Widget&quot;</strong>.</li>
-            <li>Personaliza el diseno: elige layout (carrusel, cuadricula, muro...), colores y tipografia.</li>
+            <li>Personaliza el diseño: elige layout (carrusel, cuadricula, muro...), colores y tipografia.</li>
             <li>Copia el código de integración que aparece debajo de la vista previa.</li>
           </ol>
-          <p className="mt-3">El codigo tendra esta forma:</p>
+          <p className="mt-3">El código tendra esta forma:</p>
           <CodeBlock code={embedCode} />
           <p className="text-sm text-gray-500">
             Sustituye <code className="rounded bg-gray-200 px-1 text-xs">TU_PROJECT_ID</code> por el ID real de tu proyecto.
           </p>
         </StepCard>
 
-        <StepCard number={3} title="Agrega el codigo a Squarespace">
+        <StepCard number={3} title="Agrega el código a Squarespace">
           <p className="mb-4">Tienes dos opciones para insertar el widget en tu sitio Squarespace:</p>
 
           <div className="space-y-6">
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion A: Bloque de codigo (recomendado)</h4>
+              <h4 className="mb-2 font-semibold text-gray-900">Opcion A: Bloque de código (recomendado)</h4>
               <ol className="ml-4 list-decimal space-y-2">
-                <li>Abre el <strong>Editor de Squarespace</strong> y navega a la pagina donde quieres los testimonios.</li>
-                <li>Haz clic en <strong>&quot;Editar&quot;</strong> en la pagina.</li>
-                <li>Haz clic en un punto de insercion y selecciona <strong>&quot;Bloque de codigo&quot;</strong> (Code Block).</li>
-                <li>Pega el codigo de Opinafy en el bloque.</li>
+                <li>Abre el <strong>Editor de Squarespace</strong> y navega a la página donde quieres los testimonios.</li>
+                <li>Haz clic en <strong>&quot;Editar&quot;</strong> en la página.</li>
+                <li>Haz clic en un punto de insercion y selecciona <strong>&quot;Bloque de código&quot;</strong> (Code Block).</li>
+                <li>Pega el código de Opinafy en el bloque.</li>
                 <li>Desactiva la opcion <strong>&quot;Mostrar fuente&quot;</strong> (Display Source).</li>
                 <li>Haz clic en <strong>&quot;Aplicar&quot;</strong> y luego <strong>&quot;Guardar&quot;</strong>.</li>
               </ol>
               <div className="mt-3 rounded-lg bg-gray-100 p-4 text-center text-sm text-gray-500">
-                [Captura de pantalla: bloque de codigo en Squarespace]
+                [Captura de pantalla: bloque de código en Squarespace]
               </div>
               <div className="mt-2 rounded-lg bg-amber-50 border border-amber-200 p-3">
                 <p className="text-sm text-amber-800">
-                  <strong>Nota:</strong> Los bloques de codigo solo estan disponibles en planes Business y superiores de Squarespace.
+                  <strong>Nota:</strong> Los bloques de código solo estan disponibles en planes Business y superiores de Squarespace.
                 </p>
               </div>
             </div>
 
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion B: Inyeccion de codigo (Code Injection)</h4>
-              <p className="mb-2">Si quieres que los testimonios aparezcan en todas las paginas:</p>
+              <h4 className="mb-2 font-semibold text-gray-900">Opcion B: Inyeccion de código (Code Injection)</h4>
+              <p className="mb-2">Si quieres que los testimonios aparezcan en todas las páginas:</p>
               <ol className="ml-4 list-decimal space-y-2">
-                <li>Ve a <strong>Ajustes &gt; Avanzado &gt; Inyeccion de codigo</strong> (Settings &gt; Advanced &gt; Code Injection).</li>
-                <li>Pega el codigo de Opinafy en la seccion <strong>&quot;Footer&quot;</strong>.</li>
+                <li>Ve a <strong>Ajustes &gt; Avanzado &gt; Inyeccion de código</strong> (Settings &gt; Advanced &gt; Code Injection).</li>
+                <li>Pega el código de Opinafy en la seccion <strong>&quot;Footer&quot;</strong>.</li>
                 <li>Haz clic en <strong>&quot;Guardar&quot;</strong>.</li>
               </ol>
               <CodeBlock code={`<!-- Opinafy Testimonials Widget -->
@@ -137,13 +137,13 @@ ${embedCode}`} />
             </div>
 
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion C: Inyeccion por pagina</h4>
-              <p className="mb-2">Para agregar testimonios solo en una pagina especifica:</p>
+              <h4 className="mb-2 font-semibold text-gray-900">Opcion C: Inyeccion por página</h4>
+              <p className="mb-2">Para agregar testimonios solo en una página específica:</p>
               <ol className="ml-4 list-decimal space-y-2">
-                <li>Abre la pagina deseada en el editor de Squarespace.</li>
+                <li>Abre la página deseada en el editor de Squarespace.</li>
                 <li>Ve a la <strong>configuración de la página</strong> (icono de engranaje).</li>
                 <li>Selecciona la pestana <strong>&quot;Avanzado&quot;</strong> (Advanced).</li>
-                <li>Pega el codigo de Opinafy en el campo <strong>&quot;Inyeccion de codigo en la cabecera de la pagina&quot;</strong>.</li>
+                <li>Pega el código de Opinafy en el campo <strong>&quot;Inyeccion de código en la cabecera de la página&quot;</strong>.</li>
                 <li>Guarda los cambios.</li>
               </ol>
             </div>
@@ -152,15 +152,15 @@ ${embedCode}`} />
 
         <StepCard number={4} title="Verifica que funciona">
           <ol className="ml-4 list-decimal space-y-2">
-            <li>Visita tu sitio Squarespace y navega a la pagina donde insertaste el widget.</li>
-            <li>Deberia cargar automaticamente mostrando tus testimonios aprobados.</li>
+            <li>Visita tu sitio Squarespace y navega a la página donde insertaste el widget.</li>
+            <li>Deberia cargar automáticamente mostrando tus testimonios aprobados.</li>
             <li>Si no ves nada, verifica que tienes testimonios con estado <strong>&quot;Aprobado&quot;</strong> en tu panel.</li>
             <li>Comprueba que el ID del proyecto es correcto.</li>
           </ol>
           <div className="mt-3 rounded-lg bg-gray-50 border border-gray-200 p-4">
             <p className="text-sm text-gray-700">
               <strong>Consejo:</strong> Squarespace puede tardar unos minutos en reflejar los cambios.
-              Si no ves el widget inmediatamente, espera unos minutos y recarga la pagina.
+              Si no ves el widget inmediatamente, espera unos minutos y recarga la página.
             </p>
           </div>
         </StepCard>
@@ -170,7 +170,7 @@ ${embedCode}`} />
           <h3 className="mb-3 text-lg font-semibold text-gray-900">Consejos para Squarespace</h3>
           <ul className="ml-4 list-disc space-y-2 text-sm text-gray-700">
             <li>El widget se integra perfectamente con la estetica minimalista de Squarespace.</li>
-            <li>Usa el layout <strong>&quot;Muro&quot;</strong> para un efecto visual tipo masonry que combina bien con los disenos de Squarespace.</li>
+            <li>Usa el layout <strong>&quot;Muro&quot;</strong> para un efecto visual tipo masonry que combina bien con los diseños de Squarespace.</li>
             <li>Usa el tema <strong>&quot;Oscuro&quot;</strong> si tu sitio tiene un fondo oscuro.</li>
             <li>El widget es totalmente responsive y se adapta a todos los breakpoints de Squarespace.</li>
             <li>Funciona con todas las plantillas de Squarespace, incluyendo la version 7.1.</li>
@@ -194,15 +194,15 @@ ${embedCode}`} />
               },
               {
                 q: 'Necesito un plan Business de Squarespace?',
-                a: 'Para usar bloques de codigo, si. Sin embargo, puedes usar la inyeccion de codigo general (disponible en todos los planes de pago) como alternativa.',
+                a: 'Para usar bloques de código, si. Sin embargo, puedes usar la inyeccion de código general (disponible en todos los planes de pago) como alternativa.',
               },
               {
-                q: 'Puedo personalizar el diseno del widget?',
-                a: 'Por supuesto. Desde el panel de Opinafy puedes cambiar colores, tipografia, layout, bordes y mas para que combine perfectamente con tu sitio Squarespace.',
+                q: 'Puedo personalizar el diseño del widget?',
+                a: 'Por supuesto. Desde el panel de Opinafy puedes cambiar colores, tipografia, layout, bordes y más para que combine perfectamente con tu sitio Squarespace.',
               },
               {
-                q: 'Necesito actualizar el codigo cuando agrego nuevos testimonios?',
-                a: 'No. El widget se actualiza automaticamente. Cuando apruebas un nuevo testimonio, aparece en tu sitio sin tocar codigo.',
+                q: 'Necesito actualizar el código cuando agrego nuevos testimonios?',
+                a: 'No. El widget se actualiza automáticamente. Cuando apruebas un nuevo testimonio, aparece en tu sitio sin tocar código.',
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-lg border border-gray-200 bg-white p-5">

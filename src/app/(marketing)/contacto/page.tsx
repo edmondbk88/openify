@@ -7,7 +7,7 @@ import Link from 'next/link'
 export const metadata: Metadata = {
   title: 'Contacto - Opinafy',
   description:
-    'Contacta con el equipo de Opinafy. Estamos aqui para ayudarte con cualquier duda sobre testimonios, widgets o tu cuenta.',
+    'Contacta con el equipo de Opinafy. Estamos aquí para ayudarte con cualquier duda sobre testimonios, widgets o tu cuenta.',
   alternates: {
     canonical: 'https://opinafy.com/contacto',
     languages: {
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Contacto - Opinafy',
     description:
-      'Contacta con el equipo de Opinafy. Estamos aqui para ayudarte.',
+      'Contacta con el equipo de Opinafy. Estamos aquí para ayudarte.',
     url: 'https://opinafy.com/contacto',
   },
 }

@@ -194,7 +194,7 @@ export default function DescargasPage() {
                     </span>
                   </div>
                   <p className="mt-2 text-gray-600">
-                    Extension para WooCommerce que muestra testimonios automaticamente en las paginas de producto.
+                    Extension para WooCommerce que muestra testimonios automáticamente en las páginas de producto.
                     Soporta Project ID global o por producto.
                   </p>
 
@@ -229,10 +229,10 @@ export default function DescargasPage() {
                       <li>Descarga el archivo ZIP de WooCommerce.</li>
                       <li>
                         En WordPress, ve a{' '}
-                        <strong>Plugins &rarr; Anadir nuevo &rarr; Subir plugin</strong>.
+                        <strong>Plugins &rarr; Añadir nuevo &rarr; Subir plugin</strong>.
                       </li>
                       <li>Sube el ZIP y activa el plugin.</li>
-                      <li>Los testimonios apareceran automaticamente en las paginas de producto.</li>
+                      <li>Los testimonios apareceran automáticamente en las páginas de producto.</li>
                     </ol>
                   </div>
                 </div>
@@ -417,7 +417,7 @@ export default function DescargasPage() {
                       <li>
                         Desactiva la opción &quot;Display Source&quot;.
                       </li>
-                      <li>Guarda y publica.</li>
+                      <li>Guarda y pública.</li>
                     </ol>
                   </div>
 
@@ -458,7 +458,7 @@ export default function DescargasPage() {
                   </div>
                   <p className="mt-2 text-gray-600">
                     Modulo oficial para PrestaShop. Configura tu Project ID desde el back office
-                    y los testimonios aparecen automaticamente en el footer de tu tienda.
+                    y los testimonios aparecen automáticamente en el footer de tu tienda.
                   </p>
 
                   <div className="mt-6">
@@ -518,20 +518,20 @@ export default function DescargasPage() {
                 <div className="flex-1">
                   <h2 className="text-2xl font-bold text-gray-900">Webflow</h2>
                   <p className="mt-2 text-gray-600">
-                    Integra Opinafy en tu sitio Webflow usando codigo personalizado del proyecto,
-                    codigo por pagina o elementos Embed.
+                    Integra Opinafy en tu sitio Webflow usando código personalizado del proyecto,
+                    código por página o elementos Embed.
                   </p>
 
                   <div className="mt-6 rounded-lg bg-gray-50 p-4">
                     <h3 className="text-sm font-semibold text-gray-900">
-                      Instalacion rapida:
+                      Instalacion rápida:
                     </h3>
                     <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
                       <li>
                         Ve a <strong>Project Settings &rarr; Custom Code</strong>.
                       </li>
                       <li>
-                        Pega el codigo de Opinafy en el campo <strong>Footer Code</strong>.
+                        Pega el código de Opinafy en el campo <strong>Footer Code</strong>.
                       </li>
                       <li>
                         O usa un elemento <strong>Embed</strong> para una posicion exacta.
@@ -552,7 +552,7 @@ export default function DescargasPage() {
                     >
                       guia completa para Webflow
                     </Link>{' '}
-                    para mas detalles.
+                    para más detalles.
                   </p>
                 </div>
               </div>
@@ -592,14 +592,14 @@ export default function DescargasPage() {
 
                   <div className="mt-6 rounded-lg bg-gray-50 p-4">
                     <h3 className="text-sm font-semibold text-gray-900">
-                      Instalacion rapida:
+                      Instalacion rápida:
                     </h3>
                     <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
                       <li>
                         En GTM, crea una nueva etiqueta de tipo <strong>HTML personalizado</strong>.
                       </li>
-                      <li>Pega el codigo de Opinafy.</li>
-                      <li>Configura el activador (All Pages o paginas especificas).</li>
+                      <li>Pega el código de Opinafy.</li>
+                      <li>Configura el activador (All Pages o páginas especificas).</li>
                       <li>Publica los cambios.</li>
                     </ol>
                   </div>
@@ -612,7 +612,7 @@ export default function DescargasPage() {
                     >
                       guia completa para Google Tag Manager
                     </Link>{' '}
-                    para mas detalles.
+                    para más detalles.
                   </p>
                 </div>
               </div>

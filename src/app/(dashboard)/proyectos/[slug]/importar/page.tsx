@@ -99,7 +99,7 @@ export default function ImportarPage() {
         const text = event.target?.result as string
         const lines = text.split('\n').filter(l => l.trim())
         if (lines.length < 2) {
-          setError('El archivo CSV debe tener al menos una fila de datos ademas del encabezado.')
+          setError('El archivo CSV debe tener al menos una fila de datos además del encabezado.')
           return
         }
 
@@ -311,7 +311,7 @@ export default function ImportarPage() {
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
               </svg>
-              Anadir otro
+              Añadir otro
             </button>
           </div>
 
@@ -372,7 +372,7 @@ export default function ImportarPage() {
                   onChange={(e) => updateTestimonial(index, 'content', e.target.value)}
                   rows={3}
                   className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                  placeholder="Pega aqui el texto de la resena..."
+                  placeholder="Pega aquí el texto de la reseña..."
                 />
               </div>
 
@@ -405,7 +405,7 @@ export default function ImportarPage() {
 
               <div className="mt-4">
                 <label className="mb-1 block text-sm font-medium text-gray-700">
-                  URL de la resena original
+                  URL de la reseña original
                 </label>
                 <input
                   type="url"
@@ -457,7 +457,7 @@ export default function ImportarPage() {
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
               </svg>
-              Anadir otro
+              Añadir otro
             </button>
           </div>
 
@@ -535,7 +535,7 @@ export default function ImportarPage() {
                   onChange={(e) => updateTestimonial(index, 'content', e.target.value)}
                   rows={3}
                   className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
-                  placeholder="Pega aqui el texto de la resena..."
+                  placeholder="Pega aquí el texto de la reseña..."
                 />
               </div>
 

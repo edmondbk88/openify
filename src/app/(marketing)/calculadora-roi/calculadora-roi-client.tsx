@@ -119,7 +119,7 @@ export default function CalculadoraROIClient() {
                     onChange={(e) => setVisitors(Number(e.target.value) || 0)}
                     className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
                   />
-                  <p className="mt-1 text-xs text-gray-500">Visitas unicas a tu web por mes</p>
+                  <p className="mt-1 text-xs text-gray-500">Visitas únicas a tu web por mes</p>
                 </div>
 
                 <div>
@@ -198,7 +198,7 @@ export default function CalculadoraROIClient() {
               <div className="rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-700 p-8 text-white shadow-lg">
                 <p className="text-sm font-medium uppercase tracking-wide text-indigo-200">Con Opinafy podrias ganar</p>
                 <p className="mt-3 text-5xl font-extrabold">
-                  +<AnimatedNumber value={additionalAnnual} prefix="€" /><span className="text-2xl font-bold">/ano</span>
+                  +<AnimatedNumber value={additionalAnnual} prefix="€" /><span className="text-2xl font-bold">/año</span>
                 </p>
                 <div className="mt-4 flex items-center gap-2">
                   <span className="text-sm text-indigo-200">ROI de tu inversion:</span>
@@ -225,9 +225,9 @@ export default function CalculadoraROIClient() {
           {/* Supporting stats */}
           <div className="mt-16 grid gap-6 sm:grid-cols-3">
             {[
-              { stat: '92%', desc: 'de consumidores leen resenas online antes de comprar', src: 'BrightLocal, 2025' },
+              { stat: '92%', desc: 'de consumidores leen reseñas online antes de comprar', src: 'BrightLocal, 2025' },
               { stat: '34%', desc: 'mas conversiones con testimonios en landing pages', src: 'VWO' },
-              { stat: '72%', desc: 'confian mas en negocios con testimonios positivos', src: 'BigCommerce' },
+              { stat: '72%', desc: 'confian más en negocios con testimonios positivos', src: 'BigCommerce' },
             ].map((item) => (
               <div key={item.stat} className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm">
                 <p className="text-4xl font-extrabold text-indigo-600">{item.stat}</p>

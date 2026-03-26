@@ -41,7 +41,7 @@ const screenshots = [
   },
   {
     title: 'Editor de widgets',
-    description: 'Interfaz de personalizacion con 100+ plantillas: grid, masonry, carrusel, terminal, polaroid y mas.',
+    description: 'Interfaz de personalizacion con 100+ plantillas: grid, masonry, carrusel, terminal, polaroid y más.',
   },
   {
     title: 'Formulario de recopilación',
@@ -49,7 +49,7 @@ const screenshots = [
   },
   {
     title: 'Mini sitio profesional',
-    description: 'Pagina de testimonios independiente para profesionales y negocios sin web propia.',
+    description: 'Página de testimonios independiente para profesionales y negocios sin web propia.',
   },
   {
     title: 'A/B Testing',
@@ -106,19 +106,19 @@ export default function PrensaPage() {
               <p className="text-gray-700 leading-relaxed mb-4">
                 Opinafy es la primera plataforma de gestión de testimonios de clientes creada nativamente en español.
                 Permite a negocios y profesionales recopilar, verificar y mostrar testimonios autenticos en sus sitios web
-                mediante widgets embebibles con mas de 100 plantillas profesionales.
+                mediante widgets embebibles con más de 100 plantillas profesionales.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 La plataforma ofrece verificación doble (por email y por dominio de empresa), grabación de video testimonios
                 directamente desde el navegador (sin subida de archivos para garantizar autenticidad), mini sitios profesionales
-                para quienes no tienen web propia, A/B testing integrado, analisis de sentimiento e importacion de resenas
+                para quienes no tienen web propia, A/B testing integrado, análisis de sentimiento e importacion de reseñas
                 desde Google Business, TripAdvisor y otras plataformas.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Fundada en marzo de 2026, Opinafy nacio para llenar el vacio en el mercado de herramientas de prueba social
-                para los mas de 580 millones de hispanohablantes en el mundo. Mientras todas las alternativas existentes
+                para los más de 580 millones de hispanohablantes en el mundo. Mientras todas las alternativas existentes
                 (Testimonial.to, Senja, Famewall) operan exclusivamente en ingles, Opinafy ofrece una experiencia completamente
-                nativa en espanol, ademas de soporte en ingles. Los planes comienzan en 5 euros al mes, siendo 3-4 veces mas
+                nativa en español, además de soporte en ingles. Los planes comienzan en 5 euros al mes, siendo 3-4 veces mas
                 asequible que la competencia.
               </p>
             </div>
@@ -223,9 +223,9 @@ export default function PrensaPage() {
                   <p className="text-indigo-600 font-medium">Fundador y CEO</p>
                   <p className="mt-3 text-gray-700 leading-relaxed">
                     Desarrollador full-stack con sede en Espana. Creo Opinafy tras detectar que no existia
-                    ninguna plataforma de testimonios nativa en espanol, a pesar de que el mercado SaaS
+                    ninguna plataforma de testimonios nativa en español, a pesar de que el mercado SaaS
                     hispanohablante crece un 19% anual. Su objetivo es democratizar el acceso a herramientas
-                    de prueba social para los mas de 580 millones de hispanohablantes en el mundo.
+                    de prueba social para los más de 580 millones de hispanohablantes en el mundo.
                   </p>
                   <div className="mt-4 flex gap-4">
                     <a

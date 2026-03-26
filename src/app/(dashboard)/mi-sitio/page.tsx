@@ -427,7 +427,7 @@ export default function MiSitioPage() {
                 }
               }}
               rows={3}
-              placeholder="Ej: Consultor de marketing digital con 10 anos de experiencia"
+              placeholder="Ej: Consultor de marketing digital con 10 años de experiencia"
               className="mt-1.5 w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             />
             <p className="mt-1 text-xs text-gray-400">

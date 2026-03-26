@@ -86,7 +86,7 @@ const industryCategories: Record<string, IndustryCategory> = {
 }
 
 /** City size tiers */
-export type CityTier = 'grande' | 'mediana' | 'pequena'
+export type CityTier = 'grande' | 'mediana' | 'pequeña'
 
 const cityTiers: Record<string, CityTier> = {
   madrid: 'grande',
@@ -104,11 +104,11 @@ const cityTiers: Record<string, CityTier> = {
   medellin: 'mediana',
   miami: 'mediana',
   malaga: 'mediana',
-  bilbao: 'pequena',
+  bilbao: 'pequeña',
   zaragoza: 'mediana',
-  alicante: 'pequena',
-  'palma-mallorca': 'pequena',
-  'las-palmas': 'pequena',
+  alicante: 'pequeña',
+  'palma-mallorca': 'pequeña',
+  'las-palmas': 'pequeña',
 }
 
 // ─── EXPANDED CITY DATA ────────────────────────────────────────────────
@@ -301,7 +301,7 @@ const industryInsights: Record<string, IndustryInsight> = {
   abogados: {
     challenges: [
       'El secreto profesional y la confidencialidad limitan severamente lo que un cliente puede revelar sobre su caso en un testimonio público',
-      'Los clientes de servicios juridicos suelen estar en situaciones de estres o conflicto, lo que hace que la experiencia emocional pese más que el resultado tecnico en su valoración',
+      'Los clientes de servicios juridicos suelen estar en situaciones de estres o conflicto, lo que hace que la experiencia emocional pese más que el resultado técnico en su valoración',
       'La percepción pública del sector legal tiende a ser negativa, y los abogados necesitan esforzarse más que otros profesionales para construir confianza inicial con potenciales clientes',
     ],
     bestPractices: [
@@ -322,7 +322,7 @@ const industryInsights: Record<string, IndustryInsight> = {
       'Para tratamientos estéticos, solicita testimonios con fotos del antes y después (con consentimiento), ya que el impacto visual complementa la experiencia narrada',
       'Implementa un sistema de seguimiento post-tratamiento que pida feedback una semana después, cuando el paciente ya experimenta los resultados y puede valorar la inversion',
     ],
-    metrics: 'Las clínicas dentales con testimonios visibles en su web experimentan un 47% más de solicitudes de primera cita que las que dependen unicamente de Google Reviews',
+    metrics: 'Las clínicas dentales con testimonios visibles en su web experimentan un 47% más de solicitudes de primera cita que las que dependen únicamente de Google Reviews',
   },
   inmobiliarias: {
     challenges: [
@@ -378,8 +378,8 @@ const industryInsights: Record<string, IndustryInsight> = {
   },
   fotografos: {
     challenges: [
-      'El portfolio muestra la calidad tecnica del trabajo, pero no transmite la experiencia de trabajar con el fotografo: la comunicación, la paciencia, la capacidad de poner cómodo al sujeto',
-      'Los clientes de fotografía suelen contratar para eventos unicos e irrepetibles (bodas, comuniones, sesiones corporativas), lo que eleva enormemente el riesgo percibido de elegir mal',
+      'El portfolio muestra la calidad técnica del trabajo, pero no transmite la experiencia de trabajar con el fotografo: la comunicación, la paciencia, la capacidad de poner cómodo al sujeto',
+      'Los clientes de fotografía suelen contratar para eventos únicos e irrepetibles (bodas, comuniones, sesiones corporativas), lo que eleva enormemente el riesgo percibido de elegir mal',
       'La saturación del mercado fotografico hace que la diferenciación por precio sea una carrera al fondo; la diferenciación por reputación es la única sostenible',
     ],
     bestPractices: [
@@ -430,7 +430,7 @@ const industryInsights: Record<string, IndustryInsight> = {
   },
   psicologos: {
     challenges: [
-      'El estigma asociado a la salud mental hace que muchos pacientes sean reacios a dejar testimonios publicos, reduciendo drásticamente el volumen de opiniones disponibles',
+      'El estigma asociado a la salud mental hace que muchos pacientes sean reacios a dejar testimonios públicos, reduciendo drásticamente el volumen de opiniones disponibles',
       'La confidencialidad terapéutica es sagrada, y los pacientes deben poder compartir su experiencia sin revelar detalles sensibles sobre su tratamiento',
       'El vínculo terapéutico es el factor más determinante en la elección de psicólogo, y los testimonios son la única forma de transmitirlo antes del primer contacto',
     ],
@@ -470,7 +470,7 @@ const industryInsights: Record<string, IndustryInsight> = {
   arquitectos: {
     challenges: [
       'Los proyectos arquitectónicos son de alta inversión y duración extendida (meses o años), lo que eleva el riesgo percibido y la necesidad de confianza previa en el profesional',
-      'Los clientes de arquitectura son frecuentemente primerizos que no saben evaluar la calidad tecnica, por lo que dependen enormemente de las experiencias de otros clientes',
+      'Los clientes de arquitectura son frecuentemente primerizos que no saben evaluar la calidad técnica, por lo que dependen enormemente de las experiencias de otros clientes',
       'La comunicación durante el proyecto es tan importante como el resultado final, pero los portfolios solo muestran edificios, no la experiencia de trabajar con el arquitecto',
     ],
     bestPractices: [
@@ -482,7 +482,7 @@ const industryInsights: Record<string, IndustryInsight> = {
   },
   contadores: {
     challenges: [
-      'La contabilidad es percibida como un servicio de commodity, y muchos clientes eligen unicamente por precio sin entender las diferencias en calidad de asesoramiento',
+      'La contabilidad es percibida como un servicio de commodity, y muchos clientes eligen únicamente por precio sin entender las diferencias en calidad de asesoramiento',
       'La confianza es crítica cuando se manejan finanzas y datos fiscales sensibles, y un error contable puede tener consecuencias legales graves para el cliente',
       'La fidelidad al contador suele romperse solo por problemas graves, lo que hace difícil motivar a clientes satisfechos a dejar testimonios cuando simplemente no tienen quejas',
     ],
@@ -528,7 +528,7 @@ const industryInsights: Record<string, IndustryInsight> = {
     bestPractices: [
       'Solicita testimonios que mencionen la transparencia en el presupuesto, la explicacion clara de los trabajos realizados y la honestidad en el diagnóstico, ya que estos son los principales miedos de los conductores',
       'Pide testimonios justo después de recoger el vehículo reparado, cuando el alivio y la satisfacción de tener el coche funcionando correctamente están en su punto más alto',
-      'Destaca testimonios de diferentes tipos de servicio (revisión, ITV, reparación de motor, carrocería, electricidad) para demostrar versatilidad y competencia tecnica amplia',
+      'Destaca testimonios de diferentes tipos de servicio (revisión, ITV, reparación de motor, carrocería, electricidad) para demostrar versatilidad y competencia técnica amplia',
     ],
     metrics: 'El 71% de los conductores buscan taller por recomendación, y los talleres con testimonios que destacan transparencia y honestidad incrementan la captación de nuevos clientes en un 39%',
   },
@@ -746,7 +746,7 @@ export function generateUniqueIntro(
       return `${cityName} concentra la mayor densidad de profesionales de ${industryLower} en su region, con un mercado de ${popFormatted} de potenciales clientes que buscan servicios de confianza. ${profile.economicProfile} En un entorno donde la competencia profesional es intensa, los testimonios de clientes satisfechos se convierten en tu carta de presentacion más persuasiva. Demuestran resultados reales, profesionalidad y un trato que la descripción de servicios en una web no puede transmitir.`
     }
     if (category === 'comercio') {
-      return `Con ${popFormatted} de consumidores activos, ${cityName} es uno de los mercados comerciales más grandes y exigentes del mundo hispano. ${profile.economicProfile} Para negocios de ${industryLower} que operan en está plaza, la confianza del consumidor es el recurso más valioso y más difícil de obtener. Los testimonios de clientes reales actúan como el boca a boca digital que escala tu reputación a la velocidad que exige una ciudad de este tamano.`
+      return `Con ${popFormatted} de consumidores activos, ${cityName} es uno de los mercados comerciales más grandes y exigentes del mundo hispano. ${profile.economicProfile} Para negocios de ${industryLower} que operan en está plaza, la confianza del consumidor es el recurso más valioso y más difícil de obtener. Los testimonios de clientes reales actúan como el boca a boca digital que escala tu reputación a la velocidad que exige una ciudad de este tamaño.`
     }
     return `${cityName}, con una población de ${popFormatted}, ofrece un mercado enorme pero extraordinariamente competitivo para ${industryLower}. ${profile.economicProfile} En este entorno, donde los consumidores tienen decenas de alternativas a un clic de distancia, los testimonios verificados de clientes satisfechos son el diferenciador que convierte la intencion de compra en accion. Tu reputación digital es tu activo más valioso.`
   }
@@ -761,7 +761,7 @@ export function generateUniqueIntro(
     if (category === 'hosteleria') {
       return `${cityName} se ha consolidado como un destino gastronómico y turístico con identidad propia, atrayendo cada vez más visitantes nacionales e internacionales a su oferta de ${industryLower}. ${profile.economicProfile} En un mercado donde la oferta crece rápido, los testimonios de clientes satisfechos te ayudan a destacar ante un público que investiga online antes de cada visita y valora las experiencias auténticas por encima de la publicidad.`
     }
-    return `${cityName}, con ${popFormatted} de habitantes, representa un mercado en crecimiento donde los negocios de ${industryLower} tienen una ventana de oportunidad para establecerse como referentes. ${profile.economicProfile} En una ciudad de tamano medio, cada testimonio de un cliente local tiene un efecto multiplicador: la comunidad es lo suficientemente grande para generar volumen, pero lo bastante cercana para que las recomendaciones se compartan orgánicamente.`
+    return `${cityName}, con ${popFormatted} de habitantes, representa un mercado en crecimiento donde los negocios de ${industryLower} tienen una ventana de oportunidad para establecerse como referentes. ${profile.economicProfile} En una ciudad de tamaño medio, cada testimonio de un cliente local tiene un efecto multiplicador: la comunidad es lo suficientemente grande para generar volumen, pero lo bastante cercana para que las recomendaciones se compartan orgánicamente.`
   }
 
   // pequeña

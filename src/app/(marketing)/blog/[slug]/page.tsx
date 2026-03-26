@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const article = blogArticles.find((a) => a.slug === slug)
 
   if (!article) {
-    return { title: 'Articulo no encontrado' }
+    return { title: 'Artículo no encontrado' }
   }
 
   return {

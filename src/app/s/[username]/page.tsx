@@ -234,12 +234,12 @@ export default async function MiniSitePage({ params }: PageProps) {
           </div>
           <h1 className="text-2xl font-bold text-gray-900">
             {isOwner
-              ? 'Activa tu plan Mini Sitio, Pro o Business para tener tu pagina publica de testimonios'
-              : `Esta pagina estara disponible cuando ${profile.full_name || username} active su plan Mini Sitio, Pro o Business`
+              ? 'Activa tu plan Mini Sitio, Pro o Business para tener tu página pública de testimonios'
+              : `Esta página estara disponible cuando ${profile.full_name || username} active su plan Mini Sitio, Pro o Business`
             }
           </h1>
           <p className="mt-3 text-gray-500">
-            Las paginas publicas de testimonios estan disponibles en los planes Mini Sitio, Pro y Business de Opinafy.
+            Las páginas publicas de testimonios estan disponibles en los planes Mini Sitio, Pro y Business de Opinafy.
           </p>
           {isOwner ? (
             <Link
@@ -256,7 +256,7 @@ export default async function MiniSitePage({ params }: PageProps) {
               href="/registro"
               className="mt-6 inline-flex items-center gap-2 rounded-lg bg-indigo-600 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
             >
-              Crea tu propia pagina de testimonios
+              Crea tu propia página de testimonios
             </Link>
           )}
         </div>
@@ -624,7 +624,7 @@ export default async function MiniSitePage({ params }: PageProps) {
           </Link>
           <p className="mt-2">
             <Link href="/registro" className="text-xs transition-colors hover:text-indigo-600" style={{ color: subtextColor }}>
-              Crea tu propia pagina de testimonios gratis
+              Crea tu propia página de testimonios gratis
             </Link>
           </p>
         </div>

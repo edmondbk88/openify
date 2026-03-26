@@ -322,8 +322,8 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
   // TECNOLOGIA (3)
   // ═══════════════════════════════════════════════════
   {
-    id: 'codigo-limpio',
-    name: 'Codigo Limpio',
+    id: 'código-limpio',
+    name: 'Código Limpio',
     category: 'Tecnologia',
     description: 'Oscuro tipo IDE con verde terminal. Para desarrolladores.',
     config: {
@@ -557,7 +557,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     id: 'fontaneria-pro',
     name: 'Fontaneria Pro',
     category: 'Servicios',
-    description: 'Azul agua con estilo profesional. Para fontaneros y tecnicos.',
+    description: 'Azul agua con estilo profesional. Para fontaneros y técnicos.',
     config: {
       accent_color: '#0369a1',
       background_color: '#f0f9ff',

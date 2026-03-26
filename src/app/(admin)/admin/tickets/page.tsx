@@ -144,7 +144,7 @@ export default function AdminTicketsPage() {
           >
             <option value="">Todas las categorias</option>
             <option value="billing">Facturacion</option>
-            <option value="technical">Tecnico</option>
+            <option value="technical">Técnico</option>
             <option value="feature">Sugerencia</option>
             <option value="account">Cuenta</option>
             <option value="widget">Widget</option>

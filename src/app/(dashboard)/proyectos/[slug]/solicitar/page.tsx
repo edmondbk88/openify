@@ -89,7 +89,7 @@ export default function SolicitarPage() {
 
   function handleSendWhatsAppToNumber() {
     if (!whatsappNumber.trim()) {
-      toast('Introduce un numero de telefono', 'error')
+      toast('Introduce un número de telefono', 'error')
       return
     }
     const number = whatsappNumber.replace(/[^0-9+]/g, '').replace(/^\+/, '')
@@ -232,7 +232,7 @@ export default function SolicitarPage() {
                 {t('request.send', locale)}
               </button>
             </div>
-            <p className="mt-1 text-xs text-gray-400">Incluye el codigo de pais (ej: +34 para Espana)</p>
+            <p className="mt-1 text-xs text-gray-400">Incluye el código de pais (ej: +34 para Espana)</p>
           </div>
         </div>
       </div>

@@ -1480,7 +1480,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'newspaper-classic',
     name: 'Newspaper',
-    description: 'Diseno de columna de periodico clasico con fuente serif y estetica editorial. Transmite autoridad y credibilidad.',
+    description: 'Diseño de columna de periodico clasico con fuente serif y estetica editorial. Transmite autoridad y credibilidad.',
     category: 'Creativo',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #f5f0dc 100%)',
@@ -1620,7 +1620,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'brutalist-web',
     name: 'Brutalist Web',
-    description: 'Diseno crudo y sin adornos con fuentes de sistema y cero bordes redondeados. Anti-diseno con personalidad propia.',
+    description: 'Diseño crudo y sin adornos con fuentes de sistema y cero bordes redondeados. Anti-diseño con personalidad propia.',
     category: 'Creativo',
     layout: 'wall',
     preview_image: 'linear-gradient(135deg, #ffffff 0%, #f5f5f5 50%, #e5e5e5 100%)',

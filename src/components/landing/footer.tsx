@@ -11,7 +11,7 @@ const productLinks = [
   { label: 'Industrias', href: '/testimonios-para' },
   { label: 'Guias', href: '/guias' },
   { label: 'Descargas', href: '/descargas' },
-  { label: 'Casos de Éxito', href: '/casos-de-exito' },
+  { label: 'Casos de Éxito', href: '/casos-de-éxito' },
   { label: 'Calculadora ROI', href: '/calculadora-roi' },
   { label: 'Informe Prueba Social', href: '/informe-prueba-social-2026' },
   { label: 'Afiliados', href: '/afiliados' },

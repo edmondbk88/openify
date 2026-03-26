@@ -8,8 +8,8 @@ export default function AdminBlogPage() {
       <h1 className="text-2xl font-bold text-gray-900 mb-2">Gestion de Blog</h1>
       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
         <p className="text-sm text-yellow-800">
-          Los articulos del blog estan definidos en <code className="bg-yellow-100 px-1 rounded">src/lib/blog-data.ts</code>.
-          Para editar, anadir o eliminar articulos es necesario modificar el codigo fuente y redesplegar.
+          Los artículos del blog estan definidos en <code className="bg-yellow-100 px-1 rounded">src/lib/blog-data.ts</code>.
+          Para editar, añadir o eliminar artículos es necesario modificar el código fuente y redesplegar.
         </p>
       </div>
 
@@ -57,7 +57,7 @@ export default function AdminBlogPage() {
           </table>
         </div>
       </div>
-      <p className="text-sm text-gray-400 mt-3">Total: {blogArticles.length} articulos</p>
+      <p className="text-sm text-gray-400 mt-3">Total: {blogArticles.length} artículos</p>
     </div>
   )
 }

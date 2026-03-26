@@ -17,17 +17,17 @@ export const metadata: Metadata = {
     'opinafy resultados',
   ],
   alternates: {
-    canonical: 'https://opinafy.com/casos-de-exito',
+    canonical: 'https://opinafy.com/casos-de-éxito',
     languages: {
-      es: 'https://opinafy.com/casos-de-exito',
+      es: 'https://opinafy.com/casos-de-éxito',
       en: 'https://opinafy.com/en/case-studies',
-      'x-default': 'https://opinafy.com/casos-de-exito',
+      'x-default': 'https://opinafy.com/casos-de-éxito',
     },
   },
   openGraph: {
     title: 'Casos de Éxito de Opinafy - Historias que Inspiran',
     description: 'Empresas reales que aumentaron sus conversiones con testimonios verificados.',
-    url: 'https://opinafy.com/casos-de-exito',
+    url: 'https://opinafy.com/casos-de-éxito',
     type: 'website',
     siteName: 'Opinafy',
     locale: 'es_ES',
@@ -51,12 +51,12 @@ const platformStats = [
 export default function CasosDeExitoPage() {
   const jsonLdWebPage = webPageSchema({
     name: 'Casos de Éxito - Opinafy',
-    url: 'https://opinafy.com/casos-de-exito',
+    url: 'https://opinafy.com/casos-de-éxito',
     description: 'Descubre como empresas reales aumentaron sus conversiones con testimonios verificados de Opinafy.',
   })
   const jsonLdBreadcrumb = breadcrumbSchema([
     { name: 'Inicio', url: 'https://opinafy.com' },
-    { name: 'Casos de Éxito', url: 'https://opinafy.com/casos-de-exito' },
+    { name: 'Casos de Éxito', url: 'https://opinafy.com/casos-de-éxito' },
   ])
 
   return (
@@ -116,13 +116,13 @@ export default function CasosDeExitoPage() {
               <h3 className="font-bold text-gray-900">Widgets embebibles</h3>
               <p className="mt-2 text-sm text-gray-600">
                 Muestra tus testimonios en cualquier web con widgets personalizables en 7 layouts
-                diferentes: carousel, grid, masonry, lista y mas.
+                diferentes: carousel, grid, masonry, lista y más.
               </p>
             </div>
             <div className="rounded-xl border border-gray-200 p-6">
-              <h3 className="font-bold text-gray-900">Mini sitio publico</h3>
+              <h3 className="font-bold text-gray-900">Mini sitio público</h3>
               <p className="mt-2 text-sm text-gray-600">
-                Tu propia pagina publica de testimonios, perfecta para compartir en redes sociales,
+                Tu propia página pública de testimonios, perfecta para compartir en redes sociales,
                 propuestas comerciales y firmas de email.
               </p>
             </div>

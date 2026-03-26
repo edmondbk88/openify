@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 }
 
 const trustStats = [
-  { value: '92%', label: 'de consumidores confian mas en testimonios verificados' },
+  { value: '92%', label: 'de consumidores confian más en testimonios verificados' },
   { value: '3.2x', label: 'mas conversiones con prueba social verificada' },
   { value: '76%', label: 'de compradores buscan senales de confianza antes de comprar' },
 ]
@@ -69,8 +69,8 @@ const verificationSteps = [
     ),
   },
   {
-    title: 'Badge automatico',
-    description: 'Una vez que tienes testimonios verificados, el badge aparece automaticamente en tu widget y mini sitio.',
+    title: 'Badge automático',
+    description: 'Una vez que tienes testimonios verificados, el badge aparece automáticamente en tu widget y mini sitio.',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
@@ -233,8 +233,8 @@ export default function VerificadoBadgePage() {
             <div className="flex items-start gap-4">
               <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-indigo-600 text-sm font-bold text-white">3</div>
               <div>
-                <h3 className="text-lg font-semibold text-gray-900">El badge aparece automaticamente</h3>
-                <p className="mt-1 text-gray-600">Una vez que tengas testimonios aprobados, puedes insertar el badge en tu web usando un simple codigo HTML.</p>
+                <h3 className="text-lg font-semibold text-gray-900">El badge aparece automáticamente</h3>
+                <p className="mt-1 text-gray-600">Una vez que tengas testimonios aprobados, puedes insertar el badge en tu web usando un simple código HTML.</p>
               </div>
             </div>
           </div>
@@ -245,10 +245,10 @@ export default function VerificadoBadgePage() {
       <section className="bg-gray-50 px-4 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
-            Facil de integrar
+            Fácil de integrar
           </h2>
           <p className="mt-4 text-center text-lg text-gray-600">
-            Copia y pega este codigo en tu web para mostrar el badge
+            Copia y pega este código en tu web para mostrar el badge
           </p>
           <div className="mt-8 overflow-hidden rounded-xl border border-gray-200 bg-gray-900 p-6">
             <code className="block text-sm text-green-400">
@@ -259,7 +259,7 @@ export default function VerificadoBadgePage() {
             </code>
           </div>
           <p className="mt-4 text-center text-sm text-gray-500">
-            Sustituye TU_PROYECTO por el ID de tu proyecto. Encontraras el codigo exacto en tu dashboard.
+            Sustituye TU_PROYECTO por el ID de tu proyecto. Encontraras el código exacto en tu dashboard.
           </p>
         </div>
       </section>

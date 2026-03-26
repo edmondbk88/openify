@@ -17,7 +17,7 @@ function truncate(text: string, maxLen: number): string {
 
 export function generateInstagramPost(t: TestimonialData, projectUrl?: string): string {
   const author = t.author_company ? `${t.author_name}, ${t.author_company}` : t.author_name
-  return `\u2728 Lo que dicen nuestros clientes:\n\n"${t.content}"\n\n\u2014 ${author}\n\n${starEmojis(t.rating)} ${t.rating}/5\n\n${projectUrl ? `\uD83D\uDD17 ${projectUrl}\n\n` : ''}#testimonios #pruebasocial #clientesfelices #opiniones #resenas #confianza`
+  return `\u2728 Lo que dicen nuestros clientes:\n\n"${t.content}"\n\n\u2014 ${author}\n\n${starEmojis(t.rating)} ${t.rating}/5\n\n${projectUrl ? `\uD83D\uDD17 ${projectUrl}\n\n` : ''}#testimonios #pruebasocial #clientesfelices #opiniones #reseñas #confianza`
 }
 
 export function generateTwitterPost(t: TestimonialData, projectUrl?: string): string {
@@ -30,7 +30,7 @@ export function generateLinkedInPost(t: TestimonialData, projectUrl?: string): s
   const author = t.author_company
     ? `${t.author_name}${t.author_role ? `, ${t.author_role}` : ''} en ${t.author_company}`
     : t.author_name
-  return `\uD83D\uDCAC La opinion de nuestros clientes es lo que mas nos importa.\n\nQuiero compartir lo que dice ${author}:\n\n"${t.content}"\n\nValoración: ${starEmojis(t.rating)} (${t.rating}/5)\n\nEstos testimonios nos motivan a seguir mejorando cada dia. Gracias por confiar en nosotros.${projectUrl ? `\n\n\uD83D\uDC49 ${projectUrl}` : ''}\n\n#testimonios #pruebasocial #clientes #confianza`
+  return `\uD83D\uDCAC La opinion de nuestros clientes es lo que más nos importa.\n\nQuiero compartir lo que dice ${author}:\n\n"${t.content}"\n\nValoración: ${starEmojis(t.rating)} (${t.rating}/5)\n\nEstos testimonios nos motivan a seguir mejorando cada dia. Gracias por confiar en nosotros.${projectUrl ? `\n\n\uD83D\uDC49 ${projectUrl}` : ''}\n\n#testimonios #pruebasocial #clientes #confianza`
 }
 
 export function generateFacebookPost(t: TestimonialData, projectUrl?: string): string {

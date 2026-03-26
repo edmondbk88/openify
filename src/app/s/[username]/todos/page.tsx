@@ -361,7 +361,7 @@ export default async function TodosPage({ params }: PageProps) {
           </Link>
           <p className="mt-2">
             <Link href="/registro" className="text-xs transition-colors hover:text-indigo-600" style={{ color: subtextColor }}>
-              Crea tu propia pagina de testimonios gratis
+              Crea tu propia página de testimonios gratis
             </Link>
           </p>
         </div>

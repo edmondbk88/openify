@@ -63,7 +63,7 @@ export default function WebflowGuidePage() {
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Agrega testimonios de clientes verificados a tu sitio Webflow en menos de 5 minutos.
-            Sin necesidad de conocimientos tecnicos.
+            Sin necesidad de conocimientos técnicos.
           </p>
         </div>
       </section>
@@ -84,46 +84,46 @@ export default function WebflowGuidePage() {
         <StepCard number={2} title="Obtener el código de integración">
           <ol className="ml-4 list-decimal space-y-2">
             <li>Dentro de tu proyecto, ve a la seccion <strong>&quot;Widget&quot;</strong>.</li>
-            <li>Personaliza el diseno: elige layout (carrusel, cuadricula, muro...), colores y tipografia.</li>
+            <li>Personaliza el diseño: elige layout (carrusel, cuadricula, muro...), colores y tipografia.</li>
             <li>Copia el código de integración que aparece debajo de la vista previa.</li>
           </ol>
-          <p className="mt-3">El codigo tendra esta forma:</p>
+          <p className="mt-3">El código tendra esta forma:</p>
           <CodeBlock code={embedCode} />
           <p className="text-sm text-gray-500">
             Sustituye <code className="rounded bg-gray-200 px-1 text-xs">TU_PROJECT_ID</code> por el ID real de tu proyecto.
           </p>
         </StepCard>
 
-        <StepCard number={3} title="Agrega el codigo a Webflow">
+        <StepCard number={3} title="Agrega el código a Webflow">
           <p className="mb-4">Tienes tres opciones para insertar el widget en tu sitio Webflow:</p>
 
           <div className="space-y-6">
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion A: Codigo personalizado del proyecto (todas las paginas)</h4>
+              <h4 className="mb-2 font-semibold text-gray-900">Opcion A: Código personalizado del proyecto (todas las páginas)</h4>
               <ol className="ml-4 list-decimal space-y-2">
                 <li>Ve a <strong>Project Settings</strong> (Configuracion del proyecto).</li>
                 <li>Haz clic en la pestana <strong>&quot;Custom Code&quot;</strong>.</li>
-                <li>En el campo <strong>&quot;Footer Code&quot;</strong> (antes de {'</body>'}), pega el codigo de Opinafy.</li>
-                <li>Guarda y publica tu sitio.</li>
+                <li>En el campo <strong>&quot;Footer Code&quot;</strong> (antes de {'</body>'}), pega el código de Opinafy.</li>
+                <li>Guarda y pública tu sitio.</li>
               </ol>
             </div>
 
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion B: Codigo personalizado por pagina (pagina especifica)</h4>
+              <h4 className="mb-2 font-semibold text-gray-900">Opcion B: Código personalizado por página (página específica)</h4>
               <ol className="ml-4 list-decimal space-y-2">
-                <li>Ve a <strong>Pages</strong> y selecciona la pagina deseada.</li>
+                <li>Ve a <strong>Pages</strong> y selecciona la página deseada.</li>
                 <li>Haz clic en el icono de configuración de la página (engranaje).</li>
                 <li>Desplazate hasta <strong>&quot;Custom Code&quot;</strong> &rarr; <strong>&quot;Before {'</body>'} tag&quot;</strong>.</li>
-                <li>Pega el codigo de Opinafy.</li>
-                <li>Guarda y publica.</li>
+                <li>Pega el código de Opinafy.</li>
+                <li>Guarda y pública.</li>
               </ol>
             </div>
 
             <div>
               <h4 className="mb-2 font-semibold text-gray-900">Opcion C: Elemento Embed (posicion exacta)</h4>
               <ol className="ml-4 list-decimal space-y-2">
-                <li>En el Designer de Webflow, anade un componente <strong>&quot;Embed&quot;</strong> donde quieras mostrar los testimonios.</li>
-                <li>Pega el codigo de Opinafy en el campo HTML.</li>
+                <li>En el Designer de Webflow, añade un componente <strong>&quot;Embed&quot;</strong> donde quieras mostrar los testimonios.</li>
+                <li>Pega el código de Opinafy en el campo HTML.</li>
                 <li>Haz clic en <strong>&quot;Save & Close&quot;</strong>.</li>
                 <li>Publica tu sitio para ver los cambios.</li>
               </ol>
@@ -140,8 +140,8 @@ export default function WebflowGuidePage() {
         <StepCard number={4} title="Verifica que funciona">
           <ol className="ml-4 list-decimal space-y-2">
             <li>Publica tu sitio Webflow.</li>
-            <li>Visita la pagina donde insertaste el widget.</li>
-            <li>Deberia cargar automaticamente mostrando tus testimonios aprobados.</li>
+            <li>Visita la página donde insertaste el widget.</li>
+            <li>Deberia cargar automáticamente mostrando tus testimonios aprobados.</li>
             <li>Si no ves nada, verifica que tienes testimonios con estado <strong>&quot;Aprobado&quot;</strong> en tu panel.</li>
           </ol>
         </StepCard>
@@ -155,19 +155,19 @@ export default function WebflowGuidePage() {
             {[
               {
                 q: 'El widget afecta la velocidad de mi sitio Webflow?',
-                a: 'No. El script de Opinafy pesa menos de 25 KB y se carga de forma asincrona con el atributo defer. No bloquea la carga de tu pagina.',
+                a: 'No. El script de Opinafy pesa menos de 25 KB y se carga de forma asincrona con el atributo defer. No bloquea la carga de tu página.',
               },
               {
                 q: 'Funciona con el plan gratuito de Webflow?',
-                a: 'Si. El widget funciona en cualquier plan de Webflow, incluyendo el plan gratuito. Solo necesitas poder anadir codigo personalizado o elementos Embed.',
+                a: 'Si. El widget funciona en cualquier plan de Webflow, incluyendo el plan gratuito. Solo necesitas poder añadir código personalizado o elementos Embed.',
               },
               {
-                q: 'Puedo poner el widget en varias paginas?',
-                a: 'Si. Usa la opcion A (Project Settings > Custom Code) para anadir el widget a todas las paginas, o repite la opcion B o C en cada pagina donde lo necesites.',
+                q: 'Puedo poner el widget en varias páginas?',
+                a: 'Si. Usa la opcion A (Project Settings > Custom Code) para añadir el widget a todas las páginas, o repite la opcion B o C en cada página donde lo necesites.',
               },
               {
-                q: 'El widget se adapta al diseno responsive?',
-                a: 'Si. El widget de Opinafy es completamente responsive y se adapta automaticamente al ancho del contenedor.',
+                q: 'El widget se adapta al diseño responsive?',
+                a: 'Si. El widget de Opinafy es completamente responsive y se adapta automáticamente al ancho del contenedor.',
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-lg border border-gray-200 bg-white p-5">

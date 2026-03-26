@@ -6,7 +6,7 @@ import { Footer } from '@/components/landing/footer'
 export const metadata: Metadata = {
   title: 'Conecta Opinafy con Zapier - Automatiza tus testimonios',
   description:
-    'Integra Opinafy con Zapier para automatizar flujos de trabajo cuando recibes nuevos testimonios. Conecta con Slack, Google Sheets, Mailchimp y mas de 5000 aplicaciones.',
+    'Integra Opinafy con Zapier para automatizar flujos de trabajo cuando recibes nuevos testimonios. Conecta con Slack, Google Sheets, Mailchimp y más de 5000 aplicaciones.',
   keywords: [
     'opinafy zapier',
     'integración zapier testimonios',
@@ -63,7 +63,7 @@ const WORKFLOWS = [
   },
   {
     title: 'Guardar en Google Sheets',
-    description: 'Agrega automaticamente cada testimonio aprobado a una hoja de calculo.',
+    description: 'Agrega automáticamente cada testimonio aprobado a una hoja de calculo.',
     apps: ['Opinafy', 'Google Sheets'],
     trigger: 'Testimonio Aprobado',
     action: 'Crear fila en hoja de calculo',
@@ -93,8 +93,8 @@ export default function ZapierIntegrationPage() {
               Conecta Opinafy con Zapier
             </h1>
             <p className="mt-6 text-lg text-gray-600">
-              Automatiza tus flujos de trabajo conectando Opinafy con mas de 5,000 aplicaciones.
-              Recibe notificaciones, guarda datos y dispara acciones automaticamente cuando recibes
+              Automatiza tus flujos de trabajo conectando Opinafy con más de 5,000 aplicaciones.
+              Recibe notificaciones, guarda datos y dispara acciones automáticamente cuando recibes
               nuevos testimonios.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

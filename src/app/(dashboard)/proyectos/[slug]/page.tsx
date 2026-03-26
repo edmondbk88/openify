@@ -429,7 +429,7 @@ export default async function ProyectoDetailPage({
             {tier !== 'none' && (
               <div className="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-900 p-4">
                 <p className="mb-2 text-xs font-medium text-gray-400">
-                  {locale === 'en' ? 'Embed code:' : 'Codigo para insertar:'}
+                  {locale === 'en' ? 'Embed code:' : 'Código para insertar:'}
                 </p>
                 <code className="block text-xs text-green-400 whitespace-pre-wrap break-all">
                   {`<a href="https://opinafy.com/certificacion">\n  <img src="https://opinafy.com/api/certification/${(project as Project).id}" alt="Opinafy ${tierLabel}" />\n</a>`}
@@ -472,7 +472,7 @@ export default async function ProyectoDetailPage({
         </div>
         <div className="mt-4 overflow-hidden rounded-lg border border-gray-200 bg-gray-900 p-4">
           <p className="mb-2 text-xs font-medium text-gray-400">
-            {locale === 'en' ? 'Embed code:' : 'Codigo para insertar:'}
+            {locale === 'en' ? 'Embed code:' : 'Código para insertar:'}
           </p>
           <code className="block text-xs text-green-400 whitespace-pre-wrap break-all">
             {`<a href="https://opinafy.com/verificado-badge">\n  <img src="https://opinafy.com/api/badge/${(project as Project).id}" alt="Verificado por Opinafy" />\n</a>`}

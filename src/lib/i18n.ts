@@ -363,8 +363,8 @@ const translations: Record<Locale, Record<string, string>> = {
     'mysite.urlCopied': 'URL copiada al portapapeles',
     'mysite.shareWhatsappText': 'Mira mis testimonios verificados: {url}',
     'mysite.shareEmailSubject': 'Mis testimonios verificados - {name}',
-    'mysite.shareEmailBody': 'Hola,\n\nTe comparto mi pagina de testimonios verificados:\n{url}\n\nSaludos,\n{name}',
-    'mysite.noUsernameNotice': 'Necesitas configurar un nombre de usuario para activar tu pagina publica.',
+    'mysite.shareEmailBody': 'Hola,\n\nTe comparto mi página de testimonios verificados:\n{url}\n\nSaludos,\n{name}',
+    'mysite.noUsernameNotice': 'Necesitas configurar un nombre de usuario para activar tu página pública.',
     'mysite.goToSettingsPrefix': 'Ve a',
     'mysite.goToSettingsSuffix': 'para establecer tu username.',
 

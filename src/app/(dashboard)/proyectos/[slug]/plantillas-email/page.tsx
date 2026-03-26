@@ -59,7 +59,7 @@ The {company} team`,
     subjectEn: 'We\'d still love to hear from you, {name}',
     bodyEs: `Hola {name},
 
-Hace unos dias te enviamos un email pidiendo tu opinion sobre tu experiencia con {company}. Entendemos que la vida esta llena de cosas, asi que te lo recordamos amablemente.
+Hace unos dias te enviamos un email pidiendo tu opinion sobre tu experiencia con {company}. Entendemos que la vida esta llena de cosas, así que te lo recordamos amablemente.
 
 Tu testimonio es muy valioso para nosotros y solo te tomara un par de minutos:
 {collection_url}
@@ -85,11 +85,11 @@ The {company} team`,
     nameEs: 'Despues de un logro',
     nameEn: 'After a milestone',
     category: 'milestone',
-    subjectEs: 'Celebramos tu exito, {name}!',
+    subjectEs: 'Celebramos tu éxito, {name}!',
     subjectEn: 'Celebrating your success, {name}!',
     bodyEs: `Hola {name},
 
-Estamos encantados de ver los resultados que has conseguido trabajando con {company}. Tu exito es nuestro exito.
+Estamos encantados de ver los resultados que has conseguido trabajando con {company}. Tu éxito es nuestro éxito.
 
 Nos encantaria que compartieras tu experiencia con otros. Un breve testimonio sobre como te ha ayudado nuestro servicio seria increible:
 {collection_url}
@@ -112,19 +112,19 @@ The {company} team`,
   },
   {
     id: 'seasonal',
-    nameEs: 'De temporada / Fin de ano',
+    nameEs: 'De temporada / Fin de año',
     nameEn: 'Seasonal / End of year',
     category: 'seasonal',
-    subjectEs: 'Gracias por un gran ano, {name}',
+    subjectEs: 'Gracias por un gran año, {name}',
     subjectEn: 'Thank you for an amazing year, {name}',
     bodyEs: `Hola {name},
 
-Mientras cerramos este ano, queremos agradecerte por ser parte de la comunidad de {company}. Ha sido un placer trabajar contigo.
+Mientras cerramos este año, queremos agradecerte por ser parte de la comunidad de {company}. Ha sido un placer trabajar contigo.
 
-Como parte de nuestra reflexion de fin de ano, nos encantaria escuchar como ha sido tu experiencia. Tu opinion nos ayuda a planificar como seguir mejorando:
+Como parte de nuestra reflexion de fin de año, nos encantaria escuchar como ha sido tu experiencia. Tu opinion nos ayuda a planificar como seguir mejorando:
 {collection_url}
 
-Te deseamos lo mejor para el proximo ano.
+Te deseamos lo mejor para el proximo año.
 
 Con gratitud,
 El equipo de {company}`,
@@ -151,7 +151,7 @@ The {company} team`,
 
 Nos hizo muchisima ilusion recibir tus palabras positivas sobre {company}. Comentarios como el tuyo son los que nos motivan a seguir dando lo mejor.
 
-Nos preguntabamos si estarias dispuesto/a a compartir esa experiencia de forma publica para que otros puedan verlo. Es muy facil y rapido:
+Nos preguntabamos si estarias dispuesto/a a compartir esa experiencia de forma pública para que otros puedan verlo. Es muy fácil y rápido:
 {collection_url}
 
 Tu testimonio puede marcar la diferencia para otros que estan considerando trabajar con nosotros.
@@ -179,7 +179,7 @@ The {company} team`,
     subjectEn: 'Would you share your experience on video, {name}?',
     bodyEs: `Hola {name},
 
-Los testimonios en video son increiblemente poderosos: generan hasta 3x mas confianza que el texto. Por eso, nos encantaria invitarte a grabar un breve video (30-60 segundos) compartiendo tu experiencia con {company}.
+Los testimonios en video son increiblemente poderosos: generan hasta 3x más confianza que el texto. Por eso, nos encantaria invitarte a grabar un breve video (30-60 segundos) compartiendo tu experiencia con {company}.
 
 No necesitas nada especial, tu movil y una buena luz son suficientes. Puedes hacerlo directamente desde aqui:
 {collection_url}
@@ -325,7 +325,7 @@ export default function PlantillasEmailPage() {
             </p>
             <p className="mt-1">
               {isEs
-                ? 'Reemplaza {name} con el nombre de tu cliente y {company} con tu empresa. La URL de recopilacion ({collection_url}) se reemplaza automaticamente.'
+                ? 'Reemplaza {name} con el nombre de tu cliente y {company} con tu empresa. La URL de recopilacion ({collection_url}) se reemplaza automáticamente.'
                 : 'Replace {name} with your client\'s name and {company} with your business. The collection URL ({collection_url}) is auto-replaced.'}
             </p>
           </div>

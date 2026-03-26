@@ -41,7 +41,7 @@ const TEMPLATE_NAME_TRANSLATIONS: Record<string, string> = {
   'Aula Inspirada': 'Inspired Classroom',
   'Impulso Coaching': 'Coaching Boost',
   'Academia del Saber': 'Academy of Knowledge',
-  'Codigo Limpio': 'Clean Code',
+  'Código Limpio': 'Clean Code',
   'Agencia Digital': 'Digital Agency',
   'Plataforma SaaS': 'SaaS Platform',
   'Salon Elegante': 'Elegant Salon',
@@ -86,7 +86,7 @@ const TEMPLATE_DESC_TRANSLATIONS: Record<string, string> = {
   'Gris pizarra con toques dorados. Para agencias inmobiliarias.': 'Slate gray with golden touches. For real estate agencies.',
   'Verde confianza y estructura limpia. Para contables y gestores.': 'Trustworthy green with clean structure. For accountants and managers.',
   'Azul corporativo serio. Para asesores financieros.': 'Serious corporate blue. For financial advisors.',
-  'Azul agua con estilo profesional. Para fontaneros y tecnicos.': 'Water blue with professional style. For plumbers and technicians.',
+  'Azul agua con estilo profesional. Para fontaneros y técnicos.': 'Water blue with professional style. For plumbers and technicians.',
   'Amarillo electrico con negro. Para electricistas.': 'Electric yellow with black. For electricians.',
   'Celeste fresco y limpio. Para empresas de limpieza.': 'Fresh, clean sky blue. For cleaning companies.',
 }

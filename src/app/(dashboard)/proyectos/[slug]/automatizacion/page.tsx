@@ -302,7 +302,7 @@ export default function AutomatizacionPage() {
 
       <h1 className="text-2xl font-bold text-gray-900">Automatizacion de solicitudes</h1>
       <p className="mt-2 text-sm text-gray-600">
-        Configura el envio automatico de emails para solicitar testimonios a tus clientes.
+        Configura el envio automático de emails para solicitar testimonios a tus clientes.
       </p>
 
       <div className="mt-8 max-w-3xl space-y-8">
@@ -311,7 +311,7 @@ export default function AutomatizacionPage() {
           <div>
             <h3 className="text-sm font-semibold text-gray-900">Automatizacion activa</h3>
             <p className="text-xs text-gray-500 mt-1">
-              Cuando esta activa, los contactos programados recibiran el email automaticamente.
+              Cuando esta activa, los contactos programados recibiran el email automáticamente.
             </p>
           </div>
           <button
@@ -377,7 +377,7 @@ export default function AutomatizacionPage() {
             className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
           />
           <p className="mt-1 text-xs text-gray-500">
-            El enlace de recopilacion se incluira automaticamente al final del email.
+            El enlace de recopilacion se incluira automáticamente al final del email.
           </p>
         </div>
 

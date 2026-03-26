@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Opinafy vs Testimonial.to: Comparativa completa 2026',
     description:
-      'Descubre las diferencias clave entre Opinafy y Testimonial.to. Analisis honesto de funcionalidades, precios y soporte.',
+      'Descubre las diferencias clave entre Opinafy y Testimonial.to. Análisis honesto de funcionalidades, precios y soporte.',
     url: 'https://opinafy.com/comparar/opinafy-vs-testimonial-to',
   },
 }
@@ -50,8 +50,8 @@ function PartialIcon() {
 }
 
 const featureComparison = [
-  { feature: 'Interfaz en espanol', opinafy: 'check', competitor: 'cross' },
-  { feature: 'Soporte en espanol', opinafy: 'check', competitor: 'cross' },
+  { feature: 'Interfaz en español', opinafy: 'check', competitor: 'cross' },
+  { feature: 'Soporte en español', opinafy: 'check', competitor: 'cross' },
   { feature: 'Precios en EUR', opinafy: 'check', competitor: 'cross' },
   { feature: 'Verificacion de email', opinafy: 'check', competitor: 'check' },
   { feature: 'Verificacion de empresa', opinafy: 'check', competitor: 'cross' },
@@ -64,10 +64,10 @@ const featureComparison = [
   { feature: 'Plan gratuito', opinafy: 'check', competitor: 'check' },
   { feature: 'Integraciones Zapier/Webhooks', opinafy: 'partial', competitor: 'check' },
   { feature: 'Integracion Slack', opinafy: 'partial', competitor: 'check' },
-  { feature: 'API publica', opinafy: 'check', competitor: 'check' },
+  { feature: 'API pública', opinafy: 'check', competitor: 'check' },
   { feature: 'GDPR/RGPD compliance', opinafy: 'check', competitor: 'check' },
   { feature: 'Multiple layouts de widget', opinafy: 'check', competitor: 'check' },
-  { feature: 'Pagina publica de testimonios', opinafy: 'check', competitor: 'check' },
+  { feature: 'Página pública de testimonios', opinafy: 'check', competitor: 'check' },
 ]
 
 function StatusIcon({ status }: { status: string }) {
@@ -82,12 +82,12 @@ const faqs = [
     a: 'Si, puedes migrar tus testimonios existentes a Opinafy. El proceso es sencillo: exporta tus testimonios desde Testimonial.to y añadelos manualmente desde el panel de Opinafy. Si tienes un volumen alto, nuestro equipo de soporte puede asistirte en la migracion.',
   },
   {
-    q: '¿Testimonial.to tiene interfaz en espanol?',
-    a: 'No, Testimonial.to esta disponible unicamente en ingles. Tanto su panel de administracion como los formularios de recopilación están en inglés, lo que puede ser una barrera para negocios hispanohablantes y sus clientes.',
+    q: '¿Testimonial.to tiene interfaz en español?',
+    a: 'No, Testimonial.to esta disponible únicamente en ingles. Tanto su panel de administracion como los formularios de recopilación están en inglés, lo que puede ser una barrera para negocios hispanohablantes y sus clientes.',
   },
   {
-    q: '¿Cual es mas barata, Opinafy o Testimonial.to?',
-    a: 'Opinafy ofrece precios mas competitivos en EUR. El plan Pro de Opinafy cuesta 9 EUR/mes (sin cambio de divisa), mientras que Testimonial.to parte de $20 USD/mes en su plan basico de pago. Ademas, Opinafy incluye un plan gratuito generoso con hasta 10 testimonios.',
+    q: '¿Cual es más barata, Opinafy o Testimonial.to?',
+    a: 'Opinafy ofrece precios más competitivos en EUR. El plan Pro de Opinafy cuesta 9 EUR/mes (sin cambio de divisa), mientras que Testimonial.to parte de $20 USD/mes en su plan básico de pago. Ademas, Opinafy incluye un plan gratuito generoso con hasta 10 testimonios.',
   },
   {
     q: '¿Testimonial.to ofrece verificación de empresas?',
@@ -95,11 +95,11 @@ const faqs = [
   },
   {
     q: '¿Cual tiene mejores integraciones?',
-    a: 'Testimonial.to actualmente ofrece mas integraciones nativas con herramientas de terceros como Slack, Zapier y plataformas CMS. Opinafy esta ampliando activamente su ecosistema de integraciones, pero ya ofrece widget embebible, API publica y webhooks.',
+    a: 'Testimonial.to actualmente ofrece más integraciones nativas con herramientas de terceros como Slack, Zapier y plataformas CMS. Opinafy esta ampliando activamente su ecosistema de integraciones, pero ya ofrece widget embebible, API pública y webhooks.',
   },
   {
     q: '¿Opinafy es buena alternativa a Testimonial.to para el mercado hispanohablante?',
-    a: 'Opinafy es la mejor alternativa a Testimonial.to si tu mercado principal es hispanohablante. Toda la plataforma, desde los formularios que reciben tus clientes hasta el panel de control y el soporte, esta pensada nativamente en espanol. Esto elimina fricciones y mejora la tasa de respuesta de tus clientes.',
+    a: 'Opinafy es la mejor alternativa a Testimonial.to si tu mercado principal es hispanohablante. Toda la plataforma, desde los formularios que reciben tus clientes hasta el panel de control y el soporte, esta pensada nativamente en español. Esto elimina fricciones y mejora la tasa de respuesta de tus clientes.',
   },
 ]
 
@@ -158,24 +158,24 @@ export default function OpinafyVsTestimonialToPage() {
             Opinafy vs Testimonial.to: Comparativa completa 2026
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Testimonial.to es una de las plataformas de testimonios mas populares del mercado anglosajón.
-            Pero, ¿es la mejor opcion para negocios que operan en espanol? En esta comparativa analizamos
+            Testimonial.to es una de las plataformas de testimonios más populares del mercado anglosajón.
+            Pero, ¿es la mejor opcion para negocios que operan en español? En esta comparativa analizamos
             punto por punto ambas herramientas para que tomes la mejor decision.
           </p>
         </header>
 
         {/* Resumen */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-900">Resumen rapido</h2>
+          <h2 className="text-2xl font-bold text-gray-900">Resumen rápido</h2>
           <p className="mt-4 text-gray-600 leading-7">
             <strong>Testimonial.to</strong> es una herramienta consolidada, fundada en 2021, que permite recopilar y mostrar
             testimonios de clientes mediante widgets embebibles. Cuenta con un amplio ecosistema de integraciones y una base de
             usuarios global. Sin embargo, toda su plataforma esta en ingles, los precios estan en dolares estadounidenses y no
-            ofrece soporte en espanol.
+            ofrece soporte en español.
           </p>
           <p className="mt-4 text-gray-600 leading-7">
             <strong>Opinafy</strong> es una plataforma de testimonios disenada desde cero para el mercado hispanohablante.
-            Ofrece una experiencia completamente en espanol, precios en euros, verificación de empresa, y un enfoque claro
+            Ofrece una experiencia completamente en español, precios en euros, verificación de empresa, y un enfoque claro
             en la autenticidad de los testimonios. Es ideal para autonomos, pymes y agencias que operan en Espana y
             Latinoamerica.
           </p>
@@ -183,7 +183,7 @@ export default function OpinafyVsTestimonialToPage() {
             <div className="rounded-xl border border-indigo-200 bg-indigo-50 p-6">
               <h3 className="font-semibold text-indigo-900">Elige Opinafy si...</h3>
               <ul className="mt-3 space-y-2 text-sm text-indigo-800">
-                <li>Tu negocio opera en espanol</li>
+                <li>Tu negocio opera en español</li>
                 <li>Quieres precios en EUR sin comisiones por cambio de divisa</li>
                 <li>Necesitas verificación de empresa para mayor credibilidad</li>
                 <li>Prefieres soporte en tu idioma</li>
@@ -195,8 +195,8 @@ export default function OpinafyVsTestimonialToPage() {
               <ul className="mt-3 space-y-2 text-sm text-gray-700">
                 <li>Tu mercado es exclusivamente anglosajón</li>
                 <li>Necesitas integraciones avanzadas con muchas herramientas</li>
-                <li>Llevas anos usandolo y no quieres migrar</li>
-                <li>Prefieres un ecosistema mas maduro</li>
+                <li>Llevas años usandolo y no quieres migrar</li>
+                <li>Prefieres un ecosistema más maduro</li>
               </ul>
             </div>
           </div>
@@ -206,7 +206,7 @@ export default function OpinafyVsTestimonialToPage() {
         <section className="mt-16">
           <h2 className="text-2xl font-bold text-gray-900">Tabla comparativa de funcionalidades</h2>
           <p className="mt-4 text-gray-600">
-            A continuacion puedes ver una comparativa detallada de las funcionalidades mas importantes de ambas plataformas.
+            A continuacion puedes ver una comparativa detallada de las funcionalidades más importantes de ambas plataformas.
             Hemos sido honestos y transparentes: donde Testimonial.to es mejor, lo indicamos.
           </p>
           <div className="mt-8 overflow-x-auto">
@@ -246,7 +246,7 @@ export default function OpinafyVsTestimonialToPage() {
         <section className="mt-16">
           <h2 className="text-2xl font-bold text-gray-900">Comparativa de precios</h2>
           <p className="mt-4 text-gray-600 leading-7">
-            Uno de los aspectos mas relevantes al elegir una herramienta es su coste. Aqui comparamos los planes de ambas
+            Uno de los aspectos más relevantes al elegir una herramienta es su coste. Aqui comparamos los planes de ambas
             plataformas para que puedas evaluar cual se ajusta mejor a tu presupuesto.
           </p>
           <div className="mt-8 overflow-x-auto">
@@ -283,9 +283,9 @@ export default function OpinafyVsTestimonialToPage() {
             </table>
           </div>
           <p className="mt-4 text-gray-600 leading-7">
-            Como puedes ver, Opinafy es significativamente mas economica. A 9 EUR/mes por el plan Pro, obtienes 3 proyectos,
-            testimonios ilimitados y acceso a todos los layouts. El plan equivalente de Testimonial.to cuesta mas del doble,
-            y ademas tendras que asumir comisiones de cambio de divisa si operas en euros. Para negocios en Espana y
+            Como puedes ver, Opinafy es significativamente más economica. A 9 EUR/mes por el plan Pro, obtienes 3 proyectos,
+            testimonios ilimitados y acceso a todos los layouts. El plan equivalente de Testimonial.to cuesta más del doble,
+            y además tendras que asumir comisiones de cambio de divisa si operas en euros. Para negocios en Espana y
             Latinoamerica, esto supone un ahorro considerable a lo largo del año.
           </p>
         </section>
@@ -295,11 +295,11 @@ export default function OpinafyVsTestimonialToPage() {
           <h2 className="text-2xl font-bold text-gray-900">Ventajas de Opinafy frente a Testimonial.to</h2>
           <div className="mt-6 space-y-6">
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">1. Nativo en espanol</h3>
+              <h3 className="text-lg font-semibold text-gray-900">1. Nativo en español</h3>
               <p className="mt-2 text-gray-600 leading-7">
                 Opinafy no es una herramienta traducida: esta construida desde cero pensando en el usuario hispanohablante.
                 Los formularios que reciben tus clientes, el panel de control, los correos de notificacion y el soporte
-                tecnico estan completamente en espanol. Esto reduce la friccion para tus clientes al dejar un testimonio
+                técnico estan completamente en español. Esto reduce la friccion para tus clientes al dejar un testimonio
                 y mejora la tasa de respuesta.
               </p>
             </div>
@@ -307,14 +307,14 @@ export default function OpinafyVsTestimonialToPage() {
               <h3 className="text-lg font-semibold text-gray-900">2. Verificación de empresa</h3>
               <p className="mt-2 text-gray-600 leading-7">
                 Una funcionalidad única de Opinafy es la verificación de empresa. Cuando un cliente deja un testimonio,
-                se puede verificar que pertenece a una empresa real. Esto anade una capa de credibilidad que Testimonial.to
+                se puede verificar que pertenece a una empresa real. Esto añade una capa de credibilidad que Testimonial.to
                 no ofrece, y que es especialmente valiosa en sectores B2B donde la confianza es determinante.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">3. Precios mas competitivos en EUR</h3>
+              <h3 className="text-lg font-semibold text-gray-900">3. Precios más competitivos en EUR</h3>
               <p className="mt-2 text-gray-600 leading-7">
-                Con planes desde 9 EUR/mes, Opinafy es mas asequible que Testimonial.to para el mercado europeo y
+                Con planes desde 9 EUR/mes, Opinafy es más asequible que Testimonial.to para el mercado europeo y
                 latinoamericano. No hay sorpresas con el tipo de cambio ni comisiones ocultas de conversion de divisa.
                 Pagas en tu moneda y sabes exactamente cuanto te cuesta cada mes.
               </p>
@@ -330,9 +330,9 @@ export default function OpinafyVsTestimonialToPage() {
             <div>
               <h3 className="text-lg font-semibold text-gray-900">5. Schema markup para SEO</h3>
               <p className="mt-2 text-gray-600 leading-7">
-                Opinafy genera automaticamente datos estructurados (Schema.org) para tus testimonios, lo que ayuda a
+                Opinafy genera automáticamente datos estructurados (Schema.org) para tus testimonios, lo que ayuda a
                 que aparezcan como rich snippets en los resultados de Google. Esto no solo mejora tu visibilidad sino
-                que aumenta el CTR de tus paginas. Testimonial.to ofrece esto de forma mas limitada.
+                que aumenta el CTR de tus páginas. Testimonial.to ofrece esto de forma más limitada.
               </p>
             </div>
           </div>
@@ -349,25 +349,25 @@ export default function OpinafyVsTestimonialToPage() {
               <h3 className="text-lg font-semibold text-gray-900">1. Mas tiempo en el mercado</h3>
               <p className="mt-2 text-gray-600 leading-7">
                 Testimonial.to lleva operando desde 2021, lo que le da una ventaja en madurez de producto. Ha tenido
-                mas tiempo para pulir funcionalidades, resolver bugs y optimizar la experiencia de usuario. Como plataforma
-                mas joven, Opinafy esta en constante mejora y evoluciona rapidamente, pero Testimonial.to tiene la ventaja
+                más tiempo para pulir funcionalidades, resolver bugs y optimizar la experiencia de usuario. Como plataforma
+                más joven, Opinafy esta en constante mejora y evoluciona rápidamente, pero Testimonial.to tiene la ventaja
                 de la experiencia acumulada.
               </p>
             </div>
             <div>
               <h3 className="text-lg font-semibold text-gray-900">2. Mas integraciones nativas</h3>
               <p className="mt-2 text-gray-600 leading-7">
-                Testimonial.to ofrece integraciones nativas con un mayor numero de herramientas de terceros, incluyendo
+                Testimonial.to ofrece integraciones nativas con un mayor número de herramientas de terceros, incluyendo
                 Slack, Zapier, Notion, Figma y diversas plataformas CMS. Si tu flujo de trabajo depende de multiples
                 herramientas conectadas, esta ventaja puede ser relevante. Opinafy esta ampliando su catalogo de
                 integraciones, pero por ahora Testimonial.to lleva la delantera en este apartado.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-900">3. Comunidad internacional mas grande</h3>
+              <h3 className="text-lg font-semibold text-gray-900">3. Comunidad internacional más grande</h3>
               <p className="mt-2 text-gray-600 leading-7">
-                Al ser una herramienta global en ingles, Testimonial.to cuenta con una comunidad de usuarios mas amplia.
-                Esto se traduce en mas tutoriales, videos y recursos de terceros disponibles. Si te desenvuelves bien
+                Al ser una herramienta global en ingles, Testimonial.to cuenta con una comunidad de usuarios más amplia.
+                Esto se traduce en más tutoriales, videos y recursos de terceros disponibles. Si te desenvuelves bien
                 en ingles y priorizas tener acceso a una comunidad grande, esto puede ser un factor a considerar.
               </p>
             </div>
@@ -379,13 +379,13 @@ export default function OpinafyVsTestimonialToPage() {
           <h2 className="text-2xl font-bold text-gray-900">Nuestro veredicto</h2>
           <p className="mt-4 text-gray-600 leading-7">
             Ambas plataformas son solidas y cumplen con su proposito principal: ayudarte a recopilar y mostrar testimonios
-            de clientes. Sin embargo, la eleccion depende de tu contexto especifico.
+            de clientes. Sin embargo, la eleccion depende de tu contexto específico.
           </p>
           <p className="mt-4 text-gray-600 leading-7">
             Si tu negocio opera en el mercado hispanohablante, ya sea en Espana o en Latinoamerica, <strong>Opinafy es
-            la mejor opcion</strong>. La experiencia nativa en espanol, la verificación de empresa, los precios en euros
+            la mejor opcion</strong>. La experiencia nativa en español, la verificación de empresa, los precios en euros
             y el soporte en tu idioma hacen que sea una herramienta pensada para ti. Tus clientes tendran una experiencia
-            sin fricciones al dejar testimonios, lo que se traduce en mas respuestas y mejor calidad.
+            sin fricciones al dejar testimonios, lo que se traduce en más respuestas y mejor calidad.
           </p>
           <p className="mt-4 text-gray-600 leading-7">
             Si tu mercado es exclusivamente anglosajón y necesitas un gran ecosistema de integraciones, Testimonial.to es
@@ -393,7 +393,7 @@ export default function OpinafyVsTestimonialToPage() {
           </p>
           <div className="mt-8 rounded-2xl bg-indigo-50 p-6 sm:p-8">
             <p className="text-lg font-semibold text-indigo-900">
-              Para el mercado hispanohablante, Opinafy gana en 5 de los 6 criterios mas importantes: idioma, precios,
+              Para el mercado hispanohablante, Opinafy gana en 5 de los 6 criterios más importantes: idioma, precios,
               verificación, soporte y relación calidad-precio.
             </p>
           </div>

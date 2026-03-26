@@ -19,13 +19,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `Plantilla "${template.name}" - Mini Sitio de Testimonios | Opinafy`,
-    description: `${template.description} Plantilla de mini sitio para ${template.category.toLowerCase()} con layout ${template.config.layout}. Crea tu pagina de testimonios profesional.`,
+    description: `${template.description} Plantilla de mini sitio para ${template.category.toLowerCase()} con layout ${template.config.layout}. Crea tu página de testimonios profesional.`,
     keywords: [
       `plantilla mini sitio ${template.name.toLowerCase()}`,
-      `pagina testimonios ${template.category.toLowerCase()}`,
-      `plantilla pagina testimonios ${template.config.layout}`,
+      `página testimonios ${template.category.toLowerCase()}`,
+      `plantilla página testimonios ${template.config.layout}`,
       'mini sitio profesional testimonios',
-      'pagina publica testimonios',
+      'página pública testimonios',
     ],
     openGraph: {
       type: 'website',
@@ -270,7 +270,7 @@ export default async function MiniSiteTemplateDetailPage({ params }: PageProps) 
           {/* Config details */}
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-xl border border-gray-200 bg-white p-6">
-              <h2 className="mb-4 text-lg font-semibold text-gray-900">Configuracion del Diseno</h2>
+              <h2 className="mb-4 text-lg font-semibold text-gray-900">Configuracion del Diseño</h2>
               <dl className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <dt className="text-gray-500">Color de acento</dt>
@@ -320,7 +320,7 @@ export default async function MiniSiteTemplateDetailPage({ params }: PageProps) 
                   <dd className="font-medium text-gray-900">{headerLabels[config.header_style] || config.header_style}</dd>
                 </div>
                 <div className="flex justify-between">
-                  <dt className="text-gray-500">Mostrar estadisticas</dt>
+                  <dt className="text-gray-500">Mostrar estadísticas</dt>
                   <dd className="font-medium text-gray-900">{config.show_stats ? 'Si' : 'No'}</dd>
                 </div>
                 <div className="flex justify-between">

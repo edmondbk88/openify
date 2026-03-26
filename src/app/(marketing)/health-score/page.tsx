@@ -4,7 +4,7 @@ import HealthScoreClient from './health-score-client'
 export const metadata: Metadata = {
   title: 'Analizar Prueba Social Web Gratis - Verificador de Prueba Social | Opinafy',
   description:
-    'Analiza gratis la prueba social de tu web. Descubre si tienes testimonios, valoraciones, datos estructurados y mas. Recibe una puntuación y recomendaciones para mejorar.',
+    'Analiza gratis la prueba social de tu web. Descubre si tienes testimonios, valoraciones, datos estructurados y más. Recibe una puntuación y recomendaciones para mejorar.',
   keywords: [
     'analizar prueba social web gratis',
     'social proof checker',

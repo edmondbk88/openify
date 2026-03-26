@@ -11,14 +11,14 @@ export const metadata: Metadata = {
   keywords: [
     'plantillas testimonios',
     'templates widget testimonios',
-    'disenos testimonios web',
+    'diseños testimonios web',
     'widgets testimonios plantillas',
-    'testimonios diseno personalizado',
-    'plantillas resenas clientes',
+    'testimonios diseño personalizado',
+    'plantillas reseñas clientes',
     'widget opiniones plantilla',
     'plantilla carrusel testimonios',
     'testimonios grid plantilla',
-    'muro testimonios diseno',
+    'muro testimonios diseño',
   ],
   openGraph: {
     type: 'website',
@@ -58,7 +58,7 @@ export default function PlantillasPage() {
     name: '100 Plantillas de Testimonios - Opinafy',
     url: 'https://opinafy.com/plantillas',
     description:
-      'Explora 100 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y mas.',
+      'Explora 100 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y más.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -98,7 +98,7 @@ export default function PlantillasPage() {
               <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              8 categorias de diseno
+              8 categorias de diseño
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -176,10 +176,10 @@ export default function PlantillasPage() {
             Mini Sitio Opinafy
           </span>
           <h2 className="mt-5 text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-            Buscas una pagina completa de testimonios?
+            Buscas una página completa de testimonios?
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-indigo-100">
-            Con el mini sitio de Opinafy tienes tu propia pagina profesional para recopilar y mostrar
+            Con el mini sitio de Opinafy tienes tu propia página profesional para recopilar y mostrar
             testimonios verificados. Perfecto si no tienes web o quieres una landing dedicada.
             Elige entre 30 plantillas disenadas por profesion.
           </p>

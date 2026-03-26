@@ -159,11 +159,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: bilingual('/informe-prueba-social-2026', '/en/state-of-social-proof-2026'),
     },
     {
-      url: `${baseUrl}/casos-de-exito`,
+      url: `${baseUrl}/casos-de-éxito`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
-      alternates: bilingual('/casos-de-exito', '/en/case-studies'),
+      alternates: bilingual('/casos-de-éxito', '/en/case-studies'),
     },
     {
       url: `${baseUrl}/guias`,
@@ -496,7 +496,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
-      alternates: bilingual('/casos-de-exito', '/en/case-studies'),
+      alternates: bilingual('/casos-de-éxito', '/en/case-studies'),
     },
     {
       url: `${baseUrl}/en/guides`,

@@ -186,7 +186,7 @@ export default function TerminosPage() {
             </p>
             <p className="leading-relaxed text-gray-600">
               Opinafy se reserva el derecho de modificar los precios de los planes con un preaviso
-              mínimo de 30 días. Los cambios de precio no afectarán al periodo de facturación en curso.
+              mínimo de 30 días. Los cambios de precio no afectarán al período de facturación en curso.
             </p>
           </section>
 
@@ -332,8 +332,8 @@ export default function TerminosPage() {
             </h3>
             <p className="mb-3 leading-relaxed text-gray-600">
               Puedes cancelar tu suscripción en cualquier momento desde tu panel de cuenta. Al cancelar,
-              mantendrás el acceso a las funcionalidades de tu plan hasta el final del periodo de
-              facturación en curso. Una vez finalizado dicho periodo, tu cuenta se revertirá al plan
+              mantendrás el acceso a las funcionalidades de tu plan hasta el final del período de
+              facturación en curso. Una vez finalizado dicho período, tu cuenta se revertirá al plan
               gratuito.
             </p>
 

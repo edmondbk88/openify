@@ -95,7 +95,7 @@ export default async function AdminConfiguracionPage() {
 
       {/* External Links */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
-        <h2 className="text-lg font-semibold text-gray-900 mb-4">Enlaces rapidos</h2>
+        <h2 className="text-lg font-semibold text-gray-900 mb-4">Enlaces rápidos</h2>
         <div className="grid sm:grid-cols-2 gap-3">
           {links.map((link) => (
             <a

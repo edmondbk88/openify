@@ -33,7 +33,7 @@ const PRIORITY_CONFIG: Record<string, { label: string; color: string }> = {
 
 const CATEGORY_LABELS: Record<string, string> = {
   billing: 'Facturacion',
-  technical: 'Tecnico',
+  technical: 'Técnico',
   feature: 'Sugerencia',
   account: 'Cuenta',
   widget: 'Widget',

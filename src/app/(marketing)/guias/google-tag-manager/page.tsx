@@ -88,7 +88,7 @@ export default function GTMGuidePage() {
             <li>Ve a <strong>Etiquetas</strong> (Tags) y haz clic en <strong>&quot;Nueva&quot;</strong>.</li>
             <li>Ponle nombre: <strong>&quot;Opinafy Testimonials Widget&quot;</strong>.</li>
             <li>En <strong>Configuracion de la etiqueta</strong>, selecciona <strong>&quot;HTML personalizado&quot;</strong> (Custom HTML).</li>
-            <li>Pega el siguiente codigo:</li>
+            <li>Pega el siguiente código:</li>
           </ol>
           <CodeBlock code={gtmCode} />
           <p className="text-sm text-gray-500">
@@ -99,8 +99,8 @@ export default function GTMGuidePage() {
         <StepCard number={3} title="Configura el activador (trigger)">
           <ol className="ml-4 list-decimal space-y-2">
             <li>En la seccion <strong>&quot;Activacion&quot;</strong> (Triggering), haz clic para seleccionar un activador.</li>
-            <li>Elige <strong>&quot;All Pages - Page View&quot;</strong> si quieres el widget en todas las paginas.</li>
-            <li>O crea un activador personalizado para paginas especificas:
+            <li>Elige <strong>&quot;All Pages - Page View&quot;</strong> si quieres el widget en todas las páginas.</li>
+            <li>O crea un activador personalizado para páginas especificas:
               <ul className="ml-4 mt-2 list-disc space-y-1">
                 <li>Tipo: <strong>Page View</strong></li>
                 <li>Condicion: <strong>Page URL contiene</strong> la ruta deseada (ej: <code className="rounded bg-gray-200 px-1 text-xs">/testimonios</code>)</li>
@@ -113,13 +113,13 @@ export default function GTMGuidePage() {
           <ol className="ml-4 list-decimal space-y-2">
             <li>Guarda la etiqueta.</li>
             <li>Haz clic en <strong>&quot;Enviar&quot;</strong> (Submit) en la esquina superior derecha.</li>
-            <li>Anade un nombre de version (ej: &quot;Anadir widget Opinafy&quot;).</li>
+            <li>Añade un nombre de version (ej: &quot;Añadir widget Opinafy&quot;).</li>
             <li>Haz clic en <strong>&quot;Publicar&quot;</strong>.</li>
           </ol>
           <div className="mt-3 rounded-lg bg-amber-50 border border-amber-200 p-4">
             <p className="text-sm text-amber-800">
               <strong>Consejo:</strong> Usa el modo <strong>&quot;Vista previa&quot;</strong> (Preview) de GTM antes de publicar
-              para verificar que la etiqueta se activa correctamente en las paginas deseadas.
+              para verificar que la etiqueta se activa correctamente en las páginas deseadas.
             </p>
           </div>
         </StepCard>
@@ -141,20 +141,20 @@ export default function GTMGuidePage() {
           <div className="space-y-6">
             {[
               {
-                q: 'Es mejor usar GTM o pegar el codigo directamente?',
-                a: 'Si ya usas GTM, es mas conveniente gestionarlo desde ahi. Si no usas GTM, pegar el codigo directamente es mas simple. Ambos metodos funcionan igual de bien.',
+                q: 'Es mejor usar GTM o pegar el código directamente?',
+                a: 'Si ya usas GTM, es más conveniente gestionarlo desde ahi. Si no usas GTM, pegar el código directamente es más simple. Ambos métodos funcionan igual de bien.',
               },
               {
                 q: 'El widget se carga con retraso al usar GTM?',
                 a: 'El retraso es minimo (milisegundos). GTM carga el script de forma asincrona, igual que la instalacion directa.',
               },
               {
-                q: 'Puedo controlar en que paginas aparece el widget?',
-                a: 'Si. Esa es una de las ventajas de usar GTM: puedes crear activadores (triggers) para mostrar el widget solo en paginas especificas.',
+                q: 'Puedo controlar en que páginas aparece el widget?',
+                a: 'Si. Esa es una de las ventajas de usar GTM: puedes crear activadores (triggers) para mostrar el widget solo en páginas especificas.',
               },
               {
                 q: 'Funciona con cualquier sitio web?',
-                a: 'Si. Si tu sitio tiene Google Tag Manager instalado, puedes usar este metodo independientemente de la plataforma (WordPress, Shopify, sitio personalizado, etc.).',
+                a: 'Si. Si tu sitio tiene Google Tag Manager instalado, puedes usar este método independientemente de la plataforma (WordPress, Shopify, sitio personalizado, etc.).',
               },
             ].map(({ q, a }) => (
               <div key={q} className="rounded-lg border border-gray-200 bg-white p-5">

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     siteName: 'Opinafy',
     title: 'Opinafy - Testimonios de Clientes que Convierten',
     description:
-      'Recopila, gestiona y muestra testimonios de clientes en tu web. Widgets personalizables, prueba social y mas conversiones.',
+      'Recopila, gestiona y muestra testimonios de clientes en tu web. Widgets personalizables, prueba social y más conversiones.',
     images: [
       {
         url: '/og.png',

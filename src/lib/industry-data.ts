@@ -150,7 +150,7 @@ export const industries: Industry[] = [
       {
         author: 'Dr. Elena Ruiz',
         company: 'Policlínica del Norte',
-        text: 'La moderación de testimonios es clave en salud. Con Opinafy tenemos control total sobre qué se publica, respetando siempre la privacidad de los pacientes.',
+        text: 'La moderación de testimonios es clave en salud. Con Opinafy tenemos control total sobre qué se pública, respetando siempre la privacidad de los pacientes.',
         rating: 4,
       },
     ],
@@ -855,7 +855,7 @@ export const industries: Industry[] = [
 <p>El peinado de novia es una de las decisiones más emotivas y estresantes. Una novia necesita sentir confianza absoluta. Los testimonios de otras novias —hablando de cómo se sintieron, de cómo resistió el peinado, de la atención durante la prueba— son el factor que inclina la balanza a tu favor.</p>
 
 <h2>Opinafy para peluquerías y salones</h2>
-<p>Opinafy te da las herramientas para convertir cada cliente satisfecho en un embajador de tu salón. Formularios rápidos que se completan desde el móvil, widgets bonitos que se integran con tu web, y moderación total para elegir qué se publica. <strong>Empieza gratis y transforma las opiniones de tus clientes en tu mejor herramienta de marketing</strong>.</p>`,
+<p>Opinafy te da las herramientas para convertir cada cliente satisfecho en un embajador de tu salón. Formularios rápidos que se completan desde el móvil, widgets bonitos que se integran con tu web, y moderación total para elegir qué se pública. <strong>Empieza gratis y transforma las opiniones de tus clientes en tu mejor herramienta de marketing</strong>.</p>`,
   },
   {
     slug: 'dentistas',
@@ -2149,9 +2149,9 @@ export const industries: Industry[] = [
           'Los testimonios de Opinafy son de texto, lo que elimina este problema. Los padres hablan de su experiencia sin necesidad de incluir imágenes de menores. Esto simplifica el cumplimiento de la normativa de protección de menores.',
       },
       {
-        question: '¿Cómo ayudan los testimonios durante el periodo de matriculación?',
+        question: '¿Cómo ayudan los testimonios durante el período de matriculación?',
         answer:
-          'Enormemente. El periodo de matriculación es cuando los padres comparan guarderías intensivamente. Tener testimonios reales de familias satisfechas en tu web puede ser el factor decisivo frente a guarderías sin este tipo de prueba social.',
+          'Enormemente. El período de matriculación es cuando los padres comparan guarderías intensivamente. Tener testimonios reales de familias satisfechas en tu web puede ser el factor decisivo frente a guarderías sin este tipo de prueba social.',
       },
       {
         question: '¿Puedo mostrar testimonios de diferentes etapas educativas?',
@@ -2192,8 +2192,8 @@ export const industries: Industry[] = [
 <li><strong>Al recomendar a amigos:</strong> Si ya recomiendan de boca a boca, formalizarlo en un testimonio es fácil.</li>
 </ul>
 
-<h2>Testimonios durante el periodo de matriculación</h2>
-<p>La mayoría de guarderías tienen periodos de matriculación concentrados. En esos meses, los padres comparan opciones activamente. <strong>Tener una colección sólida de testimonios visibles en tu web</strong> puede ser la diferencia entre llenar plazas rápidamente o quedarse con vacantes.</p>
+<h2>Testimonios durante el período de matriculación</h2>
+<p>La mayoría de guarderías tienen períodos de matriculación concentrados. En esos meses, los padres comparan opciones activamente. <strong>Tener una colección sólida de testimonios visibles en tu web</strong> puede ser la diferencia entre llenar plazas rápidamente o quedarse con vacantes.</p>
 
 <h2>Opinafy para guarderías</h2>
 <p>Opinafy te ofrece una herramienta profesional, cálida y fácil de usar. Formularios personalizables que transmiten la cercanía de tu centro, widgets bonitos para tu web, y moderación total. <strong>Empieza gratis y convierte la confianza de tus familias en tu mejor herramienta de captación</strong>.</p>`,
@@ -2245,7 +2245,7 @@ export const industries: Industry[] = [
       {
         question: '¿Puedo publicar testimonios sin revelar tratamientos específicos?',
         answer:
-          'Sí, cada paciente decide qué compartir. Algunos hablan abiertamente de su tratamiento; otros prefieren hablar en general de la experiencia y los resultados. Con Opinafy moderas qué se publica.',
+          'Sí, cada paciente decide qué compartir. Algunos hablan abiertamente de su tratamiento; otros prefieren hablar en general de la experiencia y los resultados. Con Opinafy moderas qué se pública.',
       },
       {
         question: '¿Los testimonios ayudan a vender tratamientos de alto precio?',
@@ -3621,7 +3621,7 @@ export const industries: Industry[] = [
 <ul>
 <li><strong>Mensaje inmediato de felicitación:</strong> "¡Enhorabuena! Ya eres conductor/a. ¿Nos ayudas a que otros como tú nos encuentren?" con enlace al formulario.</li>
 <li><strong>Foto con el aprobado:</strong> Si el alumno consiente, una foto celebrando junto al testimonio escrito tiene un impacto enorme.</li>
-<li><strong>Grupo de WhatsApp de alumnos:</strong> Si tienes un grupo, publica los aprobados del día y pide a los protagonistas que dejen su opinión.</li>
+<li><strong>Grupo de WhatsApp de alumnos:</strong> Si tienes un grupo, pública los aprobados del día y pide a los protagonistas que dejen su opinión.</li>
 <li><strong>En el centro:</strong> Un QR visible en la pared con el mensaje "Más de X alumnos aprobados. ¿Serás el siguiente? Los que ya lo son opinan aquí."</li>
 </ul>
 
@@ -3632,7 +3632,7 @@ export const industries: Industry[] = [
 <p>Las búsquedas de autoescuela son hiperlocalas: "autoescuela [barrio]", "autoescuela cerca de [centro comercial]", "mejor autoescuela [ciudad]". Los testimonios que incluyen menciones naturales a la zona y al tipo de carnet mejoran tu posicionamiento para estas búsquedas altamente convertibles.</p>
 
 <h2>Opinafy para autoescuelas</h2>
-<p>Opinafy te permite crear un sistema profesional de recopilación de testimonios de alumnos. Formularios rápidos que los alumnos completan desde el móvil en dos minutos, widgets atractivos para tu web y un panel de moderación para elegir qué se publica. <strong>Empieza gratis y convierte tus aprobados en tu mejor publicidad</strong>.</p>`,
+<p>Opinafy te permite crear un sistema profesional de recopilación de testimonios de alumnos. Formularios rápidos que los alumnos completan desde el móvil en dos minutos, widgets atractivos para tu web y un panel de moderación para elegir qué se pública. <strong>Empieza gratis y convierte tus aprobados en tu mejor publicidad</strong>.</p>`,
   },
   {
     slug: 'academias-idiomas',
@@ -3811,7 +3811,7 @@ export const industries: Industry[] = [
 
 <h2>Por qué los testimonios son vitales para centros Montessori</h2>
 <p>La metodología Montessori, pese a tener más de un siglo de historia, sigue generando dudas en muchos padres: ¿Realmente funciona? ¿No es demasiado libre? ¿Aprenderán a leer y escribir a tiempo? ¿Se adaptarán luego al colegio convencional? Estas dudas no se resuelven con una explicación teórica en la web; se resuelven con testimonios de padres que tuvieron las mismas dudas y encontraron respuestas.</p>
-<p>Los testimonios de familias Montessori tienen un componente emocional muy fuerte. Los padres no hablan de calificaciones ni de fichas completadas; hablan de <strong>transformaciones observables en sus hijos</strong>: la primera vez que se vistieron solos, cómo empezaron a concentrarse durante largos periodos, cómo resolvían conflictos con otros niños hablando en lugar de pegando. Estas historias conectan profundamente con padres que buscan exactamente eso.</p>
+<p>Los testimonios de familias Montessori tienen un componente emocional muy fuerte. Los padres no hablan de calificaciones ni de fichas completadas; hablan de <strong>transformaciones observables en sus hijos</strong>: la primera vez que se vistieron solos, cómo empezaron a concentrarse durante largos períodos, cómo resolvían conflictos con otros niños hablando en lugar de pegando. Estas historias conectan profundamente con padres que buscan exactamente eso.</p>
 
 <h2>Qué buscan los padres Montessori en los testimonios</h2>
 <p>Los padres que consideran Montessori quieren leer sobre aspectos muy específicos:</p>
@@ -4882,7 +4882,7 @@ export const industries: Industry[] = [
 <ul>
 <li><strong>QR en el mostrador:</strong> Visible junto a la caja. Los clientes habituales que ya te quieren solo necesitan un recordatorio amable.</li>
 <li><strong>Tarjeta en la bolsa:</strong> Un inserto pequeño con QR y mensaje: "¿Te ha gustado nuestro pan? Tu opinión nos ayuda a seguir horneando con pasión."</li>
-<li><strong>Redes sociales:</strong> Cuando un cliente publica tu pan en Instagram, invítale a dejar un testimonio formal en tu web.</li>
+<li><strong>Redes sociales:</strong> Cuando un cliente pública tu pan en Instagram, invítale a dejar un testimonio formal en tu web.</li>
 <li><strong>Eventos:</strong> Si haces talleres de panadería, degustaciones o participas en mercados, aprovecha para recopilar testimonios.</li>
 </ul>
 
@@ -5818,7 +5818,7 @@ export const industries: Industry[] = [
 <li><strong>Cuando expresan un cambio:</strong> "Ya no me duele la espalda", "He subido dos tallas de pantalón pero mi cuerpo se ve mejor que nunca", "Mi médico está encantado con mi evolución".</li>
 <li><strong>Fin de trimestre:</strong> En las evaluaciones trimestrales o revisiones de objetivos, pide una valoración escrita.</li>
 <li><strong>Eventos del estudio:</strong> Masterclasses, talleres especiales, aniversarios del estudio. La energía comunitaria facilita los testimonios.</li>
-<li><strong>Redes sociales:</strong> Cuando un alumno publica sobre Pilates en sus redes, invítale a formalizar su opinión en tu web.</li>
+<li><strong>Redes sociales:</strong> Cuando un alumno pública sobre Pilates en sus redes, invítale a formalizar su opinión en tu web.</li>
 </ul>
 
 <h2>Comunidad como motor de retención</h2>
@@ -6026,7 +6026,7 @@ export const industries: Industry[] = [
 <li><strong>Después de una compra exitosa:</strong> Cuando la clienta sale encantada con su compra, un QR en la bolsa o un mensaje al día siguiente funciona muy bien.</li>
 <li><strong>Eventos en tienda:</strong> Shopping nights, presentaciones de temporada, talleres de estilo. Los eventos generan una energía propicia para testimonios.</li>
 <li><strong>Clientas habituales:</strong> Pedirlo directamente: "Nos encantaría que compartieras tu experiencia en nuestra web." Con clientas de confianza, es natural.</li>
-<li><strong>Redes sociales:</strong> Cuando una clienta publica su compra en Instagram, invítala a dejar un testimonio formal en tu web.</li>
+<li><strong>Redes sociales:</strong> Cuando una clienta pública su compra en Instagram, invítala a dejar un testimonio formal en tu web.</li>
 </ul>
 
 <h2>Testimonios como identidad de marca</h2>
@@ -6662,7 +6662,7 @@ export const industries: Industry[] = [
 <li><strong>Post-cicatrización:</strong> 2-4 semanas después de la sesión, cuando el tatuaje está curado y se ve en su versión definitiva. Un mensaje con "¿Cómo ha quedado ya curado?" y enlace al formulario funciona perfectamente.</li>
 <li><strong>Fotos curadas:</strong> Pide al cliente que incluya foto del tatuaje curado. Es tu mejor material de portafolio combinado con prueba social.</li>
 <li><strong>Sesiones múltiples:</strong> Para piezas grandes, cada sesión es una oportunidad, pero el testimonio más valioso es al completar la pieza entera.</li>
-<li><strong>Instagram:</strong> Cuando un cliente publica su tatuaje y te etiqueta, invítale a dejar un testimonio formal en tu web.</li>
+<li><strong>Instagram:</strong> Cuando un cliente pública su tatuaje y te etiqueta, invítale a dejar un testimonio formal en tu web.</li>
 </ul>
 
 <h2>Higiene y profesionalidad: lo que no se ve en fotos</h2>

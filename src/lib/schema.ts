@@ -13,7 +13,7 @@ export function organizationSchema(opts?: { lang?: string }) {
   const description =
     lang === 'en'
       ? 'Opinafy is the #1 platform for collecting, managing, and displaying customer testimonials.'
-      : 'Opinafy es la plataforma #1 en espanol para recopilar, gestionar y mostrar testimonios de clientes.'
+      : 'Opinafy es la plataforma #1 en español para recopilar, gestionar y mostrar testimonios de clientes.'
 
   return {
     '@context': 'https://schema.org',

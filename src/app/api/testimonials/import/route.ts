@@ -74,7 +74,7 @@ export async function POST(request: NextRequest) {
     if (newCount > remaining) {
       return NextResponse.json(
         {
-          error: `Solo puedes importar ${remaining} testimonios mas. Tu plan ${plan} permite ${limits.testimonials} en total.`,
+          error: `Solo puedes importar ${remaining} testimonios más. Tu plan ${plan} permite ${limits.testimonials} en total.`,
         },
         { status: 403 }
       )

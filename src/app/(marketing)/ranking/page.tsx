@@ -231,7 +231,7 @@ export default async function RankingPage() {
               </svg>
               <h3 className="mt-4 text-lg font-semibold text-gray-700">Pronto habra empresas en el ranking</h3>
               <p className="mt-2 text-sm text-gray-500">
-                Las empresas necesitan al menos 5 testimonios aprobados para aparecer aqui.
+                Las empresas necesitan al menos 5 testimonios aprobados para aparecer aquí.
               </p>
               <Link
                 href="/precios"
