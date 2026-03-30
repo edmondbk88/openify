@@ -62,7 +62,7 @@ export default function AdminTestimoniosPage() {
         >
           <option value="">Todos los estados</option>
           <option value="pending">Pendiente</option>
-          <option value="pending_verification">Verificacion pendiente</option>
+          <option value="pending_verification">Verificación pendiente</option>
           <option value="approved">Aprobado</option>
           <option value="rejected">Rechazado</option>
         </select>

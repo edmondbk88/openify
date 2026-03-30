@@ -7,7 +7,7 @@ import { createClient } from '@/lib/supabase/client'
 import { useLocale } from '@/components/dashboard/locale-context'
 import { t } from '@/lib/i18n'
 
-export default function ConfiguracionPage() {
+export default function ConfiguraciónPage() {
   const router = useRouter()
   const { toast } = useToast()
   const supabase = createClient()
@@ -72,7 +72,7 @@ export default function ConfiguracionPage() {
         data: { user },
       } = await supabase.auth.getUser()
 
-      if (!user) throw new Error('No autenticado')
+      if (!user) throw new Error('No auténticado')
 
       const { error } = await supabase
         .from('profiles')

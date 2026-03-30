@@ -55,7 +55,7 @@ const TRIGGERS = [
 
 const WORKFLOWS = [
   {
-    title: 'Notificacion en Slack',
+    title: 'Notificación en Slack',
     description: 'Recibe un mensaje en Slack cada vez que llega un nuevo testimonio.',
     apps: ['Opinafy', 'Slack'],
     trigger: 'Nuevo Testimonio',
@@ -206,7 +206,7 @@ export default function ZapierIntegrationPage() {
                   step: 1,
                   title: 'Configura tu webhook en Opinafy',
                   description:
-                    'Ve a tu proyecto en Opinafy, accede a la seccion de Integraciones y configura tu URL de webhook. Selecciona los eventos que quieres notificar.',
+                    'Ve a tu proyecto en Opinafy, accede a la sección de Integraciones y configura tu URL de webhook. Selecciona los eventos que quieres notificar.',
                 },
                 {
                   step: 2,
@@ -222,7 +222,7 @@ export default function ZapierIntegrationPage() {
                 },
                 {
                   step: 4,
-                  title: 'Configura la accion',
+                  title: 'Configura la acción',
                   description:
                     'Elige la aplicacion destino (Slack, Google Sheets, etc.) y configura que datos del testimonio quieres enviar. Activa el Zap y listo.',
                 },
@@ -318,7 +318,7 @@ export default function ZapierIntegrationPage() {
                 href="/login"
                 className="rounded-lg border border-indigo-400 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-indigo-700"
               >
-                Iniciar sesion
+                Iniciar sesión
               </Link>
             </div>
           </div>

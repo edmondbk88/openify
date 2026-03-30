@@ -57,7 +57,7 @@ const fontLabels: Record<string, string> = {
   modern: 'Moderna',
   serif: 'Serif Clásica',
   rounded: 'Redondeada',
-  minimal: 'Minimalista',
+  mínimal: 'Minimalista',
 }
 
 export default async function TemplateDetailPage({ params }: PageProps) {

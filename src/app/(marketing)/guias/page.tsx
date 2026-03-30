@@ -34,7 +34,7 @@ const guides = [
   {
     name: 'Shopify',
     slug: 'shopify',
-    description: 'Agrega testimonios a tu tienda Shopify editando el tema, con secciones personalizadas o en páginas especificas.',
+    description: 'Agrega testimonios a tu tienda Shopify editando el tema, con secciones personalizadas o en páginas específicas.',
     color: 'bg-green-100 text-green-700',
     iconColor: 'text-green-600',
     icon: (
@@ -83,7 +83,7 @@ const guides = [
   },
 ]
 
-export default function GuiasIndexPage() {
+export default function GuíasIndexPage() {
   const webPageJsonLd = webPageSchema({
     name: 'Guías de instalación - Opinafy',
     url: 'https://opinafy.com/guias',
@@ -137,7 +137,7 @@ export default function GuiasIndexPage() {
               </div>
               <p className="text-sm text-gray-600">{guide.description}</p>
               <div className="mt-4 inline-flex items-center gap-1 text-sm font-medium text-indigo-600">
-                Ver guia
+                Ver guía
                 <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>

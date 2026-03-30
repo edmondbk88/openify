@@ -85,11 +85,11 @@ export default function WordPressGuidePage() {
 
         <StepCard number={2} title="Obtener el código de integración">
           <ol className="ml-4 list-decimal space-y-2">
-            <li>Dentro de tu proyecto, ve a la seccion <strong>&quot;Widget&quot;</strong>.</li>
+            <li>Dentro de tu proyecto, ve a la sección <strong>&quot;Widget&quot;</strong>.</li>
             <li>Personaliza el diseño: elige layout (carrusel, cuadricula, muro...), colores y tipografia.</li>
             <li>Copia el código de integración que aparece debajo de la vista previa.</li>
           </ol>
-          <p className="mt-3">El código tendra esta forma:</p>
+          <p className="mt-3">El código tendrá esta forma:</p>
           <CodeBlock code={embedCode} />
           <p className="text-sm text-gray-500">
             Sustituye <code className="rounded bg-gray-200 px-1 text-xs">TU_PROJECT_ID</code> por el ID real de tu proyecto.
@@ -101,7 +101,7 @@ export default function WordPressGuidePage() {
 
           <div className="space-y-6">
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion A: Bloque HTML personalizado (recomendado)</h4>
+              <h4 className="mb-2 font-semibold text-gray-900">Opción A: Bloque HTML personalizado (recomendado)</h4>
               <ol className="ml-4 list-decimal space-y-2">
                 <li>Edita la página o entrada donde quieres mostrar los testimonios.</li>
                 <li>Agrega un bloque <strong>&quot;HTML personalizado&quot;</strong> (Custom HTML).</li>
@@ -114,25 +114,25 @@ export default function WordPressGuidePage() {
             </div>
 
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion B: Plugin de Header/Footer</h4>
+              <h4 className="mb-2 font-semibold text-gray-900">Opción B: Plugin de Header/Footer</h4>
               <p className="mb-2">Si quieres que los testimonios aparezcan en todas las páginas:</p>
               <ol className="ml-4 list-decimal space-y-2">
                 <li>Instala un plugin como <strong>&quot;Insert Headers and Footers&quot;</strong> (WPCode) o <strong>&quot;Header Footer Code Manager&quot;</strong>.</li>
                 <li>Ve a <strong>Ajustes &gt; Insert Headers and Footers</strong>.</li>
-                <li>Pega el código de Opinafy en la seccion <strong>&quot;Footer&quot;</strong>.</li>
+                <li>Pega el código de Opinafy en la sección <strong>&quot;Footer&quot;</strong>.</li>
                 <li>Guarda los cambios.</li>
               </ol>
             </div>
 
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion C: Shortcode (usuarios avanzados)</h4>
+              <h4 className="mb-2 font-semibold text-gray-900">Opción C: Shortcode (usuarios avanzados)</h4>
               <p className="mb-2">Agrega esto a tu archivo <code className="rounded bg-gray-200 px-1 text-xs">functions.php</code>:</p>
               <CodeBlock code={`function opinafy_widget_shortcode() {
   return '<script src="https://opinafy.com/widget.js" data-project="TU_PROJECT_ID"></script>';
 }
 add_shortcode('opinafy', 'opinafy_widget_shortcode');`} language="php" />
               <p className="text-sm text-gray-500">
-                Despues usa <code className="rounded bg-gray-200 px-1 text-xs">[opinafy]</code> en cualquier página o entrada.
+                Después usa <code className="rounded bg-gray-200 px-1 text-xs">[opinafy]</code> en cualquier página o entrada.
               </p>
             </div>
           </div>
@@ -148,7 +148,7 @@ add_shortcode('opinafy', 'opinafy_widget_shortcode');`} language="php" />
           <div className="mt-3 rounded-lg bg-amber-50 border border-amber-200 p-4">
             <p className="text-sm text-amber-800">
               <strong>Consejo:</strong> Si usas un plugin de cache (WP Super Cache, W3 Total Cache, etc.),
-              limpia la cache despues de agregar el widget para ver los cambios inmediatamente.
+              limpia la cache después de agregar el widget para ver los cambios inmediatamente.
             </p>
           </div>
         </StepCard>
@@ -161,7 +161,7 @@ add_shortcode('opinafy', 'opinafy_widget_shortcode');`} language="php" />
           <div className="space-y-6">
             {[
               {
-                q: 'El widget afecta la velocidad de mi sitio?',
+                q: '¿El widget afecta la velocidad de mi sitio?',
                 a: 'No. El script de Opinafy pesa menos de 25 KB y se carga de forma asincrona. No bloquea la carga de tu página.',
               },
               {
@@ -169,15 +169,15 @@ add_shortcode('opinafy', 'opinafy_widget_shortcode');`} language="php" />
                 a: 'Si. Puedes pegar el código en cualquier bloque HTML o modulo de código de tu page builder favorito.',
               },
               {
-                q: 'Puedo personalizar el diseño del widget?',
+                q: '¿Puedo personalizar el diseño del widget?',
                 a: 'Por supuesto. Desde el panel de Opinafy puedes cambiar colores, tipografia, layout, bordes y más. Los cambios se aplican en tiempo real.',
               },
               {
-                q: 'Necesito actualizar el código cuando agrego nuevos testimonios?',
+                q: '¿Necesito actualizar el código cuando agrego nuevos testimonios?',
                 a: 'No. El widget se actualiza automáticamente. Cuando apruebas un nuevo testimonio, aparece en tu sitio sin tocar código.',
               },
               {
-                q: 'Es compatible con WooCommerce?',
+                q: '¿Es compatible con WooCommerce?',
                 a: 'Si. Puedes agregar el widget en páginas de producto, la página de inicio de tu tienda o cualquier otra página de WooCommerce.',
               },
             ].map(({ q, a }) => (
@@ -208,7 +208,7 @@ add_shortcode('opinafy', 'opinafy_widget_shortcode');`} language="php" />
               href="/guias/shopify"
               className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50"
             >
-              Ver guia para Shopify
+              Ver guía para Shopify
             </Link>
           </div>
         </div>

@@ -5,14 +5,14 @@ import { Footer } from '@/components/landing/footer'
 import { breadcrumbSchema, organizationSchema, webPageSchema } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: 'Programa de Afiliados - Gana comisiones recomendando Opinafy',
+  title: 'Programa de Afiliados - Gana comisiónes recomendando Opinafy',
   description:
-    'Gana un 30% de comision recurrente recomendando Opinafy, la plataforma #1 de testimonios en español. Cookie de 90 dias, pagos mensuales y materiales de marketing incluidos.',
+    'Gana un 30% de comisión recurrente recomendando Opinafy, la plataforma #1 de testimonios en español. Cookie de 90 días, pagos mensuales y materiales de marketing incluidos.',
   keywords: [
     'programa afiliados testimonios',
     'ganar dinero recomendando software',
     'afiliados opinafy',
-    'comisiones recurrentes saas',
+    'comisiónes recurrentes saas',
     'programa referidos testimonios',
     'marketing de afiliados software',
   ],
@@ -25,9 +25,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Programa de Afiliados de Opinafy - 30% comision recurrente',
+    title: 'Programa de Afiliados de Opinafy - 30% comisión recurrente',
     description:
-      'Recomienda Opinafy y gana un 30% de comision recurrente. Cookie de 90 dias, pagos mensuales y dashboard de seguimiento.',
+      'Recomienda Opinafy y gana un 30% de comisión recurrente. Cookie de 90 días, pagos mensuales y dashboard de seguimiento.',
     url: 'https://opinafy.com/afiliados',
     type: 'website',
     siteName: 'Opinafy',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Programa de Afiliados de Opinafy - 30% comision recurrente',
+    title: 'Programa de Afiliados de Opinafy - 30% comisión recurrente',
     description:
-      'Recomienda Opinafy y gana un 30% de comision recurrente por cada cliente referido.',
+      'Recomienda Opinafy y gana un 30% de comisión recurrente por cada cliente referido.',
     images: ['/og.png'],
   },
 }
@@ -47,7 +47,7 @@ const steps = [
   {
     number: '1',
     title: 'Registrate como afiliado',
-    description: 'Crea tu cuenta de afiliado en menos de 2 minutos. Recibiras tu enlace único de referido al instante.',
+    description: 'Crea tu cuenta de afiliado en menos de 2 minutos. Recibirás tu enlace único de referido al instante.',
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
@@ -66,8 +66,8 @@ const steps = [
   },
   {
     number: '3',
-    title: 'Gana un 30% de comision recurrente',
-    description: 'Por cada cliente que se registre a traves de tu enlace, ganas un 30% de su suscripcion mensual. Mientras el cliente pague, tu ganas.',
+    title: 'Gana un 30% de comisión recurrente',
+    description: 'Por cada cliente que se registre a través de tu enlace, ganas un 30% de su suscripción mensual. Mientras el cliente pague, tu ganas.',
     icon: (
       <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
@@ -77,10 +77,10 @@ const steps = [
 ]
 
 const benefits = [
-  { title: '30% comision recurrente', description: 'Ganas mientras el cliente siga pagando, mes tras mes.' },
-  { title: 'Cookie de 90 dias', description: 'Si alguien hace clic en tu enlace, tienes 90 dias para que se convierta.' },
-  { title: 'Pagos mensuales', description: 'Recibe tus comisiones cada mes directamente en tu cuenta.' },
-  { title: 'Dashboard de seguimiento', description: 'Monitoriza clics, conversiones y comisiones en tiempo real.' },
+  { title: '30% comisión recurrente', description: 'Ganas mientras el cliente siga pagando, mes tras mes.' },
+  { title: 'Cookie de 90 dias', description: 'Si alguien hace clic en tu enlace, tienes 90 días para que se convierta.' },
+  { title: 'Pagos mensuales', description: 'Recibe tus comisiónes cada mes directamente en tu cuenta.' },
+  { title: 'Dashboard de seguimiento', description: 'Monitoriza clics, conversiones y comisiónes en tiempo real.' },
   { title: 'Materiales de marketing', description: 'Banners, textos y recursos listos para compartir.' },
   { title: 'Soporte dedicado', description: 'Un equipo que te ayuda a maximizar tus conversiones.' },
 ]
@@ -97,7 +97,7 @@ const audiences = [
   },
   {
     title: 'Agencias de marketing',
-    description: 'Recomienda Opinafy a tus clientes y gana comisiones adicionales por cada suscripcion.',
+    description: 'Recomienda Opinafy a tus clientes y gana comisiónes adicionales por cada suscripción.',
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
@@ -133,27 +133,27 @@ const pricingExamples = [
 
 const faqs = [
   {
-    question: '¿Como funciona la comision del 30%?',
-    answer: 'Recibes el 30% de la suscripcion mensual de cada cliente que se registre a traves de tu enlace de referido. La comision es recurrente: mientras el cliente siga pagando, tu sigues ganando.',
+    question: '¿Cómo funciona la comisión del 30%?',
+    answer: 'Recibes el 30% de la suscripción mensual de cada cliente que se registre a través de tu enlace de referido. La comisión es recurrente: mientras el cliente siga pagando, tu sigues ganando.',
   },
   {
     question: '¿Cuando recibo mis pagos?',
-    answer: 'Los pagos se procesan mensualmente. Las comisiones se calculan al final de cada mes y se transfieren en los primeros 10 dias del mes siguiente.',
+    answer: 'Los pagos se procesan mensualmente. Las comisiónes se calculan al final de cada mes y se transfieren en los primeros 10 días del mes siguiente.',
   },
   {
     question: '¿Que es la cookie de 90 dias?',
-    answer: 'Cuando alguien hace clic en tu enlace de referido, se guarda una cookie en su navegador durante 90 dias. Si esa persona se registra en cualquier momento dentro de esos 90 dias, tu recibes la comision.',
+    answer: 'Cuando alguien hace clic en tu enlace de referido, se guarda una cookie en su navegador durante 90 dias. Si esa persona se registra en cualquier momento dentro de esos 90 días, tu recibes la comisión.',
   },
   {
     question: '¿Necesito ser cliente de Opinafy para ser afiliado?',
     answer: 'No es obligatorio, pero te recomendamos probar la plataforma (tiene un plan gratuito) para que puedas hablar con conocimiento de causa sobre sus beneficios.',
   },
   {
-    question: '¿Hay un minimo de pago?',
-    answer: 'Si, el minimo de pago es de 50 EUR. Si tus comisiones no alcanzan ese monto en un mes, se acumulan para el siguiente.',
+    question: '¿Hay un mínimo de pago?',
+    answer: 'Si, el mínimo de pago es de 50 EUR. Si tus comisiónes no alcanzan ese monto en un mes, se acumulan para el siguiente.',
   },
   {
-    question: '¿Puedo ser afiliado si estoy fuera de Espana?',
+    question: '¿Puedo ser afiliado si estoy fuera de España?',
     answer: 'Si, el programa de afiliados esta abierto a personas de cualquier pais. Los pagos se realizan via transferencia bancaria o PayPal.',
   },
 ]
@@ -167,7 +167,7 @@ export default function AfiliadosPage() {
   const webPageJsonLd = webPageSchema({
     name: 'Programa de Afiliados - Opinafy',
     url: 'https://opinafy.com/afiliados',
-    description: 'Gana un 30% de comision recurrente recomendando Opinafy, la plataforma #1 de testimonios en español.',
+    description: 'Gana un 30% de comisión recurrente recomendando Opinafy, la plataforma #1 de testimonios en español.',
   })
 
   return (
@@ -196,8 +196,8 @@ export default function AfiliadosPage() {
             Programa de Afiliados de Opinafy
           </h1>
           <p className="mt-6 text-lg text-gray-600 sm:text-xl">
-            Gana comisiones recomendando la plataforma #1 de testimonios en español.
-            Un 30% de comision recurrente por cada cliente referido.
+            Gana comisiónes recomendando la plataforma #1 de testimonios en español.
+            Un 30% de comisión recurrente por cada cliente referido.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
@@ -217,7 +217,7 @@ export default function AfiliadosPage() {
       <section className="bg-white px-4 py-16 sm:py-24">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center text-3xl font-bold text-gray-900 sm:text-4xl">
-            Como funciona
+            Cómo funciona
           </h2>
           <p className="mt-4 text-center text-lg text-gray-600">
             Tres pasos para empezar a generar ingresos recurrentes
@@ -268,7 +268,7 @@ export default function AfiliadosPage() {
             Cuanto puedes ganar
           </h2>
           <p className="mt-4 text-center text-lg text-gray-600">
-            Ejemplos reales de comisiones mensuales recurrentes
+            Ejemplos reales de comisiónes mensuales recurrentes
           </p>
           <div className="mt-12 overflow-hidden rounded-2xl border border-gray-200">
             <table className="w-full text-left">
@@ -277,7 +277,7 @@ export default function AfiliadosPage() {
                   <th className="px-6 py-4 text-sm font-semibold text-gray-900">Clientes referidos</th>
                   <th className="px-6 py-4 text-sm font-semibold text-gray-900">Plan</th>
                   <th className="px-6 py-4 text-sm font-semibold text-gray-900">Precio/mes</th>
-                  <th className="px-6 py-4 text-sm font-semibold text-gray-900">Tu comision/mes</th>
+                  <th className="px-6 py-4 text-sm font-semibold text-gray-900">Tu comisión/mes</th>
                 </tr>
               </thead>
               <tbody>

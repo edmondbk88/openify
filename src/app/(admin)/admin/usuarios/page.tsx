@@ -77,7 +77,7 @@ export default function AdminUsuariosPage() {
   }
 
   const handleDelete = async (userId: string, email: string) => {
-    if (!confirm(`Eliminar usuario ${email}? Esta accion es irreversible.`)) return
+    if (!confirm(`Eliminar usuario ${email}? Esta acción es irreversible.`)) return
     await fetch(`/api/admin/users?userId=${userId}`, { method: 'DELETE' })
     fetchUsers()
   }
@@ -310,7 +310,7 @@ export default function AdminUsuariosPage() {
                   value={giftDays}
                   onChange={(e) => setGiftDays(Number(e.target.value) || 1)}
                   className="mt-2 w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-                  placeholder="O escribe dias personalizados..."
+                  placeholder="O escribe días personalizados..."
                 />
               </div>
 

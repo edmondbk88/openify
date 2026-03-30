@@ -2,7 +2,7 @@
 const cityDescriptions: Record<string, string> = {
   // Spain
   madrid:
-    'capital de España y centro neurálgico de negocios, servicios financieros y administración pública, con más de 3,3 millones de habitantes y un área metropolitana que supera los 6 millones',
+    'capital de España y centro neurálgico de negocios, servicios financieros y administración pública, con más de 3,3 millones de habitantes y un área metrópolitana que supera los 6 millones',
   barcelona:
     'hub tecnológico y turístico del Mediterráneo, con un ecosistema emprendedor vibrante, más de 1,6 millones de habitantes y una fuerte proyección internacional gracias a eventos como el Mobile World Congress',
   valencia:
@@ -23,7 +23,7 @@ const cityDescriptions: Record<string, string> = {
     'capital de Gran Canaria, puerta de entrada al turismo europeo en las Islas Canarias, con un clima privilegiado y un sector servicios que representa el 85% de su PIB',
   // Mexico
   'ciudad-de-mexico':
-    'la mayor metropoli de habla hispana con más de 21 millones de habitantes en su zona metropolitana, epicentro económico y cultural de México',
+    'la mayor metrópoli de habla hispana con más de 21 millones de habitantes en su zona metrópolitana, epicentro económico y cultural de México',
   guadalajara:
     'capital de Jalisco y el Silicon Valley mexicano, sede de grandes empresas tecnológicas y una creciente escena de startups y emprendimiento digital',
   monterrey:
@@ -56,9 +56,9 @@ type IndustryCategory =
   | 'comercio'
   | 'hosteleria'
   | 'bienestar'
-  | 'educacion'
+  | 'educación'
   | 'creativo'
-  | 'tecnologia'
+  | 'tecnología'
   | 'vehiculos'
 
 const industryCategories: Record<string, IndustryCategory> = {
@@ -79,10 +79,10 @@ const industryCategories: Record<string, IndustryCategory> = {
   gimnasios: 'bienestar',
   peluquerias: 'bienestar',
   coaches: 'bienestar',
-  academias: 'educacion',
+  academias: 'educación',
   fotografos: 'creativo',
-  'agencias-marketing': 'tecnologia',
-  mecanicos: 'vehiculos',
+  'agencias-marketing': 'tecnología',
+  mecánicos: 'vehiculos',
 }
 
 /** City size tiers */
@@ -146,7 +146,7 @@ const cityProfiles: Record<string, CityProfile> = {
     population: 690_000,
     keyIndustries: ['turismo', 'hostelería', 'aeronáutica', 'agroalimentación'],
     economicProfile:
-      'Sevilla es el motor económico de Andalucía, con un sector turístico que recibe más de 3,2 millones de visitantes internacionales al año. La industria aeronáutica emplea a más de 12.000 personas en la zona metropolitana. El comercio local sevillano está en plena transición digital, donde las opiniones de clientes se han convertido en el principal factor de decisión para el 67% de los consumidores.',
+      'Sevilla es el motor económico de Andalucía, con un sector turístico que recibe más de 3,2 millones de visitantes internacionales al año. La industria aeronáutica emplea a más de 12.000 personas en la zona metrópolitana. El comercio local sevillano está en plena transición digital, donde las opiniones de clientes se han convertido en el principal factor de decisión para el 67% de los consumidores.',
     nearbyRelatedCities: ['malaga', 'madrid', 'granada'],
   },
   malaga: {
@@ -160,7 +160,7 @@ const cityProfiles: Record<string, CityProfile> = {
     population: 345_000,
     keyIndustries: ['industria metalúrgica', 'servicios financieros', 'gastronomía', 'cultura'],
     economicProfile:
-      'Bilbao tiene la renta per cápita más alta de España y un tejido empresarial dominado por la industria y los servicios avanzados. El efecto Guggenheim transformo la ciudad en un referente cultural y gastronómico, con 18 restaurantes con estrella Michelin en el área metropolitana. Los consumidores vascos valoran especialmente la calidad y la reputación, dedicando un 40% más de tiempo a investigar proveedores antes de contratar.',
+      'Bilbao tiene la renta per cápita más alta de España y un tejido empresarial dominado por la industria y los servicios avanzados. El efecto Guggenheim transformo la ciudad en un referente cultural y gastronómico, con 18 restaurantes con estrella Michelin en el área metrópolitana. Los consumidores vascos valoran especialmente la calidad y la reputación, dedicando un 40% más de tiempo a investigar proveedores antes de contratar.',
     nearbyRelatedCities: ['madrid', 'zaragoza', 'barcelona'],
   },
   zaragoza: {
@@ -195,7 +195,7 @@ const cityProfiles: Record<string, CityProfile> = {
     population: 9_200_000,
     keyIndustries: ['servicios financieros', 'tecnología', 'comercio', 'manufactura'],
     economicProfile:
-      'Ciudad de México genera el 17% del PIB mexicano y alberga la mayor concentración de startups de Latinoamérica. Con más de 21 millones de personas en la zona metropolitana, la competencia entre negocios locales es feroz. El comercio electrónico crecio un 27% el último año, y el 84% de los consumidores capitalinos revisan testimonios antes de realizar una compra por primera vez con un negocio.',
+      'Ciudad de México genera el 17% del PIB mexicano y alberga la mayor concentración de startups de Latinoamérica. Con más de 21 millones de personas en la zona metrópolitana, la competencia entre negocios locales es feroz. El comercio electrónico crecio un 27% el último año, y el 84% de los consumidores capitalinos revisan testimonios antes de realizar una compra por primera vez con un negocio.',
     nearbyRelatedCities: ['guadalajara', 'monterrey', 'bogota'],
   },
   guadalajara: {
@@ -237,7 +237,7 @@ const cityProfiles: Record<string, CityProfile> = {
     population: 5_600_000,
     keyIndustries: ['mineria y servicios', 'finanzas', 'retail', 'tecnología'],
     economicProfile:
-      'Santiago de Chile concentra el 43% del PIB chileno y es la plaza financiera más estable de la region. El retail chileno es el más sofisticado de Latinoamérica, con consumidores que priorizan la investigación previa. Un 81% de los santiaguinos lee al menos 5 opiniones antes de contratar un servicio nuevo, y el 62% desconfia de negocios sin testimonios visibles en su página web.',
+      'Santiago de Chile concentra el 43% del PIB chileno y es la plaza financiera más estable de la región. El retail chileno es el más sofisticado de Latinoamérica, con consumidores que priorizan la investigación previa. Un 81% de los santiaguinos lee al menos 5 opiniones antes de contratar un servicio nuevo, y el 62% desconfia de negocios sin testimonios visibles en su página web.',
     nearbyRelatedCities: ['buenos-aires', 'lima', 'bogota'],
   },
   lima: {
@@ -320,7 +320,7 @@ const industryInsights: Record<string, IndustryInsight> = {
     bestPractices: [
       'Destaca testimonios de pacientes que superaron su miedo al dentista gracias al trato del equipo, ya que estos relatos resuenan fuertemente con los indecisos',
       'Para tratamientos estéticos, solicita testimonios con fotos del antes y después (con consentimiento), ya que el impacto visual complementa la experiencia narrada',
-      'Implementa un sistema de seguimiento post-tratamiento que pida feedback una semana después, cuando el paciente ya experimenta los resultados y puede valorar la inversion',
+      'Implementa un sistema de seguimiento post-tratamiento que pida feedback una semana después, cuando el paciente ya experimenta los resultados y puede valorar la inversión',
     ],
     metrics: 'Las clínicas dentales con testimonios visibles en su web experimentan un 47% más de solicitudes de primera cita que las que dependen únicamente de Google Reviews',
   },
@@ -359,7 +359,7 @@ const industryInsights: Record<string, IndustryInsight> = {
     bestPractices: [
       'Solicita testimonios con fotos del resultado final (con permiso), ya que en peluqueria la prueba visual tiene más impacto que cualquier texto descriptivo',
       'Crea testimonios asociados a cada estilista del salón para que los nuevos clientes elijan profesional basándose en experiencias previas con ese especialista concreto',
-      'Pide el testimonio el mismo dia de la visita, cuando el cliente está satisfecho con su nuevo look y más dispuesto a compartir su experiencia positiva',
+      'Pide el testimonio el mismo día de la visita, cuando el cliente está satisfecho con su nuevo look y más dispuesto a compartir su experiencia positiva',
     ],
     metrics: 'El 68% de las personas eligen peluqueria basándose en recomendaciones, y los salones con testimonios visuales en su web incrementan las reservas de nuevos clientes un 38%',
   },
@@ -367,7 +367,7 @@ const industryInsights: Record<string, IndustryInsight> = {
     challenges: [
       'Los dueños de mascotas son emocionalmente vulnerables cuando buscan atención veterinaria, especialmente en emergencias, y necesitan sentir confianza absoluta en el profesional antes de dejar a su animal',
       'La decisión de elegir veterinario suele basarse en recomendaciones de otros dueños de mascotas, pero el boca a boca presencial tiene un alcance limitado frente al digital',
-      'Las urgencias veterinarias no dan tiempo a investigar, lo que hace que tener una reputación online solida de antemano sea crítico para captar estos clientes de alto valor',
+      'Las urgencias veterinarias no dan tiempo a investigar, lo que hace que tener una reputación online sólida de antemano sea crítico para captar estos clientes de alto valor',
     ],
     bestPractices: [
       'Recoge testimonios que incluyan el nombre y especie de la mascota, ya que esto humaniza la experiencia y conecta emocionalmente con otros dueños de animales',
@@ -380,7 +380,7 @@ const industryInsights: Record<string, IndustryInsight> = {
     challenges: [
       'El portfolio muestra la calidad técnica del trabajo, pero no transmite la experiencia de trabajar con el fotografo: la comunicación, la paciencia, la capacidad de poner cómodo al sujeto',
       'Los clientes de fotografía suelen contratar para eventos únicos e irrepetibles (bodas, comuniones, sesiones corporativas), lo que eleva enormemente el riesgo percibido de elegir mal',
-      'La saturación del mercado fotografico hace que la diferenciación por precio sea una carrera al fondo; la diferenciación por reputación es la única sostenible',
+      'La saturación del mercado fotográfico hace que la diferenciación por precio sea una carrera al fondo; la diferenciación por reputación es la única sostenible',
     ],
     bestPractices: [
       'Solicita testimonios que detallen la experiencia completa: desde el primer contacto y la planificación hasta la entrega final, no solo la calidad de las fotos',
@@ -404,7 +404,7 @@ const industryInsights: Record<string, IndustryInsight> = {
   },
   hoteles: {
     challenges: [
-      'Las OTAs como Booking y Expedia controlan la mayoria de las reseñas y cobran comisiones del 15-25%, lo que hace crítico tener testimonios propios que impulsen las reservas directas',
+      'Las OTAs como Booking y Expedia controlan la mayoría de las reseñas y cobran comisiónes del 15-25%, lo que hace crítico tener testimonios propios que impulsen las reservas directas',
       'Los huespedes insatisfechos publican reseñas negativas 6 veces más que los satisfechos, distorsionando la percepción real de la calidad del hotel',
       'La estacionalidad extrema del sector hace que los testimonios recientes de temporada alta sean irrelevantes en temporada baja y viceversa',
     ],
@@ -413,18 +413,18 @@ const industryInsights: Record<string, IndustryInsight> = {
       'Segmenta testimonios por tipo de viajero (pareja, familia, negocios, aventura) para que cada perfil encuentre opiniones relevantes a su estilo de viaje',
       'Destaca testimonios que mencionen elementos específicos del hotel (desayuno, ubicación, personal, limpieza) ya que los detalles concretos generan más confianza que las valoraciones genéricas',
     ],
-    metrics: 'Los hoteles que muestran testimonios propios en su web aumentan las reservas directas un 24%, reduciendo la dependencia de OTAs y sus altas comisiones',
+    metrics: 'Los hoteles que muestran testimonios propios en su web aumentan las reservas directas un 24%, reduciendo la dependencia de OTAs y sus altas comisiónes',
   },
   'tiendas-online': {
     challenges: [
-      'La tasa de abandono del carrito en ecommerce supera el 70%, y la falta de confianza en la tienda es la segunda causa más citada detrás de los costes de envio',
+      'La tasa de abandono del carrito en ecommerce supera el 70%, y la falta de confianza en la tienda es la segunda causa más citada detrás de los costes de envío',
       'Los consumidores no pueden tocar ni probar los productos antes de comprar, lo que hace que los testimonios de otros compradores sean el sustituto táctil más cercano',
       'La competencia de grandes marketplaces como Amazon hace que las tiendas online independientes necesiten generar confianza extra para justificar la compra directa',
     ],
     bestPractices: [
-      'Coloca testimonios junto a los productos estrella y en el proceso de checkout para reducir la fricción de compra en los momentos criticos de decisión',
-      'Solicita testimonios que incluyan fotos del producto recibido y detalles sobre envio, empaquetado y calidad real, ya que esto resuelve las principales objeciones de los compradores online',
-      'Implementa un email automático 7 dias después de la entrega pidiendo feedback, cuando el cliente ya ha usado el producto y puede dar una opinion informada',
+      'Coloca testimonios junto a los productos estrella y en el proceso de checkout para reducir la fricción de compra en los momentos críticos de decisión',
+      'Solicita testimonios que incluyan fotos del producto recibido y detalles sobre envío, empaquetado y calidad real, ya que esto resuelve las principales objeciones de los compradores online',
+      'Implementa un email automático 7 días después de la entrega pidiendo feedback, cuando el cliente ya ha usado el producto y puede dar una opinión informada',
     ],
     metrics: 'Los productos con testimonios de compradores reales convierten un 270% más que los que no tienen opiniones, y los testimonios con fotos multiplican ese efecto por 2',
   },
@@ -435,7 +435,7 @@ const industryInsights: Record<string, IndustryInsight> = {
       'El vínculo terapéutico es el factor más determinante en la elección de psicólogo, y los testimonios son la única forma de transmitirlo antes del primer contacto',
     ],
     bestPractices: [
-      'Ofrece la opcion de testimonios anónimos o con nombre de pila solamente, para que los pacientes puedan compartir sin sentirse expuestos',
+      'Ofrece la opción de testimonios anónimos o con nombre de pila solamente, para que los pacientes puedan compartir sin sentirse expuestos',
       'Enfoca las preguntas del formulario hacia la experiencia emocional (me senti escuchado, el ambiente era seguro, senti que avanzaba) sin pedir detalles clínicos',
       'Muestra testimonios que normalicen la búsqueda de ayuda psicológica, ya que esto no solo genera confianza sino que reduce las barreras de entrada para nuevos pacientes',
     ],
@@ -443,7 +443,7 @@ const industryInsights: Record<string, IndustryInsight> = {
   },
   nutricionistas: {
     challenges: [
-      'La desinformacion nutricional en redes sociales ha creado consumidores escépticos que necesitan prueba social profesional para distinguir a un nutricionista serio de un influencer sin formación',
+      'La desinformación nutricional en redes sociales ha creado consumidores escépticos que necesitan prueba social profesional para distinguir a un nutricionista serio de un influencer sin formación',
       'Los resultados de un plan nutricional tardan semanas o meses en manifestarse, lo que dificulta obtener testimonios inmediatos y requiere un seguimiento a largo plazo',
       'Los pacientes de nutrición suelen tener historial de fracasos con dietas previas, lo que eleva su desconfianza y la importancia de ver testimonios de personas con situaciones similares',
     ],
@@ -474,11 +474,11 @@ const industryInsights: Record<string, IndustryInsight> = {
       'La comunicación durante el proyecto es tan importante como el resultado final, pero los portfolios solo muestran edificios, no la experiencia de trabajar con el arquitecto',
     ],
     bestPractices: [
-      'Solicita testimonios al finalizar la obra y un año después de habitarla, ya que la perspectiva de uso real añade una dimensión de credibilidad que el dia de la entrega no tiene',
+      'Solicita testimonios al finalizar la obra y un año después de habitarla, ya que la perspectiva de uso real añade una dimensión de credibilidad que el día de la entrega no tiene',
       'Pide a los clientes que comenten sobre el proceso completo: cumplimiento de plazos, gestión de imprevistos, comunicación y relación calidad-precio, no solo sobre el resultado estético',
       'Asocia cada testimonio con fotos del proyecto correspondiente para crear un portfolio enriquecido donde la experiencia del cliente complementa la imagen visual del trabajo',
     ],
-    metrics: 'Los estudios de arquitectura con testimonios de clientes satisfechos cierran un 48% más de presupuestos que los que solo muestran portfolio grafico sin contexto humano',
+    metrics: 'Los estudios de arquitectura con testimonios de clientes satisfechos cierran un 48% más de presupuestos que los que solo muestran portfolio gráfico sin contexto humano',
   },
   contadores: {
     challenges: [
@@ -514,14 +514,14 @@ const industryInsights: Record<string, IndustryInsight> = {
     ],
     bestPractices: [
       'Solicita testimonios con fotos de antes y después (con consentimiento informado por escrito) ya que el impacto visual es el argumento más persuasivo en estética',
-      'Recoge testimonios a las 2 semanas del tratamiento, cuando los resultados iniciales son visibles, y de nuevo a los 3 meses para testimonios de resultados consolidados',
+      'Recoge testimonios a las 2 semanas del tratamiento, cuando los resultados iniciales son visibles, y de nuevo a los 3 meses para testimonios de resultados consólidados',
       'Incluye en los formularios preguntas sobre el trato recibido, la higiene percibida y la información previa al tratamiento, ya que estos factores pesan tanto como el resultado estético',
     ],
     metrics: 'El 88% de los pacientes de estética consultan opiniones antes de elegir clínica, y los testimonios con fotos de resultados reales incrementan las solicitudes de primera cita en un 52%',
   },
-  mecanicos: {
+  mecánicos: {
     challenges: [
-      'El sector mecanico arrastra un problema histórico de desconfianza: muchos clientes temen que les cobren reparaciones innecesarias o que el precio final no coincida con el presupuesto',
+      'El sector mecánico arrastra un problema histórico de desconfianza: muchos clientes temen que les cobren reparaciones innecesarias o que el precio final no coincida con el presupuesto',
       'Los clientes de mecanica rara vez son expertos en automocion, lo que crea una asimetria de información que genera ansiedad y dependencia de las opiniones de otros usuarios',
       'La fidelidad al taller suele basarse en la recomendación de conocidos, pero el alcance del boca a boca presencial es limitado en una era donde la búsqueda empieza en Google',
     ],
@@ -560,11 +560,11 @@ const industryBlogLinks: Record<string, BlogLink[]> = {
   dentistas: [
     { slug: 'testimonios-dentistas-odontologia', title: 'Testimonios para dentistas' },
     { slug: 'testimonios-clinicas-salud', title: 'Testimonios para clínicas de salud' },
-    { slug: 'landing-pages-testimonios-conversion', title: 'Landing pages con testimonios' },
+    { slug: 'landing-pages-testimonios-conversión', title: 'Landing pages con testimonios' },
   ],
   inmobiliarias: [
     { slug: 'testimonios-inmobiliarias-agentes', title: 'Testimonios para inmobiliarias' },
-    { slug: 'caso-estudio-testimonios-conversion', title: 'Caso de estudio: testimonios y conversión' },
+    { slug: 'caso-estudio-testimonios-conversión', title: 'Caso de estudio: testimonios y conversión' },
     { slug: 'prueba-social-que-es-como-usarla', title: 'Qué es la prueba social' },
   ],
   gimnasios: [
@@ -579,27 +579,27 @@ const industryBlogLinks: Record<string, BlogLink[]> = {
   ],
   veterinarias: [
     { slug: 'testimonios-veterinarias-clinicas', title: 'Testimonios para veterinarias' },
-    { slug: 'automatizar-recopilacion-testimonios', title: 'Automatizar la recopilación' },
+    { slug: 'automatizar-recopilación-testimonios', title: 'Automatizar la recopilación' },
     { slug: 'seo-testimonios-mejora-posicionamiento', title: 'Mejorar el SEO con testimonios' },
   ],
   fotografos: [
-    { slug: 'testimonios-fotografia-bodas', title: 'Testimonios para fotografos de bodas' },
+    { slug: 'testimonios-fotografía-bodas', title: 'Testimonios para fotografos de bodas' },
     { slug: 'carousel-testimonios-web-mejores-practicas', title: 'Carruseles de testimonios' },
     { slug: 'user-generated-content-testimonios', title: 'UGC y testimonios' },
   ],
   coaches: [
     { slug: 'testimonios-para-coaches-consultores', title: 'Testimonios para coaches y consultores' },
     { slug: 'testimonios-video-guia-completa', title: 'Guia de testimonios en video' },
-    { slug: 'psicologia-prueba-social-ventas', title: 'Psicologia de la prueba social' },
+    { slug: 'psicología-prueba-social-ventas', title: 'Psicología de la prueba social' },
   ],
   hoteles: [
     { slug: 'testimonios-restaurantes-hosteleria', title: 'Testimonios en hostelería' },
     { slug: 'badges-confianza-sellos-web', title: 'Badges de confianza para tu web' },
-    { slug: 'estadisticas-testimonios-datos-conversion', title: 'Estadísticas de testimonios' },
+    { slug: 'estadisticas-testimonios-datos-conversión', title: 'Estadísticas de testimonios' },
   ],
   'tiendas-online': [
     { slug: 'testimonios-ecommerce-aumentar-ventas', title: 'Testimonios para ecommerce' },
-    { slug: 'landing-pages-testimonios-conversion', title: 'Landing pages con testimonios' },
+    { slug: 'landing-pages-testimonios-conversión', title: 'Landing pages con testimonios' },
     { slug: 'medir-roi-testimonios', title: 'Medir el ROI de testimonios' },
   ],
   psicologos: [
@@ -613,19 +613,19 @@ const industryBlogLinks: Record<string, BlogLink[]> = {
     { slug: 'email-marketing-testimonios', title: 'Email marketing con testimonios' },
   ],
   academias: [
-    { slug: 'testimonios-academias-formacion', title: 'Testimonios para academias' },
+    { slug: 'testimonios-academias-formación', title: 'Testimonios para academias' },
     { slug: 'testimonios-video-guia-completa', title: 'Testimonios en video' },
     { slug: 'wall-of-love-que-es-como-crear', title: 'Crear un Wall of Love' },
   ],
   arquitectos: [
     { slug: 'testimonios-b2b-empresas', title: 'Testimonios B2B' },
-    { slug: 'caso-estudio-testimonios-conversion', title: 'Caso de estudio de conversión' },
+    { slug: 'caso-estudio-testimonios-conversión', title: 'Caso de estudio de conversión' },
     { slug: 'widgets-testimonios-web-guia', title: 'Widgets de testimonios' },
   ],
   contadores: [
     { slug: 'testimonios-b2b-empresas', title: 'Testimonios para empresas B2B' },
     { slug: 'testimonios-tiendas-fisicas-negocios-locales', title: 'Testimonios para negocios locales' },
-    { slug: 'automatizar-recopilacion-testimonios', title: 'Automatizar recopilación' },
+    { slug: 'automatizar-recopilación-testimonios', title: 'Automatizar recopilación' },
   ],
   'agencias-marketing': [
     { slug: 'testimonios-agencias-marketing', title: 'Testimonios para agencias' },
@@ -637,7 +637,7 @@ const industryBlogLinks: Record<string, BlogLink[]> = {
     { slug: 'testimonios-video-guia-completa', title: 'Testimonios en video' },
     { slug: 'badges-confianza-sellos-web', title: 'Sellos de confianza' },
   ],
-  mecanicos: [
+  mecánicos: [
     { slug: 'testimonios-tiendas-fisicas-negocios-locales', title: 'Testimonios para negocios locales' },
     { slug: 'como-pedir-testimonios-clientes-plantillas', title: 'Cómo pedir testimonios' },
     { slug: 'seo-testimonios-mejora-posicionamiento', title: 'SEO con testimonios' },
@@ -666,7 +666,7 @@ const relatedIndustries: Record<string, string[]> = {
   contadores: ['abogados', 'agencias-marketing', 'inmobiliarias'],
   'agencias-marketing': ['tiendas-online', 'fotografos', 'academias'],
   'clinicas-estetica': ['dentistas', 'peluquerias', 'nutricionistas'],
-  mecanicos: ['tiendas-online', 'abogados', 'contadores'],
+  mecánicos: ['tiendas-online', 'abogados', 'contadores'],
 }
 
 // ─── EXPORTED FUNCTIONS ─────────────────────────────────────────────────
@@ -737,36 +737,36 @@ export function generateUniqueIntro(
   // Each combination of tier + category produces a unique intro
   if (tier === 'grande') {
     if (category === 'salud') {
-      return `${cityName}, con ${popFormatted} de habitantes, es uno de los mercados de salud más competitivos del mundo hispanohablante. Para un negocio de ${industryLower} en está metropoli, la saturación de opciones disponibles obliga a diferenciarse con algo más que buenas instalaciones o precios competitivos. ${profile.economicProfile} En este contexto, los testimonios verificados de pacientes reales se convierten en el factor de decisión número uno: resuelven la incertidumbre, generan empatia y transmiten la calidad humana de tu equipo de forma que ningun anuncio puede igualar.`
+      return `${cityName}, con ${popFormatted} de habitantes, es uno de los mercados de salud más competitivos del mundo hispanohablante. Para un negocio de ${industryLower} en está metrópoli, la saturación de opciones disponibles obliga a diferenciarse con algo más que buenas instalaciones o precios competitivos. ${profile.economicProfile} En este contexto, los testimonios verificados de pacientes reales se convierten en el factor de decisión número uno: resuelven la incertidumbre, generan empatia y transmiten la calidad humana de tu equipo de forma que ningun anuncio puede igualar.`
     }
     if (category === 'hosteleria') {
-      return `En una metropoli como ${cityName}, con ${popFormatted} de residentes y millones de visitantes anuales, el sector de ${industryLower} enfrenta una competencia sin precedentes. ${profile.economicProfile} Cada dia, miles de personas en ${cityName} deciden donde ir basándose en opiniones de otros clientes. Los testimonios verificados de comensales y huespedes satisfechos son tu herramienta más poderosa para convertir esa búsqueda online en una reserva confirmada, destacando entre cientos de opciones que compiten por la misma atención.`
+      return `En una metrópoli como ${cityName}, con ${popFormatted} de residentes y millones de visitantes anuales, el sector de ${industryLower} enfrenta una competencia sin precedentes. ${profile.economicProfile} Cada día, miles de personas en ${cityName} deciden donde ir basándose en opiniones de otros clientes. Los testimonios verificados de comensales y huespedes satisfechos son tu herramienta más poderosa para convertir esa búsqueda online en una reserva confirmada, destacando entre cientos de opciones que compiten por la misma atención.`
     }
     if (category === 'servicios-profesionales') {
-      return `${cityName} concentra la mayor densidad de profesionales de ${industryLower} en su region, con un mercado de ${popFormatted} de potenciales clientes que buscan servicios de confianza. ${profile.economicProfile} En un entorno donde la competencia profesional es intensa, los testimonios de clientes satisfechos se convierten en tu carta de presentacion más persuasiva. Demuestran resultados reales, profesionalidad y un trato que la descripción de servicios en una web no puede transmitir.`
+      return `${cityName} concentra la mayor densidad de profesionales de ${industryLower} en su región, con un mercado de ${popFormatted} de potenciales clientes que buscan servicios de confianza. ${profile.economicProfile} En un entorno donde la competencia profesional es intensa, los testimonios de clientes satisfechos se convierten en tu carta de presentación más persuasiva. Demuestran resultados reales, profesionalidad y un trato que la descripción de servicios en una web no puede transmitir.`
     }
     if (category === 'comercio') {
       return `Con ${popFormatted} de consumidores activos, ${cityName} es uno de los mercados comerciales más grandes y exigentes del mundo hispano. ${profile.economicProfile} Para negocios de ${industryLower} que operan en está plaza, la confianza del consumidor es el recurso más valioso y más difícil de obtener. Los testimonios de clientes reales actúan como el boca a boca digital que escala tu reputación a la velocidad que exige una ciudad de este tamaño.`
     }
-    return `${cityName}, con una población de ${popFormatted}, ofrece un mercado enorme pero extraordinariamente competitivo para ${industryLower}. ${profile.economicProfile} En este entorno, donde los consumidores tienen decenas de alternativas a un clic de distancia, los testimonios verificados de clientes satisfechos son el diferenciador que convierte la intencion de compra en accion. Tu reputación digital es tu activo más valioso.`
+    return `${cityName}, con una población de ${popFormatted}, ofrece un mercado enorme pero extraordinariamente competitivo para ${industryLower}. ${profile.economicProfile} En este entorno, donde los consumidores tienen decenas de alternativas a un clic de distancia, los testimonios verificados de clientes satisfechos son el diferenciador que convierte la intencion de compra en acción. Tu reputación digital es tu activo más valioso.`
   }
 
   if (tier === 'mediana') {
     if (category === 'salud') {
-      return `${cityName}, con ${popFormatted} de habitantes, combina el dinamismo de una ciudad en crecimiento con la cercanía de una comunidad donde las recomendaciones personales todavia importan. ${profile.economicProfile} Para negocios de ${industryLower}, esto crea una oportunidad única: los testimonios digitales amplifican el boca a boca tradicional y te posicionan como la referencia de salud en toda la zona metropolitana, llegando a pacientes que el boca a boca presencial nunca alcanzaria.`
+      return `${cityName}, con ${popFormatted} de habitantes, combina el dinamismo de una ciudad en crecimiento con la cercanía de una comunidad donde las recomendaciones personales todavia importan. ${profile.economicProfile} Para negocios de ${industryLower}, esto crea una oportunidad única: los testimonios digitales amplifican el boca a boca tradicional y te posicionan como la referencia de salud en toda la zona metrópolitana, llegando a pacientes que el boca a boca presencial nunca alcanzaria.`
     }
     if (category === 'bienestar') {
-      return `En ${cityName}, con ${popFormatted} de residentes, el sector de ${industryLower} está en plena expansión. ${profile.economicProfile} Los consumidores de está ciudad buscan servicios de bienestar que combinen profesionalidad con un trato cercano, y las recomendaciones de otros clientes locales son el principal motor de decisión. Los testimonios verificados te permiten captar esa demanda creciente demostrando que otros vecinos de ${cityName} ya confian en ti.`
+      return `En ${cityName}, con ${popFormatted} de residentes, el sector de ${industryLower} está en plena expansión. ${profile.economicProfile} Los consumidores de está ciudad buscan servicios de bienestar que combinen profesionalidad con un trato cercano, y las recomendaciones de otros clientes locales son el principal motor de decisión. Los testimonios verificados te permiten captar esa demanda creciente demostrando que otros vecinos de ${cityName} ya confían en ti.`
     }
     if (category === 'hosteleria') {
-      return `${cityName} se ha consolidado como un destino gastronómico y turístico con identidad propia, atrayendo cada vez más visitantes nacionales e internacionales a su oferta de ${industryLower}. ${profile.economicProfile} En un mercado donde la oferta crece rápido, los testimonios de clientes satisfechos te ayudan a destacar ante un público que investiga online antes de cada visita y valora las experiencias auténticas por encima de la publicidad.`
+      return `${cityName} se ha consólidado como un destino gastronómico y turístico con identidad propia, atrayendo cada vez más visitantes nacionales e internacionales a su oferta de ${industryLower}. ${profile.economicProfile} En un mercado donde la oferta crece rápido, los testimonios de clientes satisfechos te ayudan a destacar ante un público que investiga online antes de cada visita y valora las experiencias auténticas por encima de la publicidad.`
     }
     return `${cityName}, con ${popFormatted} de habitantes, representa un mercado en crecimiento donde los negocios de ${industryLower} tienen una ventana de oportunidad para establecerse como referentes. ${profile.economicProfile} En una ciudad de tamaño medio, cada testimonio de un cliente local tiene un efecto multiplicador: la comunidad es lo suficientemente grande para generar volumen, pero lo bastante cercana para que las recomendaciones se compartan orgánicamente.`
   }
 
   // pequeña
   if (category === 'salud') {
-    return `En ${cityName}, con ${popFormatted}, la confianza personal es el pilar de la relación médico-paciente. ${profile.economicProfile} Los residentes de ${cityName} prefieren profesionales de ${industryLower} que vengan avalados por otros miembros de la comunidad. Los testimonios digitales extienden esas recomendaciones personales las 24 horas del dia, llegando a residentes, expatriados y nuevos habitantes que aun no tienen una red de contactos local.`
+    return `En ${cityName}, con ${popFormatted}, la confianza personal es el pilar de la relación médico-paciente. ${profile.economicProfile} Los residentes de ${cityName} prefieren profesionales de ${industryLower} que vengan avalados por otros miembros de la comunidad. Los testimonios digitales extienden esas recomendaciones personales las 24 horas del día, llegando a residentes, expatriados y nuevos habitantes que aun no tienen una red de contactos local.`
   }
   if (category === 'hosteleria') {
     return `${cityName} ofrece un mercado de ${industryLower} donde la calidad personal del servicio marca la diferencia. ${profile.economicProfile} Con una comunidad más compacta, cada experiencia positiva de un cliente se convierte en una recomendación que resuena con fuerza. Los testimonios verificados en tu web capturan esa energía del boca a boca local y la hacen visible para turistas y nuevos residentes que descubren ${cityName} por primera vez.`
@@ -801,7 +801,7 @@ export function generateWhyTestimonialsMatter(
     )
   } else {
     bullets.push(
-      `En una ciudad como ${cityName}, donde las relaciones personales son la base del comercio, los testimonios digitales multiplican el alcance del boca a boca tradicional. Cada opinion positiva de un vecino genera un efecto cascada que la publicidad convencional no puede replicar.`
+      `En una ciudad como ${cityName}, donde las relaciones personales son la base del comercio, los testimonios digitales multiplican el alcance del boca a boca tradicional. Cada opinión positiva de un vecino genera un efecto cascada que la publicidad convencional no puede replicar.`
     )
   }
 
@@ -889,7 +889,7 @@ export function generateCityIndustryFAQs(
         answer: `En ${industryLower}, la fidelización es clave para el crecimiento sostenible. En ${cityName}, los clientes que dejan un testimonio positivo tienen un 70% más de probabilidad de volver. El acto de recomendar refuerza su compromiso con tu negocio. Además, puedes usar los testimonios como contenido para redes sociales, mostrando historias reales de transformación de clientes en ${cityName}. Opinafy facilita este ciclo: el cliente deja su testimonio, tu lo publicas, y nuevos clientes llegan gracias a esa recomendación.`,
       })
       break
-    case 'educacion':
+    case 'educación':
       faqs.push({
         question: `¿Qué impacto tienen los testimonios de alumnos en la captación de nuevos estudiantes para ${industryLower} en ${cityName}?`,
         answer: `Los testimonios de alumnos y exalumnos son el factor de decisión número uno para nuevos estudiantes. En ${cityName}, donde la oferta formativa es amplia, un testimonio que detalle la experiencia de aprendizaje, la calidad del profesorado y los resultados obtenidos tras la formación marca la diferencia. Las ${industryLower} en ${cityName} que muestran testimonios en su web y landing pages de captación ven un aumento promedio del 25% en matriculaciones respecto a las que no lo hacen.`,
@@ -901,7 +901,7 @@ export function generateCityIndustryFAQs(
         answer: `El portfolio muestra tu trabajo, pero los testimonios muestran la experiencia de trabajar contigo. Para ${industryLower} en ${cityName}, la combinación de ambos es imbatible. Un testimonio que explique cómo fue el proceso de trabajo, la comunicación, el cumplimiento de plazos y la satisfacción con el resultado final aporta la dimensión humana que el portfolio no puede transmitir. Opinafy te permite integrar testimonios junto a tu portfolio para que cada proyecto cuente la historia completa.`,
       })
       break
-    case 'tecnologia':
+    case 'tecnología':
       faqs.push({
         question: `¿Cómo pueden los testimonios mejorar la captación de clientes B2B para ${industryLower} en ${cityName}?`,
         answer: `En el mercado B2B de ${cityName}, las decisiones de compra involucran a múltiples personas y ciclos largos. Los testimonios de otros negocios en ${cityName} reducen el riesgo percibido y aceleran las decisiones. Para ${industryLower}, los testimonios más efectivos son los que incluyen métricas concretas: porcentajes de mejora, tiempos de retorno y resultados medibles. Opinafy te permite destacar estos testimonios de alto impacto en tus propuestas comerciales y landing pages.`,
@@ -919,7 +919,7 @@ export function generateCityIndustryFAQs(
   if (tier === 'grande' && (category === 'salud' || category === 'servicios-profesionales')) {
     faqs.push({
       question: `¿Cuántos testimonios necesita mi negocio de ${industryLower} en ${cityName} para generar impacto?`,
-      answer: `En una ciudad grande como ${cityName}${popStr ? ` (${popStr})` : ''}, recomendamos tener al menos 15-20 testimonios publicados para generar una percepción solida de confianza. ${profile ? 'Con sus industrias principales en ' + profile.keyIndustries.slice(0, 2).join(' y ') + ', la competencia es feroz. ' : ''}Los estudios muestran que a partir de 5 testimonios la conversión ya mejora, pero en mercados competitivos como ${cityName} la cantidad refuerza la credibilidad. Con Opinafy puedes empezar mostrando los primeros testimonios desde el dia uno. La clave es mantener un flujo constante: idealmente 2-3 por semana.`,
+      answer: `En una ciudad grande como ${cityName}${popStr ? ` (${popStr})` : ''}, recomendamos tener al menos 15-20 testimonios publicados para generar una percepción sólida de confianza. ${profile ? 'Con sus industrias principales en ' + profile.keyIndustries.slice(0, 2).join(' y ') + ', la competencia es feroz. ' : ''}Los estudios muestran que a partir de 5 testimonios la conversión ya mejora, pero en mercados competitivos como ${cityName} la cantidad refuerza la credibilidad. Con Opinafy puedes empezar mostrando los primeros testimonios desde el día uno. La clave es mantener un flujo constante: idealmente 2-3 por semana.`,
     })
   } else if (tier === 'grande') {
     faqs.push({

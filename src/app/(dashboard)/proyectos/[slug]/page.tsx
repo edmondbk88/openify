@@ -263,7 +263,7 @@ export default async function ProyectoDetailPage({
                 d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
               />
             </svg>
-            {locale === 'en' ? 'Automation' : 'Automatizacion'}
+            {locale === 'en' ? 'Automation' : 'Automatización'}
           </Link>
           <Link
             href={`/proyectos/${(project as Project).slug}/plantillas-email`}
@@ -380,7 +380,7 @@ export default async function ProyectoDetailPage({
               <div className="flex-1">
                 <div className="flex items-center gap-2">
                   <h2 className="text-lg font-semibold text-gray-900">
-                    {locale === 'en' ? 'Certification' : 'Certificacion'}
+                    {locale === 'en' ? 'Certification' : 'Certificación'}
                   </h2>
                   {tier !== 'none' && (
                     <span className={`inline-flex rounded-full ${tierColors.bg} ${tierColors.text} border ${tierColors.border} px-2.5 py-0.5 text-xs font-bold`}>
@@ -440,7 +440,7 @@ export default async function ProyectoDetailPage({
         )
       })()}
 
-      {/* Badge de verificacion */}
+      {/* Badge de verificación */}
       <div className="mt-6 rounded-lg border border-gray-200 bg-white p-6">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-green-100">
@@ -450,12 +450,12 @@ export default async function ProyectoDetailPage({
           </div>
           <div>
             <h2 className="text-lg font-semibold text-gray-900">
-              {t('projects.verificationBadge', locale) || 'Badge de verificacion'}
+              {t('projects.verificationBadge', locale) || 'Badge de verificación'}
             </h2>
             <p className="text-sm text-gray-500">
               {locale === 'en'
                 ? 'Embed this badge on your website to show your testimonials are verified.'
-                : 'Inserta este badge en tu web para mostrar que tus testimonios estan verificados.'}
+                : 'Inserta este badge en tu web para mostrar que tus testimonios están verificados.'}
             </p>
           </div>
         </div>

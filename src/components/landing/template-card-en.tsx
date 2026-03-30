@@ -4,6 +4,24 @@ import Link from 'next/link'
 import type { TemplatePreviewData } from '@/lib/widget-templates'
 import { TemplatePreview } from './template-preview'
 
+const categoryTranslations: Record<string, string> = {
+  Minimalista: 'Minimalist',
+  Corporativo: 'Corporate',
+  Colorido: 'Colorful',
+  Oscuro: 'Dark',
+  Moderno: 'Modern',
+  Elegante: 'Elegant',
+  Divertido: 'Fun',
+  Profesional: 'Professional',
+  Video: 'Video',
+  Popup: 'Popup',
+  Creativo: 'Creative',
+  Bento: 'Bento',
+  Social: 'Social',
+  Premium: 'Premium',
+  Retro: 'Retro',
+}
+
 const categoryBadgeColors: Record<string, string> = {
   Minimalista: 'bg-gray-100 text-gray-700',
   Corporativo: 'bg-blue-100 text-blue-700',
@@ -42,7 +60,7 @@ export function TemplateCardEn({ template }: { template: TemplatePreviewData }) 
       <div className="flex flex-1 flex-col gap-2 p-4">
         <div className="flex items-center gap-2">
           <span className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${categoryBadgeColors[template.category] || 'bg-gray-100 text-gray-700'}`}>
-            {template.category}
+            {categoryTranslations[template.category] || template.category}
           </span>
           <span className="text-xs text-gray-500">
             {layoutLabels[template.layout]}

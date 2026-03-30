@@ -161,7 +161,7 @@ export default function DescargasPage() {
                       </li>
                     </ol>
                     <p className="mt-3 text-sm text-gray-500">
-                      Tambien puedes usar el shortcode{' '}
+                      También puedes usar el shortcode{' '}
                       <code className="rounded bg-gray-200 px-1.5 py-0.5 text-xs">
                         [opinafy]
                       </code>{' '}
@@ -222,7 +222,7 @@ export default function DescargasPage() {
 
                   <div className="mt-6 rounded-lg bg-gray-50 p-4">
                     <h3 className="text-sm font-semibold text-gray-900">
-                      Instalacion:
+                      Instalación:
                     </h3>
                     <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
                       <li>Requiere el plugin principal de Opinafy para WordPress (descargalo arriba).</li>
@@ -485,7 +485,7 @@ export default function DescargasPage() {
 
                   <div className="mt-6 rounded-lg bg-gray-50 p-4">
                     <h3 className="text-sm font-semibold text-gray-900">
-                      Instalacion:
+                      Instalación:
                     </h3>
                     <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
                       <li>Descarga el archivo ZIP.</li>
@@ -524,7 +524,7 @@ export default function DescargasPage() {
 
                   <div className="mt-6 rounded-lg bg-gray-50 p-4">
                     <h3 className="text-sm font-semibold text-gray-900">
-                      Instalacion rápida:
+                      Instalación rápida:
                     </h3>
                     <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
                       <li>
@@ -534,7 +534,7 @@ export default function DescargasPage() {
                         Pega el código de Opinafy en el campo <strong>Footer Code</strong>.
                       </li>
                       <li>
-                        O usa un elemento <strong>Embed</strong> para una posicion exacta.
+                        O usa un elemento <strong>Embed</strong> para una posición exacta.
                       </li>
                     </ol>
                     <div className="mt-3 rounded-lg border border-gray-200 bg-gray-900 p-4">
@@ -550,7 +550,7 @@ export default function DescargasPage() {
                       href="/guias/webflow"
                       className="text-indigo-600 hover:underline"
                     >
-                      guia completa para Webflow
+                      guía completa para Webflow
                     </Link>{' '}
                     para más detalles.
                   </p>
@@ -586,20 +586,20 @@ export default function DescargasPage() {
                     Google Tag Manager
                   </h2>
                   <p className="mt-2 text-gray-600">
-                    Instala el widget de Opinafy a traves de Google Tag Manager.
+                    Instala el widget de Opinafy a través de Google Tag Manager.
                     Ideal si ya usas GTM para gestionar los scripts de tu sitio.
                   </p>
 
                   <div className="mt-6 rounded-lg bg-gray-50 p-4">
                     <h3 className="text-sm font-semibold text-gray-900">
-                      Instalacion rápida:
+                      Instalación rápida:
                     </h3>
                     <ol className="mt-2 list-inside list-decimal space-y-1 text-sm text-gray-600">
                       <li>
                         En GTM, crea una nueva etiqueta de tipo <strong>HTML personalizado</strong>.
                       </li>
                       <li>Pega el código de Opinafy.</li>
-                      <li>Configura el activador (All Pages o páginas especificas).</li>
+                      <li>Configura el activador (All Pages o páginas específicas).</li>
                       <li>Publica los cambios.</li>
                     </ol>
                   </div>
@@ -610,7 +610,7 @@ export default function DescargasPage() {
                       href="/guias/google-tag-manager"
                       className="text-indigo-600 hover:underline"
                     >
-                      guia completa para Google Tag Manager
+                      guía completa para Google Tag Manager
                     </Link>{' '}
                     para más detalles.
                   </p>

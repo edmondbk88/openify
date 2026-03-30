@@ -84,17 +84,17 @@ export async function GET(request: NextRequest) {
     const hasTestimonials = testimonialKeywords.some(k => htmlLower.includes(k))
     checks.push({
       id: 'testimonials',
-      label: 'Seccion de testimonios',
+      label: 'Sección de testimonios',
       labelEn: 'Testimonials section',
       passed: hasTestimonials,
       score: 25,
-      recommendation: 'Añade una seccion de testimonios de clientes en tu web para aumentar la confianza.',
+      recommendation: 'Añade una sección de testimonios de clientes en tu web para aumentar la confianza.',
       recommendationEn: 'Add a customer testimonials section to your website to build trust.',
       ctaLink: '/caracteristicas',
     })
 
     // 2. Star ratings
-    const hasStars = htmlLower.includes('star') || htmlLower.includes('rating') || htmlLower.includes('estrella') || htmlLower.includes('valoracion') || /\d(\.\d)?\s*\/\s*5/.test(html) || htmlLower.includes('fa-star') || htmlLower.includes('★') || htmlLower.includes('⭐')
+    const hasStars = htmlLower.includes('star') || htmlLower.includes('rating') || htmlLower.includes('estrella') || htmlLower.includes('valoración') || /\d(\.\d)?\s*\/\s*5/.test(html) || htmlLower.includes('fa-star') || htmlLower.includes('★') || htmlLower.includes('⭐')
     checks.push({
       id: 'stars',
       label: 'Valoraciones con estrellas',
@@ -142,7 +142,7 @@ export async function GET(request: NextRequest) {
       labelEn: 'Trust badges',
       passed: hasTrustBadges,
       score: 10,
-      recommendation: 'Añade insignias de confianza (verificado, seguro, garantia) para reducir la friccion de compra.',
+      recommendation: 'Añade insignias de confianza (verificado, seguro, garantia) para reducir la fricción de compra.',
       recommendationEn: 'Add trust badges (verified, secure, guarantee) to reduce purchase friction.',
       ctaLink: '/verificado-badge',
     })
@@ -162,15 +162,15 @@ export async function GET(request: NextRequest) {
     // 7. Meta description with trust keywords
     const metaMatch = html.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["']/i)
     const metaContent = metaMatch ? metaMatch[1].toLowerCase() : ''
-    const trustMetaKeywords = ['confianza', 'trust', 'review', 'testimonio', 'opinion', 'valoracion', 'rating', 'verified', 'verificado']
+    const trustMetaKeywords = ['confianza', 'trust', 'review', 'testimonio', 'opinión', 'valoración', 'rating', 'verified', 'verificado']
     const hasMetaTrust = trustMetaKeywords.some(k => metaContent.includes(k))
     checks.push({
       id: 'meta-trust',
-      label: 'Meta descripcion con confianza',
+      label: 'Meta descripción con confianza',
       labelEn: 'Meta description mentions trust',
       passed: hasMetaTrust,
       score: 10,
-      recommendation: 'Incluye palabras como "testimonios", "opiniones verificadas" o "confianza" en tu meta descripcion.',
+      recommendation: 'Incluye palabras como "testimonios", "opiniones verificadas" o "confianza" en tu meta descripción.',
       recommendationEn: 'Include words like "testimonials", "verified reviews" or "trust" in your meta description.',
     })
 

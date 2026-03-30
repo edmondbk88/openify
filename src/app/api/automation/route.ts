@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     } = await supabase.auth.getUser()
 
     if (!user) {
-      return NextResponse.json({ error: 'No autenticado' }, { status: 401 })
+      return NextResponse.json({ error: 'No auténticado' }, { status: 401 })
     }
 
     const projectId = request.nextUrl.searchParams.get('project_id')
@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
     } = await supabase.auth.getUser()
 
     if (!user) {
-      return NextResponse.json({ error: 'No autenticado' }, { status: 401 })
+      return NextResponse.json({ error: 'No auténticado' }, { status: 401 })
     }
 
     const body = await request.json()
@@ -148,10 +148,10 @@ export async function POST(request: NextRequest) {
       project_id,
       is_active: is_active ?? true,
       delay_days: delay_days ?? 7,
-      email_subject: email_subject || 'Nos encantaria conocer tu opinion',
+      email_subject: email_subject || 'Nos encantaría conocer tu opinión',
       email_body:
         email_body ||
-        'Hola, nos encantaria que nos dejaras tu testimonio sobre tu experiencia con nosotros.',
+        'Hola, nos encantaría que nos dejaras tu testimonio sobre tu experiencia con nosotros.',
       updated_at: new Date().toISOString(),
     }
 

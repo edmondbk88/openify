@@ -1,7 +1,7 @@
 import { Navbar } from '@/components/landing/navbar'
 import { Footer } from '@/components/landing/footer'
 
-export default function GuiasLayout({ children }: { children: React.ReactNode }) {
+export default function GuíasLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Navbar />

@@ -40,7 +40,7 @@ export function getTierColor(tier: CertificationTier): { bg: string; text: strin
 
 export function getTierLabel(tier: CertificationTier, locale: 'es' | 'en' = 'es'): string {
   const labels = {
-    es: { none: 'Sin certificacion', bronze: 'Bronce', silver: 'Plata', gold: 'Oro', platinum: 'Platino' },
+    es: { none: 'Sin certificación', bronze: 'Bronce', silver: 'Plata', gold: 'Oro', platinum: 'Platino' },
     en: { none: 'No certification', bronze: 'Bronze', silver: 'Silver', gold: 'Gold', platinum: 'Platinum' },
   }
   return labels[locale][tier]

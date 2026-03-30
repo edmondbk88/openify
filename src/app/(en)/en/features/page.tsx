@@ -78,7 +78,7 @@ const coreFeatures = [
     ),
     title: '100+ Customizable Templates',
     description:
-      'Choose from over 65 professionally designed templates for widgets and mini sites. Customize colors, fonts (8 Google Fonts), borders, shadows and more to match your brand.',
+      'Choose from 100+ professionally designed templates for widgets and mini sites. Customize colors, fonts (8 Google Fonts), borders, shadows and more to match your brand.',
   },
   {
     icon: (
@@ -151,7 +151,7 @@ const differentiators = [
   },
   {
     icon: '💰',
-    title: 'Pricing from $5/month',
+    title: 'Pricing from €5/month',
     description: 'Up to 3x cheaper than Testimonial.to or Senja. Free plan with no time limit. No tricks, no surprises.',
   },
   {

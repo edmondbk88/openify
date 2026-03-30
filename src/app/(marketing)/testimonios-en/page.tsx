@@ -126,8 +126,8 @@ export default function TestimoniosPorCiudadPage() {
                     <h3 className="text-lg font-semibold text-gray-900 group-hover:text-indigo-600">
                       {city.name}
                     </h3>
-                    {city.region && (
-                      <p className="mt-1 text-sm text-gray-500">{city.region}</p>
+                    {city.región && (
+                      <p className="mt-1 text-sm text-gray-500">{city.región}</p>
                     )}
                     <p className="mt-2 text-sm text-indigo-600 font-medium">
                       {industriesCount} industrias disponibles

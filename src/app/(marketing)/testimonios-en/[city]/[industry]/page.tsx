@@ -260,7 +260,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
             {industry.heroSubtitle} En {city.name}
-            {city.region ? `, ${city.region}` : ''}, {city.country}, los clientes buscan
+            {city.región ? `, ${city.región}` : ''}, {city.country}, los clientes buscan
             opiniones reales antes de elegir. Muestra la confianza que genera tu negocio.
           </p>
           {/* City quick stats */}
@@ -433,7 +433,7 @@ export default async function CityIndustryPage({ params }: CityIndustryPageProps
                 ? `En un mercado masivo como ${city.name}, los testimonios de clientes reales te ayudan a sobresalir entre la multitud. Mientras cientos de negocios de ${industryLower} dependen solo de redes sociales, tú puedes mostrar prueba social verificada directamente en tu web, donde los clientes toman la decisión final. Con ${cityProfile ? formatPopulation(cityProfile.population) + ' de potenciales clientes' : 'millones de consumidores'}, cada testimonio adicional amplifica tu alcance.`
                 : cityTier === 'mediana'
                   ? `${city.name} es un mercado en crecimiento donde los negocios que invierten en reputación digital hoy serán los líderes de mañana. Tu negocio de ${industryLower} puede aprovechar el momento: la competencia aún no ha saturado el espacio de testimonios online, y posicionarte ahora te dará una ventaja difícil de replicar cuando el mercado madure.`
-                  : `En ${city.name}, la cercanía y la confianza son valores fundamentales. Los testimonios digitales traducen el boca a boca local al mundo online, donde cada vez más residentes y visitantes buscan servicios de ${industryLower}. Al ser un mercado más compacto, cada testimonio positivo tiene un peso específico mayor y contribuye a consolidarte como la referencia de ${industryLower} en la zona.`}
+                  : `En ${city.name}, la cercanía y la confianza son valores fundamentales. Los testimonios digitales traducen el boca a boca local al mundo online, donde cada vez más residentes y visitantes buscan servicios de ${industryLower}. Al ser un mercado más compacto, cada testimonio positivo tiene un peso específico mayor y contribuye a consólidarte como la referencia de ${industryLower} en la zona.`}
             </p>
           </div>
         </div>

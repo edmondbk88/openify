@@ -61,7 +61,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'nieve-limpia',
     name: 'Nieve Limpia',
-    description: 'Diseño ultraminimalista con fondo blanco puro y tipografía ligera. Ideal para marcas que buscan sobriedad.',
+    description: 'Diseño ultramínimalista con fondo blanco puro y tipografía ligera. Ideal para marcas que buscan sobriedad.',
     category: 'Minimalista',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)',
@@ -101,7 +101,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'linea-pura',
     name: 'Línea Pura',
-    description: 'Solo líneas y texto. Sin sombras, sin colores. La esencia del minimalismo digital.',
+    description: 'Solo líneas y texto. Sin sombras, sin colores. La esencia del mínimalismo digital.',
     category: 'Minimalista',
     layout: 'carousel',
     preview_image: 'linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%)',
@@ -121,7 +121,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'brisa-suave',
     name: 'Brisa Suave',
-    description: 'Tonos gris perla con bordes redondeados sutiles. Transmite tranquilidad y confianza.',
+    description: 'Tonos gris perla con bordes redondeados sútiles. Transmite tranquilidad y confianza.',
     category: 'Minimalista',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #f9fafb 0%, #e5e7eb 100%)',
@@ -593,7 +593,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'obsidiana',
     name: 'Obsidiana',
-    description: 'Negro absoluto con bordes grises sutiles. Minimalismo oscuro en su máxima expresión.',
+    description: 'Negro absoluto con bordes grises sútiles. Minimalismo oscuro en su máxima expresión.',
     category: 'Oscuro',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #000000 0%, #18181b 100%)',
@@ -1295,9 +1295,9 @@ export const widgetTemplates: WidgetTemplate[] = [
   // POPUP (5 templates)
   // ═══════════════════════════════════════════════════
   {
-    id: 'notificacion-sutil',
+    id: 'notificación-sutil',
     name: 'Notificación Sutil',
-    description: 'Popup minimalista y discreto que aparece como una notificación del sistema. Elegante y no intrusivo.',
+    description: 'Popup mínimalista y discreto que aparece como una notificación del sistema. Elegante y no intrusivo.',
     category: 'Popup',
     layout: 'popup',
     preview_image: 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)',
@@ -1480,7 +1480,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'newspaper-classic',
     name: 'Newspaper',
-    description: 'Diseño de columna de periodico clasico con fuente serif y estetica editorial. Transmite autoridad y credibilidad.',
+    description: 'Diseño de columna de periodico clásico con fuente serif y estetica editorial. Transmite autoridad y credibilidad.',
     category: 'Creativo',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #fef3c7 0%, #fde68a 50%, #f5f0dc 100%)',
@@ -1660,7 +1660,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'watercolor-pastel',
     name: 'Watercolor',
-    description: 'Tonos pastel suaves con fuente manuscrita y sensacion organica. Perfecto para marcas de bienestar, arte y lifestyle.',
+    description: 'Tonos pastel suaves con fuente manuscrita y sensacion orgánica. Perfecto para marcas de bienestar, arte y lifestyle.',
     category: 'Creativo',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #fce7f3 0%, #e0f2fe 50%, #fef3c7 100%)',
@@ -1781,7 +1781,7 @@ export const widgetTemplates: WidgetTemplate[] = [
     },
   },
   {
-    id: 'bento-minimal',
+    id: 'bento-mínimal',
     name: 'Bento Minimal',
     description: 'Whitespace extremo, texto diminuto, máximo espacio de respiración. Minimalismo japonés llevado al extremo.',
     category: 'Bento',
@@ -1826,7 +1826,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'twitter-card',
     name: 'Twitter Card',
-    description: 'Fondo claro, minimalista, bordes redondeados 16px, fuente del sistema. Como un tweet embebido.',
+    description: 'Fondo claro, mínimalista, bordes redondeados 16px, fuente del sistema. Como un tweet embebido.',
     category: 'Social',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #ffffff 0%, #eff6ff 50%, #dbeafe 100%)',
@@ -1949,7 +1949,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'champagne-noir',
     name: 'Champagne Noir',
-    description: 'Tonos champagne oscuros, serif refinada, gradientes sutiles. Sofisticación nocturna.',
+    description: 'Tonos champagne oscuros, serif refinada, gradientes sútiles. Sofisticación nocturna.',
     category: 'Premium',
     layout: 'wall',
     preview_image: 'linear-gradient(135deg, #2d2318 0%, #3d3024 50%, #4a3c2e 100%)',
@@ -1989,7 +1989,7 @@ export const widgetTemplates: WidgetTemplate[] = [
   {
     id: 'platinum-edge',
     name: 'Platinum Edge',
-    description: 'Plata y gris, tipografía bold, minimalista, bordes afilados sin radio. Metal pulido.',
+    description: 'Plata y gris, tipografía bold, mínimalista, bordes afilados sin radio. Metal pulido.',
     category: 'Premium',
     layout: 'grid',
     preview_image: 'linear-gradient(135deg, #e5e7eb 0%, #d1d5db 50%, #9ca3af 100%)',

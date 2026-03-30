@@ -1,6 +1,6 @@
 import { createAdminClient } from '@/lib/supabase/admin'
 
-export default async function AdminConfiguracionPage() {
+export default async function AdminConfiguraciónPage() {
   const admin = createAdminClient()
 
   const [profilesRes, projectsRes, testimonialsRes] = await Promise.all([
@@ -19,7 +19,7 @@ export default async function AdminConfiguracionPage() {
     {
       label: 'Supabase Dashboard',
       url: 'https://supabase.com/dashboard/project/rckjevsqxkfixkdloqjv',
-      description: 'Base de datos, autenticacion, storage',
+      description: 'Base de datos, auténticacion, storage',
     },
     {
       label: 'Stripe Dashboard',
@@ -45,7 +45,7 @@ export default async function AdminConfiguracionPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-gray-900 mb-6">Configuracion</h1>
+      <h1 className="text-2xl font-bold text-gray-900 mb-6">Configuración</h1>
 
       {/* System Stats */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">

@@ -449,7 +449,7 @@ export const industries: Industry[] = [
     benefits: [
       'Demuestra resultados concretos de tus campañas con testimonios de clientes reales',
       'Diferénciate de agencias que solo prometen y no demuestran resultados',
-      'Genera confianza en empresas que buscan una agencia seria y profesional',
+      'Genera confianza en empresas que buscan una agencia sería y profesional',
       'Segmenta testimonios por tipo de servicio: SEO, SEM, redes sociales, diseño web',
       'Reduce el ciclo de venta mostrando prueba social en cada propuesta comercial',
       'Construye autoridad en un sector donde la reputación lo es todo',
@@ -758,7 +758,7 @@ export const industries: Industry[] = [
   {
     slug: 'peluquerias',
     name: 'Peluquerías',
-    title: 'Testimonios para Peluquerías y Salones | Opinafy',
+    title: 'Testimonios para Peluquerías y Salónes | Opinafy',
     metaDescription:
       'Recopila opiniones de tus clientes y muéstralas en tu web. Testimonios que atraen nuevos clientes a tu peluquería o salón de belleza.',
     heroTitle: 'Testimonios que llenan tu agenda de citas',
@@ -849,7 +849,7 @@ export const industries: Industry[] = [
 </ul>
 
 <h2>Testimonios como herramienta de retención</h2>
-<p>No solo atraen nuevos clientes, también fidelizan. Cuando una clienta deja un testimonio, <strong>refuerza su compromiso emocional con tu salón</strong>. Es más probable que vuelva y que te recomiende. El acto de escribir una opinión positiva consolida la relación.</p>
+<p>No solo atraen nuevos clientes, también fidelizan. Cuando una clienta deja un testimonio, <strong>refuerza su compromiso emocional con tu salón</strong>. Es más probable que vuelva y que te recomiende. El acto de escribir una opinión positiva consólida la relación.</p>
 
 <h2>El servicio de novias: donde los testimonios son decisivos</h2>
 <p>El peinado de novia es una de las decisiones más emotivas y estresantes. Una novia necesita sentir confianza absoluta. Los testimonios de otras novias —hablando de cómo se sintieron, de cómo resistió el peinado, de la atención durante la prueba— son el factor que inclina la balanza a tu favor.</p>
@@ -952,7 +952,7 @@ export const industries: Industry[] = [
 </ul>
 
 <h2>Testimonios para tratamientos de alto valor</h2>
-<p>Los implantes dentales, la ortodoncia invisible o las carillas estéticas son inversiones significativas. Los pacientes investigan extensamente antes de comprometerse. <strong>Los testimonios de pacientes que ya realizaron estos tratamientos reducen la incertidumbre</strong> y ayudan a justificar la inversión.</p>
+<p>Los implantes dentales, la ortodoncia invisible o las carillas estéticas son inversiónes significativas. Los pacientes investigan extensamente antes de comprometerse. <strong>Los testimonios de pacientes que ya realizaron estos tratamientos reducen la incertidumbre</strong> y ayudan a justificar la inversión.</p>
 
 <h2>Diferenciarse de las cadenas low-cost</h2>
 <p>Las franquicias dentales compiten por precio, pero muchos pacientes buscan calidad y trato personalizado. Los testimonios son tu herramienta para <strong>demostrar que el valor de tu clínica va mucho más allá del precio</strong>. Las experiencias reales de pacientes que valoran tu atención, tu profesionalidad y tus resultados justifican una tarifa más alta.</p>
@@ -1344,7 +1344,7 @@ export const industries: Industry[] = [
     content: `<p>En el sector hotelero, las opiniones son moneda de cambio. Los viajeros consultan decenas de reseñas antes de reservar. Pero hay una diferencia crucial: <strong>las opiniones en tu propia web generan reservas directas</strong>, mientras que las de Booking o TripAdvisor generan reservas a través de intermediarios que se llevan una comisión.</p>
 
 <h2>Testimonios propios vs. reseñas en OTAs</h2>
-<p>Las plataformas de reserva (OTAs) son importantes para la visibilidad, pero comisiones del 15-25% reducen significativamente tu margen. Los testimonios en tu web son una herramienta para captar al viajero que ya te encontró y convencerle de reservar directamente.</p>
+<p>Las plataformas de reserva (OTAs) son importantes para la visibilidad, pero comisiónes del 15-25% reducen significativamente tu margen. Los testimonios en tu web son una herramienta para captar al viajero que ya te encontró y convencerle de reservar directamente.</p>
 <p>Cuando un potencial huésped llega a tu web —ya sea por búsqueda directa, recomendación o redes sociales— y encuentra testimonios auténticos, <strong>la confianza para reservar directamente se multiplica</strong>.</p>
 
 <h2>Qué buscan los viajeros en los testimonios</h2>
@@ -1649,7 +1649,7 @@ export const industries: Industry[] = [
       'testimonios clientes arquitecto',
       'opiniones reformas arquitecto',
     ],
-    content: `<p>Un proyecto de arquitectura es una de las inversiones más grandes e importantes que una persona o empresa puede hacer. <strong>La decisión de con quién confiar esa inversión depende enormemente de la confianza</strong>, y los testimonios son la herramienta más poderosa para generarla.</p>
+    content: `<p>Un proyecto de arquitectura es una de las inversiónes más grandes e importantes que una persona o empresa puede hacer. <strong>La decisión de con quién confiar esa inversión depende enormemente de la confianza</strong>, y los testimonios son la herramienta más poderosa para generarla.</p>
 
 <h2>Más allá del portfolio: la experiencia completa</h2>
 <p>Todo estudio de arquitectura tiene un portfolio. Pero un potencial cliente no solo quiere ver resultados bonitos; quiere saber cómo es el proceso. ¿Se cumplirán los plazos? ¿Se respetará el presupuesto? ¿Habrá buena comunicación? ¿Cómo se gestionan los imprevistos?</p>
@@ -1900,7 +1900,7 @@ export const industries: Industry[] = [
 <p>Opinafy te ofrece las herramientas para convertir los éxitos de tus pacientes en tu mejor estrategia de captación. Formularios adaptados, segmentación por perfil, widgets personalizables y un sistema respetuoso con la privacidad. <strong>Empieza gratis y demuestra con historias reales que la nutrición profesional transforma vidas</strong>.</p>`,
   },
   {
-    slug: 'mecanicos',
+    slug: 'mecánicos',
     name: 'Mecánicos',
     title: 'Testimonios para Talleres Mecánicos | Opinafy',
     metaDescription:
@@ -2250,7 +2250,7 @@ export const industries: Industry[] = [
       {
         question: '¿Los testimonios ayudan a vender tratamientos de alto precio?',
         answer:
-          'Enormemente. Tratamientos como lifting no quirúrgico, láser o protocolos anti-aging son inversiones significativas. Los testimonios de pacientes satisfechos con el resultado justifican la inversión y reducen la incertidumbre.',
+          'Enormemente. Tratamientos como lifting no quirúrgico, láser o protocolos anti-aging son inversiónes significativas. Los testimonios de pacientes satisfechos con el resultado justifican la inversión y reducen la incertidumbre.',
       },
       {
         question: '¿Puedo segmentar testimonios por zona del cuerpo o tipo de tratamiento?',
@@ -2365,7 +2365,7 @@ export const industries: Industry[] = [
       'reseñas planificador financiero',
       'prueba social finanzas',
       'testimonios clientes inversión',
-      'opiniones asesor inversiones',
+      'opiniones asesor inversiónes',
     ],
     content: `<p>En el mundo financiero, la confianza es la moneda más valiosa. Las personas confían su dinero, su futuro y el bienestar de su familia a un asesor financiero. <strong>Los testimonios de clientes satisfechos son la demostración más poderosa de que esa confianza está bien depositada</strong>.</p>
 
@@ -2378,7 +2378,7 @@ export const industries: Industry[] = [
 <ul>
 <li><strong>Calidad del servicio:</strong> Comunicación, disponibilidad, seguimiento personalizado.</li>
 <li><strong>Claridad:</strong> "Me explicó las opciones de forma clara, sin jerga financiera."</li>
-<li><strong>Confianza:</strong> "Siento que mis inversiones están en buenas manos."</li>
+<li><strong>Confianza:</strong> "Siento que mis inversiónes están en buenas manos."</li>
 <li><strong>Objetivos alcanzados:</strong> "Gracias a su plan, ya tengo configurada mi jubilación" (sin cifras).</li>
 <li><strong>Independencia:</strong> "Su asesoramiento es independiente, no me vendió productos de ningún banco."</li>
 </ul>
@@ -2491,7 +2491,7 @@ export const industries: Industry[] = [
 <p>Los clientes particulares valoran la confianza personal y la calidad de limpieza. Los clientes empresariales valoran la fiabilidad, la capacidad de escalar y la profesionalidad. Con Opinafy puedes segmentar ambos perfiles y mostrar testimonios relevantes para cada audiencia.</p>
 
 <h2>Diferenciarse del mercado informal</h2>
-<p>El sector de la limpieza tiene mucha competencia informal. Los testimonios profesionales en tu web demuestran que eres una empresa seria, con estándares de calidad y clientes satisfechos. <strong>La prueba social te posiciona en un nivel superior al de quienes operan sin ninguna referencia verificable</strong>.</p>
+<p>El sector de la limpieza tiene mucha competencia informal. Los testimonios profesionales en tu web demuestran que eres una empresa sería, con estándares de calidad y clientes satisfechos. <strong>La prueba social te posiciona en un nivel superior al de quienes operan sin ninguna referencia verificable</strong>.</p>
 
 <h2>Opinafy para empresas de limpieza</h2>
 <p>Opinafy es sencillo, rápido y profesional. Formularios que tus clientes completan en 2 minutos desde el móvil, widgets para tu web y moderación total. <strong>Empieza gratis y convierte la confianza de tus clientes en nuevos contratos</strong>.</p>`,
@@ -3007,7 +3007,7 @@ export const industries: Industry[] = [
 <p>Opinafy te permite convertir cada viaje exitoso en una historia que inspire al próximo viajero. Formularios fáciles, widgets atractivos y organización por destino o tipo de viaje. <strong>Empieza gratis y deja que las aventuras de tus viajeros sean tu mejor publicidad</strong>.</p>`,
   },
   {
-    slug: 'consultorios-medicos',
+    slug: 'consultorios-médicos',
     name: 'Consultorios Médicos',
     title: 'Testimonios para Consultorios Médicos | Opinafy',
     metaDescription:
@@ -4354,7 +4354,7 @@ export const industries: Industry[] = [
 <li><strong>Ovodonación:</strong> Pacientes que recibieron óvulos de donante y quieren normalizar este camino hacia la maternidad.</li>
 <li><strong>Inseminación artificial:</strong> Parejas de mujeres y madres solteras que eligieron este método.</li>
 <li><strong>Preservación de fertilidad:</strong> Mujeres jóvenes que vitrificaron óvulos y valoran la información y el trato recibidos.</li>
-<li><strong>Segundos intentos:</strong> Pacientes que venían de otro centro y encontraron en el tuyo el resultado que buscaban.</li>
+<li><strong>Segúndos intentos:</strong> Pacientes que venían de otro centro y encontraron en el tuyo el resultado que buscaban.</li>
 </ul>
 
 <h2>Cómo recopilar testimonios en fertilidad</h2>
@@ -4648,7 +4648,7 @@ export const industries: Industry[] = [
       'food truck opiniones clientes',
       'prueba social food truck',
     ],
-    content: `<p>El fenómeno food truck ha revolucionado la gastronomía urbana en España. Lo que empezó como una moda se ha consolidado como un modelo de negocio legítimo que mueve millones de euros. Pero en un mercado cada vez más saturado, <strong>la diferenciación ya no está solo en la comida; está en la reputación, la comunidad y la confianza que generas</strong>. Los testimonios juegan un papel fundamental en los tres aspectos.</p>
+    content: `<p>El fenómeno food truck ha revolucionado la gastronomía urbana en España. Lo que empezó como una moda se ha consólidado como un modelo de negocio legítimo que mueve millones de euros. Pero en un mercado cada vez más saturado, <strong>la diferenciación ya no está solo en la comida; está en la reputación, la comunidad y la confianza que generas</strong>. Los testimonios juegan un papel fundamental en los tres aspectos.</p>
 
 <h2>Por qué un food truck necesita testimonios</h2>
 <p>A diferencia de un restaurante fijo que el cliente puede visitar cuando quiera, un food truck se mueve. El cliente potencial necesita motivación extra para buscarte, seguir tu ruta y hacer cola. Los testimonios crean esa motivación: cuando lees que alguien dice "Reorganizo mi día para comer aquí cada vez que publican su ubicación", entiendes que merece la pena el esfuerzo.</p>
@@ -5587,7 +5587,7 @@ export const industries: Industry[] = [
       'terapeuta ocupacional opiniones',
       'prueba social terapia ocupacional',
     ],
-    content: `<p>La terapia ocupacional es una de las profesiones sanitarias <strong>más desconocidas por el público general y, al mismo tiempo, más transformadoras para quienes la reciben</strong>. Ayudar a una persona a recuperar la capacidad de vestirse sola, enseñar a un niño con TEA a tolerar texturas que antes le causaban angustia, o adaptar el hogar de un anciano para que mantenga su autonomía son logros que cambian vidas. Los testimonios son la herramienta perfecta para visibilizar este impacto.</p>
+    content: `<p>La terapia ocupacional es una de las profesiónes sanitarias <strong>más desconocidas por el público general y, al mismo tiempo, más transformadoras para quienes la reciben</strong>. Ayudar a una persona a recuperar la capacidad de vestirse sola, enseñar a un niño con TEA a tolerar texturas que antes le causaban angustia, o adaptar el hogar de un anciano para que mantenga su autonomía son logros que cambian vidas. Los testimonios son la herramienta perfecta para visibilizar este impacto.</p>
 
 <h2>El reto de visibilizar la terapia ocupacional</h2>
 <p>Cuando alguien dice "voy al fisio" o "voy al psicólogo", todo el mundo entiende de qué habla. Cuando dice "voy al terapeuta ocupacional", la mayoría pregunta "¿y eso qué es?". Esta falta de conocimiento es la mayor barrera para la captación de pacientes. Los testimonios resuelven este problema porque no explican la teoría; <strong>muestran resultados concretos que cualquiera puede entender</strong>.</p>
@@ -6234,7 +6234,7 @@ export const industries: Industry[] = [
 <p>Las ópticas online tienen una ventaja sobre las físicas: datos de contacto de todos sus clientes. Esto permite automatizar la recopilación:</p>
 <ul>
 <li><strong>Email post-entrega:</strong> 7-10 días después de recibir las gafas, un email automático preguntando por la experiencia. Suficiente tiempo para adaptarse, no tanto como para olvidar.</li>
-<li><strong>Segundo seguimiento:</strong> Si no respondió al primer email, un recordatorio amable 15 días después.</li>
+<li><strong>Segúndo seguimiento:</strong> Si no respondió al primer email, un recordatorio amable 15 días después.</li>
 <li><strong>Después de una devolución/cambio exitoso:</strong> Paradójicamente, los clientes a quienes resolviste un problema son los más agradecidos y dejan los mejores testimonios.</li>
 <li><strong>Clientes repetidores:</strong> Al segundo o tercer pedido, pide un testimonio que refleje la relación continuada.</li>
 </ul>
@@ -6262,7 +6262,7 @@ export const industries: Industry[] = [
       'Atrae dueños de exóticos que no encuentran veterinario especializado en su zona',
       'Demuestra tu experiencia con especies específicas a través de casos reales',
       'Genera confianza en propietarios angustiados por la salud de su mascota',
-      'Posiciónate como referente en veterinaria de exóticos en tu área',
+      'Posicionate como referente en veterinaria de exóticos en tu área',
       'Diferénciate de clínicas generalistas con testimonios de especialización',
       'Atrae casos de derivación de otros veterinarios con testimonios de éxito',
     ],
@@ -6812,7 +6812,7 @@ export const industries: Industry[] = [
       {
         author: 'Marta Ruiz',
         company: 'Tratamiento completo',
-        text: 'He hecho el pack completo: piernas, ingles, axilas y labio. La inversión ha merecido la pena al 100%. Ya no pienso en depilación, no me preocupo antes de la playa y mi piel está perfecta.',
+        text: 'He hecho el pack completo: piernas, inglés, axilas y labio. La inversión ha merecido la pena al 100%. Ya no pienso en depilación, no me preocupo antes de la playa y mi piel está perfecta.',
         rating: 5,
       },
     ],
@@ -6861,7 +6861,7 @@ export const industries: Industry[] = [
 <p>La depilación se segmenta naturalmente por zona corporal y género:</p>
 <ul>
 <li><strong>Piernas y axilas:</strong> Las zonas más demandadas en mujeres. Testimonios que hablen de libertad y comodidad.</li>
-<li><strong>Ingles:</strong> Zona más íntima donde la confianza en el profesional es crucial. Testimonios que destaquen discreción y profesionalidad.</li>
+<li><strong>Inglés:</strong> Zona más íntima donde la confianza en el profesional es crucial. Testimonios que destaquen discreción y profesionalidad.</li>
 <li><strong>Facial:</strong> Labio, patillas, barbilla. Zona visible donde los resultados se notan inmediatamente.</li>
 <li><strong>Espalda y pecho masculino:</strong> Cada vez más demandado. Testimonios que normalicen la depilación masculina.</li>
 <li><strong>Tratamiento completo:</strong> Clientes que hicieron múltiples zonas. Testimonios de la experiencia global y el impacto en su confianza.</li>
@@ -6903,7 +6903,7 @@ export const industries: Industry[] = [
       'Demuestra cómo tus plantillas y tratamientos reducen lesiones',
       'Genera derivaciones de entrenadores, fisioterapeutas y clubes deportivos',
       'Diferénciate con testimonios de deportistas de diferentes disciplinas',
-      'Posiciónate como referente en podología deportiva de tu zona',
+      'Posicionate como referente en podología deportiva de tu zona',
       'Muestra resultados medibles: tiempos mejorados, lesiones evitadas',
     ],
     testimonialExamples: [
@@ -7105,7 +7105,7 @@ export const industries: Industry[] = [
 <p>Opinafy te permite profesionalizar tu prueba social con formularios que guían al cliente a compartir métricas y experiencia, widgets elegantes para tu web y material para presentaciones. <strong>Empieza gratis y convierte la satisfacción de tus clientes en tu mejor campaña de captación</strong>.</p>`,
   },
   {
-    slug: 'estudios-fotografia-newborn',
+    slug: 'estudios-fotografía-newborn',
     name: 'Estudios de Fotografía Newborn',
     title: 'Testimonios para Fotografía Newborn | Opinafy',
     metaDescription:
@@ -7206,7 +7206,7 @@ export const industries: Industry[] = [
 <p>Las búsquedas como "fotógrafo newborn [ciudad]", "sesión fotos recién nacido [zona]", "fotografía bebé [barrio]" son de alto valor. Los testimonios mejoran tu posicionamiento orgánico con contenido emocional y relevante.</p>
 
 <h2>Opinafy para estudios de fotografía newborn</h2>
-<p>Opinafy te ofrece formularios emotivos que capturan la experiencia familiar, widgets que transmiten la sensibilidad de tu trabajo y moderación previa. <strong>Empieza gratis y deja que la emoción de las familias que fotografiaste sea tu mejor campaña de captación</strong>.</p>`,
+<p>Opinafy te ofrece formularios emotivos que capturan la experiencia familiar, widgets que transmiten la sensibilidad de tu trabajo y moderación previa. <strong>Empieza gratis y deja que la emoción de las familias que fotografíaste sea tu mejor campaña de captación</strong>.</p>`,
   },
   {
     slug: 'wedding-venues',
@@ -7631,7 +7631,7 @@ export const industries: Industry[] = [
 <p>Opinafy te ofrece formularios rápidos, widgets que destacan la eficacia y profesionalidad de tu servicio y moderación total. <strong>Empieza gratis y convierte los hogares y negocios liberados de plagas en tu mejor publicidad</strong>.</p>`,
   },
   {
-    slug: 'talleres-mecanicos-motos',
+    slug: 'talleres-mecánicos-motos',
     name: 'Talleres Mecánicos de Motos',
     title: 'Testimonios para Talleres de Motos | Opinafy',
     metaDescription:
@@ -8149,7 +8149,7 @@ export const industries: Industry[] = [
 <p>El ejecutivo responde mejor a un enfoque personalizado y profesional:</p>
 <ul>
 <li><strong>Al alcanzar un objetivo:</strong> Cuando el cliente logra el hito que motivó el coaching (ascenso, crecimiento, reestructuración).</li>
-<li><strong>Al finalizar el proceso:</strong> En la última sesión, invita al cliente a reflexionar sobre el camino recorrido y documentarlo.</li>
+<li><strong>Al finalizar el proceso:</strong> En la última sesión, invita al cliente a reflexiónar sobre el camino recorrido y documentarlo.</li>
 <li><strong>Formulario profesional:</strong> Preguntas como "¿Qué impacto medible ha tenido el coaching en tu negocio?" y "¿Qué le dirías a un directivo que está considerando el coaching?" generan testimonios profesionales y útiles.</li>
 <li><strong>Opciones de privacidad:</strong> Algunos ejecutivos prefieren usar solo su cargo e iniciales. Respeta siempre esta preferencia.</li>
 </ul>
@@ -10935,42 +10935,42 @@ export const industries: Industry[] = [
 <p>El sistema de moderación te da control total sobre qué testimonios se publican, y las opciones de personalización visual permiten que el widget se adapte perfectamente al diseño de tu página web. <strong>Empieza gratis hoy y comprueba cómo los testimonios pueden transformar tu negocio de estilismo de imagen, atrayendo más clientes y generando más confianza online</strong>.</p>`,
   },
   {
-    slug: 'maquilladores-profesionales',
-    name: 'Maquilladores Profesionales',
-    title: 'Testimonios para Maquilladores Profesionales | Opinafy',
-    metaDescription: 'Recopila y muestra opiniones de clientes de maquillaje profesional. Genera confianza con testimonios reales y atrae más clientes a tu negocio de maquillaje profesional.',
-    heroTitle: 'Testimonios que impulsan tu negocio de maquillaje profesional',
-    heroSubtitle: 'Los clientes buscan maquillaje profesional con buenas referencias. Muestra experiencias reales que generen confianza y conviertan visitantes en clientes.',
+    slug: 'maquílladores-profesionales',
+    name: 'Maquílladores Profesionales',
+    title: 'Testimonios para Maquílladores Profesionales | Opinafy',
+    metaDescription: 'Recopila y muestra opiniones de clientes de maquíllaje profesional. Genera confianza con testimonios reales y atrae más clientes a tu negocio de maquíllaje profesional.',
+    heroTitle: 'Testimonios que impulsan tu negocio de maquíllaje profesional',
+    heroSubtitle: 'Los clientes buscan maquíllaje profesional con buenas referencias. Muestra experiencias reales que generen confianza y conviertan visitantes en clientes.',
     icon: '💄',
     benefits: [
-      'Genera confianza inmediata en nuevos clientes que buscan servicios de maquillaje profesional',
+      'Genera confianza inmediata en nuevos clientes que buscan servicios de maquíllaje profesional',
       'Destaca la calidad de tu servicio frente a la competencia con opiniones reales',
       'Mejora tu posicionamiento SEO local con contenido fresco de testimonios',
       'Convierte visitantes web en clientes mostrando experiencias positivas verificadas',
-      'Recoge feedback constructivo para mejorar tu servicio de maquillaje profesional continuamente',
+      'Recoge feedback constructivo para mejorar tu servicio de maquíllaje profesional continuamente',
       'Diferénciate en el mercado con prueba social auténtica y verificada',
     ],
     testimonialExamples: [
-      { author: 'Tamara Roldán', company: 'Maquilladores Profesionales Profesional', text: 'Desde que mostramos testimonios en nuestra web, las consultas han aumentado un 40%. Los clientes llegan con confianza porque han leído experiencias reales de otros.', rating: 5 },
-      { author: 'Christian Peña', company: 'Centro Maquilladores Profesionales', text: 'Opinafy nos facilita enormemente la recopilación de opiniones. El sistema es intuitivo y los testimonios se muestran de forma profesional en nuestra web.', rating: 5 },
-      { author: 'Nadia Abad', company: 'Maquilladores Profesionales Express', text: 'El widget de testimonios ha sido clave para nuestro crecimiento. Muchos clientes nuevos nos dicen que nos eligieron después de leer las opiniones en la web.', rating: 4 },
+      { author: 'Tamara Roldán', company: 'Maquílladores Profesionales Profesional', text: 'Desde que mostramos testimonios en nuestra web, las consultas han aumentado un 40%. Los clientes llegan con confianza porque han leído experiencias reales de otros.', rating: 5 },
+      { author: 'Christian Peña', company: 'Centro Maquílladores Profesionales', text: 'Opinafy nos facilita enormemente la recopilación de opiniones. El sistema es intuitivo y los testimonios se muestran de forma profesional en nuestra web.', rating: 5 },
+      { author: 'Nadia Abad', company: 'Maquílladores Profesionales Express', text: 'El widget de testimonios ha sido clave para nuestro crecimiento. Muchos clientes nuevos nos dicen que nos eligieron después de leer las opiniones en la web.', rating: 4 },
     ],
     faqItems: [
-      { question: '¿Cómo puedo recopilar testimonios de mis clientes de maquillaje profesional?', answer: 'Con Opinafy puedes enviar un enlace por WhatsApp o email después del servicio, mostrar un QR en tu local, o incluir el formulario en tu firma de correo. El proceso es rápido y el cliente puede dejar su opinión en menos de 2 minutos.' },
-      { question: '¿Los testimonios ayudan a atraer nuevos clientes de maquillaje profesional?', answer: 'Sí, los estudios demuestran que más del 85% de los consumidores confían en las opiniones online tanto como en recomendaciones personales. Los testimonios son tu mejor herramienta de captación.' },
+      { question: '¿Cómo puedo recopilar testimonios de mis clientes de maquíllaje profesional?', answer: 'Con Opinafy puedes enviar un enlace por WhatsApp o email después del servicio, mostrar un QR en tu local, o incluir el formulario en tu firma de correo. El proceso es rápido y el cliente puede dejar su opinión en menos de 2 minutos.' },
+      { question: '¿Los testimonios ayudan a atraer nuevos clientes de maquíllaje profesional?', answer: 'Sí, los estudios demuestran que más del 85% de los consumidores confían en las opiniones online tanto como en recomendaciones personales. Los testimonios son tu mejor herramienta de captación.' },
       { question: '¿Puedo seleccionar qué testimonios se muestran en mi web?', answer: 'Absolutamente. Opinafy incluye un sistema de moderación donde tú apruebas cada testimonio antes de que se publique. Tienes control total sobre tu imagen profesional online.' },
-      { question: '¿Cómo mejoran los testimonios mi posicionamiento en Google?', answer: 'Los testimonios generan contenido fresco con palabras clave relevantes como "maquillaje profesional en [tu ciudad]", mejorando tu visibilidad en búsquedas locales de forma natural y constante.' },
+      { question: '¿Cómo mejoran los testimonios mi posicionamiento en Google?', answer: 'Los testimonios generan contenido fresco con palabras clave relevantes como "maquíllaje profesional en [tu ciudad]", mejorando tu visibilidad en búsquedas locales de forma natural y constante.' },
     ],
     ctaText: 'Empieza a recopilar testimonios de tus clientes hoy',
-    keywords: ['testimonios maquilladores-profesionales', 'opiniones maquillaje profesional', 'reseñas maquillaje profesional', 'prueba social maquilladores-profesionales', 'widget opiniones maquillaje profesional', 'recopilar opiniones maquillaje profesional'],
-    content: `<p>En el sector de maquillaje profesional, la confianza del cliente lo es todo. Antes de contratar un servicio, <strong>más del 85% de los consumidores consultan opiniones de otros clientes</strong>. Si tu web de maquillaje profesional no muestra testimonios reales, estás perdiendo oportunidades frente a competidores que sí los tienen visibles.</p>
+    keywords: ['testimonios maquílladores-profesionales', 'opiniones maquíllaje profesional', 'reseñas maquíllaje profesional', 'prueba social maquílladores-profesionales', 'widget opiniones maquíllaje profesional', 'recopilar opiniones maquíllaje profesional'],
+    content: `<p>En el sector de maquíllaje profesional, la confianza del cliente lo es todo. Antes de contratar un servicio, <strong>más del 85% de los consumidores consultan opiniones de otros clientes</strong>. Si tu web de maquíllaje profesional no muestra testimonios reales, estás perdiendo oportunidades frente a competidores que sí los tienen visibles.</p>
 
-<h2>Por qué los testimonios son esenciales para maquillaje profesional</h2>
-<p>Los clientes que buscan servicios de maquillaje profesional necesitan sentirse seguros antes de tomar una decisión. A diferencia de productos físicos que se pueden devolver, los servicios requieren confianza previa. Los testimonios de otros clientes actúan como recomendaciones personales, eliminando barreras psicológicas y generando la seguridad necesaria para dar el primer paso hacia la contratación.</p>
-<p>Los testimonios son especialmente poderosos cuando describen <strong>experiencias concretas y resultados tangibles</strong>. Un cliente que detalla cómo tu servicio de maquillaje profesional resolvió su problema específico es mucho más convincente que cualquier texto publicitario o descripción genérica de servicios que puedas redactar.</p>
+<h2>Por qué los testimonios son esenciales para maquíllaje profesional</h2>
+<p>Los clientes que buscan servicios de maquíllaje profesional necesitan sentirse seguros antes de tomar una decisión. A diferencia de productos físicos que se pueden devolver, los servicios requieren confianza previa. Los testimonios de otros clientes actúan como recomendaciones personales, eliminando barreras psicológicas y generando la seguridad necesaria para dar el primer paso hacia la contratación.</p>
+<p>Los testimonios son especialmente poderosos cuando describen <strong>experiencias concretas y resultados tangibles</strong>. Un cliente que detalla cómo tu servicio de maquíllaje profesional resolvió su problema específico es mucho más convincente que cualquier texto publicitario o descripción genérica de servicios que puedas redactar.</p>
 
-<h2>Cómo recopilar testimonios en maquillaje profesional</h2>
-<p>El momento ideal para solicitar un testimonio es justo después de un servicio exitoso, cuando la satisfacción del cliente está en su punto más alto. Estos son los métodos más efectivos para profesionales de maquillaje profesional:</p>
+<h2>Cómo recopilar testimonios en maquíllaje profesional</h2>
+<p>El momento ideal para solicitar un testimonio es justo después de un servicio exitoso, cuando la satisfacción del cliente está en su punto más alto. Estos son los métodos más efectivos para profesionales de maquíllaje profesional:</p>
 <ul>
 <li><strong>QR en tu local o consulta:</strong> Coloca un código QR visible en la recepción o zona de espera que lleve directamente al formulario de Opinafy para facilitar la opinión inmediata.</li>
 <li><strong>WhatsApp o email post-servicio:</strong> Envía un mensaje amable con el enlace al formulario unas horas después del servicio, cuando la experiencia positiva aún está fresca en la memoria del cliente.</li>
@@ -10978,22 +10978,22 @@ export const industries: Industry[] = [
 <li><strong>Tarjeta de visita con QR:</strong> Incluye un código QR en tu tarjeta profesional que lleve al formulario de opinión para facilitar la recopilación continua.</li>
 </ul>
 
-<h2>Qué tipo de testimonios funcionan mejor en maquillaje profesional</h2>
-<p>Los testimonios más efectivos para profesionales de maquillaje profesional son los que mencionan el problema inicial del cliente, el servicio recibido y el resultado obtenido de forma específica. Un testimonio detallado que describe la transformación vivida es enormemente convincente para otros clientes potenciales con necesidades similares.</p>
+<h2>Qué tipo de testimonios funcionan mejor en maquíllaje profesional</h2>
+<p>Los testimonios más efectivos para profesionales de maquíllaje profesional son los que mencionan el problema inicial del cliente, el servicio recibido y el resultado obtenido de forma específica. Un testimonio detallado que describe la transformación vivida es enormemente convincente para otros clientes potenciales con necesidades similares.</p>
 <p>Con Opinafy puedes personalizar tu formulario para incluir preguntas guiadas como "¿Qué necesidad te trajo a nosotros?" y "¿Cómo valorarías el resultado final?", generando testimonios detallados y persuasivos que realmente convencen a nuevos clientes indecisos.</p>
 
-<h2>Dónde mostrar los testimonios en tu web de maquillaje profesional</h2>
+<h2>Dónde mostrar los testimonios en tu web de maquíllaje profesional</h2>
 <p>La ubicación estratégica de los testimonios maximiza su impacto en la conversión de visitantes en clientes:</p>
 <ul>
 <li><strong>Página de inicio:</strong> Un carrusel con los mejores testimonios genera confianza desde el primer momento de la visita.</li>
-<li><strong>Página de servicios:</strong> Testimonios relacionados con cada servicio específico que ofreces dentro de maquillaje profesional.</li>
+<li><strong>Página de servicios:</strong> Testimonios relacionados con cada servicio específico que ofreces dentro de maquíllaje profesional.</li>
 <li><strong>Página de contacto o reservas:</strong> Justo antes del formulario de contacto o botón de reserva para eliminar las últimas dudas del visitante.</li>
 <li><strong>Redes sociales y Google Business:</strong> Comparte los mejores testimonios para ampliar tu alcance y mejorar tu reputación online general.</li>
 </ul>
 
-<h2>Opinafy: la plataforma ideal para maquillaje profesional</h2>
-<p>Opinafy está diseñado pensando en profesionales y negocios como el tuyo. Configura tu formulario personalizado en minutos, adapta las preguntas para obtener testimonios relevantes para maquillaje profesional, y muestra las opiniones con un widget elegante que se integra perfectamente en cualquier web sin necesidad de conocimientos técnicos.</p>
-<p>El sistema de moderación te da control total sobre qué testimonios se publican, y las opciones de personalización visual permiten que el widget se adapte perfectamente al diseño de tu página web. <strong>Empieza gratis hoy y comprueba cómo los testimonios pueden transformar tu negocio de maquillaje profesional, atrayendo más clientes y generando más confianza online</strong>.</p>`,
+<h2>Opinafy: la plataforma ideal para maquíllaje profesional</h2>
+<p>Opinafy está diseñado pensando en profesionales y negocios como el tuyo. Configura tu formulario personalizado en minutos, adapta las preguntas para obtener testimonios relevantes para maquíllaje profesional, y muestra las opiniones con un widget elegante que se integra perfectamente en cualquier web sin necesidad de conocimientos técnicos.</p>
+<p>El sistema de moderación te da control total sobre qué testimonios se publican, y las opciones de personalización visual permiten que el widget se adapte perfectamente al diseño de tu página web. <strong>Empieza gratis hoy y comprueba cómo los testimonios pueden transformar tu negocio de maquíllaje profesional, atrayendo más clientes y generando más confianza online</strong>.</p>`,
   },
   {
     slug: 'centros-bronceado',
@@ -11536,7 +11536,7 @@ export const industries: Industry[] = [
       {
             "author": "Antonio García",
             "company": "Gestoría García & Hijos",
-            "text": "Desde que usamos Opinafy, nuestros clientes potenciales pueden ver las opiniones de autónomos y pymes que llevan años confiando en nosotros. Las consultas nuevas aumentaron un 30% en tres meses.",
+            "text": "Desde que usamos Opinafy, nuestros clientes potenciales pueden ver las opiniones de autónomos y pymes que llevan años confíando en nosotros. Las consultas nuevas aumentaron un 30% en tres meses.",
             "rating": 5
       },
       {
@@ -11705,7 +11705,7 @@ export const industries: Industry[] = [
 <p>El sistema de moderación te da control total sobre qué testimonios se publican, y las opciones de personalización visual permiten que el widget se adapte perfectamente al diseño de tu página web existente. <strong>Empieza gratis hoy y comprueba cómo los testimonios pueden transformar tu negocio de agencias de aduanas, atrayendo más clientes y generando más confianza online que nunca</strong>.</p>`,
   },
   {
-    slug: 'centros-formacion-profesional',
+    slug: 'centros-formación-profesional',
     name: 'Centros de Formación Profesional',
     title: 'Testimonios para Centros de Formación Profesional | Opinafy',
     metaDescription: 'Recopila opiniones de alumnos en tu centro de FP. Muestra testimonios reales de estudiantes que han conseguido empleo.',
@@ -13961,7 +13961,7 @@ export const industries: Industry[] = [
 <p>El sistema de moderación te da control total sobre qué testimonios se publican, y las opciones de personalización visual permiten que el widget se adapte perfectamente al diseño de tu página web existente. <strong>Empieza gratis hoy y comprueba cómo los testimonios pueden transformar tu negocio de instaladores de aire acondicionado, atrayendo más clientes y generando más confianza online que nunca</strong>.</p>`,
   },
   {
-    slug: 'empresas-energia-solar',
+    slug: 'empresas-energía-solar',
     name: 'Empresas de Energía Solar',
     title: 'Testimonios para Empresas de Energía Solar | Opinafy',
     metaDescription: 'Recopila opiniones de clientes de instalaciones solares. Muestra testimonios de hogares y empresas que ahorran energía.',

@@ -88,7 +88,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : null
 
   const description = avgRating
-    ? `${profile.full_name || username} tiene ${testimonials.length} testimonios verificados con una valoracion media de ${avgRating}/5 en Opinafy.`
+    ? `${profile.full_name || username} tiene ${testimonials.length} testimonios verificados con una valoración media de ${avgRating}/5 en Opinafy.`
     : `Testimonios verificados de ${profile.full_name || username} en Opinafy.`
 
   return {
@@ -239,7 +239,7 @@ export default async function MiniSitePage({ params }: PageProps) {
             }
           </h1>
           <p className="mt-3 text-gray-500">
-            Las páginas publicas de testimonios estan disponibles en los planes Mini Sitio, Pro y Business de Opinafy.
+            Las páginas publicas de testimonios están disponibles en los planes Mini Sitio, Pro y Business de Opinafy.
           </p>
           {isOwner ? (
             <Link
@@ -455,7 +455,7 @@ export default async function MiniSitePage({ params }: PageProps) {
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 </div>
-                <p className="text-sm" style={{ color: subtextColor }}>Valoracion media</p>
+                <p className="text-sm" style={{ color: subtextColor }}>Valoración media</p>
               </div>
               <div>
                 <p className="text-2xl font-bold" style={{ color: textColor }}>{projectCount}</p>

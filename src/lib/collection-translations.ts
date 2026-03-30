@@ -29,7 +29,7 @@ export const collectionTexts = {
     photoUploadError: 'Error al subir la imagen',
 
     // Testimonial photo
-    testimonialPhotoLabel: 'Quieres añadir una foto?',
+    testimonialPhotoLabel: '¿Quieres añadir una foto?',
     testimonialPhotoSubtitle: 'Sube una foto del producto, experiencia o resultado (opcional)',
     testimonialPhotoAlt: 'Foto del testimonio',
     testimonialPhotoSelect: 'Seleccionar foto',

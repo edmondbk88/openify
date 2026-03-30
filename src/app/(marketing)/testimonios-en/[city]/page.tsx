@@ -119,7 +119,7 @@ export default async function CityPage({ params }: CityPageProps) {
             Testimonios para negocios en {city.name}
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg text-gray-600">
-            Opinafy ayuda a negocios en {city.name}{city.region ? `, ${city.region}` : ''}{' '}
+            Opinafy ayuda a negocios en {city.name}{city.región ? `, ${city.región}` : ''}{' '}
             a recopilar y mostrar testimonios de clientes que generan confianza y aumentan
             las ventas. Elige tu industria para descubrir cómo.
           </p>

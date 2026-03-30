@@ -12,8 +12,8 @@ export const config = {
   matcher: [
     '/dashboard/:path*',
     '/proyectos/:path*',
-    '/configuracion/:path*',
-    '/facturacion/:path*',
+    '/configuración/:path*',
+    '/facturación/:path*',
     '/mi-sitio/:path*',
     '/soporte/:path*',
     '/admin/:path*',

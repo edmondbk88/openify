@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title: 'Centro de Ayuda - Opinafy',
-    description: 'Guias completas para aprovechar al maximo Opinafy.',
+    description: 'Guías completas para aprovechar al máximo Opinafy.',
     url: 'https://opinafy.com/ayuda',
   },
 }
@@ -34,7 +34,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
   'mini-sitio': (
     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5a17.92 17.92 0 0 1-8.716-2.247m0 0A8.966 8.966 0 0 1 3 12c0-1.264.26-2.466.733-3.559" /></svg>
   ),
-  automatizacion: (
+  automatización: (
     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="m3.75 13.5 10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" /></svg>
   ),
   analytics: (
@@ -43,7 +43,7 @@ const categoryIcons: Record<string, React.ReactNode> = {
   integraciones: (
     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" /></svg>
   ),
-  facturacion: (
+  facturación: (
     <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 0 0 2.25-2.25V6.75A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25v10.5A2.25 2.25 0 0 0 4.5 19.5Z" /></svg>
   ),
 }
@@ -52,7 +52,7 @@ export default function AyudaIndexPage() {
   const webPageJsonLd = webPageSchema({
     name: 'Centro de Ayuda - Opinafy',
     url: 'https://opinafy.com/ayuda',
-    description: 'Guias completas para aprovechar al maximo Opinafy.',
+    description: 'Guías completas para aprovechar al máximo Opinafy.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -84,7 +84,7 @@ export default function AyudaIndexPage() {
             Centro de Ayuda
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Encuentra guias detalladas sobre todas las funciones de Opinafy.
+            Encuentra guías detalladas sobre todas las funciones de Opinafy.
             Desde los primeros pasos hasta las herramientas más avanzadas.
           </p>
         </div>
@@ -133,7 +133,7 @@ export default function AyudaIndexPage() {
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900">No encuentras lo que buscas?</h2>
           <p className="mx-auto mt-3 max-w-xl text-gray-600">
-            Si tienes alguna pregunta que no esta cubierta en nuestras guias, no dudes en contactarnos.
+            Si tienes alguna pregunta que no está cubierta en nuestras guías, no dudes en contactarnos.
             Estamos aquí para ayudarte.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

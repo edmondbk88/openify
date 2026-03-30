@@ -50,7 +50,7 @@ export default function AdminProyectosPage() {
   }
 
   const handleDelete = async (projectId: string, name: string) => {
-    if (!confirm(`Eliminar proyecto "${name}" y todos sus testimonios? Esta accion es irreversible.`)) return
+    if (!confirm(`Eliminar proyecto "${name}" y todos sus testimonios? Esta acción es irreversible.`)) return
     await fetch(`/api/admin/projects?projectId=${projectId}`, { method: 'DELETE' })
     fetchProjects()
   }

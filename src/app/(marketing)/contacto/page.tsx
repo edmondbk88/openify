@@ -35,7 +35,7 @@ export default function ContactoPage() {
               Contacto
             </h1>
             <p className="mb-10 text-lg leading-relaxed text-gray-600">
-              Tienes alguna pregunta, sugerencia o necesitas ayuda? Estamos aqui
+              Tienes alguna pregunta, sugerencia o necesitas ayuda? Estamos aquí
               para ti. Escríbenos y te responderemos lo antes posible.
             </p>
 

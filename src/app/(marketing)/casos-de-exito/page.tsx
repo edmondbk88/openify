@@ -108,7 +108,7 @@ export default function CasosDeExitoPage() {
             <div className="rounded-xl border border-gray-200 p-6">
               <h3 className="font-bold text-gray-900">Testimonios verificados</h3>
               <p className="mt-2 text-sm text-gray-600">
-                Recopila testimonios escritos, en video y audio con verificacion de identidad para
+                Recopila testimonios escritos, en video y audio con verificación de identidad para
                 generar confianza real en tus visitantes.
               </p>
             </div>
@@ -137,7 +137,7 @@ export default function CasosDeExitoPage() {
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-lg text-indigo-200">
               Empieza gratis y transforma la reputación online de tu negocio con testimonios
-              verificados. Sin tarjeta de credito.
+              verificados. Sin tarjeta de crédito.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <Link

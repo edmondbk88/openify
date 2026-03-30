@@ -21,8 +21,8 @@ export const MINISITE_CATEGORIES = [
   'Salud',
   'Legal',
   'Creativos',
-  'Educacion',
-  'Tecnologia',
+  'Educación',
+  'Tecnología',
   'Bienestar',
   'Hosteleria',
   'Negocios',
@@ -39,7 +39,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     id: 'consultorio-sereno',
     name: 'Consultorio Sereno',
     category: 'Salud',
-    description: 'Azul sanitario suave y limpio. Ideal para medicos y clinicas.',
+    description: 'Azul sanitario suave y limpio. Ideal para médicos y clinicas.',
     config: {
       accent_color: '#0284c7',
       background_color: '#f0f9ff',
@@ -93,7 +93,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     id: 'vida-natural',
     name: 'Vida Natural',
     category: 'Salud',
-    description: 'Verde organico y fresco. Para nutricionistas y dietistas.',
+    description: 'Verde orgánico y fresco. Para nutricionistas y dietistas.',
     config: {
       accent_color: '#16a34a',
       background_color: '#f0fdf4',
@@ -111,7 +111,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     id: 'movimiento-vital',
     name: 'Movimiento Vital',
     category: 'Salud',
-    description: 'Azul dinamico con energia. Ideal para fisioterapeutas.',
+    description: 'Azul dinámico con energía. Ideal para fisioterapeutas.',
     config: {
       accent_color: '#2563eb',
       background_color: '#eff6ff',
@@ -148,7 +148,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     },
   },
   {
-    id: 'notaria-clasica',
+    id: 'notaria-clásica',
     name: 'Notaria Clasica',
     category: 'Legal',
     description: 'Tonos sepia y dorados. Transmite tradicion y confianza notarial.',
@@ -209,7 +209,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     id: 'estudio-creativo',
     name: 'Estudio Creativo',
     category: 'Creativos',
-    description: 'Rosa vibrante y moderno. Ideal para disenadores graficos.',
+    description: 'Rosa vibrante y moderno. Ideal para diseñadores gráficos.',
     config: {
       accent_color: '#ec4899',
       background_color: '#fdf2f8',
@@ -227,7 +227,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     id: 'plano-maestro',
     name: 'Plano Maestro',
     category: 'Creativos',
-    description: 'Lineas limpias y minimalismo. Para arquitectos y estudios.',
+    description: 'Lineas limpias y mínimalismo. Para arquitectos y estudios.',
     config: {
       accent_color: '#171717',
       background_color: '#fafafa',
@@ -245,7 +245,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     id: 'cine-en-movimiento',
     name: 'Cine en Movimiento',
     category: 'Creativos',
-    description: 'Oscuro cinematografico. Perfecto para videografos y productoras.',
+    description: 'Oscuro cinematográfico. Perfecto para videografos y productoras.',
     config: {
       accent_color: '#ef4444',
       background_color: '#18181b',
@@ -261,12 +261,12 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
   },
 
   // ═══════════════════════════════════════════════════
-  // EDUCACION (3)
+  // EDUCACIÓN (3)
   // ═══════════════════════════════════════════════════
   {
     id: 'aula-inspirada',
     name: 'Aula Inspirada',
-    category: 'Educacion',
+    category: 'Educación',
     description: 'Azul educativo calido. Para profesores y formadores.',
     config: {
       accent_color: '#3b82f6',
@@ -284,7 +284,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
   {
     id: 'impulso-coaching',
     name: 'Impulso Coaching',
-    category: 'Educacion',
+    category: 'Educación',
     description: 'Naranja energetico y motivador. Para coaches y mentores.',
     config: {
       accent_color: '#ea580c',
@@ -302,8 +302,8 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
   {
     id: 'academia-saber',
     name: 'Academia del Saber',
-    category: 'Educacion',
-    description: 'Ambar clasico academico. Para academias y centros de formacion.',
+    category: 'Educación',
+    description: 'Ambar clásico academico. Para academias y centros de formación.',
     config: {
       accent_color: '#b45309',
       background_color: '#fffbeb',
@@ -319,12 +319,12 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
   },
 
   // ═══════════════════════════════════════════════════
-  // TECNOLOGIA (3)
+  // TECNOLOGÍA (3)
   // ═══════════════════════════════════════════════════
   {
     id: 'código-limpio',
     name: 'Código Limpio',
-    category: 'Tecnologia',
+    category: 'Tecnología',
     description: 'Oscuro tipo IDE con verde terminal. Para desarrolladores.',
     config: {
       accent_color: '#22c55e',
@@ -342,7 +342,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
   {
     id: 'agencia-digital',
     name: 'Agencia Digital',
-    category: 'Tecnologia',
+    category: 'Tecnología',
     description: 'Indigo moderno y brillante. Para agencias de marketing digital.',
     config: {
       accent_color: '#6366f1',
@@ -360,7 +360,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
   {
     id: 'plataforma-saas',
     name: 'Plataforma SaaS',
-    category: 'Tecnologia',
+    category: 'Tecnología',
     description: 'Cyan futurista sobre oscuro. Para productos SaaS y startups.',
     config: {
       accent_color: '#06b6d4',
@@ -381,7 +381,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
   // ═══════════════════════════════════════════════════
   {
     id: 'salon-elegante',
-    name: 'Salon Elegante',
+    name: 'Salón Elegante',
     category: 'Bienestar',
     description: 'Rosa empolvado con toques dorados. Para peluquerias y salones.',
     config: {
@@ -419,7 +419,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     id: 'fuerza-fitness',
     name: 'Fuerza Fitness',
     category: 'Bienestar',
-    description: 'Negro potente con rojo energia. Para entrenadores personales.',
+    description: 'Negro potente con rojo energía. Para entrenadores personales.',
     config: {
       accent_color: '#dc2626',
       background_color: '#0a0a0a',
@@ -532,7 +532,7 @@ export const miniSiteTemplates: MiniSiteTemplate[] = [
     },
   },
   {
-    id: 'finanzas-solidas',
+    id: 'finanzas-sólidas',
     name: 'Finanzas Solidas',
     category: 'Negocios',
     description: 'Azul corporativo serio. Para asesores financieros.',

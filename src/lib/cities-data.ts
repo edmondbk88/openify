@@ -2,21 +2,21 @@ export interface City {
   slug: string
   name: string
   country: string
-  region?: string
+  región?: string
 }
 
 export const cities: City[] = [
   // Spain
-  { slug: 'madrid', name: 'Madrid', country: 'España', region: 'Comunidad de Madrid' },
-  { slug: 'barcelona', name: 'Barcelona', country: 'España', region: 'Cataluña' },
-  { slug: 'valencia', name: 'Valencia', country: 'España', region: 'Comunidad Valenciana' },
-  { slug: 'sevilla', name: 'Sevilla', country: 'España', region: 'Andalucía' },
-  { slug: 'malaga', name: 'Málaga', country: 'España', region: 'Andalucía' },
-  { slug: 'bilbao', name: 'Bilbao', country: 'España', region: 'País Vasco' },
-  { slug: 'zaragoza', name: 'Zaragoza', country: 'España', region: 'Aragón' },
-  { slug: 'alicante', name: 'Alicante', country: 'España', region: 'Comunidad Valenciana' },
-  { slug: 'palma-mallorca', name: 'Palma de Mallorca', country: 'España', region: 'Islas Baleares' },
-  { slug: 'las-palmas', name: 'Las Palmas de Gran Canaria', country: 'España', region: 'Canarias' },
+  { slug: 'madrid', name: 'Madrid', country: 'España', región: 'Comunidad de Madrid' },
+  { slug: 'barcelona', name: 'Barcelona', country: 'España', región: 'Cataluña' },
+  { slug: 'valencia', name: 'Valencia', country: 'España', región: 'Comunidad Valenciana' },
+  { slug: 'sevilla', name: 'Sevilla', country: 'España', región: 'Andalucía' },
+  { slug: 'malaga', name: 'Málaga', country: 'España', región: 'Andalucía' },
+  { slug: 'bilbao', name: 'Bilbao', country: 'España', región: 'País Vasco' },
+  { slug: 'zaragoza', name: 'Zaragoza', country: 'España', región: 'Aragón' },
+  { slug: 'alicante', name: 'Alicante', country: 'España', región: 'Comunidad Valenciana' },
+  { slug: 'palma-mallorca', name: 'Palma de Mallorca', country: 'España', región: 'Islas Baleares' },
+  { slug: 'las-palmas', name: 'Las Palmas de Gran Canaria', country: 'España', región: 'Canarias' },
   // Mexico
   { slug: 'ciudad-de-mexico', name: 'Ciudad de México', country: 'México' },
   { slug: 'guadalajara', name: 'Guadalajara', country: 'México' },
@@ -56,5 +56,5 @@ export const topIndustrySlugs = [
   'contadores',
   'agencias-marketing',
   'clinicas-estetica',
-  'mecanicos',
+  'mecánicos',
 ] as const

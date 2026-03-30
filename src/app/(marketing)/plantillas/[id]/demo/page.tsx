@@ -71,7 +71,7 @@ export default async function DemoPage({ params }: PageProps) {
             Demo en Vivo — {template.name}
           </h1>
           <p className="mt-2 text-gray-600">
-            Asi se veria esta plantilla en tu web con testimonios reales de clientes.
+            Así se vería esta plantilla en tu web con testimonios reales de clientes.
           </p>
         </div>
 

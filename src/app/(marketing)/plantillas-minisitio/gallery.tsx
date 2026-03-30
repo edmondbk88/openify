@@ -150,7 +150,7 @@ export function MiniSiteGallery({
 
       {filtered.length === 0 && (
         <p className="py-16 text-center text-gray-500">
-          No se encontraron plantillas en esta categoria.
+          No se encontraron plantillas en esta categoría.
         </p>
       )}
     </>

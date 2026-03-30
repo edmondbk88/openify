@@ -27,7 +27,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Introduction: The Power of the Customer Voice</h2>
 <p>In today's digital world, consumers have access to an overwhelming number of options. Every day, new products, new services, and new value propositions are launched. Faced with this avalanche of alternatives, how can a business stand out and earn the trust of its potential customers? The answer lies in one of the oldest and most effective marketing tools in existence: customer testimonials.</p>
 <p>Customer testimonials are statements, whether written or in video form, in which real people share their experience with a product or service. These are not advertisements created by the company, but authentic opinions that reflect the satisfaction, results obtained, or transformation experienced by the customer after using what you offer. Learn how to gather them in our guide on <a href="/en/blog/como-recopilar-testimonios-clientes-estrategias" class="text-indigo-600 hover:text-indigo-700 font-medium">how to collect customer testimonials</a>.</p>
-<p>Throughout this article, we will explore in depth what testimonials really are, why they work so well from a psychological perspective, what types exist, and how you can begin using them strategically in your business. If you have ever wondered why some businesses instantly generate trust while others struggle to close their first sale, this article will give you the answers you need.</p>
+<p>Throughout this article, we will explore in depth what testimonials really are, why they work so well from a psychológical perspective, what types exist, and how you can begin using them strategically in your business. If you have ever wondered why some businesses instantly generate trust while others struggle to close their first sale, this article will give you the answers you need.</p>
 
 <h2>A Complete Definition of Customer Testimonials</h2>
 <p>A customer testimonial is, at its core, a public recommendation. It is the digital version of the word-of-mouth referrals that have driven businesses since time immemorial. When a satisfied customer describes their positive experience, they are providing tangible proof that your product or service delivers on its promises.</p>
@@ -43,13 +43,13 @@ export const blogArticlesEn: BlogArticle[] = [
 
 <h2>The Psychology Behind Testimonials: Why They Work</h2>
 <p>To understand why testimonials are so powerful, we need to grasp some fundamental principles of human psychology. The first and most important is the concept of <strong>social proof</strong>, coined by psychologist Robert Cialdini in his book "Influence: The Psychology of Persuasion."</p>
-<p>Social proof is the psychological phenomenon by which people tend to imitate the actions of others when they find themselves in situations of uncertainty. If you are in an unfamiliar city and you see two restaurants, one empty and one full, you will instinctively lean toward the one with more people. Your brain interprets that "if so many people have chosen that restaurant, there must be a reason."</p>
+<p>Social proof is the psychológical phenomenon by which people tend to imitate the actions of others when they find themselves in situations of uncertainty. If you are in an unfamiliar city and you see two restaurants, one empty and one full, you will instinctively lean toward the one with more people. Your brain interprets that "if so many people have chosen that restaurant, there must be a reason."</p>
 <p>Testimonials activate exactly this mechanism. When a visitor arrives at your website and sees that other people, ideally people similar to them, have had positive experiences with your product, their brain reduces the perceived risk associated with the purchase.</p>
 <p>Another relevant principle is <strong>confirmation bias</strong>. Users who are already considering your product actively seek information that confirms they are making the right decision. Testimonials provide exactly the validation they need to take the final step.</p>
 <p><strong>Social identity theory</strong> also comes into play. When a potential customer reads a testimonial from someone who resembles them, whether in their industry, company size, or personal situation, an identification occurs that reinforces the idea that the product will also work for them. This is why it is so important for testimonials to include details about who the customer is and what their situation was before using the product.</p>
 
 <h2>Statistics That Prove the Importance of Testimonials</h2>
-<p>If psychological arguments are not enough, the data speaks for itself. Various studies have demonstrated the measurable impact of testimonials on business metrics:</p>
+<p>If psychológical arguments are not enough, the data speaks for itself. Various studies have demonstrated the measurable impact of testimonials on business metrics:</p>
 <ul>
 <li><strong>92% of consumers</strong> read online reviews and testimonials before making a purchase, according to a BrightLocal study.</li>
 <li><strong>Pages with testimonials convert up to 34% more</strong> than those without them, according to VWO data.</li>
@@ -202,7 +202,7 @@ export const blogArticlesEn: BlogArticle[] = [
       'Complete guide on social proof: what it is, the 6 types that exist, real examples, and how to implement it in your business to increase sales and conversions.',
     content: `
 <h2>What Exactly Is Social Proof?</h2>
-<p>Social proof is a psychological phenomenon first described by Dr. Robert Cialdini in 1984. It refers to the human tendency to observe the behavior of others to determine what is the correct course of action in a given situation. In other words, when we are not sure what to do, we look at what others are doing and imitate them.</p>
+<p>Social proof is a psychológical phenomenon first described by Dr. Robert Cialdini in 1984. It refers to the human tendency to observe the behavior of others to determine what is the correct course of action in a given situation. In other words, when we are not sure what to do, we look at what others are doing and imitate them.</p>
 <p>This behavior is deeply rooted in our evolution as a species. For thousands of years, following the group was a survival strategy. If everyone was running in one direction, there was probably a good reason for it. This instinct persists in our modern brains and constantly manifests in our purchasing decisions.</p>
 <p>In the context of digital marketing, social proof translates to any evidence that other people have interacted positively with your brand, product, or service. It can take many forms, from customer testimonials to user numbers, trust seals, media mentions, and social media presence.</p>
 <p>Understanding and applying social proof is not manipulation. It is simply making it easier for your potential customers to access the information they need to make an informed decision. If your product is good and your customers are satisfied, showing that reality is the most natural and honest thing you can do.</p>
@@ -565,7 +565,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>The key to a good carousel is smooth transitions, readable speed if auto-rotating, and clear navigation controls. Visitors should feel in control of the pace and be able to pause on any testimonial that catches their attention.</p>
 
 <h3>Grid or Masonry Widgets</h3>
-<p>Grid layouts display multiple testimonials simultaneously in a structured grid format. Masonry layouts are similar but allow testimonials of different lengths to fit together organically, like bricks in a wall. These formats are ideal for dedicated testimonial sections or <a href="/en/blog/wall-of-love-que-es-como-crear" class="text-indigo-600 hover:text-indigo-700 font-medium">Wall of Love</a> pages where you want to create an impressive display of social proof through sheer volume.</p>
+<p>Grid layouts display multiple testimonials simultaneously in a structured grid format. Masonry layouts are similar but allow testimonials of different lengths to fit together orgánically, like bricks in a wall. These formats are ideal for dedicated testimonial sections or <a href="/en/blog/wall-of-love-que-es-como-crear" class="text-indigo-600 hover:text-indigo-700 font-medium">Wall of Love</a> pages where you want to create an impressive display of social proof through sheer volume.</p>
 <p>Grids work best when you have many testimonials and want visitors to see the breadth of your customer satisfaction at a glance. They are particularly effective on About pages, case study pages, and dedicated testimonial sections.</p>
 
 <h3>Single Spotlight Widgets</h3>
@@ -840,7 +840,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p><strong>Control:</strong> Testimonials give you full control over what is displayed. Reviews are on third-party platforms you do not control. Opinions are entirely organic and beyond any control.</p>
 <p><strong>Credibility:</strong> Reviews are perceived as the most credible because they are independent. Testimonials are credible when they include real names and details. Opinions vary widely in credibility depending on the source.</p>
 <p><strong>Format:</strong> Testimonials are polished and narrative-driven. Reviews are structured with ratings and text. Opinions are informal and varied in format.</p>
-<p><strong>Collection method:</strong> Testimonials are proactively requested. Reviews are usually submitted voluntarily by customers. Opinions emerge organically in conversations and online activity.</p>
+<p><strong>Collection method:</strong> Testimonials are proactively requested. Reviews are usually submitted voluntarily by customers. Opinions emerge orgánically in conversations and online activity.</p>
 <p><strong>Best use case:</strong> Testimonials excel on your website and in sales materials. Reviews dominate in local SEO and platform-specific searches. Opinions drive organic word-of-mouth and brand awareness.</p>
 
 <h2>When to Use Testimonials</h2>
@@ -928,7 +928,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>The more generous your guarantee, the more trust it generates. A thirty-day money-back guarantee is good, but a sixty or ninety-day guarantee is even better. Counterintuitively, longer guarantee periods often result in fewer refund requests, because customers have more time to discover and appreciate the value of your product.</p>
 
 <h2>Technique 6: Provide Social Proof Numbers</h2>
-<p>Numbers provide concrete evidence that others trust your business. Display metrics like the number of customers served, products sold, years in business, or countries reached. These figures activate crowd social proof, the psychological tendency to follow what the majority is doing.</p>
+<p>Numbers provide concrete evidence that others trust your business. Display metrics like the number of customers served, products sold, years in business, or countries reached. These figures activate crowd social proof, the psychológical tendency to follow what the majority is doing.</p>
 <p>Even modest numbers can be effective when framed correctly. "Trusted by 500+ businesses" sounds impressive for a niche product. "Over 10,000 testimonials collected" demonstrates widespread adoption. The key is honesty. Never inflate your numbers, as getting caught exaggerating destroys exactly the trust you are trying to build.</p>
 
 <h2>Technique 7: Create Detailed, Helpful Content</h2>
@@ -1071,7 +1071,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>Unlike a traditional testimonials section that might feature three or four carefully selected quotes, a Wall of Love embraces volume. It displays dozens or even hundreds of testimonials in a grid or masonry layout, creating an impression of overwhelming customer satisfaction that individual testimonials cannot match. The sheer quantity of positive feedback tells a story of its own: this many people cannot all be wrong.</p>
 
 <h2>Why Walls of Love Work So Well</h2>
-<p>The effectiveness of a Wall of Love draws from multiple psychological principles working in concert.</p>
+<p>The effectiveness of a Wall of Love draws from multiple psychológical principles working in concert.</p>
 <p><strong>Crowd social proof:</strong> When a visitor sees dozens of positive testimonials arranged in a massive grid, the implicit message is "Look how many people love this." This activates the herd instinct and makes the visitor feel that choosing your product is the safe, popular choice.</p>
 <p><strong>Variety of perspectives:</strong> A well-constructed Wall of Love includes testimonials from different types of customers, different industries, different use cases, and different outcomes. This variety means that almost any visitor will find at least one testimonial that resonates with their specific situation, increasing the likelihood of identification and conversion.</p>
 <p><strong>Visual impact:</strong> The sheer visual presence of a Wall of Love is impressive. It fills the screen with positive sentiment, creating an emotional response that a few scattered testimonials cannot replicate. The layout itself becomes part of the message.</p>
@@ -1123,7 +1123,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <li><strong>Page views:</strong> How many visitors are finding and viewing your wall? This tells you about visibility and discoverability.</li>
 <li><strong>Time on page:</strong> Longer time on page suggests visitors are reading multiple testimonials, which indicates engagement and interest.</li>
 <li><strong>Conversion attribution:</strong> Track whether visitors who view the Wall of Love are more likely to convert than those who do not. Use analytics to identify this correlation.</li>
-<li><strong>Referral traffic:</strong> Monitor whether people share links to your wall on social media or in conversations. A shareable wall extends your reach organically.</li>
+<li><strong>Referral traffic:</strong> Monitor whether people share links to your wall on social media or in conversations. A shareable wall extends your reach orgánically.</li>
 </ul>
 
 <h2>Conclusion: Build Your Wall, Build Your Trust</h2>
@@ -1312,7 +1312,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>However, healthcare testimonials come with unique challenges that other industries do not face. Patient privacy regulations, ethical considerations, and the sensitive nature of health information all require careful navigation. This guide will show you how to collect and display patient testimonials effectively while maintaining the highest standards of compliance and ethics.</p>
 
 <h2>Understanding Privacy and Compliance</h2>
-<p>Before collecting any patient testimonial, it is essential to understand the regulatory landscape in your jurisdiction. While specific regulations vary by country and region, several principles apply broadly:</p>
+<p>Before collecting any patient testimonial, it is essential to understand the regulatory landscape in your jurisdiction. While specific regulations vary by country and región, several principles apply broadly:</p>
 <p><strong>Patient consent:</strong> You must obtain explicit, written consent from the patient before using their testimonial in any marketing material. This consent should specify how and where the testimonial will be used, the duration of use, and the patient's right to revoke consent at any time.</p>
 <p><strong>Health information protection:</strong> In many jurisdictions, laws like HIPAA in the United States or GDPR in Europe place strict limits on how patient health information can be used and disclosed. Even if a patient voluntarily shares health details in a testimonial, you as the provider have a responsibility to ensure that the use of this information complies with applicable regulations.</p>
 <p><strong>Truthfulness:</strong> Healthcare testimonials must be truthful and not misleading. You cannot guarantee results, and testimonials should not be presented in a way that implies that every patient will experience the same outcome. Including disclaimers like "Individual results may vary" is a common best practice.</p>
@@ -1458,8 +1458,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'automatizar-recopilacion-testimonios',
-    image: blogImageUrl('automatizar-recopilacion-testimonios'),
+    slug: 'automatizar-recopilación-testimonios',
+    image: blogImageUrl('automatizar-recopilación-testimonios'),
     title: 'How to Automate Testimonial Collection in Your Business',
     excerpt:
       'Learn how to set up automated systems for collecting customer testimonials. Save time, increase response rates, and maintain a fresh stream of social proof.',
@@ -1629,11 +1629,11 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'psicologia-prueba-social-ventas',
-    image: blogImageUrl('psicologia-prueba-social-ventas'),
+    slug: 'psicología-prueba-social-ventas',
+    image: blogImageUrl('psicología-prueba-social-ventas'),
     title: 'The Psychology Behind Social Proof: Why We Buy What Others Recommend',
     excerpt:
-      'Explore the deep psychological mechanisms that make social proof one of the most powerful forces in human decision-making and consumer behavior.',
+      'Explore the deep psychológical mechanisms that make social proof one of the most powerful forces in human decision-making and consumer behavior.',
     category: 'Psychology',
     keywords: [
       'psychology social proof',
@@ -1649,8 +1649,8 @@ export const blogArticlesEn: BlogArticle[] = [
     content: `
 <h2>We Are Social Animals First, Rational Consumers Second</h2>
 <p>Before we are consumers, investors, or business owners, we are social animals. Our brains evolved over millions of years in small tribal groups where survival depended on cooperation, social cohesion, and the ability to learn from the experiences of others. These evolutionary pressures hardwired our brains to pay exquisite attention to the behavior and opinions of those around us.</p>
-<p>When we make a purchasing decision today, we like to think we are being rational: weighing features, comparing prices, evaluating alternatives. But the truth is that the vast majority of our decisions are heavily influenced by social signals that operate below the level of conscious awareness. Understanding these psychological mechanisms is not just academically interesting; it is practically essential for anyone who wants to build trust and drive conversions.</p>
-<p>In this article, we will explore the key psychological principles that make social proof so powerful, from evolutionary psychology to modern neuroscience, and show how each principle applies to the world of customer testimonials and marketing.</p>
+<p>When we make a purchasing decision today, we like to think we are being rational: weighing features, comparing prices, evaluating alternatives. But the truth is that the vast majority of our decisions are heavily influenced by social signals that operate below the level of conscious awareness. Understanding these psychológical mechanisms is not just academically interesting; it is practically essential for anyone who wants to build trust and drive conversions.</p>
+<p>In this article, we will explore the key psychológical principles that make social proof so powerful, from evolutionary psychology to modern neuroscience, and show how each principle applies to the world of customer testimonials and marketing.</p>
 
 <h2>The Evolutionary Roots of Social Proof</h2>
 <p>Imagine you are a prehistoric human walking through an unfamiliar forest. You come to a fork in the path. One path has footprints, broken branches, and signs that others have walked it recently. The other path is untouched. Which do you choose? Without hesitation, you follow the path others have taken. Why? Because in the ancestral environment, following the crowd was a survival strategy. If others walked that path and survived, it is probably safe. If they avoided the other path, there might be a reason: a predator, a cliff, or some other danger.</p>
@@ -1695,12 +1695,12 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>This is why testimonials that tell a story, with a clear beginning, challenge, solution, and outcome, are far more persuasive than simple statements of satisfaction. A testimonial that reads like a mini-story engages the reader emotionally and circumvents the skepticism that would normally accompany a marketing claim.</p>
 
 <h2>Applying Psychology to Your Testimonial Strategy</h2>
-<p>Understanding these psychological principles transforms how you approach testimonials. Display testimonials at moments of maximum uncertainty, particularly on pricing and checkout pages. Feature testimonials from customers who closely match your target audience. Emphasize volume with counters, aggregated ratings, and Walls of Love. Include authority testimonials from recognizable brands and experts. Use narrative testimonials that tell compelling before-and-after stories. Frame value in terms of what the customer would have lost without your product.</p>
+<p>Understanding these psychológical principles transforms how you approach testimonials. Display testimonials at moments of maximum uncertainty, particularly on pricing and checkout pages. Feature testimonials from customers who closely match your target audience. Emphasize volume with counters, aggregated ratings, and Walls of Love. Include authority testimonials from recognizable brands and experts. Use narrative testimonials that tell compelling before-and-after stories. Frame value in terms of what the customer would have lost without your product.</p>
 <p><strong>Opinafy</strong> gives you the tools to apply all of these principles through professional testimonial collection and display. With customizable widgets, you can present the right testimonials in the right format at the right moment in the customer journey.</p>
 
 <h2>Conclusion: Work With Human Nature, Not Against It</h2>
 <p>Social proof is not a marketing trick. It is a fundamental feature of human psychology that has been shaping behavior for millennia. By understanding the mechanisms behind it, you can create testimonial strategies that genuinely help potential customers make better, more confident decisions. And in doing so, you build a business based on authentic trust rather than persuasive manipulation.</p>
-<p>Start collecting customer stories that speak to these deep psychological needs. Display them thoughtfully and strategically. And let the natural power of social proof do what it has always done: guide people toward choices that others have already validated. <strong>Try Opinafy free today</strong> and harness the psychology of trust for your business.</p>
+<p>Start collecting customer stories that speak to these deep psychológical needs. Display them thoughtfully and strategically. And let the natural power of social proof do what it has always done: guide people toward choices that others have already validated. <strong>Try Opinafy free today</strong> and harness the psychology of trust for your business.</p>
 `,
   },
   {
@@ -2225,7 +2225,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>Test different testimonial formats in your ads: static quote graphics versus video clips, short quotes versus longer stories, well-known clients versus relatable peers. Let the data tell you which formats resonate most with each audience segment.</p>
 
 <h2>Encouraging User-Generated Social Proof</h2>
-<p>Beyond sharing your collected testimonials on social media, encourage your customers to create their own social proof organically. Create a branded hashtag and encourage customers to use it when posting about their experience. Feature customer-created content on your own feed to incentivize more sharing. Run periodic campaigns or contests that encourage customers to share their stories publicly.</p>
+<p>Beyond sharing your collected testimonials on social media, encourage your customers to create their own social proof orgánically. Create a branded hashtag and encourage customers to use it when posting about their experience. Feature customer-created content on your own feed to incentivize more sharing. Run periodic campaigns or contests that encourage customers to share their stories publicly.</p>
 <p>When customers tag your brand in a positive post, respond enthusiastically and ask for permission to share their content. Most customers are flattered by the attention and happy to be featured. This organic social proof is often more persuasive than polished testimonial graphics because it is clearly spontaneous and genuine.</p>
 
 <h2>Measuring Social Testimonial Performance</h2>
@@ -2330,7 +2330,7 @@ export const blogArticlesEn: BlogArticle[] = [
     content: `
 <h2>The Anatomy of a High-Converting Landing Page</h2>
 <p>A landing page has one job: convert visitors into leads or customers. Every element on the page should serve this singular purpose, and testimonials are among the most powerful elements you can deploy. Research shows that landing pages with testimonials convert up to 34% better than those without, and the impact can be even greater when testimonials are placed strategically within the page structure.</p>
-<p>The perfect landing page follows a proven psychological sequence: capture attention, build interest, create desire, address objections, and drive action. Testimonials play a role at every stage of this sequence, but their impact varies dramatically depending on where they appear and what they say. This guide provides a blueprint for integrating testimonials into each section of your landing page for maximum conversion impact.</p>
+<p>The perfect landing page follows a proven psychológical sequence: capture attention, build interest, create desire, address objections, and drive action. Testimonials play a role at every stage of this sequence, but their impact varies dramatically depending on where they appear and what they say. This guide provides a blueprint for integrating testimonials into each section of your landing page for maximum conversion impact.</p>
 
 <h2>Section 1: The Hero Section</h2>
 <p>The hero section is the first thing visitors see. Its primary job is to communicate your value proposition clearly and give visitors a reason to keep scrolling. Testimonials in the hero section should be minimal but impactful. A brief trust indicator such as a star rating, a customer count, or a single powerful quote beneath your headline provides immediate social proof without cluttering the hero area.</p>
@@ -2381,8 +2381,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-academias-formacion',
-    image: blogImageUrl('testimonios-academias-formacion'),
+    slug: 'testimonios-academias-formación',
+    image: blogImageUrl('testimonios-academias-formación'),
     title: 'Testimonials for Online Academies and Training Centers',
     excerpt:
       'Learn how educational businesses can collect and leverage student testimonials to increase enrollment, demonstrate outcomes, and build authority.',
@@ -2549,8 +2549,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-fotografia-bodas',
-    image: blogImageUrl('testimonios-fotografia-bodas'),
+    slug: 'testimonios-fotografía-bodas',
+    image: blogImageUrl('testimonios-fotografía-bodas'),
     title: 'Testimonials for Wedding Photographers and Videographers',
     excerpt:
       'Learn how wedding photographers and videographers can collect and leverage client testimonials to book more weddings and build a stellar reputation.',
@@ -2753,7 +2753,7 @@ export const blogArticlesEn: BlogArticle[] = [
 
 <h2>Photos and Videos: The Secret Weapon of Vet Testimonials</h2>
 <p>Pet owners love sharing photos of their animals, and visual testimonials are incredibly engaging. Encourage clients to include photos of their healthy, happy pets alongside their testimonials. A photo of a dog playing in the park with a caption "Two months after surgery at [Clinic Name], Max is back to his old self!" tells a recovery story that words alone cannot match.</p>
-<p>Create a "Happy Patients" gallery on your website featuring these customer-submitted pet photos alongside their testimonials. This gallery is not only great social proof; it is also the kind of content that pet lovers enjoy browsing and sharing on social media, extending your reach organically.</p>
+<p>Create a "Happy Patients" gallery on your website featuring these customer-submitted pet photos alongside their testimonials. This gallery is not only great social proof; it is also the kind of content that pet lovers enjoy browsing and sharing on social media, extending your reach orgánically.</p>
 <p>Video testimonials from pet owners, especially showing them with their happy, healthy pets, generate exceptional engagement on social media. A thirty-second video of a dog running and playing with a voiceover from the owner describing their treatment experience is incredibly shareable content.</p>
 
 <h2>Displaying Veterinary Testimonials</h2>
@@ -2792,7 +2792,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>What Are Trust Badges and Why Do They Matter?</h2>
 <p>Trust badges are visual indicators displayed on websites to communicate security, legitimacy, and quality to visitors. They are the digital equivalent of the "Licensed and Insured" sign on a contractor's truck or the health department rating posted in a restaurant window. In a world where online scams are prevalent and consumer skepticism is high, trust badges serve as visual shortcuts that help visitors quickly assess whether a website is safe and reputable.</p>
 <p>The impact of trust badges on conversions is well documented. Studies show that trust badges can increase conversions by up to 42%, with the effect being most pronounced on checkout and payment pages where financial anxiety peaks. For ecommerce sites specifically, the absence of recognizable trust badges is cited as a reason for cart abandonment by 17% of shoppers.</p>
-<p>Trust badges work because they leverage the psychological principle of authority transfer. When a recognized organization, whether it is Norton, McAfee, Visa, or a Better Business Bureau, "vouches" for your website through their badge, their established credibility transfers to your brand. The visitor does not need to evaluate your business from scratch; the badge tells them that a trusted authority has already done so.</p>
+<p>Trust badges work because they leverage the psychológical principle of authority transfer. When a recognized organization, whether it is Norton, McAfee, Visa, or a Better Business Bureau, "vouches" for your website through their badge, their established credibility transfers to your brand. The visitor does not need to evaluate your business from scratch; the badge tells them that a trusted authority has already done so.</p>
 
 <h2>Types of Trust Badges</h2>
 <h3>Security Badges</h3>
@@ -3117,7 +3117,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p><strong>Questions that elicit the Before:</strong> "What was your biggest frustration or challenge before you found our product?" "What other solutions had you tried, and why did they not work?" "What was the tipping point that made you decide to look for something new?"</p>
 <p><strong>Questions that elicit the Turning Point:</strong> "What was your first impression when you started using our product?" "Was there a specific moment when you realized this was different from what you had tried before?" "What surprised you about the experience?"</p>
 <p><strong>Questions that elicit the After:</strong> "What specific results or changes have you experienced since using our product?" "How has your daily routine or business operation changed?" "What would you tell someone who is in the same position you were in before?"</p>
-<p>These questions naturally produce testimonials with narrative structure because they walk the customer through their chronological experience, prompting them to tell their story rather than simply evaluate your product.</p>
+<p>These questions naturally produce testimonials with narrative structure because they walk the customer through their chronológical experience, prompting them to tell their story rather than simply evaluate your product.</p>
 
 <h2>Emotional Resonance: The Secret Ingredient</h2>
 <p>The most memorable and persuasive testimonials are those that connect emotionally. Emotions drive decisions; logic justifies them after the fact. When crafting or curating testimonial stories, look for and highlight the emotional moments.</p>
@@ -3150,7 +3150,7 @@ export const blogArticlesEn: BlogArticle[] = [
   {
     slug: 'testimonios-peluquerias-estetica',
     image: blogImageUrl('testimonios-peluquerias-estetica'),
-    title: 'Testimonials for Hair Salons and Beauty Centers',
+    title: 'Testimonials for Hair Salóns and Beauty Centers',
     excerpt:
       'Learn how hair salons, spas, and beauty businesses can collect and leverage client testimonials to attract new clients and build a loyal following.',
     category: 'Industries',
@@ -3195,7 +3195,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p><strong>Style galleries:</strong> Create galleries on your website organized by service type, hair color, and style length. Each gallery image should be accompanied by the client's testimonial, creating a portfolio-plus-social-proof combination that helps prospects find inspiration and trust simultaneously.</p>
 
 <h2>Displaying Beauty Testimonials</h2>
-<p><strong>Salon website:</strong> Your website should be visually driven, showcasing your work alongside client testimonials. Create a homepage carousel featuring your most striking transformations with client quotes. Build a gallery page organized by service type where visitors can browse your work and read related testimonials.</p>
+<p><strong>Salón website:</strong> Your website should be visually driven, showcasing your work alongside client testimonials. Create a homepage carousel featuring your most striking transformations with client quotes. Build a gallery page organized by service type where visitors can browse your work and read related testimonials.</p>
 <p><strong>Instagram:</strong> Instagram is the most important platform for beauty businesses. Share client transformations, tag clients with permission, use relevant hashtags, and create highlights organized by service type featuring testimonial stories.</p>
 <p><strong>Google Business Profile:</strong> Local search is critical for salons. Actively encourage Google reviews to boost your visibility when people search for "hair salon near me" or "best colorist in [city]."</p>
 <p><strong>Booking page:</strong> Your online booking page should include reassuring testimonials, especially from first-time visitors. "I was so nervous to try a new stylist, but from the consultation to the final reveal, the experience was perfect."</p>
@@ -3404,7 +3404,7 @@ export const blogArticlesEn: BlogArticle[] = [
 
 <h2>Measuring the Impact of NPS-Driven Testimonials</h2>
 <p>To justify the investment in an NPS-to-testimonial pipeline, you need to measure its impact on your business metrics. Track the following key performance indicators: testimonial conversion rate, which is the percentage of Promoters who provide a testimonial when asked; testimonial quality score, based on word count, specificity, and inclusion of quantifiable results; and downstream conversion impact, measured through A/B testing pages with and without NPS-sourced testimonials.</p>
-<p>Most businesses find that NPS-sourced testimonials outperform organically collected testimonials in both quality and conversion impact. This makes sense: customers who have just quantified their loyalty with a nine or ten are primed to articulate their positive experience. The NPS survey itself acts as a warm-up, putting the customer in a reflective and evaluative mindset that produces more thoughtful and detailed testimonials.</p>
+<p>Most businesses find that NPS-sourced testimonials outperform orgánically collected testimonials in both quality and conversion impact. This makes sense: customers who have just quantified their loyalty with a nine or ten are primed to articulate their positive experience. The NPS survey itself acts as a warm-up, putting the customer in a reflective and evaluative mindset that produces more thoughtful and detailed testimonials.</p>
 
 <h2>Advanced NPS-Testimonial Strategies</h2>
 <p>Once your basic NPS-to-testimonial pipeline is running, consider these advanced strategies. First, create a VIP Promoter program for customers who consistently score you nine or ten across multiple surveys. These serial Promoters are your most loyal advocates and are ideal candidates for case studies, video testimonials, and brand ambassador programs.</p>
@@ -3456,7 +3456,7 @@ export const blogArticlesEn: BlogArticle[] = [
 
 <h2>Managing Testimonials Across Multiple Platforms</h2>
 <p>Hotels face a unique challenge: guest reviews and testimonials are scattered across numerous platforms including TripAdvisor, Booking.com, Google, Expedia, and social media. Managing this fragmented landscape requires a centralized approach.</p>
-<p>Use a platform like <strong>Opinafy</strong> to consolidate your best testimonials in one place. While you cannot control what guests write on third-party platforms, you can curate the testimonials displayed on your own website by collecting them directly through your own forms and importing the best reviews from other sources with appropriate attribution.</p>
+<p>Use a platform like <strong>Opinafy</strong> to consólidate your best testimonials in one place. While you cannot control what guests write on third-party platforms, you can curate the testimonials displayed on your own website by collecting them directly through your own forms and importing the best reviews from other sources with appropriate attribution.</p>
 <p>Your website testimonials should complement, not duplicate, what travelers find on review platforms. Focus your website testimonials on the experiential and emotional aspects of staying at your property, the stories, the personal touches, and the memorable moments, while letting review platforms handle the utilitarian ratings and checklists.</p>
 
 <h2>Displaying Testimonials on Your Hotel Website</h2>
@@ -3938,7 +3938,7 @@ export const blogArticlesEn: BlogArticle[] = [
 
 <h2>Content Organization Strategies</h2>
 <p>How you organize your testimonials significantly impacts their collective persuasive power. Several organizational approaches work well, and you can combine them on the same page.</p>
-<p><strong>Chronological organization:</strong> Displaying testimonials in reverse chronological order, with the newest first, signals that your business is actively serving and satisfying customers. This freshness factor is important for visitors who might question whether older testimonials reflect your current product quality.</p>
+<p><strong>Chronológical organization:</strong> Displaying testimonials in reverse chronológical order, with the newest first, signals that your business is actively serving and satisfying customers. This freshness factor is important for visitors who might question whether older testimonials reflect your current product quality.</p>
 <p><strong>Category-based organization:</strong> Grouping testimonials by industry, service type, or use case allows visitors to quickly find the most relevant proof. A restaurant owner can jump straight to hospitality testimonials, while a SaaS founder can filter for technology startups.</p>
 <p><strong>Outcome-based organization:</strong> Organizing testimonials by the type of result achieved, such as increased conversions, saved time, or grew revenue, aligns with the outcomes your prospects are seeking.</p>
 <p><strong>Format-based organization:</strong> Separating text testimonials, video testimonials, and case studies into distinct sections or tabs gives visitors control over how they consume social proof.</p>
@@ -4050,7 +4050,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>Each template is conversational, grateful, explains why the testimonial matters, and includes a direct link. The link should go to an <strong>Opinafy</strong> collection form that is mobile-optimized.</p>
 
 <h2>Turning WhatsApp Screenshots into Testimonials</h2>
-<p>Customers often provide unsolicited praise directly in WhatsApp chat. With the customer's permission, screenshots of these conversations can be used as testimonials. The familiar WhatsApp interface is instantly recognizable and signals that the conversation happened organically, lending exceptional credibility.</p>
+<p>Customers often provide unsolicited praise directly in WhatsApp chat. With the customer's permission, screenshots of these conversations can be used as testimonials. The familiar WhatsApp interface is instantly recognizable and signals that the conversation happened orgánically, lending exceptional credibility.</p>
 <p>Always ask permission before using WhatsApp screenshots as testimonials and offer to anonymize personal information.</p>
 
 <h2>Best Practices for WhatsApp Collection</h2>
@@ -4151,8 +4151,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-antes-despues',
-    image: blogImageUrl('testimonios-antes-despues'),
+    slug: 'testimonios-antes-después',
+    image: blogImageUrl('testimonios-antes-después'),
     title: 'Before-and-After Testimonials: The Most Persuasive Format',
     excerpt: 'Learn why before-and-after testimonials are the most persuasive format and how to collect, structure, and display them for maximum conversion impact.',
     category: 'Copywriting',
@@ -4281,7 +4281,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>The most authentic influencer testimonials come from product seeding: sending your product with no obligation to post or review. When they do share their experience, their audience recognizes the authenticity. Include a personal note explaining why you thought they would appreciate the product.</p>
 
 <h2>Converting Mentions into Testimonials</h2>
-<p>When an influencer organically mentions your product, reach out and ask if you can feature their words on your website. Most will agree, especially with proper attribution and a link to their profile. Use <strong>Opinafy</strong> to manage and display influencer testimonials alongside regular customer testimonials.</p>
+<p>When an influencer orgánically mentions your product, reach out and ask if you can feature their words on your website. Most will agree, especially with proper attribution and a link to their profile. Use <strong>Opinafy</strong> to manage and display influencer testimonials alongside regular customer testimonials.</p>
 
 <h2>Legal and Ethical Considerations</h2>
 <p>Transparency about the brand-influencer relationship is both ethical and legally required. If an influencer received your product for free, disclose this alongside their testimonial. Honest disclosure actually enhances the value of influencer testimonials.</p>
@@ -4403,7 +4403,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>Display these badges on the customer's profile or account dashboard. Some businesses also feature badges alongside the testimonial itself on the public display, adding a layer of social recognition that motivates others to participate.</p>
 
 <h2>Progress Bars and Completion Goals</h2>
-<p>Progress indicators leverage the psychological principle of completion motivation: once someone starts a task, they feel compelled to finish it. Apply this to testimonial collection by showing a progress bar during the testimonial submission process. "You are seventy-five percent done" motivates the customer to complete the remaining steps rather than abandoning the form.</p>
+<p>Progress indicators leverage the psychológical principle of completion motivation: once someone starts a task, they feel compelled to finish it. Apply this to testimonial collection by showing a progress bar during the testimonial submission process. "You are seventy-five percent done" motivates the customer to complete the remaining steps rather than abandoning the form.</p>
 <p>You can also use community-level progress goals: "Help us reach 100 testimonials! We are at 87." This collective goal creates a sense of shared purpose that motivates individual contributions. When the goal is reached, celebrate publicly and thank all contributors.</p>
 
 <h2>Social Recognition and Leaderboards</h2>
@@ -4627,7 +4627,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Why You Should Test Your Testimonials</h2>
 <p>Most businesses display testimonials based on intuition: they pick the ones that "feel" most impactful, place them where they "seem" most appropriate, and choose formats that "look" best. This intuition-based approach leaves significant conversion potential on the table. A/B testing replaces assumptions with data, revealing which testimonials, placements, and formats actually drive the most conversions for your specific audience.</p>
 <p>The difference between an optimized and unoptimized testimonial strategy can be substantial. Businesses that systematically test their testimonial display report conversion improvements of fifteen to forty percent compared to their initial intuition-based approach. Given that testimonials are a zero-cost marketing asset, this improvement represents pure profit increase.</p>
-<p>A/B testing testimonials follows the same principles as any conversion optimization experiment: form a hypothesis, create two variants, split your traffic evenly, measure the results, and implement the winner. The key is knowing what to test, which variables have the most impact, and how to interpret the results correctly.</p>
+<p>A/B testing testimonials follows the same principles as any conversion optimization experiment: form a hypothesis, create two varíants, split your traffic evenly, measure the results, and implement the winner. The key is knowing what to test, which variables have the most impact, and how to interpret the results correctly.</p>
 
 <h2>What to Test: High-Impact Variables</h2>
 <p><strong>Placement:</strong> Where on the page do testimonials appear? Test above versus below the fold, next to the pricing table versus above it, in the sidebar versus the main content area. Placement tests often produce the largest conversion differences because they affect whether visitors even see the testimonials.</p>
@@ -4637,12 +4637,12 @@ export const blogArticlesEn: BlogArticle[] = [
 <p><strong>Social identity:</strong> Do testimonials from similar customers convert better than testimonials from aspirational customers? Test showing testimonials from small businesses versus enterprise companies to see which your audience identifies with more.</p>
 
 <h2>Setting Up Testimonial A/B Tests</h2>
-<p>Use your existing A/B testing platform, whether Google Optimize, Optimizely, VWO, or a custom solution, to create testimonial experiments. Ensure each variant receives sufficient traffic for statistical significance, typically at least one thousand visitors per variant for reliable results.</p>
+<p>Use your existing A/B testing platform, whether Google Optimize, Optimizely, VWO, or a custom solution, to create testimonial experiments. Ensure each varíant receives sufficient traffic for statistical significance, typically at least one thousand visitors per varíant for reliable results.</p>
 <p>Run each test for a minimum of two full business weeks to account for daily and weekly traffic variations. Do not end tests early based on preliminary results, as initial trends often reverse as more data accumulates. Wait until your testing tool reports statistical significance before declaring a winner.</p>
 
 <h2>Common Testing Mistakes</h2>
 <p><strong>Testing too many variables simultaneously:</strong> If you change the testimonial text, the placement, and the format all at once, you cannot determine which change caused the result. Test one variable at a time for clear, actionable insights.</p>
-<p><strong>Insufficient sample size:</strong> Drawing conclusions from a hundred visitors per variant produces unreliable results. Wait for statistical significance before acting on test results.</p>
+<p><strong>Insufficient sample size:</strong> Drawing conclusions from a hundred visitors per varíant produces unreliable results. Wait for statistical significance before acting on test results.</p>
 <p><strong>Ignoring segment differences:</strong> A testimonial strategy that works for mobile visitors might not work for desktop visitors, and vice versa. Segment your results by device, traffic source, and visitor type to uncover hidden patterns.</p>
 
 <h2>Proven Findings from Testimonial Tests</h2>
@@ -4650,7 +4650,7 @@ export const blogArticlesEn: BlogArticle[] = [
 
 <h2>Continuous Optimization</h2>
 <p>Testimonial optimization is not a one-time project. As your audience, product, and competitive landscape evolve, the optimal testimonial strategy evolves too. Build a testing calendar that cycles through different variables throughout the year, continuously refining your approach based on fresh data.</p>
-<p>With <strong>Opinafy</strong>, you can easily create different widget configurations for your A/B test variants, swapping testimonial selections, layouts, and display options without touching your website code. <strong>Try Opinafy free</strong> and start testing your way to higher conversions.</p>
+<p>With <strong>Opinafy</strong>, you can easily create different widget configurations for your A/B test varíants, swapping testimonial selections, layouts, and display options without touching your website code. <strong>Try Opinafy free</strong> and start testing your way to higher conversions.</p>
 `,
   },
   {
@@ -4924,8 +4924,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'personalizacion-widgets-testimonios',
-    image: blogImageUrl('personalizacion-widgets-testimonios'),
+    slug: 'personalización-widgets-testimonios',
+    image: blogImageUrl('personalización-widgets-testimonios'),
     title: 'Guide to Customizing Testimonial Widgets for Your Brand',
     excerpt: 'Learn how to customize testimonial widgets to match your brand identity. Covers colors, fonts, layouts, animations, and advanced CSS customization.',
     category: 'Web Design',
@@ -5095,7 +5095,7 @@ export const blogArticlesEn: BlogArticle[] = [
 
 <h2>Trend 1: AI-Powered Personalization of Social Proof</h2>
 <p>The most impactful near-term trend is the use of artificial intelligence to personalize which testimonials are shown to which visitors. Rather than displaying the same testimonials to every visitor, AI systems will analyze visitor behavior, demographics, and intent signals to select the most relevant testimonials dynamically.</p>
-<p>A visitor arriving from a Google search for "testimonial tool for dentists" will see testimonials from dental practice clients. A visitor who has spent time on your pricing page will see testimonials that address value and ROI. A visitor from a specific geographic region will see testimonials from businesses in that region. This level of personalization increases the conversion impact of testimonials by ensuring maximum relevance for every visitor.</p>
+<p>A visitor arriving from a Google search for "testimonial tool for dentists" will see testimonials from dental practice clients. A visitor who has spent time on your pricing page will see testimonials that address value and ROI. A visitor from a specific geographic región will see testimonials from businesses in that región. This level of personalization increases the conversion impact of testimonials by ensuring maximum relevance for every visitor.</p>
 <p>Preparing for this trend means building a large, well-tagged testimonial collection today. The AI personalization systems of tomorrow need rich data to work with: testimonials tagged by industry, company size, use case, product feature, and sentiment. Start building this tagged library now with a platform like <strong>Opinafy</strong>, and you will be ready to deploy AI personalization when the technology matures.</p>
 
 <h2>Trend 2: Video-First and Short-Form Content</h2>
@@ -5130,7 +5130,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>To prepare for these trends, take these steps today. First, build a large, well-organized testimonial library. The AI and personalization tools of tomorrow need rich data to work with. Second, start collecting video testimonials now, even in small quantities. Building the habit and infrastructure early gives you a head start. Third, implement verification and authentication for all testimonials collected. Fourth, choose a testimonial platform that is actively developing toward these trends rather than one that is stagnant. <strong>Opinafy</strong> is continuously evolving its platform to incorporate emerging testimonial technologies.</p>
 
 <h2>Conclusion: The Future Belongs to Authentic Voices</h2>
-<p>Despite all the technological changes on the horizon, the fundamental truth about testimonials will remain unchanged: authentic customer voices are the most powerful trust-building tool available to any business. The technologies will evolve, the formats will diversify, and the delivery mechanisms will become more sophisticated, but the core value of a real person sharing their genuine experience will only grow as the digital landscape becomes more complex and skepticism-inducing.</p>
+<p>Despite all the technológical changes on the horizon, the fundamental truth about testimonials will remain unchanged: authentic customer voices are the most powerful trust-building tool available to any business. The technologies will evolve, the formats will diversify, and the delivery mechanisms will become more sophisticated, but the core value of a real person sharing their genuine experience will only grow as the digital landscape becomes more complex and skepticism-inducing.</p>
 <p>Invest in building authentic testimonial infrastructure today, and you will be well-positioned to leverage whatever the future brings. <strong>Start free with Opinafy</strong> and build the testimonial foundation that will power your business for years to come.</p>
 `,
   },
@@ -5366,7 +5366,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <p>Define CSS variables for all customizable aspects of the widget: primary and secondary colors, typography, text sizes, borders, shadows, spacing, and border radius. In the widget's internal CSS, use these variables with fallback values that apply when the variable is not externally defined.</p>
 
 <h2>Accessibility: Widgets for Everyone</h2>
-<p>An accessible testimonial widget is not a luxury: it is a legal obligation in many markets and a good practice that benefits all users. Use appropriate ARIA roles: the carousel container should have role region with a descriptive aria-label. Each testimonial card should be keyboard-accessible using Tab to navigate between cards and Enter or Space to interact. If the carousel has autoplay, it must include a button to pause the rotation.</p>
+<p>An accessible testimonial widget is not a luxury: it is a legal obligation in many markets and a good practice that benefits all users. Use appropriate ARIA roles: the carousel container should have role región with a descriptive aria-label. Each testimonial card should be keyboard-accessible using Tab to navigate between cards and Enter or Space to interact. If the carousel has autoplay, it must include a button to pause the rotation.</p>
 
 <h2>SEO: Testimonials That Search Engines Understand</h2>
 <p>Implementing schema.org structured data of type Review is fundamental for search engines to understand that the widget content is testimonials. Inject a script of type application/ld+json with the Review structure including the author's name, numerical rating, testimonial text, and date. These structured data can generate rich snippets in search results, showing stars and review counters that increase click-through rate.</p>
@@ -5474,7 +5474,7 @@ export const blogArticlesEn: BlogArticle[] = [
     content: `
 <h2>Introduction: A Face Is Worth More Than a Thousand Words</h2>
 <p>In the digital world, where distrust is the norm and interactions are impersonal, a human photo has the power to break emotional barriers in an instant. Testimonials that include a real photograph of the customer generate significantly more trust than those with text only, and the data confirms it: according to ConversionXL studies, testimonials with photos increase perceived trust by thirty-five percent compared to text-only testimonials. This increase is not marginal: it is the difference between a visitor who keeps reading and one who converts.</p>
-<p>The psychological reason for this phenomenon is the human presence effect. Our brain is programmed to pay attention to human faces above any other visual stimulus. When we see a photo next to a testimonial, we automatically process that person as real, which transfers authenticity to the testimonial content. A text without a photo could have been invented by anyone; a text with a real photo of a person who dares to put their face next to their words conveys commitment to the veracity of the message.</p>
+<p>The psychológical reason for this phenomenon is the human presence effect. Our brain is programmed to pay attention to human faces above any other visual stimulus. When we see a photo next to a testimonial, we automatically process that person as real, which transfers authenticity to the testimonial content. A text without a photo could have been invented by anyone; a text with a real photo of a person who dares to put their face next to their words conveys commitment to the veracity of the message.</p>
 <p>Beyond psychology, photos in testimonials serve a fundamental practical function: identification. When a visitor sees a photo of someone who looks like them, who is a similar age, works in a similar environment, or has a look they recognize as similar to their own, identification with that testimonial multiplies. The photo converts a generic testimonial into a testimonial from someone like me, and that implicit personalization is enormously persuasive.</p>
 
 <h2>The Measurable Impact of Photos on Testimonials</h2>
@@ -5567,7 +5567,7 @@ export const blogArticlesEn: BlogArticle[] = [
     metaDescription: 'FOMO popups with testimonials can increase conversions by up to 30%. Learn to implement them correctly without annoying your visitors.',
     content: `
 <h2>Introduction: The Power of FOMO in Conversions</h2>
-<p>FOMO, the fear of missing out, is one of the most powerful psychological forces in consumer behavior. When we see other people buying a product, signing up for a service, or sharing positive experiences, we feel an instinctive urgency not to be left behind. Social proof popups leverage this psychology by showing your website visitors that other customers are taking action at that very moment, creating a sense of activity and validation that drives conversions.</p>
+<p>FOMO, the fear of missing out, is one of the most powerful psychológical forces in consumer behavior. When we see other people buying a product, signing up for a service, or sharing positive experiences, we feel an instinctive urgency not to be left behind. Social proof popups leverage this psychology by showing your website visitors that other customers are taking action at that very moment, creating a sense of activity and validation that drives conversions.</p>
 <p>FOMO popups with testimonials go a step further than simple recent purchase notifications. Instead of just showing that someone bought something, they show what customers who already bought think about it. A popup that says Maria from Barcelona left a five-star review ten minutes ago: this product changed my daily routine combines three persuasive elements: social proof of the purchase, social proof of satisfaction, and social proof of recent activity.</p>
 <p>When implemented correctly, FOMO popups with testimonials can increase conversions between fifteen and thirty percent. But the keyword is correctly, because careless implementation can produce the opposite effect: annoying visitors, generating distrust, and damaging the user experience.</p>
 
@@ -5703,8 +5703,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'webhook-testimonios-automatizacion',
-    image: blogImageUrl('webhook-testimonios-automatizacion'),
+    slug: 'webhook-testimonios-automatización',
+    image: blogImageUrl('webhook-testimonios-automatización'),
     title: 'Webhooks for Testimonials: Connect with Zapier, Make, and More',
     excerpt: 'Technical guide on webhooks for testimonials. Learn to connect your testimonial platform with Zapier, Make, and your tech stack for advanced automation.',
     category: 'Technical',
@@ -5732,8 +5732,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'responder-testimonios-publicamente',
-    image: blogImageUrl('responder-testimonios-publicamente'),
+    slug: 'responder-testimonios-públicamente',
+    image: blogImageUrl('responder-testimonios-públicamente'),
     title: 'How to Respond to Testimonials Publicly (and Why You Should)',
     excerpt: 'Responding to your customer testimonials generates more trust and engagement. Learn to respond to positive and negative testimonials professionally.',
     category: 'Strategies',
@@ -5882,8 +5882,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-wordpress-guia-instalacion',
-    image: blogImageUrl('testimonios-wordpress-guia-instalacion'),
+    slug: 'testimonios-wordpress-guia-instalación',
+    image: blogImageUrl('testimonios-wordpress-guia-instalación'),
     title: 'Install Testimonials on WordPress in 3 Minutes',
     excerpt: 'Quick guide to install and display professional testimonials on WordPress. Three methods: external widget, plugin, and custom code.',
     category: 'Technical',
@@ -5976,8 +5976,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'verificacion-empresa-testimonios',
-    image: blogImageUrl('verificacion-empresa-testimonios'),
+    slug: 'verificación-empresa-testimonios',
+    image: blogImageUrl('verificación-empresa-testimonios'),
     title: 'Automatic Company Verification in Testimonials: How It Works',
     excerpt: 'How automatic company verification works in B2B testimonials. Increase credibility with domain verification, LinkedIn, and corporate data.',
     category: 'Technical',
@@ -6177,7 +6177,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -6229,8 +6229,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-tiendas-ecologicas',
-    image: blogImageUrl('testimonios-tiendas-ecologicas'),
+    slug: 'testimonios-tiendas-ecológicas',
+    image: blogImageUrl('testimonios-tiendas-ecológicas'),
     title: "Testimonials for Eco-Friendly Stores: How to Build Green Trust",
     excerpt: "Learn how eco-friendly stores can leverage testimonials to demonstrate their real commitment to sustainability and attract conscious consumers.",
     category: 'Industries',
@@ -6247,7 +6247,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -6317,7 +6317,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -6387,7 +6387,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -6457,7 +6457,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -6527,7 +6527,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -6579,8 +6579,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-centros-formacion-continua',
-    image: blogImageUrl('testimonios-centros-formacion-continua'),
+    slug: 'testimonios-centros-formación-continua',
+    image: blogImageUrl('testimonios-centros-formación-continua'),
     title: "Testimonials for Continuing Education Centers: Convince Professionals Looking to Grow",
     excerpt: "Discover how continuing education centers can use testimonials from professionals who advanced their careers through their courses.",
     category: 'Industries',
@@ -6597,7 +6597,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -6667,7 +6667,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -6737,7 +6737,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -6807,7 +6807,7 @@ export const blogArticlesEn: BlogArticle[] = [
 <h2>Current State of the Sector and the Need for Social Proof</h2>
 <p>This sector has experienced accelerated digital transformation in recent years. Clients no longer settle for recommendations from acquaintances or traditional advertising. They actively search for real opinions from other users before making any hiring or purchasing decision.</p>
 <p>Competition is increasingly intense, and businesses that do not show verified testimonials on their digital platforms lose credibility compared to those that do. A BrightLocal study reveals that consumers read an average of 10 reviews before trusting a local business, demonstrating the critical importance of having a constant flow of updated testimonials.</p>
-<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychological principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
+<p>Testimonials act as a trust multiplier. When a potential client reads that someone with similar needs had a positive experience, the psychológical principle of social proof activates: if others have tried it and are satisfied, I can also trust this service.</p>
 <p>Additionally, industry-specific testimonials have added value that generic reviews do not possess. A testimonial mentioning specific technical aspects, particular service processes, or measurable results generates credibility that no advertising copy can match.</p>
 
 <h2>Most Effective Types of Testimonials for This Sector</h2>
@@ -7162,7 +7162,7 @@ export const blogArticlesEn: BlogArticle[] = [
     slug: 'como-conseguir-testimonios-clientes-dificiles',
     image: blogImageUrl('como-conseguir-testimonios-clientes-dificiles'),
     title: "How to Get Testimonials from Difficult Clients: Proven Techniques",
-    excerpt: "Psychological and practical techniques to convince reluctant clients to leave testimonials, including B2B, premium services, and busy clients.",
+    excerpt: "Psychológical and practical techniques to convince reluctant clients to leave testimonials, including B2B, premium services, and busy clients.",
     category: 'Conversion',
     keywords: ["get testimonials difficult clients","ask clients testimonials","collect reviews reluctant clients","B2B testimonials"],
     date: '2026-02-12',
@@ -7534,8 +7534,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'automatizacion-testimonios-crm-hubspot',
-    image: blogImageUrl('automatizacion-testimonios-crm-hubspot'),
+    slug: 'automatización-testimonios-crm-hubspot',
+    image: blogImageUrl('automatización-testimonios-crm-hubspot'),
     title: "Testimonial Automation with CRM and HubSpot: Complete Guide",
     excerpt: "Discover how to automate testimonial collection, management, and publishing by integrating Opinafy with your CRM, HubSpot, Salesforce, and more.",
     category: 'Strategy',
@@ -8437,12 +8437,12 @@ export const blogArticlesEn: BlogArticle[] = [
     slug: 'testimonios-inbound-marketing',
     image: blogImageUrl('testimonios-inbound-marketing'),
     title: "Testimonials in Inbound Marketing: Attract Clients Without Chasing Them",
-    excerpt: "Learn to integrate testimonials into your inbound marketing strategy to attract clients organically and naturally.",
+    excerpt: "Learn to integrate testimonials into your inbound marketing strategy to attract clients orgánically and naturally.",
     category: 'Marketing',
     keywords: ["inbound marketing testimonials","inbound testimonials","attraction marketing testimonials","inbound testimonial content"],
     date: '2026-02-27',
     readTime: '11 min',
-    metaDescription: "How to integrate testimonials into your inbound marketing strategy to attract clients organically.",
+    metaDescription: "How to integrate testimonials into your inbound marketing strategy to attract clients orgánically.",
     content: `
 <h2>Introduction</h2>
 <p>In the 2027 digital landscape, customer testimonials have established themselves as one of the fundamental pillars of effective digital marketing. It is no longer simply about collecting reviews and displaying them on your website, but about using testimonials strategically to <strong>maximize their impact at every touchpoint with your audience</strong>.</p>
@@ -9259,8 +9259,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-blockchain-verificacion',
-    image: blogImageUrl('testimonios-blockchain-verificacion'),
+    slug: 'testimonios-blockchain-verificación',
+    image: blogImageUrl('testimonios-blockchain-verificación'),
     title: "Blockchain for Verifying Testimonials: Guaranteed Authenticity",
     excerpt: "Explore how blockchain technology can be used to verify testimonial authenticity and eliminate fake reviews.",
     category: 'Trends',
@@ -9484,8 +9484,8 @@ export const blogArticlesEn: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-personalizacion-dinamica',
-    image: blogImageUrl('testimonios-personalizacion-dinamica'),
+    slug: 'testimonios-personalización-dinámica',
+    image: blogImageUrl('testimonios-personalización-dinámica'),
     title: "Dynamic Testimonial Personalization: Show the Perfect Testimonial to Each Visitor",
     excerpt: "Learn to use dynamic personalization to automatically show the most relevant testimonials based on each visitor profile and behavior.",
     category: 'Trends',

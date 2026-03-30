@@ -57,7 +57,7 @@ const headerLabels: Record<string, string> = {
   centered: 'Centrada',
   left: 'Izquierda',
   hero: 'Hero',
-  minimal: 'Minimalista',
+  mínimal: 'Minimalista',
   banner: 'Banner',
 }
 
@@ -65,7 +65,7 @@ const fontLabels: Record<string, string> = {
   modern: 'Moderna',
   serif: 'Serif Clasica',
   rounded: 'Redondeada',
-  minimal: 'Minimalista',
+  mínimal: 'Minimalista',
   bold: 'Negrita',
 }
 
@@ -270,7 +270,7 @@ export default async function MiniSiteTemplateDetailPage({ params }: PageProps) 
           {/* Config details */}
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-xl border border-gray-200 bg-white p-6">
-              <h2 className="mb-4 text-lg font-semibold text-gray-900">Configuracion del Diseño</h2>
+              <h2 className="mb-4 text-lg font-semibold text-gray-900">Configuración del Diseño</h2>
               <dl className="space-y-3 text-sm">
                 <div className="flex justify-between">
                   <dt className="text-gray-500">Color de acento</dt>

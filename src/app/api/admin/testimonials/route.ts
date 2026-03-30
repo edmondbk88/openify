@@ -60,7 +60,7 @@ export async function PATCH(request: NextRequest) {
   }
 
   if (!status || !['pending', 'pending_verification', 'approved', 'rejected'].includes(status)) {
-    return NextResponse.json({ error: 'Estado invalido' }, { status: 400 })
+    return NextResponse.json({ error: 'Estado inválido' }, { status: 400 })
   }
 
   const admin = createAdminClient()

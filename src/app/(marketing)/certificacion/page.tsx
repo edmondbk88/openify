@@ -6,7 +6,7 @@ import { Footer } from '@/components/landing/footer'
 export const metadata: Metadata = {
   title: 'Programa de Certificación Opinafy - Insignias Bronze, Silver, Gold y Platinum | Opinafy',
   description:
-    'Obtén tu insignia de certificación Opinafy. Demuestra la autenticidad de tus testimonios con insignias Bronze, Silver, Gold o Platinum segun el número de opiniones verificadas.',
+    'Obtén tu insignia de certificación Opinafy. Demuestra la autenticidad de tus testimonios con insignias Bronze, Silver, Gold o Platinum según el número de opiniones verificadas.',
   keywords: [
     'certificación testimonios',
     'insignia testimonios verificados',
@@ -74,8 +74,8 @@ const tiers = [
     popular: true,
     benefits: [
       'Insignia Gold para tu web',
-      'Maximo impacto en la decision de compra',
-      'Posicionamiento como lider en satisfaccion',
+      'Máximo impacto en la decisión de compra',
+      'Posicionamiento como lider en satisfacción',
       'Inclusion en el directorio de empresas Gold',
     ],
   },
@@ -97,7 +97,7 @@ const tiers = [
   },
 ]
 
-export default function CertificacionPage() {
+export default function CertificaciónPage() {
   return (
     <>
       <Navbar />
@@ -114,7 +114,7 @@ export default function CertificacionPage() {
 
         {/* How it works */}
         <div className="mt-16">
-          <h2 className="text-center text-2xl font-bold text-gray-900">Como funciona</h2>
+          <h2 className="text-center text-2xl font-bold text-gray-900">Cómo funciona</h2>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             <div className="rounded-lg border border-gray-200 bg-white p-6 text-center">
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-xl font-bold text-indigo-600">

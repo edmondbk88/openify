@@ -80,7 +80,7 @@ describe('MINISITE_CATEGORIES', () => {
     expect(MINISITE_CATEGORIES.length).toBe(9)
     expect(MINISITE_CATEGORIES).toContain('Salud')
     expect(MINISITE_CATEGORIES).toContain('Legal')
-    expect(MINISITE_CATEGORIES).toContain('Tecnologia')
+    expect(MINISITE_CATEGORIES).toContain('Tecnología')
   })
 })
 

@@ -12,10 +12,10 @@ export const helpCategories = [
   { id: 'testimonios', label: 'Testimonios', icon: '💬' },
   { id: 'widget', label: 'Widget', icon: '🧩' },
   { id: 'mini-sitio', label: 'Mini Sitio', icon: '🌐' },
-  { id: 'automatizacion', label: 'Automatización', icon: '⚡' },
+  { id: 'automatización', label: 'Automatización', icon: '⚡' },
   { id: 'analytics', label: 'Analytics', icon: '📊' },
   { id: 'integraciones', label: 'Integraciones', icon: '🔗' },
-  { id: 'facturacion', label: 'Facturación', icon: '💳' },
+  { id: 'facturación', label: 'Facturación', icon: '💳' },
 ]
 
 export const helpGuides: HelpGuide[] = [
@@ -27,15 +27,15 @@ export const helpGuides: HelpGuide[] = [
     description: 'Aprende a crear tu cuenta, configurar tu primer proyecto y recopilar tu primer testimonio.',
     content: `
 <h2 id="crear-cuenta">Crear tu cuenta en Opinafy</h2>
-<p>Comenzar con Opinafy es rápido y gratuito. No necesitas tarjeta de credito para empezar.</p>
+<p>Comenzar con Opinafy es rápido y gratuito. No necesitas tarjeta de crédito para empezar.</p>
 <h3>Paso 1: Registro</h3>
 <ol>
 <li>Ve a <a href="https://opinafy.com/registro">opinafy.com/registro</a> o haz clic en <strong>"Empezar Gratis"</strong> en cualquier página.</li>
 <li>Introduce tu nombre, email y una contrasena segura.</li>
 <li>Haz clic en <strong>"Crear cuenta"</strong>.</li>
-<li>Recibiras un email de verificación. Haz clic en el enlace para activar tu cuenta.</li>
+<li>Recibirás un email de verificación. Haz clic en el enlace para activar tu cuenta.</li>
 </ol>
-<p>Tambien puedes registrarte con Google para un acceso más rápido.</p>
+<p>También puedes registrarte con Google para un acceso más rápido.</p>
 
 <h3>Paso 2: Completa tu perfil</h3>
 <p>Una vez dentro del panel, te recomendamos completar tu perfil:</p>
@@ -52,7 +52,7 @@ export const helpGuides: HelpGuide[] = [
 <ol>
 <li>En el panel de control, haz clic en <strong>"Nuevo Proyecto"</strong>.</li>
 <li>Dale un <strong>nombre</strong> al proyecto (ej: "Mi Tienda Online", "Consultoria SEO").</li>
-<li>Opcionalmente, añade una <strong>descripcion</strong> para recordar para que es.</li>
+<li>Opcionalmente, añade una <strong>descripción</strong> para recordar para qué es.</li>
 <li>Haz clic en <strong>"Crear"</strong>.</li>
 </ol>
 <p>Tu proyecto se creara con un <strong>slug único</strong> (URL amigable) basado en el nombre. Este slug se usa en el enlace de recopilación y en el código del widget.</p>
@@ -60,24 +60,24 @@ export const helpGuides: HelpGuide[] = [
 <h3>Limites por plan</h3>
 <ul>
 <li><strong>Gratis:</strong> 1 proyecto, hasta 10 testimonios</li>
-<li><strong>Starter:</strong> 3 proyectos, hasta 50 testimonios por proyecto</li>
+<li><strong>Mini Sitio:</strong> 1 proyecto, hasta 20 testimonios</li>
 <li><strong>Pro:</strong> 10 proyectos, testimonios ilimitados</li>
 <li><strong>Business:</strong> Proyectos ilimitados, testimonios ilimitados</li>
 </ul>
 
 <h2 id="personalizar-formulario">Personalizar tu formulario de recopilación</h2>
 <p>Cada proyecto tiene un formulario público donde tus clientes pueden dejar sus testimonios.</p>
-<h3>Opciones de personalizacion</h3>
+<h3>Opciones de personalización</h3>
 <ul>
-<li><strong>Titulo personalizado:</strong> Cambia el mensaje de bienvenida del formulario.</li>
-<li><strong>Preguntas guia:</strong> Añade preguntas especificas que ayuden a tus clientes a escribir mejores testimonios (ej: "Que problema te resolvi?", "Recomendarias este servicio?").</li>
-<li><strong>Campos opcionales:</strong> Activa o desactiva campos como empresa, cargo, sitio web, telefono.</li>
+<li><strong>Título personalizado:</strong> Cambia el mensaje de bienvenida del formulario.</li>
+<li><strong>Preguntas guía:</strong> Añade preguntas específicas que ayuden a tus clientes a escribir mejores testimonios (ej: "¿Qué problema te resolví?", "¿Recomendarías este servicio?").</li>
+<li><strong>Campos opcionales:</strong> Activa o desactiva campos como empresa, cargo, sitio web, teléfono.</li>
 <li><strong>Logo y colores:</strong> Tu logo aparece automáticamente en el formulario.</li>
-<li><strong>Multimedia:</strong> Permite que tus clientes suban fotos, graben audio o video (segun tu plan).</li>
+<li><strong>Multimedia:</strong> Permite que tus clientes suban fotos, graben audio o video (según tu plan).</li>
 </ul>
 
 <h2 id="compartir-enlace">Compartir tu enlace de recopilación</h2>
-<p>Una vez creado el proyecto, tendras un enlace único para recopilar testimonios:</p>
+<p>Una vez creado el proyecto, tendrás un enlace único para recopilar testimonios:</p>
 <p><code>https://opinafy.com/p/tu-username/nombre-proyecto</code></p>
 <h3>Formas de compartir</h3>
 <ul>
@@ -92,21 +92,21 @@ export const helpGuides: HelpGuide[] = [
 <h3>Proceso de aprobacion</h3>
 <ol>
 <li>Ve a tu proyecto en el panel de control.</li>
-<li>Veras los testimonios pendientes en la pestana correspondiente.</li>
+<li>Verás los testimonios pendientes en la pestaña correspondiente.</li>
 <li>Lee el testimonio y decide:</li>
 </ol>
 <ul>
-<li><strong>Aprobar:</strong> El testimonio sera visible en tu widget y mini sitio.</li>
-<li><strong>Rechazar:</strong> El testimonio se archiva y no se muestra publicamente.</li>
+<li><strong>Aprobar:</strong> El testimonio será visible en tu widget y mini sitio.</li>
+<li><strong>Rechazar:</strong> El testimonio se archiva y no se muestra públicamente.</li>
 <li><strong>Destacar (pin):</strong> Marca el testimonio como destacado para que aparezca primero.</li>
 </ul>
-<p>Recibes una <strong>notificacion por email</strong> cada vez que llega un nuevo testimonio, para que puedas actuar rápidamente.</p>
+<p>Recibes una <strong>notificación por email</strong> cada vez que llega un nuevo testimonio, para que puedas actuar rápidamente.</p>
 
 <h3>Consejos para empezar</h3>
 <ul>
 <li>Empieza pidiendo testimonios a tus 5-10 mejores clientes. Son los más propensos a responder.</li>
-<li>Personaliza las preguntas guia para obtener testimonios más detallados y utiles.</li>
-<li>Responde publicamente a los testimonios para mostrar que valoras la opinion de tus clientes.</li>
+<li>Personaliza las preguntas guía para obtener testimonios más detallados y útiles.</li>
+<li>Responde públicamente a los testimonios para mostrar que valoras la opinión de tus clientes.</li>
 <li>Instala el widget en tu web lo antes posible: incluso 2-3 testimonios ya generan confianza.</li>
 </ul>
 `,
@@ -118,20 +118,20 @@ export const helpGuides: HelpGuide[] = [
     category: 'testimonios',
     description: 'Todas las formas de recopilar testimonios: formulario, QR, WhatsApp, email, importación y automatización.',
     content: `
-<h2 id="formulario-público">Formulario público de recopilación</h2>
-<p>Cada proyecto en Opinafy tiene un formulario público accesible desde una URL única. Tus clientes pueden acceder sin necesidad de registrarse ni iniciar sesion.</p>
+<h2 id="formulario-publico">Formulario público de recopilación</h2>
+<p>Cada proyecto en Opinafy tiene un formulario público accesible desde una URL única. Tus clientes pueden acceder sin necesidad de registrarse ni iniciar sesión.</p>
 <h3>Que incluye el formulario</h3>
 <ul>
-<li><strong>Estrellas (1-5):</strong> Valoracion rápida y visual.</li>
+<li><strong>Estrellas (1-5):</strong> Valoración rápida y visual.</li>
 <li><strong>Texto del testimonio:</strong> Campo abierto para que tu cliente escriba su experiencia.</li>
 <li><strong>Nombre y apellidos:</strong> Obligatorio para verificar la identidad.</li>
 <li><strong>Email:</strong> Opcional pero recomendado para la verificación.</li>
 <li><strong>Empresa y cargo:</strong> Campos opcionales que dan más credibilidad al testimonio.</li>
 <li><strong>Foto de perfil:</strong> El cliente puede subir su foto.</li>
-<li><strong>Audio/Video:</strong> Segun tu plan, el cliente puede grabar un testimonio en audio o video.</li>
+<li><strong>Audio/Video:</strong> Según tu plan, el cliente puede grabar un testimonio en audio o video.</li>
 </ul>
 
-<h2 id="códigos-qr">Codigos QR</h2>
+<h2 id="codigos-qr">Codigos QR</h2>
 <p>Opinafy genera automáticamente un código QR para cada proyecto. Es perfecto para negocios con presencia fisica.</p>
 <h3>Como usarlo</h3>
 <ol>
@@ -150,9 +150,9 @@ export const helpGuides: HelpGuide[] = [
 
 <h2 id="whatsapp">Compartir por WhatsApp</h2>
 <p>Desde el panel de cada proyecto, puedes compartir el enlace de recopilación directamente por WhatsApp.</p>
-<h3>Como funciona</h3>
+<h3>Cómo funciona</h3>
 <ol>
-<li>Haz clic en el boton <strong>"Compartir por WhatsApp"</strong>.</li>
+<li>Haz clic en el botón <strong>"Compartir por WhatsApp"</strong>.</li>
 <li>Se abrira WhatsApp con un mensaje predefinido que incluye el enlace a tu formulario.</li>
 <li>Selecciona el contacto o grupo al que quieras enviarlo.</li>
 </ol>
@@ -162,11 +162,11 @@ export const helpGuides: HelpGuide[] = [
 <p>Opinafy incluye <strong>6 plantillas de email</strong> profesionales que puedes copiar y personalizar para solicitar testimonios a tus clientes.</p>
 <h3>Plantillas disponibles</h3>
 <ol>
-<li><strong>Despues de una compra:</strong> Ideal para ecommerce. Enviala 3-7 dias despues de la entrega.</li>
-<li><strong>Despues de un servicio:</strong> Para freelancers, consultores y agencias. Enviala al finalizar el proyecto.</li>
+<li><strong>Después de una compra:</strong> Ideal para ecommerce. Enviala 3-7 días después de la entrega.</li>
+<li><strong>Después de un servicio:</strong> Para freelancers, consultores y agencias. Enviala al finalizar el proyecto.</li>
 <li><strong>Seguimiento amable:</strong> Un recordatorio suave para clientes que no respondieron la primera vez.</li>
 <li><strong>Cliente recurrente:</strong> Para clientes fieles que llevan tiempo contigo.</li>
-<li><strong>Despues de una buena interaccion:</strong> Cuando un cliente te da feedback positivo por otro canal.</li>
+<li><strong>Después de una buena interacción:</strong> Cuando un cliente te da feedback positivo por otro canal.</li>
 <li><strong>Incentivo especial:</strong> Ofrece un pequeño descuento o beneficio a cambio del testimonio.</li>
 </ol>
 <p>Cada plantilla incluye el enlace a tu formulario de recopilación y puedes personalizarla con el nombre del cliente y de tu empresa.</p>
@@ -179,11 +179,11 @@ export const helpGuides: HelpGuide[] = [
 <li><strong>Make (Integromat):</strong> Crea flujos de trabajo visuales para automatizar solicitudes.</li>
 <li><strong>n8n:</strong> Para los que prefieren una solución self-hosted.</li>
 </ul>
-<p>Tambien puedes usar la URL del webhook directamente desde tu propio backend para enviar solicitudes programaticas.</p>
+<p>También puedes usar la URL del webhook directamente desde tu propio backend para enviar solicitudes programáticas.</p>
 
 <h2 id="importar">Importar testimonios existentes</h2>
 <p>Si ya tienes testimonios en otras plataformas, puedes importarlos a Opinafy.</p>
-<h3>Fuentes de importacion soportadas</h3>
+<h3>Fuentes de importación soportadas</h3>
 <ul>
 <li><strong>Google Business:</strong> Importa tus reseñas de Google directamente.</li>
 <li><strong>TripAdvisor:</strong> Copia y añade tus mejores reseñas de TripAdvisor.</li>
@@ -201,8 +201,8 @@ export const helpGuides: HelpGuide[] = [
 
 <h3>Mejores practicas para recopilar testimonios</h3>
 <ul>
-<li><strong>Pide en el momento adecuado:</strong> Justo despues de una experiencia positiva, cuando el recuerdo esta fresco.</li>
-<li><strong>Se específico:</strong> Las preguntas guia ayudan a obtener testimonios más detallados y utiles.</li>
+<li><strong>Pide en el momento adecuado:</strong> Justo después de una experiencia positiva, cuando el recuerdo está fresco.</li>
+<li><strong>Se específico:</strong> Las preguntas guía ayudan a obtener testimonios más detallados y útiles.</li>
 <li><strong>Hazlo fácil:</strong> Cuantos menos pasos tenga que dar el cliente, más testimonios recibiras.</li>
 <li><strong>No te desanimes:</strong> La tasa de respuesta tipica es del 10-20%. Cuantos más pidas, más recibiras.</li>
 <li><strong>Ofrece multiples canales:</strong> Algunos clientes prefieren escribir, otros grabar audio o video.</li>
@@ -217,13 +217,13 @@ export const helpGuides: HelpGuide[] = [
     description: 'Aprende a aprobar, rechazar, destacar, responder y verificar testimonios en Opinafy.',
     content: `
 <h2 id="aprobar-rechazar">Aprobar y rechazar testimonios</h2>
-<p>Todos los testimonios pasan por un proceso de moderacion antes de ser visibles publicamente. Esto te da control total sobre lo que se muestra en tu web.</p>
+<p>Todos los testimonios pasan por un proceso de moderación antes de ser visibles públicamente. Esto te da control total sobre lo que se muestra en tu web.</p>
 <h3>Estados de un testimonio</h3>
 <ol>
-<li><strong>Pendiente de verificación (pending_verification):</strong> El testimonio acaba de llegar y está esperando la verificación de email del autor (si esta activada).</li>
+<li><strong>Pendiente de verificación (pending_verification):</strong> El testimonio acaba de llegar y está esperando la verificación de email del autor (si está activada).</li>
 <li><strong>Pendiente (pending):</strong> El email ha sido verificado (o la verificación no estaba activada). El testimonio espera tu aprobacion.</li>
 <li><strong>Aprobado (approved):</strong> Has aprobado el testimonio. Es visible en el widget y en tu mini sitio.</li>
-<li><strong>Rechazado (rejected):</strong> Has rechazado el testimonio. No es visible publicamente pero se guarda en tu panel.</li>
+<li><strong>Rechazado (rejected):</strong> Has rechazado el testimonio. No es visible públicamente pero se guarda en tu panel.</li>
 </ol>
 
 <h3>Como aprobar o rechazar</h3>
@@ -231,7 +231,7 @@ export const helpGuides: HelpGuide[] = [
 <li>Ve a <strong>Proyectos &gt; Tu proyecto &gt; Testimonios</strong>.</li>
 <li>Filtra por estado <strong>"Pendiente"</strong> para ver los que necesitan atencion.</li>
 <li>Para cada testimonio, tienes botones de <strong>Aprobar</strong> y <strong>Rechazar</strong>.</li>
-<li>Tambien puedes aprobar o rechazar en lote seleccionando varios testimonios.</li>
+<li>También puedes aprobar o rechazar en lote seleccionando varios testimonios.</li>
 </ol>
 
 <h2 id="destacar">Destacar testimonios (Pin)</h2>
@@ -243,11 +243,11 @@ export const helpGuides: HelpGuide[] = [
 <li>Puedes destacar tantos como quieras, pero recomendamos 3-5 por proyecto.</li>
 </ul>
 
-<h2 id="responder">Responder publicamente</h2>
-<p>Puedes responder publicamente a cualquier testimonio aprobado. La respuesta aparecera debajo del testimonio en tu widget y mini sitio.</p>
+<h2 id="responder">Responder públicamente</h2>
+<p>Puedes responder públicamente a cualquier testimonio aprobado. La respuesta aparecerá debajo del testimonio en tu widget y mini sitio.</p>
 <h3>Por que responder</h3>
 <ul>
-<li>Muestra que valoras la opinion de tus clientes.</li>
+<li>Muestra que valoras la opinión de tus clientes.</li>
 <li>Humaniza tu marca.</li>
 <li>Permite aclarar o añadir contexto.</li>
 <li>Mejora el engagement y la percepcion de otros visitantes.</li>
@@ -256,12 +256,12 @@ export const helpGuides: HelpGuide[] = [
 <ol>
 <li>Abre el testimonio en tu panel.</li>
 <li>Escribe tu respuesta en el campo <strong>"Respuesta pública"</strong>.</li>
-<li>Haz clic en <strong>"Guardar"</strong>. La respuesta sera visible inmediatamente.</li>
+<li>Haz clic en <strong>"Guardar"</strong>. La respuesta será visible inmediatamente.</li>
 </ol>
 
 <h2 id="verificacion-email">Verificación de email</h2>
 <p>La verificación de email añade una capa de confianza a tus testimonios. Cuando está activada, el autor recibe un email para confirmar que el testimonio es suyo.</p>
-<h3>Como funciona</h3>
+<h3>Cómo funciona</h3>
 <ol>
 <li>El cliente deja un testimonio e introduce su email.</li>
 <li>Recibe un email con un enlace de verificación.</li>
@@ -278,15 +278,15 @@ export const helpGuides: HelpGuide[] = [
 <p>Opinafy analiza automáticamente el sentimiento de cada testimonio usando inteligencia artificial.</p>
 <h3>Categorias de sentimiento</h3>
 <ul>
-<li><strong>Positivo:</strong> El testimonio expresa satisfaccion y recomendacion.</li>
+<li><strong>Positivo:</strong> El testimonio expresa satisfacción y recomendacion.</li>
 <li><strong>Neutral:</strong> El testimonio es equilibrado o factual sin emociones fuertes.</li>
-<li><strong>Negativo:</strong> El testimonio expresa insatisfaccion o quejas.</li>
+<li><strong>Negativo:</strong> El testimonio expresa insatisfacción o quejas.</li>
 </ul>
 <p>El análisis de sentimiento te ayuda a:</p>
 <ul>
 <li>Identificar rápidamente testimonios problematicos.</li>
 <li>Filtrar testimonios por sentimiento.</li>
-<li>Entender la satisfaccion general de tus clientes.</li>
+<li>Entender la satisfacción general de tus clientes.</li>
 <li>Tomar decisiones de aprobacion más informadas.</li>
 </ul>
 
@@ -297,14 +297,14 @@ export const helpGuides: HelpGuide[] = [
 <li><strong>Rellena el formulario</strong> con su valoración, texto, nombre y datos opcionales.</li>
 <li><strong>Si la verificación de email está activada:</strong> recibe un email y confirma. Estado: <code>pending_verification</code> &rarr; <code>pending</code>.</li>
 <li><strong>Si la verificación no está activada:</strong> pasa directamente a <code>pending</code>.</li>
-<li><strong>Tu recibes una notificacion</strong> por email de que ha llegado un nuevo testimonio.</li>
+<li><strong>Tu recibes una notificación</strong> por email de que ha llegado un nuevo testimonio.</li>
 <li><strong>Revisas y apruebas</strong> el testimonio. Estado: <code>pending</code> &rarr; <code>approved</code>.</li>
 <li><strong>El testimonio aparece</strong> automáticamente en tu widget, mini sitio y donde tengas el código instalado.</li>
 </ol>
 
 <h3>Consejos de gestión</h3>
 <ul>
-<li>Revisa los testimonios pendientes al menos una vez al dia.</li>
+<li>Revisa los testimonios pendientes al menos una vez al día.</li>
 <li>Destaca testimonios que incluyan resultados concretos o números.</li>
 <li>Responde siempre a los testimonios negativos de forma profesional.</li>
 <li>Usa los filtros del panel para gestionar eficientemente grandes volumenes.</li>
@@ -332,7 +332,7 @@ export const helpGuides: HelpGuide[] = [
 
 <h2 id="personalizar">Personalizar colores y tipografia</h2>
 <p>Cada plantilla es totalmente personalizable para que se adapte a la identidad visual de tu marca.</p>
-<h3>Opciones de personalizacion</h3>
+<h3>Opciones de personalización</h3>
 <ul>
 <li><strong>Color de fondo:</strong> Del contenedor del widget.</li>
 <li><strong>Color de tarjeta:</strong> De cada tarjeta de testimonio individual.</li>
@@ -347,7 +347,7 @@ export const helpGuides: HelpGuide[] = [
 <h2 id="layouts">Los 7 layouts disponibles</h2>
 <p>Elige el layout que mejor se adapte a tu web y al espacio disponible:</p>
 <h3>1. Carousel</h3>
-<p>Muestra los testimonios en un carrusel horizontal con navegacion por flechas o autoplay. Ideal para secciones estrechas o para mostrar muchos testimonios sin ocupar espacio vertical.</p>
+<p>Muestra los testimonios en un carrusel horizontal con navegación por flechas o autoplay. Ideal para secciones estrechas o para mostrar muchos testimonios sin ocupar espacio vertical.</p>
 <h3>2. Grid</h3>
 <p>Muestra los testimonios en una cuadricula responsive. Se adapta automáticamente al ancho disponible (1, 2 o 3 columnas). Ideal para páginas dedicadas a testimonios.</p>
 <h3>3. Wall (Masonry)</h3>
@@ -357,11 +357,11 @@ export const helpGuides: HelpGuide[] = [
 <h3>5. Badge</h3>
 <p>Un widget compacto tipo badge que muestra la valoración media y el número de testimonios. Perfecto para colocar en headers, junto al logo o en botones de confianza.</p>
 <h3>6. Popup FOMO</h3>
-<p>Muestra testimonios como notificaciones emergentes en la esquina inferior de la pantalla. Aparecen periodicamente para crear urgencia y prueba social. Ideal para ecommerce y landing pages de conversion.</p>
+<p>Muestra testimonios como notificaciones emergentes en la esquina inferior de la pantalla. Aparecen periódicamente para crear urgencia y prueba social. Ideal para ecommerce y landing pages de conversión.</p>
 <h3>7. Marquee</h3>
 <p>Los testimonios se desplazan horizontalmente de forma continua, como un ticker de noticias. Ideal para secciones de logos de clientes o como banner de confianza.</p>
 
-<h2 id="código-embed">Código embed (una sola linea)</h2>
+<h2 id="codigo-embed">Código embed (una sola linea)</h2>
 <p>Instalar el widget en tu web es tan fácil como copiar y pegar una linea de código:</p>
 <pre><code>&lt;div data-opinafy="tu-proyecto-slug" data-template="nombre-plantilla"&gt;&lt;/div&gt;
 &lt;script src="https://opinafy.com/widget.js" async&gt;&lt;/script&gt;</code></pre>
@@ -373,14 +373,14 @@ export const helpGuides: HelpGuide[] = [
 <li><code>data-opinafy="slug"</code> - El slug de tu proyecto (obligatorio).</li>
 <li><code>data-template="nombre"</code> - La plantilla a usar.</li>
 <li><code>data-layout="carousel|grid|wall|single|badge|popup|marquee"</code> - El layout.</li>
-<li><code>data-limit="10"</code> - Número maximo de testimonios a mostrar.</li>
+<li><code>data-limit="10"</code> - Número máximo de testimonios a mostrar.</li>
 <li><code>data-min-rating="4"</code> - Solo testimonios con valoración mínima.</li>
 <li><code>data-tags="vip,premium"</code> - Filtrar por etiquetas.</li>
 <li><code>data-autoplay="true"</code> - Autoplay en carousel/single.</li>
 <li><code>data-speed="5000"</code> - Velocidad de autoplay en milisegundos.</li>
 </ul>
 
-<h2 id="video-display">Modos de visualizacion de video</h2>
+<h2 id="video-display">Modos de visualización de video</h2>
 <p>Si tus testimonios incluyen video, puedes elegir como se muestran:</p>
 <ul>
 <li><strong>Inline:</strong> El video se reproduce dentro de la tarjeta del testimonio.</li>
@@ -414,11 +414,11 @@ export const helpGuides: HelpGuide[] = [
 <li>No todos los testimonios generan el mismo impacto.</li>
 <li>Un testimonio específico sobre resultados convierte más que uno generico.</li>
 <li>Los testimonios con foto suelen tener mayor engagement.</li>
-<li>Identificar los mejores testimonios te permite optimizar tu conversion.</li>
+<li>Identificar los mejores testimonios te permite optimizar tu conversión.</li>
 </ul>
 
-<h2 id="como-funciona">Como funciona</h2>
-<p>El sistema de A/B testing de Opinafy rastrea automáticamente dos metricas clave para cada testimonio:</p>
+<h2 id="como-funciona">Cómo funciona</h2>
+<p>El sistema de A/B testing de Opinafy rastrea automáticamente dos métricas clave para cada testimonio:</p>
 <h3>Metricas rastreadas</h3>
 <ul>
 <li><strong>Impresiones:</strong> Cuantas veces se ha mostrado un testimonio en tu widget.</li>
@@ -437,7 +437,7 @@ export const helpGuides: HelpGuide[] = [
 <ol>
 <li>Ve a <strong>Proyectos &gt; Tu proyecto &gt; Analytics</strong>.</li>
 <li>La URL directa es: <code>/proyectos/tu-slug/analytics</code>.</li>
-<li>Veras una tabla con todos tus testimonios y sus metricas:</li>
+<li>Verás una tabla con todos tus testimonios y sus métricas:</li>
 </ol>
 <ul>
 <li><strong>Impresiones totales:</strong> Número total de veces que se ha mostrado.</li>
@@ -451,11 +451,11 @@ export const helpGuides: HelpGuide[] = [
 <p><code>CTR = (Clics / Impresiones) x 100</code></p>
 <h3>Interpretar el CTR</h3>
 <ul>
-<li><strong>CTR alto (&gt; 5%):</strong> El testimonio genera mucho interes. Consideralo como testimonio destacado.</li>
+<li><strong>CTR alto (&gt; 5%):</strong> El testimonio genera mucho interés. Consideralo como testimonio destacado.</li>
 <li><strong>CTR medio (2-5%):</strong> Rendimiento normal. Buen testimonio de apoyo.</li>
-<li><strong>CTR bajo (&lt; 2%):</strong> El testimonio no genera interes. Considera reemplazarlo o moverlo a una posicion menos visible.</li>
+<li><strong>CTR bajo (&lt; 2%):</strong> El testimonio no genera interés. Considera reemplazarlo o moverlo a una posición menos visible.</li>
 </ul>
-<p>Ten en cuenta que los CTR varian segun el sector, el tipo de widget y la posicion del testimonio en la página.</p>
+<p>Ten en cuenta que los CTR varían según el sector, el tipo de widget y la posición del testimonio en la página.</p>
 
 <h2 id="mejores-practicas">Mejores practicas</h2>
 <h3>1. Espera datos suficientes</h3>
@@ -463,7 +463,7 @@ export const helpGuides: HelpGuide[] = [
 <h3>2. Destaca los ganadores</h3>
 <p>Marca como destacados los testimonios con mayor CTR para que aparezcan primero en tu widget.</p>
 <h3>3. Rota los testimonios</h3>
-<p>Añade nuevos testimonios periodicamente y compara su rendimiento con los existentes. Los testimonios recientes suelen tener mejor engagement.</p>
+<p>Añade nuevos testimonios periódicamente y compara su rendimiento con los existentes. Los testimonios recientes suelen tener mejor engagement.</p>
 <h3>4. Prueba diferentes formatos</h3>
 <p>Compara el rendimiento de testimonios de texto vs. video, cortos vs. largos, con foto vs. sin foto.</p>
 <h3>5. Considera el contexto</h3>
@@ -472,7 +472,7 @@ export const helpGuides: HelpGuide[] = [
 <ul>
 <li>Reemplaza los testimonios con peor CTR.</li>
 <li>Pide más testimonios similares a los que mejor funcionan.</li>
-<li>Ajusta las preguntas guia de tu formulario basandote en los patrones de los testimonios más efectivos.</li>
+<li>Ajusta las preguntas guía de tu formulario basándote en los patrones de los testimonios más efectivos.</li>
 </ul>
 `,
   },
@@ -488,15 +488,15 @@ export const helpGuides: HelpGuide[] = [
 <h3>URL del Mini Sitio</h3>
 <p>Tu mini sitio es accesible desde:</p>
 <p><code>https://opinafy.com/s/tu-username</code></p>
-<p>Puedes compartir esta URL en tu firma de email, redes sociales, tarjetas de visita o donde quieras mostrar tu reputacion.</p>
+<p>Puedes compartir esta URL en tu firma de email, redes sociales, tarjetas de visita o donde quieras mostrar tu reputación.</p>
 
 <h3>Para quien es</h3>
 <ul>
 <li><strong>Freelancers:</strong> Muestra testimonios de tus clientes en una página profesional.</li>
-<li><strong>Pequenas empresas:</strong> Complementa tu web con una página dedicada a la reputacion.</li>
-<li><strong>Consultores:</strong> Comparte tu historial de satisfaccion con potenciales clientes.</li>
+<li><strong>Pequeñas empresas:</strong> Complementa tu web con una página dedicada a la reputación.</li>
+<li><strong>Consultores:</strong> Comparte tu historial de satisfacción con potenciales clientes.</li>
 <li><strong>Agencias:</strong> Muestra el feedback de todos tus proyectos en un solo lugar.</li>
-<li><strong>Profesionales de salud:</strong> Dentistas, medicos, terapeutas... con plantillas especificas.</li>
+<li><strong>Profesionales de salud:</strong> Dentistas, médicos, terapeutas... con plantillas específicas.</li>
 </ul>
 
 <h2 id="configurar-bio">Configurar tu bio y sitio web</h2>
@@ -504,23 +504,23 @@ export const helpGuides: HelpGuide[] = [
 <h3>Campos disponibles</h3>
 <ul>
 <li><strong>Nombre o empresa:</strong> Tu nombre profesional o el de tu empresa.</li>
-<li><strong>Bio:</strong> Una descripcion breve (hasta 300 caracteres) de lo que haces.</li>
+<li><strong>Bio:</strong> Una descripción breve (hasta 300 caracteres) de lo que haces.</li>
 <li><strong>Sitio web:</strong> Enlace a tu web principal.</li>
 <li><strong>Logo/Avatar:</strong> Tu foto profesional o logo de empresa.</li>
 <li><strong>Ubicacion:</strong> Ciudad o pais (opcional).</li>
 </ul>
-<p>Configura estos datos desde <strong>Panel &gt; Configuracion &gt; Perfil</strong>.</p>
+<p>Configura estos datos desde <strong>Panel &gt; Configuración &gt; Perfil</strong>.</p>
 
 <h2 id="elegir-plantilla">Elegir plantilla del Mini Sitio</h2>
-<p>Opinafy ofrece <strong>30 plantillas de Mini Sitio</strong> organizadas por profesion y estilo.</p>
+<p>Opinafy ofrece <strong>30 plantillas de Mini Sitio</strong> organizadas por profesión y estilo.</p>
 <h3>Categorias de plantillas</h3>
 <ul>
 <li><strong>General:</strong> Disenos universales que funcionan para cualquier sector.</li>
 <li><strong>Freelancer:</strong> Enfocadas en servicios profesionales.</li>
 <li><strong>Ecommerce:</strong> Ideales para tiendas online.</li>
-<li><strong>Restauracion:</strong> Para restaurantes, cafeterias, bares.</li>
+<li><strong>Restauración:</strong> Para restaurantes, cafeterias, bares.</li>
 <li><strong>Salud:</strong> Para consultas medicas, dentales, terapeuticas.</li>
-<li><strong>Educacion:</strong> Para academias, profesores, tutores.</li>
+<li><strong>Educación:</strong> Para academias, profesores, tutores.</li>
 <li><strong>Inmobiliaria:</strong> Para agentes y agencias inmobiliarias.</li>
 <li><strong>Legal:</strong> Para abogados y despachos.</li>
 </ul>
@@ -532,15 +532,15 @@ export const helpGuides: HelpGuide[] = [
 <ul>
 <li><strong>Todos los proyectos:</strong> Muestra todos tus testimonios aprobados de todos los proyectos.</li>
 <li><strong>Proyectos seleccionados:</strong> Elige manualmente cuales proyectos incluir.</li>
-<li><strong>Ocultar proyectos:</strong> Excluye proyectos que no quieras mostrar publicamente.</li>
+<li><strong>Ocultar proyectos:</strong> Excluye proyectos que no quieras mostrar públicamente.</li>
 </ul>
 
-<h2 id="testimonios-por-página">Configurar testimonios por página</h2>
+<h2 id="testimonios-por-pagina">Configurar testimonios por página</h2>
 <p>Controla cuantos testimonios se muestran inicialmente y como se cargan mas:</p>
 <ul>
 <li><strong>Testimonios por página:</strong> Elige cuantos testimonios se muestran al cargar (6, 12, 24 o todos).</li>
 <li><strong>Orden:</strong> Los testimonios destacados siempre aparecen primero, seguidos de los más recientes.</li>
-<li><strong>Cargar mas:</strong> Un boton "Ver más testimonios" permite cargar el siguiente lote sin recargar la página.</li>
+<li><strong>Cargar mas:</strong> Un botón "Ver más testimonios" permite cargar el siguiente lote sin recargar la página.</li>
 </ul>
 
 <h2 id="compartir">Compartir tu Mini Sitio</h2>
@@ -558,7 +558,7 @@ export const helpGuides: HelpGuide[] = [
 <ul>
 <li>Incluye datos estructurados (Schema.org) para que Google entienda el contenido.</li>
 <li>Meta tags optimizados con tu nombre, bio y número de testimonios.</li>
-<li>Open Graph para previsualizacion en redes sociales.</li>
+<li>Open Graph para previsualización en redes sociales.</li>
 <li>URL limpia y fácil de recordar.</li>
 </ul>
 `,
@@ -577,21 +577,21 @@ export const helpGuides: HelpGuide[] = [
 <li><strong>Plan Business:</strong> Grabacion de video habilitada.</li>
 <li><strong>Otros planes:</strong> Solo texto, audio y foto.</li>
 </ul>
-<h3>Como funciona la grabacion de video</h3>
+<h3>Cómo funciona la grabacion de video</h3>
 <ol>
 <li>El cliente accede a tu formulario de recopilación.</li>
-<li>Hace clic en el boton <strong>"Grabar video"</strong>.</li>
+<li>Hace clic en el botón <strong>"Grabar video"</strong>.</li>
 <li>El navegador solicita permiso para acceder a la camara y microfono.</li>
-<li>El cliente graba su testimonio (duracion maxima: 2 minutos).</li>
+<li>El cliente graba su testimonio (duracion máxima: 2 minutos).</li>
 <li>Puede previsualizar y re-grabar si no queda satisfecho.</li>
 <li>Al enviar, el video se sube automáticamente.</li>
 </ol>
 <h3>Especificaciones técnicas</h3>
 <ul>
-<li><strong>Formato:</strong> WebM (grabacion) / MP4 (conversion automática).</li>
-<li><strong>Resolucion:</strong> Hasta 720p.</li>
-<li><strong>Duracion maxima:</strong> 2 minutos.</li>
-<li><strong>Tamano maximo:</strong> 50 MB.</li>
+<li><strong>Formato:</strong> WebM (grabacion) / MP4 (conversión automática).</li>
+<li><strong>Resolución:</strong> Hasta 720p.</li>
+<li><strong>Duracion máxima:</strong> 2 minutos.</li>
+<li><strong>Tamaño máximo:</strong> 50 MB.</li>
 <li><strong>Compresion:</strong> Automatica del lado del servidor para optimizar el almacenamiento y la carga.</li>
 </ul>
 
@@ -599,23 +599,23 @@ export const helpGuides: HelpGuide[] = [
 <p>Los testimonios en audio son una alternativa perfecta al video: más personales que el texto, pero sin la barrera de ponerse frente a una camara.</p>
 <h3>Disponibilidad</h3>
 <ul>
-<li><strong>Todos los planes de pago:</strong> Grabacion de audio habilitada (Starter, Pro y Business).</li>
+<li><strong>Todos los planes de pago:</strong> Grabacion de audio habilitada (Mini Sitio, Pro y Business).</li>
 <li><strong>Plan Gratis:</strong> Solo texto y foto.</li>
 </ul>
-<h3>Como funciona la grabacion de audio</h3>
+<h3>Cómo funciona la grabacion de audio</h3>
 <ol>
 <li>El cliente accede a tu formulario de recopilación.</li>
-<li>Hace clic en el boton <strong>"Grabar audio"</strong>.</li>
+<li>Hace clic en el botón <strong>"Grabar audio"</strong>.</li>
 <li>El navegador solicita permiso para acceder al microfono.</li>
-<li>El cliente graba su testimonio (duracion maxima: 3 minutos).</li>
+<li>El cliente graba su testimonio (duracion máxima: 3 minutos).</li>
 <li>Puede previsualizar y re-grabar.</li>
 <li>Al enviar, el audio se sube automáticamente.</li>
 </ol>
 <h3>Especificaciones técnicas</h3>
 <ul>
-<li><strong>Formato:</strong> WebM audio / MP3 (conversion automática).</li>
-<li><strong>Duracion maxima:</strong> 3 minutos.</li>
-<li><strong>Tamano maximo:</strong> 10 MB.</li>
+<li><strong>Formato:</strong> WebM audio / MP3 (conversión automática).</li>
+<li><strong>Duracion máxima:</strong> 3 minutos.</li>
+<li><strong>Tamaño máximo:</strong> 10 MB.</li>
 <li><strong>Calidad:</strong> 128 kbps.</li>
 </ul>
 
@@ -628,25 +628,25 @@ export const helpGuides: HelpGuide[] = [
 <h3>Tipos de fotos</h3>
 <ul>
 <li><strong>Foto de perfil:</strong> Una foto del cliente que aparece como avatar junto a su nombre.</li>
-<li><strong>Foto adjunta:</strong> Una foto relacionada con el testimonio (ej: el producto, el resultado, antes/despues).</li>
+<li><strong>Foto adjunta:</strong> Una foto relacionada con el testimonio (ej: el producto, el resultado, antes/después).</li>
 </ul>
 <h3>Especificaciones técnicas</h3>
 <ul>
 <li><strong>Formatos soportados:</strong> JPG, PNG, WebP, GIF.</li>
-<li><strong>Tamano maximo:</strong> 5 MB por imagen.</li>
-<li><strong>Resolucion:</strong> Se redimensiona automáticamente a un maximo de 1200px de ancho.</li>
+<li><strong>Tamaño máximo:</strong> 5 MB por imagen.</li>
+<li><strong>Resolución:</strong> Se redimensiona automáticamente a un máximo de 1200px de ancho.</li>
 <li><strong>Compresion:</strong> Automatica para optimizar la carga.</li>
 </ul>
 
 <h2 id="compresion">Compresion automática</h2>
 <p>Todos los archivos multimedia subidos a Opinafy se comprimen automáticamente para garantizar tiempos de carga rápidos sin sacrificar calidad perceptible.</p>
-<h3>Como funciona</h3>
+<h3>Cómo funciona</h3>
 <ul>
 <li><strong>Imagenes:</strong> Se redimensionan y comprimen manteniendo una calidad visual excelente.</li>
 <li><strong>Audio:</strong> Se convierte a MP3 a 128 kbps, equilibrio optimo entre calidad y tamaño.</li>
-<li><strong>Video:</strong> Se convierte a MP4 con compresion H.264. La resolucion se ajusta a 720p si el original es mayor.</li>
+<li><strong>Video:</strong> Se convierte a MP4 con compresion H.264. La resolución se ajusta a 720p si el original es mayor.</li>
 </ul>
-<p>La compresion es transparente para el usuario: el archivo original se procesa en segundo plano y el resultado optimizado se sirve a traves de CDN para maxima velocidad.</p>
+<p>La compresion es transparente para el usuario: el archivo original se procesa en segundo plano y el resultado optimizado se sirve a través de CDN para máxima velocidad.</p>
 
 <h3>Consejos para multimedia</h3>
 <ul>
@@ -666,45 +666,45 @@ export const helpGuides: HelpGuide[] = [
     content: `
 <h2 id="wordpress">WordPress</h2>
 <p>Instalar Opinafy en WordPress es rápido y fácil. Tienes varias opciones:</p>
-<h3>Opcion 1: Bloque HTML personalizado</h3>
+<h3>Opción 1: Bloque HTML personalizado</h3>
 <ol>
 <li>Edita la página donde quieres mostrar testimonios.</li>
 <li>Añade un bloque <strong>"HTML personalizado"</strong>.</li>
 <li>Pega el código embed de Opinafy.</li>
 <li>Guarda y pública.</li>
 </ol>
-<h3>Opcion 2: Plugin de header/footer</h3>
+<h3>Opción 2: Plugin de header/footer</h3>
 <ol>
 <li>Instala un plugin como <strong>"WPCode"</strong> o <strong>"Insert Headers and Footers"</strong>.</li>
 <li>Ve a la configuración del plugin.</li>
-<li>Pega el script de Opinafy (<code>&lt;script src="https://opinafy.com/widget.js" async&gt;&lt;/script&gt;</code>) en la seccion Footer.</li>
+<li>Pega el script de Opinafy (<code>&lt;script src="https://opinafy.com/widget.js" async&gt;&lt;/script&gt;</code>) en la sección Footer.</li>
 <li>En la página deseada, añade un bloque HTML con <code>&lt;div data-opinafy="tu-slug"&gt;&lt;/div&gt;</code>.</li>
 </ol>
-<h3>Opcion 3: Shortcode (con plugin)</h3>
+<h3>Opción 3: Shortcode (con plugin)</h3>
 <p>Si usas un plugin de shortcodes, puedes crear uno que inserte el div de Opinafy. Consulta la <a href="https://opinafy.com/guias/wordpress">guia completa de WordPress</a>.</p>
 
 <h2 id="shopify">Shopify</h2>
 <p>Integra testimonios en tu tienda Shopify para aumentar la confianza de tus compradores.</p>
-<h3>Instalacion</h3>
+<h3>Instalación</h3>
 <ol>
 <li>Ve a <strong>Tienda online &gt; Temas &gt; Personalizar</strong>.</li>
-<li>Añade una seccion <strong>"HTML personalizado"</strong> o <strong>"Liquid personalizado"</strong>.</li>
+<li>Añade una sección <strong>"HTML personalizado"</strong> o <strong>"Liquid personalizado"</strong>.</li>
 <li>Pega el código embed de Opinafy.</li>
 <li>Guarda los cambios.</li>
 </ol>
 <h3>Donde colocar testimonios en Shopify</h3>
 <ul>
 <li><strong>Página de inicio:</strong> Debajo del hero o de los productos destacados.</li>
-<li><strong>Paginas de producto:</strong> Justo antes del boton de compra o en una pestana dedicada.</li>
+<li><strong>Páginas de producto:</strong> Justo antes del botón de compra o en una pestaña dedicada.</li>
 <li><strong>Página de checkout:</strong> Para reducir el abandono de carrito.</li>
 </ul>
 
 <h2 id="woocommerce">WooCommerce</h2>
-<p>WooCommerce funciona sobre WordPress, así que puedes usar las mismas opciones de instalacion de WordPress.</p>
-<p>Ademas, puedes colocar testimonios en:</p>
+<p>WooCommerce funciona sobre WordPress, así que puedes usar las mismas opciones de instalación de WordPress.</p>
+<p>Además, puedes colocar testimonios en:</p>
 <ul>
-<li><strong>Paginas de producto:</strong> Usando hooks de WooCommerce.</li>
-<li><strong>Página de agradecimiento:</strong> Despues de una compra completada.</li>
+<li><strong>Páginas de producto:</strong> Usando hooks de WooCommerce.</li>
+<li><strong>Página de agradecimiento:</strong> Después de una compra completada.</li>
 <li><strong>Sidebar:</strong> Como widget de WordPress en la barra lateral.</li>
 </ul>
 
@@ -718,16 +718,16 @@ export const helpGuides: HelpGuide[] = [
 </ol>
 
 <h2 id="webflow">Webflow</h2>
-<h3>Opcion 1: Código personalizado del proyecto</h3>
+<h3>Opción 1: Código personalizado del proyecto</h3>
 <ol>
-<li>Ve a <strong>Configuracion del proyecto &gt; Código personalizado</strong>.</li>
-<li>Pega el script de Opinafy en la seccion <strong>"Footer Code"</strong>.</li>
+<li>Ve a <strong>Configuración del proyecto &gt; Código personalizado</strong>.</li>
+<li>Pega el script de Opinafy en la sección <strong>"Footer Code"</strong>.</li>
 <li>En tu página, añade un elemento <strong>Embed</strong> con el div de Opinafy.</li>
 </ol>
-<h3>Opcion 2: Por página</h3>
+<h3>Opción 2: Por página</h3>
 <ol>
-<li>En la página deseada, ve a <strong>Configuracion de página &gt; Código personalizado</strong>.</li>
-<li>Pega todo el código embed (div + script) en la seccion "Before &lt;/body&gt; tag".</li>
+<li>En la página deseada, ve a <strong>Configuración de página &gt; Código personalizado</strong>.</li>
+<li>Pega todo el código embed (div + script) en la sección "Before &lt;/body&gt; tag".</li>
 </ol>
 <p>Consulta la <a href="https://opinafy.com/guias/webflow">guia completa de Webflow</a>.</p>
 
@@ -744,10 +744,10 @@ export const helpGuides: HelpGuide[] = [
 <li>Pega el código embed de Opinafy.</li>
 <li>Guarda y pública.</li>
 </ol>
-<p>Consulta las guias completas: <a href="https://opinafy.com/guias/wix">Wix</a> | <a href="https://opinafy.com/guias/squarespace">Squarespace</a>.</p>
+<p>Consulta las guías completas: <a href="https://opinafy.com/guias/wix">Wix</a> | <a href="https://opinafy.com/guias/squarespace">Squarespace</a>.</p>
 
 <h2 id="gtm">Google Tag Manager</h2>
-<p>Si ya usas GTM para gestionar los scripts de tu sitio, puedes instalar Opinafy a traves de el.</p>
+<p>Si ya usas GTM para gestionar los scripts de tu sitio, puedes instalar Opinafy a través de el.</p>
 <ol>
 <li>En GTM, crea una nueva etiqueta de tipo <strong>"HTML personalizado"</strong>.</li>
 <li>Pega el script de Opinafy.</li>
@@ -769,16 +769,16 @@ export const helpGuides: HelpGuide[] = [
 <li>Enviar un mensaje de agradecimiento por email cuando se aprueba un testimonio.</li>
 <li>Publicar automáticamente en redes sociales cuando llega un testimonio de 5 estrellas.</li>
 <li>Notificar en Slack cuando llega un testimonio negativo.</li>
-<li>Solicitar testimonio automáticamente 7 dias despues de una compra en Shopify.</li>
+<li>Solicitar testimonio automáticamente 7 días después de una compra en Shopify.</li>
 </ul>
 `,
   },
   {
-    slug: 'facturacion-planes',
+    slug: 'facturación-planes',
     slugEn: 'billing-plans',
-    title: 'Facturacion y planes',
-    category: 'facturacion',
-    description: 'Informacion sobre los 4 planes de Opinafy, como mejorar, cancelar y la garantia de 14 dias.',
+    title: 'Facturación y planes',
+    category: 'facturación',
+    description: 'Información sobre los 4 planes de Opinafy, como mejorar, cancelar y la garantia de 14 dias.',
     content: `
 <h2 id="planes">Los 4 planes de Opinafy</h2>
 <p>Opinafy ofrece 4 planes adaptados a cada etapa de crecimiento de tu negocio:</p>
@@ -794,7 +794,7 @@ export const helpGuides: HelpGuide[] = [
 <li>Sin marca de agua de Opinafy: NO (aparece "Powered by Opinafy")</li>
 </ul>
 
-<h3>Plan Starter (5 EUR/mes)</h3>
+<h3>Plan Mini Sitio (5 EUR/mes)</h3>
 <ul>
 <li>3 proyectos</li>
 <li>50 testimonios por proyecto</li>
@@ -815,7 +815,7 @@ export const helpGuides: HelpGuide[] = [
 <li>A/B testing de testimonios</li>
 <li>Analytics avanzados</li>
 <li>Respuesta pública a testimonios</li>
-<li>Importacion de testimonios</li>
+<li>Importación de testimonios</li>
 <li>Smart tags</li>
 <li>Mini Sitio con todas las plantillas</li>
 <li>Webhooks</li>
@@ -831,7 +831,7 @@ export const helpGuides: HelpGuide[] = [
 <li>3 asientos de equipo</li>
 <li>API completa</li>
 <li>CSS personalizado para widgets</li>
-<li>Certificacion verificada</li>
+<li>Certificación verificada</li>
 <li>Social Post Generator</li>
 <li>PDF Export</li>
 <li>Soporte premium</li>
@@ -839,23 +839,23 @@ export const helpGuides: HelpGuide[] = [
 
 <h2 id="mejorar-plan">Como mejorar tu plan</h2>
 <ol>
-<li>Ve a <strong>Panel &gt; Configuracion &gt; Facturacion</strong>.</li>
+<li>Ve a <strong>Panel &gt; Configuración &gt; Facturación</strong>.</li>
 <li>Haz clic en <strong>"Cambiar plan"</strong>.</li>
 <li>Selecciona el plan al que quieres mejorar.</li>
-<li>Introduce tus datos de pago (tarjeta de credito o debito).</li>
+<li>Introduce tus datos de pago (tarjeta de crédito o débito).</li>
 <li>Confirma el cambio. El nuevo plan se activa inmediatamente.</li>
 </ol>
 <p>Opinafy usa <strong>Stripe</strong> para procesar los pagos de forma segura. No almacenamos datos de tarjetas en nuestros servidores.</p>
 <h3>Pago proporcional</h3>
 <p>Si mejoras a mitad de ciclo, solo pagas la diferencia proporcional. No pierdes el dinero del plan anterior.</p>
 
-<h2 id="cancelar">Como cancelar tu suscripcion</h2>
+<h2 id="cancelar">Como cancelar tu suscripción</h2>
 <ol>
-<li>Ve a <strong>Panel &gt; Configuracion &gt; Facturacion</strong>.</li>
-<li>Haz clic en <strong>"Cancelar suscripcion"</strong>.</li>
+<li>Ve a <strong>Panel &gt; Configuración &gt; Facturación</strong>.</li>
+<li>Haz clic en <strong>"Cancelar suscripción"</strong>.</li>
 <li>Confirma la cancelacion.</li>
 <li>Tu plan de pago seguira activo hasta el final del período de facturación actual.</li>
-<li>Despues, tu cuenta se degradara automáticamente al plan Gratis.</li>
+<li>Después, tu cuenta se degradará automáticamente al plan Gratis.</li>
 </ol>
 <p>No hay penalizaciones por cancelar. Puedes volver a suscribirte en cualquier momento.</p>
 
@@ -864,7 +864,7 @@ export const helpGuides: HelpGuide[] = [
 <ul>
 <li>Si no estas satisfecho con Opinafy, contactanos dentro de los primeros 14 dias.</li>
 <li>Te devolvemos el 100% del importe sin preguntas.</li>
-<li>La garantia aplica al primer pago de cada suscripcion.</li>
+<li>La garantia aplica al primer pago de cada suscripción.</li>
 </ul>
 <p>Para solicitar la devolucion, envia un email a <a href="mailto:hola@opinafy.com">hola@opinafy.com</a> con tu email de registro.</p>
 
@@ -892,22 +892,22 @@ export const helpGuides: HelpGuide[] = [
 <ul>
 <li>Tu mini sitio sigue activo, pero usa la plantilla por defecto del plan Gratis.</li>
 </ul>
-<p>En resumen: <strong>nunca pierdes datos</strong>. Solo se limitan las funcionalidades disponibles segun tu plan actual.</p>
+<p>En resumen: <strong>nunca pierdes datos</strong>. Solo se limitan las funcionalidades disponibles según tu plan actual.</p>
 `,
   },
   {
     slug: 'herramientas-avanzadas',
     slugEn: 'advanced-tools',
     title: 'Herramientas avanzadas',
-    category: 'automatizacion',
-    description: 'Health Score, Certificacion, Social Post Generator, PDF Export, Ranking y más.',
+    category: 'automatización',
+    description: 'Health Score, Certificación, Social Post Generator, PDF Export, Ranking y más.',
     content: `
 <h2 id="health-score">Health Score</h2>
 <p>El Health Score es una herramienta gratuita que analiza cualquier sitio web y evalua su estrategia de prueba social.</p>
 <h3>Que analiza</h3>
 <ul>
 <li><strong>Testimonios visibles:</strong> Tiene testimonios de clientes en la web?</li>
-<li><strong>Logos de clientes:</strong> Muestra logos de empresas que confian en el?</li>
+<li><strong>Logos de clientes:</strong> Muestra logos de empresas que confían en el?</li>
 <li><strong>Casos de éxito:</strong> Tiene páginas de casos de éxito o estudios?</li>
 <li><strong>Valoraciones:</strong> Muestra estrellas o puntuaciones?</li>
 <li><strong>Badges de confianza:</strong> Tiene sellos de seguridad, certificaciones, etc.?</li>
@@ -917,7 +917,7 @@ export const helpGuides: HelpGuide[] = [
 <ol>
 <li>Ve a <a href="https://opinafy.com/health-score">opinafy.com/health-score</a>.</li>
 <li>Introduce la URL del sitio web que quieras analizar.</li>
-<li>Recibiras una puntuación de 0 a 100 con recomendaciones especificas.</li>
+<li>Recibirás una puntuación de 0 a 100 con recomendaciones específicas.</li>
 </ol>
 <p>Es una herramienta gratuita y no requiere registro. Ideal para analizar tu propia web o la de tu competencia.</p>
 
@@ -934,13 +934,13 @@ export const helpGuides: HelpGuide[] = [
 <ul>
 <li><strong>Badge embebible:</strong> Puedes incrustar tu badge de certificación en tu web con un código simple.</li>
 <li><strong>Visibilidad en el ranking:</strong> Apareces en el ranking público de Opinafy.</li>
-<li><strong>Credibilidad:</strong> Los clientes ven que tu reputacion esta verificada por un tercero.</li>
+<li><strong>Credibilidad:</strong> Los clientes ven que tu reputación está verificada por un tercero.</li>
 </ul>
 <p>Comprueba tu certificación en <a href="https://opinafy.com/certificacion">opinafy.com/certificacion</a>.</p>
 
 <h2 id="social-post">Social Post Generator</h2>
 <p>Convierte tus mejores testimonios en imagenes profesionales para redes sociales.</p>
-<h3>Como funciona</h3>
+<h3>Cómo funciona</h3>
 <ol>
 <li>Ve a un testimonio aprobado en tu panel.</li>
 <li>Haz clic en <strong>"Crear post social"</strong>.</li>
@@ -952,7 +952,7 @@ export const helpGuides: HelpGuide[] = [
 
 <h2 id="pdf-export">PDF Export</h2>
 <p>Exporta tus testimonios en formato PDF profesional para usar en propuestas, presentaciones o materiales impresos.</p>
-<h3>Opciones de exportacion</h3>
+<h3>Opciones de exportación</h3>
 <ul>
 <li><strong>Todos los testimonios:</strong> Exporta un PDF con todos los testimonios aprobados de un proyecto.</li>
 <li><strong>Seleccionados:</strong> Elige los testimonios específicos que quieres incluir.</li>
@@ -961,8 +961,8 @@ export const helpGuides: HelpGuide[] = [
 <p>Disponible en los planes <strong>Business</strong>.</p>
 
 <h2 id="ranking">Ranking público</h2>
-<p>El ranking de Opinafy es una clasificacion pública de los negocios con mejor reputacion verificada.</p>
-<h3>Como funciona</h3>
+<p>El ranking de Opinafy es una clasificación pública de los negocios con mejor reputación verificada.</p>
+<h3>Cómo funciona</h3>
 <ul>
 <li>Se calcula automáticamente basandose en: número de testimonios, media de estrellas, verificaciones y actividad reciente.</li>
 <li>Solo incluye negocios con al menos 5 testimonios aprobados.</li>
@@ -977,9 +977,9 @@ export const helpGuides: HelpGuide[] = [
 <li><strong>Testimonio verificado:</strong> Cuando un testimonio completa la verificación de email.</li>
 <li><strong>Resumen semanal:</strong> Un resumen de la actividad de la semana (testimonios recibidos, aprobados, etc.).</li>
 </ul>
-<p>Puedes configurar que notificaciones recibir desde <strong>Panel &gt; Configuracion &gt; Notificaciones</strong>.</p>
+<p>Puedes configurar que notificaciones recibir desde <strong>Panel &gt; Configuración &gt; Notificaciones</strong>.</p>
 
-<h2 id="badge-verificacion">Badge de verificación embebible</h2>
+<h2 id="badge-verificación">Badge de verificación embebible</h2>
 <p>Muestra tu certificación de Opinafy directamente en tu web con un badge embebible.</p>
 <h3>Como instalarlo</h3>
 <ol>
@@ -995,7 +995,7 @@ export const helpGuides: HelpGuide[] = [
 <li>El número de testimonios verificados.</li>
 <li>Un enlace a tu mini sitio para que los visitantes vean los testimonios completos.</li>
 </ul>
-<p>El badge se actualiza automáticamente cuando cambian tus metricas.</p>
+<p>El badge se actualiza automáticamente cuando cambian tus métricas.</p>
 `,
   },
 ]

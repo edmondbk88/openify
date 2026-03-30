@@ -58,7 +58,7 @@ export function webSiteSchema(opts?: { lang?: string }) {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://opinafy.com/#website',
+    '@id': lang === 'en' ? 'https://opinafy.com/en#website' : 'https://opinafy.com/#website',
     name: 'Opinafy',
     url: 'https://opinafy.com',
     inLanguage: lang,
@@ -360,6 +360,7 @@ export function articleSchema(opts: {
       '@type': 'Person',
       name: 'Edmond Bojalil',
       url: 'https://www.linkedin.com/in/edmondbojalil/',
+      image: 'https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/edmond-bojalil.jpg',
     },
     publisher: {
       '@type': 'Organization',

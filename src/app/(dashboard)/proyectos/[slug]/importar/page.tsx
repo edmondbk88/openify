@@ -126,7 +126,7 @@ export default function ImportarPage() {
           }))
 
         if (parsed.length === 0) {
-          setError('No se encontraron testimonios validos en el CSV. Asegurate de tener columnas author_name y content.')
+          setError('No se encontraron testimonios válidos en el CSV. Asegurate de tener columnas author_name y content.')
           return
         }
 

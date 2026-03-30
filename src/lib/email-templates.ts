@@ -160,7 +160,7 @@ export function testimonialVerificationEmail(projectName: string, verificationUr
         Hola${authorName ? ` ${escapeHtml(authorName)}` : ''},
       </p>
       <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
-        Gracias por dejar tu testimonio para <strong>${escapeHtml(projectName)}</strong>. Para completar el proceso, por favor verifica tu email haciendo clic en el siguiente boton:
+        Gracias por dejar tu testimonio para <strong>${escapeHtml(projectName)}</strong>. Para completar el proceso, por favor verifica tu email haciendo clic en el siguiente botón:
       </p>
       <p style="margin:24px 0 0;color:#9ca3af;font-size:13px;line-height:1.5;">
         Si no has dejado ningun testimonio, puedes ignorar este email.
@@ -179,7 +179,7 @@ export function testimonialApprovedEmail(projectName: string, authorName: string
         Hola ${escapeHtml(authorName)},
       </p>
       <p style="margin:0 0 12px;color:#4b5563;font-size:15px;line-height:1.7;">
-        Tu testimonio para <strong>${escapeHtml(projectName)}</strong> ha sido aprobado y ya es visible publicamente. Gracias por compartir tu experiencia.
+        Tu testimonio para <strong>${escapeHtml(projectName)}</strong> ha sido aprobado y ya es visible públicamente. Gracias por compartir tu experiencia.
       </p>
     `,
   })

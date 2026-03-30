@@ -72,7 +72,7 @@ export default function CookiesPage() {
                 <tbody>
                   <tr className="border-b border-gray-100">
                     <td className="py-2 pr-4">sb-access-token</td>
-                    <td className="py-2 pr-4">Token de autenticación de sesión (Supabase Auth)</td>
+                    <td className="py-2 pr-4">Token de auténticación de sesión (Supabase Auth)</td>
                     <td className="py-2">Sesión / 1 hora</td>
                   </tr>
                   <tr className="border-b border-gray-100">
@@ -166,7 +166,7 @@ export default function CookiesPage() {
             </p>
             <ul className="ml-6 list-disc space-y-3 text-gray-600">
               <li>
-                <strong>Supabase:</strong> cookies necesarias para la autenticación y gestión de
+                <strong>Supabase:</strong> cookies necesarias para la auténticación y gestión de
                 sesiones de usuario. Más información en{' '}
                 <a
                   href="https://supabase.com/privacy"

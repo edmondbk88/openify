@@ -27,7 +27,7 @@ interface AutomationContact {
   created_at: string
 }
 
-export default function AutomatizacionPage() {
+export default function AutomatizaciónPage() {
   const params = useParams()
   const slug = params.slug as string
   const fileInputRef = useRef<HTMLInputElement>(null)
@@ -42,9 +42,9 @@ export default function AutomatizacionPage() {
   const [ruleId, setRuleId] = useState<string | null>(null)
   const [isActive, setIsActive] = useState(true)
   const [delayDays, setDelayDays] = useState(7)
-  const [emailSubject, setEmailSubject] = useState('Nos encantaria conocer tu opinion')
+  const [emailSubject, setEmailSubject] = useState('Nos encantaría conocer tu opinión')
   const [emailBody, setEmailBody] = useState(
-    'Hola, nos encantaria que nos dejaras tu testimonio sobre tu experiencia con nosotros.'
+    'Hola, nos encantaría que nos dejaras tu testimonio sobre tu experiencia con nosotros.'
   )
 
   // Contacts
@@ -126,7 +126,7 @@ export default function AutomatizacionPage() {
       if (res.ok) {
         const data = await res.json()
         if (data.rule?.id) setRuleId(data.rule.id)
-        setMessage({ type: 'success', text: 'Configuracion de automatizacion guardada.' })
+        setMessage({ type: 'success', text: 'Configuración de automatización guardada.' })
       } else {
         const data = await res.json().catch(() => null)
         setMessage({ type: 'error', text: data?.error || 'Error al guardar.' })
@@ -238,7 +238,7 @@ export default function AutomatizacionPage() {
       }
 
       if (csvContacts.length === 0) {
-        setMessage({ type: 'error', text: 'No se encontraron contactos validos en el archivo CSV.' })
+        setMessage({ type: 'error', text: 'No se encontraron contactos válidos en el archivo CSV.' })
         return
       }
 
@@ -275,7 +275,7 @@ export default function AutomatizacionPage() {
   const pendingCount = contacts.filter((c) => c.status === 'pending').length
   const failedCount = contacts.filter((c) => c.status === 'failed').length
   const totalCount = contacts.length
-  const conversionRate = totalCount > 0 ? Math.round((sentCount / totalCount) * 100) : 0
+  const conversiónRate = totalCount > 0 ? Math.round((sentCount / totalCount) * 100) : 0
 
   if (loading) {
     return (
@@ -300,18 +300,18 @@ export default function AutomatizacionPage() {
         </Link>
       </div>
 
-      <h1 className="text-2xl font-bold text-gray-900">Automatizacion de solicitudes</h1>
+      <h1 className="text-2xl font-bold text-gray-900">Automatización de solicitudes</h1>
       <p className="mt-2 text-sm text-gray-600">
-        Configura el envio automático de emails para solicitar testimonios a tus clientes.
+        Configura el envío automático de emails para solicitar testimonios a tus clientes.
       </p>
 
       <div className="mt-8 max-w-3xl space-y-8">
         {/* Toggle active */}
         <div className="flex items-center justify-between rounded-lg border border-gray-200 bg-white p-4">
           <div>
-            <h3 className="text-sm font-semibold text-gray-900">Automatizacion activa</h3>
+            <h3 className="text-sm font-semibold text-gray-900">Automatización activa</h3>
             <p className="text-xs text-gray-500 mt-1">
-              Cuando esta activa, los contactos programados recibiran el email automáticamente.
+              Cuando está activa, los contactos programados recibirán el email automáticamente.
             </p>
           </div>
           <button
@@ -331,7 +331,7 @@ export default function AutomatizacionPage() {
         {/* Delay days */}
         <div>
           <label htmlFor="delay_days" className="block text-sm font-medium text-gray-700">
-            Dias de espera antes del envio
+            Días de espera antes del envío
           </label>
           <select
             id="delay_days"
@@ -346,7 +346,7 @@ export default function AutomatizacionPage() {
             ))}
           </select>
           <p className="mt-1 text-xs text-gray-500">
-            El email se enviara {delayDays} {delayDays === 1 ? 'dia' : 'dias'} despues de agregar al contacto.
+            El email se enviará {delayDays} {delayDays === 1 ? 'dia' : 'dias'} después de agregar al contacto.
           </p>
         </div>
 
@@ -377,14 +377,14 @@ export default function AutomatizacionPage() {
             className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
           />
           <p className="mt-1 text-xs text-gray-500">
-            El enlace de recopilacion se incluira automáticamente al final del email.
+            El enlace de recopilación se incluirá automáticamente al final del email.
           </p>
         </div>
 
         {/* Collection URL info */}
         {collectionUrl && (
           <div className="rounded-lg border border-blue-200 bg-blue-50 p-3 text-sm text-blue-700">
-            <span className="font-medium">URL de recopilacion:</span>{' '}
+            <span className="font-medium">URL de recopilación:</span>{' '}
             <code className="text-xs bg-blue-100 px-1 py-0.5 rounded">{collectionUrl}</code>
           </div>
         )}
@@ -417,7 +417,7 @@ export default function AutomatizacionPage() {
                 </div>
               )}
               <p className="mt-4 text-xs text-gray-400">
-                Enviado a traves de Opinafy
+                Enviado a través de Opinafy
               </p>
             </div>
           )}
@@ -441,7 +441,7 @@ export default function AutomatizacionPage() {
           disabled={saving}
           className="inline-flex items-center rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-700 disabled:opacity-50"
         >
-          {saving ? 'Guardando...' : 'Guardar configuracion'}
+          {saving ? 'Guardando...' : 'Guardar configuración'}
         </button>
 
         {/* ── Contacts Section ── */}
@@ -466,8 +466,8 @@ export default function AutomatizacionPage() {
               <p className="text-xs text-green-600">Enviados</p>
             </div>
             <div className="rounded-lg border border-indigo-200 bg-indigo-50 px-4 py-3 text-center">
-              <p className="text-xl font-bold text-indigo-700">{conversionRate}%</p>
-              <p className="text-xs text-indigo-600">Tasa de envio</p>
+              <p className="text-xl font-bold text-indigo-700">{conversiónRate}%</p>
+              <p className="text-xs text-indigo-600">Tasa de envío</p>
             </div>
           </div>
 
@@ -503,7 +503,7 @@ export default function AutomatizacionPage() {
           <div className="mt-4 rounded-lg border border-gray-200 bg-white p-4">
             <h3 className="text-sm font-semibold text-gray-900 mb-2">Importar desde CSV</h3>
             <p className="text-xs text-gray-500 mb-3">
-              Formato: nombre, email (una fila por contacto). Tambien acepta solo emails.
+              Formato: nombre, email (una fila por contacto). También acepta solo emails.
             </p>
             <input
               ref={fileInputRef}
@@ -586,7 +586,7 @@ export default function AutomatizacionPage() {
 
               {failedCount > 0 && (
                 <p className="mt-2 text-xs text-red-500">
-                  {failedCount} {failedCount === 1 ? 'envio fallido' : 'envios fallidos'}
+                  {failedCount} {failedCount === 1 ? 'envío fallido' : 'envíos fallidos'}
                 </p>
               )}
             </div>

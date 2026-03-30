@@ -89,7 +89,7 @@ export async function POST(request: NextRequest) {
       'line_items[0][price]': priceId,
       'line_items[0][quantity]': '1',
       success_url: `${baseUrl}/dashboard?checkout=success`,
-      cancel_url: `${baseUrl}/facturacion?checkout=cancelled`,
+      cancel_url: `${baseUrl}/facturación?checkout=cancelled`,
       'metadata[supabase_user_id]': user.id,
     })
 

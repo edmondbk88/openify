@@ -78,7 +78,7 @@ const coreFeatures = [
     ),
     title: '100+ plantillas personalizables',
     description:
-      'Elige entre más de 65 plantillas diseñadas profesionalmente para widgets y mini sitios. Personaliza colores, fuentes (8 Google Fonts), bordes, sombras y más para que coincidan con tu marca.',
+      'Elige entre 100+ plantillas diseñadas profesionalmente para widgets y mini sitios. Personaliza colores, fuentes (8 Google Fonts), bordes, sombras y más para que coincidan con tu marca.',
   },
   {
     icon: (

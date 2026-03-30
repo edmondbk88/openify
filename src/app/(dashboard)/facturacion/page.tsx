@@ -85,7 +85,7 @@ async function getSubscriptionDetails(subscriptionId: string) {
   }
 }
 
-export default async function FacturacionPage({
+export default async function FacturaciónPage({
   searchParams,
 }: {
   searchParams: Promise<{ error?: string; checkout?: string }>

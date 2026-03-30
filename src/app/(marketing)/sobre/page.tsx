@@ -162,7 +162,7 @@ export default function SobrePage() {
             <p>
               Nuestra misión es democratizar el acceso a la prueba social profesional para
               cualquier negocio hispanohablante, ya sea un freelancer que empieza, una pyme
-              consolidada o una empresa con equipos distribuidos. Queremos que gestionar
+              consólidada o una empresa con equipos distribuidos. Queremos que gestionar
               testimonios sea tan sencillo como enviar un mensaje y tan potente como una
               campaña de publicidad.
             </p>

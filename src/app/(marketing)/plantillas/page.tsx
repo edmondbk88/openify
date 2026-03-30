@@ -7,7 +7,7 @@ import { collectionPageSchema, breadcrumbSchema } from '@/lib/schema'
 export const metadata: Metadata = {
   title: 'Plantillas de Testimonios | 100 Diseños Listos para Usar - Opinafy',
   description:
-    'Explora 100 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y más. Personaliza tus testimonios con Opinafy.',
+    'Explora 100 plantillas de widgets de testimonios listas para usar. Estilos mínimalistas, corporativos, coloridos, oscuros y más. Personaliza tus testimonios con Opinafy.',
   keywords: [
     'plantillas testimonios',
     'templates widget testimonios',
@@ -58,7 +58,7 @@ export default function PlantillasPage() {
     name: '100 Plantillas de Testimonios - Opinafy',
     url: 'https://opinafy.com/plantillas',
     description:
-      'Explora 100 plantillas de widgets de testimonios listas para usar. Estilos minimalistas, corporativos, coloridos, oscuros y más.',
+      'Explora 100 plantillas de widgets de testimonios listas para usar. Estilos mínimalistas, corporativos, coloridos, oscuros y más.',
   })
 
   const breadcrumbJsonLd = breadcrumbSchema([
@@ -98,7 +98,7 @@ export default function PlantillasPage() {
               <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
-              8 categorias de diseño
+              8 categorías de diseño
             </span>
             <span className="flex items-center gap-1.5">
               <svg className="h-4 w-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -130,7 +130,7 @@ export default function PlantillasPage() {
               encuentres exactamente el estilo que se adapta a la identidad visual de tu marca.
             </p>
             <p className="mt-4 leading-relaxed">
-              Nuestras categorías incluyen estilos <strong>minimalistas</strong> para webs limpias y modernas,
+              Nuestras categorías incluyen estilos <strong>mínimalistas</strong> para webs limpias y modernas,
               <strong> corporativos</strong> para transmitir seriedad y profesionalidad, <strong>coloridos</strong> para
               marcas vibrantes y creativas, y <strong>oscuros</strong> para sitios con diseño dark mode. También
               encontrarás plantillas con estilo <strong>glassmorphism</strong>, degradados y diseños con bordes
@@ -181,7 +181,7 @@ export default function PlantillasPage() {
           <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-indigo-100">
             Con el mini sitio de Opinafy tienes tu propia página profesional para recopilar y mostrar
             testimonios verificados. Perfecto si no tienes web o quieres una landing dedicada.
-            Elige entre 30 plantillas disenadas por profesion.
+            Elige entre 30 plantillas diseñadas por profesión.
           </p>
 
           {/* Template thumbnails */}
@@ -225,7 +225,7 @@ export default function PlantillasPage() {
           </h2>
           <p className="mt-4 text-lg text-gray-600">
             Registrate gratis y empieza a usar cualquiera de estas plantillas en minutos.
-            Sin tarjeta de credito, sin compromiso.
+            Sin tarjeta de crédito, sin compromiso.
           </p>
           <a
             href="/registro"

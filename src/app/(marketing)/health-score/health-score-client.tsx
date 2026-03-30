@@ -125,7 +125,7 @@ export default function HealthScoreClient() {
 
             {/* Checks */}
             <div className="space-y-3">
-              <h2 className="text-xl font-bold text-gray-900">Desglose por categoria</h2>
+              <h2 className="text-xl font-bold text-gray-900">Desglose por categoría</h2>
               {result.checks.map((check) => (
                 <div
                   key={check.id}

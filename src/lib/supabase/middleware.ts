@@ -38,8 +38,8 @@ export async function updateSession(request: NextRequest) {
     !user &&
     (request.nextUrl.pathname.startsWith('/dashboard') ||
       request.nextUrl.pathname.startsWith('/proyectos') ||
-      request.nextUrl.pathname.startsWith('/configuracion') ||
-      request.nextUrl.pathname.startsWith('/facturacion'))
+      request.nextUrl.pathname.startsWith('/configuración') ||
+      request.nextUrl.pathname.startsWith('/facturación'))
   ) {
     const url = request.nextUrl.clone()
     url.pathname = '/login'

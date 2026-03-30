@@ -358,7 +358,7 @@ const translations: Record<Locale, Record<string, string>> = {
     'mysite.testimonialsPerPage': 'Testimonios por p\u00e1gina',
     'mysite.testimonialsPerPageHelp': 'N\u00famero de testimonios visibles en tu p\u00e1gina p\u00fablica (10-100).',
     'mysite.viewAll': 'Ver todos los testimonios',
-    'mysite.savedSuccess': 'Configuracion guardada correctamente',
+    'mysite.savedSuccess': 'Configuración guardada correctamente',
     'mysite.errorSaving': 'Error al guardar',
     'mysite.urlCopied': 'URL copiada al portapapeles',
     'mysite.shareWhatsappText': 'Mira mis testimonios verificados: {url}',

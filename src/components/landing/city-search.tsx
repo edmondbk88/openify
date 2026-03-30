@@ -7,7 +7,7 @@ interface CityItem {
   slug: string
   name: string
   country: string
-  region?: string
+  región?: string
 }
 
 export function CitySearch({ cities }: { cities: CityItem[] }) {
@@ -20,7 +20,7 @@ export function CitySearch({ cities }: { cities: CityItem[] }) {
       (c) =>
         c.name.toLowerCase().includes(q) ||
         c.country.toLowerCase().includes(q) ||
-        (c.region && c.region.toLowerCase().includes(q))
+        (c.región && c.región.toLowerCase().includes(q))
     )
   }, [query, cities])
 
@@ -78,7 +78,7 @@ export function CitySearch({ cities }: { cities: CityItem[] }) {
                 {city.name}
               </span>
               <span className="text-sm text-gray-500">
-                {city.region ? `${city.region}, ` : ''}{city.country}
+                {city.región ? `${city.región}, ` : ''}{city.country}
               </span>
             </Link>
           ))}

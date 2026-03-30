@@ -83,11 +83,11 @@ export default function GTMGuidePage() {
 
         <StepCard number={2} title="Crea una etiqueta Custom HTML en GTM">
           <ol className="ml-4 list-decimal space-y-2">
-            <li>Abre <a href="https://tagmanager.google.com" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">Google Tag Manager</a> e inicia sesion.</li>
+            <li>Abre <a href="https://tagmanager.google.com" target="_blank" rel="noopener noreferrer" className="text-indigo-600 hover:underline">Google Tag Manager</a> e inicia sesión.</li>
             <li>Selecciona tu contenedor.</li>
             <li>Ve a <strong>Etiquetas</strong> (Tags) y haz clic en <strong>&quot;Nueva&quot;</strong>.</li>
             <li>Ponle nombre: <strong>&quot;Opinafy Testimonials Widget&quot;</strong>.</li>
-            <li>En <strong>Configuracion de la etiqueta</strong>, selecciona <strong>&quot;HTML personalizado&quot;</strong> (Custom HTML).</li>
+            <li>En <strong>Configuración de la etiqueta</strong>, selecciona <strong>&quot;HTML personalizado&quot;</strong> (Custom HTML).</li>
             <li>Pega el siguiente código:</li>
           </ol>
           <CodeBlock code={gtmCode} />
@@ -98,9 +98,9 @@ export default function GTMGuidePage() {
 
         <StepCard number={3} title="Configura el activador (trigger)">
           <ol className="ml-4 list-decimal space-y-2">
-            <li>En la seccion <strong>&quot;Activacion&quot;</strong> (Triggering), haz clic para seleccionar un activador.</li>
+            <li>En la sección <strong>&quot;Activacion&quot;</strong> (Triggering), haz clic para seleccionar un activador.</li>
             <li>Elige <strong>&quot;All Pages - Page View&quot;</strong> si quieres el widget en todas las páginas.</li>
-            <li>O crea un activador personalizado para páginas especificas:
+            <li>O crea un activador personalizado para páginas específicas:
               <ul className="ml-4 mt-2 list-disc space-y-1">
                 <li>Tipo: <strong>Page View</strong></li>
                 <li>Condicion: <strong>Page URL contiene</strong> la ruta deseada (ej: <code className="rounded bg-gray-200 px-1 text-xs">/testimonios</code>)</li>
@@ -128,7 +128,7 @@ export default function GTMGuidePage() {
           <ol className="ml-4 list-decimal space-y-2">
             <li>Visita tu sitio web en una ventana de incognito.</li>
             <li>Deberia cargar el widget con tus testimonios aprobados.</li>
-            <li>Si no ves nada, verifica en el modo Preview de GTM que la etiqueta se esta activando.</li>
+            <li>Si no ves nada, verifica en el modo Preview de GTM que la etiqueta se está activando.</li>
             <li>Comprueba que el Project ID es correcto.</li>
           </ol>
         </StepCard>
@@ -141,16 +141,16 @@ export default function GTMGuidePage() {
           <div className="space-y-6">
             {[
               {
-                q: 'Es mejor usar GTM o pegar el código directamente?',
+                q: '¿Es mejor usar GTM o pegar el código directamente?',
                 a: 'Si ya usas GTM, es más conveniente gestionarlo desde ahi. Si no usas GTM, pegar el código directamente es más simple. Ambos métodos funcionan igual de bien.',
               },
               {
-                q: 'El widget se carga con retraso al usar GTM?',
-                a: 'El retraso es minimo (milisegundos). GTM carga el script de forma asincrona, igual que la instalacion directa.',
+                q: '¿El widget se carga con retraso al usar GTM?',
+                a: 'El retraso es mínimo (milisegundos). GTM carga el script de forma asincrona, igual que la instalación directa.',
               },
               {
-                q: 'Puedo controlar en que páginas aparece el widget?',
-                a: 'Si. Esa es una de las ventajas de usar GTM: puedes crear activadores (triggers) para mostrar el widget solo en páginas especificas.',
+                q: '¿Puedo controlar en qué páginas aparece el widget?',
+                a: 'Si. Esa es una de las ventajas de usar GTM: puedes crear activadores (triggers) para mostrar el widget solo en páginas específicas.',
               },
               {
                 q: 'Funciona con cualquier sitio web?',
@@ -184,7 +184,7 @@ export default function GTMGuidePage() {
               href="/guias/webflow"
               className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50"
             >
-              Ver guia para Webflow
+              Ver guía para Webflow
             </Link>
           </div>
         </div>

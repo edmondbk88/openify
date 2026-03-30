@@ -167,9 +167,9 @@ export default async function RankingPage() {
                   <tr>
                     <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-500">#</th>
                     <th className="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-gray-500">Empresa</th>
-                    <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider text-gray-500">Valoracion</th>
+                    <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider text-gray-500">Valoración</th>
                     <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider text-gray-500">Testimonios</th>
-                    <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider text-gray-500">Certificacion</th>
+                    <th className="px-4 py-3 text-center text-xs font-semibold uppercase tracking-wider text-gray-500">Certificación</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100">

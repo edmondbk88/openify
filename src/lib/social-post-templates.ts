@@ -30,7 +30,7 @@ export function generateLinkedInPost(t: TestimonialData, projectUrl?: string): s
   const author = t.author_company
     ? `${t.author_name}${t.author_role ? `, ${t.author_role}` : ''} en ${t.author_company}`
     : t.author_name
-  return `\uD83D\uDCAC La opinion de nuestros clientes es lo que más nos importa.\n\nQuiero compartir lo que dice ${author}:\n\n"${t.content}"\n\nValoración: ${starEmojis(t.rating)} (${t.rating}/5)\n\nEstos testimonios nos motivan a seguir mejorando cada dia. Gracias por confiar en nosotros.${projectUrl ? `\n\n\uD83D\uDC49 ${projectUrl}` : ''}\n\n#testimonios #pruebasocial #clientes #confianza`
+  return `\uD83D\uDCAC La opinión de nuestros clientes es lo que más nos importa.\n\nQuiero compartir lo que dice ${author}:\n\n"${t.content}"\n\nValoración: ${starEmojis(t.rating)} (${t.rating}/5)\n\nEstos testimonios nos motivan a seguir mejorando cada día. Gracias por confiar en nosotros.${projectUrl ? `\n\n\uD83D\uDC49 ${projectUrl}` : ''}\n\n#testimonios #pruebasocial #clientes #confianza`
 }
 
 export function generateFacebookPost(t: TestimonialData, projectUrl?: string): string {
@@ -61,7 +61,7 @@ export function generateLinkedInPostEn(t: TestimonialData, projectUrl?: string):
   const author = t.author_company
     ? `${t.author_name}${t.author_role ? `, ${t.author_role}` : ''} at ${t.author_company}`
     : t.author_name
-  return `\uD83D\uDCAC Our customers' opinion matters most to us.\n\nHere's what ${author} has to say:\n\n"${t.content}"\n\nRating: ${starEmojis(t.rating)} (${t.rating}/5)\n\nTestimonials like these motivate us to keep improving every day. Thank you for your trust.${projectUrl ? `\n\n\uD83D\uDC49 ${projectUrl}` : ''}\n\n#testimonials #socialproof #customers #trust`
+  return `\uD83D\uDCAC Our customers' opinión matters most to us.\n\nHere's what ${author} has to say:\n\n"${t.content}"\n\nRating: ${starEmojis(t.rating)} (${t.rating}/5)\n\nTestimonials like these motivate us to keep improving every day. Thank you for your trust.${projectUrl ? `\n\n\uD83D\uDC49 ${projectUrl}` : ''}\n\n#testimonials #socialproof #customers #trust`
 }
 
 export function generateFacebookPostEn(t: TestimonialData, projectUrl?: string): string {

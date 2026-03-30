@@ -83,11 +83,11 @@ const FEATURES = [
     description: 'opinafy.com/s/tu-nombre',
   },
   {
-    title: '30 plantillas por profesion',
+    title: '30 plantillas por profesión',
     description: 'Disenos adaptados a cada sector profesional',
   },
   {
-    title: 'Verificacion de empresa automática',
+    title: 'Verificación de empresa automática',
     description: 'Sello de confianza para tus clientes',
   },
   {
@@ -151,7 +151,7 @@ export function MiniSiteShowcase() {
                 Crea tu mini sitio gratis
               </Link>
               <p className="mt-3 text-sm text-indigo-300">
-                Sin tarjeta de credito. Configura tu página en 2 minutos.
+                Sin tarjeta de crédito. Configura tu página en 2 minutos.
               </p>
             </div>
           </div>

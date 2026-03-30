@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'datos prueba social',
     'informe social proof',
     'estadísticas reseñas online',
-    'testimonios conversion',
+    'testimonios conversión',
     'prueba social 2026',
     'video testimonios estadísticas',
     'social proof datos',
@@ -54,26 +54,26 @@ interface StatCard {
   color: string
 }
 
-const conversionStats: StatCard[] = [
+const conversiónStats: StatCard[] = [
   { value: '34%', label: 'Aumento medio en conversiones al incluir testimonios en landing pages', source: 'VWO', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
-  { value: '92%', label: 'De consumidores leen reseñas online antes de tomar una decision de compra', source: 'BrightLocal, 2025', color: 'bg-blue-50 border-blue-200 text-blue-700' },
-  { value: '72%', label: 'De consumidores confian más en un negocio tras leer testimonios positivos', source: 'BigCommerce', color: 'bg-purple-50 border-purple-200 text-purple-700' },
-  { value: '270%', label: 'Mas probabilidades de comprar un producto con 5+ reseñas vs uno sin reseñas', source: 'Spiegel Research Center', color: 'bg-green-50 border-green-200 text-green-700' },
+  { value: '92%', label: 'De consumidores leen reseñas online antes de tomar una decisión de compra', source: 'BrightLocal, 2025', color: 'bg-blue-50 border-blue-200 text-blue-700' },
+  { value: '72%', label: 'De consumidores confían más en un negocio tras leer testimonios positivos', source: 'BigCommerce', color: 'bg-purple-50 border-purple-200 text-purple-700' },
+  { value: '270%', label: 'Más probabilidades de comprar un producto con 5+ reseñas vs uno sin reseñas', source: 'Spiegel Research Center', color: 'bg-green-50 border-green-200 text-green-700' },
   { value: '63%', label: 'De consumidores son más propensos a comprar en un sitio con reseñas de usuarios', source: 'iPerceptions', color: 'bg-amber-50 border-amber-200 text-amber-700' },
-  { value: '58%', label: 'Mas gasto por parte de consumidores que interactuan con reseñas', source: 'Bazaarvoice', color: 'bg-rose-50 border-rose-200 text-rose-700' },
+  { value: '58%', label: 'Más gasto por parte de consumidores que interactúan con reseñas', source: 'Bazaarvoice', color: 'bg-rose-50 border-rose-200 text-rose-700' },
 ]
 
 const videoStats: StatCard[] = [
-  { value: '4x', label: 'Mas engagement generan los video testimonios frente a testimonios de texto', source: 'Wyzowl', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
+  { value: '4x', label: 'Más engagement generan los video testimonios frente a testimonios de texto', source: 'Wyzowl', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
   { value: '84%', label: 'De personas dicen que un video de marca les convencio para comprar un producto', source: 'Wyzowl, 2025', color: 'bg-blue-50 border-blue-200 text-blue-700' },
   { value: '2x', label: 'Mayor tasa de retencion del mensaje en video vs texto', source: 'Insivia', color: 'bg-purple-50 border-purple-200 text-purple-700' },
-  { value: '73%', label: 'De consumidores prefieren conocer un producto a traves de video', source: 'HubSpot', color: 'bg-green-50 border-green-200 text-green-700' },
-  { value: '39%', label: 'De decision-makers contactan a un proveedor despues de ver un video testimonial', source: 'Forbes', color: 'bg-amber-50 border-amber-200 text-amber-700' },
+  { value: '73%', label: 'De consumidores prefieren conocer un producto a través de video', source: 'HubSpot', color: 'bg-green-50 border-green-200 text-green-700' },
+  { value: '39%', label: 'De decisión-makers contactan a un proveedor después de ver un video testimonial', source: 'Forbes', color: 'bg-amber-50 border-amber-200 text-amber-700' },
 ]
 
 const industryStats: StatCard[] = [
   { value: '97%', label: 'De compradores B2B dicen que el contenido generado por usuarios (como testimonios) es más creible', source: 'Demand Gen Report', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
-  { value: '88%', label: 'De consumidores confian en reseñas online tanto como en recomendaciones personales', source: 'BrightLocal', color: 'bg-blue-50 border-blue-200 text-blue-700' },
+  { value: '88%', label: 'De consumidores confían en reseñas online tanto como en recomendaciones personales', source: 'BrightLocal', color: 'bg-blue-50 border-blue-200 text-blue-700' },
   { value: '4.2', label: 'Estrellas es la puntuación mínima que los consumidores consideran aceptable', source: 'ReviewTrackers', color: 'bg-purple-50 border-purple-200 text-purple-700' },
   { value: '52%', label: 'De la intencion de compra positiva proviene de reseñas positivas', source: 'Dimensional Research', color: 'bg-green-50 border-green-200 text-green-700' },
   { value: '15%', label: 'Mayor confianza cuando los testimonios incluyen nombre y foto reales', source: 'Northwestern University', color: 'bg-amber-50 border-amber-200 text-amber-700' },
@@ -82,14 +82,14 @@ const industryStats: StatCard[] = [
 const mobileStats: StatCard[] = [
   { value: '67%', label: 'De consumidores leen reseñas en el movil antes de visitar una tienda fisica', source: 'ReviewTrackers', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
   { value: '53%', label: 'De busquedas en movil incluyen la palabra "reseñas" o "opiniones"', source: 'Google Consumer Insights', color: 'bg-blue-50 border-blue-200 text-blue-700' },
-  { value: '82%', label: 'De compradores en movil consultan reseñas en la misma sesion de compra', source: 'Statista, 2025', color: 'bg-purple-50 border-purple-200 text-purple-700' },
+  { value: '82%', label: 'De compradores en movil consultan reseñas en la misma sesión de compra', source: 'Statista, 2025', color: 'bg-purple-50 border-purple-200 text-purple-700' },
 ]
 
 const aiStats: StatCard[] = [
   { value: '71%', label: 'De consumidores pueden detectar una reseña falsa generada por IA', source: 'Pew Research', color: 'bg-indigo-50 border-indigo-200 text-indigo-700' },
   { value: '62%', label: 'De compradores valoran más los testimonios verificados desde la implantacion de la IA generativa', source: 'Gartner', color: 'bg-blue-50 border-blue-200 text-blue-700' },
   { value: '45%', label: 'Aumento en la demanda de sistemas de verificación de testimonios en 2025', source: 'TrustRadius', color: 'bg-purple-50 border-purple-200 text-purple-700' },
-  { value: '89%', label: 'De los responsables de marketing planean invertir más en UGC autentico en 2026', source: 'Content Marketing Institute', color: 'bg-green-50 border-green-200 text-green-700' },
+  { value: '89%', label: 'De los responsables de marketing planean invertir más en UGC auténtico en 2026', source: 'Content Marketing Institute', color: 'bg-green-50 border-green-200 text-green-700' },
 ]
 
 function StatGrid({ stats }: { stats: StatCard[] }) {
@@ -159,7 +159,7 @@ export default function InformePruebaSocial2026Page() {
               </div>
               <div className="rounded-lg bg-white px-6 py-3 shadow-sm border border-gray-100">
                 <p className="text-3xl font-extrabold text-indigo-600">5</p>
-                <p className="text-xs text-gray-500">Secciones tematicas</p>
+                <p className="text-xs text-gray-500">Secciones temáticas</p>
               </div>
             </div>
           </div>
@@ -185,14 +185,14 @@ export default function InformePruebaSocial2026Page() {
               Los hallazgos clave son contundentes: el <strong>92% de los consumidores</strong> lee
               reseñas antes de comprar, los testimonios en landing pages aumentan las conversiones un
               <strong> 34%</strong>, y los video testimonios generan <strong>4 veces más engagement</strong>
-              que el texto. Ademas, con la llegada de la IA generativa, el <strong>62% de los
+              que el texto. Además, con la llegada de la IA generativa, el <strong>62% de los
               compradores</strong> ahora valora más que nunca los testimonios verificados.
             </p>
             <p>
-              Para los negocios, la conclusion es clara: implementar una estrategia solida de
+              Para los negocios, la conclusion es clara: implementar una estrategia sólida de
               recopilación y exhibición de testimonios ya no es opcional, es una necesidad competitiva.
-              Las empresas que invierten en prueba social autentica ven retornos significativos en
-              confianza del consumidor, tasas de conversion y valor del ciclo de vida del cliente.
+              Las empresas que invierten en prueba social auténtica ven retornos significativos en
+              confianza del consumidor, tasas de conversión y valor del ciclo de vida del cliente.
             </p>
           </div>
         </section>
@@ -202,7 +202,7 @@ export default function InformePruebaSocial2026Page() {
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
             <h2 className="text-lg font-bold text-gray-900">Indice de contenidos</h2>
             <ol className="mt-4 grid gap-2 sm:grid-cols-2 text-sm">
-              <li><a href="#conversion" className="text-indigo-600 hover:underline">1. Impacto en la conversion</a></li>
+              <li><a href="#conversion" className="text-indigo-600 hover:underline">1. Impacto en la conversión</a></li>
               <li><a href="#video-vs-text" className="text-indigo-600 hover:underline">2. Video vs. texto</a></li>
               <li><a href="#industry" className="text-indigo-600 hover:underline">3. Benchmarks por industria</a></li>
               <li><a href="#mobile" className="text-indigo-600 hover:underline">4. Movil vs. escritorio</a></li>
@@ -213,39 +213,39 @@ export default function InformePruebaSocial2026Page() {
 
         {/* Section 1: Conversion */}
         <section id="conversion" className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Seccion 1</div>
-          <h2 className="text-3xl font-bold text-gray-900">Impacto en la conversion</h2>
+          <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Sección 1</div>
+          <h2 className="text-3xl font-bold text-gray-900">Impacto en la conversión</h2>
           <p className="mt-4 max-w-3xl text-gray-600 leading-relaxed">
             Los testimonios son uno de los elementos más poderosos para mejorar las tasas de
-            conversion en cualquier página web. Los datos muestran consistentemente que la presencia
-            de prueba social reduce la friccion en el proceso de compra y aumenta la confianza del
+            conversión en cualquier página web. Los datos muestran consistentemente que la presencia
+            de prueba social reduce la fricción en el proceso de compra y aumenta la confianza del
             visitante de forma significativa.
           </p>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
-            Segun el Spiegel Research Center, los productos con al menos 5 reseñas tienen un
+            Según el Spiegel Research Center, los productos con al menos 5 reseñas tienen un
             <strong> 270% más de probabilidades</strong> de ser comprados que aquellos sin reseñas.
             Este efecto es aun más pronunciado en productos de alto precio, donde la confianza
-            juega un papel critico en la decision de compra.
+            juega un papel crítico en la decisión de compra.
           </p>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
-            Bazaarvoice descubrio que los consumidores que interactuan con reseñas gastan un
+            Bazaarvoice descubrió que los consumidores que interactúan con reseñas gastan un
             <strong> 58% mas</strong> en promedio. Este dato demuestra que las reseñas no solo
-            aumentan la tasa de conversion, sino también el valor medio del pedido, creando un
+            aumentan la tasa de conversión, sino también el valor medio del pedido, creando un
             impacto doble en los ingresos del negocio.
           </p>
           <div className="mt-8">
-            <StatGrid stats={conversionStats} />
+            <StatGrid stats={conversiónStats} />
           </div>
         </section>
 
         {/* Section 2: Video vs Text */}
         <section id="video-vs-text" className="bg-gray-50">
           <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-            <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Seccion 2</div>
+            <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Sección 2</div>
             <h2 className="text-3xl font-bold text-gray-900">Video vs. texto: la batalla del formato</h2>
             <p className="mt-4 max-w-3xl text-gray-600 leading-relaxed">
-              El video se ha consolidado como el formato preferido para consumir contenido online,
-              y los testimonios no son una excepcion. Segun Wyzowl, los video testimonios generan
+              El video se ha consólidado como el formato preferido para consumir contenido online,
+              y los testimonios no son una excepcion. Según Wyzowl, los video testimonios generan
               <strong> 4 veces más engagement</strong> que los testimonios de texto, y el 84% de las
               personas afirman que un video de marca les ha convencido para comprar un producto o
               servicio.
@@ -259,7 +259,7 @@ export default function InformePruebaSocial2026Page() {
             <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
               Sin embargo, esto no significa que los testimonios de texto sean irrelevantes. La
               combinacion ideal es una estrategia hibrida: video testimonios para las páginas clave
-              (homepage, landing pages de producto) y testimonios de texto para páginas de categoria,
+              (homepage, landing pages de producto) y testimonios de texto para páginas de categoría,
               blog y secciones complementarias. Ambos formatos trabajan juntos para construir una
               narrativa de confianza completa.
             </p>
@@ -271,10 +271,10 @@ export default function InformePruebaSocial2026Page() {
 
         {/* Section 3: Industry Benchmarks */}
         <section id="industry" className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Seccion 3</div>
+          <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Sección 3</div>
           <h2 className="text-3xl font-bold text-gray-900">Benchmarks por industria</h2>
           <p className="mt-4 max-w-3xl text-gray-600 leading-relaxed">
-            El impacto de los testimonios varia segun la industria, pero los datos son claros:
+            El impacto de los testimonios varia según la industria, pero los datos son claros:
             en todos los sectores, la prueba social mejora los resultados. El sector B2B es
             particularmente sensible: el <strong>97% de los compradores B2B</strong> consideran
             que el contenido generado por usuarios es más creible que el contenido de marca
@@ -282,16 +282,16 @@ export default function InformePruebaSocial2026Page() {
           </p>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             En el sector servicios (consultoria, coaching, agencias), los testimonios son aun mas
-            criticos porque el cliente no puede &quot;probar&quot; el servicio antes de contratarlo.
-            La confianza se construye exclusivamente a traves de la experiencia de otros clientes.
-            Northwestern University descubrio que los testimonios que incluyen nombre y foto reales
+            críticos porque el cliente no puede &quot;probar&quot; el servicio antes de contratarlo.
+            La confianza se construye exclusivamente a través de la experiencia de otros clientes.
+            Northwestern University descubrió que los testimonios que incluyen nombre y foto reales
             generan un <strong>15% más de confianza</strong> que los anonimos.
           </p>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             ReviewTrackers revela que los consumidores consideran que la puntuación mínima aceptable
             es de <strong>4.2 estrellas</strong>. Esto significa que no solo necesitas testimonios,
             sino que necesitas testimonios positivos y genuinos. La calidad importa tanto como la
-            cantidad. Un negocio con 20 testimonios autenticos de 5 estrellas puede superar a uno
+            cantidad. Un negocio con 20 testimonios auténticos de 5 estrellas puede superar a uno
             con 200 reseñas mediocres.
           </p>
           <div className="mt-8">
@@ -302,14 +302,14 @@ export default function InformePruebaSocial2026Page() {
         {/* Section 4: Mobile vs Desktop */}
         <section id="mobile" className="bg-gray-50">
           <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-            <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Seccion 4</div>
+            <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Sección 4</div>
             <h2 className="text-3xl font-bold text-gray-900">Movil vs. escritorio</h2>
             <p className="mt-4 max-w-3xl text-gray-600 leading-relaxed">
               Con más del 60% del trafico web global procedente de dispositivos moviles, la forma
-              en que los consumidores interactuan con los testimonios ha cambiado radicalmente.
-              Segun ReviewTrackers, el <strong>67% de los consumidores</strong> leen reseñas en
+              en que los consumidores interactúan con los testimonios ha cambiado radicalmente.
+              Según ReviewTrackers, el <strong>67% de los consumidores</strong> leen reseñas en
               el movil antes de visitar una tienda fisica, lo que convierte a los testimonios
-              moviles en un puente critico entre el mundo digital y el fisico.
+              moviles en un puente crítico entre el mundo digital y el fisico.
             </p>
             <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
               Google Consumer Insights revela que el <strong>53% de las busquedas moviles</strong>
@@ -319,8 +319,8 @@ export default function InformePruebaSocial2026Page() {
             </p>
             <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
               Statista reporta que el <strong>82% de los compradores moviles</strong> consultan
-              reseñas en la misma sesion de compra. Esto significa que los testimonios no son algo
-              que el usuario busca por separado: son parte integral del proceso de decision en
+              reseñas en la misma sesión de compra. Esto significa que los testimonios no son algo
+              que el usuario busca por separado: son parte integral del proceso de decisión en
               tiempo real. Un widget de testimonios que carga rápido y se ve bien en movil puede
               ser la diferencia entre una venta y un abandono.
             </p>
@@ -332,12 +332,12 @@ export default function InformePruebaSocial2026Page() {
 
         {/* Section 5: AI and Future */}
         <section id="ai" className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Seccion 5</div>
+          <div className="mb-2 text-sm font-semibold text-indigo-600 uppercase tracking-wide">Sección 5</div>
           <h2 className="text-3xl font-bold text-gray-900">IA y el futuro de la prueba social</h2>
           <p className="mt-4 max-w-3xl text-gray-600 leading-relaxed">
             La irrupcion de la inteligencia artificial generativa ha transformado el panorama de
             la prueba social. Si bien la IA puede generar reseñas convincentes, los consumidores
-            se han vuelto más escepticos: segun Pew Research, el <strong>71% de los
+            se han vuelto más escépticos: según Pew Research, el <strong>71% de los
             consumidores</strong> creen poder detectar una reseña falsa generada por IA.
           </p>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
@@ -351,13 +351,13 @@ export default function InformePruebaSocial2026Page() {
             TrustRadius reporta un <strong>aumento del 45%</strong> en la demanda de sistemas de
             verificación de testimonios durante 2025. Y el Content Marketing Institute senala que
             el <strong>89% de los responsables de marketing</strong> planean invertir más en
-            contenido generado por usuarios (UGC) autentico en 2026, reconociendo que la
+            contenido generado por usuarios (UGC) auténtico en 2026, reconociendo que la
             autenticidad es el antidoto contra la fatiga de contenido generado por IA.
           </p>
           <p className="mt-3 max-w-3xl text-gray-600 leading-relaxed">
             El futuro de la prueba social es claro: verificación, autenticidad y video. Las
             empresas que adopten herramientas especializadas para recopilar y mostrar testimonios
-            verificados estaran mejor posicionadas para ganar la confianza del consumidor en la
+            verificados estarán mejor posicionadas para ganar la confianza del consumidor en la
             era de la IA. La prueba social no va a desaparecer; al contrario, su importancia
             solo va a crecer a medida que la confianza se convierte en el recurso más escaso
             del marketing digital.

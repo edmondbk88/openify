@@ -107,7 +107,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Conclusión: Los testimonios no son opcionales</h2>
 <p>En el panorama competitivo actual, los testimonios de clientes han pasado de ser un "nice to have" a ser un elemento esencial de cualquier estrategia de marketing digital. Son la forma más efectiva de generar confianza, reducir la fricción en el proceso de compra y diferenciarte de la competencia.</p>
-<p>No importa si tienes un negocio pequeño que recién comienza o una empresa consolidada: los testimonios de clientes son tu mejor herramienta de ventas. La pregunta no es si deberías usarlos, sino cuánto estás perdiendo por no tenerlos todavía.</p>
+<p>No importa si tienes un negocio pequeño que recién comienza o una empresa consólidada: los testimonios de clientes son tu mejor herramienta de ventas. La pregunta no es si deberías usarlos, sino cuánto estás perdiendo por no tenerlos todavía.</p>
 <p>Si quieres empezar hoy mismo a recopilar y mostrar testimonios que conviertan, <strong>prueba Opinafy gratis</strong> y descubre lo fácil que puede ser transformar la confianza de tus visitantes en ventas reales.</p>
 `,
   },
@@ -149,7 +149,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Estrategia 3: Usa preguntas guía en lugar de un campo en blanco</h2>
 <p>Uno de los mayores obstáculos para que un cliente deje un testimonio es enfrentarse a un campo de texto vacío sin saber qué escribir. El conocido "bloqueo de la página en blanco" también aplica a los testimonios. La solución es proporcionar preguntas guía que orienten la respuesta del cliente.</p>
 <p>Las preguntas ideales para testimonios incluyen: ¿Cuál era tu situación o problema antes de usar nuestro producto? ¿Qué solución encontraste con nosotros? ¿Qué resultados concretos has obtenido? ¿Qué es lo que más te gusta de trabajar con nosotros? ¿Recomendarías nuestro producto a otros? ¿Por qué?</p>
-<p>Estas preguntas logran dos cosas simultáneamente. Primero, eliminan el bloqueo del cliente al darle una estructura clara. Segundo, garantizan que el testimonio resultante será rico en detalles y útil para tu marketing, ya que cubrirá los puntos clave que los potenciales clientes necesitan escuchar.</p>
+<p>Estas preguntas logran dos cosas simultáneamente. Primero, eliminan el bloqueo del cliente al darle una estructura clara. Segúndo, garantizan que el testimonio resultante será rico en detalles y útil para tu marketing, ya que cubrirá los puntos clave que los potenciales clientes necesitan escuchar.</p>
 
 <h2>Estrategia 4: Automatiza las solicitudes de testimonios</h2>
 <p>La consistencia es clave para construir un banco de testimonios robusto. Pedir testimonios de forma esporádica y manual produce resultados esporádicos y manuales. La solución es crear un sistema automatizado que solicite testimonios de forma regular.</p>
@@ -356,7 +356,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Esta página también tiene beneficios para el SEO, ya que genera contenido único y relevante que los buscadores valoran positivamente. Los testimonios suelen contener palabras clave naturales que refuerzan tu posicionamiento para términos relevantes.</p>
 
 <h2>8. El proceso de checkout o contratación</h2>
-<p>En el caso de los ecommerce, el proceso de checkout es donde se producen la mayoría de los abandonos. Incluir elementos de prueba social sutiles durante este proceso puede reducir significativamente los abandonos de carrito.</p>
+<p>En el caso de los ecommerce, el proceso de checkout es donde se producen la mayoría de los abandonos. Incluir elementos de prueba social sútiles durante este proceso puede reducir significativamente los abandonos de carrito.</p>
 <p>No se trata de llenar el checkout de testimonios largos que distraigan al usuario. En su lugar, incluye elementos discretos como una línea de "Valoración media: 4.9/5 basada en 500 opiniones", un testimonio breve de una sola línea junto al botón de pago o un indicador de "X personas compraron este producto esta semana".</p>
 <p>Estos elementos actúan como refuerzos de confianza en el momento más crítico sin interrumpir el flujo de compra.</p>
 
@@ -474,7 +474,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Plantilla 8: Primer recordatorio (3-5 días después)</h3>
 <p>"Hola [Nombre], solo quería recordarte la solicitud de testimonio que te envié hace unos días. Entiendo que estás ocupado/a, así que solo te llevará 2 minutos. Aquí está el enlace por si lo necesitas: [enlace]. Si no te viene bien en este momento, no te preocupes en absoluto. ¡Gracias!"</p>
 
-<h3>Plantilla 9: Segundo y último recordatorio (7-10 días después)</h3>
+<h3>Plantilla 9: Segúndo y último recordatorio (7-10 días después)</h3>
 <p>"Hola [Nombre], último recordatorio sobre el testimonio 😊. Si no puedes o prefieres no participar, lo entiendo perfectamente y no volveré a mencionarlo. Si decides hacerlo, aquí tienes el enlace: [enlace]. ¡Gracias por tu tiempo en cualquier caso!"</p>
 
 <h2>Automatiza todo el proceso con las herramientas adecuadas</h2>
@@ -529,8 +529,8 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Cómo preparar al cliente para la grabación</h2>
 <p>La mayoría de las personas se sienten nerviosas ante una cámara. Tu trabajo es crear un ambiente relajado donde el cliente se sienta cómodo siendo él mismo. Aquí tienes algunos consejos prácticos para lograrlo:</p>
-<p>Primero, <strong>envía las preguntas con antelación</strong>. No se trata de que el cliente memorice un guion, sino de que tenga tiempo para reflexionar sobre lo que quiere compartir. Esto elimina la presión del momento y permite que las respuestas sean más reflexionadas y completas.</p>
-<p>Segundo, <strong>explica el proceso</strong> antes de empezar a grabar. Dile al cliente que no es una toma única, que puede repetir cualquier respuesta si no le gusta cómo ha quedado, y que el video se editará después. Saber esto reduce enormemente la presión.</p>
+<p>Primero, <strong>envía las preguntas con antelación</strong>. No se trata de que el cliente memorice un guion, sino de que tenga tiempo para reflexiónar sobre lo que quiere compartir. Esto elimina la presión del momento y permite que las respuestas sean más reflexiónadas y completas.</p>
+<p>Segúndo, <strong>explica el proceso</strong> antes de empezar a grabar. Dile al cliente que no es una toma única, que puede repetir cualquier respuesta si no le gusta cómo ha quedado, y que el video se editará después. Saber esto reduce enormemente la presión.</p>
 <p>Tercero, <strong>comienza con una conversación informal</strong> antes de encender la cámara. Habla sobre su negocio, pregúntale cómo le va, comparte una anécdota. Cuando la persona ya está relajada y en modo conversación, enciende la cámara. Las mejores respuestas suelen surgir cuando el cliente se olvida de que está siendo grabado.</p>
 
 <h2>Las preguntas perfectas para un testimonio en video</h2>
@@ -695,8 +695,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'estadisticas-testimonios-datos-conversion',
-    image: blogImageUrl('estadisticas-testimonios-datos-conversion'),
+    slug: 'estadisticas-testimonios-datos-conversión',
+    image: blogImageUrl('estadisticas-testimonios-datos-conversión'),
     tldr: 'El 92% de los consumidores lee testimonios antes de comprar, y las páginas con testimonios convierten hasta un 34% más. Aquí tienes 25 estadísticas que demuestran su poder.',
     title: '25 estadísticas sobre testimonios que demuestran su poder de conversión',
     excerpt:
@@ -802,7 +802,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Paradójicamente, la presencia de alguna opinión menos favorable, acompañada de una respuesta profesional y empática por parte de la empresa, genera más confianza que un perfil con solo opiniones perfectas. Los consumidores sospechan de las puntuaciones perfectas y valoran la transparencia.</p>
 
 <h3>25. La inversión en herramientas de gestión de testimonios genera un ROI medio del 400%</h3>
-<p>Según datos del sector, cada euro invertido en herramientas de gestión de testimonios y prueba social retorna cuatro euros en forma de mayores conversiones, mayor retención de clientes y mayor valor medio de compra. Es una de las inversiones en marketing con mejor retorno disponible.</p>
+<p>Según datos del sector, cada euro invertido en herramientas de gestión de testimonios y prueba social retorna cuatro euros en forma de mayores conversiones, mayor retención de clientes y mayor valor medio de compra. Es una de las inversiónes en marketing con mejor retorno disponible.</p>
 
 <h2>Cómo aplicar estas estadísticas a tu negocio</h2>
 <p>Conocer las estadísticas es útil, pero lo que realmente importa es cómo las traduces en acciones concretas para tu negocio. Aquí tienes un plan de acción basado en los datos que hemos presentado:</p>
@@ -858,9 +858,9 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Testimonios durante el proceso de checkout</h2>
 <p>El abandono del carrito es uno de los mayores problemas del ecommerce, con tasas que rondan el setenta por ciento según estudios del Baymard Institute. Las razones más comunes incluyen costes inesperados, proceso demasiado complicado, dudas sobre la seguridad del pago y, crucialmente, falta de confianza.</p>
-<p>Los testimonios colocados estratégicamente durante el proceso de checkout pueden reducir el abandono en un once por ciento. La clave es usar elementos de prueba social sutiles que refuercen la confianza sin distraer del proceso de compra.</p>
+<p>Los testimonios colocados estratégicamente durante el proceso de checkout pueden reducir el abandono en un once por ciento. La clave es usar elementos de prueba social sútiles que refuercen la confianza sin distraer del proceso de compra.</p>
 <p>Implementaciones efectivas incluyen un banner discreto tipo "Más de X clientes satisfechos" en la parte superior de la página de checkout. También funciona bien una línea con la valoración media como "Valorado con 4.8 de 5 estrellas por nuestros clientes" junto al resumen del pedido. Un testimonio breve de una sola línea, como una cita de un cliente sobre la experiencia de compra, cerca del botón de pago refuerza la decisión en el momento crítico. Los sellos de confianza junto con un indicador de "Compra verificada por X clientes" también son muy efectivos.</p>
-<p>Recuerda que durante el checkout, menos es más. Los elementos de prueba social deben ser sutiles y no competir con los campos de pago por la atención del usuario.</p>
+<p>Recuerda que durante el checkout, menos es más. Los elementos de prueba social deben ser sútiles y no competir con los campos de pago por la atención del usuario.</p>
 
 <h2>Email post-compra: cerrando el ciclo</h2>
 <p>El momento después de la compra es fundamental tanto para recopilar nuevos testimonios como para utilizar los existentes. Una estrategia de email post-compra bien diseñada cumple ambos objetivos.</p>
@@ -1238,7 +1238,7 @@ export const blogArticles: BlogArticle[] = [
 <p>También es importante monitorizar cómo interactúan los visitantes con tu muro. ¿Cuánto tiempo pasan en la página? ¿Cuántos testimonios leen antes de salir? ¿Visitan la página de precios después de ver el muro? Estos datos te ayudarán a optimizar el diseño, el orden de los testimonios y la llamada a la acción para maximizar las conversiones.</p>
 
 <h2>Ejemplos de Walls of Love exitosos</h2>
-<p>Para inspirarte, analicemos qué tienen en común los mejores Walls of Love que hemos encontrado. Los muros más efectivos comparten varias características. Primero, tienen volumen significativo, al menos treinta o cuarenta testimonios. Segundo, mezclan formatos diferentes como texto, video, capturas de pantalla y valoraciones. Tercero, incluyen información verificable sobre los autores. Cuarto, tienen un diseño limpio que permite consumir el contenido sin fatiga visual. Y quinto, incluyen una llamada a la acción clara que invita al visitante a dar el siguiente paso.</p>
+<p>Para inspirarte, analicemos qué tienen en común los mejores Walls of Love que hemos encontrado. Los muros más efectivos comparten varias características. Primero, tienen volumen significativo, al menos treinta o cuarenta testimonios. Segúndo, mezclan formatos diferentes como texto, video, capturas de pantalla y valoraciones. Tercero, incluyen información verificable sobre los autores. Cuarto, tienen un diseño limpio que permite consumir el contenido sin fatiga visual. Y quinto, incluyen una llamada a la acción clara que invita al visitante a dar el siguiente paso.</p>
 <p>Algunos negocios llevan el concepto un paso más allá y actualizan su muro en tiempo real, mostrando los testimonios más recientes automáticamente. Esto crea un efecto de dinamismo que refuerza la percepción de que el negocio está activo, vivo y generando satisfacción constantemente.</p>
 
 <h2>Conclusión: Tu Wall of Love como activo de marketing</h2>
@@ -1272,7 +1272,7 @@ export const blogArticles: BlogArticle[] = [
 <p>En esta guía, vamos a explorar cómo los negocios de hostelería pueden implementar una estrategia proactiva de testimonios que vaya más allá de las plataformas de reseñas tradicionales. Aprenderás a recopilar testimonios de calidad, a mostrarlos donde generen más impacto y a utilizar la voz de tus clientes como tu principal herramienta de atracción.</p>
 
 <h2>Por qué los testimonios propios son más valiosos que las reseñas en plataformas</h2>
-<p>Las reseñas en Google y TripAdvisor son importantes, pero tienen limitaciones significativas. Primero, no tienes control sobre dónde se muestran ni cómo se presentan. Segundo, están mezcladas con las reseñas de tus competidores, lo que diluye su impacto. Tercero, cualquiera puede dejar una reseña, incluyendo personas que nunca han visitado tu establecimiento o competidores desleales.</p>
+<p>Las reseñas en Google y TripAdvisor son importantes, pero tienen limitaciones significativas. Primero, no tienes control sobre dónde se muestran ni cómo se presentan. Segúndo, están mezcladas con las reseñas de tus competidores, lo que diluye su impacto. Tercero, cualquiera puede dejar una reseña, incluyendo personas que nunca han visitado tu establecimiento o competidores desleales.</p>
 <p>Los testimonios propios, aquellos que <a href="/blog/como-recopilar-testimonios-clientes-estrategias" class="text-indigo-600 hover:text-indigo-700 font-medium">recopilas directamente de clientes verificados</a> y muestras en tus propios canales, ofrecen ventajas que las reseñas en plataformas no pueden igualar. Puedes seleccionar los más representativos, presentarlos con el diseño de tu marca, incluir fotos y detalles adicionales, y colocarlos exactamente donde más impacto tengan: en tu web, en tus redes sociales, en tu carta digital o en tu sistema de reservas.</p>
 <p>Esto no significa que debas ignorar las plataformas de reseñas. La estrategia ideal combina ambos: mantener una presencia sólida en las plataformas donde tus clientes buscan, y al mismo tiempo construir un banco de testimonios propios que controlas completamente.</p>
 
@@ -1541,8 +1541,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'automatizar-recopilacion-testimonios',
-    image: blogImageUrl('automatizar-recopilacion-testimonios'),
+    slug: 'automatizar-recopilación-testimonios',
+    image: blogImageUrl('automatizar-recopilación-testimonios'),
     tldr: 'Automatiza la recopilación de testimonios con correos programados tras hitos del cliente, formularios con enlace directo y herramientas como Opinafy que gestionan todo el flujo.',
     title: 'Cómo automatizar la recopilación de testimonios en tu negocio',
     excerpt:
@@ -1563,7 +1563,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>El problema de la recopilación manual de testimonios</h2>
 <p>La mayoría de negocios que intentan recopilar testimonios lo hacen de forma manual y esporádica. El fundador se acuerda de que necesita testimonios, envía unos cuantos correos personales a clientes satisfechos, consigue dos o tres respuestas, las copia y pega en su web, y no vuelve a pensar en testimonios hasta varios meses después. Este enfoque tiene múltiples problemas que limitan severamente la efectividad de tu prueba social.</p>
 <p>Primero, la inconsistencia. Si solo pides testimonios cuando te acuerdas, tendrás períodos de sequía donde no recibes ninguno y momentos puntuales de abundancia. Esto resulta en una web con testimonios desactualizados que pierde relevancia y credibilidad con el tiempo.</p>
-<p>Segundo, la dependencia de tu tiempo. Como emprendedor o dueño de negocio, tu tiempo es tu recurso más escaso. Dedicar horas cada mes a enviar correos individuales solicitando testimonios, hacer seguimiento a los que no responden, recibir las respuestas por diferentes canales y formatearlas para tu web es una inversión de tiempo que no puedes sostener.</p>
+<p>Segúndo, la dependencia de tu tiempo. Como emprendedor o dueño de negocio, tu tiempo es tu recurso más escaso. Dedicar horas cada mes a enviar correos individuales solicitando testimonios, hacer seguimiento a los que no responden, recibir las respuestas por diferentes canales y formatearlas para tu web es una inversión de tiempo que no puedes sostener.</p>
 <p>Tercero, la pérdida de oportunidades. Sin un sistema automático, inevitablemente dejas pasar los mejores momentos para solicitar testimonios. Ese cliente que acaba de conseguir resultados espectaculares con tu producto no recibirá tu solicitud hasta que te acuerdes de pedirla, y para entonces, la emoción del logro ya se habrá desvanecido.</p>
 <p>La solución es clara: necesitas un sistema automatizado que recopile testimonios de forma continua, sin requerir tu intervención constante. Si necesitas recordar por qué los testimonios son tan importantes, revisa las <a href="/blog/estadisticas-testimonios-datos-conversion" class="text-indigo-600 hover:text-indigo-700 font-medium">25 estadísticas que lo demuestran</a>. Y la buena noticia es que crear este sistema es mucho más sencillo de lo que imaginas.</p>
 
@@ -1596,7 +1596,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Optimizando las tasas de respuesta</h2>
 <p>Una vez que tu sistema está funcionando, el siguiente paso es optimizar las tasas de respuesta para maximizar el número de testimonios que recibes. Aquí tienes estrategias probadas para mejorar tus resultados.</p>
 <h3>Experimenta con el timing</h3>
-<p>Prueba enviar las solicitudes en diferentes momentos: inmediatamente después de la compra, tres días después, una semana después, un mes después. Los resultados pueden variar significativamente según tu tipo de negocio y el perfil de tus clientes. Monitoriza las tasas de apertura, clic y conversión de cada variante para identificar el timing óptimo.</p>
+<p>Prueba enviar las solicitudes en diferentes momentos: inmediatamente después de la compra, tres días después, una semana después, un mes después. Los resultados pueden variar significativamente según tu tipo de negocio y el perfil de tus clientes. Monitoriza las tasas de apertura, clic y conversión de cada varíante para identificar el timing óptimo.</p>
 <h3>Prueba diferentes mensajes</h3>
 <p>Realiza pruebas A/B con diferentes asuntos de correo, tonos de mensaje y llamadas a la acción. A veces, un pequeño cambio en el asunto del correo puede duplicar la tasa de apertura. Prueba asuntos como "¿Cómo fue tu experiencia con nosotros?" versus "María, tu opinión nos importa" versus "¿Nos ayudas con 2 minutos de tu tiempo?".</p>
 <h3>Implementa recordatorios inteligentes</h3>
@@ -1613,7 +1613,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Revisa estas métricas mensualmente y ajusta tu sistema en consecuencia. Si la tasa de respuesta baja, experimenta con nuevos mensajes o timings. Si la calidad de los testimonios no es suficiente, revisa tus preguntas guía. La optimización continua es la clave para un sistema que mejore con el tiempo.</p>
 
 <h2>Conclusión: Automatiza hoy, recoge testimonios siempre</h2>
-<p>La automatización de la recopilación de testimonios es una de las inversiones con mayor retorno que puedes hacer en tu negocio. Una vez configurado, tu sistema trabaja para ti las 24 horas del día, generando un flujo constante de prueba social fresca y relevante sin requerir tu atención continua. Mientras tú te concentras en lo que mejor sabes hacer, servir a tus clientes, el sistema se encarga de convertir su satisfacción en testimonios que atraigan a los clientes del mañana.</p>
+<p>La automatización de la recopilación de testimonios es una de las inversiónes con mayor retorno que puedes hacer en tu negocio. Una vez configurado, tu sistema trabaja para ti las 24 horas del día, generando un flujo constante de prueba social fresca y relevante sin requerir tu atención continua. Mientras tú te concentras en lo que mejor sabes hacer, servir a tus clientes, el sistema se encarga de convertir su satisfacción en testimonios que atraigan a los clientes del mañana.</p>
 <p>No dejes que la recopilación manual sea el cuello de botella de tu estrategia de prueba social. <strong>Opinafy</strong> te permite configurar todo tu sistema de recopilación automatizado en menos de una hora. Consulta nuestros <a href="/precios" class="text-indigo-600 hover:text-indigo-700 font-medium">planes y precios</a> para elegir la opción que mejor se adapte a ti, con formularios personalizados, mensajes automáticos, moderación inteligente y publicación directa en tu web. <strong>Prueba Opinafy gratis hoy</strong> y empieza a construir tu banco de testimonios en piloto automático.</p>
 `,
   },
@@ -1645,7 +1645,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Los tipos de testimonios más efectivos para SaaS</h2>
 <p>No todos los testimonios funcionan igual en el contexto SaaS. Algunos formatos son particularmente efectivos para este modelo de negocio.</p>
 <h3>Testimonios de ROI y resultados</h3>
-<p>En SaaS, los compradores son generalmente racionales y orientados a resultados. Quieren saber qué retorno van a obtener de su inversión. Por eso, los testimonios más efectivos son los que incluyen métricas concretas: "Desde que usamos este software, redujimos el tiempo de gestión de proyectos un 40%" o "En los primeros tres meses, automatizamos 200 horas de trabajo manual". Estos testimonios cuantificados hablan el lenguaje de los decision-makers y proporcionan justificación tangible para la inversión.</p>
+<p>En SaaS, los compradores son generalmente racionales y orientados a resultados. Quieren saber qué retorno van a obtener de su inversión. Por eso, los testimonios más efectivos son los que incluyen métricas concretas: "Desde que usamos este software, redujimos el tiempo de gestión de proyectos un 40%" o "En los primeros tres meses, automatizamos 200 horas de trabajo manual". Estos testimonios cuantificados hablan el lenguaje de los decisión-makers y proporcionan justificación tangible para la inversión.</p>
 <h3>Testimonios de comparación</h3>
 <p>Los testimonios donde un usuario compara tu software con alternativas que ha probado son oro puro en SaaS. Frases como "Probé tres herramientas antes de llegar a esta, y es la única que realmente resolvió mi problema" o "Cambié desde la competencia y la diferencia en la facilidad de uso es abismal" ayudan directamente a los usuarios que están en fase de comparación, que son la mayoría en el mercado SaaS.</p>
 <h3>Testimonios de onboarding y facilidad de uso</h3>
@@ -1697,8 +1697,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'psicologia-prueba-social-ventas',
-    image: blogImageUrl('psicologia-prueba-social-ventas'),
+    slug: 'psicología-prueba-social-ventas',
+    image: blogImageUrl('psicología-prueba-social-ventas'),
     tldr: 'Compramos lo que otros recomiendan por sesgos cognitivos como el conformismo social y el efecto bandwagon. Entender estos principios te permite usar testimonios de forma más estratégica.',
     title: 'La psicología detrás de la prueba social: por qué compramos lo que otros recomiendan',
     excerpt:
@@ -1734,7 +1734,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>El efecto halo y la transferencia de confianza</h2>
 <p>El efecto halo es un sesgo cognitivo por el cual nuestra impresión general de una persona o entidad influye en cómo evaluamos sus características específicas. Si percibimos a alguien como atractivo, tendemos también a percibirlo como inteligente, amable y competente, aunque no tengamos evidencia de ello.</p>
 <p>En el contexto de los testimonios, el efecto halo funciona de dos formas. Primero, cuando un testimonio proviene de alguien que percibimos como exitoso, profesional o admirable, transferimos esas cualidades al producto que recomienda. Un testimonio de un CEO reconocido genera más confianza que uno de un usuario anónimo, aunque ambos digan exactamente lo mismo. El halo de credibilidad del autor se transfiere al producto.</p>
-<p>Segundo, cuando vemos que una empresa tiene muchos testimonios positivos, el halo de esa satisfacción generalizada se extiende a todos los aspectos del negocio. Si los clientes están contentos, asumimos que el producto es bueno, el soporte es excelente, los precios son justos y la empresa es confiable. Un solo indicador positivo, los testimonios, eleva la percepción de todo lo demás.</p>
+<p>Segúndo, cuando vemos que una empresa tiene muchos testimonios positivos, el halo de esa satisfacción generalizada se extiende a todos los aspectos del negocio. Si los clientes están contentos, asumimos que el producto es bueno, el soporte es excelente, los precios son justos y la empresa es confiable. Un solo indicador positivo, los testimonios, eleva la percepción de todo lo demás.</p>
 
 <h2>La aversión a la pérdida y el FOMO</h2>
 <p>La teoría de las perspectivas de Daniel Kahneman y Amos Tversky, que les valió un Premio Nobel, demostró que el dolor de perder algo es aproximadamente el doble de intenso que el placer de ganarlo. Esta aversión a la pérdida tiene implicaciones profundas para la prueba social.</p>
@@ -1790,7 +1790,7 @@ export const blogArticles: BlogArticle[] = [
     content: `
 <h2>Por qué los testimonios son cruciales en el sector inmobiliario</h2>
 <p>Comprar o vender una propiedad es, para la mayoría de personas, la decisión financiera más importante de su vida. Estamos hablando de cantidades que representan los ahorros de décadas, la hipoteca de los próximos treinta años o la herencia familiar. En una decisión de esta magnitud, la confianza en el profesional que te acompaña no es un detalle menor; es el factor más determinante de toda la relación comercial.</p>
-<p>Y sin embargo, el sector inmobiliario arrastra un problema histórico de reputación. Según encuestas de confianza profesional, los agentes inmobiliarios consistentemente aparecen entre las profesiones menos confiables, a la altura de los políticos y los vendedores de coches. Esta percepción, justa o injusta, representa un obstáculo enorme para los profesionales inmobiliarios honestos que hacen bien su trabajo pero luchan por diferenciarse de los estereotipos negativos del sector.</p>
+<p>Y sin embargo, el sector inmobiliario arrastra un problema histórico de reputación. Según encuestas de confianza profesional, los agentes inmobiliarios consistentemente aparecen entre las profesiónes menos confiables, a la altura de los políticos y los vendedores de coches. Esta percepción, justa o injusta, representa un obstáculo enorme para los profesionales inmobiliarios honestos que hacen bien su trabajo pero luchan por diferenciarse de los estereotipos negativos del sector.</p>
 <p>Los testimonios de clientes satisfechos son la herramienta más efectiva para romper esta barrera de desconfianza. Cuando un potencial vendedor lee que otro propietario confió en ti, tuvo una experiencia excelente y vendió su propiedad en condiciones favorables, esa narrativa de confianza real pesa más que cualquier anuncio, diploma o eslogan que puedas mostrar. Los testimonios humanizan al agente, demuestran su competencia con evidencias reales y generan la confianza que el sector necesita desesperadamente.</p>
 
 <h2>Los dos públicos del agente inmobiliario: vendedores y compradores</h2>
@@ -1823,7 +1823,7 @@ export const blogArticles: BlogArticle[] = [
 <p>A diferencia de otros sectores, el inmobiliario tiene un componente offline significativo. Los testimonios pueden y deben integrarse también en tus materiales físicos. Incluye citas de clientes en tus folletos de captación. Añade testimonios a tus presentaciones de valoración cuando visitas propietarios. Muestra testimonios en los carteles de "vendido" que dejas en las propiedades. Cada punto de contacto, online u offline, es una oportunidad para reforzar tu credibilidad con la voz de clientes reales.</p>
 
 <h2>Construcción de reputación a largo plazo</h2>
-<p>En el sector inmobiliario, tu reputación es tu negocio. A diferencia del ecommerce donde las transacciones son frecuentes y de bajo valor, las operaciones inmobiliarias son esporádicas y de alto valor. Esto significa que cada testimonio tiene un valor enorme, porque puede influir en decisiones que generan comisiones de miles de euros.</p>
+<p>En el sector inmobiliario, tu reputación es tu negocio. A diferencia del ecommerce donde las transacciones son frecuentes y de bajo valor, las operaciones inmobiliarias son esporádicas y de alto valor. Esto significa que cada testimonio tiene un valor enorme, porque puede influir en decisiones que generan comisiónes de miles de euros.</p>
 <p>Construir un banco sólido de testimonios a lo largo del tiempo es una inversión que se acumula exponencialmente. Los testimonios no caducan, un testimonio de hace dos años sigue siendo relevante si el servicio descrito sigue vigente. Y a medida que acumulas más testimonios, el efecto de volumen aumenta la percepción de experiencia y fiabilidad.</p>
 <p>Con <strong>Opinafy</strong> puedes crear un sistema automatizado que solicita un testimonio después de cada operación cerrada, lo almacena en tu panel, y lo muestra en tu web de forma profesional. Con el tiempo, construyes un activo de marketing que crece con cada operación y que trabaja para ti atrayendo nuevos mandatos sin coste adicional. <strong>Empieza gratis hoy</strong> y comienza a transformar cada cliente satisfecho en tu mejor vendedor.</p>
 `,
@@ -1893,7 +1893,7 @@ export const blogArticles: BlogArticle[] = [
 <h3>Grid o rejilla estática</h3>
 <p>Mostrar tres o cuatro testimonios en una rejilla estática, sin animación ni navegación, es una opción simple y efectiva. El usuario ve todos los testimonios a la vez, sin necesidad de interactuar. Este formato funciona bien cuando tienes pocos testimonios de longitud similar y quieres que todos sean vistos sin esfuerzo.</p>
 <h3>Testimonio destacado único</h3>
-<p>En algunos contextos, como junto a un botón de compra o en una landing page minimalista, un solo testimonio grande y destacado puede ser más efectivo que un carrusel. Elige tu mejor testimonio y dale todo el protagonismo visual que merece.</p>
+<p>En algunos contextos, como junto a un botón de compra o en una landing page mínimalista, un solo testimonio grande y destacado puede ser más efectivo que un carrusel. Elige tu mejor testimonio y dale todo el protagonismo visual que merece.</p>
 <h3>Wall of Love o muro de testimonios</h3>
 <p>Para páginas dedicadas a la prueba social, un muro tipo masonry con carga progresiva es más efectivo que un carrusel. Permite al usuario explorar a su ritmo y genera un efecto de volumen que ningún carrusel puede igualar.</p>
 <h3>Lista vertical con scroll</h3>
@@ -1986,8 +1986,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'caso-estudio-testimonios-conversion',
-    image: blogImageUrl('caso-estudio-testimonios-conversion'),
+    slug: 'caso-estudio-testimonios-conversión',
+    image: blogImageUrl('caso-estudio-testimonios-conversión'),
     title: 'Caso de estudio: cómo una tienda online aumentó conversiones un 47% con testimonios',
     excerpt:
       'Análisis detallado de cómo una tienda online de productos naturales implementó una estrategia de testimonios que aumentó sus conversiones un 47% en solo tres meses.',
@@ -2013,7 +2013,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Antes de implementar cualquier solución, el equipo realizó un análisis exhaustivo para identificar las causas de la baja tasa de conversión. Utilizaron herramientas de analítica, mapas de calor y encuestas a visitantes para entender el comportamiento de los usuarios y las razones por las que abandonaban la web sin comprar.</p>
 <h3>Los hallazgos principales</h3>
 <p>El análisis reveló tres problemas principales. Primero, una <strong>alta tasa de rebote en las páginas de producto</strong>: el 67% de los visitantes que llegaban a una página de producto la abandonaban sin añadir nada al carrito. Los mapas de calor mostraban que los usuarios escaneaban rápidamente la descripción del producto, miraban las fotos y se iban. Faltaba un elemento que les convenciera de que el producto valía la pena.</p>
-<p>Segundo, un <strong>abandono significativo en el checkout</strong>: de los usuarios que añadían productos al carrito, el 72% no completaba la compra. Las encuestas de salida indicaban que la principal razón era "no estoy seguro de la calidad del producto", seguida de "quiero buscar más opiniones". Los usuarios querían validación social antes de comprometerse con la compra.</p>
+<p>Segúndo, un <strong>abandono significativo en el checkout</strong>: de los usuarios que añadían productos al carrito, el 72% no completaba la compra. Las encuestas de salida indicaban que la principal razón era "no estoy seguro de la calidad del producto", seguida de "quiero buscar más opiniones". Los usuarios querían validación social antes de comprometerse con la compra.</p>
 <p>Tercero, <strong>baja tasa de clientes recurrentes</strong>: solo el 15% de los compradores realizaba una segunda compra. Esto sugería que, aunque el producto era bueno, la experiencia post-compra no estaba generando suficiente lealtad como para motivar la recompra.</p>
 <p>El denominador común de los tres problemas era la falta de confianza. Los visitantes no confiaban lo suficiente en los productos para comprar. Los que llegaban al checkout dudaban en el último momento. Y los que compraban no se sentían parte de una comunidad que les motivara a volver. La solución a los tres problemas pasaba por generar confianza, y la herramienta más efectiva para ello eran los testimonios.</p>
 
@@ -2048,7 +2048,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Análisis de los factores de éxito</h2>
 <p>Varios factores contribuyeron al éxito extraordinario de esta implementación. Primero, la <strong>relevancia contextual</strong>: mostrar testimonios específicos de cada producto en su página correspondiente era mucho más efectivo que testimonios genéricos. El visitante veía prueba social directamente aplicable a su decisión de compra.</p>
-<p>Segundo, la <strong>calidad de los testimonios</strong>: las preguntas guía del formulario de Opinafy produjeron testimonios detallados y ricos en información, no simples puntuaciones sin contexto. Cada testimonio contaba una historia que otros clientes podían visualizar.</p>
+<p>Segúndo, la <strong>calidad de los testimonios</strong>: las preguntas guía del formulario de Opinafy produjeron testimonios detallados y ricos en información, no simples puntuaciones sin contexto. Cada testimonio contaba una historia que otros clientes podían visualizar.</p>
 <p>Tercero, la <strong>ubicación estratégica</strong>: los testimonios estaban presentes en cada punto de decisión, desde la primera visita hasta el checkout. No había ningún momento del recorrido del comprador donde faltara validación social.</p>
 <p>Cuarto, la <strong>automatización del proceso</strong>: al automatizar las solicitudes, el sistema generaba testimonios frescos constantemente sin requerir intervención del equipo. Esto garantizaba que la prueba social nunca se estancara.</p>
 
@@ -2195,7 +2195,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Digitalización de testimonios ya existentes</h2>
 <p>Es muy probable que tu negocio ya tenga testimonios valiosos sin que te des cuenta. Revisa tu bandeja de entrada: ¿algún cliente te ha enviado un email de agradecimiento? Mira tu WhatsApp profesional: ¿tienes mensajes de clientes expresando su satisfacción? Busca en las redes sociales: ¿alguien te ha mencionado positivamente? Revisa tu libro de reclamaciones y sugerencias si tienes uno: ¿hay comentarios positivos escritos a mano?</p>
 <p>Todos estos testimonios que ya existen pueden digitalizarse, siempre con permiso del cliente, y añadirse a tu colección de prueba social. Con <strong>Opinafy</strong>, puedes subir testimonios que hayas recibido por otros canales y organizarlos junto con los que recopiles a través de formularios, creando un banco centralizado y completo de opiniones de clientes.</p>
-<p>Incluso puedes fotografiar las notas de agradecimiento escritas a mano que te hayan dejado los clientes y usarlas como testimonio visual en tu web. Estos testimonios manuscritos tienen un encanto especial que transmite autenticidad de forma muy poderosa. La escritura a mano es difícil de falsificar y genera una conexión emocional que el texto digital no siempre consigue.</p>
+<p>Incluso puedes fotografíar las notas de agradecimiento escritas a mano que te hayan dejado los clientes y usarlas como testimonio visual en tu web. Estos testimonios manuscritos tienen un encanto especial que transmite autenticidad de forma muy poderosa. La escritura a mano es difícil de falsificar y genera una conexión emocional que el texto digital no siempre consigue.</p>
 
 <h2>Cómo mostrar testimonios digitales siendo un negocio local</h2>
 <h3>En tu página web</h3>
@@ -2293,7 +2293,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Diseño y presentación visual de testimonios en redes</h2>
 <p>La presentación visual de los testimonios es crucial para que destaquen en un feed saturado de contenido. No basta con escribir el texto del testimonio como publicación sin más; necesitas un diseño que capte la atención del usuario mientras hace scroll rápido por su feed.</p>
-<p>Crea plantillas de diseño reutilizables que respeten tu identidad visual. Puedes tener varias variantes para no ser repetitivo: una plantilla con fondo de color y texto en blanco, otra con la foto del cliente y el texto superpuesto, otra con formato de comillas grandes y tipografía elegante. Herramientas como Canva facilitan la creación de estas plantillas incluso sin conocimientos de diseño gráfico.</p>
+<p>Crea plantillas de diseño reutilizables que respeten tu identidad visual. Puedes tener varias varíantes para no ser repetitivo: una plantilla con fondo de color y texto en blanco, otra con la foto del cliente y el texto superpuesto, otra con formato de comillas grandes y tipografía elegante. Herramientas como Canva facilitan la creación de estas plantillas incluso sin conocimientos de diseño gráfico.</p>
 <p>Incluye siempre elementos que refuercen la credibilidad del testimonio: el nombre del cliente, su profesión o negocio si es relevante, una foto si está disponible, y estrellas o iconos que representen la valoración. Estos elementos visuales comunican autenticidad en una fracción de segundo, antes incluso de que el usuario lea el contenido del testimonio.</p>
 
 <h2>Errores fatales al compartir testimonios en redes sociales</h2>
@@ -2359,7 +2359,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Estructura óptima de un testimonio B2B</h2>
 <p>Un testimonio B2B efectivo debe seguir una estructura que responda a las preguntas que los compradores empresariales se hacen durante su proceso de evaluación. La estructura ideal incluye los siguientes elementos en este orden.</p>
-<p>Primero, el contexto de la empresa: sector, tamaño, ubicación y cualquier detalle relevante que ayude al lector a identificarse. Segundo, el desafío o problema que la empresa enfrentaba antes de contratar tu solución. Tercero, las razones por las que eligieron tu empresa frente a las alternativas. Cuarto, la implementación y experiencia de uso. Quinto, los resultados obtenidos con métricas concretas. Y sexto, una recomendación general o valoración de la relación.</p>
+<p>Primero, el contexto de la empresa: sector, tamaño, ubicación y cualquier detalle relevante que ayude al lector a identificarse. Segúndo, el desafío o problema que la empresa enfrentaba antes de contratar tu solución. Tercero, las razones por las que eligieron tu empresa frente a las alternativas. Cuarto, la implementación y experiencia de uso. Quinto, los resultados obtenidos con métricas concretas. Y sexto, una recomendación general o valoración de la relación.</p>
 <p>Con <strong>Opinafy</strong>, puedes diseñar formularios de recopilación con preguntas que guíen al cliente a cubrir cada uno de estos puntos. En lugar de un campo abierto de "escribe tu opinión", que puede generar testimonios vagos e incompletos, las preguntas específicas aseguran que el testimonio resultante sea completo, estructurado y útil para tu proceso de venta.</p>
 
 <h2>Formatos de testimonios B2B más efectivos</h2>
@@ -2399,8 +2399,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'landing-pages-testimonios-conversion',
-    image: blogImageUrl('landing-pages-testimonios-conversion'),
+    slug: 'landing-pages-testimonios-conversión',
+    image: blogImageUrl('landing-pages-testimonios-conversión'),
     title: 'Landing pages con testimonios: estructura perfecta para convertir',
     excerpt:
       'Aprende a diseñar landing pages con testimonios que maximicen las conversiones. Descubre dónde colocar los testimonios, qué tipos usar y cómo estructurar la página para vender más.',
@@ -2484,8 +2484,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-academias-formacion',
-    image: blogImageUrl('testimonios-academias-formacion'),
+    slug: 'testimonios-academias-formación',
+    image: blogImageUrl('testimonios-academias-formación'),
     title: 'Testimonios para academias y centros de formación online',
     excerpt:
       'Guía completa de testimonios para academias, cursos online y centros de formación. Aprende a recopilar y mostrar opiniones de alumnos que atraigan nuevas matrículas.',
@@ -2654,13 +2654,13 @@ export const blogArticles: BlogArticle[] = [
 <p>También es un error atribuir todas las mejoras exclusivamente a los testimonios. Si implementaste testimonios al mismo tiempo que rediseñaste tu web y lanzaste una nueva campaña publicitaria, es imposible saber qué parte de la mejora corresponde a cada factor. Para una medición precisa, implementa los cambios de forma aislada y secuencial siempre que sea posible.</p>
 
 <h2>Conclusión: Los testimonios como inversión de alto rendimiento</h2>
-<p>Cuando mides correctamente el ROI de los testimonios, la conclusión es casi siempre la misma: son una de las inversiones de marketing con mayor retorno. El coste de recopilar y gestionar testimonios es relativamente bajo, especialmente con herramientas como <strong>Opinafy</strong> que automatizan gran parte del proceso, mientras que el beneficio en forma de mayores conversiones, mayor confianza y menor coste de adquisición de clientes puede ser extraordinariamente alto.</p>
+<p>Cuando mides correctamente el ROI de los testimonios, la conclusión es casi siempre la misma: son una de las inversiónes de marketing con mayor retorno. El coste de recopilar y gestionar testimonios es relativamente bajo, especialmente con herramientas como <strong>Opinafy</strong> que automatizan gran parte del proceso, mientras que el beneficio en forma de mayores conversiones, mayor confianza y menor coste de adquisición de clientes puede ser extraordinariamente alto.</p>
 <p>No te quedes con la intuición de que "los testimonios funcionan". Mide, cuantifica y demuestra con datos el valor que generan para tu negocio. Los números te permitirán justificar la inversión continuada en tu estrategia de testimonios, optimizar lo que funciona, descartar lo que no funciona y tomar decisiones basadas en evidencias en lugar de suposiciones. <strong>Empieza gratis con Opinafy</strong>, implementa tu estrategia de testimonios y mide los resultados. Los datos te convencerán.</p>
 `,
   },
   {
-    slug: 'testimonios-fotografia-bodas',
-    image: blogImageUrl('testimonios-fotografia-bodas'),
+    slug: 'testimonios-fotografía-bodas',
+    image: blogImageUrl('testimonios-fotografía-bodas'),
     title: 'Testimonios para fotógrafos y videógrafos de bodas',
     excerpt:
       'Guía completa de testimonios para fotógrafos y videógrafos de bodas. Aprende a recopilar y usar las opiniones de tus parejas para conseguir más contratos.',
@@ -2698,7 +2698,7 @@ export const blogArticles: BlogArticle[] = [
 <p>La relación con el fotógrafo de bodas dura meses: desde la primera consulta hasta la entrega final. Los testimonios que hablan de la rapidez de respuesta, la claridad en la comunicación, la profesionalidad en las reuniones previas y la puntualidad en la entrega son muy valiosos porque abordan preocupaciones que todas las parejas tienen pero que rara vez aparecen en los portfolios.</p>
 
 <h3>Testimonios de bodas con circunstancias especiales</h3>
-<p>Bodas con lluvia, bodas íntimas, bodas multiculturales, bodas LGTBI, elopements o bodas destino: si has fotografiado bodas en circunstancias especiales, los testimonios de esas parejas son oro puro. Una pareja que planea un elopement en la montaña buscará específicamente un fotógrafo con experiencia en ese tipo de celebración, y un testimonio de una pareja que vivió esa experiencia contigo será decisivo.</p>
+<p>Bodas con lluvia, bodas íntimas, bodas multiculturales, bodas LGTBI, elopements o bodas destino: si has fotografíado bodas en circunstancias especiales, los testimonios de esas parejas son oro puro. Una pareja que planea un elopement en la montaña buscará específicamente un fotógrafo con experiencia en ese tipo de celebración, y un testimonio de una pareja que vivió esa experiencia contigo será decisivo.</p>
 
 <h2>Cuándo y cómo pedir testimonios a las parejas</h2>
 <h3>Después de la entrega de la galería o el vídeo</h3>
@@ -2813,7 +2813,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Opinafy te ayuda a rastrear el rendimiento de tus testimonios proporcionándote datos sobre visualizaciones, interacciones y el crecimiento de tu banco de prueba social. Combina estos datos con las métricas de tus herramientas de analítica web y redes sociales para obtener una visión completa del impacto de tu estrategia de UGC.</p>
 
 <h2>Tendencias futuras en UGC y testimonios</h2>
-<p>El UGC y los testimonios evolucionan constantemente junto con las plataformas y las tecnologías. Algunas tendencias que están moldeando el futuro de este tipo de contenido incluyen el auge de los vídeos cortos como formato dominante de UGC, el crecimiento de las reseñas verificadas y autenticadas como respuesta a la desconfianza hacia las opiniones falsas, la personalización del UGC mostrado según el perfil del visitante, y la integración de testimonios en experiencias de compra interactivas como realidad aumentada o chatbots de ventas.</p>
+<p>El UGC y los testimonios evolucionan constantemente junto con las plataformas y las tecnologías. Algunas tendencias que están moldeando el futuro de este tipo de contenido incluyen el auge de los vídeos cortos como formato dominante de UGC, el crecimiento de las reseñas verificadas y auténticadas como respuesta a la desconfianza hacia las opiniones falsas, la personalización del UGC mostrado según el perfil del visitante, y la integración de testimonios en experiencias de compra interactivas como realidad aumentada o chatbots de ventas.</p>
 <p>Mantenerse al día con estas tendencias y adaptar tu estrategia de UGC y testimonios en consecuencia te permitirá mantener una ventaja competitiva en un panorama de marketing en constante evolución. Las empresas que sepan aprovechar el contenido de sus clientes de forma auténtica y estratégica serán las que dominen sus mercados en los próximos años.</p>
 
 <h2>Conclusión: Tus clientes son tus mejores creadores de contenido</h2>
@@ -3163,7 +3163,7 @@ export const blogArticles: BlogArticle[] = [
       'Aprende a usar testimonios de pacientes para atraer más consultas a tu clínica dental. Estrategias específicas para dentistas y odontólogos, incluyendo aspectos legales y éticos.',
     content: `
 <h2>Introducción: Superar el miedo al dentista con la voz de otros pacientes</h2>
-<p>La odontología enfrenta un desafío de marketing que pocas otras profesiones sanitarias conocen: el miedo. Se estima que entre un quince y un veinticinco por ciento de la población sufre odontofobia o un nivel significativo de ansiedad dental. Esto significa que una proporción sustancial de tus potenciales pacientes no solo necesita convencerse de que tu clínica es buena; necesita superar una barrera emocional para dar el paso de pedir cita. Los testimonios de otros pacientes que describen experiencias positivas y libres de dolor son probablemente la herramienta más efectiva para derribar esa barrera.</p>
+<p>La odontología enfrenta un desafío de marketing que pocas otras profesiónes sanitarias conocen: el miedo. Se estima que entre un quince y un veinticinco por ciento de la población sufre odontofobia o un nivel significativo de ansiedad dental. Esto significa que una proporción sustancial de tus potenciales pacientes no solo necesita convencerse de que tu clínica es buena; necesita superar una barrera emocional para dar el paso de pedir cita. Los testimonios de otros pacientes que describen experiencias positivas y libres de dolor son probablemente la herramienta más efectiva para derribar esa barrera.</p>
 <p>Pero el miedo no es el único factor que dificulta la captación de pacientes dentales. La desconfianza en los precios, la percepción de que los dentistas recomiendan tratamientos innecesarios, la incertidumbre sobre la calidad estética de los tratamientos y la dificultad para evaluar la competencia técnica de un profesional antes de sentarse en el sillón son obstáculos que los testimonios pueden ayudar a superar. Cada testimonio de un paciente satisfecho es una pieza de evidencia que desmonta una objeción.</p>
 <p>En este artículo, exploraremos cómo las clínicas dentales y los odontólogos pueden desarrollar una estrategia de testimonios que aborde específicamente las preocupaciones de los pacientes potenciales, respete las regulaciones del sector sanitario y genere un flujo constante de nuevas consultas.</p>
 
@@ -3300,7 +3300,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Errores en el storytelling de testimonios</h2>
 <p>El error más grave es inventar o exagerar historias. El storytelling de testimonios debe basarse siempre en experiencias reales contadas por clientes reales. Puedes estructurar, editar y resaltar, pero nunca fabricar. Un testimonio inventado, por bien escrito que esté, siempre corre el riesgo de ser descubierto, y el daño a tu credibilidad sería devastador.</p>
 <p>Otro error es hacer del producto el héroe de la historia. El héroe siempre debe ser el cliente. Tu producto es la herramienta que el héroe usó para superar su desafío, no el protagonista de la narrativa. Esta distinción puede parecer sutil, pero es fundamental para que el lector se identifique con el testimonio.</p>
-<p>Un tercer error es usar un tono narrativo que no coincida con tu marca. Si tu marca es seria y profesional, las historias deben ser serias y profesionales. Si tu marca es cercana y divertida, las historias pueden reflejar ese tono. La coherencia de tono entre tus testimonios y el resto de tu comunicación es esencial para mantener la autenticidad.</p>
+<p>Un tercer error es usar un tono narrativo que no coincida con tu marca. Si tu marca es sería y profesional, las historias deben ser serias y profesionales. Si tu marca es cercana y divertida, las historias pueden reflejar ese tono. La coherencia de tono entre tus testimonios y el resto de tu comunicación es esencial para mantener la autenticidad.</p>
 
 <h2>Cómo Opinafy facilita el storytelling de testimonios</h2>
 <p><strong>Opinafy</strong> está diseñado para ayudarte a recopilar testimonios con la profundidad necesaria para el storytelling. Los formularios personalizables te permiten crear preguntas que guían al cliente a través de los elementos narrativos sin que sientan que están escribiendo una novela. Las respuestas se almacenan de forma organizada en tu panel de gestión, donde puedes revisarlas, seleccionar las más narrativas y publicarlas en tu web con widgets que muestran los testimonios de forma atractiva y profesional.</p>
@@ -3376,7 +3376,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Testimonios visuales: el poder de las fotos de antes y después</h2>
 <p>En el sector de la belleza, las fotos de antes y después son testimonios visuales que hablan por sí solos. Una transformación de color, una recuperación de pelo dañado, un cambio de estilo radical o los resultados de un tratamiento facial son historias que se cuentan mejor con imágenes que con palabras. Cuando estas fotos se acompañan de un testimonio escrito que describe la experiencia y la satisfacción de la clienta, el resultado es un testimonio completo e irresistible.</p>
-<p>Pide siempre permiso para fotografiar y, cuando sea posible, solicita que la clienta pose junto a su nuevo look con una sonrisa. Las fotos con la clienta sonriendo transmiten satisfacción de forma más poderosa que cualquier texto. Con <strong>Opinafy</strong>, el formulario de testimonios permite adjuntar fotos, facilitando la recopilación de testimonios visuales y escritos en un solo paso.</p>
+<p>Pide siempre permiso para fotografíar y, cuando sea posible, solicita que la clienta pose junto a su nuevo look con una sonrisa. Las fotos con la clienta sonriendo transmiten satisfacción de forma más poderosa que cualquier texto. Con <strong>Opinafy</strong>, el formulario de testimonios permite adjuntar fotos, facilitando la recopilación de testimonios visuales y escritos en un solo paso.</p>
 
 <h2>Gestión de la diversidad en testimonios</h2>
 <p>Tu salón atiende a personas de diferentes edades, estilos, tipos de cabello, tonos de piel y preferencias estéticas. Tu colección de testimonios debe reflejar esta diversidad. Una persona con cabello rizado necesita ver testimonios de alguien con cabello similar que confirme que tu equipo sabe trabajar con rizos. Una persona mayor necesita ver testimonios de alguien de su edad que se sintió cómoda y bien atendida. Una persona que busca un estilo atrevido necesita testimonios que confirmen que tu salón no se limita a cortes convencionales.</p>
@@ -3437,7 +3437,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Método 3: Integración con Opinafy mediante widget embebido</h2>
 <p>La tercera opción, y la que recomendamos para la mayoría de usuarios de WordPress, es utilizar un servicio especializado en testimonios e integrarlo en tu web mediante un widget embebido. <strong>Opinafy</strong> ofrece esta funcionalidad de forma nativa: generas un código de inserción desde tu panel de Opinafy y lo pegas en tu página de WordPress. Así de sencillo.</p>
-<p>El proceso paso a paso es el siguiente. Primero, creas tu cuenta en Opinafy y configuras tu formulario de recopilación de testimonios con las preguntas que consideres relevantes para tu negocio. Segundo, compartes el enlace del formulario con tus clientes por email, WhatsApp o mediante un código QR. Tercero, a medida que los testimonios llegan, los revisas y apruebas desde tu panel de gestión. Cuarto, copias el código del widget de Opinafy y lo pegas en tu página de WordPress usando un bloque de HTML personalizado.</p>
+<p>El proceso paso a paso es el siguiente. Primero, creas tu cuenta en Opinafy y configuras tu formulario de recopilación de testimonios con las preguntas que consideres relevantes para tu negocio. Segúndo, compartes el enlace del formulario con tus clientes por email, WhatsApp o mediante un código QR. Tercero, a medida que los testimonios llegan, los revisas y apruebas desde tu panel de gestión. Cuarto, copias el código del widget de Opinafy y lo pegas en tu página de WordPress usando un bloque de HTML personalizado.</p>
 <p>Este método tiene múltiples ventajas sobre las dos opciones anteriores. Los testimonios se gestionan desde una plataforma dedicada, lo que significa que no sobrecargas tu instalación de WordPress con plugins adicionales. El widget se actualiza automáticamente cada vez que apruebas un nuevo testimonio, sin necesidad de editar ninguna página. El diseño del widget es profesional y responsive, adaptándose a cualquier tamaño de pantalla. Y si algún día cambias tu web de WordPress a otra plataforma, tus testimonios siguen intactos en Opinafy y solo tienes que pegar el nuevo código de inserción en tu nueva web.</p>
 
 <h2>Cómo insertar el código del widget en WordPress</h2>
@@ -3495,7 +3495,7 @@ export const blogArticles: BlogArticle[] = [
       'Descubre cómo añadir testimonios de clientes en tu tienda Shopify para aumentar la confianza y las ventas. Guía paso a paso con estrategias de prueba social para ecommerce.',
     content: `
 <h2>Introducción: La prueba social como motor de ventas en Shopify</h2>
-<p>Shopify se ha consolidado como una de las plataformas de comercio electrónico más populares del mundo, utilizada por millones de tiendas en línea que venden de todo, desde ropa y accesorios hasta productos digitales y servicios por suscripción. La facilidad de uso de Shopify ha democratizado el ecommerce, permitiendo que cualquier persona pueda montar una tienda online profesional sin necesidad de conocimientos técnicos avanzados. Sin embargo, crear la tienda es solo el primer paso; la verdadera batalla es convertir visitantes en compradores, y ahí es donde los testimonios de clientes juegan un papel decisivo.</p>
+<p>Shopify se ha consólidado como una de las plataformas de comercio electrónico más populares del mundo, utilizada por millones de tiendas en línea que venden de todo, desde ropa y accesorios hasta productos digitales y servicios por suscripción. La facilidad de uso de Shopify ha democratizado el ecommerce, permitiendo que cualquier persona pueda montar una tienda online profesional sin necesidad de conocimientos técnicos avanzados. Sin embargo, crear la tienda es solo el primer paso; la verdadera batalla es convertir visitantes en compradores, y ahí es donde los testimonios de clientes juegan un papel decisivo.</p>
 <p>En el comercio electrónico, la confianza es la moneda más valiosa. A diferencia de una tienda física donde el cliente puede tocar el producto, ver su tamaño real, comprobar la calidad del material y hablar con un vendedor, en una tienda online el cliente solo tiene fotos, descripciones y la promesa de que el producto es como dice ser. Los testimonios de otros compradores llenan ese vacío de confianza al proporcionar experiencias reales de personas que ya han comprado y están satisfechas.</p>
 <p>Las estadísticas son contundentes: más del noventa por ciento de los compradores online leen opiniones antes de realizar una compra, y las tiendas con testimonios visibles experimentan aumentos en las tasas de conversión que pueden llegar hasta un treinta y cuatro por ciento. Si tienes una tienda en Shopify y todavía no has integrado testimonios de clientes de forma estratégica, estás dejando dinero sobre la mesa cada día.</p>
 
@@ -3531,7 +3531,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Cómo integrar Opinafy en Shopify paso a paso</h2>
 <p>Integrar testimonios de <strong>Opinafy</strong> en tu tienda Shopify es un proceso sencillo que no requiere conocimientos técnicos. Estos son los pasos detallados para conseguirlo.</p>
 <p>Primero, crea tu cuenta en Opinafy y configura tu formulario de recopilación de testimonios con las preguntas relevantes para tu negocio de ecommerce. Puedes preguntar sobre la experiencia de compra, la calidad del producto, el tiempo de envío y cualquier otro aspecto que consideres importante.</p>
-<p>Segundo, comparte el enlace de tu formulario con tus clientes. Puedes hacerlo mediante emails post-compra automatizados desde Shopify, incluyendo una tarjeta con el enlace o código QR dentro del paquete del pedido, o compartiendo el enlace en tus redes sociales y grupos de clientes.</p>
+<p>Segúndo, comparte el enlace de tu formulario con tus clientes. Puedes hacerlo mediante emails post-compra automatizados desde Shopify, incluyendo una tarjeta con el enlace o código QR dentro del paquete del pedido, o compartiendo el enlace en tus redes sociales y grupos de clientes.</p>
 <p>Tercero, revisa y aprueba los testimonios que vayan llegando desde tu panel de gestión de Opinafy. Cuarto, copia el código del widget de Opinafy y pégalo en tu tienda Shopify. En Shopify, puedes hacerlo editando el tema en el editor visual y añadiendo una sección de código personalizado, o editando directamente el archivo del tema en el editor de código.</p>
 
 <h2>Estrategias para recopilar más reseñas en tu tienda Shopify</h2>
@@ -3603,7 +3603,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Segmenta también por la respuesta a la pregunta abierta. Los promotores que dejan comentarios detallados y expresivos son más propensos a aceptar una solicitud de testimonio y a proporcionar un testimonio de calidad. Los que dejan la pregunta abierta en blanco o responden con monosílabos podrían seguir siendo buenos candidatos, pero necesitarán un enfoque diferente y quizás más orientación sobre qué escribir.</p>
 
 <h2>El flujo automatizado: de encuesta NPS a testimonio publicado</h2>
-<p>El verdadero poder de combinar NPS y testimonios está en la automatización. Puedes crear un flujo que funcione de la siguiente manera. Primero, envías la encuesta de NPS a tu cliente, ya sea por email, SMS o dentro de tu aplicación. Segundo, cuando el cliente responde con un nueve o un diez, se activa automáticamente un segundo paso: una invitación a dejar un testimonio más detallado. Tercero, el testimonio llega a tu panel de gestión, donde lo revisas y apruebas. Cuarto, el testimonio aprobado se pública automáticamente en tu web a través de un widget.</p>
+<p>El verdadero poder de combinar NPS y testimonios está en la automatización. Puedes crear un flujo que funcione de la siguiente manera. Primero, envías la encuesta de NPS a tu cliente, ya sea por email, SMS o dentro de tu aplicación. Segúndo, cuando el cliente responde con un nueve o un diez, se activa automáticamente un segundo paso: una invitación a dejar un testimonio más detallado. Tercero, el testimonio llega a tu panel de gestión, donde lo revisas y apruebas. Cuarto, el testimonio aprobado se pública automáticamente en tu web a través de un widget.</p>
 <p><strong>Opinafy</strong> facilita enormemente este proceso. Puedes configurar tu formulario de recopilación de testimonios como el segundo paso de tu flujo de NPS y enviar el enlace automáticamente a los promotores mediante tu herramienta de automatización de marketing. El formulario de Opinafy puede personalizarse con preguntas específicas que amplíen la información que el promotor ya proporcionó en la encuesta de NPS, convirtiendo una respuesta breve en un testimonio completo y publicable.</p>
 
 <h2>Cómo pedir el testimonio a un promotor</h2>
@@ -3634,7 +3634,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Errores comunes en la estrategia NPS-testimonios</h2>
 <p>El error más grave es pedir testimonios a todos los clientes indiscriminadamente, sin filtrar por puntuación NPS. Si pides un testimonio a un detractor, no solo es poco probable que obtengas algo positivo, sino que puedes irritar a un cliente ya insatisfecho. El flujo debe activarse exclusivamente para promotores.</p>
-<p>Otro error es no cerrar el ciclo con los detractores. Si un detractor te puntúa bajo y nunca recibe una respuesta de tu parte, su insatisfacción se consolida y puede convertirse en un detractor activo que comparte su mala experiencia públicamente. Siempre contacta a los detractores, escucha sus quejas, ofrece soluciones y haz seguimiento.</p>
+<p>Otro error es no cerrar el ciclo con los detractores. Si un detractor te puntúa bajo y nunca recibe una respuesta de tu parte, su insatisfacción se consólida y puede convertirse en un detractor activo que comparte su mala experiencia públicamente. Siempre contacta a los detractores, escucha sus quejas, ofrece soluciones y haz seguimiento.</p>
 <p>Un tercer error es confundir la puntuación NPS alta con permiso para publicar. El hecho de que un cliente te puntúe con un diez no significa que quiera que publiques su nombre y su opinión en tu web. Siempre necesitas un consentimiento explícito antes de publicar cualquier testimonio, y ese consentimiento debe obtenerse a través del formulario de testimonio, no de la encuesta NPS.</p>
 
 <h2>Conclusión: Del número al testimonio, del testimonio a la venta</h2>
@@ -3663,7 +3663,7 @@ export const blogArticles: BlogArticle[] = [
     content: `
 <h2>Introducción: En la industria hotelera, la opinión del huésped lo es todo</h2>
 <p>La industria hotelera y de alojamientos turísticos es, probablemente, el sector donde las opiniones y testimonios de clientes tienen un impacto más directo y medible en los ingresos. Cuando una persona planifica un viaje y busca dónde alojarse, las reseñas y testimonios de huéspedes anteriores son el factor más determinante en su decisión, por encima del precio, la ubicación e incluso las fotografías del establecimiento. Esto no es una opinión; es un dato que confirman los estudios del sector una y otra vez.</p>
-<p>Más del ochenta por ciento de los viajeros lee opiniones antes de reservar un alojamiento. Y no se conforman con leer un par: el viajero medio consulta entre seis y doce opiniones antes de tomar su decisión. En un sector donde la competencia es feroz y las plataformas de intermediarios como Booking, Expedia y Airbnb cobran comisiones que pueden llegar al veinticinco por ciento, los testimonios no solo influyen en la decisión de reservar, sino que pueden determinar si el cliente reserva directamente contigo o a través de un intermediario que te cuesta una cuarta parte de tus ingresos.</p>
+<p>Más del ochenta por ciento de los viajeros lee opiniones antes de reservar un alojamiento. Y no se conforman con leer un par: el viajero medio consulta entre seis y doce opiniones antes de tomar su decisión. En un sector donde la competencia es feroz y las plataformas de intermediarios como Booking, Expedia y Airbnb cobran comisiónes que pueden llegar al veinticinco por ciento, los testimonios no solo influyen en la decisión de reservar, sino que pueden determinar si el cliente reserva directamente contigo o a través de un intermediario que te cuesta una cuarta parte de tus ingresos.</p>
 <p>Este artículo es una guía completa sobre cómo los hoteles, apartamentos turísticos, casas rurales, hostales y cualquier tipo de alojamiento pueden aprovechar los testimonios de huéspedes para aumentar las reservas directas, mejorar la reputación online y reducir la dependencia de los intermediarios. Porque cada testimonio positivo no es solo una estrella más en tu perfil; es un argumento de venta que trabaja para ti las veinticuatro horas del día, los trescientos sesenta y cinco días del año.</p>
 
 <h2>El ecosistema de opiniones en el sector hotelero</h2>
@@ -3672,7 +3672,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Testimonios propios versus reseñas en plataformas de terceros</h2>
 <p>Las reseñas en plataformas como Booking o TripAdvisor tienen un gran alcance y credibilidad, pero tienen una desventaja importante: no las controlas tú. No puedes elegir cuáles se muestran primero, no puedes destacar las más representativas, no puedes integrarlas en tus materiales de marketing y, sobre todo, están en una plataforma que compite directamente contigo por la reserva de tus propios huéspedes.</p>
-<p>Los testimonios propios, recopilados directamente de tus huéspedes y mostrados en tu propia web, te dan control total. Puedes seleccionar los más representativos, organizarlos por tipo de viajero, por temporada, por tipo de habitación. Puedes integrarlos en tu motor de reservas, en tus emails de marketing, en tus folletos, en tus redes sociales. Y lo más importante: los testimonios en tu web propia refuerzan la reserva directa, ahorrándote las comisiones de los intermediarios.</p>
+<p>Los testimonios propios, recopilados directamente de tus huéspedes y mostrados en tu propia web, te dan control total. Puedes seleccionar los más representativos, organizarlos por tipo de viajero, por temporada, por tipo de habitación. Puedes integrarlos en tu motor de reservas, en tus emails de marketing, en tus folletos, en tus redes sociales. Y lo más importante: los testimonios en tu web propia refuerzan la reserva directa, ahorrándote las comisiónes de los intermediarios.</p>
 <p>Con <strong>Opinafy</strong>, puedes crear un sistema de recopilación de testimonios propios que funciona en paralelo a las plataformas de terceros. No se trata de reemplazar las reseñas de Booking o TripAdvisor, sino de complementarlas con testimonios que tú gestionas y controlas, y que trabajan para impulsar las reservas directas a través de tu web.</p>
 
 <h2>Cuándo y cómo pedir testimonios a tus huéspedes</h2>
@@ -3683,7 +3683,7 @@ export const blogArticles: BlogArticle[] = [
 <p>El momento del checkout es otro punto de contacto ideal para solicitar testimonios. El huésped ya ha vivido toda la experiencia y puede dar una opinión completa. Si el checkout es en recepción, el recepcionista puede pedirlo personalmente. Si el checkout es online o express, puedes enviar un email automático con el enlace al formulario de testimonios de Opinafy.</p>
 
 <h3>Después de la estancia</h3>
-<p>El email post-estancia es el método más utilizado en el sector hotelero para recopilar opiniones. Lo ideal es enviarlo entre uno y tres días después del checkout, cuando el huésped todavía tiene fresca la experiencia pero ya ha tenido tiempo de reflexionar sobre ella. El email debe ser breve, personalizado con el nombre del huésped y el tipo de habitación que reservó, y debe incluir un enlace directo al formulario de testimonios. Con Opinafy, puedes generar enlaces únicos para cada propiedad, tipo de habitación o temporada, facilitando la categorización automática de los testimonios.</p>
+<p>El email post-estancia es el método más utilizado en el sector hotelero para recopilar opiniones. Lo ideal es enviarlo entre uno y tres días después del checkout, cuando el huésped todavía tiene fresca la experiencia pero ya ha tenido tiempo de reflexiónar sobre ella. El email debe ser breve, personalizado con el nombre del huésped y el tipo de habitación que reservó, y debe incluir un enlace directo al formulario de testimonios. Con Opinafy, puedes generar enlaces únicos para cada propiedad, tipo de habitación o temporada, facilitando la categorización automática de los testimonios.</p>
 
 <h2>Tipos de testimonios relevantes para alojamientos</h2>
 <h3>Testimonios por tipo de viajero</h3>
@@ -3718,7 +3718,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Los widgets de Opinafy se integran fácilmente en cualquier web, incluyendo las webs de hoteles construidas con plataformas como WordPress, Wix, Squarespace o sistemas de gestión hotelera. El diseño responsive asegura que los testimonios se ven perfectos tanto en el ordenador de escritorio donde el huésped planifica su viaje como en el móvil donde hace la reserva impulsiva de último momento.</p>
 
 <h2>Conclusión: Cada huésped satisfecho es tu mejor comercial</h2>
-<p>En la industria hotelera, donde la competencia es brutal y los intermediarios se llevan una parte significativa de tus ingresos, los testimonios de huéspedes satisfechos son tu arma más poderosa para diferenciarte, fidelizar y generar reservas directas. Cada testimonio positivo en tu web propia es un argumento de venta que trabaja las veinticuatro horas del día y que no te cuesta un céntimo en comisiones.</p>
+<p>En la industria hotelera, donde la competencia es brutal y los intermediarios se llevan una parte significativa de tus ingresos, los testimonios de huéspedes satisfechos son tu arma más poderosa para diferenciarte, fidelizar y generar reservas directas. Cada testimonio positivo en tu web propia es un argumento de venta que trabaja las veinticuatro horas del día y que no te cuesta un céntimo en comisiónes.</p>
 <p>No te conformes con las reseñas que tus huéspedes dejan en plataformas de terceros. Crea tu propio sistema de recopilación de testimonios con <strong>Opinafy</strong>, pide opiniones a cada huésped, gestiona y selecciona las mejores, y muéstralas en tu web de forma que impulsen la reserva directa. <strong>Empieza gratis con Opinafy</strong> y convierte la satisfacción de tus huéspedes en el motor de crecimiento de tu negocio hotelero.</p>
 `,
   },
@@ -3743,7 +3743,7 @@ export const blogArticles: BlogArticle[] = [
     content: `
 <h2>Introducción: El diseño importa tanto como el contenido</h2>
 <p>Puedes tener los mejores testimonios del mundo, escritos por los clientes más elocuentes y satisfechos, pero si los presentas de forma visualmente mediocre, su impacto se reduce drásticamente. El diseño de las tarjetas de testimonios no es solo una cuestión estética; es un factor que influye directamente en la credibilidad percibida, la legibilidad, el engagement y, en última instancia, las conversiones. Un testimonio bien diseñado se lee, se recuerda y convence. Un testimonio mal diseñado se ignora.</p>
-<p>En este artículo exploraremos quince ejemplos de diseño de tarjetas de testimonios que funcionan, analizando los principios de diseño web que los hacen efectivos. Desde tarjetas minimalistas hasta diseños más elaborados con fotos, vídeos y animaciones, cubriremos un abanico amplio de opciones para que encuentres la inspiración que necesitas para presentar tus testimonios de la mejor forma posible.</p>
+<p>En este artículo exploraremos quince ejemplos de diseño de tarjetas de testimonios que funcionan, analizando los principios de diseño web que los hacen efectivos. Desde tarjetas mínimalistas hasta diseños más elaborados con fotos, vídeos y animaciones, cubriremos un abanico amplio de opciones para que encuentres la inspiración que necesitas para presentar tus testimonios de la mejor forma posible.</p>
 <p>No necesitas ser diseñador gráfico para crear tarjetas de testimonios atractivas. Los principios son sencillos y universales: jerarquía visual, contraste, espaciado, tipografía legible y elementos de credibilidad. Entender estos principios te permitirá evaluar el diseño de tus testimonios actuales, identificar áreas de mejora y tomar decisiones informadas cuando elijas un widget o plantilla para mostrar tus testimonios. Plataformas como <strong>Opinafy</strong> ofrecen widgets con diseños profesionales preconfigurados que aplican estos principios automáticamente, pero conocerlos te ayudará a personalizar el diseño según la identidad visual de tu marca.</p>
 
 <h2>Principios fundamentales de diseño para tarjetas de testimonios</h2>
@@ -3759,8 +3759,8 @@ export const blogArticles: BlogArticle[] = [
 <h3>Elementos de credibilidad</h3>
 <p>Cada tarjeta de testimonio debe incluir elementos que la hagan creíble: el nombre completo del autor, su cargo o profesión, su empresa, y si es posible, una foto real. Las tarjetas sin nombre o con iniciales genéricas se perciben como potencialmente fabricadas. Las fotos añaden una capa significativa de autenticidad. Si tu sistema de recopilación incluye la foto del cliente, úsala siempre; si no, al menos incluye el nombre completo y la empresa o ciudad.</p>
 
-<h2>Ejemplo 1: La tarjeta minimalista</h2>
-<p>El diseño minimalista es una opción excelente para marcas modernas y profesionales. Consiste en una tarjeta con fondo blanco, texto en gris oscuro o negro, un borde sutil o una sombra suave, y los elementos esenciales: texto del testimonio, nombre del autor y su cargo. Sin fotos, sin estrellas, sin adornos. La fuerza de este diseño reside en que el texto del testimonio ocupa el protagonismo absoluto. Es ideal cuando los testimonios son elocuentes y no necesitan elementos visuales adicionales para ser convincentes.</p>
+<h2>Ejemplo 1: La tarjeta mínimalista</h2>
+<p>El diseño mínimalista es una opción excelente para marcas modernas y profesionales. Consiste en una tarjeta con fondo blanco, texto en gris oscuro o negro, un borde sutil o una sombra suave, y los elementos esenciales: texto del testimonio, nombre del autor y su cargo. Sin fotos, sin estrellas, sin adornos. La fuerza de este diseño reside en que el texto del testimonio ocupa el protagonismo absoluto. Es ideal cuando los testimonios son elocuentes y no necesitan elementos visuales adicionales para ser convincentes.</p>
 
 <h2>Ejemplo 2: Tarjeta con foto circular del autor</h2>
 <p>Este es quizás el diseño más popular y reconocible de tarjetas de testimonios. La foto del autor aparece como un círculo, generalmente centrado en la parte superior de la tarjeta o alineado a la izquierda del texto. Debajo de la foto, el nombre y cargo del autor, y luego el texto del testimonio. La foto circular es un elemento visual que inmediatamente humaniza el testimonio y añade credibilidad. Si la foto es de calidad, con buena iluminación y enfoque, el impacto es significativo.</p>
@@ -3802,10 +3802,10 @@ export const blogArticles: BlogArticle[] = [
 <p>El diseño en cuadrícula masonry, similar al de Pinterest, muestra múltiples tarjetas de testimonios de diferentes tamaños organizadas de forma visualmente dinámica. Las tarjetas con testimonios más largos ocupan más espacio vertical, mientras que las más breves son más compactas. El resultado es una presentación visualmente interesante que invita a explorar y leer múltiples testimonios.</p>
 
 <h2>Ejemplo 15: Tarjeta con animación sutil</h2>
-<p>Las animaciones sutiles al hacer scroll, como una tarjeta que aparece deslizándose desde abajo o que se desvanece suavemente, añaden un toque de modernidad y dinamismo a la sección de testimonios. La clave es la sutileza: las animaciones deben mejorar la experiencia, no distraer. Un efecto de hover que agranda ligeramente la tarjeta o que resalta el borde es suficiente para añadir interactividad sin sacrificar la seriedad.</p>
+<p>Las animaciones sútiles al hacer scroll, como una tarjeta que aparece deslizándose desde abajo o que se desvanece suavemente, añaden un toque de modernidad y dinamismo a la sección de testimonios. La clave es la sutileza: las animaciones deben mejorar la experiencia, no distraer. Un efecto de hover que agranda ligeramente la tarjeta o que resalta el borde es suficiente para añadir interactividad sin sacrificar la seriedad.</p>
 
 <h2>Cómo elegir el diseño adecuado para tu marca</h2>
-<p>La elección del diseño depende de varios factores: tu sector, tu identidad de marca, el tipo de testimonios que tienes y el contexto donde los mostrarás. Las marcas de lujo se benefician de diseños minimalistas y elegantes. Las marcas jóvenes y dinámicas pueden usar colores vibrantes y animaciones. Los negocios B2B se benefician de diseños sobrios con logotipos de empresas. Los ecommerce necesitan estrellas de valoración y fotos de productos.</p>
+<p>La elección del diseño depende de varios factores: tu sector, tu identidad de marca, el tipo de testimonios que tienes y el contexto donde los mostrarás. Las marcas de lujo se benefician de diseños mínimalistas y elegantes. Las marcas jóvenes y dinámicas pueden usar colores vibrantes y animaciones. Los negocios B2B se benefician de diseños sobrios con logotipos de empresas. Los ecommerce necesitan estrellas de valoración y fotos de productos.</p>
 <p><strong>Opinafy</strong> ofrece varios diseños de widgets preconfigurados que puedes personalizar según tu marca. Puedes ajustar colores, tipografías, forma de las fotos, disposición de los elementos y otros aspectos visuales sin necesidad de escribir una sola línea de código. Esto te permite probar diferentes diseños y elegir el que mejor funcione para tu audiencia sin complicaciones técnicas.</p>
 
 <h2>Errores comunes en el diseño de tarjetas de testimonios</h2>
@@ -3960,7 +3960,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Cuando resuelves un problema fiscal complejo para un cliente, la gratitud es inmediata y genuina. Aprovecha ese momento para pedir un testimonio. El cliente acaba de experimentar el valor de tu servicio de forma tangible y está en la mejor disposición para expresarlo. No esperes semanas; la gratitud se enfría rápido.</p>
 
 <h3>Al renovar la relación anual</h3>
-<p>Si trabajas con contratos anuales, el momento de la renovación es una oportunidad para pedir un testimonio. El hecho de que el cliente esté renovando ya es un testimonio en sí mismo de su satisfacción. Pídele que ponga en palabras por qué ha decidido seguir confiando en tu despacho otro año más.</p>
+<p>Si trabajas con contratos anuales, el momento de la renovación es una oportunidad para pedir un testimonio. El hecho de que el cliente esté renovando ya es un testimonio en sí mismo de su satisfacción. Pídele que ponga en palabras por qué ha decidido seguir confíando en tu despacho otro año más.</p>
 
 <h2>Dónde mostrar testimonios de tu despacho</h2>
 <h3>En tu web profesional</h3>
@@ -4016,7 +4016,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Aplicaciones actuales de la IA en testimonios</h2>
 <h3>Análisis de sentimiento</h3>
-<p>El análisis de sentimiento es probablemente la aplicación más consolidada de la IA en el ámbito de los testimonios y las opiniones. Los algoritmos de procesamiento de lenguaje natural pueden analizar miles de testimonios y reseñas en segundos, clasificando cada uno como positivo, negativo o neutro, e identificando las emociones específicas expresadas: satisfacción, frustración, entusiasmo, decepción, sorpresa positiva, entre muchas otras.</p>
+<p>El análisis de sentimiento es probablemente la aplicación más consólidada de la IA en el ámbito de los testimonios y las opiniones. Los algoritmos de procesamiento de lenguaje natural pueden analizar miles de testimonios y reseñas en segundos, clasificando cada uno como positivo, negativo o neutro, e identificando las emociones específicas expresadas: satisfacción, frustración, entusiasmo, decepción, sorpresa positiva, entre muchas otras.</p>
 <p>Esta capacidad es extraordinariamente valiosa para empresas que reciben grandes volúmenes de opiniones. En lugar de leer manualmente cada reseña, los equipos de marketing pueden obtener una visión general del sentimiento de los clientes en tiempo real, identificar tendencias y detectar problemas antes de que se conviertan en crisis. El análisis de sentimiento también permite identificar los testimonios más positivos y entusiastas para destacarlos en materiales de marketing.</p>
 
 <h3>Extracción de temas y categorización</h3>
@@ -4053,7 +4053,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Cómo usar la IA de forma ética en tus testimonios</h2>
 <p>La clave está en utilizar la IA como herramienta de apoyo, no de sustitución. La IA puede ayudarte a recopilar testimonios de forma más eficiente, a analizarlos para extraer insights, a categorizarlos y organizarlos automáticamente, a personalizar cuáles muestras a cada visitante y a detectar posibles falsificaciones. Lo que la IA no debe hacer es generar, inventar o manipular el contenido de los testimonios.</p>
-<p>Una política clara de uso ético de la IA en testimonios debería incluir los siguientes principios. Primero, todos los testimonios publicados deben ser de personas reales que han tenido una experiencia real con tu producto o servicio. Segundo, la IA puede asistir en la redacción, pero el cliente debe tener la última palabra sobre el contenido y debe aprobar explícitamente el texto final. Tercero, cualquier edición o resumen generado por IA debe ser transparente y no alterar el significado o la intención del testimonio original. Cuarto, nunca se generarán testimonios completamente artificiales.</p>
+<p>Una política clara de uso ético de la IA en testimonios debería incluir los siguientes principios. Primero, todos los testimonios publicados deben ser de personas reales que han tenido una experiencia real con tu producto o servicio. Segúndo, la IA puede asistir en la redacción, pero el cliente debe tener la última palabra sobre el contenido y debe aprobar explícitamente el texto final. Tercero, cualquier edición o resumen generado por IA debe ser transparente y no alterar el significado o la intención del testimonio original. Cuarto, nunca se generarán testimonios completamente artificiales.</p>
 
 <h2>Tendencias futuras de la IA en testimonios</h2>
 <h3>Vídeo testimonios generados o mejorados por IA</h3>
@@ -4120,7 +4120,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Luego, pídele un testimonio detallado. No te conformes con un "Buen producto, lo recomiendo." Guíale con preguntas específicas que le ayuden a articular su experiencia: ¿Qué problema tenías antes de usar nuestro producto? ¿Cómo lo descubriste? ¿Qué te convenció de probarlo? ¿Qué resultados has obtenido? ¿Se lo recomendarías a alguien como tú? Con <strong>Opinafy</strong>, puedes crear un formulario con estas preguntas específicas que guían al cliente hacia un testimonio completo y detallado.</p>
 
 <h2>Estrategia 6: Números en lugar de nombres</h2>
-<p>Si todavía no tienes testimonios individuales que mostrar, puedes recurrir a métricas de uso como forma de prueba social. Datos como "Más de cien usuarios activos", "Diez mil tareas completadas en nuestra plataforma" o "Nota media de satisfacción: nueve coma dos sobre diez" son formas de prueba social cuantitativa que no requieren testimonios individuales pero demuestran que hay personas usando y confiando en tu producto.</p>
+<p>Si todavía no tienes testimonios individuales que mostrar, puedes recurrir a métricas de uso como forma de prueba social. Datos como "Más de cien usuarios activos", "Diez mil tareas completadas en nuestra plataforma" o "Nota media de satisfacción: nueve coma dos sobre diez" son formas de prueba social cuantitativa que no requieren testimonios individuales pero demuestran que hay personas usando y confíando en tu producto.</p>
 <p>Eso sí, nunca infles las cifras. Los potenciales clientes de una startup esperan números modestos; un "Más de doscientos usuarios confían en nosotros" es perfectamente creíble para una startup temprana. Un "Más de diez mil empresas nos eligen" cuando llevas tres meses en el mercado levanta sospechas legítimas.</p>
 
 <h2>Estrategia 7: Testimonios de integraciones y partnerships</h2>
@@ -4281,7 +4281,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Diseño visual: claves para una presentación profesional</h2>
 <p>El diseño visual de tu página de testimonios es tan importante como el contenido en sí. Un diseño profesional y limpio transmite credibilidad, mientras que un diseño desordenado o anticuado puede minar la confianza incluso si los testimonios son genuinos y positivos.</p>
 <p>La primera regla del diseño de testimonios es dar protagonismo a las personas. Incluye fotos reales de tus clientes siempre que sea posible. Las fotos generan conexión emocional y aumentan la percepción de autenticidad. Si tus clientes son empresas, incluye el logo de la empresa junto con la foto y el nombre de la persona que da el testimonio. Esta combinación de elementos visuales refuerza tanto la credibilidad personal como la institucional.</p>
-<p>Utiliza tarjetas o cards con bordes suaves y sombras sutiles para presentar cada testimonio como una unidad independiente. Este formato es limpio, fácil de escanear y funciona bien tanto en escritorio como en móvil. Dentro de cada tarjeta, incluye la foto del cliente, su nombre y cargo, el nombre de su empresa, la puntuación en estrellas si la tienes, y el texto del testimonio con la parte más relevante destacada en negrita.</p>
+<p>Utiliza tarjetas o cards con bordes suaves y sombras sútiles para presentar cada testimonio como una unidad independiente. Este formato es limpio, fácil de escanear y funciona bien tanto en escritorio como en móvil. Dentro de cada tarjeta, incluye la foto del cliente, su nombre y cargo, el nombre de su empresa, la puntuación en estrellas si la tienes, y el texto del testimonio con la parte más relevante destacada en negrita.</p>
 <p>El espaciado es crucial. No amontones los testimonios. Deja suficiente espacio entre tarjetas para que cada una respire y el visitante pueda procesarla antes de pasar a la siguiente. Un diseño con demasiada densidad de información genera fatiga visual y hace que el visitante abandone la página antes de tiempo.</p>
 <p>Considera utilizar un diseño en cuadrícula masonry para páginas con muchos testimonios. Este formato, similar al que utiliza Pinterest, permite mostrar testimonios de diferentes longitudes de forma visualmente atractiva y sin desperdiciar espacio. Para testimonios destacados o de clientes especialmente relevantes, utiliza tarjetas más grandes o con un fondo diferenciado que las haga destacar del resto.</p>
 <p>La tipografía también juega un papel importante. Utiliza comillas grandes y estilizadas al inicio de cada testimonio para crear un impacto visual inmediato. El texto del testimonio puede estar en un tamaño ligeramente mayor que el texto normal de tu web para enfatizar que es contenido especial. Los nombres y cargos de los clientes deben estar en un tamaño menor y en un color diferente para crear una jerarquía visual clara.</p>
@@ -4448,7 +4448,7 @@ export const blogArticles: BlogArticle[] = [
 <p>El mensaje que envías es el factor determinante de si obtendrás una respuesta o serás ignorado. A continuación, te presento varias plantillas probadas que puedes adaptar a tu tono y sector. La clave está en ser personal, breve, específico en lo que pides y fácil de responder.</p>
 <p>La primera plantilla es la directa y personal: "Hola nombre del cliente, espero que todo esté yendo genial con descripción breve del proyecto o producto. Me encantaría saber tu opinión sobre la experiencia. ¿Te importaría dedicar dos minutitos a compartir tu testimonio? Solo tienes que hacer clic aquí: enlace al formulario de Opinafy. Tu opinión me ayuda muchísimo a seguir mejorando. Muchas gracias de antemano".</p>
 <p>La segunda plantilla es la que ofrece opciones de formato: "Hola nombre del cliente, quería preguntarte si estarías dispuesto a compartir tu experiencia con mi servicio. Puedes hacerlo como prefieras: respondiendo a este mensaje con un texto breve, enviándome una nota de voz de treinta segundos a un minuto, o rellenando este breve formulario enlace. Cualquier formato me vale y te lo agradezco enormemente".</p>
-<p>La tercera plantilla utiliza preguntas guiadas: "Hola nombre del cliente, estoy recopilando feedback de mis clientes y me encantaría incluir tu opinión. Si te parece bien, ¿podrías responderme brevemente a estas dos preguntas? Primera: ¿qué problema tenías antes y cómo te ayudé a resolverlo? Segunda: ¿qué es lo que más valoraste de trabajar conmigo? Un par de frases para cada pregunta es perfecto. Muchas gracias".</p>
+<p>La tercera plantilla utiliza preguntas guiadas: "Hola nombre del cliente, estoy recopilando feedback de mis clientes y me encantaría incluir tu opinión. Si te parece bien, ¿podrías responderme brevemente a estas dos preguntas? Primera: ¿qué problema tenías antes y cómo te ayudé a resolverlo? Segúnda: ¿qué es lo que más valoraste de trabajar conmigo? Un par de frases para cada pregunta es perfecto. Muchas gracias".</p>
 <p>La cuarta plantilla es para clientes con los que tienes mucha confianza: "Hola nombre del cliente, ya sabes que valoro mucho tu opinión. ¿Podrías enviarme un mensajito contándome qué te ha parecido trabajar conmigo? Lo voy a usar en mi web para que otros potenciales clientes puedan conocer experiencias reales. Te lo agradezco un montón".</p>
 
 <h2>Cómo gestionar las respuestas recibidas</h2>
@@ -4608,7 +4608,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Truco 4: Guía al cliente con preguntas específicas</h2>
 <p>Uno de los mayores obstáculos para dar un testimonio es no saber qué decir. La mente se queda en blanco frente a una petición abierta como "cuéntanos tu experiencia". Las preguntas específicas eliminan este bloqueo y guían al cliente hacia un testimonio estructurado y completo sin que tenga que pensar en qué incluir.</p>
-<p>Las tres preguntas fundamentales que producen los mejores testimonios son: primera, ¿cuál era tu situación o problema antes de contactar con nosotros? Segunda, ¿cómo fue la experiencia de trabajar con nosotros? Y tercera, ¿qué resultados has obtenido o qué ha cambiado desde entonces?</p>
+<p>Las tres preguntas fundamentales que producen los mejores testimonios son: primera, ¿cuál era tu situación o problema antes de contactar con nosotros? Segúnda, ¿cómo fue la experiencia de trabajar con nosotros? Y tercera, ¿qué resultados has obtenido o qué ha cambiado desde entonces?</p>
 <p>Estas tres preguntas guían naturalmente al cliente a crear una narrativa de transformación: situación inicial, proceso y resultado. Esta estructura es la más persuasiva posible porque permite al lector del testimonio identificarse con la situación inicial, visualizar el proceso y proyectar los resultados en su propia situación.</p>
 <p>Puedes añadir preguntas complementarias según tu sector: ¿recomendarías nuestro servicio a un colega?, ¿qué fue lo que más te sorprendió positivamente?, ¿hay algún dato concreto que puedas compartir sobre los resultados? Pero no incluyas más de cuatro o cinco preguntas en total para no hacer el formulario demasiado extenso.</p>
 <p>Con <strong>Opinafy</strong>, puedes crear formularios con preguntas guiadas personalizadas para cada tipo de servicio o segmento de cliente, asegurando que cada testimonio recibido sea completo, relevante y útil para tu estrategia de marketing.</p>
@@ -4657,8 +4657,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-antes-despues',
-    image: blogImageUrl('testimonios-antes-despues'),
+    slug: 'testimonios-antes-después',
+    image: blogImageUrl('testimonios-antes-después'),
     title: 'Testimonios antes y después: el formato más persuasivo',
     excerpt:
       'Descubre por qué los testimonios con formato antes y después son los más persuasivos y aprende a crearlos para maximizar las conversiones de tu negocio.',
@@ -4919,7 +4919,7 @@ export const blogArticles: BlogArticle[] = [
       'Guía para conseguir testimonios de influencers y microinfluencers. Estrategias de acercamiento, formatos efectivos y cómo maximizar el impacto.',
     content: `
 <h2>Introducción: Influencers como amplificadores de confianza</h2>
-<p>En el ecosistema del marketing digital actual, los influencers y microinfluencers ocupan un espacio único entre las celebridades tradicionales y los consumidores comunes. Su opinión tiene un peso desproporcionado porque combinan la credibilidad que se atribuye a personas reales con el alcance que ofrece una audiencia consolidada. Un testimonio de un influencer relevante puede generar más confianza y más visibilidad que cien testimonios de clientes anónimos, no porque sea más valioso en términos absolutos, sino porque llega a más personas y se percibe con mayor autoridad.</p>
+<p>En el ecosistema del marketing digital actual, los influencers y microinfluencers ocupan un espacio único entre las celebridades tradicionales y los consumidores comunes. Su opinión tiene un peso desproporcionado porque combinan la credibilidad que se atribuye a personas reales con el alcance que ofrece una audiencia consólidada. Un testimonio de un influencer relevante puede generar más confianza y más visibilidad que cien testimonios de clientes anónimos, no porque sea más valioso en términos absolutos, sino porque llega a más personas y se percibe con mayor autoridad.</p>
 <p>Sin embargo, conseguir testimonios de influencers no es tan sencillo como pedírselo a un cliente satisfecho. Los influencers reciben decenas de solicitudes de colaboración cada semana, son conscientes del valor de su opinión pública, y tienen estándares específicos sobre qué productos recomiendan y cómo lo hacen. Abordar esta oportunidad requiere una estrategia bien pensada que respete la dinámica particular de la relación marca-influencer.</p>
 <p>En este artículo, exploraremos cómo identificar a los influencers adecuados para tu marca, cómo acercarte a ellos de forma efectiva, qué formatos de testimonio funcionan mejor en el ecosistema de influencia, y cómo maximizar el impacto de los testimonios conseguidos tanto en el alcance inmediato como en el valor a largo plazo para tu negocio.</p>
 
@@ -4970,7 +4970,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Mantén la relación con el influencer más allá del testimonio inicial. Una relación a largo plazo produce múltiples testimonios actualizados, menciones orgánicas recurrentes y una asociación de marca que se fortalece con el tiempo. Los mejores testimonios de influencers no vienen de colaboraciones puntuales sino de relaciones genuinas y sostenidas.</p>
 
 <h2>Conclusión: Testimonios de influencers como activo estratégico</h2>
-<p>Los testimonios de influencers y microinfluencers son uno de los activos de marketing más valiosos que puedes construir. Combinan la credibilidad de la prueba social con el alcance de audiencias consolidadas, y cuando son genuinos y bien presentados, generan un impacto en la confianza y las conversiones que es difícil de igualar con otros formatos.</p>
+<p>Los testimonios de influencers y microinfluencers son uno de los activos de marketing más valiosos que puedes construir. Combinan la credibilidad de la prueba social con el alcance de audiencias consólidadas, y cuando son genuinos y bien presentados, generan un impacto en la confianza y las conversiones que es difícil de igualar con otros formatos.</p>
 <p>La clave está en el acercamiento estratégico: identifica influencers relevantes y alineados con tu marca, ofrece tu producto de forma generosa y sin condiciones, deja que formen su propia opinión, y construye relaciones a largo plazo que generen testimonios sostenidos en el tiempo.</p>
 <p><strong>Opinafy</strong> te permite integrar los testimonios de influencers en tu estrategia global de prueba social, presentándolos junto a los testimonios de tus clientes habituales para crear un ecosistema de confianza completo y convincente. Con widgets personalizables que pueden destacar testimonios de influencers con diseños premium, y un panel de gestión que centraliza todos tus testimonios independientemente de su origen, Opinafy es la plataforma ideal para maximizar el valor de cada testimonio de influencer. <strong>Empieza gratis</strong> y lleva tu estrategia de testimonios al siguiente nivel.</p>
 `,
@@ -5004,7 +5004,7 @@ export const blogArticles: BlogArticle[] = [
 <p>El primer principio es la ley de Hick: cuantas más opciones presentas a un usuario, más tiempo tarda en decidir y más probable es que no decida en absoluto. Aplicado a formularios, esto significa que cada campo adicional que añades no solo incrementa el tiempo de completitud sino también la probabilidad de abandono. La regla de oro es incluir solo los campos estrictamente necesarios y hacer opcionales todos los demás.</p>
 <p>El segundo principio es la carga cognitiva mínima. Cada decisión que el usuario tiene que tomar mientras completa el formulario consume recursos cognitivos. ¿Qué pongo en este campo? ¿Cuánto escribo? ¿Es obligatorio? ¿Qué formato esperan? Cada una de estas dudas es un momento de fricción que puede llevar al abandono. Tu formulario debe minimizar estas decisiones proporcionando instrucciones claras, ejemplos y valores por defecto.</p>
 <p>El tercer principio es la progresión visible. El usuario debe saber en todo momento dónde está en el proceso, cuánto le falta para terminar y qué se espera de él en cada paso. Una barra de progreso, indicadores de paso o simplemente un texto que diga "solo dos preguntas más" reducen la ansiedad y aumentan la probabilidad de completar el proceso.</p>
-<p>El cuarto principio es la gratificación inmediata. El usuario debe sentir que su esfuerzo ha valido la pena tan pronto como pulse el botón de envío. Una página de agradecimiento personalizada, un mensaje de confirmación cálido o incluso un pequeño incentivo proporcionan esa gratificación que cierra el ciclo de forma positiva.</p>
+<p>El cuarto principio es la gratificación inmediata. El usuario debe sentir que su esfuerzo ha válido la pena tan pronto como pulse el botón de envío. Una página de agradecimiento personalizada, un mensaje de confirmación cálido o incluso un pequeño incentivo proporcionan esa gratificación que cierra el ciclo de forma positiva.</p>
 
 <h2>Estructura óptima del formulario de testimonios</h2>
 <p>La estructura de tu formulario debe guiar al cliente de forma natural desde la identificación hasta el testimonio, pasando por la valoración. El orden de los campos influye significativamente en la tasa de completitud y en la calidad de las respuestas.</p>
@@ -5578,7 +5578,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Existe una relación directa y medible entre las puntuaciones de reseñas y la capacidad de un alojamiento para cobrar tarifas más altas. Los estudios demuestran que un aumento de un punto en la puntuación de TripAdvisor puede permitir un incremento de tarifa de hasta un once por ciento sin perder ocupación. Esta relación convierte la gestión de testimonios en una herramienta de revenue management con impacto directo en la cuenta de resultados.</p>
 <p>Monitoriza la correlación entre tu puntuación de reseñas y tu tarifa media diaria. Si tu puntuación mejora de cuatro a cuatro coma cinco estrellas, tienes margen para ajustar tus tarifas al alza manteniendo la competitividad. Si tu puntuación cae, puede ser señal de que necesitas mejorar la experiencia del huésped antes de considerar subidas de precio.</p>
 <p>Utiliza los testimonios positivos como justificación del precio en tu web y en tus canales de distribución. Un alojamiento que muestra testimonios entusiastas de viajeros satisfechos justifica tarifas premium de forma mucho más efectiva que una descripción de servicios sin prueba social.</p>
-<p>Analiza los testimonios negativos para identificar los aspectos que más impactan en la insatisfacción y prioriza las inversiones de mejora en esos aspectos. Si los testimonios negativos mencionan repetidamente el estado de los baños, invertir en la renovación de baños puede tener un retorno medible en forma de mejores puntuaciones, mayor capacidad tarifaria y mayor ocupación.</p>
+<p>Analiza los testimonios negativos para identificar los aspectos que más impactan en la insatisfacción y prioriza las inversiónes de mejora en esos aspectos. Si los testimonios negativos mencionan repetidamente el estado de los baños, invertir en la renovación de baños puede tener un retorno medible en forma de mejores puntuaciones, mayor capacidad tarifaria y mayor ocupación.</p>
 
 <h2>Testimonios en experiencias y actividades turísticas</h2>
 <p>Los operadores de tours, experiencias y actividades turísticas tienen particularidades en la gestión de testimonios que los diferencian del alojamiento. La experiencia turística es efímera: dura unas horas o un día, y la emoción del momento es el factor más determinante de la valoración del cliente.</p>
@@ -5618,8 +5618,8 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Fundamentos del A/B testing</h2>
 <p>El A/B testing, también conocido como split testing, es una metodología experimental donde se presentan dos versiones diferentes de una página o elemento a dos grupos aleatorios de visitantes, y se mide cuál de las dos versiones genera mejores resultados en una métrica objetivo como la tasa de conversión, el número de clics o el tiempo de permanencia.</p>
-<p>Para que un test A/B produzca resultados válidos, necesita cumplir varios requisitos. El primero es la aleatorización: los visitantes deben asignarse a la versión A o B de forma completamente aleatoria para evitar sesgos. El segundo es el tamaño de muestra suficiente: necesitas un número mínimo de visitantes en cada variante para que la diferencia observada sea estadísticamente significativa y no un resultado del azar. El tercero es aislar la variable: solo debes cambiar un elemento entre las versiones A y B para poder atribuir cualquier diferencia en resultados a ese cambio específico.</p>
-<p>En el contexto de testimonios, el test A/B te permite resolver preguntas concretas como: ¿la presencia de testimonios en la página de precios aumenta las conversiones? ¿Los vídeo testimonios generan más confianza que los escritos? ¿Los testimonios con puntuación en estrellas convierten más que los que no la tienen? Cada pregunta se traduce en un experimento con dos variantes y una métrica de éxito medible.</p>
+<p>Para que un test A/B produzca resultados válidos, necesita cumplir varios requisitos. El primero es la aleatorización: los visitantes deben asignarse a la versión A o B de forma completamente aleatoria para evitar sesgos. El segundo es el tamaño de muestra suficiente: necesitas un número mínimo de visitantes en cada varíante para que la diferencia observada sea estadísticamente significativa y no un resultado del azar. El tercero es aislar la variable: solo debes cambiar un elemento entre las versiones A y B para poder atribuir cualquier diferencia en resultados a ese cambio específico.</p>
+<p>En el contexto de testimonios, el test A/B te permite resolver preguntas concretas como: ¿la presencia de testimonios en la página de precios aumenta las conversiones? ¿Los vídeo testimonios generan más confianza que los escritos? ¿Los testimonios con puntuación en estrellas convierten más que los que no la tienen? Cada pregunta se traduce en un experimento con dos varíantes y una métrica de éxito medible.</p>
 <p>Es importante entender que el A/B testing no te da verdades universales sino verdades específicas para tu contexto. Lo que funciona para un ecommerce de moda puede no funcionar para una consultora de servicios, y lo que funciona con una audiencia española puede no funcionar con una audiencia latinoamericana. Por eso, los tests deben hacerse con tu propia audiencia y en tu propio contexto.</p>
 
 <h2>Qué testear: las variables más impactantes</h2>
@@ -5634,9 +5634,9 @@ export const blogArticles: BlogArticle[] = [
 <p>Diseñar un test A/B riguroso requiere una planificación cuidadosa que garantice resultados válidos y accionables. Seguir un proceso estructurado te evitará errores comunes que invalidan los resultados y te obligan a repetir el test.</p>
 <p>El primer paso es formular una hipótesis clara. No testees "a ver qué pasa" sino "creemos que añadir vídeo testimonios a la página de precios aumentará la tasa de conversión en al menos un cinco por ciento porque los vídeos generan mayor confianza en decisiones de compra de alto valor". Una hipótesis bien formulada te da una dirección clara y un criterio de éxito medible.</p>
 <p>El segundo paso es definir la métrica principal de éxito y las métricas secundarias. La métrica principal suele ser la tasa de conversión de la página donde se realiza el test. Las métricas secundarias pueden incluir el tiempo de permanencia en la página, la tasa de rebote, el número de clics en los testimonios, o la tasa de scroll hasta la sección de testimonios. Las métricas secundarias te ayudan a entender por qué un resultado se produce, no solo si se produce.</p>
-<p>El tercer paso es calcular el tamaño de muestra necesario. Este cálculo depende del tamaño del efecto que esperas detectar, del nivel de confianza estadística que quieres alcanzar, y del tráfico actual de tu web. Herramientas como calculadoras de tamaño de muestra online te permiten determinar cuántos visitantes necesitas por variante y, por tanto, cuánto tiempo tendrá que estar activo el test.</p>
-<p>El cuarto paso es implementar las variantes en tu web. Utiliza herramientas de A/B testing que te permitan crear variantes sin necesidad de programar cambios en el código. Verifica que ambas variantes cargan correctamente en todos los dispositivos y navegadores antes de activar el test.</p>
-<p>El quinto paso es ejecutar el test durante el tiempo necesario para alcanzar significancia estadística y analizar los resultados con rigor. No detengas el test prematuramente porque una variante parece estar ganando: las fluctuaciones tempranas son comunes y pueden invertirse con más datos.</p>
+<p>El tercer paso es calcular el tamaño de muestra necesario. Este cálculo depende del tamaño del efecto que esperas detectar, del nivel de confianza estadística que quieres alcanzar, y del tráfico actual de tu web. Herramientas como calculadoras de tamaño de muestra online te permiten determinar cuántos visitantes necesitas por varíante y, por tanto, cuánto tiempo tendrá que estar activo el test.</p>
+<p>El cuarto paso es implementar las varíantes en tu web. Utiliza herramientas de A/B testing que te permitan crear varíantes sin necesidad de programar cambios en el código. Verifica que ambas varíantes cargan correctamente en todos los dispositivos y navegadores antes de activar el test.</p>
+<p>El quinto paso es ejecutar el test durante el tiempo necesario para alcanzar significancia estadística y analizar los resultados con rigor. No detengas el test prematuramente porque una varíante parece estar ganando: las fluctuaciones tempranas son comunes y pueden invertirse con más datos.</p>
 
 <h2>Tests específicos para testimonios: ejemplos prácticos</h2>
 <p>Veamos algunos ejemplos concretos de tests A/B que puedes realizar con los testimonios de tu web para darte ideas sobre por dónde empezar tu programa de experimentación.</p>
@@ -5649,29 +5649,29 @@ export const blogArticles: BlogArticle[] = [
 <h2>Herramientas para A/B testing de testimonios</h2>
 <p>Existen múltiples herramientas que facilitan la implementación y el análisis de tests A/B, desde soluciones gratuitas hasta plataformas enterprise con funcionalidades avanzadas.</p>
 <p>Google Optimize, aunque fue descontinuado, ha sido reemplazado por integraciones nativas en Google Analytics cuatro que permiten ejecutar tests básicos. Para la mayoría de los negocios que empiezan con el A/B testing, esta integración es suficiente para ejecutar los tests más comunes y obtener resultados estadísticamente válidos.</p>
-<p>Herramientas como Optimizely, VWO y AB Tasty ofrecen funcionalidades más avanzadas como la edición visual de variantes sin código, la segmentación avanzada de audiencias, la multivariante testing donde se prueban múltiples variables simultáneamente, y la personalización dinámica basada en los resultados de los tests.</p>
+<p>Herramientas como Optimizely, VWO y AB Tasty ofrecen funcionalidades más avanzadas como la edición visual de varíantes sin código, la segmentación avanzada de audiencias, la multivaríante testing donde se prueban múltiples variables simultáneamente, y la personalización dinámica basada en los resultados de los tests.</p>
 <p>Si tu web está construida con un CMS como WordPress o Shopify, existen plugins y aplicaciones específicas para A/B testing que se integran nativamente con tu plataforma y simplifican enormemente la implementación de los tests.</p>
-<p>Para negocios con equipos de desarrollo, frameworks de experimentación como LaunchDarkly o Split.io permiten implementar tests a nivel de código con control total sobre la asignación de variantes y la recopilación de datos, lo cual es especialmente útil para tests complejos que involucran cambios en la lógica de la aplicación además de cambios visuales.</p>
+<p>Para negocios con equipos de desarrollo, frameworks de experimentación como LaunchDarkly o Split.io permiten implementar tests a nivel de código con control total sobre la asignación de varíantes y la recopilación de datos, lo cual es especialmente útil para tests complejos que involucran cambios en la lógica de la aplicación además de cambios visuales.</p>
 
 <h2>Interpretación de resultados: más allá de ganar o perder</h2>
-<p>Interpretar los resultados de un test A/B va más allá de determinar qué variante ganó. Un análisis profundo de los resultados te da insights valiosos sobre el comportamiento de tu audiencia que informan no solo la decisión inmediata sino también tu estrategia de testimonios a largo plazo.</p>
-<p>Lo primero es verificar la significancia estadística. Un resultado es estadísticamente significativo cuando la probabilidad de que sea producto del azar es inferior al cinco por ciento, lo cual corresponde a un nivel de confianza del noventa y cinco por ciento. Si tu resultado no alcanza significancia estadística, no puedes concluir que una variante es mejor que otra, independientemente de la diferencia observada. Necesitas más datos o un efecto más grande.</p>
+<p>Interpretar los resultados de un test A/B va más allá de determinar qué varíante ganó. Un análisis profundo de los resultados te da insights valiosos sobre el comportamiento de tu audiencia que informan no solo la decisión inmediata sino también tu estrategia de testimonios a largo plazo.</p>
+<p>Lo primero es verificar la significancia estadística. Un resultado es estadísticamente significativo cuando la probabilidad de que sea producto del azar es inferior al cinco por ciento, lo cual corresponde a un nivel de confianza del noventa y cinco por ciento. Si tu resultado no alcanza significancia estadística, no puedes concluir que una varíante es mejor que otra, independientemente de la diferencia observada. Necesitas más datos o un efecto más grande.</p>
 <p>Lo segundo es analizar el efecto por segmentos. Un resultado global puede ocultar diferencias significativas entre segmentos de tu audiencia. Quizás los vídeo testimonios funcionan mejor con visitantes de móvil pero peor con visitantes de escritorio, o los testimonios detallados convierten más a visitantes nuevos pero no afectan a visitantes recurrentes. Estos insights segmentados son a menudo más valiosos que el resultado global.</p>
-<p>Lo tercero es analizar las métricas secundarias para entender el por qué del resultado. Si la variante B con vídeo testimonios tiene mayor conversión, ¿es porque los visitantes pasan más tiempo en la sección de testimonios, o porque la mera presencia de un vídeo genera confianza sin necesidad de reproducirlo? Las métricas secundarias como el tiempo de interacción, la tasa de reproducción del vídeo y la tasa de scroll te ayudan a responder estas preguntas.</p>
+<p>Lo tercero es analizar las métricas secundarias para entender el por qué del resultado. Si la varíante B con vídeo testimonios tiene mayor conversión, ¿es porque los visitantes pasan más tiempo en la sección de testimonios, o porque la mera presencia de un vídeo genera confianza sin necesidad de reproducirlo? Las métricas secundarias como el tiempo de interacción, la tasa de reproducción del vídeo y la tasa de scroll te ayudan a responder estas preguntas.</p>
 <p>Lo cuarto es considerar el impacto práctico además del estadístico. Una diferencia del cero coma cinco por ciento en la tasa de conversión puede ser estadísticamente significativa pero no justificar el esfuerzo de implementar el cambio. Evalúa el impacto en términos de ingresos adicionales esperados y compáralo con el coste de implementación para decidir si el cambio merece la pena.</p>
 
 <h2>Errores comunes en el A/B testing de testimonios</h2>
 <p>El A/B testing parece simple en teoría pero está lleno de trampas que pueden invalidar los resultados o llevar a conclusiones erróneas. Conocer los errores más comunes te ayudará a evitarlos.</p>
-<p>El primer error es detener el test demasiado pronto. Es tentador declarar un ganador cuando una variante muestra una ventaja clara después de unos pocos días, pero las fluctuaciones estadísticas pueden crear diferencias aparentes que desaparecen con más datos. Espera siempre a alcanzar el tamaño de muestra calculado antes de concluir el test.</p>
-<p>El segundo error es cambiar el test durante su ejecución. Si modificas una variante, añades una tercera opción o cambias la métrica objetivo mientras el test está en curso, los resultados quedan invalidados. Si necesitas hacer cambios, detén el test actual y lanza uno nuevo.</p>
-<p>El tercer error es testear demasiadas variables a la vez. Si tu variante B tiene un diseño diferente, un texto diferente, una ubicación diferente y un formato diferente, no sabrás cuál de estos cambios causó la diferencia en resultados. Aísla una variable por test para obtener conclusiones claras.</p>
+<p>El primer error es detener el test demasiado pronto. Es tentador declarar un ganador cuando una varíante muestra una ventaja clara después de unos pocos días, pero las fluctuaciones estadísticas pueden crear diferencias aparentes que desaparecen con más datos. Espera siempre a alcanzar el tamaño de muestra calculado antes de concluir el test.</p>
+<p>El segundo error es cambiar el test durante su ejecución. Si modificas una varíante, añades una tercera opción o cambias la métrica objetivo mientras el test está en curso, los resultados quedan invalidados. Si necesitas hacer cambios, detén el test actual y lanza uno nuevo.</p>
+<p>El tercer error es testear demasiadas variables a la vez. Si tu varíante B tiene un diseño diferente, un texto diferente, una ubicación diferente y un formato diferente, no sabrás cuál de estos cambios causó la diferencia en resultados. Aísla una variable por test para obtener conclusiones claras.</p>
 <p>El cuarto error es ignorar la estacionalidad y los eventos externos. Un test ejecutado durante Black Friday producirá resultados diferentes al mismo test ejecutado en febrero, porque el comportamiento del comprador es fundamentalmente diferente. Ejecuta tests durante períodos representativos de tu tráfico normal.</p>
 <p>El quinto error es no iterar. Un solo test te da una respuesta a una pregunta, pero la optimización de testimonios es un proceso continuo. Cada test genera nuevas preguntas que puedes explorar en tests subsiguientes, creando un ciclo de mejora continua que incrementa el impacto de tus testimonios con cada iteración.</p>
 
 <h2>Conclusión: La experimentación como cultura</h2>
 <p>El A/B testing no es una actividad puntual sino una cultura de toma de decisiones basada en datos. Cuando integras la experimentación en tu proceso de gestión de testimonios, cada cambio que haces está informado por evidencia, cada opinión se valida antes de implementarse, y cada resultado genera aprendizajes que informan los próximos experimentos.</p>
 <p>Empieza con tests simples de alto impacto: ¿los testimonios aumentan las conversiones en tu página de producto? Si la respuesta es sí, avanza a tests más específicos sobre formato, cantidad, ubicación y elementos de credibilidad. Con cada test, tu comprensión de cómo los testimonios influyen en tu audiencia se profundiza y tu estrategia se afina.</p>
-<p><strong>Opinafy</strong> te proporciona la flexibilidad necesaria para implementar diferentes configuraciones de testimonios en tu web, facilitando la creación de variantes para tus tests A/B. Con widgets personalizables en formato, diseño y contenido, puedes crear fácilmente las diferentes versiones que necesitas para tus experimentos. <strong>Empieza gratis</strong> y descubre, con datos reales, qué configuración de testimonios genera más conversiones para tu negocio.</p>
+<p><strong>Opinafy</strong> te proporciona la flexibilidad necesaria para implementar diferentes configuraciones de testimonios en tu web, facilitando la creación de varíantes para tus tests A/B. Con widgets personalizables en formato, diseño y contenido, puedes crear fácilmente las diferentes versiones que necesitas para tus experimentos. <strong>Empieza gratis</strong> y descubre, con datos reales, qué configuración de testimonios genera más conversiones para tu negocio.</p>
 `,
   },
   {
@@ -5736,7 +5736,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Medir el impacto de los testimonios en el sector financiero requiere métricas específicas que vayan más allá de la tasa de conversión genérica y que capturen las particularidades de los productos financieros.</p>
 <p>La tasa de conversión de solicitudes es la métrica más directa: ¿los visitantes que ven testimonios solicitan más productos financieros que los que no los ven? Esta métrica puede medirse por producto, por tipo de testimonio y por ubicación del testimonio en el journey digital.</p>
 <p>El Net Promoter Score o NPS es una métrica estándar del sector financiero que mide la probabilidad de que un cliente recomiende tu entidad. Los testimonios alimentan el NPS directamente, ya que los clientes que dan testimonios positivos son por definición promotores, y el NPS te da una visión agregada de tu capacidad de generar testimonios positivos.</p>
-<p>La tasa de retención de clientes puede verse influenciada positivamente por los testimonios, ya que un programa activo de solicitud de testimonios obliga a los clientes a reflexionar sobre los aspectos positivos de su experiencia, lo cual puede reforzar su lealtad y reducir la tasa de abandono.</p>
+<p>La tasa de retención de clientes puede verse influenciada positivamente por los testimonios, ya que un programa activo de solicitud de testimonios obliga a los clientes a reflexiónar sobre los aspectos positivos de su experiencia, lo cual puede reforzar su lealtad y reducir la tasa de abandono.</p>
 <p>El coste de adquisición de cliente puede reducirse si los testimonios generan más conversiones orgánicas y más referidos, reduciendo la dependencia de la publicidad pagada para atraer nuevos clientes.</p>
 
 <h2>Conclusión: Testimonios financieros con integridad y impacto</h2>
@@ -5985,7 +5985,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Complementa los tests A/B con tests de usabilidad cualitativos. Pide a cinco o diez personas que completen tu formulario de testimonios mientras piensan en voz alta, describiendo qué entienden de cada texto, qué les confunde y qué les motiva. Estos insights cualitativos revelan problemas que los tests A/B no pueden detectar.</p>
 
 <h2>Conclusión: Cada palabra cuenta</h2>
-<p>En el microcopy para testimonios, cada palabra cuenta porque cada palabra influye en la decisión del usuario de participar o no, de escribir tres frases o tres párrafos, de enviar el formulario o abandonarlo a medio camino. Invertir tiempo en escribir, revisar y testear el microcopy de tu proceso de recopilación de testimonios es una de las inversiones con mayor retorno que puedes hacer en tu estrategia de prueba social.</p>
+<p>En el microcopy para testimonios, cada palabra cuenta porque cada palabra influye en la decisión del usuario de participar o no, de escribir tres frases o tres párrafos, de enviar el formulario o abandonarlo a medio camino. Invertir tiempo en escribir, revisar y testear el microcopy de tu proceso de recopilación de testimonios es una de las inversiónes con mayor retorno que puedes hacer en tu estrategia de prueba social.</p>
 <p><strong>Opinafy</strong> te permite personalizar cada elemento de texto de tus formularios de testimonios, desde el título hasta el mensaje de agradecimiento, pasando por las preguntas guiadas y los textos de los botones. Con esta flexibilidad, puedes aplicar los principios de microcopy que hemos explorado y testear diferentes versiones para encontrar las palabras que mejor funcionan con tu audiencia. <strong>Empieza gratis</strong> y descubre cómo las palabras correctas pueden multiplicar tus testimonios.</p>
 `,
   },
@@ -6022,7 +6022,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Valoraciones en tiempo real y su impacto</h2>
 <p>Una de las particularidades del delivery es la inmediatez de la transacción y, por tanto, la inmediatez de la valoración. A diferencia de un producto que el cliente usa durante semanas antes de evaluar, un pedido de delivery se consume en minutos después de recibirlo, y la valoración se solicita inmediatamente después.</p>
 <p>Esta inmediatez tiene ventajas y desventajas. La ventaja es que la experiencia está completamente fresca: el cliente recuerda cada detalle y su emoción, positiva o negativa, está en su punto máximo. La desventaja es que las emociones extremas del momento pueden producir valoraciones más polarizadas de lo que una reflexión posterior produciría. Un pequeño retraso que en retrospectiva sería irrelevante puede generar una valoración negativa en caliente si el cliente tenía mucha hambre.</p>
-<p>Para mitigar la polarización emocional, algunos servicios de delivery implementan un período de gracia donde la valoración se solicita pero no se pública inmediatamente, dando al usuario la opción de modificarla en las siguientes horas. Otros implementan preguntas de valoración más granulares que obligan al usuario a reflexionar sobre diferentes aspectos en lugar de dar una puntuación emocional global.</p>
+<p>Para mitigar la polarización emocional, algunos servicios de delivery implementan un período de gracia donde la valoración se solicita pero no se pública inmediatamente, dando al usuario la opción de modificarla en las siguientes horas. Otros implementan preguntas de valoración más granulares que obligan al usuario a reflexiónar sobre diferentes aspectos en lugar de dar una puntuación emocional global.</p>
 <p>Las valoraciones en tiempo real también alimentan sistemas de reputación dinámica donde la puntuación del restaurante o del repartidor se actualiza después de cada entrega. Esta actualización constante mantiene las puntuaciones relevantes y actuales, pero también introduce volatilidad: una mala jornada con varias entregas problemáticas puede hundir temporalmente la puntuación de un restaurante que normalmente ofrece un servicio excelente.</p>
 
 <h2>Testimonios para restaurantes y negocios de alimentación</h2>
@@ -6116,7 +6116,7 @@ export const blogArticles: BlogArticle[] = [
 <p>Actualiza regularmente la presentación de tus testimonios a medida que acumulas más. Lo que funcionaba con cinco testimonios, como mostrar todos en la página de inicio, no funciona con cincuenta. A medida que creces, implementa páginas dedicadas, filtros por categoría, carruseles y otras formas de presentar un volumen creciente de prueba social de forma organizada y accesible.</p>
 
 <h2>El momentum de los testimonios</h2>
-<p>Los testimonios generan un efecto de bola de nieve: cuantos más testimonios tienes, más fácil es conseguir nuevos. Este momentum se produce por varios mecanismos. Primero, los testimonios existentes generan más ventas, lo cual genera más clientes potenciales para futuros testimonios. Segundo, los clientes que ven que otros han dado testimonios se sienten más cómodos dándolos también, porque la acción está normalizada. Tercero, una marca con muchos testimonios transmite éxito y profesionalidad, lo cual atrae clientes de mayor calidad que producen testimonios de mayor calidad.</p>
+<p>Los testimonios generan un efecto de bola de nieve: cuantos más testimonios tienes, más fácil es conseguir nuevos. Este momentum se produce por varios mecanismos. Primero, los testimonios existentes generan más ventas, lo cual genera más clientes potenciales para futuros testimonios. Segúndo, los clientes que ven que otros han dado testimonios se sienten más cómodos dándolos también, porque la acción está normalizada. Tercero, una marca con muchos testimonios transmite éxito y profesionalidad, lo cual atrae clientes de mayor calidad que producen testimonios de mayor calidad.</p>
 <p>Tu trabajo en los primeros meses es generar el impulso inicial que active esta espiral positiva. Una vez que la bola empieza a rodar, el esfuerzo necesario para mantener el flujo de testimonios disminuye porque el sistema se auto-alimenta parcialmente.</p>
 <p>Para acelerar el momentum, comparte públicamente los testimonios que recibes. Cada vez que publiques un testimonio en redes sociales, no solo estás haciendo marketing: estás demostrando a otros clientes que dar testimonios es algo que la gente hace con tu marca, normalizando la acción y preparando el terreno para futuras solicitudes.</p>
 
@@ -6193,8 +6193,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'personalizacion-widgets-testimonios',
-    image: blogImageUrl('personalizacion-widgets-testimonios'),
+    slug: 'personalización-widgets-testimonios',
+    image: blogImageUrl('personalización-widgets-testimonios'),
     title: 'Guía de personalización de widgets de testimonios para tu marca',
     excerpt:
       'Aprende a personalizar widgets de testimonios para que se integren perfectamente con la identidad visual de tu marca y maximicen su impacto.',
@@ -6418,7 +6418,7 @@ export const blogArticles: BlogArticle[] = [
       'Guía de testimonios para marcas de alimentación y productos gourmet. Estrategias para generar confianza y diferenciación con opiniones de clientes.',
     content: `
 <h2>Introducción: La confianza en lo que comemos</h2>
-<p>El sector de la alimentación y los productos gourmet tiene una relación con la confianza que es literalmente visceral. Cuando compramos un producto alimentario, estamos confiando en que es seguro para nuestra salud, en que su sabor corresponde a lo que nos prometen, en que sus ingredientes son los que declara la etiqueta, y en que la experiencia gastronómica justifica el precio. Esta confianza es especialmente crítica en el segmento gourmet y artesanal, donde los precios son superiores a los productos convencionales y el consumidor necesita justificar la inversión adicional.</p>
+<p>El sector de la alimentación y los productos gourmet tiene una relación con la confianza que es literalmente visceral. Cuando compramos un producto alimentario, estamos confíando en que es seguro para nuestra salud, en que su sabor corresponde a lo que nos prometen, en que sus ingredientes son los que declara la etiqueta, y en que la experiencia gastronómica justifica el precio. Esta confianza es especialmente crítica en el segmento gourmet y artesanal, donde los precios son superiores a los productos convencionales y el consumidor necesita justificar la inversión adicional.</p>
 <p>Los testimonios de otros consumidores son la forma más efectiva de generar esta confianza. En un mercado saturado de opciones, donde cada marca promete ser la mejor, la más natural, la más auténtica y la más sabrosa, la voz de personas reales que han probado el producto y comparten su experiencia tiene una credibilidad que ninguna descripción de producto puede igualar.</p>
 <p>Sin embargo, el sector alimentario tiene particularidades que hacen que la gestión de testimonios sea diferente a otros sectores. El gusto es subjetivo, la experiencia sensorial es difícil de describir con palabras, la presentación visual del producto es crucial, y las preocupaciones sobre salud, alergias e ingredientes añaden una capa de complejidad que otros sectores no tienen. En este artículo, exploraremos cómo las marcas de alimentación pueden crear una estrategia de testimonios que capture estas particularidades y las convierta en ventajas competitivas.</p>
 
@@ -6503,7 +6503,7 @@ export const blogArticles: BlogArticle[] = [
 <p>La tendencia hacia el vídeo corto, impulsada por plataformas como TikTok, Instagram Reels y YouTube Shorts, está transformando las expectativas del consumidor sobre el formato del contenido. Los testimonios en vídeo corto, de quince a sesenta segundos, se convertirán en el formato dominante para la generación más joven de consumidores que consume contenido casi exclusivamente en formato visual y de corta duración.</p>
 <p>Pero el futuro va más allá del vídeo plano. La realidad aumentada podría permitir que un potencial comprador vea testimonios contextualizados en su propio entorno. Imagina apuntar tu teléfono a un producto en una tienda y ver aparecer testimonios de otros compradores flotando sobre el producto, o estar en una feria y ver las valoraciones de un stand superpuestas a la realidad a través de tus gafas de realidad aumentada.</p>
 <p>La realidad virtual podría crear experiencias testimoniales inmersivas. Un potencial alumno de una universidad podría hacer un tour virtual del campus y, en cada punto, escuchar testimonios de alumnos reales hablando sobre su experiencia en ese lugar. Un comprador de una propiedad podría hacer un tour virtual del barrio y escuchar a vecinos reales hablar sobre la vida en la zona.</p>
-<p>Estos formatos inmersivos son aún futuristas, pero las empresas que empiecen a experimentar con ellos hoy estarán mejor posicionadas para cuando se conviertan en mainstream. La recopilación de testimonios en vídeo y la creación de contenido espacial son inversiones que tendrán retorno creciente a medida que estas tecnologías maduren.</p>
+<p>Estos formatos inmersivos son aún futuristas, pero las empresas que empiecen a experimentar con ellos hoy estarán mejor posicionadas para cuando se conviertan en mainstream. La recopilación de testimonios en vídeo y la creación de contenido espacial son inversiónes que tendrán retorno creciente a medida que estas tecnologías maduren.</p>
 
 <h2>La economía de la atención y los testimonios</h2>
 <p>En un mundo donde la atención del consumidor es cada vez más escasa y más disputada, los formatos de testimonios deben adaptarse para capturar y retener la atención en fracciones de segundo. Los testimonios largos y densos seguirán teniendo su lugar para audiencias que buscan información detallada, pero la tendencia general es hacia formatos más breves, más visuales y más impactantes.</p>
@@ -6524,7 +6524,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Preparándote para el futuro: acciones concretas</h2>
 <p>No necesitas esperar a que todas estas tendencias se materialicen para empezar a prepararte. Hay acciones concretas que puedes tomar hoy para posicionar tu estrategia de testimonios para el futuro.</p>
 <p>Primero, invierte en la recopilación de testimonios en múltiples formatos, especialmente vídeo. El contenido de vídeo será cada vez más importante y contar con una biblioteca de vídeo testimonios te preparará para formatos futuros que aún no existen.</p>
-<p>Segundo, implementa prácticas de verificación y transparencia desde ahora. Vincula los testimonios a transacciones verificables, obtén consentimientos documentados, y sé transparente sobre tus prácticas de gestión de testimonios. Cuando la regulación se endurezca, ya estarás en cumplimiento.</p>
+<p>Segúndo, implementa prácticas de verificación y transparencia desde ahora. Vincula los testimonios a transacciones verificables, obtén consentimientos documentados, y sé transparente sobre tus prácticas de gestión de testimonios. Cuando la regulación se endurezca, ya estarás en cumplimiento.</p>
 <p>Tercero, etiqueta y organiza tus testimonios de forma granular: por sector del cliente, tamaño de empresa, tipo de producto, resultado obtenido y cualquier otra dimensión relevante. Esta organización será esencial para la personalización avanzada que el futuro demandará.</p>
 <p>Cuarto, cultiva una cultura de feedback continuo con tus clientes. Los testimonios del futuro serán conversaciones, no monólogos, y las empresas que ya tienen una relación de comunicación abierta con sus clientes tendrán una ventaja natural.</p>
 
@@ -6595,8 +6595,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-aumentar-conversion-landing',
-    image: blogImageUrl('testimonios-aumentar-conversion-landing'),
+    slug: 'testimonios-aumentar-conversión-landing',
+    image: blogImageUrl('testimonios-aumentar-conversión-landing'),
     title: 'Cómo los testimonios aumentan la conversión de tu landing page un 270%',
     excerpt:
       'Descubre las técnicas probadas para colocar testimonios en tu landing page y multiplicar las conversiones. Datos reales, ejemplos y estrategias accionables.',
@@ -6818,13 +6818,13 @@ export const blogArticles: BlogArticle[] = [
 <p>El tamaño total del bundle del widget debe ser lo más pequeño posible. Un widget de testimonios bien optimizado debería pesar entre quince y treinta kilobytes comprimido, incluyendo HTML, CSS y JavaScript. Si tu widget pesa más de cincuenta kilobytes, hay oportunidades significativas de optimización. Evita dependencias externas como jQuery o frameworks pesados: un widget de testimonios puede y debe construirse con JavaScript vanilla.</p>
 
 <h2>Personalización: CSS custom properties</h2>
-<p>La personalización del aspecto visual del widget es una necesidad para que se adapte a cualquier marca. La técnica más elegante para permitir la personalización sin romper el aislamiento del Shadow DOM es el uso de CSS custom properties, también conocidas como variables CSS. Las custom properties definidas en el documento principal pueden atravesar el boundary del Shadow DOM, lo que las convierte en el canal perfecto de personalización.</p>
+<p>La personalización del aspecto visual del widget es una necesidad para que se adapte a cualquier marca. La técnica más elegante para permitir la personalización sin romper el aislamiento del Shadow DOM es el uso de CSS custom properties, también conocidas como variables CSS. Las custom properties definidas en el documento principal pueden atravésar el boundary del Shadow DOM, lo que las convierte en el canal perfecto de personalización.</p>
 <p>Define variables CSS para todos los aspectos personalizables del widget: colores primarios y secundarios, tipografía, tamaños de texto, bordes, sombras, espaciados y radios de esquina. En el CSS interno del widget, usa estas variables con valores de fallback que se aplicarán cuando la variable no esté definida externamente. Esto permite que el widget tenga un aspecto profesional por defecto y se adapte completamente a la marca del sitio cuando se definen las variables.</p>
 <p>Los atributos de datos del elemento HTML del widget ofrecen otra vía de personalización para opciones que no son puramente visuales: layout del widget como carrusel, muro o lista, número de testimonios a mostrar, velocidad del carrusel, y opciones de filtrado. El script del widget lee estos atributos y configura el comportamiento en consecuencia.</p>
 
 <h2>Accesibilidad: widgets para todos</h2>
 <p>Un widget de testimonios accesible no es un lujo: es una obligación legal en muchos mercados y una buena práctica que beneficia a todos los usuarios. Los carruseles de testimonios son particularmente problemáticos para la accesibilidad si no se implementan correctamente, porque los lectores de pantalla no saben cómo navegar un carrusel que cambia automáticamente.</p>
-<p>Usa roles ARIA apropiados: el contenedor del carrusel debe tener role region con un aria-label descriptivo. Cada tarjeta de testimonio debe ser accesible con el teclado usando Tab para navegar entre tarjetas y Enter o Space para interactuar. Los controles de navegación del carrusel deben ser botones con aria-labels que describan su función como ir al testimonio anterior o ir al siguiente testimonio.</p>
+<p>Usa roles ARIA apropiados: el contenedor del carrusel debe tener role región con un aria-label descriptivo. Cada tarjeta de testimonio debe ser accesible con el teclado usando Tab para navegar entre tarjetas y Enter o Space para interactuar. Los controles de navegación del carrusel deben ser botones con aria-labels que describan su función como ir al testimonio anterior o ir al siguiente testimonio.</p>
 <p>Si el carrusel tiene reproducción automática, debe incluir un botón para pausar la rotación. La reproducción automática puede ser desorientadora para usuarios con discapacidades cognitivas o motoras, y pausar la animación debe ser posible tanto con un botón visible como con la preferencia del sistema operativo prefers-reduced-motion.</p>
 <p>Las imágenes de perfil en los testimonios deben tener atributos alt descriptivos que incluyan el nombre de la persona. Las valoraciones con estrellas deben ser comunicadas textualmente a los lectores de pantalla mediante aria-label: en lugar de solo mostrar iconos de estrellas, incluye un texto como valoración cuatro punto cinco sobre cinco que los lectores de pantalla puedan comunicar.</p>
 
@@ -6924,7 +6924,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>El momento perfecto: cuándo pedir el testimonio</h2>
 <p>El timing es el factor más importante en la solicitud de testimonios. Pedir demasiado pronto genera respuestas superficiales porque el cliente no ha tenido tiempo de evaluar completamente su experiencia. Pedir demasiado tarde significa que la emoción positiva se ha diluido y la motivación para escribir es menor. El momento óptimo depende del tipo de producto o servicio.</p>
-<p>Para servicios puntuales como una sesión de coaching, un tratamiento de belleza o una reparación del hogar, el momento ideal es entre veinticuatro y setenta y dos horas después de completar el servicio. El cliente ha tenido tiempo de reflexionar sobre la experiencia y de notar el impacto del servicio en su vida, pero la experiencia aún está fresca en su memoria.</p>
+<p>Para servicios puntuales como una sesión de coaching, un tratamiento de belleza o una reparación del hogar, el momento ideal es entre veinticuatro y setenta y dos horas después de completar el servicio. El cliente ha tenido tiempo de reflexiónar sobre la experiencia y de notar el impacto del servicio en su vida, pero la experiencia aún está fresca en su memoria.</p>
 <p>Para productos físicos, espera entre cinco y diez días después de la entrega. Esto da tiempo al cliente para usar el producto, evaluarlo y formarse una opinión informada. Para productos complejos como software o equipamiento profesional, el período puede extenderse a dos o cuatro semanas, dando tiempo suficiente para una evaluación significativa.</p>
 <p>Para servicios recurrentes como suscripciones o planes mensuales, hay dos momentos óptimos: después del primer hito de éxito, cuando el cliente ha logrado algo tangible con tu servicio, y en los momentos de renovación, cuando la decisión de continuar implica que están satisfechos con el valor recibido.</p>
 <p>La clave es que el trigger de la automatización esté vinculado a un evento significativo, no a una fecha arbitraria. Completar una compra, recibir un pedido, alcanzar un hito de uso, o renovar una suscripción son eventos que señalan momentos de satisfacción potencial donde la solicitud de testimonio es natural y bien recibida.</p>
@@ -6960,7 +6960,7 @@ export const blogArticles: BlogArticle[] = [
 <p>La métrica más importante es la tasa de testimonios sobre clientes totales: qué porcentaje de tus clientes acaba dejando un testimonio. Un objetivo realista para empezar es entre el cinco y el diez por ciento. Con una automatización bien optimizada, puedes aspirar al quince o veinte por ciento, lo que significa que uno de cada cinco clientes te deja un testimonio de forma automática.</p>
 
 <h2>Conclusión: Automatiza para crecer, no para molestar</h2>
-<p>La automatización de la solicitud de testimonios es una de las inversiones con mayor retorno que puedes hacer en tu marketing. Un flujo bien diseñado genera testimonios de forma continua y predecible, sin esfuerzo manual, sin incomodar a tus clientes, y con una consistencia que la solicitud manual nunca puede igualar.</p>
+<p>La automatización de la solicitud de testimonios es una de las inversiónes con mayor retorno que puedes hacer en tu marketing. Un flujo bien diseñado genera testimonios de forma continua y predecible, sin esfuerzo manual, sin incomodar a tus clientes, y con una consistencia que la solicitud manual nunca puede igualar.</p>
 <p>La clave es diseñar con empatía: piensa siempre en la experiencia del cliente, no en tu necesidad de testimonios. Si cada email que envías aporta valor, si el proceso es fácil y rápido, y si respetas los límites de frecuencia, tus clientes no solo no se molestarán sino que agradecerán la oportunidad de expresar su satisfacción.</p>
 <p><strong>Opinafy</strong> te facilita la creación de formularios de recopilación profesionales que se integran perfectamente con tus flujos de automatización. <strong>Empieza gratis</strong> y convierte cada cliente satisfecho en un testimonio automáticamente.</p>
 `,
@@ -7070,7 +7070,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Mini sitio con Opinafy: configuración en minutos</h2>
 <p><strong>Opinafy</strong> incluye la funcionalidad de mini sitio como parte de su plataforma, permitiéndote crear una página de testimonios profesional en cuestión de minutos. El mini sitio se genera automáticamente a partir de tus testimonios recopilados, con un diseño atractivo y responsive que puedes personalizar con tu logo, colores y textos.</p>
 <p>La URL del mini sitio es limpia y profesional, del tipo opinafy.com/s/tu-usuario, y funciona como una página web completa que puedes compartir en cualquier contexto. No necesitas conocimientos técnicos, no necesitas hosting adicional, y no necesitas preocuparte por el mantenimiento: cada nuevo testimonio que recopiles aparece automáticamente en tu mini sitio.</p>
-<p>Las plantillas de mini sitio de Opinafy están diseñadas para diferentes profesiones y estilos, desde diseños minimalistas y elegantes hasta layouts más visuales con fotos grandes y métricas destacadas. Elige la plantilla que mejor refleje tu marca personal y personalízala con tus colores y tipografía.</p>
+<p>Las plantillas de mini sitio de Opinafy están diseñadas para diferentes profesiónes y estilos, desde diseños mínimalistas y elegantes hasta layouts más visuales con fotos grandes y métricas destacadas. Elige la plantilla que mejor refleje tu marca personal y personalízala con tus colores y tipografía.</p>
 
 <h2>Métricas de tu mini sitio</h2>
 <p>Medir el rendimiento de tu mini sitio te permite optimizar su efectividad como herramienta de ventas. Las métricas clave incluyen el número de visitas, que te indica cuántas personas están accediendo a tu prueba social. El tiempo medio de permanencia, que te dice si los visitantes realmente leen los testimonios o solo echan un vistazo rápido. La fuente de tráfico, que te revela desde qué contexto llegan más visitantes: email, LinkedIn, propuestas, o búsqueda directa.</p>
@@ -7141,8 +7141,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'popup-fomo-testimonios-conversion',
-    image: blogImageUrl('popup-fomo-testimonios-conversion'),
+    slug: 'popup-fomo-testimonios-conversión',
+    image: blogImageUrl('popup-fomo-testimonios-conversión'),
     title: 'Popup FOMO con testimonios: la técnica que dispara conversiones',
     excerpt:
       'Cómo usar popups de prueba social con testimonios recientes para crear urgencia y aumentar conversiones hasta un 30%. Guía completa con mejores prácticas.',
@@ -7281,7 +7281,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Introducción: El poder de la voz humana</h2>
 <p>Entre los formatos de testimonios disponibles, el audio es quizás el más infravalorado y el que tiene mayor potencial de crecimiento. Los testimonios escritos son el estándar, los testimonios en vídeo son el formato premium, pero los testimonios en audio ocupan un espacio intermedio que combina las ventajas de ambos sin sus inconvenientes principales. La voz humana transmite emociones, autenticidad y personalidad de una forma que el texto no puede igualar, y sin la barrera de entrada que supone ponerse delante de una cámara.</p>
 <p>La explosión de los podcasts y el audio digital ha educado a los consumidores para consumir contenido en formato audio. Millones de personas escuchan podcasts mientras caminan, conducen, cocinan o hacen ejercicio. Esta familiaridad con el audio como formato de contenido crea una oportunidad única para los testimonios: un formato que los oyentes están acostumbrados a consumir, que transmite confianza a través de la voz, y que muchos clientes están dispuestos a crear porque es más fácil hablar que escribir o grabar un vídeo.</p>
-<p>Los testimonios en audio tienen una tasa de creación significativamente mayor que los de vídeo. La razón es simple: grabar un audio de treinta segundos con el móvil no requiere maquillarse, buscar un fondo adecuado, ni preocuparse por la expresión facial. Es tan sencillo como presionar un botón, hablar con naturalidad, y presionar de nuevo. Esta baja barrera de entrada significa más testimonios recopilados, más variedad de voces, y una prueba social más rica y diversa.</p>
+<p>Los testimonios en audio tienen una tasa de creación significativamente mayor que los de vídeo. La razón es simple: grabar un audio de treinta segundos con el móvil no requiere maquíllarse, buscar un fondo adecuado, ni preocuparse por la expresión facial. Es tan sencillo como presionar un botón, hablar con naturalidad, y presionar de nuevo. Esta baja barrera de entrada significa más testimonios recopilados, más variedad de voces, y una prueba social más rica y diversa.</p>
 
 <h2>Por qué los testimonios en audio generan confianza</h2>
 <p>La voz humana es uno de los indicadores de autenticidad más difíciles de falsificar de manera convincente. Aunque la tecnología de clonación de voz avanza rápidamente, un oído entrenado aún puede detectar las sutilezas que distinguen una voz real de una generada por IA: las pausas naturales, las variaciones de ritmo, los cambios de tono emocional, y las pequeñas imperfecciones que hacen que una voz suene humana y auténtica.</p>
@@ -7298,7 +7298,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Presentación de testimonios en audio en tu web</h2>
 <p>La presentación visual de un testimonio en audio debe compensar la falta de contenido visual con un diseño atractivo y la información contextual adecuada. Un reproductor de audio elegante, acompañado de la foto del cliente, su nombre, cargo, empresa y una transcripción del audio, crea una experiencia completa que funciona tanto para quienes prefieren escuchar como para quienes prefieren leer.</p>
 <p>La transcripción del audio es un elemento esencial que muchos implementan como opción secundaria pero que en realidad es fundamental. No todos los visitantes pueden o quieren escuchar audio en ese momento: pueden estar en una oficina sin auriculares, en un entorno ruidoso, o simplemente preferir la lectura rápida. La transcripción asegura que el contenido del testimonio sea accesible para todos, además de ser beneficiosa para el SEO ya que los motores de búsqueda pueden indexar el texto.</p>
-<p>Los reproductores de audio deben ser ligeros y funcionales. Un reproductor minimalista con botón de play y pausa, barra de progreso y duración total es todo lo que necesitas. Evita reproductores pesados que añadan dependencias de JavaScript innecesarias o que requieran plugins del navegador.</p>
+<p>Los reproductores de audio deben ser ligeros y funcionales. Un reproductor mínimalista con botón de play y pausa, barra de progreso y duración total es todo lo que necesitas. Evita reproductores pesados que añadan dependencias de JavaScript innecesarias o que requieran plugins del navegador.</p>
 <p>En las páginas donde el espacio es limitado, como la homepage o las landing pages, puedes mostrar testimonios de audio como tarjetas compactas con un botón de play prominente. La tarjeta incluye la foto, el nombre y una cita breve extraída de la transcripción, con el botón de play para quien quiera escuchar la experiencia completa en la voz del cliente.</p>
 
 <h2>Audio en redes sociales y email marketing</h2>
@@ -7348,11 +7348,11 @@ export const blogArticles: BlogArticle[] = [
 <p>Las variables de los testimonios que puedes probar en un A/B test se dividen en tres categorías: contenido, formato y posición. En la categoría de contenido, puedes probar diferentes testimonios en la misma posición para descubrir cuál genera más conversiones. Puedes probar testimonios con datos cuantitativos frente a testimonios emocionales, testimonios cortos frente a largos, testimonios de clientes similares al target frente a testimonios de clientes diferentes, y testimonios que abordan diferentes objeciones.</p>
 <p>En la categoría de formato, puedes probar testimonios en texto frente a testimonios en vídeo, testimonios con foto frente a sin foto, testimonios con estrellas de valoración frente a sin estrellas, y diferentes diseños de tarjetas de testimonio como bordes, sombras, fondos y tipografías. El formato puede tener un impacto sorprendentemente grande en la efectividad del mismo testimonio.</p>
 <p>En la categoría de posición, puedes probar testimonios en la sección hero frente a testimonios más abajo en la página, testimonios junto al formulario de conversión frente a testimonios separados, testimonios antes del precio frente a después del precio, y testimonios como sección independiente frente a testimonios integrados en el flujo de contenido.</p>
-<p>Cada una de estas variables puede tener un impacto significativo en la conversión, y las combinaciones multiplican las posibilidades. La recomendación es probar una variable a la vez para poder atribuir claramente el impacto de cada cambio. Probar múltiples variables simultáneamente, conocido como test multivariante, requiere volúmenes de tráfico mucho mayores para obtener significancia estadística.</p>
+<p>Cada una de estas variables puede tener un impacto significativo en la conversión, y las combinaciones multiplican las posibilidades. La recomendación es probar una variable a la vez para poder atribuir claramente el impacto de cada cambio. Probar múltiples variables simultáneamente, conocido como test multivaríante, requiere volúmenes de tráfico mucho mayores para obtener significancia estadística.</p>
 
 <h2>Cómo diseñar un test válido</h2>
 <p>Un A/B test válido requiere tres elementos fundamentales: una hipótesis clara, una muestra suficiente, y un período de tiempo adecuado. La hipótesis debe ser específica y falsificable: el testimonio de María con datos de ROI generará más conversiones que el testimonio de Carlos con enfoque emocional. Evita hipótesis vagas como probar si los testimonios funcionan, que no producen insights accionables.</p>
-<p>El tamaño de la muestra determina la fiabilidad de tus resultados. Para detectar una diferencia del diez por ciento en la tasa de conversión con un noventa y cinco por ciento de confianza estadística, necesitas aproximadamente mil visitantes por variante. Para detectar diferencias menores del cinco por ciento, necesitas varios miles por variante. Si tu web tiene poco tráfico, céntrate en probar variables que probablemente tengan un impacto grande, como el contenido del testimonio, en lugar de variables con impacto menor, como el color de fondo de la tarjeta.</p>
+<p>El tamaño de la muestra determina la fiabilidad de tus resultados. Para detectar una diferencia del diez por ciento en la tasa de conversión con un noventa y cinco por ciento de confianza estadística, necesitas aproximadamente mil visitantes por varíante. Para detectar diferencias menores del cinco por ciento, necesitas varios miles por varíante. Si tu web tiene poco tráfico, céntrate en probar variables que probablemente tengan un impacto grande, como el contenido del testimonio, en lugar de variables con impacto menor, como el color de fondo de la tarjeta.</p>
 <p>El período mínimo de un test es de dos semanas completas, incluyendo al menos dos fines de semana, para capturar las variaciones de comportamiento que ocurren según el día de la semana. Terminar un test antes de tiempo porque los resultados parciales parecen claros es uno de los errores más comunes y puede llevar a conclusiones incorrectas. El comportamiento del tráfico fluctúa, y lo que parece un ganador claro el lunes puede equilibrarse durante el fin de semana.</p>
 <p>La aleatorización es esencial: cada visitante debe ser asignado aleatoriamente a la versión A o B, y esa asignación debe mantenerse durante toda su sesión y, idealmente, en visitas posteriores. Las herramientas de A/B testing como Google Optimize, Optimizely, o VWO manejan la aleatorización automáticamente y proporcionan los cálculos estadísticos necesarios.</p>
 
@@ -7434,8 +7434,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'webhook-testimonios-automatizacion',
-    image: blogImageUrl('webhook-testimonios-automatizacion'),
+    slug: 'webhook-testimonios-automatización',
+    image: blogImageUrl('webhook-testimonios-automatización'),
     title: 'Webhooks para testimonios: conecta con Zapier, Make y más',
     excerpt:
       'Guía técnica sobre webhooks para testimonios. Aprende a conectar tu plataforma de testimonios con Zapier, Make y tu stack tecnológico para automatización avanzada.',
@@ -7461,7 +7461,7 @@ export const blogArticles: BlogArticle[] = [
 <p>El flujo de un webhook de testimonios funciona así. Primero, un cliente envía un nuevo testimonio a través de tu formulario de recopilación. La plataforma de testimonios almacena el testimonio y, simultáneamente, envía una petición HTTP POST a la URL del webhook que hayas configurado. Esta petición incluye un payload en formato JSON con todos los datos del testimonio: nombre del cliente, email, texto del testimonio, valoración, fecha, y cualquier campo personalizado que hayas definido.</p>
 <p>El sistema receptor del webhook procesa el payload y ejecuta la acción correspondiente. Si la URL del webhook apunta a un zap de Zapier, el zap se activa y ejecuta la secuencia de acciones que hayas configurado. Si apunta a un escenario de Make, el escenario se ejecuta con los datos del testimonio como entrada. Si apunta a tu propio servidor, tu código procesa los datos y realiza las acciones que hayas programado.</p>
 <p>Los eventos que típicamente activan webhooks de testimonios incluyen: nuevo testimonio recibido, que se activa cada vez que un cliente envía un testimonio a través de tu formulario. Testimonio aprobado, que se activa cuando moderas y apruebas un testimonio para publicación. Testimonio de alta valoración, que se activa solo para testimonios con cuatro o cinco estrellas. Y testimonio publicado, que se activa cuando el testimonio se hace visible en tu web.</p>
-<p>La seguridad de los webhooks se implementa típicamente con un secreto compartido o token de autenticación que se incluye en los headers de la petición HTTP. El sistema receptor verifica este token antes de procesar el payload, asegurando que la petición proviene realmente de tu plataforma de testimonios y no de un tercero malicioso.</p>
+<p>La seguridad de los webhooks se implementa típicamente con un secreto compartido o token de auténticación que se incluye en los headers de la petición HTTP. El sistema receptor verifica este token antes de procesar el payload, asegurando que la petición proviene realmente de tu plataforma de testimonios y no de un tercero malicioso.</p>
 
 <h2>Automatizaciones con Zapier</h2>
 <p>Zapier es la plataforma de automatización más popular y accesible para conectar testimonios con tu stack tecnológico. Un zap básico pero extremadamente útil es la notificación inmediata: cuando se recibe un nuevo testimonio, envía un mensaje a tu canal de Slack o Teams con los datos del testimonio. Esto permite a tu equipo ver cada nuevo testimonio en tiempo real, celebrar los positivos, y actuar rápidamente ante los que necesitan atención.</p>
@@ -7477,7 +7477,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Integraciones directas con tu stack</h2>
 <p>Si tu equipo tiene capacidad de desarrollo, las integraciones directas mediante webhooks a tu propio servidor ofrecen el máximo control y personalización. Un endpoint en tu servidor que recibe los webhooks de testimonios puede ejecutar cualquier lógica de negocio que necesites, sin las limitaciones de las plataformas de automatización no-code.</p>
 <p>Ejemplos de integraciones directas incluyen: actualizar una base de datos interna con todos los testimonios para análisis agregado. Calcular métricas de satisfacción en tiempo real como NPS estimado y tendencias de valoración. Generar contenido automatizado para newsletters usando los testimonios más recientes. Alimentar un sistema de recomendación que muestre testimonios personalizados según el perfil del visitante.</p>
-<p>La implementación técnica de un receptor de webhooks es sencilla en cualquier lenguaje de servidor. Necesitas un endpoint HTTP POST que parsee el JSON del payload, verifique el token de autenticación, y ejecute la lógica de negocio correspondiente. En Node.js, Python, PHP o cualquier otro lenguaje de servidor, esto se implementa en pocas líneas de código.</p>
+<p>La implementación técnica de un receptor de webhooks es sencilla en cualquier lenguaje de servidor. Necesitas un endpoint HTTP POST que parsee el JSON del payload, verifique el token de auténticación, y ejecute la lógica de negocio correspondiente. En Node.js, Python, PHP o cualquier otro lenguaje de servidor, esto se implementa en pocas líneas de código.</p>
 
 <h2>Mejores prácticas para webhooks de testimonios</h2>
 <p>La idempotencia es la primera práctica esencial. Tu receptor de webhooks debe manejar correctamente la recepción duplicada del mismo evento. Las plataformas de testimonios pueden reenviar un webhook si no reciben confirmación de recepción, así que tu sistema debe ser capaz de detectar y ignorar duplicados, típicamente verificando un identificador único del testimonio.</p>
@@ -7486,7 +7486,7 @@ export const blogArticles: BlogArticle[] = [
 <p>El logging detallado de todos los webhooks recibidos y procesados te permitirá diagnosticar problemas, auditar el flujo de testimonios, y verificar que todas las integraciones funcionan correctamente. Registra al menos la fecha, el tipo de evento, el identificador del testimonio, y el resultado del procesamiento.</p>
 
 <h2>Seguridad en webhooks de testimonios</h2>
-<p>Los testimonios contienen datos personales de tus clientes, y los webhooks que transmiten estos datos deben estar protegidos adecuadamente. Usa siempre HTTPS para las URLs de tus webhooks, verificando que el certificado SSL es válido. El token de autenticación debe ser largo, aleatorio y almacenado de forma segura, no hardcodeado en el código fuente.</p>
+<p>Los testimonios contienen datos personales de tus clientes, y los webhooks que transmiten estos datos deben estar protegidos adecuadamente. Usa siempre HTTPS para las URLs de tus webhooks, verificando que el certificado SSL es válido. El token de auténticación debe ser largo, aleatorio y almacenado de forma segura, no hardcodeado en el código fuente.</p>
 <p>Valida el payload del webhook antes de procesarlo. Verifica que el JSON tiene la estructura esperada, que los campos obligatorios están presentes, y que los valores están dentro de rangos razonables. Un webhook malintencionado podría intentar inyectar datos maliciosos si tu receptor no valida la entrada.</p>
 <p>Cumple con el RGPD y la LOPDGDD al transmitir datos personales a través de webhooks. Asegúrate de que los destinos de tus webhooks cumplen con la normativa de protección de datos y de que tienes base legal para compartir los datos del cliente con cada servicio receptor.</p>
 
@@ -7496,8 +7496,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'responder-testimonios-publicamente',
-    image: blogImageUrl('responder-testimonios-publicamente'),
+    slug: 'responder-testimonios-públicamente',
+    image: blogImageUrl('responder-testimonios-públicamente'),
     title: 'Cómo responder testimonios públicamente (y por qué debes hacerlo)',
     excerpt:
       'Responder a los testimonios de tus clientes genera más confianza y engagement. Aprende a responder testimonios positivos y negativos de forma profesional.',
@@ -7522,7 +7522,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Por qué responder a testimonios positivos</h2>
 <p>Muchos negocios entienden la importancia de responder a las reseñas negativas para gestionar la crisis, pero ignoran los testimonios positivos pensando que no requieren atención. Este es un error que desperdicia una enorme oportunidad de fortalecer la relación con el cliente y amplificar el impacto del testimonio.</p>
 <p>Cuando respondes a un testimonio positivo, logras varios objetivos simultáneamente. Primero, refuerzas la relación con el cliente que dejó el testimonio. Una respuesta que agradece personalmente su feedback le hace sentir valorado y aumenta la probabilidad de que siga siendo un cliente fiel y un promotor activo de tu marca.</p>
-<p>Segundo, demuestras a los potenciales clientes que leen los testimonios que hay personas reales y atentas detrás de tu negocio. Un testimonio positivo seguido de una respuesta cálida y personalizada del negocio crea una impresión de calidad de servicio que va más allá del testimonio mismo.</p>
+<p>Segúndo, demuestras a los potenciales clientes que leen los testimonios que hay personas reales y atentas detrás de tu negocio. Un testimonio positivo seguido de una respuesta cálida y personalizada del negocio crea una impresión de calidad de servicio que va más allá del testimonio mismo.</p>
 <p>Tercero, la respuesta te permite añadir contexto o información adicional que enriquece el testimonio. Si un cliente menciona una funcionalidad específica, tu respuesta puede ampliar la información sobre esa funcionalidad. Si menciona un resultado, puedes contextualizar cómo otros clientes han logrado resultados similares. Esta información adicional añade valor para los lectores sin modificar el testimonio original.</p>
 <p>Cuarto, cada respuesta es una oportunidad de SEO. Las respuestas añaden contenido textual relevante a la página de testimonios, incluyendo naturalmente palabras clave relacionadas con tu producto y sector. Este contenido adicional puede mejorar el posicionamiento de tu página de testimonios en los motores de búsqueda.</p>
 
@@ -7604,7 +7604,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Edición mínima: menos es más</h2>
 <p>La edición de testimonios por webcam debe ser mínima e invisible. El objetivo no es producir un vídeo polished sino un testimonio auténtico con la mínima intervención para garantizar una experiencia de visualización aceptable. Recortar el inicio y el final para eliminar los momentos de preparación, eliminar pausas excesivamente largas, y ajustar ligeramente el audio es todo lo que necesitas.</p>
 <p>Añadir subtítulos es la mejora de post-producción más importante. Más del ochenta por ciento de los vídeos en redes sociales y webs se reproducen sin sonido, y un vídeo testimonial sin subtítulos pierde la mayor parte de su audiencia. Los subtítulos pueden generarse automáticamente con herramientas de transcripción y añadirse como overlay en el vídeo.</p>
-<p>Un lower third discreto con el nombre, cargo y empresa del cliente profesionaliza el vídeo sin añadir producción artificial. Un diseño minimalista con tu tipografía de marca y colores corporativos es suficiente para identificar al cliente sin que el vídeo parezca un anuncio producido.</p>
+<p>Un lower third discreto con el nombre, cargo y empresa del cliente profesionaliza el vídeo sin añadir producción artificial. Un diseño mínimalista con tu tipografía de marca y colores corporativos es suficiente para identificar al cliente sin que el vídeo parezca un anuncio producido.</p>
 <p>Evita la música de fondo, los efectos de transición elaborados, los logos animados, y cualquier otro elemento que acerque el vídeo a la estética publicitaria. La fortaleza del testimonio por webcam es su autenticidad sin filtros, y cada capa de producción que añades diluye esa autenticidad.</p>
 
 <h2>Dónde publicar testimonios en vídeo</h2>
@@ -7807,8 +7807,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-wordpress-guia-instalacion',
-    image: blogImageUrl('testimonios-wordpress-guia-instalacion'),
+    slug: 'testimonios-wordpress-guia-instalación',
+    image: blogImageUrl('testimonios-wordpress-guia-instalación'),
     title: 'Instalar testimonios en WordPress en 3 minutos',
     excerpt:
       'Guía rápida para instalar y mostrar testimonios profesionales en WordPress. Tres métodos: widget externo, plugin, y código personalizado.',
@@ -7832,7 +7832,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Método 1: Widget externo con Opinafy en tres minutos</h2>
 <p>El método más rápido para mostrar testimonios profesionales en WordPress es usar un widget externo como el de Opinafy. Este método no requiere instalar ningún plugin, no añade peso a tu base de datos de WordPress, y el widget se actualiza automáticamente con los nuevos testimonios que recopiles sin que tengas que tocar tu web.</p>
-<p>El proceso tiene tres pasos. Primero, crea tu cuenta gratuita en Opinafy y recopila al menos tres o cuatro testimonios. Segundo, en tu dashboard de Opinafy, copia el código del widget, que consiste en un elemento HTML y un script JavaScript. Tercero, en tu editor de WordPress, añade un bloque de HTML personalizado en la página donde quieres mostrar los testimonios, pega el código, y pública. Literalmente tres minutos.</p>
+<p>El proceso tiene tres pasos. Primero, crea tu cuenta gratuita en Opinafy y recopila al menos tres o cuatro testimonios. Segúndo, en tu dashboard de Opinafy, copia el código del widget, que consiste en un elemento HTML y un script JavaScript. Tercero, en tu editor de WordPress, añade un bloque de HTML personalizado en la página donde quieres mostrar los testimonios, pega el código, y pública. Literalmente tres minutos.</p>
 <p>Si usas Elementor, Divi, u otro page builder visual, el proceso es igualmente sencillo: añade un módulo de HTML o código en la posición deseada y pega el código del widget. Los page builders renderizan el HTML personalizado como cualquier otro bloque, y el widget de Opinafy se mostrará con su diseño profesional integrado en tu layout.</p>
 <p>Las ventajas de este método son múltiples. El widget se carga de forma asíncrona, sin ralentizar tu web. Los estilos están aislados con Shadow DOM, sin conflictos con tu tema de WordPress. Los nuevos testimonios aparecen automáticamente sin necesidad de editar tu web. Y si cambias de tema o de page builder, el widget sigue funcionando exactamente igual porque es independiente de tu instalación de WordPress.</p>
 <p>La personalización del widget se hace desde el dashboard de Opinafy: colores, tipografía, layout, número de testimonios visibles, y velocidad de rotación. Estos cambios se aplican instantáneamente sin tocar WordPress, lo que significa que puedes experimentar con diferentes presentaciones sin riesgo de romper nada en tu web.</p>
@@ -7942,7 +7942,7 @@ export const blogArticles: BlogArticle[] = [
     content: `
 <h2>Introducción: El diseño que convierte</h2>
 <p>El mismo testimonio puede generar resultados radicalmente diferentes según cómo se presente visualmente. Un texto idéntico en un diseño descuidado será ignorado, mientras que en un diseño profesional y atractivo capturará la atención y generará confianza. La plantilla de testimonios que elijas determina la primera impresión que tus visitantes tendrán de tu prueba social, y esa primera impresión es crucial para que lean el contenido o pasen de largo.</p>
-<p>Con más de sesenta y cinco plantillas disponibles en plataformas como Opinafy, la variedad puede ser abrumadora. ¿Necesitas un carrusel o un muro? ¿Tarjetas con sombra o diseño minimalista? ¿Fotos circulares o cuadradas? ¿Estrellas de valoración o sin estrellas? Cada decisión de diseño tiene un impacto en la efectividad del testimonio, y la elección correcta depende de tu sector, tu audiencia y tu estética de marca.</p>
+<p>Con más de sesenta y cinco plantillas disponibles en plataformas como Opinafy, la variedad puede ser abrumadora. ¿Necesitas un carrusel o un muro? ¿Tarjetas con sombra o diseño mínimalista? ¿Fotos circulares o cuadradas? ¿Estrellas de valoración o sin estrellas? Cada decisión de diseño tiene un impacto en la efectividad del testimonio, y la elección correcta depende de tu sector, tu audiencia y tu estética de marca.</p>
 <p>En esta guía, organizaremos las principales categorías de plantillas de testimonios, explicaremos cuándo usar cada una, y te daremos criterios claros para elegir la plantilla perfecta para tu caso específico. No se trata de la plantilla más bonita, sino de la que mejor funciona para tus objetivos de conversión.</p>
 
 <h2>Categoría 1: Plantillas de carrusel</h2>
@@ -7971,7 +7971,7 @@ export const blogArticles: BlogArticle[] = [
 <h2>Cómo elegir: criterios de decisión</h2>
 <p>El primer criterio es el objetivo de la sección. Si el objetivo es generar una primera impresión de confianza en la homepage, un carrusel o un testimonio destacado funciona mejor. Si el objetivo es proporcionar prueba social detallada para la decisión de compra, una lista o un muro es más adecuado.</p>
 <p>El segundo criterio es el volumen de testimonios disponibles. Con menos de diez testimonios, las plantillas compactas como el carrusel o el testimonio destacado funcionan mejor. Con más de veinte, los muros y las listas aprovechan el volumen para crear una impresión de confianza masiva.</p>
-<p>El tercer criterio es tu estética de marca. Si tu marca es minimalista y premium, las plantillas con mucho espacio en blanco, tipografía elegante y pocos elementos visuales serán más coherentes. Si tu marca es vibrante y dinámica, las plantillas con colores, iconos y animaciones reflejarán mejor tu personalidad.</p>
+<p>El tercer criterio es tu estética de marca. Si tu marca es mínimalista y premium, las plantillas con mucho espacio en blanco, tipografía elegante y pocos elementos visuales serán más coherentes. Si tu marca es vibrante y dinámica, las plantillas con colores, iconos y animaciones reflejarán mejor tu personalidad.</p>
 <p>El cuarto criterio es el dispositivo dominante de tu audiencia. Si la mayoría de tu tráfico viene de móvil, prioriza plantillas que funcionan bien en pantallas pequeñas: carruseles de un solo testimonio, listas verticales, y tarjetas compactas. Los muros de múltiples columnas pueden comprimirse demasiado en móvil y perder legibilidad.</p>
 
 <h2>Personalización: más allá de la plantilla base</h2>
@@ -7984,8 +7984,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'verificacion-empresa-testimonios',
-    image: blogImageUrl('verificacion-empresa-testimonios'),
+    slug: 'verificación-empresa-testimonios',
+    image: blogImageUrl('verificación-empresa-testimonios'),
     title: 'Verificación automática de empresa en testimonios: cómo funciona',
     excerpt:
       'Cómo funciona la verificación automática de empresa en testimonios B2B. Aumenta la credibilidad con verificación de dominio, LinkedIn y datos corporativos.',
@@ -8009,7 +8009,7 @@ export const blogArticles: BlogArticle[] = [
 
 <h2>Verificación por dominio de email</h2>
 <p>La verificación más sencilla y ampliamente utilizada es la verificación del dominio de email corporativo. Cuando un cliente deja un testimonio usando su email corporativo, como juan.garcia@iberdrola.es en lugar de un email personal como juangarcia84@gmail.com, el dominio del email puede verificarse automáticamente para confirmar que pertenece a una empresa real.</p>
-<p>El proceso técnico implica varios pasos. Primero, se extrae el dominio del email proporcionado. Segundo, se verifica que el dominio tiene registros MX válidos, lo que confirma que es un dominio de email operativo. Tercero, se busca información sobre la empresa propietaria del dominio en bases de datos empresariales. Cuarto, se compara el nombre de la empresa que el cliente escribió en el formulario con el nombre registrado del dominio para detectar inconsistencias.</p>
+<p>El proceso técnico implica varios pasos. Primero, se extrae el dominio del email proporcionado. Segúndo, se verifica que el dominio tiene registros MX válidos, lo que confirma que es un dominio de email operativo. Tercero, se busca información sobre la empresa propietaria del dominio en bases de datos empresariales. Cuarto, se compara el nombre de la empresa que el cliente escribió en el formulario con el nombre registrado del dominio para detectar inconsistencias.</p>
 <p>Las limitaciones de esta verificación son que no todos los profesionales usan email corporativo para interacciones externas, que empresas muy pequeñas pueden usar dominios genéricos como gmail o hotmail para su negocio, y que la verificación del dominio confirma que la empresa existe pero no necesariamente que la persona que dejó el testimonio trabaja allí. Sin embargo, para la mayoría de los casos B2B, la verificación de dominio proporciona un nivel de credibilidad significativamente superior al de los testimonios sin verificar.</p>
 
 <h2>Verificación por perfil de LinkedIn</h2>
@@ -8197,7 +8197,7 @@ export const blogArticles: BlogArticle[] = [
 <p>La inteligencia artificial ha mejorado enormemente la calidad de las traducciones automáticas, y para traducciones iniciales que luego se revisan por un humano, puede ahorrar tiempo significativo. Sin embargo, para testimonios que van a representar tu marca ante clientes potenciales, la revisión humana por un nativo sigue siendo esencial para garantizar que el tono, el registro y las expresiones suenen completamente naturales.</p>
 
 <h2>Presentación según el idioma del visitante</h2>
-<p>Tu web multilingüe debe mostrar automáticamente los testimonios en el idioma correcto según la versión del sitio que el visitante está viendo. Si un visitante está en la versión francesa de tu web, los widgets de testimonios deben mostrar testimonios en francés. Si cambia a la versión inglesa, los testimonios deben cambiar a inglés.</p>
+<p>Tu web multilingüe debe mostrar automáticamente los testimonios en el idioma correcto según la versión del sitio que el visitante está viendo. Si un visitante está en la versión francesa de tu web, los widgets de testimonios deben mostrar testimonios en francés. Si cambia a la versión inglésa, los testimonios deben cambiar a inglés.</p>
 <p>Si no tienes suficientes testimonios en un idioma específico, muestra los que tengas en ese idioma primero, seguidos de testimonios traducidos de otros idiomas con una indicación de que son traducciones. Es mejor mostrar tres testimonios originales en francés y cinco traducidos del inglés que no mostrar ninguno.</p>
 <p>Los widgets de testimonios deben soportar caracteres y direcciones de texto de todos los idiomas que uses. Los idiomas con caracteres no latinos como chino, japonés, árabe o hebreo requieren que el widget soporte Unicode correctamente y que la tipografía elegida incluya los glifos necesarios. Los idiomas con escritura de derecha a izquierda como árabe y hebreo necesitan un layout invertido que funcione correctamente.</p>
 
@@ -8421,8 +8421,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-tiendas-ecologicas',
-    image: blogImageUrl('testimonios-tiendas-ecologicas'),
+    slug: 'testimonios-tiendas-ecológicas',
+    image: blogImageUrl('testimonios-tiendas-ecológicas'),
     title: "Testimonios para tiendas ecológicas y sostenibles: cómo generar confianza verde",
     excerpt: "Aprende cómo las tiendas ecológicas pueden aprovechar los testimonios para demostrar su compromiso real con la sostenibilidad y atraer consumidores conscientes.",
     category: 'Industrias',
@@ -8771,8 +8771,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-centros-formacion-continua',
-    image: blogImageUrl('testimonios-centros-formacion-continua'),
+    slug: 'testimonios-centros-formación-continua',
+    image: blogImageUrl('testimonios-centros-formación-continua'),
     title: "Testimonios para centros de formación continua: convence a profesionales que buscan crecer",
     excerpt: "Descubre cómo los centros de formación continua pueden usar testimonios de profesionales que han avanzado en su carrera gracias a sus cursos.",
     category: 'Industrias',
@@ -9051,8 +9051,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'mejorar-tasa-conversion-testimonios',
-    image: blogImageUrl('mejorar-tasa-conversion-testimonios'),
+    slug: 'mejorar-tasa-conversión-testimonios',
+    image: blogImageUrl('mejorar-tasa-conversión-testimonios'),
     title: "Cómo mejorar tu tasa de conversión con testimonios estratégicos",
     excerpt: "Descubre técnicas avanzadas para colocar y optimizar testimonios en puntos clave de tu web para maximizar las conversiones y reducir la tasa de abandono.",
     category: 'Conversión',
@@ -9062,7 +9062,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Técnicas avanzadas para mejorar tu tasa de conversión con testimonios colocados estratégicamente en tu web.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9137,7 +9137,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía completa sobre cómo integrar testimonios en páginas de producto para maximizar ventas en ecommerce.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9212,7 +9212,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo crear una estrategia de testimonios que funcione en web, email, redes sociales y más canales simultáneamente.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9287,7 +9287,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía paso a paso para integrar testimonios en campañas de email automatizadas y aumentar conversiones.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9362,7 +9362,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Técnicas probadas para conseguir testimonios de clientes difíciles, ocupados o reticentes a dejar opiniones.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9437,7 +9437,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo manejar testimonios en el sector lujo equilibrando exclusividad, discreción y prueba social sofisticada.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9512,7 +9512,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo usar testimonios en páginas de comparativa de productos para influir en la decisión de compra a tu favor.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9587,7 +9587,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo integrar testimonios en landing pages PPC para maximizar conversiones y reducir el coste por adquisición.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9662,7 +9662,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo usar testimonios en campañas de retargeting y remarketing para recuperar visitantes que no compraron.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9726,8 +9726,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'automatizacion-testimonios-crm-hubspot',
-    image: blogImageUrl('automatizacion-testimonios-crm-hubspot'),
+    slug: 'automatización-testimonios-crm-hubspot',
+    image: blogImageUrl('automatización-testimonios-crm-hubspot'),
     title: "Automatización de testimonios con CRM y HubSpot: guía completa",
     excerpt: "Descubre cómo automatizar la recopilación, gestión y publicación de testimonios integrando Opinafy con tu CRM, HubSpot, Salesforce y más.",
     category: 'Estrategia',
@@ -9737,7 +9737,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía completa para automatizar la gestión de testimonios integrando Opinafy con CRM como HubSpot y Salesforce.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9812,7 +9812,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía técnica para usar la API de testimonios de Opinafy y crear integraciones personalizadas en cualquier plataforma.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9887,7 +9887,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo Shadow DOM permite integrar widgets de testimonios sin conflictos CSS con el diseño existente de tu web.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -9962,7 +9962,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía para integrar Google Fonts en widgets de testimonios y conseguir una personalización tipográfica perfecta.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10037,7 +10037,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Técnicas para optimizar el rendimiento de widgets de testimonios sin afectar la velocidad de tu web.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10112,7 +10112,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía técnica completa para integrar testimonios en Next.js y React con SSR, SSG y componentes dinámicos.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10187,7 +10187,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo integrar testimonios con headless CMS como Strapi, Sanity y Contentful para cualquier frontend.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10262,7 +10262,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía SEO definitiva para implementar schema markup en testimonios y conseguir rich snippets con estrellas en Google.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10337,7 +10337,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía de implementación para integrar testimonios en Progressive Web Apps con soporte offline y caching.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10412,7 +10412,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo configurar CDN para servir widgets de testimonios con máxima velocidad y mínima latencia global.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10487,7 +10487,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía completa de A/B testing para widgets de testimonios: qué probar, cómo medir y cómo iterar.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10562,7 +10562,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Tácticas avanzadas de growth hacking basadas en testimonios para escalar tu negocio rápidamente.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10637,7 +10637,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo integrar testimonios en tu estrategia de inbound marketing para atraer clientes de forma orgánica.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10712,7 +10712,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo usar testimonios en marketing de contenidos para amplificar tu estrategia editorial.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10787,7 +10787,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo usar testimonios en podcast marketing para convertir oyentes en clientes de tu negocio.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10862,7 +10862,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Estrategia completa de testimonios en LinkedIn para generar leads B2B cualificados y construir autoridad.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -10937,7 +10937,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo crear testimonios en formato corto para TikTok e Instagram Reels que generen conversiones rápidas.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11012,7 +11012,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo crear y usar testimonios en vídeo para YouTube como parte de tu estrategia de contenidos.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11078,16 +11078,16 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'testimonios-marketing-afiliados',
     image: blogImageUrl('testimonios-marketing-afiliados'),
-    title: "Testimonios en marketing de afiliados: prueba social para comisiones",
+    title: "Testimonios en marketing de afiliados: prueba social para comisiónes",
     excerpt: "Aprende a usar testimonios para potenciar tu programa de afiliados y aumentar las conversiones de tus partners de referencia.",
     category: 'Marketing',
-    keywords: ["testimonios marketing afiliados","afiliados testimonios","programa referidos testimonios","comisiones prueba social"],
+    keywords: ["testimonios marketing afiliados","afiliados testimonios","programa referidos testimonios","comisiónes prueba social"],
     date: '2026-03-05',
     readTime: '10 min',
     metaDescription: "Cómo usar testimonios para potenciar tu programa de marketing de afiliados y aumentar conversiones.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11162,7 +11162,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo combinar testimonios de clientes reales con influencer marketing para máxima autenticidad.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11237,7 +11237,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo crear un programa de referidos potenciado por testimonios para crecimiento viral orgánico.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11312,7 +11312,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo la inteligencia artificial transforma la gestión de testimonios en 2027: tendencias y oportunidades.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11387,7 +11387,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo la realidad aumentada crea nuevas formas de mostrar testimonios inmersivos e interactivos.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11451,8 +11451,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-blockchain-verificacion',
-    image: blogImageUrl('testimonios-blockchain-verificacion'),
+    slug: 'testimonios-blockchain-verificación',
+    image: blogImageUrl('testimonios-blockchain-verificación'),
     title: "Blockchain para verificar testimonios: autenticidad garantizada",
     excerpt: "Explora cómo la tecnología blockchain puede usarse para verificar la autenticidad de los testimonios y eliminar las reseñas falsas.",
     category: 'Tendencias',
@@ -11462,7 +11462,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo la tecnología blockchain puede verificar la autenticidad de testimonios y eliminar reseñas falsas.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11537,7 +11537,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo optimizar testimonios para búsquedas por voz con Alexa, Google Assistant y Siri.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11612,7 +11612,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo integrar testimonios en chatbots conversacionales para prueba social automatizada en ventas.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11676,8 +11676,8 @@ export const blogArticles: BlogArticle[] = [
 `,
   },
   {
-    slug: 'testimonios-personalizacion-dinamica',
-    image: blogImageUrl('testimonios-personalizacion-dinamica'),
+    slug: 'testimonios-personalización-dinámica',
+    image: blogImageUrl('testimonios-personalización-dinámica'),
     title: "Personalización dinámica de testimonios: muestra el testimonio perfecto a cada visitante",
     excerpt: "Aprende a usar personalización dinámica para mostrar automáticamente los testimonios más relevantes según el perfil y comportamiento de cada visitante.",
     category: 'Tendencias',
@@ -11687,7 +11687,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo usar personalización dinámica para mostrar testimonios relevantes a cada visitante automáticamente.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11762,7 +11762,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Métricas avanzadas de analytics para testimonios y cómo usarlas para optimizar tu estrategia de prueba social.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11837,7 +11837,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Guía legal actualizada sobre compliance y regulaciones de testimonios: RGPD, publicidad y mejores prácticas.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11912,7 +11912,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Cómo funcionan los testimonios en mercados emergentes y cómo adaptar tu estrategia a diferentes culturas.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 
@@ -11987,7 +11987,7 @@ export const blogArticles: BlogArticle[] = [
     metaDescription: "Tendencias y predicciones para el futuro de las reseñas verificadas en 2028 y cómo preparar tu negocio.",
     content: `
 <h2>Introducción</h2>
-<p>En el panorama digital de 2027, los testimonios de clientes se han consolidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
+<p>En el panorama digital de 2027, los testimonios de clientes se han consólidado como uno de los pilares fundamentales del marketing digital efectivo. Ya no se trata simplemente de recopilar opiniones y mostrarlas en tu web, sino de utilizar los testimonios de forma estratégica para <strong>maximizar su impacto en cada punto de contacto con tu audiencia</strong>.</p>
 <p>Este artículo profundiza en técnicas avanzadas y estrategias probadas que te permitirán llevar tu gestión de testimonios al siguiente nivel. Ya sea que estés comenzando a implementar testimonios o que busques optimizar una estrategia existente, aquí encontrarás insights prácticos y accionables que puedes aplicar inmediatamente en tu negocio.</p>
 <p>A lo largo de las siguientes secciones, abordaremos desde los fundamentos estratégicos hasta las tácticas más innovadoras, pasando por herramientas técnicas, métricas de medición y casos de uso que ilustran cómo los testimonios pueden transformar radicalmente los resultados de tu negocio cuando se utilizan con inteligencia y método.</p>
 

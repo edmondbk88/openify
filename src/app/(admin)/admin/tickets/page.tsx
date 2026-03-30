@@ -142,8 +142,8 @@ export default function AdminTicketsPage() {
             onChange={(e) => setCategoryFilter(e.target.value)}
             className="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 outline-none"
           >
-            <option value="">Todas las categorias</option>
-            <option value="billing">Facturacion</option>
+            <option value="">Todas las categorías</option>
+            <option value="billing">Facturación</option>
             <option value="technical">Técnico</option>
             <option value="feature">Sugerencia</option>
             <option value="account">Cuenta</option>

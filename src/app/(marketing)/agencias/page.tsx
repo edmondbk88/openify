@@ -74,7 +74,7 @@ const agencyFeatures = [
   },
   {
     title: 'Reportes PDF exportables',
-    description: 'Genera reportes profesionales en PDF para presentar a tus clientes con sus testimonios y metricas.',
+    description: 'Genera reportes profesionales en PDF para presentar a tus clientes con sus testimonios y métricas.',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z" />
@@ -92,7 +92,7 @@ const agencyFeatures = [
   },
   {
     title: 'Plantillas personalizables por cliente',
-    description: 'Elige entre 65+ plantillas y personaliza colores, fuentes y estilos para cada cliente de tu agencia.',
+    description: 'Elige entre 100+ plantillas y personaliza colores, fuentes y estilos para cada cliente de tu agencia.',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" d="M4.098 19.902a3.75 3.75 0 0 0 5.304 0l6.401-6.402M6.75 21A3.75 3.75 0 0 1 3 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 0 0 3.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008Z" />
@@ -199,7 +199,7 @@ export default function AgenciasPage() {
             Todo lo que tu agencia necesita
           </h2>
           <p className="mt-4 text-center text-lg text-gray-600">
-            Funcionalidades disenadas específicamente para agencias de marketing
+            Funcionalidades diseñadas específicamente para agencias de marketing
           </p>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {agencyFeatures.map((feature) => (
@@ -238,7 +238,7 @@ export default function AgenciasPage() {
                 'Testimonios ilimitados por proyecto',
                 'White-label (sin marca Opinafy)',
                 'Todos los layouts de widget',
-                '65+ plantillas personalizables',
+                '100+ plantillas personalizables',
                 'Mini sitio público por proyecto',
                 'Reportes PDF exportables',
                 'Webhooks para automatización',

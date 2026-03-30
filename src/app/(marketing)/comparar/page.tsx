@@ -123,18 +123,18 @@ export default function CompararPage() {
             Cada comparativa se elabora probando las herramientas en escenarios reales: creamos
             proyectos, anadimos testimonios, personalizamos widgets e integramos el código en sitios
             web de prueba. Evaluamos cada plataforma en base a seis criterios clave:
-            <strong> funcionalidades</strong> (tipos de widget, formatos de testimonios, personalizacion),
+            <strong> funcionalidades</strong> (tipos de widget, formatos de testimonios, personalización),
             <strong> facilidad de uso</strong> (curva de aprendizaje, UX del panel),
             <strong> rendimiento</strong> (velocidad de carga del widget, peso del script),
             <strong> precio</strong> (relacion calidad-coste, limites del plan gratuito),
-            <strong> soporte en español</strong> (idioma de la interfaz, documentacion, atencion al cliente)
+            <strong> soporte en español</strong> (idioma de la interfaz, documentación, atencion al cliente)
             y <strong>integraciones</strong> disponibles.
           </p>
           <p className="mt-4 leading-relaxed">
             A diferencia de otros rankings, nuestras comparativas son transparentes: mostramos tanto
             los puntos fuertes como las limitaciones de cada herramienta, incluyendo Opinafy.
-            Actualizamos las comparativas periodicamente para reflejar los cambios de precios y nuevas
-            funcionalidades. Nuestro objetivo es ayudarte a tomar una decision informada, no
+            Actualizamos las comparativas periódicamente para reflejar los cambios de precios y nuevas
+            funcionalidades. Nuestro objetivo es ayudarte a tomar una decisión informada, no
             convencerte de que una herramienta es mejor que otra sin datos que lo respalden.
           </p>
 
@@ -212,7 +212,7 @@ export default function CompararPage() {
             Prueba Opinafy gratis y decide por ti mismo
           </h2>
           <p className="mt-4 text-gray-600">
-            Sin tarjeta de credito. Configura tu primer proyecto en menos de 2 minutos.
+            Sin tarjeta de crédito. Configura tu primer proyecto en menos de 2 minutos.
           </p>
           <Link
             href="/registro"

@@ -60,7 +60,7 @@ export const helpGuidesEn: HelpGuideEn[] = [
 <h3>Plan limits</h3>
 <ul>
 <li><strong>Free:</strong> 1 project, up to 10 testimonials</li>
-<li><strong>Starter:</strong> 3 projects, up to 50 testimonials per project</li>
+<li><strong>Mini Site:</strong> 1 project, up to 20 testimonials</li>
 <li><strong>Pro:</strong> 10 projects, unlimited testimonials</li>
 <li><strong>Business:</strong> Unlimited projects, unlimited testimonials</li>
 </ul>
@@ -599,7 +599,7 @@ export const helpGuidesEn: HelpGuideEn[] = [
 <p>Audio testimonials are a perfect alternative to video: more personal than text, but without the barrier of getting in front of a camera.</p>
 <h3>Availability</h3>
 <ul>
-<li><strong>All paid plans:</strong> Audio recording enabled (Starter, Pro, and Business).</li>
+<li><strong>All paid plans:</strong> Audio recording enabled (Mini Site, Pro, and Business).</li>
 <li><strong>Free plan:</strong> Text and photo only.</li>
 </ul>
 <h3>How audio recording works</h3>
@@ -775,7 +775,7 @@ export const helpGuidesEn: HelpGuideEn[] = [
   },
   {
     slug: 'billing-plans',
-    slugEs: 'facturacion-planes',
+    slugEs: 'facturación-planes',
     title: 'Billing and plans',
     category: 'billing',
     description: 'Information about the 4 Opinafy plans, how to upgrade, cancel, and the 14-day guarantee.',
@@ -794,7 +794,7 @@ export const helpGuidesEn: HelpGuideEn[] = [
 <li>No Opinafy watermark: NO ("Powered by Opinafy" shown)</li>
 </ul>
 
-<h3>Starter Plan (5 EUR/month)</h3>
+<h3>Mini Site Plan (5 EUR/month)</h3>
 <ul>
 <li>3 projects</li>
 <li>50 testimonials per project</li>

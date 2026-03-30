@@ -184,7 +184,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-indigo-100">
             Opinafy te ayuda a recopilar, gestionar y mostrar testimonios de clientes de forma
-            profesional. Sin tarjeta de credito. Sin compromiso.
+            profesional. Sin tarjeta de crédito. Sin compromiso.
           </p>
           <Link
             href="/registro"

@@ -32,7 +32,7 @@ const PRIORITY_CONFIG: Record<string, { label: string; color: string }> = {
 }
 
 const CATEGORY_LABELS: Record<string, string> = {
-  billing: 'Facturacion',
+  billing: 'Facturación',
   technical: 'Técnico',
   feature: 'Sugerencia',
   account: 'Cuenta',
@@ -271,7 +271,7 @@ export default function AdminTicketDetailPage() {
         <div className="space-y-6">
           {/* User info */}
           <div className="bg-white rounded-xl border border-gray-200 p-6">
-            <h3 className="font-semibold text-gray-900 text-sm mb-4">Informacion del usuario</h3>
+            <h3 className="font-semibold text-gray-900 text-sm mb-4">Información del usuario</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center text-sm font-bold text-indigo-600">

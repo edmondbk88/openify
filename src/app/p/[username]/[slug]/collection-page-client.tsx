@@ -30,7 +30,7 @@ export function CollectionPageClient({
       allowVideo={allowVideo}
       locale={locale}
       onSuccess={(verificationPending) => {
-        const params = verificationPending ? '?verificacion=pendiente' : ''
+        const params = verificationPending ? '?verificación=pendiente' : ''
         router.push(`/p/${username}/${slug}/gracias${params}`)
       }}
     />

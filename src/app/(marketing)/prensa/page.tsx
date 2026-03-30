@@ -28,8 +28,8 @@ const stats = [
   { label: 'Plantillas de mini sitio', value: '30+' },
   { label: 'Idiomas soportados', value: '2' },
   { label: 'Articulos de blog', value: '320+' },
-  { label: 'Paginas de industria', value: '320+' },
-  { label: 'Paginas ciudad+industria', value: '421' },
+  { label: 'Páginas de industria', value: '320+' },
+  { label: 'Páginas ciudad+industria', value: '421' },
   { label: 'Integraciones', value: '8+' },
   { label: 'Plan gratuito', value: 'Si' },
 ]
@@ -37,11 +37,11 @@ const stats = [
 const screenshots = [
   {
     title: 'Dashboard principal',
-    description: 'Panel de control con metricas de testimonios, widgets activos y actividad reciente.',
+    description: 'Panel de control con métricas de testimonios, widgets activos y actividad reciente.',
   },
   {
     title: 'Editor de widgets',
-    description: 'Interfaz de personalizacion con 100+ plantillas: grid, masonry, carrusel, terminal, polaroid y más.',
+    description: 'Interfaz de personalización con 100+ plantillas: grid, masonry, carrusel, terminal, polaroid y más.',
   },
   {
     title: 'Formulario de recopilación',
@@ -105,20 +105,20 @@ export default function PrensaPage() {
             <div className="rounded-xl bg-white p-6 sm:p-8 shadow-sm border border-gray-100">
               <p className="text-gray-700 leading-relaxed mb-4">
                 Opinafy es la primera plataforma de gestión de testimonios de clientes creada nativamente en español.
-                Permite a negocios y profesionales recopilar, verificar y mostrar testimonios autenticos en sus sitios web
+                Permite a negocios y profesionales recopilar, verificar y mostrar testimonios auténticos en sus sitios web
                 mediante widgets embebibles con más de 100 plantillas profesionales.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
                 La plataforma ofrece verificación doble (por email y por dominio de empresa), grabación de video testimonios
                 directamente desde el navegador (sin subida de archivos para garantizar autenticidad), mini sitios profesionales
-                para quienes no tienen web propia, A/B testing integrado, análisis de sentimiento e importacion de reseñas
+                para quienes no tienen web propia, A/B testing integrado, análisis de sentimiento e importación de reseñas
                 desde Google Business, TripAdvisor y otras plataformas.
               </p>
               <p className="text-gray-700 leading-relaxed">
                 Fundada en marzo de 2026, Opinafy nacio para llenar el vacio en el mercado de herramientas de prueba social
                 para los más de 580 millones de hispanohablantes en el mundo. Mientras todas las alternativas existentes
-                (Testimonial.to, Senja, Famewall) operan exclusivamente en ingles, Opinafy ofrece una experiencia completamente
-                nativa en español, además de soporte en ingles. Los planes comienzan en 5 euros al mes, siendo 3-4 veces mas
+                (Testimonial.to, Senja, Famewall) operan exclusivamente en inglés, Opinafy ofrece una experiencia completamente
+                nativa en español, además de soporte en inglés. Los planes comienzan en 5 euros al mes, siendo 3-4 veces mas
                 asequible que la competencia.
               </p>
             </div>
@@ -172,7 +172,7 @@ export default function PrensaPage() {
               </div>
             </div>
             <p className="mt-4 text-sm text-gray-500">
-              Para solicitar archivos de alta resolucion, contacta a{' '}
+              Para solicitar archivos de alta resolución, contacta a{' '}
               <a href="mailto:hola@opinafy.com" className="text-indigo-600 hover:text-indigo-700">
                 hola@opinafy.com
               </a>
@@ -183,7 +183,7 @@ export default function PrensaPage() {
           <section>
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Capturas de pantalla</h2>
             <p className="text-gray-600 mb-6">
-              Capturas de las principales funcionalidades de la plataforma. Solicita versiones en alta resolucion por email.
+              Capturas de las principales funcionalidades de la plataforma. Solicita versiones en alta resolución por email.
             </p>
             <div className="grid gap-6 sm:grid-cols-2">
               {screenshots.map((shot) => (
@@ -222,7 +222,7 @@ export default function PrensaPage() {
                   <h3 className="text-xl font-semibold text-gray-900">Edmond Bojalil</h3>
                   <p className="text-indigo-600 font-medium">Fundador y CEO</p>
                   <p className="mt-3 text-gray-700 leading-relaxed">
-                    Desarrollador full-stack con sede en Espana. Creo Opinafy tras detectar que no existia
+                    Desarrollador full-stack con sede en España. Creo Opinafy tras detectar que no existia
                     ninguna plataforma de testimonios nativa en español, a pesar de que el mercado SaaS
                     hispanohablante crece un 19% anual. Su objetivo es democratizar el acceso a herramientas
                     de prueba social para los más de 580 millones de hispanohablantes en el mundo.
@@ -261,7 +261,7 @@ export default function PrensaPage() {
                 </div>
                 <div className="flex flex-col sm:flex-row sm:gap-4 border-t border-gray-50 pt-4">
                   <dt className="text-sm font-semibold text-gray-900 sm:w-48 flex-shrink-0">Sede</dt>
-                  <dd className="text-sm text-gray-700">Espana</dd>
+                  <dd className="text-sm text-gray-700">España</dd>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:gap-4 border-t border-gray-50 pt-4">
                   <dt className="text-sm font-semibold text-gray-900 sm:w-48 flex-shrink-0">Categoria</dt>
@@ -276,7 +276,7 @@ export default function PrensaPage() {
                   <dd className="text-sm text-gray-700">Plan gratuito disponible. Planes de pago desde 5 euros/mes</dd>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:gap-4 border-t border-gray-50 pt-4">
-                  <dt className="text-sm font-semibold text-gray-900 sm:w-48 flex-shrink-0">Stack tecnologico</dt>
+                  <dt className="text-sm font-semibold text-gray-900 sm:w-48 flex-shrink-0">Stack tecnológico</dt>
                   <dd className="text-sm text-gray-700">Next.js 14, Supabase, Stripe, Vercel, Tailwind CSS</dd>
                 </div>
                 <div className="flex flex-col sm:flex-row sm:gap-4 border-t border-gray-50 pt-4">

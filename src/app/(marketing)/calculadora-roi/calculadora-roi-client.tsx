@@ -67,11 +67,11 @@ const PLAN_COST_ANNUAL = PLAN_COST_MONTHLY * 12
 
 export default function CalculadoraROIClient() {
   const [visitors, setVisitors] = useState(5000)
-  const [conversionRate, setConversionRate] = useState(2)
+  const [conversiónRate, setConversionRate] = useState(2)
   const [avgOrder, setAvgOrder] = useState(50)
 
-  const currentRevenue = Math.round(visitors * (conversionRate / 100) * avgOrder)
-  const improvedRevenue = Math.round(visitors * ((conversionRate * 1.34) / 100) * avgOrder)
+  const currentRevenue = Math.round(visitors * (conversiónRate / 100) * avgOrder)
+  const improvedRevenue = Math.round(visitors * ((conversiónRate * 1.34) / 100) * avgOrder)
   const additionalMonthly = improvedRevenue - currentRevenue
   const additionalAnnual = additionalMonthly * 12
   const roi = additionalAnnual > 0 ? Math.round(((additionalAnnual - PLAN_COST_ANNUAL) / PLAN_COST_ANNUAL) * 100) : 0
@@ -124,7 +124,7 @@ export default function CalculadoraROIClient() {
 
                 <div>
                   <label htmlFor="convRate" className="block text-sm font-medium text-gray-700">
-                    Tasa de conversion actual (%)
+                    Tasa de conversión actual (%)
                   </label>
                   <input
                     id="convRate"
@@ -132,7 +132,7 @@ export default function CalculadoraROIClient() {
                     min={0}
                     max={100}
                     step={0.1}
-                    value={conversionRate}
+                    value={conversiónRate}
                     onChange={(e) => setConversionRate(Number(e.target.value) || 0)}
                     className="mt-1 w-full rounded-lg border border-gray-300 px-4 py-3 text-lg font-semibold text-gray-900 focus:border-indigo-500 focus:ring-indigo-500"
                   />
@@ -183,7 +183,7 @@ export default function CalculadoraROIClient() {
                 <p className="mt-2 text-3xl font-extrabold text-indigo-700">
                   <AnimatedNumber value={improvedRevenue} prefix="€" />
                 </p>
-                <p className="mt-1 text-sm text-indigo-500">+34% en conversion</p>
+                <p className="mt-1 text-sm text-indigo-500">+34% en conversión</p>
               </div>
 
               {/* Additional monthly */}
@@ -201,7 +201,7 @@ export default function CalculadoraROIClient() {
                   +<AnimatedNumber value={additionalAnnual} prefix="€" /><span className="text-2xl font-bold">/año</span>
                 </p>
                 <div className="mt-4 flex items-center gap-2">
-                  <span className="text-sm text-indigo-200">ROI de tu inversion:</span>
+                  <span className="text-sm text-indigo-200">ROI de tu inversión:</span>
                   <span className="text-2xl font-extrabold">
                     <AnimatedNumber value={roi} suffix="%" />
                   </span>
@@ -227,7 +227,7 @@ export default function CalculadoraROIClient() {
             {[
               { stat: '92%', desc: 'de consumidores leen reseñas online antes de comprar', src: 'BrightLocal, 2025' },
               { stat: '34%', desc: 'mas conversiones con testimonios en landing pages', src: 'VWO' },
-              { stat: '72%', desc: 'confian más en negocios con testimonios positivos', src: 'BigCommerce' },
+              { stat: '72%', desc: 'confían más en negocios con testimonios positivos', src: 'BigCommerce' },
             ].map((item) => (
               <div key={item.stat} className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm">
                 <p className="text-4xl font-extrabold text-indigo-600">{item.stat}</p>

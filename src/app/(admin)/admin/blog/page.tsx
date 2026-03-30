@@ -8,7 +8,7 @@ export default function AdminBlogPage() {
       <h1 className="text-2xl font-bold text-gray-900 mb-2">Gestion de Blog</h1>
       <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
         <p className="text-sm text-yellow-800">
-          Los artículos del blog estan definidos en <code className="bg-yellow-100 px-1 rounded">src/lib/blog-data.ts</code>.
+          Los artículos del blog están definidos en <code className="bg-yellow-100 px-1 rounded">src/lib/blog-data.ts</code>.
           Para editar, añadir o eliminar artículos es necesario modificar el código fuente y redesplegar.
         </p>
       </div>
@@ -19,7 +19,7 @@ export default function AdminBlogPage() {
             <thead className="bg-gray-50">
               <tr>
                 <th className="text-left px-4 py-3 text-gray-500 font-medium">#</th>
-                <th className="text-left px-4 py-3 text-gray-500 font-medium">Titulo</th>
+                <th className="text-left px-4 py-3 text-gray-500 font-medium">Título</th>
                 <th className="text-left px-4 py-3 text-gray-500 font-medium">Categoria</th>
                 <th className="text-left px-4 py-3 text-gray-500 font-medium">Fecha</th>
                 <th className="text-left px-4 py-3 text-gray-500 font-medium">Lectura</th>

@@ -85,11 +85,11 @@ export default function ShopifyGuidePage() {
 
         <StepCard number={2} title="Obtener el código de integración">
           <ol className="ml-4 list-decimal space-y-2">
-            <li>Dentro de tu proyecto, ve a la seccion <strong>&quot;Widget&quot;</strong>.</li>
+            <li>Dentro de tu proyecto, ve a la sección <strong>&quot;Widget&quot;</strong>.</li>
             <li>Personaliza el diseño: elige layout, colores y tipografia que combinen con tu tienda.</li>
             <li>Copia el código de integración.</li>
           </ol>
-          <p className="mt-3">El código tendra esta forma:</p>
+          <p className="mt-3">El código tendrá esta forma:</p>
           <CodeBlock code={embedCode} />
         </StepCard>
 
@@ -98,7 +98,7 @@ export default function ShopifyGuidePage() {
 
           <div className="space-y-6">
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion A: Editar el tema (theme.liquid)</h4>
+              <h4 className="mb-2 font-semibold text-gray-900">Opción A: Editar el tema (theme.liquid)</h4>
               <ol className="ml-4 list-decimal space-y-2">
                 <li>Ve a <strong>Tienda online &gt; Temas</strong> en tu admin de Shopify.</li>
                 <li>Haz clic en <strong>&quot;Acciones&quot; &gt; &quot;Editar código&quot;</strong>.</li>
@@ -111,30 +111,30 @@ ${embedCode}
 </body>`} />
               <div className="mt-2 rounded-lg bg-amber-50 border border-amber-200 p-3">
                 <p className="text-sm text-amber-800">
-                  <strong>Nota:</strong> Esta opcion muestra los testimonios en todas las páginas de tu tienda.
+                  <strong>Nota:</strong> Esta opción muestra los testimonios en todas las páginas de tu tienda.
                 </p>
               </div>
             </div>
 
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion B: Seccion personalizada (recomendado)</h4>
+              <h4 className="mb-2 font-semibold text-gray-900">Opción B: Sección personalizada (recomendado)</h4>
               <ol className="ml-4 list-decimal space-y-2">
                 <li>Ve a <strong>Tienda online &gt; Temas &gt; Personalizar</strong>.</li>
                 <li>Navega a la página donde quieres los testimonios.</li>
-                <li>Haz clic en <strong>&quot;Agregar seccion&quot;</strong> y selecciona <strong>&quot;HTML personalizado&quot;</strong> o <strong>&quot;Liquid personalizado&quot;</strong>.</li>
+                <li>Haz clic en <strong>&quot;Agregar sección&quot;</strong> y selecciona <strong>&quot;HTML personalizado&quot;</strong> o <strong>&quot;Liquid personalizado&quot;</strong>.</li>
                 <li>Pega el código de Opinafy en el campo HTML/Liquid.</li>
                 <li>Guarda los cambios.</li>
               </ol>
               <div className="mt-3 rounded-lg bg-gray-100 p-4 text-center text-sm text-gray-500">
-                [Captura de pantalla: editor de tema de Shopify con seccion personalizada]
+                [Captura de pantalla: editor de tema de Shopify con sección personalizada]
               </div>
             </div>
 
             <div>
-              <h4 className="mb-2 font-semibold text-gray-900">Opcion C: Página específica</h4>
+              <h4 className="mb-2 font-semibold text-gray-900">Opción C: Página específica</h4>
               <p className="mb-2">Para agregar testimonios solo en una página:</p>
               <ol className="ml-4 list-decimal space-y-2">
-                <li>Ve a <strong>Tienda online &gt; Paginas</strong>.</li>
+                <li>Ve a <strong>Tienda online &gt; Páginas</strong>.</li>
                 <li>Edita o crea la página deseada.</li>
                 <li>En el editor, haz clic en <strong>&quot;Mostrar HTML&quot;</strong> (icono <code className="rounded bg-gray-200 px-1 text-xs">&lt;/&gt;</code>).</li>
                 <li>Pega el código de Opinafy.</li>
@@ -163,7 +163,7 @@ ${embedCode}
         <div className="rounded-xl border border-green-200 bg-green-50 p-6">
           <h3 className="mb-3 text-lg font-semibold text-green-900">Consejos para Shopify</h3>
           <ul className="ml-4 list-disc space-y-2 text-sm text-green-800">
-            <li>Ubica los testimonios en la página de producto, justo antes del boton de compra, para maximizar conversiones.</li>
+            <li>Ubica los testimonios en la página de producto, justo antes del botón de compra, para maximizar conversiones.</li>
             <li>Usa el layout <strong>&quot;Carrusel&quot;</strong> en páginas de producto para ahorrar espacio vertical.</li>
             <li>Usa el layout <strong>&quot;Cuadricula&quot;</strong> o <strong>&quot;Muro&quot;</strong> en la página de inicio para mayor impacto visual.</li>
             <li>El widget se adapta automáticamente al ancho de tu tema Shopify (responsive).</li>
@@ -179,23 +179,23 @@ ${embedCode}
           <div className="space-y-6">
             {[
               {
-                q: 'El widget afecta la velocidad de mi tienda?',
-                a: 'No. El script de Opinafy pesa menos de 25 KB y se carga de forma asincrona. No afecta a las metricas Core Web Vitals de Shopify.',
+                q: '¿El widget afecta la velocidad de mi tienda?',
+                a: 'No. El script de Opinafy pesa menos de 25 KB y se carga de forma asincrona. No afecta a las métricas Core Web Vitals de Shopify.',
               },
               {
                 q: 'Funciona con todos los temas de Shopify?',
                 a: 'Si. El widget usa Shadow DOM para aislar sus estilos, lo que garantiza compatibilidad con cualquier tema de Shopify sin conflictos de CSS.',
               },
               {
-                q: 'Puedo mostrar testimonios diferentes en distintas páginas?',
+                q: '¿Puedo mostrar testimonios diferentes en distintas páginas?',
                 a: 'Si. Puedes crear multiples proyectos en Opinafy (uno por página de producto, por ejemplo) y usar diferentes códigos de integración.',
               },
               {
-                q: 'Es compatible con Shopify Markets (multi-idioma)?',
+                q: '¿Es compatible con Shopify Markets (multi-idioma)?',
                 a: 'Si. El widget detecta automáticamente el idioma del navegador. Puedes crear proyectos separados para cada idioma si lo prefieres.',
               },
               {
-                q: 'Necesito instalar alguna app de Shopify?',
+                q: '¿Necesito instalar alguna app de Shopify?',
                 a: 'No. Opinafy funciona con un simple script HTML, sin necesidad de instalar apps adicionales en tu tienda.',
               },
             ].map(({ q, a }) => (
@@ -226,7 +226,7 @@ ${embedCode}
               href="/guias/wordpress"
               className="rounded-lg border border-gray-300 px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50"
             >
-              Ver guia para WordPress
+              Ver guía para WordPress
             </Link>
           </div>
         </div>

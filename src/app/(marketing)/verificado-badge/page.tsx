@@ -44,14 +44,14 @@ export const metadata: Metadata = {
 }
 
 const trustStats = [
-  { value: '92%', label: 'de consumidores confian más en testimonios verificados' },
+  { value: '92%', label: 'de consumidores confían más en testimonios verificados' },
   { value: '3.2x', label: 'mas conversiones con prueba social verificada' },
   { value: '76%', label: 'de compradores buscan senales de confianza antes de comprar' },
 ]
 
 const verificationSteps = [
   {
-    title: 'Verificacion por email',
+    title: 'Verificación por email',
     description: 'Cada persona que deja un testimonio recibe un email de confirmacion. Solo los testimonios verificados por email son publicados.',
     icon: (
       <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -112,7 +112,7 @@ export default function VerificadoBadgePage() {
       <section className="bg-white px-4 py-16 sm:py-24">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
-            Asi luce el badge
+            Así luce el badge
           </h2>
           <p className="mt-4 text-lg text-gray-600">
             Un sello visual que transmite confianza a tus visitantes
@@ -184,7 +184,7 @@ export default function VerificadoBadgePage() {
                   Cada testimonio ha sido confirmado por email y revisado por el negocio antes de ser publicado.
                 </p>
                 <p className="mt-3 text-green-700">
-                  No son testimonios inventados ni manipulados. Puedes confiar en ellos para tomar tu decision de compra.
+                  No son testimonios inventados ni manipulados. Puedes confiar en ellos para tomar tu decisión de compra.
                 </p>
               </div>
             </div>

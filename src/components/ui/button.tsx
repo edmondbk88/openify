@@ -4,7 +4,7 @@ import { forwardRef, type ButtonHTMLAttributes } from 'react'
 import { cn } from '@/lib/utils'
 import { Spinner } from './spinner'
 
-const variants = {
+const varíants = {
   primary:
     'bg-indigo-600 text-white hover:bg-indigo-700 focus-visible:ring-indigo-500',
   secondary:
@@ -24,7 +24,7 @@ const sizes = {
 } as const
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: keyof typeof variants
+  varíant?: keyof typeof varíants
   size?: keyof typeof sizes
   loading?: boolean
 }
@@ -33,7 +33,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
-      variant = 'primary',
+      varíant = 'primary',
       size = 'md',
       loading = false,
       disabled,
@@ -50,7 +50,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
           'inline-flex items-center justify-center rounded-lg font-medium transition-colors',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2',
           'disabled:pointer-events-none disabled:opacity-50',
-          variants[variant],
+          varíants[varíant],
           sizes[size],
           className
         )}

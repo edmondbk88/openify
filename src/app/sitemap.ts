@@ -243,11 +243,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       alternates: bilingual('/health-score', '/en/health-score'),
     },
     {
-      url: `${baseUrl}/certificacion`,
+      url: `${baseUrl}/certificación`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
-      alternates: bilingual('/certificacion', '/en/certification'),
+      alternates: bilingual('/certificación', '/en/certification'),
     },
     {
       url: `${baseUrl}/ranking`,
@@ -580,7 +580,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
-      alternates: bilingual('/certificacion', '/en/certification'),
+      alternates: bilingual('/certificación', '/en/certification'),
     },
     {
       url: `${baseUrl}/en/ranking`,

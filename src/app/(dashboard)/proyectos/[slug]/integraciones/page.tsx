@@ -71,7 +71,7 @@ export default function IntegracionesPage() {
       })
 
       if (res.ok) {
-        setMessage({ type: 'success', text: 'Configuracion guardada correctamente.' })
+        setMessage({ type: 'success', text: 'Configuración guardada correctamente.' })
       } else {
         const data = await res.json().catch(() => null)
         setMessage({ type: 'error', text: data?.error || 'Error al guardar.' })

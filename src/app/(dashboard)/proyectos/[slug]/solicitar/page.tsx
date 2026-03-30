@@ -89,7 +89,7 @@ export default function SolicitarPage() {
 
   function handleSendWhatsAppToNumber() {
     if (!whatsappNumber.trim()) {
-      toast('Introduce un número de telefono', 'error')
+      toast('Introduce un número de teléfono', 'error')
       return
     }
     const number = whatsappNumber.replace(/[^0-9+]/g, '').replace(/^\+/, '')
@@ -198,7 +198,7 @@ export default function SolicitarPage() {
               className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             />
             <p className="mt-1 text-xs text-gray-400">
-              Usa <code className="bg-gray-100 px-1 rounded">{'{collection_url}'}</code> para insertar el enlace de recopilacion.
+              Usa <code className="bg-gray-100 px-1 rounded">{'{collection_url}'}</code> para insertar el enlace de recopilación.
             </p>
           </div>
 
@@ -232,7 +232,7 @@ export default function SolicitarPage() {
                 {t('request.send', locale)}
               </button>
             </div>
-            <p className="mt-1 text-xs text-gray-400">Incluye el código de pais (ej: +34 para Espana)</p>
+            <p className="mt-1 text-xs text-gray-400">Incluye el código de pais (ej: +34 para España)</p>
           </div>
         </div>
       </div>
@@ -273,7 +273,7 @@ export default function SolicitarPage() {
               className="w-full rounded-lg border border-gray-300 px-4 py-2.5 text-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500"
             />
             <p className="mt-1 text-xs text-gray-400">
-              Usa <code className="bg-gray-100 px-1 rounded">{'{collection_url}'}</code> para insertar el enlace de recopilacion.
+              Usa <code className="bg-gray-100 px-1 rounded">{'{collection_url}'}</code> para insertar el enlace de recopilación.
             </p>
           </div>
 

@@ -8,7 +8,7 @@ import { detectLocale, getCollectionTexts } from '@/lib/collection-translations'
 
 interface PageProps {
   params: Promise<{ username: string; slug: string }>
-  searchParams: Promise<{ verificacion?: string }>
+  searchParams: Promise<{ verificación?: string }>
 }
 
 async function getProject(username: string, slug: string): Promise<Project | null> {
@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function GraciasPage({ params, searchParams }: PageProps) {
   const { username, slug } = await params
-  const { verificacion } = await searchParams
+  const { verificación } = await searchParams
   const project = await getProject(username, slug)
 
   if (!project) {
@@ -66,7 +66,7 @@ export default async function GraciasPage({ params, searchParams }: PageProps) {
   const locale = detectLocale(acceptLang)
   const t = getCollectionTexts(locale)
 
-  const isVerificationPending = verificacion === 'pendiente'
+  const isVerificationPending = verificación === 'pendiente'
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-white px-4">
