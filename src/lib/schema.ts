@@ -33,7 +33,7 @@ export function organizationSchema(opts?: { lang?: string }) {
       '@type': 'Person',
       name: 'Edmond Bojalil',
       url: 'https://www.linkedin.com/in/edmondbojalil/',
-      image: 'https://opinafy.comhttps://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/edmond-bojalil.jpg',
+      image: 'https://rckjevsqxkfixkdloqjv.supabase.co/storage/v1/object/public/logos/site/edmond-bojalil.jpg',
     },
     sameAs: [
       'https://www.linkedin.com/company/opinafy',

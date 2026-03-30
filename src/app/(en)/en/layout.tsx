@@ -78,7 +78,12 @@ export default function EnglishLayout({
 }) {
   return (
     <>
-      <script dangerouslySetInnerHTML={{ __html: 'document.documentElement.lang="en"' }} />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: 'document.documentElement.lang="en";document.documentElement.setAttribute("lang","en")',
+        }}
+      />
+      <meta httpEquiv="content-language" content="en" />
       {children}
     </>
   )
