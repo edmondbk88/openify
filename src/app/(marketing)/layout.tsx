@@ -6,6 +6,7 @@ export const metadata: Metadata = {
     'Recopila, gestiona y muestra testimonios de clientes en tu web. Widgets personalizables, prueba social auténtica y más conversiones.',
   keywords: [
     'testimonios de clientes',
+    'testimonios pagina web',
     'recopilar testimonios',
     'mostrar reseñas',
     'prueba social',
@@ -14,6 +15,7 @@ export const metadata: Metadata = {
     'opiniones de clientes',
     'muro de testimonios',
     'social proof',
+    'guia social proof',
     'aumentar conversiones',
     'reputación online',
     'opinafy',

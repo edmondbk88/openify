@@ -13,9 +13,19 @@ import {
 } from '@/lib/schema'
 
 export const metadata: Metadata = {
-  title: { absolute: 'Opinafy - Turn Customer Opinions Into Your Best Sales Tool' },
+  title: { absolute: 'Opinafy - Testimonial Software to Collect, Manage & Display Reviews' },
   description:
-    'Collect, manage, and display authentic customer testimonials on your website with customizable widgets. Build trust with visitors and boost conversions effortlessly.',
+    'The testimonial management software built for Europe. Collect, manage, and display authentic customer testimonials with customizable widgets. Automate testimonial collection and boost conversions.',
+  keywords: [
+    'testimonial software',
+    'testimonial management software',
+    'testimonial software europa',
+    'testimonial tool europa',
+    'automated testimonial collection',
+    'collect customer testimonials',
+    'testimonial widgets',
+    'social proof software',
+  ],
   alternates: {
     canonical: 'https://opinafy.com/en',
     languages: {
@@ -25,9 +35,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Opinafy - Turn Customer Opinions Into Your Best Sales Tool',
+    title: 'Opinafy - Testimonial Software to Collect, Manage & Display Reviews',
     description:
-      'Collect, manage, and display authentic customer testimonials on your website with customizable widgets.',
+      'The testimonial management software built for Europe. Collect and display authentic customer testimonials with customizable widgets.',
     url: 'https://opinafy.com/en',
     type: 'website',
     siteName: 'Opinafy',

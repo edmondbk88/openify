@@ -4410,11 +4410,12 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'whatsapp-recopilar-testimonios',
     image: blogImageUrl('whatsapp-recopilar-testimonios'),
-    title: 'Cómo usar WhatsApp para recopilar testimonios de clientes',
+    title: 'Cómo Recopilar Testimonios por WhatsApp: Guía Práctica 2026',
     excerpt:
       'Aprende a usar WhatsApp como canal para solicitar y recopilar testimonios de clientes de forma rápida, personal y con altas tasas de respuesta.',
     category: 'Estrategias',
     keywords: [
+      'testimonios whatsapp',
       'WhatsApp testimonios',
       'recopilar opiniones WhatsApp',
       'mensajes solicitud testimonios',
@@ -4424,7 +4425,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2025-12-02',
     readTime: '9 min',
     metaDescription:
-      'Guía práctica para usar WhatsApp como canal de recopilación de testimonios. Plantillas de mensajes, mejores prácticas y automatización.',
+      'Plantillas de mensajes y paso a paso para pedir testimonios por WhatsApp. Tasa de respuesta del 50% vs 10% del email. Incluye automatización.',
     content: `
 <h2>Introducción: WhatsApp como canal de testimonios</h2>
 <p>WhatsApp es la aplicación de mensajería más utilizada en España y en gran parte de Latinoamérica, con más de dos mil millones de usuarios activos a nivel global. En España, más del noventa por ciento de los usuarios de smartphone tienen WhatsApp instalado, y lo utilizan de media más de veintitrés veces al día. Estas cifras revelan algo fundamental para cualquier negocio que quiera recopilar testimonios: tus clientes ya están en WhatsApp, lo revisan constantemente y se sienten cómodos comunicándose a través de esta plataforma.</p>
@@ -4817,12 +4818,14 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: 'gdpr-testimonios-privacidad',
     image: blogImageUrl('gdpr-testimonios-privacidad'),
-    title: 'RGPD y testimonios: guía legal para recopilar opiniones en España',
+    title: 'GDPR y Testimonios: Guía Legal Completa para Cumplir la Normativa (2026)',
     excerpt:
       'Todo lo que necesitas saber sobre la normativa RGPD y LOPDGDD aplicada a la recopilación, gestión y publicación de testimonios de clientes en España.',
     category: 'Legal',
     keywords: [
       'RGPD testimonios',
+      'GDPR testimonios',
+      'gdpr testimonios privacidad',
       'LOPDGDD opiniones clientes',
       'protección datos testimonios',
       'consentimiento testimonios',
@@ -4831,7 +4834,7 @@ export const blogArticles: BlogArticle[] = [
     date: '2025-12-05',
     readTime: '11 min',
     metaDescription:
-      'Guía legal completa sobre RGPD y testimonios en España. Consentimiento, derechos ARCO, almacenamiento y publicación de opiniones de clientes conforme a la ley.',
+      'Guía legal paso a paso para cumplir el RGPD al recopilar testimonios. Consentimiento, derechos ARCO, sanciones y checklist descargable para tu negocio.',
     content: `
 <h2>Introducción: Por qué la legalidad importa en los testimonios</h2>
 <p>Los testimonios de clientes son una herramienta de marketing extraordinariamente efectiva, pero también implican el tratamiento de datos personales de personas reales. Nombres, apellidos, fotos, cargos profesionales, nombres de empresas, opiniones y experiencias son datos personales protegidos por el Reglamento General de Protección de Datos de la Unión Europea, conocido como RGPD, y por la Ley Orgánica de Protección de Datos y Garantía de Derechos Digitales de España, conocida como LOPDGDD.</p>

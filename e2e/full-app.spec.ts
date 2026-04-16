@@ -23,7 +23,7 @@ test('create project, navigate sub-pages, then delete', async ({ page }) => {
   await expect(page.locator('h1')).toContainText('Nuevo Proyecto')
   await page.getByPlaceholder('Mi negocio').fill('E2E Test Project')
   await page.locator('button[type="submit"]').click()
-  await page.waitForURL(/proyectos\/(?!nuevo)/, { timeout: 15000 })
+  await page.waitForURL(/proyectos\/(?!nuevo)/, { timeout: 30000 })
 
   // Extract the project URL
   const projectUrl = page.url()

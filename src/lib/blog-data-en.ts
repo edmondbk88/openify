@@ -536,12 +536,13 @@ export const blogArticlesEn: BlogArticle[] = [
   {
     slug: 'widgets-testimonios-web-guia',
     image: blogImageUrl('widgets-testimonios-web-guia'),
-    title: 'Testimonial Widgets for Your Website: Complete Implementation Guide',
+    title: 'Testimonial Widgets for Websites: Complete Guide with Examples (2026)',
     excerpt:
       'Learn how to implement testimonial widgets on your website. Types, best practices, customization options, and step-by-step integration guide.',
     category: 'Technical',
     keywords: [
       'testimonial widgets',
+      'testimonials widget for website',
       'website widgets',
       'testimonial display',
       'embed testimonials',
@@ -550,7 +551,7 @@ export const blogArticlesEn: BlogArticle[] = [
     date: '2025-10-21',
     readTime: '9 min',
     metaDescription:
-      'Complete guide to testimonial widgets: types, design best practices, technical implementation, and how to choose the right widget for your website.',
+      'Compare carousel, grid, and wall testimonial widgets with live examples. Step-by-step guide to embed social proof on any website in under 5 minutes.',
     content: `
 <h2>What Are Testimonial Widgets and Why Do You Need One?</h2>
 <p>A testimonial widget is a self-contained piece of code that you embed on your website to display customer testimonials in an attractive, organized format. Think of it as a ready-made component that handles all the design, layout, and functionality of showing testimonials, so you do not have to build it from scratch.</p>
@@ -637,12 +638,15 @@ export const blogArticlesEn: BlogArticle[] = [
   {
     slug: 'estadisticas-testimonios-datos-conversion',
     image: blogImageUrl('estadisticas-testimonios-datos-conversion'),
-    title: '25 Statistics About Testimonials That Prove Their Conversion Power',
+    title: 'Testimonial Statistics 2026: Data That Proves Reviews Boost Conversions by 270%',
     excerpt:
       'Explore 25 data-backed statistics that prove the power of customer testimonials for increasing conversions, trust, and sales.',
     category: 'Data',
     keywords: [
       'testimonial statistics',
+      'testimonials conversion rate',
+      'testimonials conversion rate statistics',
+      'testimonials increase conversion rate statistics',
       'conversion data',
       'social proof stats',
       'review statistics',
@@ -651,7 +655,7 @@ export const blogArticlesEn: BlogArticle[] = [
     date: '2025-10-22',
     readTime: '8 min',
     metaDescription:
-      'Discover 25 compelling statistics about customer testimonials and their impact on conversions, trust, and revenue. Data-driven insights for your marketing strategy.',
+      '25 data-backed testimonial statistics for 2026. See how reviews boost conversions by 270%, increase trust by 72%, and drive 62% more revenue. Includes sources.',
     content: `
 <h2>Introduction: The Numbers Do Not Lie</h2>
 <p>In the world of digital marketing, opinions are everywhere but data is what drives decisions. When it comes to customer testimonials, the data is overwhelmingly clear: testimonials work, and they work spectacularly well. Whether you are trying to convince your team to invest in a testimonial strategy or simply looking for benchmarks to measure your own efforts against, these twenty-five statistics provide the evidence you need.</p>
@@ -1460,12 +1464,14 @@ export const blogArticlesEn: BlogArticle[] = [
   {
     slug: 'automatizar-recopilación-testimonios',
     image: blogImageUrl('automatizar-recopilación-testimonios'),
-    title: 'How to Automate Testimonial Collection in Your Business',
+    title: 'How to Automate Testimonial Collection in 2026 (Step-by-Step)',
     excerpt:
       'Learn how to set up automated systems for collecting customer testimonials. Save time, increase response rates, and maintain a fresh stream of social proof.',
     category: 'Automation',
     keywords: [
       'automate testimonials',
+      'automated testimonial collection',
+      'how to automate testimonial collection',
       'testimonial automation',
       'automated review collection',
       'testimonial workflow',
@@ -1474,7 +1480,7 @@ export const blogArticlesEn: BlogArticle[] = [
     date: '2025-10-31',
     readTime: '9 min',
     metaDescription:
-      'Complete guide to automating testimonial collection. Set up workflows that continuously gather customer feedback without manual effort.',
+      'Step-by-step guide to automated testimonial collection. Set up email workflows, WhatsApp requests, and post-purchase triggers that collect reviews on autopilot.',
     content: `
 <h2>The Problem with Manual Testimonial Collection</h2>
 <p>Most businesses collect testimonials manually, and most businesses have far fewer testimonials than they should. These two facts are directly connected. Manual testimonial collection depends on someone remembering to ask, finding the right moment, crafting a personalized request, following up if there is no response, and processing the testimonial once it arrives. In a busy business, these steps inevitably fall through the cracks.</p>
